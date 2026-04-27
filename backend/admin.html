@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Quiz-ER Admin</title>
+  <link rel="stylesheet" href="/admin.css">
+</head>
+<body>
+  <main class="admin-shell">
+    <header class="admin-header">
+      <div>
+        <p>Private Backend</p>
+        <h1>Quiz-ER Admin</h1>
+      </div>
+      <button id="refreshButton" type="button">更新</button>
+    </header>
+
+    <section class="panel">
+      <h2>使用状況</h2>
+      <p id="summaryText" class="muted">読み込み中</p>
+      <div class="tables">
+        <section>
+          <h3>カテゴリー別</h3>
+          <table>
+            <thead>
+              <tr>
+                <th>カテゴリー</th>
+                <th>回数</th>
+                <th>正答率</th>
+                <th>職種内訳</th>
+              </tr>
+            </thead>
+            <tbody id="categoryStatsBody"></tbody>
+          </table>
+        </section>
+        <section>
+          <h3>職種別</h3>
+          <table>
+            <thead>
+              <tr>
+                <th>職種</th>
+                <th>回数</th>
+                <th>正答率</th>
+              </tr>
+            </thead>
+            <tbody id="roleStatsBody"></tbody>
+          </table>
+        </section>
+      </div>
+    </section>
+
+    <section class="panel">
+      <h2>問題JSON貼り付け</h2>
+      <div class="form-grid">
+        <label>
+          カテゴリー
+          <select id="categorySelect"></select>
+        </label>
+        <label>
+          追加方法
+          <select id="modeSelect">
+            <option value="append">既存問題に追加</option>
+            <option value="replace">このカテゴリーを置き換え</option>
+          </select>
+        </label>
+      </div>
+      <textarea id="questionJson" spellcheck="false" placeholder='[{"id":"sample_001","question":"問題文","choices":["1","2","3","4","5"],"answer":0,"explanation":"解説"}]'></textarea>
+      <div class="button-row">
+        <button id="sampleButton" type="button">サンプルを入れる</button>
+        <button id="submitQuestionsButton" type="button">保存</button>
+      </div>
+      <p id="questionMessage" class="message"></p>
+    </section>
+
+    <section class="panel">
+      <h2>最近の結果</h2>
+      <ol id="recentList" class="recent-list"></ol>
+    </section>
+  </main>
+  <script src="/admin.js"></script>
+</body>
+</html>

@@ -1,14 +1,154 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ja">
 <head>
-  <meta charset="UTF-8">
-  <title>Hello Web App</title>
-  <link rel="stylesheet" href="style.css">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Quiz-ER - 救急医学クイズ</title>
+  <meta name="description" content="救急外来の初期対応を学ぶ研修医向け医学クイズ">
+  <link rel="icon" href="data:,">
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-  <h1 id="title">Hello Web App</h1>
-  <button onclick="changeText()">クリック</button>
+  <div class="app-shell">
+    <header class="topbar">
+      <div>
+        <p class="eyebrow">emergency medicine learning</p>
+        <h1>Quiz-ER <span>- 救急医学クイズ</span></h1>
+      </div>
+      <div class="topbar-actions" aria-label="アプリ操作">
+        <button id="rankingButton" class="icon-text-button" type="button" title="履歴を表示">履歴</button>
+        <button id="muteButton" class="icon-text-button sound-toggle" type="button" aria-pressed="false" title="効果音と音楽を切り替え">効果音OFF</button>
+      </div>
+    </header>
 
-  <script src="script.js"></script>
+    <main>
+      <section id="setupScreen" class="screen is-active" aria-labelledby="setupTitle">
+        <div class="setup-layout">
+          <aside class="panel setup-panel">
+            <h2 id="setupTitle">クイズ設定</h2>
+            <fieldset id="roleFieldset" class="role-fieldset">
+              <legend>職種 <span>必須</span></legend>
+              <label class="role-option">
+                <input type="radio" name="learnerRole" value="resident" data-role-label="研修医">
+                <span>研修医</span>
+              </label>
+              <label class="role-option">
+                <input type="radio" name="learnerRole" value="senior_resident" data-role-label="専攻医">
+                <span>専攻医</span>
+              </label>
+              <label class="role-option">
+                <input type="radio" name="learnerRole" value="doctor" data-role-label="医師">
+                <span>医師</span>
+              </label>
+              <label class="role-option">
+                <input type="radio" name="learnerRole" value="nurse" data-role-label="看護師">
+                <span>看護師</span>
+              </label>
+              <label class="role-option">
+                <input type="radio" name="learnerRole" value="other" data-role-label="その他">
+                <span>その他</span>
+              </label>
+            </fieldset>
+
+            <fieldset class="segmented-control">
+              <legend>出題数</legend>
+              <button class="segment is-active" type="button" data-count="5">5問</button>
+              <button class="segment" type="button" data-count="10">10問</button>
+              <button class="segment" type="button" data-count="20">20問</button>
+            </fieldset>
+
+            <dl class="selection-summary">
+              <div>
+                <dt>カテゴリー</dt>
+                <dd id="selectedCategoryLabel">読み込み中</dd>
+              </div>
+              <div>
+                <dt>制限時間</dt>
+                <dd>1問 20秒</dd>
+              </div>
+            </dl>
+
+            <div class="setup-actions">
+              <button id="startQuizButton" class="primary-button" type="button" disabled>クイズ開始</button>
+            </div>
+            <p id="setupStatus" class="status-text" role="status" aria-live="polite"></p>
+          </aside>
+
+          <section class="category-section" aria-label="カテゴリー">
+            <div id="categoryGrid" class="category-grid"></div>
+          </section>
+        </div>
+      </section>
+
+      <section id="quizScreen" class="screen" aria-labelledby="quizCategory" hidden>
+        <div class="quiz-topline">
+          <button id="quitQuizButton" class="text-button" type="button">中断</button>
+          <div class="quiz-meta">
+            <span id="quizCategory">カテゴリー</span>
+            <span id="quizProgress">1 / 5</span>
+          </div>
+          <div class="timer" aria-label="残り時間">
+            <svg viewBox="0 0 120 120" role="img" aria-hidden="true">
+              <circle class="timer-track" cx="60" cy="60" r="52"></circle>
+              <circle id="timerArc" class="timer-arc" cx="60" cy="60" r="52"></circle>
+            </svg>
+            <span id="timerText">20</span>
+          </div>
+        </div>
+
+        <article class="question-panel">
+          <p id="questionText" class="question-text"></p>
+          <div id="choiceList" class="choice-list"></div>
+        </article>
+      </section>
+
+      <section id="resultScreen" class="screen" aria-labelledby="resultTitle" hidden>
+        <div class="result-layout">
+          <section class="panel result-panel">
+            <p class="eyebrow">Result</p>
+            <h2 id="resultTitle">演習結果</h2>
+            <div class="score-line">
+              <strong id="resultScore">0 / 0</strong>
+              <span id="resultPercent">0%</span>
+            </div>
+            <p id="resultTime" class="result-time"></p>
+            <p id="resultComment" class="result-comment"></p>
+            <div class="button-row">
+              <button id="retryButton" class="primary-button" type="button">同じ条件で再挑戦</button>
+              <button id="backToSetupButton" class="secondary-button" type="button">ホームにもどる</button>
+              <button id="resultRankingButton" class="secondary-button" type="button">履歴</button>
+            </div>
+          </section>
+
+          <section class="review-section" aria-label="解答レビュー">
+            <div class="section-heading">
+              <h3>解答レビュー</h3>
+              <button id="toggleReviewButton" class="text-button" type="button" aria-expanded="true">折りたたむ</button>
+            </div>
+            <div id="reviewList" class="review-list"></div>
+          </section>
+        </div>
+      </section>
+
+      <section id="rankingScreen" class="screen" aria-labelledby="rankingTitle" hidden>
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">Local History</p>
+            <h2 id="rankingTitle">履歴</h2>
+          </div>
+          <button id="closeRankingButton" class="text-button" type="button">閉じる</button>
+        </div>
+        <div id="rankingTabs" class="tab-row" role="tablist" aria-label="履歴カテゴリー"></div>
+        <ol id="rankingList" class="ranking-list"></ol>
+        <p id="rankingEmpty" class="empty-text" hidden>記録はまだありません。</p>
+      </section>
+    </main>
+
+    <footer class="app-footer">
+      臨床では院内プロトコルと最新ガイドラインを優先してください。公開前に指導医レビューを推奨します。
+    </footer>
+  </div>
+
+  <script src="js/app.js" defer></script>
 </body>
 </html>

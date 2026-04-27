@@ -1,0 +1,2 @@
+backend/storage/*.json
+!backend/storage/.gitkeep

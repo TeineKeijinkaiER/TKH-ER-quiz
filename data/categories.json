@@ -1,0 +1,79 @@
+[
+  {
+    "id": "ed_first_steps",
+    "name": "救急外来まずはここから",
+    "description": "初期評価、重症度判断、最初の検査と介入",
+    "file": "questions/ed_first_steps.json",
+    "accent": "#087f8c"
+  },
+  {
+    "id": "altered_mental_status",
+    "name": "意識障害/意識消失",
+    "description": "低血糖、けいれん、失神、初期鑑別",
+    "file": "questions/altered_mental_status.json",
+    "accent": "#4f46e5"
+  },
+  {
+    "id": "vertigo_stroke",
+    "name": "めまい/脳卒中",
+    "description": "中枢性めまい、脳卒中初期対応、HINTS",
+    "file": "questions/vertigo_stroke.json",
+    "accent": "#0f766e"
+  },
+  {
+    "id": "orthopedic_trauma",
+    "name": "整形外傷",
+    "description": "開放骨折、コンパートメント、神経血管評価",
+    "file": "questions/orthopedic_trauma.json",
+    "accent": "#b45309"
+  },
+  {
+    "id": "infection",
+    "name": "感染症",
+    "description": "抗菌薬適正使用、髄膜炎、尿路感染、壊死性筋膜炎",
+    "file": "questions/infection.json",
+    "accent": "#15803d"
+  },
+  {
+    "id": "gi_symptoms",
+    "name": "消化器症状",
+    "description": "腹痛、消化管出血、胆道感染、膵炎",
+    "file": "questions/gi_symptoms.json",
+    "accent": "#be123c"
+  },
+  {
+    "id": "emergency_medications",
+    "name": "救急外来薬剤投与",
+    "description": "アドレナリン、ベンゾジアゼピン、解毒、電解質補正",
+    "file": "questions/emergency_medications.json",
+    "accent": "#7c2d12"
+  },
+  {
+    "id": "sepsis",
+    "name": "敗血症",
+    "description": "初期認識、抗菌薬、循環管理、ソースコントロール",
+    "file": "questions/sepsis.json",
+    "accent": "#087f8c"
+  },
+  {
+    "id": "trauma",
+    "name": "重症外傷",
+    "description": "Primary survey、出血制御、胸腹部外傷、蘇生戦略",
+    "file": "questions/trauma.json",
+    "accent": "#b45309"
+  },
+  {
+    "id": "endocrine",
+    "name": "内分泌救急",
+    "description": "DKA/HHS、副腎クリーゼ、甲状腺クリーゼ、電解質",
+    "file": "questions/endocrine.json",
+    "accent": "#6d5bd0"
+  },
+  {
+    "id": "cpr",
+    "name": "心肺蘇生",
+    "description": "高品質CPR、除細動、薬剤、可逆的原因",
+    "file": "questions/cpr.json",
+    "accent": "#c2413b"
+  }
+]
