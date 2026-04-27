@@ -22,7 +22,7 @@ function doGet() {
   ensureHeaders_(sheet);
   return jsonOutput_({
     ok: true,
-    app: "Quiz-ER Google Sheets collector",
+    app: "Quiz-TKHER Google Sheets collector",
     sheetName: SHEET_NAME,
     spreadsheetUrl: sheet.getParent().getUrl(),
   });

@@ -47,8 +47,8 @@ const server = http.createServer(async (req, res) => {
 });
 
 server.listen(PORT, HOST, () => {
-  console.log(`Quiz-ER backend: http://${HOST}:${PORT}/admin`);
-  console.log(`Quiz-ER app:     http://${HOST}:${PORT}/`);
+  console.log(`Quiz-TKHER backend: http://${HOST}:${PORT}/admin`);
+  console.log(`Quiz-TKHER app:     http://${HOST}:${PORT}/`);
 });
 
 async function route(req, res, url) {
