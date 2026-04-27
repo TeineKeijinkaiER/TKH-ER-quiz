@@ -542,7 +542,8 @@ button:focus-visible {
 }
 
 .result-time,
-.result-comment {
+.result-comment,
+.sync-status {
   margin: 10px 0 0;
 }
 
@@ -553,6 +554,27 @@ button:focus-visible {
 .result-comment {
   color: var(--accent);
   font-weight: 800;
+}
+
+.sync-status {
+  padding: 8px 10px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: var(--surface-muted);
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+.sync-status[data-status="sent"] {
+  border-color: rgba(24, 122, 72, 0.36);
+  background: rgba(24, 122, 72, 0.08);
+  color: var(--success);
+}
+
+.sync-status[data-status="error"] {
+  border-color: rgba(194, 65, 59, 0.36);
+  background: rgba(194, 65, 59, 0.08);
+  color: var(--danger);
 }
 
 .button-row {

@@ -105,6 +105,7 @@ function cacheElements() {
     "resultPercent",
     "resultTime",
     "resultComment",
+    "syncStatus",
     "retryButton",
     "backToSetupButton",
     "resultRankingButton",
@@ -423,10 +424,10 @@ function finishQuiz() {
     timestamp: Date.now(),
   };
   addRanking(result);
-  sendResultToBackend(result);
   renderResult(result);
-  playTone("finish");
   showScreen("result");
+  sendResultToBackend(result);
+  playTone("finish");
 }
 
 function renderResult(result) {
@@ -435,6 +436,7 @@ function renderResult(result) {
   els.resultPercent.textContent = `${percent}%`;
   els.resultTime.textContent = `所要時間 ${formatTime(result.totalTimeMs)}`;
   els.resultComment.textContent = getResultComment(percent);
+  setSyncStatus(getInitialSyncStatusText(), "pending");
   renderReview();
   els.reviewList.hidden = false;
   els.toggleReviewButton.textContent = "折りたたむ";
@@ -630,23 +632,47 @@ function sendResultToBackend(result) {
     pageUrl: window.location.href,
   };
 
+  let googleSheetsRequest = Promise.resolve("not-configured");
   if (state.googleSheetsWebAppUrl) {
-    sendResultToGoogleSheets(event);
+    setSyncStatus("スプレッドシートへ送信中...", "pending");
+    googleSheetsRequest = sendResultToGoogleSheets(event);
   }
 
   if (state.sendToLocalBackend) {
     sendResultToLocalBackend(event);
   }
+
+  googleSheetsRequest
+    .then((status) => {
+      if (status === "not-configured") {
+        setSyncStatus("スプレッドシート送信先は未設定です。", "muted");
+        return;
+      }
+      setSyncStatus("スプレッドシートへ送信リクエストを出しました。反映まで数秒かかることがあります。", "sent");
+    })
+    .catch((error) => {
+      console.error("Google Sheets send failed.", error);
+      setSyncStatus("スプレッドシート送信に失敗しました。設定URLとデプロイ権限を確認してください。", "error");
+    });
 }
 
 function sendResultToGoogleSheets(event) {
-  fetch(state.googleSheetsWebAppUrl, {
+  const body = JSON.stringify(event);
+
+  if (navigator.sendBeacon) {
+    const queued = navigator.sendBeacon(
+      state.googleSheetsWebAppUrl,
+      new Blob([body], { type: "text/plain;charset=utf-8" }),
+    );
+    if (queued) return Promise.resolve("queued");
+  }
+
+  return fetch(state.googleSheetsWebAppUrl, {
     method: "POST",
     mode: "no-cors",
     headers: { "Content-Type": "text/plain" },
-    body: JSON.stringify(event),
-    keepalive: true,
-  }).catch(() => {});
+    body,
+  });
 }
 
 function sendResultToLocalBackend(event) {
@@ -663,6 +689,18 @@ function sendResultToLocalBackend(event) {
     body,
     keepalive: true,
   }).catch(() => {});
+}
+
+function getInitialSyncStatusText() {
+  return state.googleSheetsWebAppUrl
+    ? "スプレッドシート送信を準備しています。"
+    : "スプレッドシート送信先は未設定です。";
+}
+
+function setSyncStatus(text, status) {
+  if (!els.syncStatus) return;
+  els.syncStatus.textContent = text;
+  els.syncStatus.dataset.status = status || "";
 }
 
 function ensureAudioContext() {

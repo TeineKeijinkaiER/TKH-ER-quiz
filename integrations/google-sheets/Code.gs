@@ -52,7 +52,11 @@ function doPost(e) {
 }
 
 function parsePayload_(e) {
-  const content = e && e.postData && e.postData.contents ? e.postData.contents : "{}";
+  const content = e && e.parameter && e.parameter.payload
+    ? e.parameter.payload
+    : e && e.postData && e.postData.contents
+      ? e.postData.contents
+      : "{}";
   const payload = JSON.parse(content);
   if (!payload || typeof payload !== "object") {
     throw new Error("Payload must be a JSON object.");
