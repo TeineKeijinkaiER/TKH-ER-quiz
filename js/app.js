@@ -1,5 +1,5 @@
 const STORAGE_KEY = "qqq_state_v1";
-const BACKEND_EVENT_URL = "http://127.0.0.1:8787/api/events";
+const LOCAL_BACKEND_EVENT_URL = "http://127.0.0.1:8787/api/events";
 const QUESTION_SECONDS = 20;
 const TIMER_CIRCUMFERENCE = 2 * Math.PI * 52;
 const NEXT_QUESTION_DELAY_MS = 950;
@@ -25,6 +25,8 @@ const state = {
   musicStep: 0,
   musicGeneration: 0,
   musicMode: "",
+  googleSheetsWebAppUrl: "",
+  sendToLocalBackend: false,
 };
 
 const els = {};
@@ -39,6 +41,7 @@ async function init() {
   setupTimerArc();
 
   try {
+    await loadAppConfig();
     await loadQuestionData();
     state.selectedCategoryId = state.categories[0]?.id || "";
     renderCategories();
@@ -49,6 +52,28 @@ async function init() {
   } catch (error) {
     els.setupStatus.textContent = "問題データを読み込めません。ローカルHTTPサーバーで開いてください。";
     console.error(error);
+  }
+}
+
+async function loadAppConfig() {
+  state.googleSheetsWebAppUrl = "";
+  state.sendToLocalBackend = isLocalOrigin();
+
+  try {
+    const response = await fetch("data/app-config.json", { cache: "no-store" });
+    if (!response.ok) return;
+    const config = await response.json();
+    state.googleSheetsWebAppUrl = typeof config.googleSheetsWebAppUrl === "string" ? config.googleSheetsWebAppUrl.trim() : "";
+
+    if (config.sendToLocalBackend === true) {
+      state.sendToLocalBackend = true;
+    } else if (config.sendToLocalBackend === false) {
+      state.sendToLocalBackend = false;
+    } else {
+      state.sendToLocalBackend = isLocalOrigin();
+    }
+  } catch (error) {
+    console.warn("app-config.json could not be loaded.", error);
   }
 }
 
@@ -571,6 +596,11 @@ function writeStore(data) {
   localStorage.setItem(STORAGE_KEY, JSON.stringify(data));
 }
 
+function isLocalOrigin() {
+  const host = window.location.hostname;
+  return host === "127.0.0.1" || host === "localhost" || host === "";
+}
+
 function addRanking(result) {
   const data = readStore();
   data.rankings.push(result);
@@ -588,15 +618,37 @@ function sendResultToBackend(result) {
     ...result,
     completedAt: new Date(result.timestamp).toISOString(),
     appVersion: "quiz-er-static-v1",
+    pageUrl: window.location.href,
   };
+
+  if (state.googleSheetsWebAppUrl) {
+    sendResultToGoogleSheets(event);
+  }
+
+  if (state.sendToLocalBackend) {
+    sendResultToLocalBackend(event);
+  }
+}
+
+function sendResultToGoogleSheets(event) {
+  fetch(state.googleSheetsWebAppUrl, {
+    method: "POST",
+    mode: "no-cors",
+    headers: { "Content-Type": "text/plain" },
+    body: JSON.stringify(event),
+    keepalive: true,
+  }).catch(() => {});
+}
+
+function sendResultToLocalBackend(event) {
   const body = JSON.stringify(event);
 
   if (navigator.sendBeacon) {
-    const ok = navigator.sendBeacon(BACKEND_EVENT_URL, new Blob([body], { type: "application/json" }));
+    const ok = navigator.sendBeacon(LOCAL_BACKEND_EVENT_URL, new Blob([body], { type: "application/json" }));
     if (ok) return;
   }
 
-  fetch(BACKEND_EVENT_URL, {
+  fetch(LOCAL_BACKEND_EVENT_URL, {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body,

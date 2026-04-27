@@ -14,9 +14,44 @@ python -m http.server 8000
 
 ブラウザで `http://localhost:8000/` を開きます。
 
+## GitHub Pagesの結果をGoogleスプレッドシートへ集める
+
+GitHub Pagesは静的サイトなので、それだけでは全員の結果を保存できません。結果収集には24時間アクセスできる受信先が必要です。このリポジトリでは、Google Apps Scriptを使ってGoogleスプレッドシートへ結果を追記する構成にしています。
+
+### 1. スプレッドシートを作る
+
+Googleスプレッドシートで新しいファイルを作り、任意の名前を付けます。例: `Quiz-ER Results`
+
+### 2. Apps Scriptを貼り付ける
+
+スプレッドシートで `拡張機能` → `Apps Script` を開き、`integrations/google-sheets/Code.gs` の内容を貼り付けて保存します。
+
+### 3. Webアプリとしてデプロイする
+
+Apps Script画面右上の `デプロイ` → `新しいデプロイ` を選びます。
+
+- 種類: `ウェブアプリ`
+- 実行ユーザー: `自分`
+- アクセスできるユーザー: `全員`
+
+初回は権限承認が必要です。デプロイ後に表示されるWebアプリURLをコピーします。
+
+### 4. フロントエンドへURLを設定する
+
+`data/app-config.json` の `googleSheetsWebAppUrl` に、コピーしたWebアプリURLを入れます。
+
+```json
+{
+  "googleSheetsWebAppUrl": "https://script.google.com/macros/s/....../exec",
+  "sendToLocalBackend": "auto"
+}
+```
+
+この変更をGitHubへpushすると、GitHub Pagesで解かれた結果がスプレッドシートの `quiz_results` シートに追記されます。収集されるのは、職種、カテゴリー、問題数、点数、所要時間、日時、利用ページURLです。名前は収集しません。
+
 ## 非公開バックエンドを使う
 
-問題追加と使用状況確認を行うローカル専用バックエンドもあります。公開サーバーではなく、既定では`127.0.0.1`にだけ立ちます。
+問題追加とローカルでの使用状況確認を行う非公開バックエンドもあります。これは公開サーバーではなく、既定では`127.0.0.1`にだけ立つため、GitHub Pages利用者の結果を24時間収集する用途には使えません。全員の結果収集には上のGoogleスプレッドシート連携を使ってください。
 
 ```powershell
 node backend/server.js
@@ -33,7 +68,9 @@ node backend/server.js
 - `css/style.css`: レイアウトとUI
 - `js/app.js`: 画面遷移、タイマー、採点、ランキング保存
 - `data/categories.json`: カテゴリー一覧
+- `data/app-config.json`: 結果送信先設定
 - `data/questions/*.json`: 問題データ
+- `integrations/google-sheets/Code.gs`: Googleスプレッドシート収集用Apps Script
 - `backend/server.js`: 非公開バックエンド
 - `backend/admin.html`: 問題追加と統計確認の管理画面
 - `docs/design-philosophy.md`: 設計思想と拡張方針
