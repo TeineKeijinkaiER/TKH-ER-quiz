@@ -63,7 +63,12 @@ async function loadAppConfig() {
     const response = await fetch("data/app-config.json", { cache: "no-store" });
     if (!response.ok) return;
     const config = await response.json();
-    state.googleSheetsWebAppUrl = typeof config.googleSheetsWebAppUrl === "string" ? config.googleSheetsWebAppUrl.trim() : "";
+    const googleSheetsWebAppUrl = typeof config.googleSheetsWebAppUrl === "string" ? config.googleSheetsWebAppUrl.trim() : "";
+    if (googleSheetsWebAppUrl && isGoogleAppsScriptWebAppUrl(googleSheetsWebAppUrl)) {
+      state.googleSheetsWebAppUrl = googleSheetsWebAppUrl;
+    } else if (googleSheetsWebAppUrl) {
+      console.warn("googleSheetsWebAppUrl must be an Apps Script web app URL ending in /exec.", googleSheetsWebAppUrl);
+    }
 
     if (config.sendToLocalBackend === true) {
       state.sendToLocalBackend = true;
@@ -599,6 +604,10 @@ function writeStore(data) {
 function isLocalOrigin() {
   const host = window.location.hostname;
   return host === "127.0.0.1" || host === "localhost" || host === "";
+}
+
+function isGoogleAppsScriptWebAppUrl(url) {
+  return /^https:\/\/script\.google\.com\/macros\/s\/[^/]+\/exec(?:[?#].*)?$/.test(url);
 }
 
 function addRanking(result) {

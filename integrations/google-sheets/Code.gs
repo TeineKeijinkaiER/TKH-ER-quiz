@@ -1,4 +1,5 @@
 const SHEET_NAME = "quiz_results";
+const SPREADSHEET_ID = "";
 const HEADERS = [
   "receivedAt",
   "completedAt",
@@ -17,10 +18,13 @@ const HEADERS = [
 ];
 
 function doGet() {
+  const sheet = getResultSheet_();
+  ensureHeaders_(sheet);
   return jsonOutput_({
     ok: true,
     app: "Quiz-ER Google Sheets collector",
     sheetName: SHEET_NAME,
+    spreadsheetUrl: sheet.getParent().getUrl(),
   });
 }
 
@@ -57,11 +61,31 @@ function parsePayload_(e) {
 }
 
 function getResultSheet_() {
-  const spreadsheet = SpreadsheetApp.getActiveSpreadsheet();
+  const spreadsheet = SPREADSHEET_ID
+    ? SpreadsheetApp.openById(SPREADSHEET_ID)
+    : SpreadsheetApp.getActiveSpreadsheet();
   if (!spreadsheet) {
-    throw new Error("Create this Apps Script from a Google Spreadsheet.");
+    throw new Error("Create this Apps Script from a Google Spreadsheet or set SPREADSHEET_ID.");
   }
   return spreadsheet.getSheetByName(SHEET_NAME) || spreadsheet.insertSheet(SHEET_NAME);
+}
+
+function testAppendSample() {
+  const sheet = getResultSheet_();
+  ensureHeaders_(sheet);
+  sheet.appendRow(toResultRow_({
+    completedAt: new Date().toISOString(),
+    categoryId: "sample",
+    categoryName: "疎通テスト",
+    roleId: "doctor",
+    roleName: "医師",
+    questionCount: 5,
+    score: 5,
+    totalTimeMs: 123000,
+    timestamp: Date.now(),
+    appVersion: "manual-test",
+    pageUrl: "Apps Script testAppendSample",
+  }));
 }
 
 function ensureHeaders_(sheet) {
