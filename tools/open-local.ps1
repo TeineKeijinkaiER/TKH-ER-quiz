@@ -8,7 +8,7 @@ function Test-QuizErServer {
 
   try {
     $response = Invoke-WebRequest -UseBasicParsing -Uri "http://127.0.0.1:$Port/" -TimeoutSec 1
-    return $response.Content -like "*Quiz-ER*"
+    return $response.Content -like "*Quiz-TKHER*"
   } catch {
     return $false
   }
@@ -41,7 +41,7 @@ function Wait-ForServer {
     Start-Sleep -Milliseconds 250
   }
 
-  throw "Could not start Quiz-ER local server."
+  throw "Could not start Quiz-TKHER local server."
 }
 
 $runningPort = $ports | Where-Object { Test-QuizErServer -Port $_ } | Select-Object -First 1
