@@ -1,6 +1,6 @@
 # Quiz-TKHER - 救急医学クイズ
 
-救急外来の初期対応を短時間で確認する、静的HTML/CSS/JavaScriptのクイズアプリです。ビルド不要で、GitHub Pagesにそのまま配置できます。
+救急外来の初期対応を確認する、静的HTML/CSS/JavaScriptのクイズアプリです。ビルド不要で、GitHub Pagesにそのまま配置できます。
 
 ## 起動
 
