@@ -5,6 +5,8 @@ const TIMER_CIRCUMFERENCE = 2 * Math.PI * 52;
 const NEXT_QUESTION_DELAY_MS = 950;
 
 const state = {
+  levels: [],
+  selectedLevel: "basic",
   categories: [],
   questionBank: new Map(),
   selectedCategoryId: "",
@@ -19,7 +21,7 @@ const state = {
   timerDeadline: 0,
   isLocked: false,
   lastTickSecond: null,
-  lastScreen: "setup",
+  lastScreen: "level",
   audioContext: null,
   musicLoopId: 0,
   musicStep: 0,
@@ -43,11 +45,8 @@ async function init() {
   try {
     await loadAppConfig();
     await loadQuestionData();
-    state.selectedCategoryId = state.categories[0]?.id || "";
-    renderCategories();
-    renderQuestionCountControls();
+    renderLevelScreen();
     renderRankingTabs();
-    updateSetupSummary();
     updateStartButtonState();
   } catch (error) {
     els.setupStatus.textContent = "問題データを読み込めません。ローカルHTTPサーバーで開いてください。";
@@ -84,16 +83,25 @@ async function loadAppConfig() {
 
 function cacheElements() {
   [
+    "levelScreen",
+    "levelGrid",
     "setupScreen",
     "quizScreen",
     "resultScreen",
     "rankingScreen",
+    "clearScreen",
+    "clearBanner",
+    "clearTabs",
+    "clearList",
     "categoryGrid",
     "selectedCategoryLabel",
     "setupStatus",
     "startQuizButton",
     "rankingButton",
     "muteButton",
+    "clearButton",
+    "backToLevelButton",
+    "closeClearButton",
     "quitQuizButton",
     "quizCategory",
     "quizProgress",
@@ -141,6 +149,15 @@ function bindEvents() {
   els.retryButton.addEventListener("click", startQuiz);
   els.backToSetupButton.addEventListener("click", () => showScreen("setup"));
   els.toggleReviewButton.addEventListener("click", toggleReview);
+  els.backToLevelButton.addEventListener("click", () => showScreen("level"));
+  els.clearButton.addEventListener("click", () => {
+    renderClearScreen();
+    showScreen("clear");
+  });
+  els.closeClearButton.addEventListener("click", () => {
+    const prev = state.lastScreen;
+    showScreen(prev === "clear" || !prev ? "level" : prev);
+  });
   document.querySelectorAll('input[name="learnerRole"]').forEach((input) => {
     input.addEventListener("change", () => {
       state.learnerRoleId = input.value;
@@ -169,9 +186,15 @@ function bindFirstAudioGesture() {
 }
 
 async function loadQuestionData() {
-  const categoriesResponse = await fetch("data/categories.json", { cache: "no-store" });
-  if (!categoriesResponse.ok) throw new Error(`categories.json ${categoriesResponse.status}`);
-  state.categories = await categoriesResponse.json();
+  const [levelsRes, categoriesRes] = await Promise.all([
+    fetch("data/levels.json", { cache: "no-store" }),
+    fetch("data/categories.json", { cache: "no-store" }),
+  ]);
+  if (!levelsRes.ok) throw new Error(`levels.json ${levelsRes.status}`);
+  if (!categoriesRes.ok) throw new Error(`categories.json ${categoriesRes.status}`);
+
+  state.levels = await levelsRes.json();
+  state.categories = await categoriesRes.json();
 
   await Promise.all(
     state.categories.map(async (category) => {
@@ -184,23 +207,74 @@ async function loadQuestionData() {
   );
 }
 
+function renderLevelScreen() {
+  els.levelGrid.innerHTML = "";
+  const clears = readStore().clears;
+
+  state.levels.forEach((level) => {
+    const levelCategories = state.categories.filter((c) => c.level === level.id);
+    const clearedCount = levelCategories.filter((c) => Boolean(clears[`${level.id}:${c.id}`])).length;
+    const total = levelCategories.length;
+
+    const card = document.createElement("button");
+    card.type = "button";
+    card.className = "level-card";
+
+    const nameEl = document.createElement("span");
+    nameEl.className = "level-card__name";
+    nameEl.textContent = level.name;
+
+    const clearEl = document.createElement("span");
+    clearEl.className = "level-card__clear";
+    clearEl.textContent = `${clearedCount} / ${total} クリア済み`;
+
+    card.append(nameEl, clearEl);
+    card.addEventListener("click", () => {
+      state.selectedLevel = level.id;
+      const data = readStore();
+      data.selectedLevel = level.id;
+      writeStore(data);
+
+      const levelCats = state.categories.filter((c) => c.level === level.id);
+      state.selectedCategoryId = levelCats[0]?.id || "";
+      renderCategories();
+      renderQuestionCountControls();
+      updateSetupSummary();
+      showScreen("setup");
+    });
+    els.levelGrid.appendChild(card);
+  });
+}
+
 function renderCategories() {
   els.categoryGrid.innerHTML = "";
-  state.categories.forEach((category) => {
+  const levelCategories = state.categories.filter((c) => c.level === state.selectedLevel);
+
+  levelCategories.forEach((category) => {
+    const cleared = isClear(category.id);
     const button = document.createElement("button");
     button.type = "button";
-    button.className = "category-card";
+    button.className = "category-card" + (cleared ? " is-cleared" : "");
     button.style.borderTopColor = category.accent || "var(--primary)";
     button.setAttribute("aria-pressed", String(category.id === state.selectedCategoryId));
     button.dataset.categoryId = category.id;
 
     const title = document.createElement("h3");
     title.textContent = category.name;
+
     const description = document.createElement("p");
     description.textContent = category.description;
+
     const meta = document.createElement("div");
     meta.className = "card-meta";
     meta.innerHTML = `<span>${category.questionTotal}問</span><span>20秒/問</span>`;
+
+    if (cleared) {
+      const badge = document.createElement("span");
+      badge.className = "clear-badge";
+      badge.textContent = "✓ CLEAR";
+      meta.appendChild(badge);
+    }
 
     button.append(title, description, meta);
     button.addEventListener("click", () => {
@@ -252,6 +326,20 @@ function getSelectedCategory() {
 
 function getSelectedQuestions() {
   return state.questionBank.get(state.selectedCategoryId) || [];
+}
+
+function isClear(categoryId) {
+  const key = `${state.selectedLevel}:${categoryId}`;
+  return Boolean(readStore().clears[key]);
+}
+
+function saveClear(categoryId) {
+  const key = `${state.selectedLevel}:${categoryId}`;
+  const data = readStore();
+  if (!data.clears[key]) {
+    data.clears[key] = new Date().toISOString();
+    writeStore(data);
+  }
 }
 
 function startQuiz() {
@@ -424,18 +512,23 @@ function finishQuiz() {
     timestamp: Date.now(),
   };
   addRanking(result);
-  renderResult(result);
+
+  const isCleared = state.score === state.quizQuestions.length;
+  if (isCleared) saveClear(category.id);
+
+  renderResult(result, isCleared);
   showScreen("result");
   sendResultToBackend(result);
   playTone("finish");
 }
 
-function renderResult(result) {
+function renderResult(result, isCleared) {
   const percent = Math.round((result.score / result.questionCount) * 100);
   els.resultScore.textContent = `${result.score} / ${result.questionCount}`;
   els.resultPercent.textContent = `${percent}%`;
   els.resultTime.textContent = `所要時間 ${formatTime(result.totalTimeMs)}`;
   els.resultComment.textContent = getResultComment(percent);
+  els.clearBanner.hidden = !isCleared;
   setSyncStatus(getInitialSyncStatusText(), "pending");
   renderReview();
   els.reviewList.hidden = false;
@@ -534,20 +627,98 @@ function renderRanking(activeTab) {
   });
 }
 
+function renderClearScreen() {
+  els.clearTabs.innerHTML = "";
+  const clears = readStore().clears;
+
+  let activeLevel = state.selectedLevel || (state.levels[0] && state.levels[0].id) || "basic";
+
+  const renderClearList = (levelId) => {
+    els.clearList.innerHTML = "";
+    const levelCategories = state.categories.filter((c) => c.level === levelId);
+
+    levelCategories.forEach((cat) => {
+      const key = `${levelId}:${cat.id}`;
+      const clearDate = clears[key] || null;
+
+      const item = document.createElement("div");
+      item.className = "clear-item";
+
+      const name = document.createElement("span");
+      name.className = "clear-item__name";
+      name.textContent = cat.name;
+
+      const right = document.createElement("span");
+      if (clearDate) {
+        const status = document.createElement("span");
+        status.className = "clear-item__status";
+        status.textContent = "✓ CLEAR";
+        const date = document.createElement("span");
+        date.className = "clear-item__date";
+        const d = new Date(clearDate);
+        date.textContent = new Intl.DateTimeFormat("ja-JP", {
+          month: "2-digit",
+          day: "2-digit",
+          hour: "2-digit",
+          minute: "2-digit",
+        }).format(d);
+        right.append(status, document.createTextNode(" "), date);
+      } else {
+        right.className = "clear-item__empty";
+        right.textContent = "－";
+      }
+
+      item.append(name, right);
+      els.clearList.appendChild(item);
+    });
+  };
+
+  state.levels.forEach((level) => {
+    const button = document.createElement("button");
+    button.type = "button";
+    button.className = "tab-button";
+    button.role = "tab";
+    button.dataset.levelId = level.id;
+    button.textContent = level.name;
+    button.addEventListener("click", () => {
+      activeLevel = level.id;
+      document.querySelectorAll("#clearTabs .tab-button").forEach((b) => {
+        const active = b.dataset.levelId === level.id;
+        b.classList.toggle("is-active", active);
+        b.setAttribute("aria-selected", String(active));
+      });
+      renderClearList(level.id);
+    });
+    const isActive = level.id === activeLevel;
+    button.classList.toggle("is-active", isActive);
+    button.setAttribute("aria-selected", String(isActive));
+    els.clearTabs.appendChild(button);
+  });
+
+  renderClearList(activeLevel);
+}
+
 function showScreen(name) {
   stopTimer();
-  ["setup", "quiz", "result", "ranking"].forEach((screenName) => {
+  const allScreens = ["level", "setup", "quiz", "result", "ranking", "clear"];
+  allScreens.forEach((screenName) => {
     const element = els[`${screenName}Screen`];
+    if (!element) return;
     element.hidden = screenName !== name;
     element.classList.toggle("is-active", screenName === name);
   });
-  if (name !== "ranking") state.lastScreen = name;
+  if (name !== "ranking" && name !== "clear") state.lastScreen = name;
+  if (name === "level") {
+    renderLevelScreen();
+    startOpeningMusic();
+  }
   if (name === "setup") startOpeningMusic();
 }
 
 function loadStoredState() {
   const data = readStore();
   state.learnerRoleId = data.learnerRoleId || "";
+  state.selectedLevel = data.selectedLevel || "basic";
   if (state.learnerRoleId) {
     const input = document.querySelector(`input[name="learnerRole"][value="${state.learnerRoleId}"]`);
     if (input) input.checked = true;
@@ -592,10 +763,12 @@ function readStore() {
       learnerRoleId: parsed.learnerRoleId || "",
       learnerRoleName: parsed.learnerRoleName || "",
       muted: Boolean(parsed.muted),
+      selectedLevel: parsed.selectedLevel || "basic",
       rankings: Array.isArray(parsed.rankings) ? parsed.rankings : [],
+      clears: (parsed.clears && typeof parsed.clears === "object") ? parsed.clears : {},
     };
   } catch {
-    return { learnerRoleId: "", learnerRoleName: "", muted: false, rankings: [] };
+    return { learnerRoleId: "", learnerRoleName: "", muted: false, selectedLevel: "basic", rankings: [], clears: {} };
   }
 }
 
@@ -809,7 +982,7 @@ function stopMusicLoop() {
 }
 
 function isSetupScreenVisible() {
-  return els.setupScreen && !els.setupScreen.hidden;
+  return (els.levelScreen && !els.levelScreen.hidden) || (els.setupScreen && !els.setupScreen.hidden);
 }
 
 function playSynthNote(frequency, duration, typeName, gainValue) {

@@ -33,15 +33,27 @@
         </div>
       </div>
       <div class="topbar-actions" aria-label="アプリ操作">
+        <button id="clearButton" class="icon-text-button" type="button" title="クリア記録を表示">クリア記録</button>
         <button id="rankingButton" class="icon-text-button" type="button" title="履歴を表示">履歴</button>
         <button id="muteButton" class="icon-text-button sound-toggle" type="button" aria-pressed="false" title="効果音と音楽を切り替え">効果音OFF</button>
       </div>
     </header>
 
     <main>
-      <section id="setupScreen" class="screen is-active" aria-labelledby="setupTitle">
+      <!-- レベル選択画面（ホーム） -->
+      <section id="levelScreen" class="screen is-active" aria-labelledby="levelTitle">
+        <div class="level-intro">
+          <p class="eyebrow">難易度を選んでください</p>
+          <h2 id="levelTitle">レベル選択</h2>
+        </div>
+        <div id="levelGrid" class="level-grid"></div>
+      </section>
+
+      <!-- カテゴリー・設定画面 -->
+      <section id="setupScreen" class="screen" aria-labelledby="setupTitle" hidden>
         <div class="setup-layout">
           <aside class="panel setup-panel">
+            <button id="backToLevelButton" class="text-button back-button" type="button">← レベル選択へ</button>
             <h2 id="setupTitle">クイズ設定</h2>
             <fieldset id="roleFieldset" class="role-fieldset">
               <legend>職種 <span>必須</span></legend>
@@ -128,12 +140,15 @@
               <strong id="resultScore">0 / 0</strong>
               <span id="resultPercent">0%</span>
             </div>
+            <div id="clearBanner" class="clear-banner" hidden>
+              <span>👑 CLEAR!</span>
+            </div>
             <p id="resultTime" class="result-time"></p>
             <p id="resultComment" class="result-comment"></p>
             <p id="syncStatus" class="sync-status" role="status" aria-live="polite"></p>
             <div class="button-row">
               <button id="retryButton" class="primary-button" type="button">同じ条件で再挑戦</button>
-              <button id="backToSetupButton" class="secondary-button" type="button">ホームにもどる</button>
+              <button id="backToSetupButton" class="secondary-button" type="button">カテゴリーへ</button>
               <button id="resultRankingButton" class="secondary-button" type="button">履歴</button>
             </div>
           </section>
@@ -159,6 +174,19 @@
         <div id="rankingTabs" class="tab-row" role="tablist" aria-label="履歴カテゴリー"></div>
         <ol id="rankingList" class="ranking-list"></ol>
         <p id="rankingEmpty" class="empty-text" hidden>記録はまだありません。</p>
+      </section>
+
+      <!-- クリア記録画面 -->
+      <section id="clearScreen" class="screen" aria-labelledby="clearTitle" hidden>
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">Clear History</p>
+            <h2 id="clearTitle">クリア記録</h2>
+          </div>
+          <button id="closeClearButton" class="text-button" type="button">閉じる</button>
+        </div>
+        <div id="clearTabs" class="tab-row" role="tablist" aria-label="レベル"></div>
+        <div id="clearList" class="clear-list"></div>
       </section>
     </main>
 

@@ -1,79 +1,170 @@
 [
   {
-    "id": "ed_first_steps",
+    "id": "ed_first_steps_basic",
+    "level": "basic",
     "name": "救急外来まずはここから",
     "description": "初期評価、重症度判断、最初の検査と介入",
-    "file": "questions/ed_first_steps.json",
+    "file": "questions/ed_first_steps_basic.json",
     "accent": "#087f8c"
   },
   {
-    "id": "altered_mental_status",
+    "id": "altered_mental_status_basic",
+    "level": "basic",
     "name": "意識障害/意識消失",
     "description": "低血糖、けいれん、失神、初期鑑別",
-    "file": "questions/altered_mental_status.json",
+    "file": "questions/altered_mental_status_basic.json",
     "accent": "#4f46e5"
   },
   {
-    "id": "vertigo_stroke",
+    "id": "vertigo_stroke_basic",
+    "level": "basic",
     "name": "めまい/脳卒中",
     "description": "中枢性めまい、脳卒中初期対応、HINTS",
     "file": "questions/vertigo_stroke.json",
     "accent": "#0f766e"
   },
   {
-    "id": "orthopedic_trauma",
+    "id": "orthopedic_trauma_basic",
+    "level": "basic",
     "name": "整形外傷",
     "description": "開放骨折、コンパートメント、神経血管評価",
     "file": "questions/orthopedic_trauma.json",
     "accent": "#b45309"
   },
   {
-    "id": "infection",
+    "id": "infection_basic",
+    "level": "basic",
     "name": "感染症",
     "description": "抗菌薬適正使用、髄膜炎、尿路感染、壊死性筋膜炎",
     "file": "questions/infection.json",
     "accent": "#15803d"
   },
   {
-    "id": "gi_symptoms",
+    "id": "gi_symptoms_basic",
+    "level": "basic",
     "name": "消化器症状",
     "description": "腹痛、消化管出血、胆道感染、膵炎",
     "file": "questions/gi_symptoms.json",
     "accent": "#be123c"
   },
   {
-    "id": "emergency_medications",
+    "id": "emergency_medications_basic",
+    "level": "basic",
     "name": "救急外来薬剤投与",
     "description": "アドレナリン、ベンゾジアゼピン、解毒、電解質補正",
     "file": "questions/emergency_medications.json",
     "accent": "#7c2d12"
   },
   {
-    "id": "sepsis",
+    "id": "sepsis_basic",
+    "level": "basic",
     "name": "敗血症",
     "description": "初期認識、抗菌薬、循環管理、ソースコントロール",
     "file": "questions/sepsis.json",
     "accent": "#087f8c"
   },
   {
-    "id": "trauma",
+    "id": "trauma_basic",
+    "level": "basic",
     "name": "重症外傷",
     "description": "Primary survey、出血制御、胸腹部外傷、蘇生戦略",
     "file": "questions/trauma.json",
     "accent": "#b45309"
   },
   {
-    "id": "endocrine",
+    "id": "endocrine_basic",
+    "level": "basic",
     "name": "内分泌救急",
     "description": "DKA/HHS、副腎クリーゼ、甲状腺クリーゼ、電解質",
     "file": "questions/endocrine.json",
     "accent": "#6d5bd0"
   },
   {
-    "id": "cpr",
+    "id": "cpr_basic",
+    "level": "basic",
     "name": "心肺蘇生",
     "description": "高品質CPR、除細動、薬剤、可逆的原因",
     "file": "questions/cpr.json",
+    "accent": "#c2413b"
+  },
+  {
+    "id": "ed_first_steps_advanced",
+    "level": "advanced",
+    "name": "救急外来まずはここから",
+    "description": "トリアージ判断、緊急5疾患、優先順位の決定",
+    "file": "questions/ed_first_steps_advanced.json",
+    "accent": "#087f8c"
+  },
+  {
+    "id": "altered_mental_status_advanced",
+    "level": "advanced",
+    "name": "意識障害/意識消失",
+    "description": "AIUEOTIPS、気道管理適応、Wernicke脳症、NCSE",
+    "file": "questions/altered_mental_status_advanced.json",
+    "accent": "#4f46e5"
+  },
+  {
+    "id": "sepsis_advanced",
+    "level": "advanced",
+    "name": "敗血症",
+    "description": "輸液反応性、乳酸値、バソプレシン、SOFA",
+    "file": "questions/sepsis_advanced.json",
+    "accent": "#087f8c"
+  },
+  {
+    "id": "trauma_advanced",
+    "level": "advanced",
+    "name": "重症外傷",
+    "description": "MTP、止血蘇生、死の三徴、REBOA、TEG",
+    "file": "questions/trauma_advanced.json",
+    "accent": "#b45309"
+  },
+  {
+    "id": "cpr_advanced",
+    "level": "advanced",
+    "name": "心肺蘇生",
+    "description": "アドレナリン、アミオダロン、可逆的原因、ECPR適応",
+    "file": "questions/cpr_advanced.json",
+    "accent": "#c2413b"
+  },
+  {
+    "id": "ed_first_steps_master",
+    "level": "master",
+    "name": "救急外来まずはここから",
+    "description": "多発外傷、RSI、ECMO、チームマネジメント",
+    "file": "questions/ed_first_steps_master.json",
+    "accent": "#087f8c"
+  },
+  {
+    "id": "altered_mental_status_master",
+    "level": "master",
+    "name": "意識障害/意識消失",
+    "description": "自己免疫性脳炎、肝性脳症、低Na補正、脳波",
+    "file": "questions/altered_mental_status_master.json",
+    "accent": "#4f46e5"
+  },
+  {
+    "id": "sepsis_master",
+    "level": "master",
+    "name": "敗血症",
+    "description": "ステロイド、CRRT、肺保護換気、DIC、VTE予防",
+    "file": "questions/sepsis_master.json",
+    "accent": "#087f8c"
+  },
+  {
+    "id": "trauma_master",
+    "level": "master",
+    "name": "重症外傷",
+    "description": "DCS、骨盤TAE、腹部ACS、ICP管理、TRALI",
+    "file": "questions/trauma_master.json",
+    "accent": "#b45309"
+  },
+  {
+    "id": "cpr_master",
+    "level": "master",
+    "name": "心肺蘇生",
+    "description": "ECPR、PCAS、TTM、神経予後予測、持続脳波",
+    "file": "questions/cpr_master.json",
     "accent": "#c2413b"
   }
 ]
