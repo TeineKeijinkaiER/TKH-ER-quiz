@@ -781,6 +781,12 @@ button:focus-visible {
   color: var(--muted);
 }
 
+/* ===== Level card selected state ===== */
+.level-card.is-selected-level {
+  border-color: var(--primary);
+  background: var(--primary-soft);
+}
+
 /* ===== Level screen ===== */
 .level-intro {
   margin-bottom: 20px;

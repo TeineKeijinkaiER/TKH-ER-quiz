@@ -4,6 +4,29 @@ const QUESTION_SECONDS = 20;
 const TIMER_CIRCUMFERENCE = 2 * Math.PI * 52;
 const NEXT_QUESTION_DELAY_MS = 950;
 
+// ───────────────────────────────────────────
+// Quiz music: level × urgency configurations
+// interval = ms per music step (lower = faster/more tense)
+// ───────────────────────────────────────────
+const QUIZ_MUSIC = {
+  basic: {
+    normal: { pattern: [523, 659, 784, 659, 523, 440, 523, 659], interval: 200, wave: "square",   gain: 0.022 },
+    medium: { pattern: [523, 659, 784, 880, 784, 659, 523, 659], interval: 140, wave: "square",   gain: 0.026 },
+    high:   { pattern: [784, 880, 988, 880, 784, 880, 784, 988], interval: 90,  wave: "square",   gain: 0.034 },
+  },
+  advanced: {
+    normal: { pattern: [440, 523, 622, 698, 622, 523, 466, 523], interval: 185, wave: "sawtooth", gain: 0.020 },
+    medium: { pattern: [440, 622, 784, 622, 440, 523, 622, 784], interval: 130, wave: "sawtooth", gain: 0.025 },
+    high:   { pattern: [622, 784, 880, 784, 622, 784, 622, 880], interval: 85,  wave: "sawtooth", gain: 0.031 },
+  },
+  master: {
+    // master adds a deep bass pulse (bass[] = freq per 4-step cycle; 0 = silent)
+    normal: { pattern: [220, 262, 294, 330, 294, 262, 247, 262], interval: 190, wave: "triangle", gain: 0.028, bass: [73, 0, 98,  0]  },
+    medium: { pattern: [262, 294, 349, 294, 262, 294, 392, 349], interval: 145, wave: "sawtooth", gain: 0.034, bass: [73, 0, 98,  73] },
+    high:   { pattern: [294, 349, 392, 440, 392, 349, 370, 392], interval: 85,  wave: "sawtooth", gain: 0.042, bass: [98, 73, 98, 110] },
+  },
+};
+
 const state = {
   levels: [],
   selectedLevel: "basic",
@@ -27,6 +50,7 @@ const state = {
   musicStep: 0,
   musicGeneration: 0,
   musicMode: "",
+  musicUrgency: "normal",
   googleSheetsWebAppUrl: "",
   sendToLocalBackend: false,
 };
@@ -129,6 +153,23 @@ function cacheElements() {
 }
 
 function bindEvents() {
+  // Level buttons in setup panel
+  document.querySelectorAll("[data-level]").forEach((button) => {
+    button.addEventListener("click", () => {
+      state.selectedLevel = button.dataset.level;
+      const data = readStore();
+      data.selectedLevel = state.selectedLevel;
+      writeStore(data);
+      updateLevelButtons();
+      const levelCats = state.categories.filter((c) => c.level === state.selectedLevel);
+      state.selectedCategoryId = levelCats[0]?.id || "";
+      renderCategories();
+      renderQuestionCountControls();
+      updateSetupSummary();
+    });
+  });
+
+  // Question count buttons
   document.querySelectorAll("[data-count]").forEach((button) => {
     button.addEventListener("click", () => {
       if (button.disabled) return;
@@ -207,6 +248,14 @@ async function loadQuestionData() {
   );
 }
 
+// ─── Level helpers ─────────────────────────────────────────────────────────
+
+function updateLevelButtons() {
+  document.querySelectorAll("[data-level]").forEach((button) => {
+    button.classList.toggle("is-active", button.dataset.level === state.selectedLevel);
+  });
+}
+
 function renderLevelScreen() {
   els.levelGrid.innerHTML = "";
   const clears = readStore().clears;
@@ -218,7 +267,7 @@ function renderLevelScreen() {
 
     const card = document.createElement("button");
     card.type = "button";
-    card.className = "level-card";
+    card.className = "level-card" + (level.id === state.selectedLevel ? " is-selected-level" : "");
 
     const nameEl = document.createElement("span");
     nameEl.className = "level-card__name";
@@ -234,7 +283,7 @@ function renderLevelScreen() {
       const data = readStore();
       data.selectedLevel = level.id;
       writeStore(data);
-
+      updateLevelButtons();
       const levelCats = state.categories.filter((c) => c.level === level.id);
       state.selectedCategoryId = levelCats[0]?.id || "";
       renderCategories();
@@ -245,6 +294,8 @@ function renderLevelScreen() {
     els.levelGrid.appendChild(card);
   });
 }
+
+// ─── Category rendering ─────────────────────────────────────────────────────
 
 function renderCategories() {
   els.categoryGrid.innerHTML = "";
@@ -328,6 +379,8 @@ function getSelectedQuestions() {
   return state.questionBank.get(state.selectedCategoryId) || [];
 }
 
+// ─── Clear tracking ─────────────────────────────────────────────────────────
+
 function isClear(categoryId) {
   const key = `${state.selectedLevel}:${categoryId}`;
   return Boolean(readStore().clears[key]);
@@ -341,6 +394,8 @@ function saveClear(categoryId) {
     writeStore(data);
   }
 }
+
+// ─── Quiz flow ───────────────────────────────────────────────────────────────
 
 function startQuiz() {
   const category = getSelectedCategory();
@@ -367,6 +422,7 @@ function startQuiz() {
   state.startedAt = Date.now();
   state.isLocked = false;
   state.lastTickSecond = null;
+  state.musicUrgency = "normal";
 
   els.quizCategory.textContent = category.name;
   showScreen("quiz");
@@ -449,6 +505,18 @@ function updateTimerDisplay() {
     playTone("tick");
   }
 
+  // Escalate quiz music urgency as time runs out
+  if (remainingMs > 0 && state.musicMode === "quiz") {
+    const secs = Math.floor(remainingMs / 1000);
+    if (secs < 5 && state.musicUrgency !== "high") {
+      state.musicUrgency = "high";
+      startQuizMusic();
+    } else if (secs < 10 && state.musicUrgency === "normal") {
+      state.musicUrgency = "medium";
+      startQuizMusic();
+    }
+  }
+
   if (remainingMs <= 0) {
     handleAnswer(null, true);
   }
@@ -481,6 +549,7 @@ function handleAnswer(choiceIndex, timedOut) {
     if (state.currentIndex >= state.quizQuestions.length) {
       finishQuiz();
     } else {
+      state.musicUrgency = "normal";
       renderCurrentQuestion();
     }
   }, NEXT_QUESTION_DELAY_MS);
@@ -529,7 +598,7 @@ function renderResult(result, isCleared) {
   els.resultTime.textContent = `所要時間 ${formatTime(result.totalTimeMs)}`;
   els.resultComment.textContent = getResultComment(percent);
   els.clearBanner.hidden = !isCleared;
-  setSyncStatus(getInitialSyncStatusText(), "pending");
+  setSyncStatus("", "");
   renderReview();
   els.reviewList.hidden = false;
   els.toggleReviewButton.textContent = "折りたたむ";
@@ -655,13 +724,12 @@ function renderClearScreen() {
         status.textContent = "✓ CLEAR";
         const date = document.createElement("span");
         date.className = "clear-item__date";
-        const d = new Date(clearDate);
         date.textContent = new Intl.DateTimeFormat("ja-JP", {
           month: "2-digit",
           day: "2-digit",
           hour: "2-digit",
           minute: "2-digit",
-        }).format(d);
+        }).format(new Date(clearDate));
         right.append(status, document.createTextNode(" "), date);
       } else {
         right.className = "clear-item__empty";
@@ -724,6 +792,7 @@ function loadStoredState() {
     if (input) input.checked = true;
   }
   updateMuteButton(data.muted);
+  updateLevelButtons();
 }
 
 function persistLearnerRole() {
@@ -805,28 +874,16 @@ function sendResultToBackend(result) {
     pageUrl: window.location.href,
   };
 
-  let googleSheetsRequest = Promise.resolve("not-configured");
   if (state.googleSheetsWebAppUrl) {
-    setSyncStatus("スプレッドシートへ送信中...", "pending");
-    googleSheetsRequest = sendResultToGoogleSheets(event);
+    sendResultToGoogleSheets(event).catch((error) => {
+      console.error("Google Sheets send failed.", error);
+      setSyncStatus("スプレッドシート送信に失敗しました。設定URLとデプロイ権限を確認してください。", "error");
+    });
   }
 
   if (state.sendToLocalBackend) {
     sendResultToLocalBackend(event);
   }
-
-  googleSheetsRequest
-    .then((status) => {
-      if (status === "not-configured") {
-        setSyncStatus("スプレッドシート送信先は未設定です。", "muted");
-        return;
-      }
-      setSyncStatus("スプレッドシートへ送信リクエストを出しました。反映まで数秒かかることがあります。", "sent");
-    })
-    .catch((error) => {
-      console.error("Google Sheets send failed.", error);
-      setSyncStatus("スプレッドシート送信に失敗しました。設定URLとデプロイ権限を確認してください。", "error");
-    });
 }
 
 function sendResultToGoogleSheets(event) {
@@ -864,16 +921,115 @@ function sendResultToLocalBackend(event) {
   }).catch(() => {});
 }
 
-function getInitialSyncStatusText() {
-  return state.googleSheetsWebAppUrl
-    ? "スプレッドシート送信を準備しています。"
-    : "スプレッドシート送信先は未設定です。";
-}
-
 function setSyncStatus(text, status) {
   if (!els.syncStatus) return;
   els.syncStatus.textContent = text;
   els.syncStatus.dataset.status = status || "";
+  els.syncStatus.hidden = !text;
+}
+
+// ─── Audio: opening music (techno-pop) ─────────────────────────────────────
+// 4/4 at ~100 bpm (150 ms per step × 4 steps per beat = 600 ms per beat)
+// 16-step bar: kick on 1&3 (steps 0,8), snare on 2&4 (steps 4,12)
+
+function startOpeningMusic() {
+  if (readStore().muted || !isSetupScreenVisible()) return;
+  if (state.musicMode === "opening" && state.musicLoopId) return;
+  stopMusicLoop();
+  const generation = ++state.musicGeneration;
+  state.musicMode = "opening";
+  state.musicStep = 0;
+  playOpeningMusicStep(generation);
+  state.musicLoopId = window.setInterval(() => playOpeningMusicStep(generation), 150);
+}
+
+function playOpeningMusicStep(generation) {
+  if (generation !== state.musicGeneration) return;
+  if (readStore().muted || !isSetupScreenVisible()) {
+    stopMusicLoop();
+    return;
+  }
+
+  const step = state.musicStep % 16;
+
+  // ── Kick on beats 1 & 3 (steps 0, 8) ──
+  if (step === 0 || step === 8) {
+    playSynthNote(65,  0.10, "square",   0.055); // sub-bass kick
+    playSynthNote(131, 0.14, "triangle", 0.030); // C3 bass
+  }
+  // ── Snare on beats 2 & 4 (steps 4, 12) ──
+  if (step === 4 || step === 12) {
+    playSynthNote(220, 0.06, "sawtooth", 0.020);
+  }
+  // ── Bass riff accents ──
+  if (step === 2 || step === 10) {
+    playSynthNote(131, 0.08, "triangle", 0.016); // C3 ghost
+  }
+  if (step === 6 || step === 14) {
+    playSynthNote(196, 0.08, "triangle", 0.016); // G3
+  }
+
+  // ── Lead synth arpeggio (Cm pentatonic feel) ──
+  const arp = [523, 622, 784, 932, 784, 622, 523, 466,
+               523, 698, 784, 932, 784, 698, 622, 523];
+  const arpGain = (step % 4 === 0) ? 0.022 : 0.015;
+  playSynthNote(arp[step], 0.09, "square", arpGain);
+
+  // ── Hi-hat shimmer on odd steps ──
+  if (step % 2 === 1) {
+    playSynthNote(3136, 0.025, "square", 0.004);
+  }
+
+  state.musicStep += 1;
+}
+
+// ─── Audio: quiz music (level & urgency aware) ──────────────────────────────
+
+function startQuizMusic() {
+  if (readStore().muted) return;
+  stopMusicLoop();
+  const level = state.selectedLevel || "basic";
+  const urgency = state.musicUrgency || "normal";
+  const config = (QUIZ_MUSIC[level] || QUIZ_MUSIC.basic)[urgency] || QUIZ_MUSIC.basic.normal;
+  const generation = ++state.musicGeneration;
+  state.musicMode = "quiz";
+  state.musicStep = 0;
+  playQuizMusicStep(config, generation);
+  state.musicLoopId = window.setInterval(() => playQuizMusicStep(config, generation), config.interval);
+}
+
+function playQuizMusicStep(config, generation) {
+  if (generation !== state.musicGeneration || readStore().muted) return;
+  const step = state.musicStep % config.pattern.length;
+  const freq = config.pattern[step];
+  // Accent on every 4th note
+  const gain = step % 4 === 0 ? config.gain * 1.25 : config.gain;
+  playSynthNote(freq, 0.09, config.wave, gain);
+
+  // Deep bass pulse for Master level
+  if (config.bass) {
+    const bassFreq = config.bass[step % config.bass.length];
+    if (bassFreq > 0) {
+      playSynthNote(bassFreq, 0.14, "triangle", config.gain * 0.55);
+    }
+  }
+
+  state.musicStep += 1;
+}
+
+// ─── Audio: shared utilities ─────────────────────────────────────────────────
+
+function stopMusicLoop() {
+  state.musicGeneration += 1;
+  if (state.musicLoopId) {
+    window.clearInterval(state.musicLoopId);
+    state.musicLoopId = 0;
+  }
+  state.musicMode = "";
+}
+
+function isSetupScreenVisible() {
+  return (els.levelScreen && !els.levelScreen.hidden) || (els.setupScreen && !els.setupScreen.hidden);
 }
 
 function ensureAudioContext() {
@@ -896,8 +1052,8 @@ function playTone(type) {
   }
 
   const presets = {
-    wrong: [170, 0.18, "sawtooth", 0.06],
-    tick: [880, 0.05, "square", 0.035],
+    wrong:  [170, 0.18, "sawtooth", 0.06],
+    tick:   [880, 0.05, "square",   0.035],
     finish: [523, 0.22, "triangle", 0.08],
   };
   const [frequency, duration, typeName, gainValue] = presets[type] || presets.tick;
@@ -918,71 +1074,6 @@ function playCorrectSound() {
   notes.forEach(([frequency, delay]) => {
     window.setTimeout(() => playSynthNote(frequency, 0.12, "triangle", 0.075), delay);
   });
-}
-
-function startOpeningMusic() {
-  if (readStore().muted || !isSetupScreenVisible()) return;
-  if (state.musicMode === "opening" && state.musicLoopId) return;
-  stopMusicLoop();
-  const generation = ++state.musicGeneration;
-  state.musicMode = "opening";
-  state.musicStep = 0;
-  playOpeningMusicStep(generation);
-  state.musicLoopId = window.setInterval(() => playOpeningMusicStep(generation), 230);
-}
-
-function playOpeningMusicStep(generation) {
-  if (generation !== state.musicGeneration) return;
-  if (readStore().muted || !isSetupScreenVisible()) {
-    stopMusicLoop();
-    return;
-  }
-
-  const melody = [
-    523, 659, 784, 1047, 988, 784, 659, 784,
-    587, 740, 880, 1175, 1047, 880, 740, 880,
-    659, 784, 988, 1319, 1175, 988, 784, 988,
-    698, 880, 1047, 1397, 1319, 1047, 880, 1047,
-  ];
-  const bass = [131, 131, 196, 196, 147, 147, 196, 196, 165, 165, 220, 220, 196, 196, 247, 247];
-  const step = state.musicStep % melody.length;
-
-  playSynthNote(melody[step], step % 4 === 3 ? 0.18 : 0.12, step % 8 < 4 ? "square" : "triangle", 0.028);
-  if (step % 2 === 0) playSynthNote(bass[step % bass.length], 0.18, "triangle", 0.018);
-  if (step % 8 === 0) playSynthNote(melody[step] * 1.5, 0.08, "triangle", 0.014);
-  state.musicStep += 1;
-}
-
-function startQuizMusic() {
-  if (readStore().muted) return;
-  stopMusicLoop();
-  const pattern = [196, 220, 247, 220, 196, 175, 196, 294];
-  const generation = ++state.musicGeneration;
-  state.musicMode = "quiz";
-  state.musicStep = 0;
-  playQuizMusicStep(pattern, generation);
-  state.musicLoopId = window.setInterval(() => playQuizMusicStep(pattern, generation), 190);
-}
-
-function playQuizMusicStep(pattern, generation) {
-  if (generation !== state.musicGeneration || readStore().muted) return;
-  const frequency = pattern[state.musicStep % pattern.length];
-  const gain = state.musicStep % 4 === 3 ? 0.026 : 0.018;
-  playSynthNote(frequency, 0.08, "square", gain);
-  state.musicStep += 1;
-}
-
-function stopMusicLoop() {
-  state.musicGeneration += 1;
-  if (state.musicLoopId) {
-    window.clearInterval(state.musicLoopId);
-    state.musicLoopId = 0;
-  }
-  state.musicMode = "";
-}
-
-function isSetupScreenVisible() {
-  return (els.levelScreen && !els.levelScreen.hidden) || (els.setupScreen && !els.setupScreen.hidden);
 }
 
 function playSynthNote(frequency, duration, typeName, gainValue) {
@@ -1009,6 +1100,8 @@ function playSynthNote(frequency, duration, typeName, gainValue) {
   }
   play();
 }
+
+// ─── Misc helpers ─────────────────────────────────────────────────────────────
 
 function shuffle(items) {
   const array = items.slice();
