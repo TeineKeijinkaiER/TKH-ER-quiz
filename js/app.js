@@ -4,10 +4,10 @@ const QUESTION_SECONDS = 20;
 const TIMER_CIRCUMFERENCE = 2 * Math.PI * 52;
 const NEXT_QUESTION_DELAY_MS = 950;
 
-// ───────────────────────────────────────────
-// Quiz music: level × urgency configurations
-// interval = ms per music step (lower = faster/more tense)
-// ───────────────────────────────────────────
+// ──────────────────────────────────────────────────────────────────────────────
+// Quiz music: level × urgency
+// interval = ms per step (lower = faster/more tense)
+// ──────────────────────────────────────────────────────────────────────────────
 const QUIZ_MUSIC = {
   basic: {
     normal: { pattern: [523, 659, 784, 659, 523, 440, 523, 659], interval: 200, wave: "square",   gain: 0.022 },
@@ -20,12 +20,15 @@ const QUIZ_MUSIC = {
     high:   { pattern: [622, 784, 880, 784, 622, 784, 622, 880], interval: 85,  wave: "sawtooth", gain: 0.031 },
   },
   master: {
-    // master adds a deep bass pulse (bass[] = freq per 4-step cycle; 0 = silent)
+    // bass[] = freq per 4-step cycle; 0 = silent
     normal: { pattern: [220, 262, 294, 330, 294, 262, 247, 262], interval: 190, wave: "triangle", gain: 0.028, bass: [73, 0, 98,  0]  },
     medium: { pattern: [262, 294, 349, 294, 262, 294, 392, 349], interval: 145, wave: "sawtooth", gain: 0.034, bass: [73, 0, 98,  73] },
     high:   { pattern: [294, 349, 392, 440, 392, 349, 370, 392], interval: 85,  wave: "sawtooth", gain: 0.042, bass: [98, 73, 98, 110] },
   },
 };
+
+// Opening music interval per level (ms per step)
+const OPENING_INTERVAL = { basic: 175, advanced: 150, master: 140 };
 
 const state = {
   levels: [],
@@ -81,25 +84,16 @@ async function init() {
 async function loadAppConfig() {
   state.googleSheetsWebAppUrl = "";
   state.sendToLocalBackend = isLocalOrigin();
-
   try {
     const response = await fetch("data/app-config.json", { cache: "no-store" });
     if (!response.ok) return;
     const config = await response.json();
-    const googleSheetsWebAppUrl = typeof config.googleSheetsWebAppUrl === "string" ? config.googleSheetsWebAppUrl.trim() : "";
-    if (googleSheetsWebAppUrl && isGoogleAppsScriptWebAppUrl(googleSheetsWebAppUrl)) {
-      state.googleSheetsWebAppUrl = googleSheetsWebAppUrl;
-    } else if (googleSheetsWebAppUrl) {
-      console.warn("googleSheetsWebAppUrl must be an Apps Script web app URL ending in /exec.", googleSheetsWebAppUrl);
+    const url = typeof config.googleSheetsWebAppUrl === "string" ? config.googleSheetsWebAppUrl.trim() : "";
+    if (url && isGoogleAppsScriptWebAppUrl(url)) {
+      state.googleSheetsWebAppUrl = url;
     }
-
-    if (config.sendToLocalBackend === true) {
-      state.sendToLocalBackend = true;
-    } else if (config.sendToLocalBackend === false) {
-      state.sendToLocalBackend = false;
-    } else {
-      state.sendToLocalBackend = isLocalOrigin();
-    }
+    if (config.sendToLocalBackend === true) state.sendToLocalBackend = true;
+    else if (config.sendToLocalBackend === false) state.sendToLocalBackend = false;
   } catch (error) {
     console.warn("app-config.json could not be loaded.", error);
   }
@@ -107,49 +101,19 @@ async function loadAppConfig() {
 
 function cacheElements() {
   [
-    "levelScreen",
-    "levelGrid",
-    "setupScreen",
-    "quizScreen",
-    "resultScreen",
-    "rankingScreen",
-    "clearScreen",
-    "clearBanner",
-    "clearTabs",
-    "clearList",
-    "categoryGrid",
-    "selectedCategoryLabel",
-    "setupStatus",
-    "startQuizButton",
-    "rankingButton",
-    "muteButton",
-    "clearButton",
-    "backToLevelButton",
-    "closeClearButton",
-    "quitQuizButton",
-    "quizCategory",
-    "quizProgress",
-    "timerArc",
-    "timerText",
-    "questionText",
-    "choiceList",
-    "resultScore",
-    "resultPercent",
-    "resultTime",
-    "resultComment",
-    "syncStatus",
-    "retryButton",
-    "backToSetupButton",
-    "resultRankingButton",
-    "toggleReviewButton",
-    "reviewList",
-    "rankingTabs",
-    "rankingList",
-    "rankingEmpty",
-    "closeRankingButton",
-  ].forEach((id) => {
-    els[id] = document.getElementById(id);
-  });
+    "levelScreen", "levelGrid",
+    "setupScreen", "quizScreen", "resultScreen", "rankingScreen", "clearScreen",
+    "clearBanner", "clearTabs", "clearList",
+    "categoryGrid", "selectedCategoryLabel", "setupStatus",
+    "startQuizButton", "rankingButton", "muteButton",
+    "clearButton", "backToLevelButton", "closeClearButton",
+    "quitQuizButton", "quizCategory", "quizProgress",
+    "timerArc", "timerText", "questionText", "choiceList",
+    "resultScore", "resultPercent", "resultTime", "resultComment", "syncStatus",
+    "retryButton", "backToSetupButton", "resultRankingButton",
+    "toggleReviewButton", "reviewList",
+    "rankingTabs", "rankingList", "rankingEmpty", "closeRankingButton",
+  ].forEach((id) => { els[id] = document.getElementById(id); });
 }
 
 function bindEvents() {
@@ -166,10 +130,11 @@ function bindEvents() {
       renderCategories();
       renderQuestionCountControls();
       updateSetupSummary();
+      // Restart opening music with the new level's theme
+      startOpeningMusic();
     });
   });
 
-  // Question count buttons
   document.querySelectorAll("[data-count]").forEach((button) => {
     button.addEventListener("click", () => {
       if (button.disabled) return;
@@ -182,19 +147,14 @@ function bindEvents() {
   els.startQuizButton.addEventListener("click", startQuiz);
   els.rankingButton.addEventListener("click", () => openRanking("all"));
   els.resultRankingButton.addEventListener("click", () => openRanking("all"));
-  els.closeRankingButton.addEventListener("click", () => showScreen(state.lastScreen === "quiz" ? "setup" : state.lastScreen));
-  els.quitQuizButton.addEventListener("click", () => {
-    stopTimer();
-    showScreen("setup");
-  });
+  els.closeRankingButton.addEventListener("click", () =>
+    showScreen(state.lastScreen === "quiz" ? "setup" : state.lastScreen));
+  els.quitQuizButton.addEventListener("click", () => { stopTimer(); showScreen("setup"); });
   els.retryButton.addEventListener("click", startQuiz);
   els.backToSetupButton.addEventListener("click", () => showScreen("setup"));
   els.toggleReviewButton.addEventListener("click", toggleReview);
   els.backToLevelButton.addEventListener("click", () => showScreen("level"));
-  els.clearButton.addEventListener("click", () => {
-    renderClearScreen();
-    showScreen("clear");
-  });
+  els.clearButton.addEventListener("click", () => { renderClearScreen(); showScreen("clear"); });
   els.closeClearButton.addEventListener("click", () => {
     const prev = state.lastScreen;
     showScreen(prev === "clear" || !prev ? "level" : prev);
@@ -213,17 +173,28 @@ function bindEvents() {
   els.muteButton.addEventListener("click", toggleMute);
 }
 
+// ──────────────────────────────────────────────────────────────────────────────
+// iOS audio unlock: create + resume AudioContext within the user gesture
+// (iOS Safari blocks AudioContext until a gesture; touchstart fires before
+//  pointerdown on iOS, so we register both for maximum compatibility)
+// ──────────────────────────────────────────────────────────────────────────────
 function bindFirstAudioGesture() {
-  document.addEventListener(
-    "pointerdown",
-    () => startOpeningMusic(),
-    { once: true, passive: true },
-  );
-  document.addEventListener(
-    "keydown",
-    () => startOpeningMusic(),
-    { once: true },
-  );
+  const unlock = () => {
+    // Create the AudioContext synchronously inside the gesture handler
+    if (!state.audioContext) {
+      const Ctx = window.AudioContext || window.webkitAudioContext;
+      if (Ctx) state.audioContext = new Ctx();
+    }
+    if (state.audioContext) {
+      // resume() must be called within the gesture on iOS
+      state.audioContext.resume()
+        .then(() => { if (!state.musicLoopId) startOpeningMusic(); })
+        .catch(() => {});
+    }
+  };
+  document.addEventListener("touchstart", unlock, { once: true, passive: true });
+  document.addEventListener("pointerdown", unlock, { once: true, passive: true });
+  document.addEventListener("keydown",     unlock, { once: true });
 }
 
 async function loadQuestionData() {
@@ -233,22 +204,20 @@ async function loadQuestionData() {
   ]);
   if (!levelsRes.ok) throw new Error(`levels.json ${levelsRes.status}`);
   if (!categoriesRes.ok) throw new Error(`categories.json ${categoriesRes.status}`);
-
   state.levels = await levelsRes.json();
   state.categories = await categoriesRes.json();
-
   await Promise.all(
     state.categories.map(async (category) => {
-      const response = await fetch(`data/${category.file}`, { cache: "no-store" });
-      if (!response.ok) throw new Error(`${category.file} ${response.status}`);
-      const data = await response.json();
+      const res = await fetch(`data/${category.file}`, { cache: "no-store" });
+      if (!res.ok) throw new Error(`${category.file} ${res.status}`);
+      const data = await res.json();
       state.questionBank.set(category.id, data.questions);
       category.questionTotal = data.questions.length;
     }),
   );
 }
 
-// ─── Level helpers ─────────────────────────────────────────────────────────
+// ─── Level helpers ────────────────────────────────────────────────────────────
 
 function updateLevelButtons() {
   document.querySelectorAll("[data-level]").forEach((button) => {
@@ -259,24 +228,18 @@ function updateLevelButtons() {
 function renderLevelScreen() {
   els.levelGrid.innerHTML = "";
   const clears = readStore().clears;
-
   state.levels.forEach((level) => {
-    const levelCategories = state.categories.filter((c) => c.level === level.id);
-    const clearedCount = levelCategories.filter((c) => Boolean(clears[`${level.id}:${c.id}`])).length;
-    const total = levelCategories.length;
-
+    const levelCats = state.categories.filter((c) => c.level === level.id);
+    const clearedCount = levelCats.filter((c) => Boolean(clears[`${level.id}:${c.id}`])).length;
     const card = document.createElement("button");
     card.type = "button";
     card.className = "level-card" + (level.id === state.selectedLevel ? " is-selected-level" : "");
-
     const nameEl = document.createElement("span");
     nameEl.className = "level-card__name";
     nameEl.textContent = level.name;
-
     const clearEl = document.createElement("span");
     clearEl.className = "level-card__clear";
-    clearEl.textContent = `${clearedCount} / ${total} クリア済み`;
-
+    clearEl.textContent = `${clearedCount} / ${levelCats.length} クリア済み`;
     card.append(nameEl, clearEl);
     card.addEventListener("click", () => {
       state.selectedLevel = level.id;
@@ -284,8 +247,8 @@ function renderLevelScreen() {
       data.selectedLevel = level.id;
       writeStore(data);
       updateLevelButtons();
-      const levelCats = state.categories.filter((c) => c.level === level.id);
-      state.selectedCategoryId = levelCats[0]?.id || "";
+      const cats = state.categories.filter((c) => c.level === level.id);
+      state.selectedCategoryId = cats[0]?.id || "";
       renderCategories();
       renderQuestionCountControls();
       updateSetupSummary();
@@ -295,68 +258,62 @@ function renderLevelScreen() {
   });
 }
 
-// ─── Category rendering ─────────────────────────────────────────────────────
+// ─── Category rendering ───────────────────────────────────────────────────────
 
 function renderCategories() {
   els.categoryGrid.innerHTML = "";
-  const levelCategories = state.categories.filter((c) => c.level === state.selectedLevel);
-
-  levelCategories.forEach((category) => {
-    const cleared = isClear(category.id);
-    const button = document.createElement("button");
-    button.type = "button";
-    button.className = "category-card" + (cleared ? " is-cleared" : "");
-    button.style.borderTopColor = category.accent || "var(--primary)";
-    button.setAttribute("aria-pressed", String(category.id === state.selectedCategoryId));
-    button.dataset.categoryId = category.id;
-
-    const title = document.createElement("h3");
-    title.textContent = category.name;
-
-    const description = document.createElement("p");
-    description.textContent = category.description;
-
-    const meta = document.createElement("div");
-    meta.className = "card-meta";
-    meta.innerHTML = `<span>${category.questionTotal}問</span><span>20秒/問</span>`;
-
-    if (cleared) {
-      const badge = document.createElement("span");
-      badge.className = "clear-badge";
-      badge.textContent = "✓ CLEAR";
-      meta.appendChild(badge);
-    }
-
-    button.append(title, description, meta);
-    button.addEventListener("click", () => {
-      state.selectedCategoryId = category.id;
-      renderCategories();
-      renderQuestionCountControls();
-      updateSetupSummary();
+  state.categories
+    .filter((c) => c.level === state.selectedLevel)
+    .forEach((category) => {
+      const cleared = isClear(category.id);
+      const button = document.createElement("button");
+      button.type = "button";
+      button.className = "category-card" + (cleared ? " is-cleared" : "");
+      button.style.borderTopColor = category.accent || "var(--primary)";
+      button.setAttribute("aria-pressed", String(category.id === state.selectedCategoryId));
+      button.dataset.categoryId = category.id;
+      const title = document.createElement("h3");
+      title.textContent = category.name;
+      const desc = document.createElement("p");
+      desc.textContent = category.description;
+      const meta = document.createElement("div");
+      meta.className = "card-meta";
+      meta.innerHTML = `<span>${category.questionTotal}問</span><span>20秒/問</span>`;
+      if (cleared) {
+        const badge = document.createElement("span");
+        badge.className = "clear-badge";
+        badge.textContent = "✓ CLEAR";
+        meta.appendChild(badge);
+      }
+      button.append(title, desc, meta);
+      button.addEventListener("click", () => {
+        state.selectedCategoryId = category.id;
+        renderCategories();
+        renderQuestionCountControls();
+        updateSetupSummary();
+      });
+      els.categoryGrid.appendChild(button);
     });
-    els.categoryGrid.appendChild(button);
-  });
   updateSelectedCard();
 }
 
 function updateSelectedCard() {
   document.querySelectorAll(".category-card").forEach((card) => {
-    const selected = card.dataset.categoryId === state.selectedCategoryId;
-    card.classList.toggle("is-selected", selected);
-    card.setAttribute("aria-pressed", String(selected));
+    const sel = card.dataset.categoryId === state.selectedCategoryId;
+    card.classList.toggle("is-selected", sel);
+    card.setAttribute("aria-pressed", String(sel));
   });
 }
 
 function renderQuestionCountControls() {
-  const questionTotal = getSelectedQuestions().length;
+  const total = getSelectedQuestions().length;
   document.querySelectorAll("[data-count]").forEach((button) => {
     const count = Number(button.dataset.count);
-    button.disabled = questionTotal > 0 && count > questionTotal;
+    button.disabled = total > 0 && count > total;
     button.classList.toggle("is-active", count === state.questionCount);
   });
-
-  if (questionTotal > 0 && state.questionCount > questionTotal) {
-    state.questionCount = questionTotal >= 10 ? 10 : 5;
+  if (total > 0 && state.questionCount > total) {
+    state.questionCount = total >= 10 ? 10 : 5;
     renderQuestionCountControls();
   }
 }
@@ -372,18 +329,17 @@ function updateStartButtonState() {
 }
 
 function getSelectedCategory() {
-  return state.categories.find((category) => category.id === state.selectedCategoryId);
+  return state.categories.find((c) => c.id === state.selectedCategoryId);
 }
 
 function getSelectedQuestions() {
   return state.questionBank.get(state.selectedCategoryId) || [];
 }
 
-// ─── Clear tracking ─────────────────────────────────────────────────────────
+// ─── Clear tracking ───────────────────────────────────────────────────────────
 
 function isClear(categoryId) {
-  const key = `${state.selectedLevel}:${categoryId}`;
-  return Boolean(readStore().clears[key]);
+  return Boolean(readStore().clears[`${state.selectedLevel}:${categoryId}`]);
 }
 
 function saveClear(categoryId) {
@@ -395,24 +351,20 @@ function saveClear(categoryId) {
   }
 }
 
-// ─── Quiz flow ───────────────────────────────────────────────────────────────
+// ─── Quiz flow ────────────────────────────────────────────────────────────────
 
 function startQuiz() {
   const category = getSelectedCategory();
   const sourceQuestions = getSelectedQuestions();
   if (!category || sourceQuestions.length === 0) {
-    els.setupStatus.textContent = "カテゴリーを読み込めていません。";
-    return;
+    els.setupStatus.textContent = "カテゴリーを読み込めていません。"; return;
   }
   if (state.questionCount > sourceQuestions.length) {
-    els.setupStatus.textContent = "選択した出題数に対して問題数が不足しています。";
-    return;
+    els.setupStatus.textContent = "選択した出題数に対して問題数が不足しています。"; return;
   }
   if (!state.learnerRoleId) {
-    els.setupStatus.textContent = "職種を選択してください。";
-    return;
+    els.setupStatus.textContent = "職種を選択してください。"; return;
   }
-
   ensureAudioContext();
   persistLearnerRole();
   state.quizQuestions = shuffle(sourceQuestions).slice(0, state.questionCount).map(prepareQuestion);
@@ -423,7 +375,6 @@ function startQuiz() {
   state.isLocked = false;
   state.lastTickSecond = null;
   state.musicUrgency = "normal";
-
   els.quizCategory.textContent = category.name;
   showScreen("quiz");
   renderCurrentQuestion();
@@ -431,13 +382,13 @@ function startQuiz() {
 
 function prepareQuestion(question) {
   const choices = question.choices.map((text, index) => ({ text, originalIndex: index }));
-  const shuffledChoices = shuffle(choices);
+  const shuffled = shuffle(choices);
   return {
     id: question.id,
     question: question.question,
     explanation: question.explanation,
-    choices: shuffledChoices.map((choice) => choice.text),
-    correctIndex: shuffledChoices.findIndex((choice) => choice.originalIndex === question.answer),
+    choices: shuffled.map((c) => c.text),
+    correctIndex: shuffled.findIndex((c) => c.originalIndex === question.answer),
   };
 }
 
@@ -449,13 +400,11 @@ function renderCurrentQuestion() {
   els.quizProgress.textContent = `${state.currentIndex + 1} / ${state.quizQuestions.length}`;
   els.questionText.textContent = question.question;
   els.choiceList.innerHTML = "";
-
   question.choices.forEach((choice, index) => {
     const button = document.createElement("button");
     button.type = "button";
     button.className = "choice-button";
     button.addEventListener("click", () => handleAnswer(index, false));
-
     const key = document.createElement("span");
     key.className = "choice-key";
     key.textContent = String(index + 1);
@@ -464,7 +413,6 @@ function renderCurrentQuestion() {
     button.append(key, text);
     els.choiceList.appendChild(button);
   });
-
   startTimer();
 }
 
@@ -476,10 +424,7 @@ function startTimer() {
 }
 
 function stopTimer() {
-  if (state.timerId) {
-    window.clearInterval(state.timerId);
-    state.timerId = 0;
-  }
+  if (state.timerId) { window.clearInterval(state.timerId); state.timerId = 0; }
   stopMusicLoop();
 }
 
@@ -491,8 +436,7 @@ function setupTimerArc() {
 function updateTimerDisplay() {
   const remainingMs = Math.max(0, state.timerDeadline - Date.now());
   const remainingSeconds = Math.ceil(remainingMs / 1000);
-  const elapsedRatio = 1 - remainingMs / (QUESTION_SECONDS * 1000);
-  const offset = TIMER_CIRCUMFERENCE * elapsedRatio;
+  const offset = TIMER_CIRCUMFERENCE * (1 - remainingMs / (QUESTION_SECONDS * 1000));
   const timer = els.timerText.closest(".timer");
 
   els.timerText.textContent = String(remainingSeconds);
@@ -517,20 +461,16 @@ function updateTimerDisplay() {
     }
   }
 
-  if (remainingMs <= 0) {
-    handleAnswer(null, true);
-  }
+  if (remainingMs <= 0) handleAnswer(null, true);
 }
 
 function handleAnswer(choiceIndex, timedOut) {
   if (state.isLocked) return;
   state.isLocked = true;
   stopTimer();
-
   const question = state.quizQuestions[state.currentIndex];
   const correct = choiceIndex === question.correctIndex;
   if (correct) state.score += 1;
-
   state.reviewItems.push({
     question: question.question,
     choices: question.choices.slice(),
@@ -540,10 +480,8 @@ function handleAnswer(choiceIndex, timedOut) {
     isCorrect: correct,
     timedOut,
   });
-
   renderChoiceFeedback(choiceIndex, question.correctIndex);
   playTone(correct ? "correct" : "wrong");
-
   window.setTimeout(() => {
     state.currentIndex += 1;
     if (state.currentIndex >= state.quizQuestions.length) {
@@ -556,8 +494,7 @@ function handleAnswer(choiceIndex, timedOut) {
 }
 
 function renderChoiceFeedback(selectedIndex, correctIndex) {
-  const buttons = els.choiceList.querySelectorAll(".choice-button");
-  buttons.forEach((button, index) => {
+  els.choiceList.querySelectorAll(".choice-button").forEach((button, index) => {
     button.disabled = true;
     if (index === correctIndex) button.classList.add("is-correct");
     if (selectedIndex !== null && index === selectedIndex && index !== correctIndex) {
@@ -581,10 +518,8 @@ function finishQuiz() {
     timestamp: Date.now(),
   };
   addRanking(result);
-
   const isCleared = state.score === state.quizQuestions.length;
   if (isCleared) saveClear(category.id);
-
   renderResult(result, isCleared);
   showScreen("result");
   sendResultToBackend(result);
@@ -610,7 +545,6 @@ function renderReview() {
   state.reviewItems.forEach((item, index) => {
     const card = document.createElement("article");
     card.className = `review-card${item.isCorrect ? " is-correct" : ""}`;
-
     const title = document.createElement("h4");
     title.textContent = `Q${index + 1}. ${item.question}`;
     const user = document.createElement("p");
@@ -624,7 +558,6 @@ function renderReview() {
     const explanation = document.createElement("p");
     explanation.className = "explanation";
     explanation.textContent = item.explanation;
-
     card.append(title, user, correct, explanation);
     els.reviewList.appendChild(card);
   });
@@ -642,14 +575,11 @@ function toggleReview() {
   els.toggleReviewButton.setAttribute("aria-expanded", String(willShow));
 }
 
-function openRanking(tabId) {
-  renderRanking(tabId);
-  showScreen("ranking");
-}
+function openRanking(tabId) { renderRanking(tabId); showScreen("ranking"); }
 
 function renderRankingTabs() {
   els.rankingTabs.innerHTML = "";
-  const tabs = [{ id: "all", name: "全体" }, ...state.categories.map((category) => ({ id: category.id, name: category.name }))];
+  const tabs = [{ id: "all", name: "全体" }, ...state.categories.map((c) => ({ id: c.id, name: c.name }))];
   tabs.forEach((tab) => {
     const button = document.createElement("button");
     button.type = "button";
@@ -664,17 +594,15 @@ function renderRankingTabs() {
 
 function renderRanking(activeTab) {
   const rankings = readStore().rankings || [];
-  const filtered = activeTab === "all" ? rankings : rankings.filter((record) => record.categoryId === activeTab);
+  const filtered = activeTab === "all" ? rankings : rankings.filter((r) => r.categoryId === activeTab);
   const top = filtered.slice(0, 10);
   els.rankingList.innerHTML = "";
   els.rankingEmpty.hidden = top.length > 0;
-
   document.querySelectorAll(".tab-button").forEach((button) => {
     const active = button.dataset.tabId === activeTab;
     button.classList.toggle("is-active", active);
     button.setAttribute("aria-selected", String(active));
   });
-
   top.forEach((record, index) => {
     const item = document.createElement("li");
     const rank = document.createElement("span");
@@ -699,24 +627,17 @@ function renderRanking(activeTab) {
 function renderClearScreen() {
   els.clearTabs.innerHTML = "";
   const clears = readStore().clears;
-
-  let activeLevel = state.selectedLevel || (state.levels[0] && state.levels[0].id) || "basic";
+  let activeLevel = state.selectedLevel || (state.levels[0]?.id) || "basic";
 
   const renderClearList = (levelId) => {
     els.clearList.innerHTML = "";
-    const levelCategories = state.categories.filter((c) => c.level === levelId);
-
-    levelCategories.forEach((cat) => {
-      const key = `${levelId}:${cat.id}`;
-      const clearDate = clears[key] || null;
-
+    state.categories.filter((c) => c.level === levelId).forEach((cat) => {
+      const clearDate = clears[`${levelId}:${cat.id}`] || null;
       const item = document.createElement("div");
       item.className = "clear-item";
-
       const name = document.createElement("span");
       name.className = "clear-item__name";
       name.textContent = cat.name;
-
       const right = document.createElement("span");
       if (clearDate) {
         const status = document.createElement("span");
@@ -725,17 +646,13 @@ function renderClearScreen() {
         const date = document.createElement("span");
         date.className = "clear-item__date";
         date.textContent = new Intl.DateTimeFormat("ja-JP", {
-          month: "2-digit",
-          day: "2-digit",
-          hour: "2-digit",
-          minute: "2-digit",
+          month: "2-digit", day: "2-digit", hour: "2-digit", minute: "2-digit",
         }).format(new Date(clearDate));
         right.append(status, document.createTextNode(" "), date);
       } else {
         right.className = "clear-item__empty";
         right.textContent = "－";
       }
-
       item.append(name, right);
       els.clearList.appendChild(item);
     });
@@ -762,25 +679,19 @@ function renderClearScreen() {
     button.setAttribute("aria-selected", String(isActive));
     els.clearTabs.appendChild(button);
   });
-
   renderClearList(activeLevel);
 }
 
 function showScreen(name) {
-  stopTimer();
-  const allScreens = ["level", "setup", "quiz", "result", "ranking", "clear"];
-  allScreens.forEach((screenName) => {
+  stopTimer(); // also stops music via stopMusicLoop()
+  ["level", "setup", "quiz", "result", "ranking", "clear"].forEach((screenName) => {
     const element = els[`${screenName}Screen`];
     if (!element) return;
     element.hidden = screenName !== name;
     element.classList.toggle("is-active", screenName === name);
   });
   if (name !== "ranking" && name !== "clear") state.lastScreen = name;
-  if (name === "level") {
-    renderLevelScreen();
-    startOpeningMusic();
-  }
-  if (name === "setup") startOpeningMusic();
+  if (name === "level" || name === "setup") startOpeningMusic();
 }
 
 function loadStoredState() {
@@ -812,11 +723,8 @@ function toggleMute() {
   data.muted = !data.muted;
   writeStore(data);
   updateMuteButton(data.muted);
-  if (data.muted) {
-    stopMusicLoop();
-  } else {
-    startOpeningMusic();
-  }
+  if (data.muted) stopMusicLoop();
+  else startOpeningMusic();
 }
 
 function updateMuteButton(muted) {
@@ -829,25 +737,23 @@ function readStore() {
   try {
     const parsed = JSON.parse(localStorage.getItem(STORAGE_KEY) || "{}");
     return {
-      learnerRoleId: parsed.learnerRoleId || "",
+      learnerRoleId:  parsed.learnerRoleId  || "",
       learnerRoleName: parsed.learnerRoleName || "",
-      muted: Boolean(parsed.muted),
-      selectedLevel: parsed.selectedLevel || "basic",
-      rankings: Array.isArray(parsed.rankings) ? parsed.rankings : [],
-      clears: (parsed.clears && typeof parsed.clears === "object") ? parsed.clears : {},
+      muted:          Boolean(parsed.muted),
+      selectedLevel:  parsed.selectedLevel  || "basic",
+      rankings:       Array.isArray(parsed.rankings) ? parsed.rankings : [],
+      clears:         (parsed.clears && typeof parsed.clears === "object") ? parsed.clears : {},
     };
   } catch {
     return { learnerRoleId: "", learnerRoleName: "", muted: false, selectedLevel: "basic", rankings: [], clears: {} };
   }
 }
 
-function writeStore(data) {
-  localStorage.setItem(STORAGE_KEY, JSON.stringify(data));
-}
+function writeStore(data) { localStorage.setItem(STORAGE_KEY, JSON.stringify(data)); }
 
 function isLocalOrigin() {
-  const host = window.location.hostname;
-  return host === "127.0.0.1" || host === "localhost" || host === "";
+  const h = window.location.hostname;
+  return h === "127.0.0.1" || h === "localhost" || h === "";
 }
 
 function isGoogleAppsScriptWebAppUrl(url) {
@@ -873,51 +779,36 @@ function sendResultToBackend(result) {
     appVersion: "quiz-er-static-v1",
     pageUrl: window.location.href,
   };
-
   if (state.googleSheetsWebAppUrl) {
     sendResultToGoogleSheets(event).catch((error) => {
       console.error("Google Sheets send failed.", error);
       setSyncStatus("スプレッドシート送信に失敗しました。設定URLとデプロイ権限を確認してください。", "error");
     });
   }
-
-  if (state.sendToLocalBackend) {
-    sendResultToLocalBackend(event);
-  }
+  if (state.sendToLocalBackend) sendResultToLocalBackend(event);
 }
 
 function sendResultToGoogleSheets(event) {
   const body = JSON.stringify(event);
-
   if (navigator.sendBeacon) {
     const queued = navigator.sendBeacon(
-      state.googleSheetsWebAppUrl,
-      new Blob([body], { type: "text/plain;charset=utf-8" }),
+      state.googleSheetsWebAppUrl, new Blob([body], { type: "text/plain;charset=utf-8" }),
     );
     if (queued) return Promise.resolve("queued");
   }
-
   return fetch(state.googleSheetsWebAppUrl, {
-    method: "POST",
-    mode: "no-cors",
-    headers: { "Content-Type": "text/plain" },
-    body,
+    method: "POST", mode: "no-cors", headers: { "Content-Type": "text/plain" }, body,
   });
 }
 
 function sendResultToLocalBackend(event) {
   const body = JSON.stringify(event);
-
   if (navigator.sendBeacon) {
     const ok = navigator.sendBeacon(LOCAL_BACKEND_EVENT_URL, new Blob([body], { type: "application/json" }));
     if (ok) return;
   }
-
   fetch(LOCAL_BACKEND_EVENT_URL, {
-    method: "POST",
-    headers: { "Content-Type": "application/json" },
-    body,
-    keepalive: true,
+    method: "POST", headers: { "Content-Type": "application/json" }, body, keepalive: true,
   }).catch(() => {});
 }
 
@@ -928,62 +819,100 @@ function setSyncStatus(text, status) {
   els.syncStatus.hidden = !text;
 }
 
-// ─── Audio: opening music (techno-pop) ─────────────────────────────────────
-// 4/4 at ~100 bpm (150 ms per step × 4 steps per beat = 600 ms per beat)
-// 16-step bar: kick on 1&3 (steps 0,8), snare on 2&4 (steps 4,12)
+// ══════════════════════════════════════════════════════════════════════════════
+// AUDIO: Opening music — three distinct themes per level
+// ══════════════════════════════════════════════════════════════════════════════
 
 function startOpeningMusic() {
   if (readStore().muted || !isSetupScreenVisible()) return;
-  if (state.musicMode === "opening" && state.musicLoopId) return;
+  // Always stop then restart — picks up any level change cleanly
   stopMusicLoop();
+  const level = state.selectedLevel || "basic";
+  const interval = OPENING_INTERVAL[level] || 150;
   const generation = ++state.musicGeneration;
   state.musicMode = "opening";
   state.musicStep = 0;
   playOpeningMusicStep(generation);
-  state.musicLoopId = window.setInterval(() => playOpeningMusicStep(generation), 150);
+  state.musicLoopId = window.setInterval(() => playOpeningMusicStep(generation), interval);
 }
 
 function playOpeningMusicStep(generation) {
   if (generation !== state.musicGeneration) return;
-  if (readStore().muted || !isSetupScreenVisible()) {
-    stopMusicLoop();
-    return;
-  }
-
-  const step = state.musicStep % 16;
-
-  // ── Kick on beats 1 & 3 (steps 0, 8) ──
-  if (step === 0 || step === 8) {
-    playSynthNote(65,  0.10, "square",   0.055); // sub-bass kick
-    playSynthNote(131, 0.14, "triangle", 0.030); // C3 bass
-  }
-  // ── Snare on beats 2 & 4 (steps 4, 12) ──
-  if (step === 4 || step === 12) {
-    playSynthNote(220, 0.06, "sawtooth", 0.020);
-  }
-  // ── Bass riff accents ──
-  if (step === 2 || step === 10) {
-    playSynthNote(131, 0.08, "triangle", 0.016); // C3 ghost
-  }
-  if (step === 6 || step === 14) {
-    playSynthNote(196, 0.08, "triangle", 0.016); // G3
-  }
-
-  // ── Lead synth arpeggio (Cm pentatonic feel) ──
-  const arp = [523, 622, 784, 932, 784, 622, 523, 466,
-               523, 698, 784, 932, 784, 698, 622, 523];
-  const arpGain = (step % 4 === 0) ? 0.022 : 0.015;
-  playSynthNote(arp[step], 0.09, "square", arpGain);
-
-  // ── Hi-hat shimmer on odd steps ──
-  if (step % 2 === 1) {
-    playSynthNote(3136, 0.025, "square", 0.004);
-  }
-
+  if (readStore().muted || !isSetupScreenVisible()) { stopMusicLoop(); return; }
+  const step = state.musicStep;
+  const level = state.selectedLevel || "basic";
+  if      (level === "master")   playMasterOpeningStep(step);
+  else if (level === "advanced") playAdvancedOpeningStep(step);
+  else                           playBasicOpeningStep(step);
   state.musicStep += 1;
 }
 
-// ─── Audio: quiz music (level & urgency aware) ──────────────────────────────
+// ── Basic: calm, warm, C-major arpeggio, triangle waves, no drums ─────────────
+// 16-step bar at 175 ms/step = ~86 bpm (gentle)
+function playBasicOpeningStep(step) {
+  const s = step % 16;
+  // Soft bass pulse every 4 steps (C-E-G-E walking bass)
+  const bassLine = [131, 165, 196, 165]; // C3, E3, G3, E3
+  if (s % 4 === 0) {
+    playSynthNote(bassLine[Math.floor(s / 4) % 4], 0.22, "triangle", 0.016);
+  }
+  // Warm lead arpeggio (C major pentatonic with octave reach)
+  const arp = [523, 659, 784, 880, 784, 659, 523, 440,
+               523, 659, 784, 1047, 880, 784, 659, 784];
+  const gain = s % 8 === 0 ? 0.020 : s % 4 === 0 ? 0.016 : 0.012;
+  playSynthNote(arp[s], 0.14, "triangle", gain);
+}
+
+// ── Advanced: driving techno-pop, 4/4 kick+snare, Cm pentatonic ──────────────
+// 16-step bar at 150 ms/step = ~100 bpm
+function playAdvancedOpeningStep(step) {
+  const s = step % 16;
+  // Kick on beats 1 & 3 (steps 0, 8)
+  if (s === 0 || s === 8) {
+    playSynthNote(65,  0.10, "square",   0.055);
+    playSynthNote(131, 0.14, "triangle", 0.030);
+  }
+  // Snare on beats 2 & 4 (steps 4, 12)
+  if (s === 4 || s === 12) { playSynthNote(220, 0.06, "sawtooth", 0.020); }
+  // Bass riff accents
+  if (s === 2 || s === 10) { playSynthNote(131, 0.08, "triangle", 0.016); }
+  if (s === 6 || s === 14) { playSynthNote(196, 0.08, "triangle", 0.016); }
+  // Lead synth arpeggio (Cm pentatonic)
+  const arp = [523, 622, 784, 932, 784, 622, 523, 466,
+               523, 698, 784, 932, 784, 698, 622, 523];
+  playSynthNote(arp[s], 0.09, "square", s % 4 === 0 ? 0.022 : 0.015);
+  // Hi-hat shimmer on odd steps
+  if (s % 2 === 1) { playSynthNote(3136, 0.025, "square", 0.004); }
+}
+
+// ── Master: heartbeat techno, lub-dub sub-bass, hard sawtooth lead ────────────
+// 12-step bar at 140 ms/step → heartbeat ogni 6 steps = 840 ms ≈ 71 bpm
+// Heartbeat "lub" at step 0, "dub" at step 1; again "lub" at step 6, "dub" at 7
+function playMasterOpeningStep(step) {
+  const s = step % 12;
+  // Heartbeat lub-dub
+  if (s === 0 || s === 6) {
+    playSynthNote(55,  0.13, "square",   0.062); // deep sub (lub — strong)
+    playSynthNote(110, 0.10, "sawtooth", 0.028); // overtone
+  }
+  if (s === 1 || s === 7) {
+    playSynthNote(73,  0.11, "square",   0.040); // dub (softer, slightly higher)
+  }
+  // Hard mid accent (like a snare crack between heartbeats)
+  if (s === 3 || s === 9) {
+    playSynthNote(196, 0.07, "sawtooth", 0.022); // G3
+  }
+  // Tense chromatic lead (rests at heartbeat steps 0,1,6,7)
+  const lead = [0, 0, 294, 311, 349, 311, 0, 0, 349, 392, 415, 349];
+  if (lead[s] > 0) {
+    const gain = s % 3 === 2 ? 0.032 : 0.024;
+    playSynthNote(lead[s], 0.10, "sawtooth", gain);
+  }
+}
+
+// ══════════════════════════════════════════════════════════════════════════════
+// AUDIO: Quiz music — level × urgency aware
+// ══════════════════════════════════════════════════════════════════════════════
 
 function startQuizMusic() {
   if (readStore().muted) return;
@@ -1001,30 +930,22 @@ function startQuizMusic() {
 function playQuizMusicStep(config, generation) {
   if (generation !== state.musicGeneration || readStore().muted) return;
   const step = state.musicStep % config.pattern.length;
-  const freq = config.pattern[step];
-  // Accent on every 4th note
   const gain = step % 4 === 0 ? config.gain * 1.25 : config.gain;
-  playSynthNote(freq, 0.09, config.wave, gain);
-
-  // Deep bass pulse for Master level
+  playSynthNote(config.pattern[step], 0.09, config.wave, gain);
   if (config.bass) {
     const bassFreq = config.bass[step % config.bass.length];
-    if (bassFreq > 0) {
-      playSynthNote(bassFreq, 0.14, "triangle", config.gain * 0.55);
-    }
+    if (bassFreq > 0) playSynthNote(bassFreq, 0.14, "triangle", config.gain * 0.55);
   }
-
   state.musicStep += 1;
 }
 
-// ─── Audio: shared utilities ─────────────────────────────────────────────────
+// ══════════════════════════════════════════════════════════════════════════════
+// AUDIO: shared utilities
+// ══════════════════════════════════════════════════════════════════════════════
 
 function stopMusicLoop() {
   state.musicGeneration += 1;
-  if (state.musicLoopId) {
-    window.clearInterval(state.musicLoopId);
-    state.musicLoopId = 0;
-  }
+  if (state.musicLoopId) { window.clearInterval(state.musicLoopId); state.musicLoopId = 0; }
   state.musicMode = "";
 }
 
@@ -1034,11 +955,10 @@ function isSetupScreenVisible() {
 
 function ensureAudioContext() {
   if (!state.audioContext) {
-    const AudioContextClass = window.AudioContext || window.webkitAudioContext;
-    if (!AudioContextClass) return null;
-    state.audioContext = new AudioContextClass();
+    const Ctx = window.AudioContext || window.webkitAudioContext;
+    if (Ctx) state.audioContext = new Ctx();
   }
-  if (state.audioContext.state === "suspended") {
+  if (state.audioContext?.state === "suspended") {
     state.audioContext.resume().catch(() => {});
   }
   return state.audioContext;
@@ -1046,62 +966,44 @@ function ensureAudioContext() {
 
 function playTone(type) {
   if (readStore().muted) return;
-  if (type === "correct") {
-    playCorrectSound();
-    return;
-  }
-
+  if (type === "correct") { playCorrectSound(); return; }
   const presets = {
     wrong:  [170, 0.18, "sawtooth", 0.06],
     tick:   [880, 0.05, "square",   0.035],
     finish: [523, 0.22, "triangle", 0.08],
   };
-  const [frequency, duration, typeName, gainValue] = presets[type] || presets.tick;
-  playSynthNote(frequency, duration, typeName, gainValue);
-
-  if (type === "finish") {
-    window.setTimeout(() => playTone("correct"), 120);
-  }
+  const [freq, dur, wave, gain] = presets[type] || presets.tick;
+  playSynthNote(freq, dur, wave, gain);
+  if (type === "finish") window.setTimeout(() => playTone("correct"), 120);
 }
 
 function playCorrectSound() {
-  const notes = [
-    [659, 0],
-    [784, 75],
-    [988, 150],
-    [1319, 240],
-  ];
-  notes.forEach(([frequency, delay]) => {
-    window.setTimeout(() => playSynthNote(frequency, 0.12, "triangle", 0.075), delay);
+  [[659, 0], [784, 75], [988, 150], [1319, 240]].forEach(([freq, delay]) => {
+    window.setTimeout(() => playSynthNote(freq, 0.12, "triangle", 0.075), delay);
   });
 }
 
 function playSynthNote(frequency, duration, typeName, gainValue) {
   const audio = ensureAudioContext();
   if (!audio) return;
-
   const play = () => {
     const now = audio.currentTime;
-    const oscillator = audio.createOscillator();
+    const osc  = audio.createOscillator();
     const gain = audio.createGain();
-    oscillator.type = typeName;
-    oscillator.frequency.setValueAtTime(frequency, now);
+    osc.type = typeName;
+    osc.frequency.setValueAtTime(frequency, now);
     gain.gain.setValueAtTime(0.001, now);
     gain.gain.exponentialRampToValueAtTime(gainValue, now + 0.01);
     gain.gain.exponentialRampToValueAtTime(0.001, now + duration);
-    oscillator.connect(gain).connect(audio.destination);
-    oscillator.start(now);
-    oscillator.stop(now + duration + 0.02);
+    osc.connect(gain).connect(audio.destination);
+    osc.start(now);
+    osc.stop(now + duration + 0.02);
   };
-
-  if (audio.state === "suspended") {
-    audio.resume().then(play).catch(() => {});
-    return;
-  }
+  if (audio.state === "suspended") { audio.resume().then(play).catch(() => {}); return; }
   play();
 }
 
-// ─── Misc helpers ─────────────────────────────────────────────────────────────
+// ─── Misc ─────────────────────────────────────────────────────────────────────
 
 function shuffle(items) {
   const array = items.slice();
@@ -1128,9 +1030,6 @@ function formatTime(ms) {
 
 function formatDate(timestamp) {
   return new Intl.DateTimeFormat("ja-JP", {
-    month: "2-digit",
-    day: "2-digit",
-    hour: "2-digit",
-    minute: "2-digit",
+    month: "2-digit", day: "2-digit", hour: "2-digit", minute: "2-digit",
   }).format(new Date(timestamp));
 }
