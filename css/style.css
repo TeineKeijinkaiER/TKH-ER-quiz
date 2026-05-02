@@ -358,10 +358,6 @@ button:focus-visible {
   color: #ffffff;
 }
 
-.setup-actions {
-  display: grid;
-  gap: 8px;
-}
 
 .primary-button:hover:not(:disabled) {
   background: var(--primary-dark);

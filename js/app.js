@@ -74,7 +74,6 @@ async function init() {
     await loadQuestionData();
     renderLevelScreen();
     renderRankingTabs();
-    updateStartButtonState();
   } catch (error) {
     els.setupStatus.textContent = "問題データを読み込めません。ローカルHTTPサーバーで開いてください。";
     console.error(error);
@@ -105,7 +104,7 @@ function cacheElements() {
     "setupScreen", "quizScreen", "resultScreen", "rankingScreen", "clearScreen",
     "clearBanner", "clearTabs", "clearList",
     "categoryGrid", "selectedCategoryLabel", "setupStatus",
-    "startQuizButton", "rankingButton", "muteButton",
+    "rankingButton", "muteButton",
     "clearButton", "backToLevelButton", "closeClearButton",
     "quitQuizButton", "quizCategory", "quizProgress",
     "timerArc", "timerText", "questionText", "choiceList",
@@ -144,7 +143,6 @@ function bindEvents() {
     });
   });
 
-  els.startQuizButton.addEventListener("click", startQuiz);
   els.rankingButton.addEventListener("click", () => openRanking("all"));
   els.resultRankingButton.addEventListener("click", () => openRanking("all"));
   els.closeRankingButton.addEventListener("click", () =>
@@ -166,7 +164,6 @@ function bindEvents() {
       data.learnerRoleId = input.value;
       data.learnerRoleName = getLearnerRoleName();
       writeStore(data);
-      updateStartButtonState();
       updateSetupSummary();
     });
   });
@@ -288,9 +285,9 @@ function renderCategories() {
       button.append(title, desc, meta);
       button.addEventListener("click", () => {
         state.selectedCategoryId = category.id;
-        renderCategories();
         renderQuestionCountControls();
         updateSetupSummary();
+        startQuiz();
       });
       els.categoryGrid.appendChild(button);
     });
@@ -322,10 +319,6 @@ function updateSetupSummary() {
   const category = getSelectedCategory();
   els.selectedCategoryLabel.textContent = category ? `${category.name} / ${state.questionCount}問` : "未選択";
   els.setupStatus.textContent = state.learnerRoleId ? "" : "職種を選択してください。";
-}
-
-function updateStartButtonState() {
-  els.startQuizButton.disabled = state.categories.length === 0 || !state.learnerRoleId;
 }
 
 function getSelectedCategory() {
