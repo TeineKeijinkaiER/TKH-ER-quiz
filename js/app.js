@@ -203,15 +203,46 @@ async function loadQuestionData() {
   if (!categoriesRes.ok) throw new Error(`categories.json ${categoriesRes.status}`);
   state.levels = await levelsRes.json();
   state.categories = await categoriesRes.json();
+
+  const validCategoryIds = new Set(state.categories.map((c) => c.id));
+  state.questionBank = new Map(state.categories.map((c) => [c.id, []]));
+
+  const primaryByFile = new Map();
+  state.categories.forEach((cat) => {
+    if (!primaryByFile.has(cat.file)) primaryByFile.set(cat.file, cat.id);
+  });
+
   await Promise.all(
-    state.categories.map(async (category) => {
-      const res = await fetch(`data/${category.file}`, { cache: "no-store" });
-      if (!res.ok) throw new Error(`${category.file} ${res.status}`);
+    Array.from(primaryByFile.entries()).map(async ([file, primaryId]) => {
+      const res = await fetch(`data/${file}`, { cache: "no-store" });
+      if (!res.ok) throw new Error(`${file} ${res.status}`);
       const data = await res.json();
-      state.questionBank.set(category.id, data.questions);
-      category.questionTotal = data.questions.length;
+      for (const q of data.questions) {
+        const targets = resolveQuestionCategories(q, primaryId, validCategoryIds, file);
+        for (const t of targets) state.questionBank.get(t).push(q);
+      }
     }),
   );
+
+  state.categories.forEach((cat) => {
+    cat.questionTotal = state.questionBank.get(cat.id).length;
+  });
+}
+
+function resolveQuestionCategories(question, primaryId, validCategoryIds, fileLabel) {
+  if (!Array.isArray(question.categories) || question.categories.length === 0) {
+    return [primaryId];
+  }
+  const targets = [];
+  for (const t of question.categories) {
+    if (typeof t !== "string" || !validCategoryIds.has(t)) {
+      console.warn(`[questions] ${fileLabel} ${question.id}: unknown category "${t}" — skipped`);
+      continue;
+    }
+    if (!targets.includes(t)) targets.push(t);
+  }
+  if (!targets.includes(primaryId)) targets.push(primaryId);
+  return targets;
 }
 
 // ─── Level helpers ────────────────────────────────────────────────────────────
@@ -304,15 +335,16 @@ function updateSelectedCard() {
 
 function renderQuestionCountControls() {
   const total = getSelectedQuestions().length;
-  document.querySelectorAll("[data-count]").forEach((button) => {
+  const buttons = [...document.querySelectorAll("[data-count]")];
+  const counts = buttons.map((button) => Number(button.dataset.count)).sort((a, b) => a - b);
+  if (total > 0 && state.questionCount > total) {
+    state.questionCount = counts.filter((count) => count <= total).pop() || total;
+  }
+  buttons.forEach((button) => {
     const count = Number(button.dataset.count);
     button.disabled = total > 0 && count > total;
     button.classList.toggle("is-active", count === state.questionCount);
   });
-  if (total > 0 && state.questionCount > total) {
-    state.questionCount = total >= 10 ? 10 : 5;
-    renderQuestionCountControls();
-  }
 }
 
 function updateSetupSummary() {
@@ -376,13 +408,29 @@ function startQuiz() {
 function prepareQuestion(question) {
   const choices = question.choices.map((text, index) => ({ text, originalIndex: index }));
   const shuffled = shuffle(choices);
+  const originalCorrectIndexes = getQuestionAnswerIndexes(question);
+  const correctIndexes = shuffled
+    .map((choice, index) => (originalCorrectIndexes.includes(choice.originalIndex) ? index : -1))
+    .filter((index) => index >= 0);
+  const selectionLimit = Number.isInteger(question.selectCount) && question.selectCount > 0
+    ? question.selectCount
+    : null;
   return {
     id: question.id,
     question: question.question,
     explanation: question.explanation,
     choices: shuffled.map((c) => c.text),
-    correctIndex: shuffled.findIndex((c) => c.originalIndex === question.answer),
+    correctIndexes,
+    selectionLimit,
+    selectedIndexes: [],
+    isMultiple: correctIndexes.length > 1,
   };
+}
+
+function getQuestionAnswerIndexes(question) {
+  if (Array.isArray(question.answers)) return normalizeIndexList(question.answers);
+  if (Array.isArray(question.answer)) return normalizeIndexList(question.answer);
+  return normalizeIndexList([question.answer]);
 }
 
 function renderCurrentQuestion() {
@@ -390,6 +438,7 @@ function renderCurrentQuestion() {
   state.isLocked = false;
   state.lastTickSecond = null;
   const question = state.quizQuestions[state.currentIndex];
+  question.selectedIndexes = [];
   els.quizProgress.textContent = `${state.currentIndex + 1} / ${state.quizQuestions.length}`;
   els.questionText.textContent = question.question;
   els.choiceList.innerHTML = "";
@@ -397,7 +446,12 @@ function renderCurrentQuestion() {
     const button = document.createElement("button");
     button.type = "button";
     button.className = "choice-button";
-    button.addEventListener("click", () => handleAnswer(index, false));
+    if (question.isMultiple) {
+      button.setAttribute("aria-pressed", "false");
+      button.addEventListener("click", () => toggleMultipleChoice(index));
+    } else {
+      button.addEventListener("click", () => handleAnswer(index, false));
+    }
     const key = document.createElement("span");
     key.className = "choice-key";
     key.textContent = String(index + 1);
@@ -406,7 +460,55 @@ function renderCurrentQuestion() {
     button.append(key, text);
     els.choiceList.appendChild(button);
   });
+  if (question.isMultiple) {
+    const actions = document.createElement("div");
+    actions.className = "choice-actions";
+    const submit = document.createElement("button");
+    submit.type = "button";
+    submit.className = "primary-button answer-submit-button";
+    submit.addEventListener("click", () => handleAnswer(question.selectedIndexes.slice(), false));
+    actions.appendChild(submit);
+    els.choiceList.appendChild(actions);
+    updateMultipleChoiceState();
+  }
   startTimer();
+}
+
+function toggleMultipleChoice(choiceIndex) {
+  if (state.isLocked) return;
+  const question = state.quizQuestions[state.currentIndex];
+  if (!question?.isMultiple) return;
+  const selected = new Set(question.selectedIndexes);
+  if (selected.has(choiceIndex)) {
+    selected.delete(choiceIndex);
+  } else if (!question.selectionLimit || selected.size < question.selectionLimit) {
+    selected.add(choiceIndex);
+  }
+  question.selectedIndexes = [...selected].sort((a, b) => a - b);
+  updateMultipleChoiceState();
+}
+
+function updateMultipleChoiceState() {
+  const question = state.quizQuestions[state.currentIndex];
+  if (!question?.isMultiple) return;
+  const selected = new Set(question.selectedIndexes);
+  const limitReached = Boolean(question.selectionLimit && selected.size >= question.selectionLimit);
+  els.choiceList.querySelectorAll(".choice-button").forEach((button, index) => {
+    const isSelected = selected.has(index);
+    const limitDisabled = limitReached && !isSelected;
+    button.classList.toggle("is-selected", isSelected);
+    button.classList.toggle("is-limit-disabled", limitDisabled);
+    button.setAttribute("aria-pressed", String(isSelected));
+    button.disabled = limitDisabled;
+  });
+  const submit = els.choiceList.querySelector(".answer-submit-button");
+  if (!submit) return;
+  const selectedCount = question.selectedIndexes.length;
+  const requiredCount = question.selectionLimit || 0;
+  submit.disabled = requiredCount > 0 ? selectedCount !== requiredCount : selectedCount === 0;
+  submit.textContent = requiredCount > 0
+    ? `回答する (${selectedCount}/${requiredCount})`
+    : `回答する (${selectedCount}選択)`;
 }
 
 function startTimer() {
@@ -457,23 +559,24 @@ function updateTimerDisplay() {
   if (remainingMs <= 0) handleAnswer(null, true);
 }
 
-function handleAnswer(choiceIndex, timedOut) {
+function handleAnswer(choiceIndexes, timedOut) {
   if (state.isLocked) return;
   state.isLocked = true;
   stopTimer();
   const question = state.quizQuestions[state.currentIndex];
-  const correct = choiceIndex === question.correctIndex;
+  const selectedIndexes = normalizeIndexList(Array.isArray(choiceIndexes) ? choiceIndexes : [choiceIndexes]);
+  const correct = hasSameIndexes(selectedIndexes, question.correctIndexes);
   if (correct) state.score += 1;
   state.reviewItems.push({
     question: question.question,
     choices: question.choices.slice(),
-    selectedIndex: choiceIndex,
-    correctIndex: question.correctIndex,
+    selectedIndexes,
+    correctIndexes: question.correctIndexes.slice(),
     explanation: question.explanation,
     isCorrect: correct,
     timedOut,
   });
-  renderChoiceFeedback(choiceIndex, question.correctIndex);
+  renderChoiceFeedback(selectedIndexes, question.correctIndexes);
   playTone(correct ? "correct" : "wrong");
   window.setTimeout(() => {
     state.currentIndex += 1;
@@ -486,11 +589,14 @@ function handleAnswer(choiceIndex, timedOut) {
   }, NEXT_QUESTION_DELAY_MS);
 }
 
-function renderChoiceFeedback(selectedIndex, correctIndex) {
+function renderChoiceFeedback(selectedIndexes, correctIndexes) {
+  const selectedSet = new Set(normalizeIndexList(selectedIndexes));
+  const correctSet = new Set(normalizeIndexList(correctIndexes));
   els.choiceList.querySelectorAll(".choice-button").forEach((button, index) => {
     button.disabled = true;
-    if (index === correctIndex) button.classList.add("is-correct");
-    if (selectedIndex !== null && index === selectedIndex && index !== correctIndex) {
+    button.classList.remove("is-limit-disabled");
+    if (correctSet.has(index)) button.classList.add("is-correct");
+    if (selectedSet.has(index) && !correctSet.has(index)) {
       button.classList.add("is-wrong");
     }
   });
@@ -544,10 +650,10 @@ function renderReview() {
     user.className = "answer-line";
     user.textContent = item.timedOut
       ? "あなたの回答: 時間切れ"
-      : `あなたの回答: ${labelChoice(item.selectedIndex, item.choices[item.selectedIndex])}`;
+      : `あなたの回答: ${labelChoices(item.selectedIndexes, item.choices) || "未選択"}`;
     const correct = document.createElement("p");
     correct.className = "answer-line";
-    correct.textContent = `正解: ${labelChoice(item.correctIndex, item.choices[item.correctIndex])}`;
+    correct.textContent = `正解: ${labelChoices(item.correctIndexes, item.choices)}`;
     const explanation = document.createElement("p");
     explanation.className = "explanation";
     explanation.textContent = item.explanation;
@@ -559,6 +665,23 @@ function renderReview() {
 function labelChoice(index, text) {
   if (index === null || index === undefined || index < 0) return "";
   return `${index + 1}. ${text}`;
+}
+
+function labelChoices(indexes, choices) {
+  return normalizeIndexList(indexes)
+    .map((index) => labelChoice(index, choices[index]))
+    .filter(Boolean)
+    .join("、");
+}
+
+function normalizeIndexList(indexes) {
+  return [...new Set((indexes || []).filter(Number.isInteger))].sort((a, b) => a - b);
+}
+
+function hasSameIndexes(left, right) {
+  const a = normalizeIndexList(left);
+  const b = normalizeIndexList(right);
+  return a.length === b.length && a.every((index, position) => index === b[position]);
 }
 
 function toggleReview() {

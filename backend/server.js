@@ -72,8 +72,7 @@ async function route(req, res, url) {
 
   const questionMatch = url.pathname.match(/^\/api\/questions\/([a-zA-Z0-9_-]+)$/);
   if (questionMatch && req.method === "GET") {
-    const category = await findCategory(questionMatch[1]);
-    const data = await readQuestionData(category);
+    const data = await getCategoryQuestions(questionMatch[1]);
     sendJson(res, 200, data);
     return;
   }
@@ -156,14 +155,57 @@ async function readJsonBody(req) {
   }
 }
 
-async function loadCategoriesWithCounts() {
-  const categories = JSON.parse(await fs.readFile(path.join(DATA_DIR, "categories.json"), "utf8"));
-  return Promise.all(
-    categories.map(async (category) => {
-      const data = await readQuestionData(category);
-      return { ...category, questionTotal: data.questions.length };
+async function buildQuestionIndex() {
+  const categoriesRaw = JSON.parse(await fs.readFile(path.join(DATA_DIR, "categories.json"), "utf8"));
+  const validCategoryIds = new Set(categoriesRaw.map((c) => c.id));
+
+  const primaryByFile = new Map();
+  for (const cat of categoriesRaw) {
+    if (!primaryByFile.has(cat.file)) primaryByFile.set(cat.file, cat.id);
+  }
+
+  const fileData = new Map();
+  await Promise.all(
+    Array.from(primaryByFile.keys()).map(async (file) => {
+      const data = JSON.parse(await fs.readFile(path.join(DATA_DIR, file), "utf8"));
+      fileData.set(file, data);
     }),
   );
+
+  const aggregated = new Map(categoriesRaw.map((c) => [c.id, []]));
+  for (const [file, primaryId] of primaryByFile) {
+    const data = fileData.get(file);
+    for (const q of data.questions) {
+      const targets = resolveQuestionCategories(q, primaryId, validCategoryIds, file);
+      for (const t of targets) aggregated.get(t).push(q);
+    }
+  }
+
+  return { categoriesRaw, aggregated, validCategoryIds, primaryByFile };
+}
+
+function resolveQuestionCategories(question, primaryId, validCategoryIds, fileLabel) {
+  if (!Array.isArray(question.categories) || question.categories.length === 0) {
+    return [primaryId];
+  }
+  const targets = [];
+  for (const t of question.categories) {
+    if (typeof t !== "string" || !validCategoryIds.has(t)) {
+      console.warn(`[questions] ${fileLabel} ${question.id}: unknown category "${t}" — skipped`);
+      continue;
+    }
+    if (!targets.includes(t)) targets.push(t);
+  }
+  if (!targets.includes(primaryId)) targets.push(primaryId);
+  return targets;
+}
+
+async function loadCategoriesWithCounts() {
+  const { categoriesRaw, aggregated } = await buildQuestionIndex();
+  return categoriesRaw.map((cat) => ({
+    ...cat,
+    questionTotal: aggregated.get(cat.id).length,
+  }));
 }
 
 async function findCategory(categoryId) {
@@ -181,9 +223,21 @@ async function readQuestionData(category) {
   return JSON.parse(await fs.readFile(path.join(DATA_DIR, category.file), "utf8"));
 }
 
+async function getCategoryQuestions(categoryId) {
+  const { categoriesRaw, aggregated } = await buildQuestionIndex();
+  const cat = categoriesRaw.find((c) => c.id === categoryId);
+  if (!cat) {
+    const error = new Error(`Unknown category: ${categoryId}`);
+    error.status = 404;
+    throw error;
+  }
+  return { category: cat.name, questions: aggregated.get(categoryId) };
+}
+
 async function updateQuestions(category, payload) {
   const { mode, questions } = normalizeQuestionPayload(payload);
-  questions.forEach(validateQuestion);
+  const { validCategoryIds } = await buildQuestionIndex();
+  questions.forEach((q, i) => validateQuestion(q, i, category.id, validCategoryIds));
 
   const current = await readQuestionData(category);
   const nextQuestions = mode === "replace" ? questions : current.questions.concat(questions);
@@ -213,7 +267,7 @@ function normalizeQuestionPayload(payload) {
   return { mode, questions };
 }
 
-function validateQuestion(question, index) {
+function validateQuestion(question, index, primaryCategoryId, validCategoryIds) {
   const prefix = `Question ${index + 1}`;
   if (!question || typeof question !== "object") throw new Error(`${prefix}: object required`);
   if (!question.id || typeof question.id !== "string") throw new Error(`${prefix}: id required`);
@@ -221,12 +275,51 @@ function validateQuestion(question, index) {
   if (!Array.isArray(question.choices) || question.choices.length !== 5) {
     throw new Error(`${prefix}: choices must have exactly 5 items`);
   }
-  if (!Number.isInteger(question.answer) || question.answer < 0 || question.answer > 4) {
-    throw new Error(`${prefix}: answer must be 0-4`);
+  const answerIndexes = getQuestionAnswerIndexes(question);
+  if (!answerIndexes.length) {
+    throw new Error(`${prefix}: answer must be 0-4 or answers must contain 0-4 indexes`);
+  }
+  const uniqueAnswers = new Set(answerIndexes);
+  if (uniqueAnswers.size !== answerIndexes.length) {
+    throw new Error(`${prefix}: answers must not contain duplicates`);
+  }
+  if (answerIndexes.some((answer) => !Number.isInteger(answer) || answer < 0 || answer > 4)) {
+    throw new Error(`${prefix}: answer must be 0-4 or answers must contain 0-4 indexes`);
+  }
+  if (question.selectCount !== undefined) {
+    if (!Number.isInteger(question.selectCount) || question.selectCount < 1 || question.selectCount > 5) {
+      throw new Error(`${prefix}: selectCount must be 1-5`);
+    }
+    if (question.selectCount !== answerIndexes.length) {
+      throw new Error(`${prefix}: selectCount must match the number of correct answers`);
+    }
+  }
+  if (question.categories !== undefined) {
+    if (!Array.isArray(question.categories) || question.categories.length === 0) {
+      throw new Error(`${prefix}: categories must be a non-empty array of category IDs`);
+    }
+    for (const c of question.categories) {
+      if (typeof c !== "string") {
+        throw new Error(`${prefix}: categories must contain strings`);
+      }
+      if (validCategoryIds && !validCategoryIds.has(c)) {
+        throw new Error(`${prefix}: unknown category "${c}"`);
+      }
+    }
+    if (primaryCategoryId && !question.categories.includes(primaryCategoryId)) {
+      throw new Error(`${prefix}: categories must include the primary category "${primaryCategoryId}"`);
+    }
   }
   if (!question.explanation || typeof question.explanation !== "string") {
     throw new Error(`${prefix}: explanation required`);
   }
+}
+
+function getQuestionAnswerIndexes(question) {
+  const raw = Object.prototype.hasOwnProperty.call(question, "answers")
+    ? question.answers
+    : question.answer;
+  return Array.isArray(raw) ? raw : [raw];
 }
 
 async function ensureStorage() {
