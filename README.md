@@ -81,11 +81,13 @@ node backend/server.js
 - `js/app.js`: 画面遷移、タイマー、採点、ランキング保存
 - `data/categories.json`: カテゴリー一覧
 - `data/app-config.json`: 結果送信先設定
-- `data/questions/*.json`: 問題データ
+- `data/levels.json`: 難易度レベル定義 (basic / advanced / master)
+- `data/questions/<level>/*.json`: 問題データ（レベル別フォルダ: basic / advanced / master）
 - `integrations/google-sheets/Code.gs`: Googleスプレッドシート収集用Apps Script
 - `backend/server.js`: 非公開バックエンド
 - `backend/admin.html`: 問題追加と統計確認の管理画面
 - `docs/design-philosophy.md`: 設計思想と拡張方針
+- `docs/question-management.md`: 問題データの追加・管理手順書
 
 履歴、挑戦者の職種、効果音設定はブラウザの`localStorage`に保存されます。名前は収集しません。効果音と音楽は外部音源なしのWeb Audio単音源で生成しています。
 
@@ -93,7 +95,7 @@ node backend/server.js
 
 ## 問題の追加
 
-各JSONの`questions`配列に次の形式で追加します。`answer`は0始まりの選択肢番号です。
+各JSONの`questions`配列に次の形式で追加します。単一正解は`answer`、複数正解は`answers`に0始まりの選択肢番号を入れます。
 
 ```json
 {
@@ -105,7 +107,36 @@ node backend/server.js
 }
 ```
 
-新しいカテゴリーを増やす場合は、`data/questions/<id>.json`を作成し、`data/categories.json`に`id`、`name`、`description`、`file`、`accent`を追加します。
+複数回答の例です。`selectCount`を入れると「3つ選べ」のように選択数を固定できます。`selectCount`を省略すると「正しいものをすべて選べ」のように、回答者に正解数を見せずに複数選択できます。
+
+```json
+{
+  "id": "sepsis_012",
+  "question": "正しいものを3つ選べ。",
+  "choices": ["選択肢1", "選択肢2", "選択肢3", "選択肢4", "選択肢5"],
+  "answers": [0, 2, 4],
+  "selectCount": 3,
+  "explanation": "解説文"
+}
+```
+
+同じ問題を複数のカテゴリで表示したい場合は、`categories`フィールドにカテゴリIDを並べます。問題の本体は所属ファイル1か所だけ書き、タグで反映先を指定します（コピーは禁止）。
+
+```json
+{
+  "id": "ed_first_steps_007",
+  "question": "心肺停止患者のホットラインで確認すべき項目を3つ選べ。",
+  "choices": ["..", "..", "..", "..", ".."],
+  "answer": [1, 2, 4],
+  "selectCount": 3,
+  "categories": ["ed_first_steps_basic", "cpr_basic"],
+  "explanation": "..."
+}
+```
+
+新しいカテゴリーを増やす場合は、`data/questions/<level>/<id>.json`を作成し、`data/categories.json`に`id`、`level`、`name`、`description`、`file`、`accent`を追加します。
+
+詳細な手順、検証コマンド、トラブルシューティングは [`docs/question-management.md`](docs/question-management.md) を参照してください。
 
 ## 医学内容の注意
 
