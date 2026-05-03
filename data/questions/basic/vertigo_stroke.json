@@ -67,6 +67,84 @@
       ],
       "answers": [0, 1, 2, 3],
       "explanation": "脳卒中疑いではABC安定化、低血糖除外、発症時刻確認、画像検査、専門チーム連絡を並行して進める。"
+    },
+    {
+      "id": "vertigo_stroke_basic_006",
+      "question": "GRACE-3では回転性めまい（VS）をAVS（Acute VS）、s-EVS（spontaneous episodic VS）、t-EVS（triggered episodic VS）に分類している。誤っているものを選択せよ。",
+      "choices": [
+        "AVSは急に始まり24時間以上持続し通常持続的眼振を伴う。",
+        "s-EVSはきっかけなく数分から数時間持続し繰り返す",
+        "t-EVSは体位で誘発される数秒から数分のめまいで短期間に何度も繰り返す",
+        "前庭神経炎はs-EVSに含まれる",
+        "BPPVはt-EVSに含まれる"
+      ],
+      "answer": 3,
+      "explanation": "AVSは急性発症し24時間以上持続する持続性めまいで眼振を伴うことが多く、s-EVSは誘因なく数分〜数時間の発作を繰り返し、t-EVSは体位変換で誘発され数秒〜数分の短いめまいを繰り返すという分類は正しいが、前庭神経炎は持続性の急性めまいであるためAVSに分類され、s-EVSに含まれるという記述は誤りである。"
+    },
+    {
+      "id": "vertigo_stroke_basic_007",
+      "question": "HINTSについて正しい記載を選択せよ。",
+      "choices": [
+        "救急外来のめまいにおいて中枢性めまいを診断する感度特異度が高いと報告されている",
+        "Head Impulse Test、Test of skew、眼振所見を用いてAVSの原因を調べるテストである",
+        "Head Impulse Testが陽性の場合、脳卒中疑いである",
+        "Test of skewは片目を遮断、開放することで眼位の水平方向のずれを確認する",
+        "BPPVが疑われる場合にまずHINTSでリスク判定する"
+      ],
+      "answer": 1,
+      "explanation": "HINTSは急性持続性めまい（AVS）に対して中枢性か末梢性かを鑑別するための3徴（Head Impulse、眼振、Skew deviation）からなる検査であり、選択肢2のみが正しい記述で、HIT陽性は末梢性を示唆し、Skewは垂直方向の偏位を評価し、BPPVではHINTSは適応外であるため他の選択肢は誤りとなる。"
+    },
+    {
+      "id": "vertigo_stroke_basic_008",
+      "question": "supine head roll testで方向交代性下向性眼振（geotropic）が認められ、右側で所見が強かった。正しい診断と治療を選べ。",
+      "choices": [
+        "水平半規管由来BPPV（HC-BPPV）で、半規管結石症。患側は右側である。",
+        "水平半規管由来BPPV（HC-BPPV）でクプラ結石症。患側は右側である。",
+        "水平半規管由来BPPV（HC-BPPV）で半規管結石症。患側は左側である。",
+        "後半規管由来BPPV（PC-BPPV）で患側は左側である",
+        "後半規管由来BPPV（PC-BPPV）で患側は右側である"
+      ],
+      "answer": 0,
+      "explanation": "方向交代性下向性眼振（geotropic）は水平半規管の半規管結石症を示し、眼振が強く出る側が患側であるため右側が患側となり、選択肢1が正しい。"
+    },
+    {
+      "id": "vertigo_stroke_basic_009",
+      "question": "supine head roll testで方向交代性上向性眼振（apogeotropic）が認められ、右側で所見が強かった。正しい診断と治療を選べ。",
+      "choices": [
+        "水平半規管由来BPPV（HC-BPPV）で、半規管結石症。患側は右側である。",
+        "水平半規管由来BPPV（HC-BPPV）でクプラ結石症。患側は左側である。",
+        "水平半規管由来BPPV（HC-BPPV）で半規管結石症。患側は左側である。",
+        "後半規管由来BPPV（PC-BPPV）で患側は左側である",
+        "後半規管由来BPPV（PC-BPPV）で患側は右側である"
+      ],
+      "answer": 1,
+      "explanation": "方向交代性上向性眼振（apogeotropic）は水平半規管のクプラ結石症を示し、眼振が弱い側が患側となるため右側で所見が強い場合は左側が患側となり、選択肢2が正しい。"
+    },
+    {
+      "id": "vertigo_stroke_basic_010",
+      "question": "Dix-Hallpike testで右懸垂位にて右方向性回旋性眼振が認められた。正しい診断と治療を選べ。",
+      "choices": [
+        "水平半規管由来BPPV（HC-BPPV）で、半規管結石症。患側は右側である。",
+        "水平半規管由来BPPV（HC-BPPV）でクプラ結石症。患側は左側である。",
+        "水平半規管由来BPPV（HC-BPPV）で半規管結石症。患側は左側である。",
+        "後半規管由来BPPV（PC-BPPV）で患側は左側である",
+        "後半規管由来BPPV（PC-BPPV）で患側は右側である"
+      ],
+      "answer": 4,
+      "explanation": "Dix-Hallpikeで回旋性眼振が出現するのは後半規管BPPVであり、眼振の回旋方向は患側を向くため右方向性回旋性眼振は右後半規管BPPVを示し、選択肢5が正しい。"
+    },
+    {
+      "id": "vertigo_stroke_basic_011",
+      "question": "めまいに対する画像検査の適応について誤っているものを一つ選択せよ。",
+      "choices": [
+        "リスクファクターのある症例の突然発症",
+        "末梢性として矛盾のある眼振所見",
+        "歩行困難",
+        "複視、口や手のしびれを訴える",
+        "検査は頭部CT検査を行う"
+      ],
+      "answer": 4,
+      "explanation": "中枢性めまいを疑う場合はMRIが第一選択であり、CTは後頭蓋窩病変の検出感度が低いため適切ではなく、他の選択肢は中枢性を疑うため画像検査が必要となる状況であるため誤りは5となる。"
     }
   ]
 }
