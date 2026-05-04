@@ -577,6 +577,17 @@ button:focus-visible {
   font-weight: 900;
 }
 
+.choice-button.is-selected {
+  border-color: var(--primary);
+  background: linear-gradient(180deg, rgba(8, 127, 140, 0.12), #ffffff 60%);
+  box-shadow: 0 0 0 1px var(--primary) inset;
+}
+
+.choice-button.is-selected .choice-key {
+  background: var(--primary);
+  color: #ffffff;
+}
+
 .choice-button.is-correct {
   border-color: rgba(24, 122, 72, 0.8);
   background: rgba(24, 122, 72, 0.08);
