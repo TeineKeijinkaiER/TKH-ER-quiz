@@ -1,4 +1,5 @@
 const STORAGE_KEY = "qqq_state_v1";
+const STORAGE_SCHEMA_VERSION = 2;
 const LOCAL_BACKEND_EVENT_URL = "http://127.0.0.1:8787/api/events";
 const QUESTION_SECONDS = 20;
 const TIMER_CIRCUMFERENCE = 2 * Math.PI * 52;
@@ -108,10 +109,11 @@ function cacheElements() {
     "clearButton", "backToLevelButton", "closeClearButton",
     "quitQuizButton", "quizCategory", "quizProgress",
     "timerArc", "timerText", "questionText", "choiceList",
-    "resultScore", "resultPercent", "resultTime", "resultComment", "syncStatus",
+    "resultScore", "resultPercent", "resultTime", "resultComment", "syncStatus", "resultProgress",
     "retryButton", "backToSetupButton", "resultRankingButton",
     "toggleReviewButton", "reviewList",
     "rankingTabs", "rankingList", "rankingEmpty", "closeRankingButton",
+    "resetRankingButton", "resetClearButton",
   ].forEach((id) => { els[id] = document.getElementById(id); });
 }
 
@@ -168,6 +170,23 @@ function bindEvents() {
     });
   });
   els.muteButton.addEventListener("click", toggleMute);
+  els.resetRankingButton.addEventListener("click", () => {
+    if (!window.confirm("履歴を全て削除します。よろしいですか？")) return;
+    resetRankings();
+    renderRanking(getActiveRankingTabId());
+  });
+  els.resetClearButton.addEventListener("click", () => {
+    if (!window.confirm("クリア記録と全問題の正解履歴を削除します。よろしいですか？")) return;
+    resetClearProgress();
+    renderClearScreen();
+    renderLevelScreen();
+    if (state.selectedLevel) renderCategories();
+  });
+}
+
+function getActiveRankingTabId() {
+  const active = document.querySelector("#rankingTabs .tab-button.is-active");
+  return active?.dataset.tabId || "all";
 }
 
 // ──────────────────────────────────────────────────────────────────────────────
@@ -255,10 +274,9 @@ function updateLevelButtons() {
 
 function renderLevelScreen() {
   els.levelGrid.innerHTML = "";
-  const clears = readStore().clears;
   state.levels.forEach((level) => {
     const levelCats = state.categories.filter((c) => c.level === level.id);
-    const clearedCount = levelCats.filter((c) => Boolean(clears[`${level.id}:${c.id}`])).length;
+    const clearedCount = levelCats.filter((c) => isClear(c.id)).length;
     const card = document.createElement("button");
     card.type = "button";
     card.className = "level-card" + (level.id === state.selectedLevel ? " is-selected-level" : "");
@@ -294,6 +312,7 @@ function renderCategories() {
     .filter((c) => c.level === state.selectedLevel)
     .forEach((category) => {
       const cleared = isClear(category.id);
+      const progress = getCategoryProgress(category.id);
       const button = document.createElement("button");
       button.type = "button";
       button.className = "category-card" + (cleared ? " is-cleared" : "");
@@ -306,7 +325,10 @@ function renderCategories() {
       desc.textContent = category.description;
       const meta = document.createElement("div");
       meta.className = "card-meta";
-      meta.innerHTML = `<span>${category.questionTotal}問</span><span>20秒/問</span>`;
+      const progressLabel = progress.total > 0
+        ? `<span class="card-progress">${progress.answered} / ${progress.total} 正解</span>`
+        : "";
+      meta.innerHTML = `<span>${category.questionTotal}問</span><span>20秒/問</span>${progressLabel}`;
       if (cleared) {
         const badge = document.createElement("span");
         badge.className = "clear-badge";
@@ -362,18 +384,51 @@ function getSelectedQuestions() {
 }
 
 // ─── Clear tracking ───────────────────────────────────────────────────────────
+// v2: a category counts as "cleared" only when every question in it has been
+// answered correctly at least once across all sessions (cumulative). Once a
+// question is correct, it stays correct until the user resets progress.
 
-function isClear(categoryId) {
-  return Boolean(readStore().clears[`${state.selectedLevel}:${categoryId}`]);
+function getCategoryProgress(categoryId) {
+  const questions = state.questionBank.get(categoryId) || [];
+  const correct = readStore().correctQuestions || {};
+  const answered = questions.reduce((acc, q) => acc + (correct[q.id] ? 1 : 0), 0);
+  return { answered, total: questions.length };
 }
 
-function saveClear(categoryId) {
-  const key = `${state.selectedLevel}:${categoryId}`;
+function isClear(categoryId) {
+  const { answered, total } = getCategoryProgress(categoryId);
+  return total > 0 && answered === total;
+}
+
+function recordCorrectQuestion(questionId) {
+  if (!questionId) return;
   const data = readStore();
-  if (!data.clears[key]) {
-    data.clears[key] = new Date().toISOString();
-    writeStore(data);
-  }
+  if (data.correctQuestions[questionId]) return;
+  data.correctQuestions[questionId] = new Date().toISOString();
+  writeStore(data);
+}
+
+function maybeRecordClearTimestamp(categoryId, levelId) {
+  if (!isClear(categoryId)) return false;
+  const key = `${levelId}:${categoryId}`;
+  const data = readStore();
+  if (data.clears[key]) return false;
+  data.clears[key] = new Date().toISOString();
+  writeStore(data);
+  return true;
+}
+
+function resetRankings() {
+  const data = readStore();
+  data.rankings = [];
+  writeStore(data);
+}
+
+function resetClearProgress() {
+  const data = readStore();
+  data.clears = {};
+  data.correctQuestions = {};
+  writeStore(data);
 }
 
 // ─── Quiz flow ────────────────────────────────────────────────────────────────
@@ -566,7 +621,10 @@ function handleAnswer(choiceIndexes, timedOut) {
   const question = state.quizQuestions[state.currentIndex];
   const selectedIndexes = normalizeIndexList(Array.isArray(choiceIndexes) ? choiceIndexes : [choiceIndexes]);
   const correct = hasSameIndexes(selectedIndexes, question.correctIndexes);
-  if (correct) state.score += 1;
+  if (correct) {
+    state.score += 1;
+    recordCorrectQuestion(question.id);
+  }
   state.reviewItems.push({
     question: question.question,
     choices: question.choices.slice(),
@@ -617,21 +675,37 @@ function finishQuiz() {
     timestamp: Date.now(),
   };
   addRanking(result);
-  const isCleared = state.score === state.quizQuestions.length;
-  if (isCleared) saveClear(category.id);
-  renderResult(result, isCleared);
+  // correctQuestions has already been updated incrementally in handleAnswer.
+  // Now check if this session pushed the category over the clear threshold.
+  const newlyCleared = maybeRecordClearTimestamp(category.id, state.selectedLevel);
+  const progress = getCategoryProgress(category.id);
+  renderResult(result, { newlyCleared, progress });
   showScreen("result");
   sendResultToBackend(result);
   playTone("finish");
 }
 
-function renderResult(result, isCleared) {
+function renderResult(result, { newlyCleared, progress }) {
   const percent = Math.round((result.score / result.questionCount) * 100);
   els.resultScore.textContent = `${result.score} / ${result.questionCount}`;
   els.resultPercent.textContent = `${percent}%`;
   els.resultTime.textContent = `所要時間 ${formatTime(result.totalTimeMs)}`;
   els.resultComment.textContent = getResultComment(percent);
-  els.clearBanner.hidden = !isCleared;
+  els.clearBanner.hidden = !newlyCleared;
+  if (newlyCleared) {
+    els.clearBanner.querySelector("span").textContent = "👑 カテゴリ初クリア達成！";
+  }
+  if (els.resultProgress) {
+    if (progress && progress.total > 0) {
+      const remaining = progress.total - progress.answered;
+      els.resultProgress.hidden = false;
+      els.resultProgress.textContent = remaining === 0
+        ? `カテゴリ進捗: ${progress.answered} / ${progress.total} 問正解済み（クリア達成）`
+        : `カテゴリ進捗: ${progress.answered} / ${progress.total} 問正解済み（あと ${remaining} 問でクリア）`;
+    } else {
+      els.resultProgress.hidden = true;
+    }
+  }
   setSyncStatus("", "");
   renderReview();
   els.reviewList.hidden = false;
@@ -748,23 +822,31 @@ function renderClearScreen() {
   const renderClearList = (levelId) => {
     els.clearList.innerHTML = "";
     state.categories.filter((c) => c.level === levelId).forEach((cat) => {
-      const clearDate = clears[`${levelId}:${cat.id}`] || null;
+      const cleared = isClear(cat.id);
+      const progress = getCategoryProgress(cat.id);
+      const clearDate = cleared ? (clears[`${levelId}:${cat.id}`] || null) : null;
       const item = document.createElement("div");
       item.className = "clear-item";
       const name = document.createElement("span");
       name.className = "clear-item__name";
       name.textContent = cat.name;
       const right = document.createElement("span");
-      if (clearDate) {
+      if (cleared) {
         const status = document.createElement("span");
         status.className = "clear-item__status";
         status.textContent = "✓ CLEAR";
-        const date = document.createElement("span");
-        date.className = "clear-item__date";
-        date.textContent = new Intl.DateTimeFormat("ja-JP", {
-          month: "2-digit", day: "2-digit", hour: "2-digit", minute: "2-digit",
-        }).format(new Date(clearDate));
-        right.append(status, document.createTextNode(" "), date);
+        right.appendChild(status);
+        if (clearDate) {
+          const date = document.createElement("span");
+          date.className = "clear-item__date";
+          date.textContent = new Intl.DateTimeFormat("ja-JP", {
+            month: "2-digit", day: "2-digit", hour: "2-digit", minute: "2-digit",
+          }).format(new Date(clearDate));
+          right.append(document.createTextNode(" "), date);
+        }
+      } else if (progress.total > 0) {
+        right.className = "clear-item__progress";
+        right.textContent = `${progress.answered} / ${progress.total} 正解済み`;
       } else {
         right.className = "clear-item__empty";
         right.textContent = "－";
@@ -852,16 +934,25 @@ function updateMuteButton(muted) {
 function readStore() {
   try {
     const parsed = JSON.parse(localStorage.getItem(STORAGE_KEY) || "{}");
+    const isCurrentSchema = parsed.schemaVersion === STORAGE_SCHEMA_VERSION;
     return {
-      learnerRoleId:  parsed.learnerRoleId  || "",
+      schemaVersion:   STORAGE_SCHEMA_VERSION,
+      learnerRoleId:   parsed.learnerRoleId  || "",
       learnerRoleName: parsed.learnerRoleName || "",
-      muted:          Boolean(parsed.muted),
-      selectedLevel:  parsed.selectedLevel  || "basic",
-      rankings:       Array.isArray(parsed.rankings) ? parsed.rankings : [],
-      clears:         (parsed.clears && typeof parsed.clears === "object") ? parsed.clears : {},
+      muted:           Boolean(parsed.muted),
+      selectedLevel:   parsed.selectedLevel  || "basic",
+      rankings:        Array.isArray(parsed.rankings) ? parsed.rankings : [],
+      // v2 migration: pre-v2 clears were granted on per-session perfect score, not
+      // cumulative correctness. Drop them so they only show under the new criterion.
+      clears:          isCurrentSchema && parsed.clears && typeof parsed.clears === "object" ? parsed.clears : {},
+      correctQuestions: isCurrentSchema && parsed.correctQuestions && typeof parsed.correctQuestions === "object" ? parsed.correctQuestions : {},
     };
   } catch {
-    return { learnerRoleId: "", learnerRoleName: "", muted: false, selectedLevel: "basic", rankings: [], clears: {} };
+    return {
+      schemaVersion: STORAGE_SCHEMA_VERSION,
+      learnerRoleId: "", learnerRoleName: "", muted: false, selectedLevel: "basic",
+      rankings: [], clears: {}, correctQuestions: {},
+    };
   }
 }
 

@@ -147,6 +147,7 @@
             <div id="clearBanner" class="clear-banner" hidden>
               <span>👑 CLEAR!</span>
             </div>
+            <p id="resultProgress" class="result-progress" hidden></p>
             <p id="resultTime" class="result-time"></p>
             <p id="resultComment" class="result-comment"></p>
             <p id="syncStatus" class="sync-status" role="status" aria-live="polite"></p>
@@ -173,7 +174,10 @@
             <p class="eyebrow">Local History</p>
             <h2 id="rankingTitle">履歴</h2>
           </div>
-          <button id="closeRankingButton" class="text-button" type="button">閉じる</button>
+          <div class="section-heading__actions">
+            <button id="resetRankingButton" class="text-button danger-button" type="button">履歴を全削除</button>
+            <button id="closeRankingButton" class="text-button" type="button">閉じる</button>
+          </div>
         </div>
         <div id="rankingTabs" class="tab-row" role="tablist" aria-label="履歴カテゴリー"></div>
         <ol id="rankingList" class="ranking-list"></ol>
@@ -187,7 +191,10 @@
             <p class="eyebrow">Clear History</p>
             <h2 id="clearTitle">クリア記録</h2>
           </div>
-          <button id="closeClearButton" class="text-button" type="button">閉じる</button>
+          <div class="section-heading__actions">
+            <button id="resetClearButton" class="text-button danger-button" type="button">クリア記録を全削除</button>
+            <button id="closeClearButton" class="text-button" type="button">閉じる</button>
+          </div>
         </div>
         <div id="clearTabs" class="tab-row" role="tablist" aria-label="レベル"></div>
         <div id="clearList" class="clear-list"></div>
