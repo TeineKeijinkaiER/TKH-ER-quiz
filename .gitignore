@@ -1,2 +1,6 @@
 backend/storage/*.json
 !backend/storage/.gitkeep
+
+# Claude Code worktrees and tooling artifacts (never commit)
+.claude/
+.playwright-mcp/
