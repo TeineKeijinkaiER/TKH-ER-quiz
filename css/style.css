@@ -598,6 +598,11 @@ button:focus-visible {
   color: #ffffff;
 }
 
+.choice-button.is-limit-disabled {
+  cursor: not-allowed;
+  opacity: 0.55;
+}
+
 .choice-button.is-wrong {
   border-color: rgba(194, 65, 59, 0.8);
   background: rgba(194, 65, 59, 0.08);
@@ -606,6 +611,17 @@ button:focus-visible {
 .choice-button.is-wrong .choice-key {
   background: var(--danger);
   color: #ffffff;
+}
+
+.choice-actions {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 4px;
+}
+
+.answer-submit-button {
+  width: auto;
+  min-width: 160px;
 }
 
 .result-layout {

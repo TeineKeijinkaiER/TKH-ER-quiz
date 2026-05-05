@@ -94,10 +94,18 @@ function insertSample() {
   els.questionJson.value = JSON.stringify([
     {
       id: `${categoryId}_new_001`,
-      question: "ここに問題文を入力",
+      question: "ここに単一正解の問題文を入力",
       choices: ["選択肢1", "選択肢2", "選択肢3", "選択肢4", "選択肢5"],
       answer: 0,
       explanation: "ここに解説を入力"
+    },
+    {
+      id: `${categoryId}_new_002`,
+      question: "正しいものを3つ選べ。",
+      choices: ["選択肢1", "選択肢2", "選択肢3", "選択肢4", "選択肢5"],
+      answers: [0, 2, 4],
+      selectCount: 3,
+      explanation: "複数正解はanswersに0始まりの選択肢番号を入れます。"
     }
   ], null, 2);
 }
