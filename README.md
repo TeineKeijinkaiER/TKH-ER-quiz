@@ -1,151 +1,50 @@
-# Quiz-TKHER - 救急医学クイズ
+# Quiz-TKHER
 
-救急外来の初期対応を確認する、静的HTML/CSS/JavaScriptのクイズアプリです。ビルド不要で、GitHub Pagesにそのまま配置できます。
+研修医が救急外来の初期対応を短時間で反復学習するための、モバイルファーストなクイズアプリケーションです。
 
-## 起動
+## 概要
 
-`fetch`でJSONを読むため、ローカルではHTTPサーバー経由で開いてください。
+Quiz-TKHERは、「知識を網羅すること」よりも、救急外来での最初の数分間に迷いやすい「初期対応」「危険所見」「禁忌」「次の一手」を素早く確認することを目的に設計されています。
 
-Windowsでは、プロジェクト直下の`Quiz-TKHER 起動.cmd`をダブルクリックすると、ローカルサーバーを起動してブラウザでアプリを開けます。
+## 主な特徴
 
-```powershell
-python -m http.server 8000
-```
+- **モバイル最適化**: 片手で操作しやすいUI設計。
+- **即時フィードバック**: 5択形式、タイマー制限、解答後の明確なレビュー。
+- **柔軟なデータ構造**: カテゴリーや問題はJSONで管理され、コードを変更せずに問題の追加・修正が可能。
+- **内蔵音源**: Web Audio APIを使用し、外部音声ファイルなしで効果音を生成。
+- **管理ツール**: 職種ごとの使用状況やクイズ結果を確認できるローカルバックエンドを同梱。
 
-ブラウザで `http://localhost:8000/` を開きます。
+## 技術スタック
 
-## GitHub Pagesの結果をGoogleスプレッドシートへ集める
-
-GitHub Pagesは静的サイトなので、それだけでは全員の結果を保存できません。結果収集には24時間アクセスできる受信先が必要です。このリポジトリでは、Google Apps Scriptを使ってGoogleスプレッドシートへ結果を追記する構成にしています。
-
-### 1. スプレッドシートを作る
-
-Googleスプレッドシートで新しいファイルを作り、任意の名前を付けます。例: `Quiz-TKHER Results`
-
-### 2. Apps Scriptを貼り付ける
-
-スプレッドシートで `拡張機能` → `Apps Script` を開き、`integrations/google-sheets/Code.gs` の内容を貼り付けて保存します。
-
-### 3. Webアプリとしてデプロイする
-
-Apps Script画面右上の `デプロイ` → `新しいデプロイ` を選びます。
-
-- 種類: `ウェブアプリ`
-- 実行ユーザー: `自分`
-- アクセスできるユーザー: `全員`
-
-`自分のみ` や `Google アカウントを持つ全員` では、GitHub Pagesからの匿名POSTがログイン画面へ飛ばされ、結果が保存されません。必ずログイン不要の `全員` にします。
-
-初回は権限承認が必要です。デプロイ後に表示されるWebアプリURLをコピーします。
-
-コピーするURLは、必ず次の形です。スプレッドシート自体のURLではありません。
-
-```text
-https://script.google.com/macros/s/....../exec
-```
-
-ブラウザのシークレットウィンドウでこのURLを直接開いて、`"ok":true` と `spreadsheetUrl` が表示されればApps Script側の準備はできています。Googleログイン画面が出る場合はアクセス権限が違います。デプロイ設定を `全員` に直し、変更後は `デプロイ` → `デプロイを管理` → 対象デプロイを編集し、新しいバージョンとして再デプロイしてください。
-
-### 4. フロントエンドへURLを設定する
-
-`data/app-config.json` の `googleSheetsWebAppUrl` に、コピーしたWebアプリURLを入れます。
-
-```json
-{
-  "googleSheetsWebAppUrl": "https://script.google.com/macros/s/....../exec",
-  "sendToLocalBackend": "auto"
-}
-```
-
-この変更をGitHubへpushすると、GitHub Pagesで解かれた結果がスプレッドシート内の `quiz_results` タブに追記されます。最初の `シート1` ではなく、画面下部のタブ名を確認してください。収集されるのは、職種、カテゴリー、問題数、点数、所要時間、日時、利用ページURLです。名前は収集しません。
-
-うまく記録されない場合は、Apps Script画面で `testAppendSample` 関数を選んで実行してください。スプレッドシートに「疎通テスト」の行が追加されれば、シートへの書き込み権限は正常です。アプリからの送信だけ失敗している場合は、`data/app-config.json` がGitHub Pagesへ反映されているか、WebアプリURLが `/exec` で終わっているか、シークレットウィンドウで `/exec` URLを開いてログイン画面にならないかを確認してください。
-
-## 非公開バックエンドを使う
-
-問題追加とローカルでの使用状況確認を行う非公開バックエンドもあります。これは公開サーバーではなく、既定では`127.0.0.1`にだけ立つため、GitHub Pages利用者の結果を24時間収集する用途には使えません。全員の結果収集には上のGoogleスプレッドシート連携を使ってください。
-
-```powershell
-node backend/server.js
-```
-
-- アプリ: `http://127.0.0.1:8787/`
-- 管理画面: `http://127.0.0.1:8787/admin`
-
-管理画面では、カテゴリー別・職種別の使用状況を確認できます。また、カテゴリーを選んで問題JSONを貼り付け、既存問題へ追加または置き換えできます。
+- **フロントエンド**: HTML5, CSS3, JavaScript (ビルドステップなし)
+- **データ**: JSON (`data/` ディレクトリ)
+- **バックエンド**: Node.js 標準ライブラリ (管理画面・統計用)
+- **ストレージ**: ブラウザの `localStorage` (スキーマバージョン: 2)
 
 ## 構成
 
-- `index.html`: 画面構造
-- `css/style.css`: レイアウトとUI
-- `js/app.js`: 画面遷移、タイマー、採点、ランキング保存
-- `data/categories.json`: カテゴリー一覧
-- `data/app-config.json`: 結果送信先設定
-- `data/levels.json`: 難易度レベル定義 (basic / advanced / master)
-- `data/questions/<level>/*.json`: 問題データ（レベル別フォルダ: basic / advanced / master）
-- `integrations/google-sheets/Code.gs`: Googleスプレッドシート収集用Apps Script
-- `backend/server.js`: 非公開バックエンド
-- `backend/admin.html`: 問題追加と統計確認の管理画面
-- `docs/design-philosophy.md`: 設計思想と拡張方針
-- `docs/question-management.md`: 問題データの追加・管理手順書
+- `data/`: カテゴリー定義および問題データ
+- `docs/`: 設計思想などのドキュメント
+- `backend/`: ローカル専用サーバー (Node.js)
+  - `/admin`: 使用状況の確認および問題の追加
 
-履歴、挑戦者の職種、効果音設定はブラウザの`localStorage`に保存されます。名前は収集しません。効果音と音楽は外部音源なしのWeb Audio単音源で生成しています。
+## セットアップ
 
-バックエンド起動中にクイズを完了すると、結果は`backend/storage/usage-events.json`へ保存されます。このファイルは`.gitignore`対象です。
+### クイズの実行
+静的ファイルのみで構成されているため、`index.html` をブラウザで開くだけで動作します。
 
-## 問題の追加
+### 管理サーバーの起動
+統計データの収集や問題の追加を行う場合は、以下のコマンドを実行します。
 
-各JSONの`questions`配列に次の形式で追加します。単一正解は`answer`、複数正解は`answers`に0始まりの選択肢番号を入れます。
-
-```json
-{
-  "id": "sepsis_011",
-  "question": "問題文",
-  "choices": ["選択肢1", "選択肢2", "選択肢3", "選択肢4", "選択肢5"],
-  "answer": 0,
-  "explanation": "解説文"
-}
+```bash
+node backend/server.js
 ```
+既定では `http://127.0.0.1:8787` でバインドされます。
 
-複数回答の例です。`selectCount`を入れると「3つ選べ」のように選択数を固定できます。`selectCount`を省略すると「正しいものをすべて選べ」のように、回答者に正解数を見せずに複数選択できます。
+## 設計思想
 
-```json
-{
-  "id": "sepsis_012",
-  "question": "正しいものを3つ選べ。",
-  "choices": ["選択肢1", "選択肢2", "選択肢3", "選択肢4", "選択肢5"],
-  "answers": [0, 2, 4],
-  "selectCount": 3,
-  "explanation": "解説文"
-}
-```
+詳細な設計方針については docs/design-philosophy.md を参照してください。
 
-同じ問題を複数のカテゴリで表示したい場合は、`categories`フィールドにカテゴリIDを並べます。問題の本体は所属ファイル1か所だけ書き、タグで反映先を指定します（コピーは禁止）。
+## ライセンス
 
-```json
-{
-  "id": "ed_first_steps_007",
-  "question": "心肺停止患者のホットラインで確認すべき項目を3つ選べ。",
-  "choices": ["..", "..", "..", "..", ".."],
-  "answer": [1, 2, 4],
-  "selectCount": 3,
-  "categories": ["ed_first_steps_basic", "cpr_basic"],
-  "explanation": "..."
-}
-```
-
-新しいカテゴリーを増やす場合は、`data/questions/<level>/<id>.json`を作成し、`data/categories.json`に`id`、`level`、`name`、`description`、`file`、`accent`を追加します。
-
-詳細な手順、検証コマンド、トラブルシューティングは [`docs/question-management.md`](docs/question-management.md) を参照してください。
-
-## 医学内容の注意
-
-同梱問題はスターター教材です。臨床判断、院内プロトコル、地域の救急医療体制、薬剤添付文書、最新版ガイドラインを置き換えるものではありません。公開・配布前に、救急・集中治療・各専門領域の指導医レビューを行ってください。
-
-主な参照元:
-
-- Surviving Sepsis Campaign 2026 Adult Guidelines: https://www.sccm.org/survivingsepsiscampaign/guidelines-and-resources/surviving-sepsis-campaign-adult-guidelines
-- American Heart Association 2025 Adult BLS/ALS Guidelines: https://cpr.heart.org/en/resuscitation-science/cpr-and-ecc-guidelines
-- NICE Major trauma assessment and initial management: https://www.nice.org.uk/guidance/ng39/chapter/Recommendations
-- Hyperglycemic Crises in Adults With Diabetes, 2024 Consensus Report: https://pmc.ncbi.nlm.nih.gov/articles/PMC11272983/
-- Society for Endocrinology Adrenal Crisis Guidance: https://www.endocrinology.org/clinical-practice/clinical-guidance/adrenal-crisis/
+本アプリの医学的コンテンツは、主要なガイドライン（AHA 2025, NICE, CDC等）を参考に構成されていますが、実際の診療にあたっては各施設のプロトコルおよび指導医の指示に従ってください。
