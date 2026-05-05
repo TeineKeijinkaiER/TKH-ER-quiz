@@ -1,7 +1,7 @@
 # 引き継ぎドキュメント — Quiz-TKHER 難易度レベル機能実装
 
 **作成日**: 2026-04-29  
-**プロジェクト**: `C:/Users/shin0/Documents/GitHub/APPT`  
+**プロジェクト**: `C:/Users/shin0/Documents/GitHub/TKH-ER-quiz`  
 **GitHubリポジトリ**: `https://github.com/TeineKeijinkaiER/TKH-ER-quiz`
 
 ---
@@ -617,7 +617,7 @@ state.selectedLevel = data.selectedLevel || "basic";
 .\Quiz-TKHER起動.cmd
 
 # GitHubにpush
-cd C:\Users\shin0\Documents\GitHub\APPT
+cd C:\Users\shin0\Documents\GitHub\TKH-ER-quiz
 git push origin main
 ```
 
