@@ -762,21 +762,22 @@ function finishQuiz() {
   // correctQuestions has already been updated incrementally in handleAnswer.
   // Now check if this session pushed the category over the clear threshold.
   const categoryClearedThisSession = !state.wasCategoryClearAtStart && isClear(category.id);
+  const showClearBanner = categoryClearedThisSession && result.score === result.questionCount;
   if (categoryClearedThisSession) recordClearTimestamp(category.id, state.selectedLevel);
   const progress = getCategoryProgress(category.id);
-  renderResult(result, { categoryClearedThisSession, progress });
+  renderResult(result, { showClearBanner, progress });
   showScreen("result");
   sendResultToBackend(result);
   playTone("finish");
 }
 
-function renderResult(result, { categoryClearedThisSession, progress }) {
+function renderResult(result, { showClearBanner, progress }) {
   const percent = Math.round((result.score / result.questionCount) * 100);
   els.resultScore.textContent = `${result.score} / ${result.questionCount}`;
   els.resultPercent.textContent = `${percent}%`;
   els.resultTime.textContent = `所要時間 ${formatTime(result.totalTimeMs)}`;
   els.resultComment.textContent = getResultComment(percent);
-  renderResultStatus(categoryClearedThisSession);
+  renderResultStatus(showClearBanner);
   if (els.resultProgress) {
     if (progress && progress.total > 0) {
       const remaining = progress.total - progress.answered;
@@ -795,8 +796,8 @@ function renderResult(result, { categoryClearedThisSession, progress }) {
   els.toggleReviewButton.setAttribute("aria-expanded", "true");
 }
 
-function renderResultStatus(categoryClearedThisSession) {
-  const isClearResult = Boolean(categoryClearedThisSession);
+function renderResultStatus(showClearBanner) {
+  const isClearResult = Boolean(showClearBanner);
   const heli = els.clearBanner.querySelector(".clear-banner__heli");
   const label = els.clearBanner.querySelector("span");
   els.clearBanner.hidden = false;

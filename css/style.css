@@ -952,6 +952,10 @@ button:focus-visible {
   animation: heli-hover 2.4s ease-in-out infinite;
 }
 
+.clear-banner__heli[hidden] {
+  display: none;
+}
+
 @keyframes heli-hover {
   0%, 100% { transform: translateY(0) rotate(-2deg); }
   50%      { transform: translateY(-4px) rotate(2deg); }
