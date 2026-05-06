@@ -405,8 +405,6 @@ function renderCategories() {
       button.dataset.categoryId = category.id;
       const title = document.createElement("h3");
       title.textContent = category.name;
-      const desc = document.createElement("p");
-      desc.textContent = category.description;
       const meta = document.createElement("div");
       meta.className = "card-meta";
       const progressLabel = progress.total > 0
@@ -419,7 +417,7 @@ function renderCategories() {
         badge.textContent = "✓ CLEAR";
         meta.appendChild(badge);
       }
-      button.append(title, desc, meta);
+      button.append(title, meta);
       button.addEventListener("click", () => {
         state.selectedCategoryId = category.id;
         renderQuestionCountControls();
