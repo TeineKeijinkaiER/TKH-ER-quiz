@@ -99,9 +99,9 @@ button:disabled {
 
 .brand-mark {
   flex-shrink: 0;
-  height: 88px;
+  height: 102px;
   width: auto;
-  max-width: 140px;
+  max-width: 168px;
   object-fit: contain;
   background: transparent;
   filter: drop-shadow(0 3px 8px rgba(13, 71, 161, 0.22));
@@ -161,7 +161,7 @@ button:disabled {
 }
 
 @media (max-width: 540px) {
-  .brand-mark { height: 52px; }
+  .brand-mark { height: 62px; }
   .ecg-decor { max-width: 180px; height: 12px; }
 }
 
