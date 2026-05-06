@@ -858,6 +858,18 @@ button:focus-visible {
   margin: 0 auto;
 }
 
+.disclaimer {
+  max-width: 480px;
+  margin: 20px auto 0;
+  padding: 10px 14px;
+  font-size: 0.78rem;
+  line-height: 1.5;
+  color: var(--text-muted, #888);
+  border: 1px solid var(--border, #ddd);
+  border-radius: 8px;
+  text-align: center;
+}
+
 .level-card {
   background: var(--surface);
   border: 2px solid var(--line);

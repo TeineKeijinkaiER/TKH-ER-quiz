@@ -8,7 +8,12 @@ All git operations (add, commit, push, pull, merge, branch, stash, worktree, etc
 
 ## Worktrees
 
-Do not create git worktrees. Work directly in the main project directory.
+**Strictly prohibited.** Do not create git worktrees under any circumstances.
+
+- Never use `EnterWorktree`, `git worktree add`, or any tool/command that creates a worktree.
+- Never invoke skills or commands that trigger worktree creation (e.g. `superpowers:using-git-worktrees`, `create-pr-command` that spawns a worktree).
+- Worktrees nested inside `.claude/worktrees/` create a double-folder structure within the repo, which must never happen.
+- Work directly in the main project directory at all times: `C:\Users\shin0\Documents\GitHub\TKH-ER-Quiz\`
 
 ## Project
 
