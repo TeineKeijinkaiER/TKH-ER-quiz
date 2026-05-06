@@ -917,7 +917,7 @@ button:focus-visible {
 /* ===== CLEAR banner in result screen ===== */
 .clear-banner {
   position: relative;
-  background: linear-gradient(135deg, #187a48, #0f5c37);
+  background: linear-gradient(135deg, #1976d2, #087f8c);
   color: white;
   border-radius: 10px;
   padding: 14px 20px;
@@ -931,6 +931,18 @@ button:focus-visible {
   align-items: center;
   justify-content: center;
   gap: 12px;
+}
+
+.clear-banner[hidden] {
+  display: none;
+}
+
+.clear-banner.is-clear {
+  background: linear-gradient(135deg, #187a48, #0f5c37);
+}
+
+.clear-banner.is-finish {
+  background: linear-gradient(135deg, #1976d2, #087f8c);
 }
 
 .clear-banner__heli {

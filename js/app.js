@@ -119,6 +119,7 @@ const state = {
   musicGeneration: 0,
   musicMode: "",
   musicUrgency: "normal",
+  wasCategoryClearAtStart: false,
   googleSheetsWebAppUrl: "",
   sendToLocalBackend: false,
 };
@@ -280,27 +281,51 @@ async function loadQuestionData() {
   if (!levelsRes.ok) throw new Error(`levels.json ${levelsRes.status}`);
   if (!categoriesRes.ok) throw new Error(`categories.json ${categoriesRes.status}`);
   state.levels = await levelsRes.json();
-  state.categories = await categoriesRes.json();
+  const categories = await categoriesRes.json();
 
-  const validCategoryIds = new Set(state.categories.map((c) => c.id));
-  state.questionBank = new Map(state.categories.map((c) => [c.id, []]));
+  const validCategoryIds = new Set(categories.map((c) => c.id));
+  state.questionBank = new Map(categories.map((c) => [c.id, []]));
 
   const primaryByFile = new Map();
-  state.categories.forEach((cat) => {
+  categories.forEach((cat) => {
     if (!primaryByFile.has(cat.file)) primaryByFile.set(cat.file, cat.id);
   });
 
+  const unavailableFiles = new Set();
   await Promise.all(
     Array.from(primaryByFile.entries()).map(async ([file, primaryId]) => {
       const res = await fetch(`data/${file}`, { cache: "no-store" });
-      if (!res.ok) throw new Error(`${file} ${res.status}`);
-      const data = await res.json();
+      if (!res.ok) {
+        unavailableFiles.add(file);
+        console.warn(`[questions] ${file} could not be loaded (${res.status}). Category skipped.`);
+        return;
+      }
+      let data;
+      try {
+        data = await res.json();
+      } catch (error) {
+        unavailableFiles.add(file);
+        console.warn(`[questions] ${file} contains invalid JSON. Category skipped.`, error);
+        return;
+      }
+      if (!Array.isArray(data.questions)) {
+        unavailableFiles.add(file);
+        console.warn(`[questions] ${file} does not contain a questions array. Category skipped.`);
+        return;
+      }
       for (const q of data.questions) {
         const targets = resolveQuestionCategories(q, primaryId, validCategoryIds, file);
         for (const t of targets) state.questionBank.get(t).push(q);
       }
     }),
   );
+
+  state.categories = categories.filter((cat) => !unavailableFiles.has(cat.file));
+  unavailableFiles.forEach((file) => {
+    categories
+      .filter((cat) => cat.file === file)
+      .forEach((cat) => state.questionBank.delete(cat.id));
+  });
 
   state.categories.forEach((cat) => {
     cat.questionTotal = state.questionBank.get(cat.id).length;
@@ -467,8 +492,7 @@ function recordCorrectQuestion(questionId) {
   writeStore(data);
 }
 
-function maybeRecordClearTimestamp(categoryId, levelId) {
-  if (!isClear(categoryId)) return false;
+function recordClearTimestamp(categoryId, levelId) {
   const key = `${levelId}:${categoryId}`;
   const data = readStore();
   if (data.clears[key]) return false;
@@ -504,6 +528,7 @@ function startQuiz() {
   if (!state.learnerRoleId) {
     els.setupStatus.textContent = "職種を選択してください。"; return;
   }
+  state.wasCategoryClearAtStart = isClear(category.id);
   ensureAudioContext();
   persistLearnerRole();
   state.quizQuestions = shuffle(sourceQuestions).slice(0, state.questionCount).map(prepareQuestion);
@@ -736,30 +761,28 @@ function finishQuiz() {
   addRanking(result);
   // correctQuestions has already been updated incrementally in handleAnswer.
   // Now check if this session pushed the category over the clear threshold.
-  const newlyCleared = maybeRecordClearTimestamp(category.id, state.selectedLevel);
+  const categoryClearedThisSession = !state.wasCategoryClearAtStart && isClear(category.id);
+  if (categoryClearedThisSession) recordClearTimestamp(category.id, state.selectedLevel);
   const progress = getCategoryProgress(category.id);
-  renderResult(result, { newlyCleared, progress });
+  renderResult(result, { categoryClearedThisSession, progress });
   showScreen("result");
   sendResultToBackend(result);
   playTone("finish");
 }
 
-function renderResult(result, { newlyCleared, progress }) {
+function renderResult(result, { categoryClearedThisSession, progress }) {
   const percent = Math.round((result.score / result.questionCount) * 100);
   els.resultScore.textContent = `${result.score} / ${result.questionCount}`;
   els.resultPercent.textContent = `${percent}%`;
   els.resultTime.textContent = `所要時間 ${formatTime(result.totalTimeMs)}`;
   els.resultComment.textContent = getResultComment(percent);
-  els.clearBanner.hidden = !newlyCleared;
-  if (newlyCleared) {
-    els.clearBanner.querySelector("span").textContent = "👑 カテゴリ初クリア達成！";
-  }
+  renderResultStatus(categoryClearedThisSession);
   if (els.resultProgress) {
     if (progress && progress.total > 0) {
       const remaining = progress.total - progress.answered;
       els.resultProgress.hidden = false;
       els.resultProgress.textContent = remaining === 0
-        ? `カテゴリ進捗: ${progress.answered} / ${progress.total} 問正解済み（クリア達成）`
+        ? `カテゴリ進捗: ${progress.answered} / ${progress.total} 問正解済み`
         : `カテゴリ進捗: ${progress.answered} / ${progress.total} 問正解済み（あと ${remaining} 問でクリア）`;
     } else {
       els.resultProgress.hidden = true;
@@ -770,6 +793,17 @@ function renderResult(result, { newlyCleared, progress }) {
   els.reviewList.hidden = false;
   els.toggleReviewButton.textContent = "折りたたむ";
   els.toggleReviewButton.setAttribute("aria-expanded", "true");
+}
+
+function renderResultStatus(categoryClearedThisSession) {
+  const isClearResult = Boolean(categoryClearedThisSession);
+  const heli = els.clearBanner.querySelector(".clear-banner__heli");
+  const label = els.clearBanner.querySelector("span");
+  els.clearBanner.hidden = false;
+  els.clearBanner.classList.toggle("is-clear", isClearResult);
+  els.clearBanner.classList.toggle("is-finish", !isClearResult);
+  if (heli) heli.hidden = !isClearResult;
+  if (label) label.textContent = isClearResult ? "CLEAR!" : "Finish";
 }
 
 function renderReview() {
