@@ -1,0 +1,21 @@
+{
+  "name": "Quiz-TKHER 救急医学クイズ",
+  "short_name": "Quiz-TKHER",
+  "description": "札幌ドクターヘリ ヘリてぬの救急医学学習クイズ",
+  "start_url": "./",
+  "display": "standalone",
+  "background_color": "#f1f7fc",
+  "theme_color": "#1976d2",
+  "icons": [
+    {
+      "src": "assets/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "assets/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
