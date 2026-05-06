@@ -28,8 +28,72 @@ const QUIZ_MUSIC = {
   },
 };
 
-// Opening music interval per level (ms per step)
-const OPENING_INTERVAL = { basic: 175, advanced: 150, master: 140 };
+// ──────────────────────────────────────────────────────────────────────────────
+// Opening music: DQ-inspired 3-voice arrangements (melody + counter + bass)
+// Each level has its own key, tempo, chord progression, and drum pattern.
+// 0 = rest. Step index loops through `barSteps`.
+// ──────────────────────────────────────────────────────────────────────────────
+const OPENING_MUSIC = {
+  // BASIC — peaceful village (C major, ~86bpm), I-vi-IV-V progression
+  basic: {
+    intervalMs: 175,
+    barSteps: 32,
+    melody:      [523,0,659,0, 784,0,659,0,  440,0,523,0, 659,0,523,0,
+                  440,0,523,0, 698,0,587,0,  494,0,587,0, 784,0,587,0],
+    melodyWave: "triangle",
+    melodyGain: 0.022,
+    counter:     [262,0,0,0,   330,0,0,0,    220,0,0,0,   262,0,0,0,
+                  175,0,0,0,   262,0,0,0,    196,0,0,0,   247,0,0,0],
+    counterWave: "triangle",
+    counterGain: 0.012,
+    bass:        [65,0,0,0,    98,0,0,0,     110,0,0,0,   82,0,0,0,
+                  87,0,0,0,    131,0,0,0,    98,0,0,0,    147,0,0,0],
+    bassWave: "triangle",
+    bassGain: 0.026,
+    drums: null,
+  },
+  // ADVANCED — heroic adventure (A minor, ~107bpm), i-VI-III-VII progression
+  advanced: {
+    intervalMs: 140,
+    barSteps: 32,
+    melody:      [880,0,659,0, 523,0,440,0,  698,0,523,0, 440,0,523,0,
+                  523,0,659,0, 784,0,659,0,  587,0,784,0, 587,0,494,0],
+    melodyWave: "square",
+    melodyGain: 0.022,
+    counter:     [330,0,0,0,   262,0,0,0,    349,0,0,0,   262,0,0,0,
+                  392,0,0,0,   330,0,0,0,    294,0,0,0,   247,0,0,0],
+    counterWave: "triangle",
+    counterGain: 0.014,
+    bass:        [110,0,0,0,   82,0,0,0,     87,0,0,0,    131,0,0,0,
+                  65,0,0,0,    98,0,0,0,     98,0,0,0,    147,0,0,0],
+    bassWave: "triangle",
+    bassGain: 0.028,
+    drums: {
+      kick:  new Set([0, 8, 16, 24]),
+      snare: new Set([4, 12, 20, 28]),
+      hihat: new Set([1,3,5,7,9,11,13,15,17,19,21,23,25,27,29,31]),
+    },
+  },
+  // MASTER — battle theme (E minor, ~136bpm), i-VII-VI-V chromatic
+  master: {
+    intervalMs: 110,
+    barSteps: 16,
+    melody:      [659,784,494,784,  587,740,440,740,  523,659,392,659,  494,587,740,587],
+    melodyWave: "sawtooth",
+    melodyGain: 0.030,
+    counter:     [330,0,392,0,      294,0,370,0,      262,0,330,0,      247,0,294,0],
+    counterWave: "square",
+    counterGain: 0.016,
+    bass:        [82,0,82,0,        73,0,73,0,        65,0,65,0,        62,0,62,0],
+    bassWave: "triangle",
+    bassGain: 0.038,
+    drums: {
+      kick:  new Set([0, 8]),
+      snare: new Set([4, 12]),
+      hihat: new Set([2, 6, 10, 14]),
+    },
+  },
+};
 
 const state = {
   levels: [],
@@ -106,7 +170,7 @@ function cacheElements() {
     "clearBanner", "clearTabs", "clearList",
     "categoryGrid", "selectedCategoryLabel", "setupStatus",
     "rankingButton", "muteButton",
-    "clearButton", "backToLevelButton", "closeClearButton",
+    "clearButton", "closeClearButton",
     "quitQuizButton", "quizCategory", "quizProgress",
     "timerArc", "timerText", "questionText", "choiceList",
     "resultScore", "resultPercent", "resultTime", "resultComment", "syncStatus", "resultProgress",
@@ -147,18 +211,13 @@ function bindEvents() {
 
   els.rankingButton.addEventListener("click", () => openRanking("all"));
   els.resultRankingButton.addEventListener("click", () => openRanking("all"));
-  els.closeRankingButton.addEventListener("click", () =>
-    showScreen(state.lastScreen === "quiz" ? "setup" : state.lastScreen));
-  els.quitQuizButton.addEventListener("click", () => { stopTimer(); showScreen("setup"); });
+  els.closeRankingButton.addEventListener("click", () => showScreen("level"));
+  els.quitQuizButton.addEventListener("click", () => { stopTimer(); showScreen("level"); });
   els.retryButton.addEventListener("click", startQuiz);
-  els.backToSetupButton.addEventListener("click", () => showScreen("setup"));
+  els.backToSetupButton.addEventListener("click", () => showScreen("level"));
   els.toggleReviewButton.addEventListener("click", toggleReview);
-  els.backToLevelButton.addEventListener("click", () => showScreen("level"));
   els.clearButton.addEventListener("click", () => { renderClearScreen(); showScreen("clear"); });
-  els.closeClearButton.addEventListener("click", () => {
-    const prev = state.lastScreen;
-    showScreen(prev === "clear" || !prev ? "level" : prev);
-  });
+  els.closeClearButton.addEventListener("click", () => showScreen("level"));
   document.querySelectorAll('input[name="learnerRole"]').forEach((input) => {
     input.addEventListener("change", () => {
       state.learnerRoleId = input.value;
@@ -1027,94 +1086,50 @@ function setSyncStatus(text, status) {
 }
 
 // ══════════════════════════════════════════════════════════════════════════════
-// AUDIO: Opening music — three distinct themes per level
+// AUDIO: Opening music — DQ-style 3-voice arrangements per level
 // ══════════════════════════════════════════════════════════════════════════════
 
 function startOpeningMusic() {
   if (readStore().muted || !isSetupScreenVisible()) return;
-  // Always stop then restart — picks up any level change cleanly
   stopMusicLoop();
   const level = state.selectedLevel || "basic";
-  const interval = OPENING_INTERVAL[level] || 150;
+  const config = OPENING_MUSIC[level] || OPENING_MUSIC.basic;
   const generation = ++state.musicGeneration;
   state.musicMode = "opening";
   state.musicStep = 0;
-  playOpeningMusicStep(generation);
-  state.musicLoopId = window.setInterval(() => playOpeningMusicStep(generation), interval);
+  playOpeningMusicStep(config, generation);
+  state.musicLoopId = window.setInterval(
+    () => playOpeningMusicStep(config, generation),
+    config.intervalMs
+  );
 }
 
-function playOpeningMusicStep(generation) {
+function playOpeningMusicStep(config, generation) {
   if (generation !== state.musicGeneration) return;
   if (readStore().muted || !isSetupScreenVisible()) { stopMusicLoop(); return; }
-  const step = state.musicStep;
-  const level = state.selectedLevel || "basic";
-  if      (level === "master")   playMasterOpeningStep(step);
-  else if (level === "advanced") playAdvancedOpeningStep(step);
-  else                           playBasicOpeningStep(step);
+  const s = state.musicStep % config.barSteps;
+
+  // Melody — accent first beat of each quarter (every 4 steps)
+  const m = config.melody[s];
+  if (m > 0) {
+    const accent = (s % 4 === 0) ? 1.4 : (s % 2 === 0) ? 1.0 : 0.7;
+    playSynthNote(m, 0.16, config.melodyWave, config.melodyGain * accent);
+  }
+  // Counter-melody — softer harmonic line
+  const c = config.counter[s];
+  if (c > 0) playSynthNote(c, 0.13, config.counterWave, config.counterGain);
+  // Bass — root/fifth pattern, longer envelope
+  const b = config.bass[s];
+  if (b > 0) playSynthNote(b, 0.22, config.bassWave, config.bassGain);
+
+  // Drums (optional per level)
+  if (config.drums) {
+    if (config.drums.kick.has(s))  playSynthNote(55,   0.12, "square",   0.060);
+    if (config.drums.snare.has(s)) playSynthNote(220,  0.07, "sawtooth", 0.024);
+    if (config.drums.hihat.has(s)) playSynthNote(3136, 0.025, "square",  0.005);
+  }
+
   state.musicStep += 1;
-}
-
-// ── Basic: calm, warm, C-major arpeggio, triangle waves, no drums ─────────────
-// 16-step bar at 175 ms/step = ~86 bpm (gentle)
-function playBasicOpeningStep(step) {
-  const s = step % 16;
-  // Soft bass pulse every 4 steps (C-E-G-E walking bass)
-  const bassLine = [131, 165, 196, 165]; // C3, E3, G3, E3
-  if (s % 4 === 0) {
-    playSynthNote(bassLine[Math.floor(s / 4) % 4], 0.22, "triangle", 0.016);
-  }
-  // Warm lead arpeggio (C major pentatonic with octave reach)
-  const arp = [523, 659, 784, 880, 784, 659, 523, 440,
-               523, 659, 784, 1047, 880, 784, 659, 784];
-  const gain = s % 8 === 0 ? 0.020 : s % 4 === 0 ? 0.016 : 0.012;
-  playSynthNote(arp[s], 0.14, "triangle", gain);
-}
-
-// ── Advanced: driving techno-pop, 4/4 kick+snare, Cm pentatonic ──────────────
-// 16-step bar at 150 ms/step = ~100 bpm
-function playAdvancedOpeningStep(step) {
-  const s = step % 16;
-  // Kick on beats 1 & 3 (steps 0, 8)
-  if (s === 0 || s === 8) {
-    playSynthNote(65,  0.10, "square",   0.055);
-    playSynthNote(131, 0.14, "triangle", 0.030);
-  }
-  // Snare on beats 2 & 4 (steps 4, 12)
-  if (s === 4 || s === 12) { playSynthNote(220, 0.06, "sawtooth", 0.020); }
-  // Bass riff accents
-  if (s === 2 || s === 10) { playSynthNote(131, 0.08, "triangle", 0.016); }
-  if (s === 6 || s === 14) { playSynthNote(196, 0.08, "triangle", 0.016); }
-  // Lead synth arpeggio (Cm pentatonic)
-  const arp = [523, 622, 784, 932, 784, 622, 523, 466,
-               523, 698, 784, 932, 784, 698, 622, 523];
-  playSynthNote(arp[s], 0.09, "square", s % 4 === 0 ? 0.022 : 0.015);
-  // Hi-hat shimmer on odd steps
-  if (s % 2 === 1) { playSynthNote(3136, 0.025, "square", 0.004); }
-}
-
-// ── Master: heartbeat techno, lub-dub sub-bass, hard sawtooth lead ────────────
-// 12-step bar at 140 ms/step → heartbeat ogni 6 steps = 840 ms ≈ 71 bpm
-// Heartbeat "lub" at step 0, "dub" at step 1; again "lub" at step 6, "dub" at 7
-function playMasterOpeningStep(step) {
-  const s = step % 12;
-  // Heartbeat lub-dub
-  if (s === 0 || s === 6) {
-    playSynthNote(55,  0.13, "square",   0.062); // deep sub (lub — strong)
-    playSynthNote(110, 0.10, "sawtooth", 0.028); // overtone
-  }
-  if (s === 1 || s === 7) {
-    playSynthNote(73,  0.11, "square",   0.040); // dub (softer, slightly higher)
-  }
-  // Hard mid accent (like a snare crack between heartbeats)
-  if (s === 3 || s === 9) {
-    playSynthNote(196, 0.07, "sawtooth", 0.022); // G3
-  }
-  // Tense chromatic lead (rests at heartbeat steps 0,1,6,7)
-  const lead = [0, 0, 294, 311, 349, 311, 0, 0, 349, 392, 415, 349];
-  if (lead[s] > 0) {
-    const gain = s % 3 === 2 ? 0.032 : 0.024;
-    playSynthNote(lead[s], 0.10, "sawtooth", gain);
-  }
 }
 
 // ══════════════════════════════════════════════════════════════════════════════

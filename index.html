@@ -5,25 +5,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Quiz-TKHER - 救急医学クイズ</title>
   <meta name="description" content="救急外来の初期対応を学ぶ研修医向け医学クイズ Quiz-TKHER">
-  <link rel="icon" href="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><g fill='%230a6e7a'><rect x='28' y='3' width='8' height='58' rx='3'/><rect x='28' y='3' width='8' height='58' rx='3' transform='rotate(60 32 32)'/><rect x='28' y='3' width='8' height='58' rx='3' transform='rotate(120 32 32)'/></g><circle cx='32' cy='32' r='11' fill='%23ffffff'/><g fill='%23dc2626'><rect x='29' y='22' width='6' height='20' rx='1.5'/><rect x='22' y='29' width='20' height='6' rx='1.5'/></g></svg>">
+  <link rel="icon" type="image/png" href="assets/favicon.png">
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
   <div class="app-shell">
     <header class="topbar">
       <div class="brand">
-        <svg class="brand-mark" viewBox="0 0 64 64" role="img" aria-label="Star of Life with medical cross">
-          <g class="brand-mark__star" fill="currentColor">
-            <rect x="28" y="3" width="8" height="58" rx="3"/>
-            <rect x="28" y="3" width="8" height="58" rx="3" transform="rotate(60 32 32)"/>
-            <rect x="28" y="3" width="8" height="58" rx="3" transform="rotate(120 32 32)"/>
-          </g>
-          <circle cx="32" cy="32" r="12" fill="#ffffff"/>
-          <g class="brand-mark__cross" fill="#dc2626">
-            <rect x="29" y="21" width="6" height="22" rx="1.5"/>
-            <rect x="21" y="29" width="22" height="6" rx="1.5"/>
-          </g>
-        </svg>
+        <img class="brand-mark" src="assets/heriteinu.png" alt="Sapporo Doctor-Heli Heriteinu">
         <div class="brand-text">
           <p class="eyebrow">Emergency Medicine Training</p>
           <h1 class="brand-title"><span class="brand-title__quiz">Quiz-</span><span class="brand-title__tkher">TKHER</span><span class="brand-title__sub">救急医学クイズ</span></h1>
@@ -53,7 +42,6 @@
       <section id="setupScreen" class="screen" aria-labelledby="setupTitle" hidden>
         <div class="setup-layout">
           <aside class="panel setup-panel">
-            <button id="backToLevelButton" class="text-button back-button" type="button">← レベル選択へ</button>
             <h2 id="setupTitle">クイズ設定</h2>
             <fieldset id="roleFieldset" class="role-fieldset">
               <legend>職種 <span>必須</span></legend>
@@ -145,6 +133,7 @@
               <span id="resultPercent">0%</span>
             </div>
             <div id="clearBanner" class="clear-banner" hidden>
+              <img class="clear-banner__heli" src="assets/Heli.png" alt="" aria-hidden="true">
               <span>👑 CLEAR!</span>
             </div>
             <p id="resultProgress" class="result-progress" hidden></p>
@@ -152,8 +141,8 @@
             <p id="resultComment" class="result-comment"></p>
             <p id="syncStatus" class="sync-status" role="status" aria-live="polite"></p>
             <div class="button-row">
-              <button id="retryButton" class="primary-button" type="button">同じ条件で再挑戦</button>
-              <button id="backToSetupButton" class="secondary-button" type="button">カテゴリーへ</button>
+              <button id="retryButton" class="primary-button" type="button">再挑戦</button>
+              <button id="backToSetupButton" class="primary-button is-home" type="button">メイン画面</button>
               <button id="resultRankingButton" class="secondary-button" type="button">履歴</button>
             </div>
           </section>
@@ -176,7 +165,7 @@
           </div>
           <div class="section-heading__actions">
             <button id="resetRankingButton" class="text-button danger-button" type="button">履歴を全削除</button>
-            <button id="closeRankingButton" class="text-button" type="button">閉じる</button>
+            <button id="closeRankingButton" class="primary-button is-home" type="button">メイン画面</button>
           </div>
         </div>
         <div id="rankingTabs" class="tab-row" role="tablist" aria-label="履歴カテゴリー"></div>
@@ -193,7 +182,7 @@
           </div>
           <div class="section-heading__actions">
             <button id="resetClearButton" class="text-button danger-button" type="button">クリア記録を全削除</button>
-            <button id="closeClearButton" class="text-button" type="button">閉じる</button>
+            <button id="closeClearButton" class="primary-button is-home" type="button">メイン画面</button>
           </div>
         </div>
         <div id="clearTabs" class="tab-row" role="tablist" aria-label="レベル"></div>

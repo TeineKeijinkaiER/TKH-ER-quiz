@@ -150,5 +150,21 @@
     "description": "ECPR、PCAS、TTM、神経予後予測、持続脳波",
     "file": "questions/master/cpr_master.json",
     "accent": "#c2413b"
+  },
+  {
+    "id": "pediatric_basic",
+    "level": "basic",
+    "name": "小児救急",
+    "description": "小児の緊急医療対応、薬剤投与、蘇生戦略",
+    "file": "questions/basic/pediatric.json",
+    "accent": "#c2413b"
+  },
+  {
+    "id": "cardiology_basic",
+    "level": "basic",
+    "name": "循環器救急",
+    "description": "循環器疾患の救急対応",
+    "file": "questions/basic/cardiology.json",
+    "accent": "#c2413b"
   }
 ]
