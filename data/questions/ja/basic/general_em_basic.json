@@ -1,0 +1,40 @@
+{
+  "category": "救急医学全般",
+  "questions": [
+    {
+      "id": "general_em_basic_001",
+      "question": "成人の院外心停止に対するBLS（一次救命処置）の手順として最初に行うべきことはどれか。",
+      "choices": [
+        "胸骨圧迫の開始",
+        "自動体外式除細動器（AED）の使用",
+        "安全確認・反応確認・呼吸確認を行い、119番通報とAED手配を要請する",
+        "人工呼吸（口対口）の開始",
+        "頸動脈拍動の触知確認"
+      ],
+      "selectCount": 1,
+      "explanation": "BLSの最初のステップは安全確認・反応確認・呼吸確認であり、心停止と判断したら直ちに119番通報とAED手配を要請する。その後、高品質な胸骨圧迫を開始する。一般市民はまず胸骨圧迫を優先し、訓練を受けた救助者は30:2の圧迫・換気比で行う。頸動脈拍動の確認は医療従事者が行うステップであり、非医療者は確認しなくてよい。",
+      "answers": [
+        2
+      ]
+    },
+    {
+      "id": "general_em_basic_002",
+      "question": "ERにおける一次評価（primary survey）に含まれる項目として正しいものをすべて選べ。",
+      "choices": [
+        "A（Airway）：気道の開通・維持",
+        "B（Breathing）：呼吸数・酸素化・換気の評価",
+        "C（Circulation）：出血・循環動態・末梢灌流の評価",
+        "D（Disability）：意識レベル・瞳孔・血糖の評価",
+        "L（Laboratory）：血液検査・画像検査の結果確認"
+      ],
+      "answers": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "selectCount": 0,
+      "explanation": "Primary survey は ABCDE アプローチ（Airway・Breathing・Circulation・Disability・Exposure）で構成される。生命を脅かす異常を迅速に発見し、直ちに介入することが目的である。血液検査・画像検査などの詳細な検索は二次評価（secondary survey）または蘇生後に行う。各ステップで問題を発見したら即座に介入してから次に進む。"
+    }
+  ]
+}

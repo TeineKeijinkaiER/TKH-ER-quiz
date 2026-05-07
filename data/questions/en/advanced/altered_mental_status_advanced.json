@@ -11,7 +11,9 @@
         "Since stroke is suspected, transport to head CT before evaluating airway, breathing, and circulation",
         "Even with limited history, simultaneously consider drug/toxin exposure, infection, metabolic abnormalities, and intracranial pathology"
       ],
-      "answers": [3],
+      "answers": [
+        3
+      ],
       "selectCount": 1,
       "explanation": "In altered mental status, stabilizing the airway (A), breathing (B), and circulation (C) and ruling out hypoglycemia take priority. A patient with JCS 200 may have impaired airway protection or ventilatory failure; CT should not be prioritized over A-B-C assessment. The initial evaluation should simultaneously address blood glucose, oxygenation/ventilation, circulation, pupils, focal neurological findings, meningeal signs, trauma, toxic ingestion, infection, and metabolic abnormalities."
     },
@@ -25,8 +27,14 @@
         "GCS 13 with preserved verbal output and intact airway protection, complaining only of severe headache",
         "Rapid GCS decline from 14 to 8"
       ],
-      "answers": [0, 1, 2, 4],
-      "explanation": "Indications for endotracheal intubation are based not on a single GCS score alone, but on diminished airway protective reflexes, tongue-base obstruction, secretions/vomiting, aspiration risk, hypoxia, ventilatory failure, rapid deterioration of consciousness, and risk of deterioration during transport or procedures. While GCS ≤8 is a common threshold, a patient with GCS 13 who is verbal with intact airway protection and stable oxygenation/ventilation does not necessarily require immediate intubation."
+      "answers": [
+        0,
+        1,
+        2,
+        4
+      ],
+      "explanation": "Indications for endotracheal intubation are based not on a single GCS score alone, but on diminished airway protective reflexes, tongue-base obstruction, secretions/vomiting, aspiration risk, hypoxia, ventilatory failure, rapid deterioration of consciousness, and risk of deterioration during transport or procedures. While GCS ≤8 is a common threshold, a patient with GCS 13 who is verbal with intact airway protection and stable oxygenation/ventilation does not necessarily require immediate intubation.",
+      "selectCount": 0
     },
     {
       "id": "altered_mental_status_advanced_003",
@@ -38,7 +46,9 @@
         "If altered mental status persists with a blood glucose of 62 mg/dL, correction is unnecessary because the hypoglycemia is mild",
         "In carbon monoxide poisoning, a normal pulse oximetry SpO2 reading does not exclude toxicity"
       ],
-      "answers": [3],
+      "answers": [
+        3
+      ],
       "selectCount": 1,
       "explanation": "Hypoglycemia or borderline hypoglycemia accompanied by altered mental status should be corrected promptly based on the clinical situation. Blood glucose below 70 mg/dL is generally treated as hypoglycemia, and dextrose should be considered when mental status is impaired. Thiamine should be considered for Wernicke encephalopathy prevention in patients with alcohol use disorder or malnutrition, but should not unnecessarily delay glucose correction. In opioid toxicity, respiratory depression is the critical concern; naloxone should be used alongside ventilatory support. In carbon monoxide poisoning, SpO2 is falsely normal; COHb measurement and exposure history are essential."
     },
@@ -52,7 +62,11 @@
         "Complete recovery of orientation within a few minutes after syncope with no focal neurological deficits",
         "Patient reports drowsiness but opens eyes promptly to voice, and conversation and ambulation are normal"
       ],
-      "answers": [0, 1, 2],
+      "answers": [
+        0,
+        1,
+        2
+      ],
       "selectCount": 3,
       "explanation": "NCSE can maintain altered mental status without prominent motor convulsions. Criteria for suspicion include: delayed return of consciousness after convulsions, unexplained persistent altered mental status, subtle ictal signs such as eye deviation, eyelid myoclonus, or automatisms, and persistent unresponsiveness after antiepileptic drug administration. EEG (electroencephalogram) is essential for diagnosis; early consultation with neurology or critical care is warranted when NCSE is suspected."
     },
@@ -66,7 +80,9 @@
         "Since CSF culture before antibiotic administration is essential for diagnosis, withhold antibiotics while waiting for CT and lumbar puncture",
         "In adults with suspected pneumococcal meningitis, consider dexamethasone before or concurrently with antibiotic administration"
       ],
-      "answers": [3],
+      "answers": [
+        3
+      ],
       "selectCount": 1,
       "explanation": "Delayed antibiotic administration in bacterial meningitis worsens outcomes. Even when CT is necessary before lumbar puncture, blood cultures should be drawn first, then antibiotics and dexamethasone (if indicated) should be given without waiting. Findings that warrant CT before lumbar puncture include: immunosuppression, prior CNS disease, new-onset seizures, papilledema, altered mental status, and focal neurological signs. Dexamethasone should ideally be given before or simultaneously with antibiotics, especially when pneumococcal meningitis is suspected."
     },
@@ -80,8 +96,14 @@
         "When impending herniation is suspected, consider hyperosmolar therapy such as hypertonic saline or mannitol",
         "When raised ICP is suspected, lower systolic blood pressure below 90 mmHg to reduce cerebral edema"
       ],
-      "answers": [0, 1, 2, 3],
-      "explanation": "Criteria for suspecting impending herniation include: rapid decline in consciousness, anisocoria, unilateral pupillary dilation, absent light reflex, hemiplegia, decerebrate/decorticate posturing, and Cushing's triad. Management includes A-B-C stabilization, avoidance of hypoxia and hypotension, head elevation, ventilation management avoiding excessive hyperventilation, emergent imaging, neurosurgical consultation, and hyperosmolar therapy with hypertonic saline or mannitol. Cerebral perfusion pressure must be maintained; intentionally lowering blood pressure is inappropriate."
+      "answers": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "explanation": "Criteria for suspecting impending herniation include: rapid decline in consciousness, anisocoria, unilateral pupillary dilation, absent light reflex, hemiplegia, decerebrate/decorticate posturing, and Cushing's triad. Management includes A-B-C stabilization, avoidance of hypoxia and hypotension, head elevation, ventilation management avoiding excessive hyperventilation, emergent imaging, neurosurgical consultation, and hyperosmolar therapy with hypertonic saline or mannitol. Cerebral perfusion pressure must be maintained; intentionally lowering blood pressure is inappropriate.",
+      "selectCount": 0
     },
     {
       "id": "altered_mental_status_advanced_007",
@@ -93,7 +115,9 @@
         "If headache resolves with analgesics and no focal neurological deficits are present, SAH can be excluded",
         "Oculomotor nerve palsy, hemiplegia, or altered mental status warrants emergent evaluation including ruptured aneurysm and raised ICP"
       ],
-      "answers": [3],
+      "answers": [
+        3
+      ],
       "selectCount": 1,
       "explanation": "Criteria for suspecting SAH include: sudden-onset severe headache, loss of consciousness at onset, vomiting, nuchal rigidity, focal neurological deficits, oculomotor nerve palsy, and exertional onset. Resolution of headache alone or absence of focal neurological deficits is insufficient to exclude SAH. While a high-quality non-contrast head CT read by an expert within 6 hours of onset is considered useful for ruling out SAH, additional evaluation (CTA, lumbar puncture, specialist consultation) should be considered when the time of onset is unknown, more than 6 hours have elapsed, anemia is present, image quality is suboptimal, or clinical suspicion remains high. When evaluating for xanthochromia on lumbar puncture, adequate time after onset must have passed."
     },
@@ -107,7 +131,11 @@
         "Episode preceded by lightheadedness, diaphoresis, and nausea while standing, with prompt recovery in the supine position",
         "Syncope triggered by venipuncture with complete return to normal conversation within seconds"
       ],
-      "answers": [0, 1, 2],
+      "answers": [
+        0,
+        1,
+        2
+      ],
       "selectCount": 3,
       "explanation": "Findings suggestive of seizure include: prolonged postictal confusion, lateral tongue laceration, witnessed tonic-clonic movements, urinary incontinence, myalgia, and a preceding aura. In contrast, vasovagal syncope is typically associated with a prodrome of standing, pain, venipuncture, nausea, diaphoresis, or visual dimming, followed by rapid recovery in the supine position. Note that brief myoclonic jerks can also occur with syncope, making witness accounts important."
     },
@@ -121,8 +149,14 @@
         "Known structural heart disease or heart failure",
         "Young patient who fainted briefly after venipuncture with prodromal lightheadedness, diaphoresis, and nausea, and recovered completely within seconds"
       ],
-      "answers": [0, 1, 2, 3],
-      "explanation": "High-risk features for cardiac syncope include: exertional or supine syncope, sudden syncope without prodrome, associated chest pain, palpitations or dyspnea, prior cardiac disease or family history, abnormal ECG, and persistent hypotension. High-degree AV block, marked bradycardia, ventricular arrhythmia, Brugada pattern, and QT prolongation require urgent evaluation. A young patient who faints with a prodrome after venipuncture or pain and recovers promptly suggests vasovagal syncope."
+      "answers": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "explanation": "High-risk features for cardiac syncope include: exertional or supine syncope, sudden syncope without prodrome, associated chest pain, palpitations or dyspnea, prior cardiac disease or family history, abnormal ECG, and persistent hypotension. High-degree AV block, marked bradycardia, ventricular arrhythmia, Brugada pattern, and QT prolongation require urgent evaluation. A young patient who faints with a prodrome after venipuncture or pain and recovers promptly suggests vasovagal syncope.",
+      "selectCount": 0
     },
     {
       "id": "altered_mental_status_advanced_010",
@@ -134,7 +168,9 @@
         "For altered mental status with Na 118 mEq/L, withhold all correction during the first 24 hours regardless of symptoms to avoid central pontine myelinolysis",
         "For altered mental status caused by hypercalcemia, consider volume resuscitation, evaluation of the underlying cause, and treatment based on severity"
       ],
-      "answers": [3],
+      "answers": [
+        3
+      ],
       "selectCount": 1,
       "explanation": "Symptomatic hyponatremia, especially with seizures, coma, or severe altered mental status, warrants initial correction with 3% hypertonic saline. For severe symptoms, an initial target rise of approximately 4 to 6 mEq/L is used to achieve symptom relief. However, to prevent osmotic demyelination from overcorrection, the general limit is approximately 8 mEq/L over 24 hours; more cautious correction is required in high-risk patients (alcohol use disorder, malnutrition, liver disease, or markedly low sodium). Hypocalcemia with seizures, tetany, or QT prolongation warrants calcium correction."
     }

@@ -20,7 +20,7 @@
     "level": "basic",
     "name": "Vertigo / Stroke",
     "description": "Central vertigo, stroke initial management, HINTS",
-    "file": "questions/en/basic/vertigo_stroke.json",
+    "file": "questions/en/basic/vertigo_stroke_basic.json",
     "accent": "#0f766e"
   },
   {
@@ -28,7 +28,7 @@
     "level": "basic",
     "name": "Orthopedic Trauma",
     "description": "Open fractures, compartment syndrome, neurovascular assessment",
-    "file": "questions/en/basic/orthopedic_trauma.json",
+    "file": "questions/en/basic/orthopedic_trauma_basic.json",
     "accent": "#b45309"
   },
   {
@@ -36,7 +36,7 @@
     "level": "basic",
     "name": "Infectious Diseases",
     "description": "Antibiotic stewardship, meningitis, UTI, necrotizing fasciitis",
-    "file": "questions/en/basic/infection.json",
+    "file": "questions/en/basic/infection_basic.json",
     "accent": "#15803d"
   },
   {
@@ -44,7 +44,7 @@
     "level": "basic",
     "name": "GI Symptoms",
     "description": "Abdominal pain, GI bleeding, biliary infection, pancreatitis",
-    "file": "questions/en/basic/gi_symptoms.json",
+    "file": "questions/en/basic/gi_symptoms_basic.json",
     "accent": "#be123c"
   },
   {
@@ -52,7 +52,7 @@
     "level": "basic",
     "name": "Emergency Medications",
     "description": "Epinephrine, benzodiazepines, antidotes, electrolyte correction",
-    "file": "questions/en/basic/emergency_medications.json",
+    "file": "questions/en/basic/emergency_medications_basic.json",
     "accent": "#7c2d12"
   },
   {
@@ -60,7 +60,7 @@
     "level": "basic",
     "name": "Sepsis",
     "description": "Initial recognition, antibiotics, circulatory management, source control",
-    "file": "questions/en/basic/sepsis.json",
+    "file": "questions/en/basic/sepsis_basic.json",
     "accent": "#087f8c"
   },
   {
@@ -68,7 +68,7 @@
     "level": "basic",
     "name": "Major Trauma",
     "description": "Primary survey, hemorrhage control, thoracoabdominal trauma, resuscitation",
-    "file": "questions/en/basic/trauma.json",
+    "file": "questions/en/basic/trauma_basic.json",
     "accent": "#b45309"
   },
   {
@@ -76,7 +76,7 @@
     "level": "basic",
     "name": "Endocrine Emergencies",
     "description": "DKA/HHS, adrenal crisis, thyroid storm, electrolytes",
-    "file": "questions/en/basic/endocrine.json",
+    "file": "questions/en/basic/endocrine_basic.json",
     "accent": "#6d5bd0"
   },
   {
@@ -84,7 +84,7 @@
     "level": "basic",
     "name": "CPR",
     "description": "High-quality CPR, defibrillation, medications, reversible causes",
-    "file": "questions/en/basic/cpr.json",
+    "file": "questions/en/basic/cpr_basic.json",
     "accent": "#c2413b"
   },
   {
@@ -92,7 +92,7 @@
     "level": "basic",
     "name": "Pediatric Emergencies",
     "description": "Pediatric emergency medicine, medications, resuscitation",
-    "file": "questions/en/basic/pediatric.json",
+    "file": "questions/en/basic/pediatric_basic.json",
     "accent": "#c2413b"
   },
   {
@@ -100,7 +100,7 @@
     "level": "basic",
     "name": "Cardiology Emergencies",
     "description": "Cardiovascular emergency management",
-    "file": "questions/en/basic/cardiology.json",
+    "file": "questions/en/basic/cardiology_basic.json",
     "accent": "#c2413b"
   },
   {
@@ -166,5 +166,45 @@
     "description": "ECPR, PCAS, TTM, neurological prognostication, continuous EEG",
     "file": "questions/en/master/cpr_master.json",
     "accent": "#c2413b"
+  },
+  {
+    "id": "toxicology_basic",
+    "level": "basic",
+    "name": "Toxicology",
+    "description": "Overdose initial management, antidotes, common toxic agents",
+    "file": "questions/en/basic/toxicology_basic.json",
+    "accent": "#5f2d91"
+  },
+  {
+    "id": "general_em_basic",
+    "level": "basic",
+    "name": "General Emergency Medicine",
+    "description": "BLS, primary survey, triage, core ER approach",
+    "file": "questions/en/basic/general_em_basic.json",
+    "accent": "#1d4ed8"
+  },
+  {
+    "id": "toxicology_advanced",
+    "level": "advanced",
+    "name": "Toxicology",
+    "description": "TCA, calcium channel blocker, organophosphate advanced management",
+    "file": "questions/en/advanced/toxicology_advanced.json",
+    "accent": "#5f2d91"
+  },
+  {
+    "id": "general_em_advanced",
+    "level": "advanced",
+    "name": "General Emergency Medicine",
+    "description": "RSI, shock management, advanced acute care",
+    "file": "questions/en/advanced/general_em_advanced.json",
+    "accent": "#1d4ed8"
+  },
+  {
+    "id": "general_em_master",
+    "level": "master",
+    "name": "General Emergency Medicine",
+    "description": "Lung-protective ventilation, ECPR, critical resuscitation",
+    "file": "questions/en/master/general_em_master.json",
+    "accent": "#1d4ed8"
   }
 ]

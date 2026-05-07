@@ -11,7 +11,11 @@
         "Ataxic gait",
         "Pupillary asymmetry"
       ],
-      "answers": [0, 1, 2],
+      "answers": [
+        0,
+        1,
+        2
+      ],
       "selectCount": 3,
       "explanation": "The CPSS consists of 3 items: facial droop, arm drift, and dysarthria. If any one of these is abnormal, stroke should be suspected. Ataxic gait and pupillary asymmetry are not included in the CPSS."
     },
@@ -25,8 +29,14 @@
         "Rotational vertigo provoked for only a few seconds by a clear head position change",
         "New-onset hemiplegia or sensory disturbance"
       ],
-      "answers": [0, 1, 2, 4],
-      "explanation": "Vertical or direction-changing nystagmus, brainstem/cerebellar signs, severe truncal ataxia, and hemiplegia suggest central vertigo. Typical BPPV findings alone are more consistent with a peripheral etiology."
+      "answers": [
+        0,
+        1,
+        2,
+        4
+      ],
+      "explanation": "Vertical or direction-changing nystagmus, brainstem/cerebellar signs, severe truncal ataxia, and hemiplegia suggest central vertigo. Typical BPPV findings alone are more consistent with a peripheral etiology.",
+      "selectCount": 0
     },
     {
       "id": "vertigo_stroke_basic_003",
@@ -38,8 +48,12 @@
         "Pupillary asymmetry",
         "Vertical direction nystagmus"
       ],
-      "answers": [0, 1, 2],
-      "selectCount": 3,
+      "answers": [
+        0,
+        1,
+        2
+      ],
+      "selectCount": 0,
       "explanation": "Ischemic stroke due to large vessel occlusion may be eligible for mechanical thrombectomy, so prehospital screening is critical. The ELVO screen checks for conjugate gaze deviation, aphasia, and hemispatial neglect early on."
     },
     {
@@ -52,8 +66,14 @@
         "High stroke risk factors such as hypertension, diabetes, or atrial fibrillation",
         "Brief positional vertigo with no neurological symptoms that has completely resolved"
       ],
-      "answers": [0, 1, 2, 3],
-      "explanation": "Severe ataxia, head/neck pain, focal neurological deficits, and high stroke risk require careful management until central pathology is excluded."
+      "answers": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "explanation": "Severe ataxia, head/neck pain, focal neurological deficits, and high stroke risk require careful management until central pathology is excluded.",
+      "selectCount": 0
     },
     {
       "id": "vertigo_stroke_basic_005",
@@ -65,8 +85,14 @@
         "Head imaging and notification of the stroke team",
         "Assessment of deep tendon reflexes in the extremities"
       ],
-      "answers": [0, 1, 2, 3],
-      "explanation": "In suspected stroke, ABC stabilization, ruling out hypoglycemia, confirming onset time, head imaging, and notifying the stroke team should be pursued concurrently."
+      "answers": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "explanation": "In suspected stroke, ABC stabilization, ruling out hypoglycemia, confirming onset time, head imaging, and notifying the stroke team should be pursued concurrently.",
+      "selectCount": 0
     },
     {
       "id": "vertigo_stroke_basic_006",
@@ -78,9 +104,11 @@
         "Vestibular neuritis is classified as s-EVS.",
         "BPPV is classified as t-EVS."
       ],
-      "answer": 3,
       "selectCount": 1,
-      "explanation": "AVS is correctly described as acute-onset continuous vertigo lasting >24 hours with nystagmus; s-EVS as unprovoked episodic vertigo lasting minutes to hours; and t-EVS as brief position-triggered vertigo. However, vestibular neuritis presents as sustained acute vertigo and is classified as AVS, not s-EVS — making that statement incorrect."
+      "explanation": "AVS is correctly described as acute-onset continuous vertigo lasting >24 hours with nystagmus; s-EVS as unprovoked episodic vertigo lasting minutes to hours; and t-EVS as brief position-triggered vertigo. However, vestibular neuritis presents as sustained acute vertigo and is classified as AVS, not s-EVS — making that statement incorrect.",
+      "answers": [
+        3
+      ]
     },
     {
       "id": "vertigo_stroke_basic_007",
@@ -92,9 +120,11 @@
         "The Test of Skew assesses horizontal misalignment of the eyes by alternately covering and uncovering one eye.",
         "When BPPV is suspected, HINTS should be used first for risk stratification."
       ],
-      "answer": 1,
       "selectCount": 1,
-      "explanation": "HINTS (Head Impulse Test, Nystagmus, Test of Skew) is used primarily to differentiate central from peripheral causes in acute continuous vertigo (AVS) with nystagmus. A positive HIT typically suggests peripheral vestibular disorder, while a normal or negative HIT suggests central etiology. The Test of Skew evaluates primarily vertical ocular misalignment. For triggered episodic vertigo such as BPPV, the Dix-Hallpike test or supine head roll test — not HINTS — should be used."
+      "explanation": "HINTS (Head Impulse Test, Nystagmus, Test of Skew) is used primarily to differentiate central from peripheral causes in acute continuous vertigo (AVS) with nystagmus. A positive HIT typically suggests peripheral vestibular disorder, while a normal or negative HIT suggests central etiology. The Test of Skew evaluates primarily vertical ocular misalignment. For triggered episodic vertigo such as BPPV, the Dix-Hallpike test or supine head roll test — not HINTS — should be used.",
+      "answers": [
+        1
+      ]
     },
     {
       "id": "vertigo_stroke_basic_008",
@@ -106,9 +136,11 @@
         "Posterior canal BPPV (PC-BPPV), affected side is the left.",
         "Posterior canal BPPV (PC-BPPV), affected side is the right."
       ],
-      "answer": 0,
       "selectCount": 1,
-      "explanation": "Direction-changing geotropic nystagmus indicates canalolithiasis of the horizontal semicircular canal. The side with stronger nystagmus is the affected side, so the right side is affected. Choice 1 is correct."
+      "explanation": "Direction-changing geotropic nystagmus indicates canalolithiasis of the horizontal semicircular canal. The side with stronger nystagmus is the affected side, so the right side is affected. Choice 1 is correct.",
+      "answers": [
+        0
+      ]
     },
     {
       "id": "vertigo_stroke_basic_009",
@@ -120,9 +152,11 @@
         "Posterior canal BPPV (PC-BPPV), affected side is the left.",
         "Posterior canal BPPV (PC-BPPV), affected side is the right."
       ],
-      "answer": 1,
       "selectCount": 1,
-      "explanation": "Direction-changing apogeotropic nystagmus typically indicates cupulolithiasis of the horizontal semicircular canal. The side with weaker nystagmus is the affected side, so when findings are stronger on the right, the left side is affected. Choice 2 is correct."
+      "explanation": "Direction-changing apogeotropic nystagmus typically indicates cupulolithiasis of the horizontal semicircular canal. The side with weaker nystagmus is the affected side, so when findings are stronger on the right, the left side is affected. Choice 2 is correct.",
+      "answers": [
+        1
+      ]
     },
     {
       "id": "vertigo_stroke_basic_010",
@@ -134,9 +168,11 @@
         "Posterior canal BPPV (PC-BPPV), affected side is the left.",
         "Posterior canal BPPV (PC-BPPV), affected side is the right."
       ],
-      "answer": 4,
       "selectCount": 1,
-      "explanation": "Upbeat nystagmus with a rotational component toward the affected side on Dix-Hallpike testing suggests posterior canal BPPV. Upbeat nystagmus with a rightward rotational component in the right head-hanging position indicates right posterior canal BPPV, making choice 5 correct."
+      "explanation": "Upbeat nystagmus with a rotational component toward the affected side on Dix-Hallpike testing suggests posterior canal BPPV. Upbeat nystagmus with a rightward rotational component in the right head-hanging position indicates right posterior canal BPPV, making choice 5 correct.",
+      "answers": [
+        4
+      ]
     },
     {
       "id": "vertigo_stroke_basic_011",
@@ -148,9 +184,11 @@
         "Diplopia, numbness around the mouth or hands",
         "Head CT is the first-line imaging study"
       ],
-      "answer": 4,
       "selectCount": 1,
-      "explanation": "When central vertigo is suspected, MRI is the first-line imaging study. CT has low sensitivity for detecting posterior fossa infarction in the acute phase and is insufficient. The other choices represent situations where central pathology is suspected and imaging is warranted, making choice 5 the incorrect statement."
+      "explanation": "When central vertigo is suspected, MRI is the first-line imaging study. CT has low sensitivity for detecting posterior fossa infarction in the acute phase and is insufficient. The other choices represent situations where central pathology is suspected and imaging is warranted, making choice 5 the incorrect statement.",
+      "answers": [
+        4
+      ]
     },
     {
       "id": "abcd2_lancet_002",
@@ -162,9 +200,13 @@
         "Presence of atrial fibrillation",
         "Acute infarction on DWI"
       ],
-      "answer": [0, 1, 2],
       "selectCount": 3,
-      "explanation": "The ABCD² score consists of Age, Blood pressure, Clinical features, Duration, and Diabetes. Age ≥60, BP ≥140/90 at presentation, and history of diabetes are all scored. Atrial fibrillation and DWI acute infarction are clinically important but are not components of the ABCD² score."
+      "explanation": "The ABCD² score consists of Age, Blood pressure, Clinical features, Duration, and Diabetes. Age ≥60, BP ≥140/90 at presentation, and history of diabetes are all scored. Atrial fibrillation and DWI acute infarction are clinically important but are not components of the ABCD² score.",
+      "answers": [
+        0,
+        1,
+        2
+      ]
     },
     {
       "id": "abcd2_lancet_003",
@@ -176,8 +218,14 @@
         "Duration of symptoms ≥60 minutes: 2 points",
         "History of diabetes: 2 points"
       ],
-      "answer": [0, 1, 2, 3],
-      "explanation": "ABCD² score: age ≥60 = 1 pt, BP ≥140/90 = 1 pt, unilateral weakness = 2 pts, speech disturbance without weakness = 1 pt, duration 10–59 min = 1 pt, ≥60 min = 2 pts, diabetes = 1 pt. Diabetes is 1 point, not 2 points."
+      "explanation": "ABCD² score: age ≥60 = 1 pt, BP ≥140/90 = 1 pt, unilateral weakness = 2 pts, speech disturbance without weakness = 1 pt, duration 10–59 min = 1 pt, ≥60 min = 2 pts, diabetes = 1 pt. Diabetes is 1 point, not 2 points.",
+      "answers": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "selectCount": 0
     },
     {
       "id": "abcd2_lancet_004",
@@ -189,8 +237,11 @@
         "6–7 points: high risk, 2-day stroke risk approximately 4.1%",
         "6–7 points: high risk, 2-day stroke risk approximately 20%"
       ],
-      "answer": 0,
-      "explanation": "According to Johnston et al., ABCD² score 0–3 = low risk with ~1.0% 2-day stroke risk; 4–5 = moderate risk with ~4.1%; and 6–7 = high risk with ~8.1%."
+      "explanation": "According to Johnston et al., ABCD² score 0–3 = low risk with ~1.0% 2-day stroke risk; 4–5 = moderate risk with ~4.1%; and 6–7 = high risk with ~8.1%.",
+      "answers": [
+        0
+      ],
+      "selectCount": 1
     },
     {
       "id": "abcd2_lancet_005",
@@ -202,9 +253,11 @@
         "6 points, high risk",
         "7 points, high risk"
       ],
-      "answer": 3,
       "selectCount": 1,
-      "explanation": "Age ≥60 = 1 pt; BP ≥140/90 = 1 pt; unilateral weakness = 2 pts; duration ≥60 min = 2 pts; no diabetes = 0 pts. Total = 6 points, classified as high risk."
+      "explanation": "Age ≥60 = 1 pt; BP ≥140/90 = 1 pt; unilateral weakness = 2 pts; duration ≥60 min = 2 pts; no diabetes = 0 pts. Total = 6 points, classified as high risk.",
+      "answers": [
+        3
+      ]
     }
   ]
 }

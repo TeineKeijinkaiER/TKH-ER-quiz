@@ -11,8 +11,11 @@
         "少しでも相談した上級医はカルテに併診医師として記載する",
         "チーム医療においては、診察、問診、手技など分業で行うことはあるが、情報がバラバラにならないようにすべての情報は統合し全員が共有するように努める"
       ],
-      "answer": 4,
-      "explanation": "不安を抱える家族とのコミュニケーションは非常に重要であり、診療中も可能な限り現状を共有する。説明は診察室など落ち着いた環境で行い、検査結果を供覧しながら質問しやすいように心がける。カルテに「併診、コンサルト医師」として記載するのは、その症例の判断に責任のある上級医のみとする。"
+      "explanation": "不安を抱える家族とのコミュニケーションは非常に重要であり、診療中も可能な限り現状を共有する。説明は診察室など落ち着いた環境で行い、検査結果を供覧しながら質問しやすいように心がける。カルテに「併診、コンサルト医師」として記載するのは、その症例の判断に責任のある上級医のみとする。",
+      "answers": [
+        4
+      ],
+      "selectCount": 1
     },
     {
       "id": "ed_first_steps_002",
@@ -24,8 +27,14 @@
         "出血患者や血管穿刺にエコーを用いる場合はプローブカバーやラップで血液汚染を予防する",
         "超音波の減衰を防ぐためにゼリーは冷却しておく"
       ],
-      "answers": [0, 1, 2, 3],
-      "explanation": "緊急性の高い現場でも、患者への配慮、プライバシー、感染対策を意識し、適切なマナーで検査を行うことが重要である。"
+      "answers": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "explanation": "緊急性の高い現場でも、患者への配慮、プライバシー、感染対策を意識し、適切なマナーで検査を行うことが重要である。",
+      "selectCount": 0
     },
     {
       "id": "ed_first_steps_003",
@@ -37,8 +46,11 @@
         "ベネトリン 0.5mL＋生理食塩水 1mL 吸入",
         "ボスミン 0.5mL＋生理食塩水 1mL 吸入"
       ],
-      "answer": 3,
-      "explanation": "喘息小発作では、まず短時間作用性β2刺激薬であるベネトリン（サルブタモール）の吸入治療を行う。全身性ステロイド投与は通常、中発作以上や増悪リスクが高い場合に考慮する。"
+      "explanation": "喘息小発作では、まず短時間作用性β2刺激薬であるベネトリン（サルブタモール）の吸入治療を行う。全身性ステロイド投与は通常、中発作以上や増悪リスクが高い場合に考慮する。",
+      "answers": [
+        3
+      ],
+      "selectCount": 1
     },
     {
       "id": "ed_first_steps_004",
@@ -50,13 +62,20 @@
         "ノルアドレナリン 3A＋生食47mLを3mL/hで投与開始",
         "ノルアドレナリン 5A＋生食45mLを3mL/hで投与開始"
       ],
-      "answer": 4,
-      "categories": ["ed_first_steps_basic", "sepsis_basic", "emergency_medications_basic"],
-      "explanation": "体重50kgで0.1μg/kg/minは5μg/min、すなわち300μg/h（0.3mg/h）である。ノルアドレナリン5mgを総量50mLに希釈すると0.1mg/mLとなり、3mL/hで0.3mg/hとなる。"
+      "categories": [
+        "ed_first_steps_basic",
+        "sepsis_basic",
+        "emergency_medications_basic"
+      ],
+      "explanation": "体重50kgで0.1μg/kg/minは5μg/min、すなわち300μg/h（0.3mg/h）である。ノルアドレナリン5mgを総量50mLに希釈すると0.1mg/mLとなり、3mL/hで0.3mg/hとなる。",
+      "answers": [
+        4
+      ],
+      "selectCount": 1
     },
     {
       "id": "ed_first_steps_005",
-      "question": "85歳男性が肺炎の診断で入院となった。家族へ検査結果、診断、治療法について説明した。加えて説明しておくべき内容はどれか。",
+      "question": "85歳男性が肺炎の診断で入院となった。家族へ検査結果、診断、治療法について説明した。加えて説明しておくべき内容をすべて選択せよ。",
       "choices": [
         "入院期間の見込みを説明する",
         "病状悪化や命の危険性の可能性について説明する",
@@ -64,9 +83,18 @@
         "挿管（人工呼吸管理）・心肺蘇生の方針について説明・相談する",
         "75歳以上では明らかなせん妄発症前にも予防的身体拘束が必要となることを説明する"
       ],
-      "answer": 4,
-      "categories": ["ed_first_steps_basic", "infection_basic"],
-      "explanation": "高齢者の肺炎では、診断や治療だけでなく、入院期間の見込み、病状悪化の可能性、入院中合併症、人工呼吸管理や心肺蘇生の方針についても説明・相談しておくことが望ましい。身体拘束は「切迫性」「非代替性」、「一時性」の三要件を満たす場合のみ"
+      "answers": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "categories": [
+        "ed_first_steps_basic",
+        "infection_basic"
+      ],
+      "explanation": "高齢者の肺炎では、診断や治療だけでなく、入院期間の見込み、病状悪化の可能性、入院中合併症、人工呼吸管理や心肺蘇生の方針についても説明・相談しておくことが望ましい。身体拘束は「切迫性」「非代替性」、「一時性」の三要件を満たす場合のみ",
+      "selectCount": 0
     },
     {
       "id": "ed_first_steps_006",
@@ -78,9 +106,16 @@
         "麻酔器を使用する場合はリークテストを行っておき、ETCO2モニターが使えるようにセッティングする",
         "スニッフィングポジションをとるために折りたたんだバスタオル2枚を枕として使用する"
       ],
-      "answer": 1,
-      "categories": ["ed_first_steps_basic", "cpr_basic", "trauma_basic"],
-      "explanation": "日本人成人では男性7.5〜8.0mm、女性7.0〜7.5mmが標準的なサイズである。9mmは過大で挿入困難や声帯損傷の原因となるため不適切。"
+      "categories": [
+        "ed_first_steps_basic",
+        "cpr_basic",
+        "trauma_basic"
+      ],
+      "explanation": "日本人成人では男性7.5〜8.0mm、女性7.0〜7.5mmが標準的なサイズである。9mmは過大で挿入困難や声帯損傷の原因となるため不適切。",
+      "answers": [
+        1
+      ],
+      "selectCount": 1
     },
     {
       "id": "ed_first_steps_007",
@@ -92,9 +127,16 @@
         "宗教や本人の死生観",
         "心電図の初期波形"
       ],
-      "answers": [1, 2, 4],
+      "answers": [
+        1,
+        2,
+        4
+      ],
       "selectCount": 3,
-      "categories": ["ed_first_steps_basic", "cpr_basic"],
+      "categories": [
+        "ed_first_steps_basic",
+        "cpr_basic"
+      ],
       "explanation": "目撃の有無、来院までの時間、初期波形（VF/VT/PEA/Asystole）はいずれも予後と治療方針に直結する重要情報であり、ホットラインで初期確認すべき項目である。既往歴や死生観は来院後の確認で対応可能。"
     },
     {
@@ -107,9 +149,15 @@
         "脳保護目的で24時間100%酸素の継続",
         "血圧低下に備えて昇圧剤の準備"
       ],
-      "answer": 3,
-      "categories": ["ed_first_steps_basic", "cpr_basic"],
-      "explanation": "ROSC後の高酸素血症は脳障害を悪化させることが知られており、SpO2 94〜98%を目標にFiO2を速やかに調整する。100%酸素の継続は不適切。"
+      "categories": [
+        "ed_first_steps_basic",
+        "cpr_basic"
+      ],
+      "explanation": "ROSC後の高酸素血症は脳障害を悪化させることが知られており、SpO2 94〜98%を目標にFiO2を速やかに調整する。100%酸素の継続は不適切。",
+      "answers": [
+        3
+      ],
+      "selectCount": 1
     },
     {
       "id": "ed_first_steps_009",
@@ -121,9 +169,15 @@
         "Cの評価としてFASTを行い後腹膜出血の有無を迅速に判断した",
         "Dの評価としてGCSが6点であったので切迫するDと判断した"
       ],
-      "answer": 3,
-      "categories": ["ed_first_steps_basic", "trauma_basic"],
-      "explanation": "FAST（Focused Assessment with Sonography for Trauma）は腹腔内・心嚢・胸腔の遊離液体（出血）の有無を評価する検査であり、後腹膜腔は描出できない。後腹膜出血の評価には造影CTが必要。"
+      "categories": [
+        "ed_first_steps_basic",
+        "trauma_basic"
+      ],
+      "explanation": "FAST（Focused Assessment with Sonography for Trauma）は腹腔内・心嚢・胸腔の遊離液体（出血）の有無を評価する検査であり、後腹膜腔は描出できない。後腹膜出血の評価には造影CTが必要。",
+      "answers": [
+        3
+      ],
+      "selectCount": 1
     },
     {
       "id": "ed_first_steps_010",
@@ -135,9 +189,16 @@
         "18歳女性の溶連菌感染症に対しアモキシシリンカプセルを4C2×で10日間処方した",
         "軽症の急性副鼻腔炎患者に対し、抗生剤を処方せず経過観察とした"
       ],
-      "answer": 0,
-      "categories": ["ed_first_steps_basic", "infection_basic", "emergency_medications_basic"],
-      "explanation": "ST合剤（スルファメトキサゾール・トリメトプリム）は妊婦に禁忌。妊娠初期には葉酸代謝拮抗による催奇形性、後期には核黄疸のリスクがあるため使用不可。妊婦の膀胱炎にはセフェム系（セファレキシン等）が第一選択となる。"
+      "categories": [
+        "ed_first_steps_basic",
+        "infection_basic",
+        "emergency_medications_basic"
+      ],
+      "explanation": "ST合剤（スルファメトキサゾール・トリメトプリム）は妊婦に禁忌。妊娠初期には葉酸代謝拮抗による催奇形性、後期には核黄疸のリスクがあるため使用不可。妊婦の膀胱炎にはセフェム系（セファレキシン等）が第一選択となる。",
+      "answers": [
+        0
+      ],
+      "selectCount": 1
     }
   ]
 }

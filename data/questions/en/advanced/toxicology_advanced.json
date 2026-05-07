@@ -1,0 +1,40 @@
+{
+  "category": "Toxicology",
+  "questions": [
+    {
+      "id": "toxicology_advanced_001",
+      "question": "A patient with tricyclic antidepressant (TCA) overdose has a QRS duration >100 ms. Which treatment is most appropriate?",
+      "choices": [
+        "IV sodium bicarbonate, targeting arterial pH 7.45–7.55",
+        "IV calcium chloride to counteract sodium channel blockade",
+        "Flumazenil to antagonize GABA receptors",
+        "Amiodarone to suppress arrhythmia",
+        "Beta-blockers to control tachycardia"
+      ],
+      "selectCount": 1,
+      "explanation": "TCA-induced QRS widening results from sodium channel blockade. IV sodium bicarbonate is first-line: alkalization (pH 7.45–7.55) combined with a high sodium load reverses channel blockade, improving arrhythmia and hypotension. Flumazenil is contraindicated (may precipitate seizures). Amiodarone and beta-blockers risk worsening QT prolongation or cardiac depression. For QRS >160 ms or refractory arrhythmia, consider lipid emulsion or ECMO.",
+      "answers": [
+        0
+      ]
+    },
+    {
+      "id": "toxicology_advanced_002",
+      "question": "Select all treatments that are appropriate for massive calcium channel blocker (CCB) overdose.",
+      "choices": [
+        "IV calcium chloride or calcium gluconate",
+        "High-dose insulin euglycemic therapy (HIET: insulin 1 unit/kg bolus followed by infusion)",
+        "Vasopressors (e.g., norepinephrine) to maintain blood pressure and heart rate",
+        "ECMO for refractory cardiogenic shock",
+        "Physostigmine to inhibit acetylcholinesterase"
+      ],
+      "answers": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "selectCount": 0,
+      "explanation": "CCB overdose is managed with calcium (improves myocardial contractility), high-dose insulin euglycemic therapy (promotes myocardial glucose utilization and provides positive inotropy), vasopressors, lipid emulsion (for lipophilic CCBs), and ECMO for refractory cases. Physostigmine is used for anticholinergic toxicity and is ineffective and potentially harmful in CCB overdose."
+    }
+  ]
+}

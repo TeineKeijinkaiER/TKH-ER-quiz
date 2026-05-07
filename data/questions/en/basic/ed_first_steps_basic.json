@@ -11,8 +11,11 @@
         "Any senior physician consulted should be documented in the chart as a co-attending physician",
         "In team-based care, tasks such as examination, history-taking, and procedures may be divided, but all information must be integrated and shared by the entire team"
       ],
-      "answer": 4,
-      "explanation": "Communication with anxious family members is extremely important, and updates on the current situation should be shared as much as possible during care. Explanations should be given in a quiet setting such as a consultation room, sharing test results and encouraging questions. Only senior physicians who bear responsibility for clinical decisions in the case should be documented in the chart as co-attending or consulting physicians."
+      "explanation": "Communication with anxious family members is extremely important, and updates on the current situation should be shared as much as possible during care. Explanations should be given in a quiet setting such as a consultation room, sharing test results and encouraging questions. Only senior physicians who bear responsibility for clinical decisions in the case should be documented in the chart as co-attending or consulting physicians.",
+      "answers": [
+        4
+      ],
+      "selectCount": 1
     },
     {
       "id": "ed_first_steps_002",
@@ -24,8 +27,14 @@
         "When using ultrasound for bleeding patients or vascular puncture, use a probe cover or wrap to prevent blood contamination",
         "Keep the gel refrigerated to prevent ultrasound attenuation"
       ],
-      "answers": [0, 1, 2, 3],
-      "explanation": "Even in high-acuity settings, it is essential to show consideration for the patient, respect privacy, and follow appropriate infection control practices during examinations."
+      "answers": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "explanation": "Even in high-acuity settings, it is essential to show consideration for the patient, respect privacy, and follow appropriate infection control practices during examinations.",
+      "selectCount": 0
     },
     {
       "id": "ed_first_steps_003",
@@ -37,8 +46,11 @@
         "Ventolin 0.5 mL + normal saline 1 mL nebulization",
         "Bosmin 0.5 mL + normal saline 1 mL nebulization"
       ],
-      "answer": 3,
-      "explanation": "For a mild asthma exacerbation, the first treatment is inhaled short-acting beta-2 agonist therapy with salbutamol (Ventolin). Systemic corticosteroids are generally considered for moderate or more severe exacerbations or high-risk patients."
+      "explanation": "For a mild asthma exacerbation, the first treatment is inhaled short-acting beta-2 agonist therapy with salbutamol (Ventolin). Systemic corticosteroids are generally considered for moderate or more severe exacerbations or high-risk patients.",
+      "answers": [
+        3
+      ],
+      "selectCount": 1
     },
     {
       "id": "ed_first_steps_004",
@@ -50,13 +62,20 @@
         "Norepinephrine 3 amps + normal saline 47 mL, start at 3 mL/h",
         "Norepinephrine 5 amps + normal saline 45 mL, start at 3 mL/h"
       ],
-      "answer": 4,
-      "categories": ["ed_first_steps_basic", "sepsis_basic", "emergency_medications_basic"],
-      "explanation": "At 50 kg and 0.1 μg/kg/min, the dose is 5 μg/min, or 300 μg/h (0.3 mg/h). Diluting 5 mg norepinephrine to a total volume of 50 mL gives 0.1 mg/mL; at 3 mL/h, the infusion rate is 0.3 mg/h."
+      "categories": [
+        "ed_first_steps_basic",
+        "sepsis_basic",
+        "emergency_medications_basic"
+      ],
+      "explanation": "At 50 kg and 0.1 μg/kg/min, the dose is 5 μg/min, or 300 μg/h (0.3 mg/h). Diluting 5 mg norepinephrine to a total volume of 50 mL gives 0.1 mg/mL; at 3 mL/h, the infusion rate is 0.3 mg/h.",
+      "answers": [
+        4
+      ],
+      "selectCount": 1
     },
     {
       "id": "ed_first_steps_005",
-      "question": "An 85-year-old man is admitted with a diagnosis of pneumonia. Test results, the diagnosis, and treatment have been explained to the family. What additional information should be discussed?",
+      "question": "An 85-year-old man is admitted with a diagnosis of pneumonia. Test results, the diagnosis, and treatment have been explained to the family. Select all additional topics that should be discussed.",
       "choices": [
         "Expected length of hospital stay",
         "Possibility of clinical deterioration and risk of death",
@@ -64,9 +83,18 @@
         "Discussion of preferences and goals of care regarding intubation (mechanical ventilation) and CPR",
         "Explain that prophylactic physical restraint is required in patients over 75 years old before obvious delirium develops"
       ],
-      "answer": 4,
-      "categories": ["ed_first_steps_basic", "infection_basic"],
-      "explanation": "In elderly patients with pneumonia, it is advisable to discuss and document, in addition to diagnosis and treatment, the expected hospital stay, possibility of deterioration, potential in-hospital complications, and goals of care regarding mechanical ventilation and CPR. Physical restraint is only permitted when the three criteria of imminent risk, lack of alternative, and temporary necessity are all met."
+      "categories": [
+        "ed_first_steps_basic",
+        "infection_basic"
+      ],
+      "explanation": "In elderly patients with pneumonia, it is advisable to discuss and document, in addition to diagnosis and treatment, the expected hospital stay, possibility of deterioration, potential in-hospital complications, and goals of care regarding mechanical ventilation and CPR. Physical restraint is only permitted when the three criteria of imminent risk, lack of alternative, and temporary necessity are all met.",
+      "answers": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "selectCount": 0
     },
     {
       "id": "ed_first_steps_006",
@@ -78,9 +106,16 @@
         "If using an anesthesia machine, perform a leak test beforehand and set up the ETCO₂ monitor",
         "Use two folded bath towels as a pillow to achieve the sniffing position"
       ],
-      "answer": 1,
-      "categories": ["ed_first_steps_basic", "cpr_basic", "trauma_basic"],
-      "explanation": "For Japanese adults, 7.5–8.0 mm is the standard size for males and 7.0–7.5 mm for females. A 9 mm tube is oversized, making insertion difficult and risking vocal cord injury, and is therefore inappropriate."
+      "categories": [
+        "ed_first_steps_basic",
+        "cpr_basic",
+        "trauma_basic"
+      ],
+      "explanation": "For Japanese adults, 7.5–8.0 mm is the standard size for males and 7.0–7.5 mm for females. A 9 mm tube is oversized, making insertion difficult and risking vocal cord injury, and is therefore inappropriate.",
+      "answers": [
+        1
+      ],
+      "selectCount": 1
     },
     {
       "id": "ed_first_steps_007",
@@ -92,9 +127,16 @@
         "Religious beliefs or the patient's views on death",
         "Initial cardiac rhythm on ECG"
       ],
-      "answers": [1, 2, 4],
+      "answers": [
+        1,
+        2,
+        4
+      ],
       "selectCount": 3,
-      "categories": ["ed_first_steps_basic", "cpr_basic"],
+      "categories": [
+        "ed_first_steps_basic",
+        "cpr_basic"
+      ],
       "explanation": "Whether the arrest was witnessed, estimated arrival time, and initial rhythm (VF/VT/PEA/asystole) are all critical information directly linked to prognosis and treatment decisions, and should be confirmed during the initial hotline call. Past medical history and views on death can be addressed after arrival."
     },
     {
@@ -107,9 +149,15 @@
         "Continue 100% oxygen for 24 hours for cerebral protection",
         "Prepare vasopressors in anticipation of hypotension"
       ],
-      "answer": 3,
-      "categories": ["ed_first_steps_basic", "cpr_basic"],
-      "explanation": "Hyperoxia after ROSC is known to worsen brain injury; FiO₂ should be adjusted promptly to target SpO₂ 94–98%. Continuing 100% oxygen is inappropriate."
+      "categories": [
+        "ed_first_steps_basic",
+        "cpr_basic"
+      ],
+      "explanation": "Hyperoxia after ROSC is known to worsen brain injury; FiO₂ should be adjusted promptly to target SpO₂ 94–98%. Continuing 100% oxygen is inappropriate.",
+      "answers": [
+        3
+      ],
+      "selectCount": 1
     },
     {
       "id": "ed_first_steps_009",
@@ -121,9 +169,15 @@
         "As part of C assessment, performed FAST to rapidly determine the presence of retroperitoneal hemorrhage",
         "As part of D assessment, GCS of 6 was present, so judged as impending D"
       ],
-      "answer": 3,
-      "categories": ["ed_first_steps_basic", "trauma_basic"],
-      "explanation": "FAST (Focused Assessment with Sonography for Trauma) evaluates for free fluid (hemorrhage) in the peritoneal cavity, pericardium, and pleural space, but cannot image the retroperitoneal space. Contrast CT is required to evaluate retroperitoneal hemorrhage."
+      "categories": [
+        "ed_first_steps_basic",
+        "trauma_basic"
+      ],
+      "explanation": "FAST (Focused Assessment with Sonography for Trauma) evaluates for free fluid (hemorrhage) in the peritoneal cavity, pericardium, and pleural space, but cannot image the retroperitoneal space. Contrast CT is required to evaluate retroperitoneal hemorrhage.",
+      "answers": [
+        3
+      ],
+      "selectCount": 1
     },
     {
       "id": "ed_first_steps_010",
@@ -135,9 +189,16 @@
         "Prescribed amoxicillin capsules 4 capsules twice daily for 10 days for an 18-year-old female with streptococcal infection",
         "Did not prescribe antibiotics and observed an outpatient with mild acute sinusitis"
       ],
-      "answer": 0,
-      "categories": ["ed_first_steps_basic", "infection_basic", "emergency_medications_basic"],
-      "explanation": "ST compound (sulfamethoxazole-trimethoprim) is contraindicated in pregnancy. It carries risk of teratogenicity from folate antagonism in the first trimester and risk of kernicterus in the third trimester. A cephalosporin (e.g., cephalexin) is the first-line choice for cystitis in pregnant patients."
+      "categories": [
+        "ed_first_steps_basic",
+        "infection_basic",
+        "emergency_medications_basic"
+      ],
+      "explanation": "ST compound (sulfamethoxazole-trimethoprim) is contraindicated in pregnancy. It carries risk of teratogenicity from folate antagonism in the first trimester and risk of kernicterus in the third trimester. A cephalosporin (e.g., cephalexin) is the first-line choice for cystitis in pregnant patients.",
+      "answers": [
+        0
+      ],
+      "selectCount": 1
     }
   ]
 }

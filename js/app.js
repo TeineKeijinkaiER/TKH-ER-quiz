@@ -598,9 +598,7 @@ function prepareQuestion(question) {
 }
 
 function getQuestionAnswerIndexes(question) {
-  if (Array.isArray(question.answers)) return normalizeIndexList(question.answers);
-  if (Array.isArray(question.answer)) return normalizeIndexList(question.answer);
-  return normalizeIndexList([question.answer]);
+  return normalizeIndexList(question.answers);
 }
 
 function renderCurrentQuestion() {

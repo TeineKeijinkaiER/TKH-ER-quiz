@@ -11,7 +11,9 @@
         "In VF/pVT, administer epinephrine 1 mg before the first shock",
         "Do not interrupt chest compressions for prolonged periods to administer medications"
       ],
-      "answers": [3],
+      "answers": [
+        3
+      ],
       "selectCount": 1,
       "explanation": "In adult cardiac arrest, epinephrine 1 mg is administered every 3 to 5 minutes. In non-shockable rhythms such as PEA/asystole, early administration is considered. In VF/pVT, defibrillation and high-quality CPR take priority as the initial response; the first defibrillation should not be delayed for epinephrine administration. Drug administration should be performed with minimal interruption of chest compressions."
     },
@@ -25,8 +27,14 @@
         "Search for reversible causes including hypoxia, hypovolemia, hyperkalemia, tension pneumothorax, cardiac tamponade, and pulmonary embolism",
         "After defibrillation, check pulse and rhythm for 2 minutes to confirm ROSC"
       ],
-      "answers": [0, 1, 2, 3],
-      "explanation": "After defibrillation in VF/pVT, immediately resume chest compressions and assess rhythm approximately every 2 minutes. For defibrillation-refractory VF/pVT, evaluate CPR quality, pad position, pad contact, defibrillation energy, antiarrhythmic drugs, and reversible causes. Prolonged pulse checks after defibrillation increase chest compression interruptions and are inappropriate."
+      "answers": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "explanation": "After defibrillation in VF/pVT, immediately resume chest compressions and assess rhythm approximately every 2 minutes. For defibrillation-refractory VF/pVT, evaluate CPR quality, pad position, pad contact, defibrillation energy, antiarrhythmic drugs, and reversible causes. Prolonged pulse checks after defibrillation increase chest compression interruptions and are inappropriate.",
+      "selectCount": 0
     },
     {
       "id": "cpr_advanced_003",
@@ -38,7 +46,9 @@
         "When hypovolemia is suspected, perform hemorrhage control and fluid/blood transfusion in parallel",
         "In cardiac arrest from hypothermia, defibrillation is absolutely contraindicated and must not be performed until rewarming is complete"
       ],
-      "answers": [4],
+      "answers": [
+        4
+      ],
       "selectCount": 1,
       "explanation": "Reversible causes — the Hs and Ts — include hypoxia, hypovolemia, hypo/hyperkalemia and other metabolic disorders, hypothermia, tension pneumothorax, cardiac tamponade, toxins, pulmonary thromboembolism, and coronary thrombosis. In hypothermic cardiac arrest, rewarming is essential, but defibrillation is not absolutely contraindicated. In severe hypothermia, defibrillation and drug response may be diminished; adjust the number of defibrillation attempts and drug administration intervals per protocol while rewarming proceeds."
     },
@@ -52,8 +62,14 @@
         "A sudden rise in ETCO2 may indicate ROSC",
         "After intubation, pause chest compressions with each ventilation to ensure adequate ventilation"
       ],
-      "answers": [0, 1, 2, 3],
-      "explanation": "After advanced airway placement, ventilate without interrupting chest compressions, targeting approximately 10 breaths per minute. Waveform capnography is useful for confirming tube position, assessing CPR quality, and detecting ROSC. Hyperventilation raises intrathoracic pressure and can impair venous return and coronary perfusion. Pausing chest compressions with each ventilation is inappropriate."
+      "answers": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "explanation": "After advanced airway placement, ventilate without interrupting chest compressions, targeting approximately 10 breaths per minute. Waveform capnography is useful for confirming tube position, assessing CPR quality, and detecting ROSC. Hyperventilation raises intrathoracic pressure and can impair venous return and coronary perfusion. Pausing chest compressions with each ventilation is inappropriate.",
+      "selectCount": 0
     },
     {
       "id": "cpr_advanced_005",
@@ -65,7 +81,9 @@
         "If ETCO2 is below 10 mmHg after 20 minutes of CPR, this value alone is sufficient to decide to terminate resuscitation",
         "Waveform capnography is useful for tube position confirmation because esophageal intubation results in non-sustained waveforms"
       ],
-      "answers": [3],
+      "answers": [
+        3
+      ],
       "selectCount": 1,
       "explanation": "ETCO2 is useful for assessing CPR quality, pulmonary blood flow, and detecting ROSC. ETCO2 persistently below 10 mmHg during CPR should prompt reassessment of compression quality and search for reversible causes. However, ETCO2 alone should not be used to decide to terminate resuscitation; the decision requires integration of factors such as witness status, initial rhythm, no-flow/low-flow time, reversible causes, temperature, and response to treatment."
     },
@@ -79,8 +97,14 @@
         "In cardiac arrest, routinely administer calcium salts regardless of cause",
         "Calcium salts may be considered when hyperkalemia, calcium channel blocker toxicity, or hypocalcemia is suspected"
       ],
-      "answers": [0, 1, 2, 4],
-      "explanation": "For defibrillation-refractory VF/pVT, consider amiodarone or lidocaine. The representative dose of amiodarone is 300 mg as an initial bolus with 150 mg as an additional dose. Consider magnesium sulfate for torsades de pointes. Calcium salts are not routinely administered to all cardiac arrest patients; they should be considered when there is a specific indication such as hyperkalemia, calcium channel blocker toxicity, or hypocalcemia."
+      "answers": [
+        0,
+        1,
+        2,
+        4
+      ],
+      "explanation": "For defibrillation-refractory VF/pVT, consider amiodarone or lidocaine. The representative dose of amiodarone is 300 mg as an initial bolus with 150 mg as an additional dose. Consider magnesium sulfate for torsades de pointes. Calcium salts are not routinely administered to all cardiac arrest patients; they should be considered when there is a specific indication such as hyperkalemia, calcium channel blocker toxicity, or hypocalcemia.",
+      "selectCount": 0
     },
     {
       "id": "cpr_advanced_007",
@@ -92,7 +116,9 @@
         "Because defibrillation can restore spontaneous circulation in PEA, perform defibrillation as the first response",
         "Search for and treat reversible causes including hypoxia, hypovolemia, tension pneumothorax, cardiac tamponade, and pulmonary embolism"
       ],
-      "answers": [3],
+      "answers": [
+        3
+      ],
       "selectCount": 1,
       "explanation": "PEA/asystole are non-shockable rhythms; initial management consists of high-quality CPR, early epinephrine administration, and identification and treatment of reversible causes. Defibrillation is used for VF/pVT, not PEA/asystole. During rhythm checks, verify whether the rhythm has converted to VF/pVT."
     },
@@ -106,8 +132,14 @@
         "To minimize risk to the fetus, use lower-than-standard defibrillation energy in maternal cardiac arrest",
         "If ROSC is not achieved approximately 4 minutes after cardiac arrest, coordinate with the obstetric team and aim for delivery by approximately 5 minutes"
       ],
-      "answers": [0, 1, 2, 4],
-      "explanation": "High-quality CPR and defibrillation should not be delayed in pregnant patients. Defibrillation energy is managed the same as in standard adults. At ≥20 weeks of gestation, or when the uterine fundus is at or above the umbilicus, aortocaval compression impairs resuscitation; manual left uterine displacement should be performed. If ROSC is not achieved approximately 4 minutes after cardiac arrest, aim for delivery by approximately 5 minutes through perimortem cesarean delivery (resuscitative hysterotomy). This procedure improves maternal circulation as well as providing the opportunity for fetal survival."
+      "answers": [
+        0,
+        1,
+        2,
+        4
+      ],
+      "explanation": "High-quality CPR and defibrillation should not be delayed in pregnant patients. Defibrillation energy is managed the same as in standard adults. At ≥20 weeks of gestation, or when the uterine fundus is at or above the umbilicus, aortocaval compression impairs resuscitation; manual left uterine displacement should be performed. If ROSC is not achieved approximately 4 minutes after cardiac arrest, aim for delivery by approximately 5 minutes through perimortem cesarean delivery (resuscitative hysterotomy). This procedure improves maternal circulation as well as providing the opportunity for fetal survival.",
+      "selectCount": 0
     },
     {
       "id": "cpr_advanced_009",
@@ -119,7 +151,9 @@
         "If ST-elevation myocardial infarction is suspected, consider coronary reperfusion therapy",
         "Immediately after ROSC, target SpO2 100% for prolonged periods to maximize cerebral oxygenation"
       ],
-      "answers": [4],
+      "answers": [
+        4
+      ],
       "selectCount": 1,
       "explanation": "After ROSC, avoid both hypoxia and hyperoxia; titrate oxygen to target SpO2 approximately 92 to 98%. Circulatory management targets SBP ≥90 mmHg or MAP ≥65 mmHg to prevent hypotension. When altered mental status persists, practice targeted temperature management (TTM) and prevent fever. When cardiac etiology is suspected, particularly with ST elevation, consider coronary reperfusion."
     },
@@ -133,7 +167,9 @@
         "Even if POCUS does not identify the cause, continue high-quality CPR and standard ALS",
         "If needed to evaluate the image adequately, it is acceptable to interrupt chest compressions for approximately 1 minute"
       ],
-      "answers": [4],
+      "answers": [
+        4
+      ],
       "selectCount": 1,
       "explanation": "POCUS can be useful for identifying reversible causes in cardiac arrest, but must not prolong chest compression interruptions. It should be limited to the brief window during rhythm checks; prolonged interruptions for image acquisition are inappropriate. Additionally, POCUS findings alone should not be used to terminate resuscitation; decisions require integration of clinical course, initial rhythm, no-flow/low-flow time, reversible causes, and treatment response."
     }

@@ -11,7 +11,11 @@
         "If fever and leukocytosis are absent, consider sepsis ruled out",
         "If CRP or procalcitonin is low, organ dysfunction assessment can be omitted"
       ],
-      "answers": [0, 1, 2],
+      "answers": [
+        0,
+        1,
+        2
+      ],
       "selectCount": 3,
       "explanation": "Sepsis is evaluated as organ dysfunction associated with infection. The initial workup should simultaneously include estimation of the infection source, assessment of organ dysfunction (consciousness, breathing, circulation, urine output), and laboratory tests such as lactate and renal function. Sepsis must not be excluded solely because fever or leukocytosis is absent, or because CRP or procalcitonin is low."
     },
@@ -25,8 +29,14 @@
         "If blood pressure does not improve, reassess circulating volume and cardiac function and adjust IV fluids and vasopressors accordingly",
         "Vasoconstrictors must never be initiated under any circumstances before central venous access is secured"
       ],
-      "answers": [0, 1, 2, 3],
-      "explanation": "In septic shock, initiate IV fluid resuscitation with crystalloids for hypoperfusion, and consider norepinephrine as the first-line vasopressor when hypotension persists. The initial mean arterial pressure target is approximately 65 mmHg. Fluid volume is not fixed; reassess using blood pressure, lactate, urine output, skin findings, and cardiac ultrasound. Central venous access is preferred, but peripheral administration for a short period may be appropriate in urgent situations when done safely."
+      "answers": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "explanation": "In septic shock, initiate IV fluid resuscitation with crystalloids for hypoperfusion, and consider norepinephrine as the first-line vasopressor when hypotension persists. The initial mean arterial pressure target is approximately 65 mmHg. Fluid volume is not fixed; reassess using blood pressure, lactate, urine output, skin findings, and cardiac ultrasound. Central venous access is preferred, but peripheral administration for a short period may be appropriate in urgent situations when done safely.",
+      "selectCount": 0
     },
     {
       "id": "sepsis_basic_003",
@@ -38,7 +48,11 @@
         "Do not start antibiotics even in septic shock until cultures are fully collected",
         "If the infection source is unclear, observe with narrow-spectrum antibiotics only until culture results are available"
       ],
-      "answers": [0, 1, 2],
+      "answers": [
+        0,
+        1,
+        2
+      ],
       "selectCount": 3,
       "explanation": "Before antibiotics, collect at least two sets of blood cultures and source-appropriate cultures to the extent possible. Antibiotic allergy history, prior resistant organism history, and recent antibiotic use are important for initial antibiotic selection. However, antibiotics must not be unnecessarily delayed for culture collection in septic shock or severe cases."
     },
@@ -52,8 +66,14 @@
         "Persistent positive blood cultures with suspected intravascular catheter infection",
         "Pyelonephritis without ureteral obstruction, with rapid hemodynamic and symptomatic improvement after starting antibiotics"
       ],
-      "answers": [0, 1, 2, 3],
-      "explanation": "Source control should be considered early: drainage for intra-abdominal abscess, relief of urinary obstruction for obstructive pyelonephritis, surgical debridement for necrotizing soft tissue infection, and removal of the suspected infected intravascular catheter. In contrast, pyelonephritis without ureteral obstruction that responds rapidly to antibiotics does not typically require urgent drainage or surgical intervention."
+      "answers": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "explanation": "Source control should be considered early: drainage for intra-abdominal abscess, relief of urinary obstruction for obstructive pyelonephritis, surgical debridement for necrotizing soft tissue infection, and removal of the suspected infected intravascular catheter. In contrast, pyelonephritis without ureteral obstruction that responds rapidly to antibiotics does not typically require urgent drainage or surgical intervention.",
+      "selectCount": 0
     },
     {
       "id": "sepsis_basic_005",
@@ -65,8 +85,14 @@
         "A 10–20% decrease in lactate every 2 hours, combined with assessment of hemodynamics and urine output, can confirm treatment response",
         "Non-sepsis causes of rising lactate during the clinical course include beta-blocker use and mild hypercapnia"
       ],
-      "answers": [0, 1, 2, 3],
-      "explanation": "Lactate is an important indicator of tissue hypoperfusion and severity in sepsis. Septic shock is diagnosed when, in addition to sepsis, a vasopressor is required to maintain a mean arterial pressure ≥65 mmHg despite IV fluids, and lactate exceeds 2 mmol/L (18 mg/dL). Elevated lactate can also result from alcohol, severe seizures, hepatic failure, hyperventilation, and beta-agonists."
+      "answers": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "explanation": "Lactate is an important indicator of tissue hypoperfusion and severity in sepsis. Septic shock is diagnosed when, in addition to sepsis, a vasopressor is required to maintain a mean arterial pressure ≥65 mmHg despite IV fluids, and lactate exceeds 2 mmol/L (18 mg/dL). Elevated lactate can also result from alcohol, severe seizures, hepatic failure, hyperventilation, and beta-agonists.",
+      "selectCount": 0
     }
   ]
 }

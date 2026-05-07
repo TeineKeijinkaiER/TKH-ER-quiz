@@ -11,7 +11,9 @@
         "Determine the breadth of antibiotic coverage primarily based on the degree of fever",
         "Complete full-body CT before starting antibiotics"
       ],
-      "answers": [0],
+      "answers": [
+        0
+      ],
       "selectCount": 1,
       "explanation": "In suspected sepsis, obtain blood cultures and other cultures to the extent possible before antibiotic administration, then proceed with source evaluation and antibiotic therapy in parallel. Source investigation is important, but antibiotics and resuscitation must not be unnecessarily delayed in severe cases."
     },
@@ -25,7 +27,11 @@
         "New-onset back pain with fever and vertebral percussion tenderness",
         "Fever and headache with similar symptoms in a family member"
       ],
-      "answers": [0, 1, 2],
+      "answers": [
+        0,
+        1,
+        2
+      ],
       "selectCount": 3,
       "explanation": "In bacterial meningitis, fever, headache, nuchal rigidity, altered mental status, and new-onset seizures are important findings. Absence of nuchal rigidity alone does not exclude the diagnosis. New-onset back pain with fever and vertebral percussion tenderness should prompt consideration of pyogenic spondylitis, epidural abscess, or pyelonephritis before bacterial meningitis. Fever with headache in the setting of similar symptoms in a family member is more suggestive of a viral illness and is not in itself strongly suggestive of bacterial meningitis. However, meningitis should not be excluded in the differential when altered mental status, seizures, meningeal signs, immunosuppression, or rapid deterioration are present."
     },
@@ -39,8 +45,13 @@
         "Necrotizing soft tissue infection can be excluded if CT shows no gas",
         "Surgical evaluation is generally unnecessary if the LRINEC score is low"
       ],
-      "answers": [0, 1, 2],
-      "explanation": "Important features of necrotizing soft tissue infections include: pain disproportionate to skin findings, rapidly progressing erythema and swelling, bullae, skin necrosis, crepitus, and systemic toxicity. Even with no gas on CT or a low LRINEC score, the diagnosis cannot be excluded; early surgical evaluation is required when clinical suspicion is present."
+      "answers": [
+        0,
+        1,
+        2
+      ],
+      "explanation": "Important features of necrotizing soft tissue infections include: pain disproportionate to skin findings, rapidly progressing erythema and swelling, bullae, skin necrosis, crepitus, and systemic toxicity. Even with no gas on CT or a low LRINEC score, the diagnosis cannot be excluded; early surgical evaluation is required when clinical suspicion is present.",
+      "selectCount": 0
     },
     {
       "id": "infection_basic_004",
@@ -52,7 +63,11 @@
         "If broad-spectrum antibiotics were started initially, continue the same regimen through completion of therapy even if cultures are negative",
         "Use fixed standard doses without adjusting for renal function or renal replacement therapy as a general rule"
       ],
-      "answers": [0, 1, 2],
+      "answers": [
+        0,
+        1,
+        2
+      ],
       "selectCount": 3,
       "explanation": "Initial antibiotic selection should be guided by site of infection, severity, patient background, local/institutional epidemiology, prior resistant organism history, and recent antibiotic use. Once culture results and clinical course are available, reassess whether narrowing or discontinuation is feasible. Dose adjustment based on renal function, body weight, fluid status, and renal replacement therapy is also important."
     },
@@ -66,7 +81,9 @@
         "Dysuria alone without fever or flank pain",
         "Cloudy urine alone with stable vital signs"
       ],
-      "answers": [0],
+      "answers": [
+        0
+      ],
       "selectCount": 1,
       "explanation": "Fever and flank pain combined with findings suggesting urinary obstruction such as hydronephrosis or ureteral calculus indicate obstructive urinary tract infection, which carries a high risk of deterioration. In addition to antibiotics, consider obstruction relief/drainage via ureteral stent or nephrostomy. Positive urine culture or leukocyturia alone may represent asymptomatic bacteriuria or colonization."
     },
@@ -80,7 +97,9 @@
         "VCM + GM + RFP",
         "TMP-SMX monotherapy"
       ],
-      "answers": [0],
+      "answers": [
+        0
+      ],
       "selectCount": 1,
       "explanation": "According to J-SSCG 2024, for community-acquired pneumonia covering Streptococcus pneumoniae, Haemophilus influenzae, Klebsiella, Mycoplasma, and Legionella, CTRX ± AZM is listed as the empiric treatment."
     },
@@ -94,7 +113,11 @@
         "Listeria monocytogenes",
         "Orientia tsutsugamushi"
       ],
-      "answers": [0, 1, 2],
+      "answers": [
+        0,
+        1,
+        2
+      ],
       "selectCount": 3,
       "explanation": "According to J-SSCG 2024, healthcare-associated or ventilator-associated pneumonia is expected to involve Streptococcus pneumoniae, Escherichia coli, Pseudomonas aeruginosa, and Staphylococcus aureus. Listeria is considered in meningitis; rickettsial organisms are considered in septic shock with rash."
     },
@@ -108,7 +131,9 @@
         "MCFG monotherapy",
         "RFP monotherapy"
       ],
-      "answers": [0],
+      "answers": [
+        0
+      ],
       "selectCount": 1,
       "explanation": "According to J-SSCG 2024, for community-acquired urinary tract infection with low ESBL risk targeting mainly Escherichia coli, CTRX is listed as the empiric treatment."
     },
@@ -122,8 +147,14 @@
         "Consider adding MCFG if Candida risk is present",
         "CTRX monotherapy is sufficient"
       ],
-      "answers": [0, 1, 2, 3],
-      "explanation": "According to J-SSCG 2024, for healthcare-associated biliary or intra-abdominal infection, targeting Escherichia coli, anaerobes, Enterobacter, Pseudomonas aeruginosa, Enterococcus, and Candida, TAZ/PIPC, CFPM + MNZ, and MEPM are listed. Adding MCFG is considered when Candida risk is present."
+      "answers": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "explanation": "According to J-SSCG 2024, for healthcare-associated biliary or intra-abdominal infection, targeting Escherichia coli, anaerobes, Enterobacter, Pseudomonas aeruginosa, Enterococcus, and Candida, TAZ/PIPC, CFPM + MNZ, and MEPM are listed. Adding MCFG is considered when Candida risk is present.",
+      "selectCount": 0
     },
     {
       "id": "infection_empiric_005",
@@ -135,7 +166,9 @@
         "ABPC + CTRX",
         "MCFG monotherapy"
       ],
-      "answers": [0],
+      "answers": [
+        0
+      ],
       "selectCount": 1,
       "explanation": "According to J-SSCG 2024, for necrotizing soft tissue infection following saltwater or freshwater exposure, targeting Aeromonas and Vibrio species, CTRX + MINO is listed as the empiric treatment."
     },
@@ -149,7 +182,11 @@
         "MCFG monotherapy is the first-line choice for community-acquired cases",
         "Rickettsial organisms are the primary target in healthcare-associated cases"
       ],
-      "answers": [0, 1, 2],
+      "answers": [
+        0,
+        1,
+        2
+      ],
       "selectCount": 3,
       "explanation": "According to J-SSCG 2024, community-acquired spondylitis targets MSSA, streptococcal species, and rarely Streptococcus pneumoniae or gram-negative rods, with CEZ or CTRX listed. Healthcare-associated spondylitis targets Staphylococcus aureus and gram-negative rods, with CFPM + VCM listed."
     },
@@ -163,8 +200,12 @@
         "VCM + GM ± RFP",
         "MINO monotherapy"
       ],
-      "answers": [0, 1],
-      "explanation": "According to J-SSCG 2024, for native valve infective endocarditis without MRSA risk, targeting MSSA, streptococcal species, and Enterococcus, SBT/ABPC or CTRX + ABPC are listed. CTRX + VCM is considered when MRSA risk is present; VCM + GM ± RFP is considered for prosthetic valve or pacemaker-related endocarditis."
+      "answers": [
+        0,
+        1
+      ],
+      "explanation": "According to J-SSCG 2024, for native valve infective endocarditis without MRSA risk, targeting MSSA, streptococcal species, and Enterococcus, SBT/ABPC or CTRX + ABPC are listed. CTRX + VCM is considered when MRSA risk is present; VCM + GM ± RFP is considered for prosthetic valve or pacemaker-related endocarditis.",
+      "selectCount": 0
     },
     {
       "id": "infection_empiric_008",
@@ -176,8 +217,13 @@
         "Listeria monocytogenes is the primary expected organism",
         "CTRX + MINO is the standard option"
       ],
-      "answers": [0, 1, 2],
-      "explanation": "According to J-SSCG 2024, for intravascular catheter-related bloodstream infection, coagulase-negative staphylococci, Staphylococcus aureus, MRSA, Escherichia coli, Pseudomonas aeruginosa, and Candida are expected, with VCM + CFPM ± MCFG listed."
+      "answers": [
+        0,
+        1,
+        2
+      ],
+      "explanation": "According to J-SSCG 2024, for intravascular catheter-related bloodstream infection, coagulase-negative staphylococci, Staphylococcus aureus, MRSA, Escherichia coli, Pseudomonas aeruginosa, and Candida are expected, with VCM + CFPM ± MCFG listed.",
+      "selectCount": 0
     },
     {
       "id": "infection_empiric_009",
@@ -189,7 +235,11 @@
         "For community-acquired cases in patients 50 years or older, MINO monotherapy is standard",
         "AZM monotherapy is the first-line choice for shunt-related meningitis"
       ],
-      "answers": [0, 1, 2],
+      "answers": [
+        0,
+        1,
+        2
+      ],
       "selectCount": 3,
       "explanation": "According to J-SSCG 2024, community-acquired meningitis in patients under 50 years targets Streptococcus pneumoniae and Neisseria meningitidis, with CTRX + VCM listed. For patients 50 years or older or with cellular immune deficiency, Listeria monocytogenes is also considered and ABPC + CTRX + VCM is listed. For post-neurosurgical or shunt-related meningitis targeting MRSA and Pseudomonas aeruginosa, one of CAZ, CFPM, or MEPM + VCM is listed."
     },
@@ -203,7 +253,9 @@
         "ABPC monotherapy",
         "AZM monotherapy"
       ],
-      "answers": [0],
+      "answers": [
+        0
+      ],
       "selectCount": 1,
       "explanation": "According to J-SSCG 2024, when septic shock with rash raises the possibility of purpura fulminans targeting Neisseria meningitidis and Streptococcus pneumoniae, as well as rickettsial disease in the differential, CTRX + VCM + MINO is listed as the empiric treatment."
     }

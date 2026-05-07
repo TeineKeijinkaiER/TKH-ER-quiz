@@ -34,7 +34,8 @@
         2,
         4
       ],
-      "explanation": "In VF/pulseless VT, defibrillation is the top priority. CPR should be resumed immediately after defibrillation, and epinephrine and antiarrhythmic drugs used as needed. ECPR indications should be considered early."
+      "explanation": "In VF/pulseless VT, defibrillation is the top priority. CPR should be resumed immediately after defibrillation, and epinephrine and antiarrhythmic drugs used as needed. ECPR indications should be considered early.",
+      "selectCount": 0
     },
     {
       "id": "cpr_basic_003",
@@ -120,7 +121,8 @@
         2,
         3
       ],
-      "explanation": "For VF/pulseless VT, resume CPR immediately after the shock and re-evaluate the rhythm approximately every 2 minutes."
+      "explanation": "For VF/pulseless VT, resume CPR immediately after the shock and re-evaluate the rhythm approximately every 2 minutes.",
+      "selectCount": 0
     },
     {
       "id": "cpr_basic_009",
@@ -205,7 +207,8 @@
         2,
         3
       ],
-      "explanation": "After advanced airway placement, continue chest compressions with asynchronous ventilation and avoid hyperventilation."
+      "explanation": "After advanced airway placement, continue chest compressions with asynchronous ventilation and avoid hyperventilation.",
+      "selectCount": 0
     },
     {
       "id": "cpr_basic_014",

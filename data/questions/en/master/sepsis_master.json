@@ -11,8 +11,13 @@
         "Uremic symptoms",
         "SOFA score ≥12 in the absence of renal failure"
       ],
-      "answers": [0, 1, 2, 3],
-      "selectCount": 4,
+      "answers": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "selectCount": 0,
       "explanation": "Patients with sepsis frequently develop acute kidney injury; urgency for renal replacement therapy (RRT) is determined not by renal function values alone, but by the presence of life-threatening complications. Treatment-refractory hyperkalemia causes potentially fatal arrhythmias and warrants urgent RRT when unresponsive to medical management. Severe acidosis impairs vasopressor responsiveness and cardiac function, making RRT appropriate when refractory to correction. When pulmonary edema or volume overload worsens oxygenation and diuretics are ineffective, RRT including ultrafiltration is considered. Uremic encephalopathy, uremic pericarditis, and bleeding tendency (uremic symptoms) are also indications for emergent RRT. A high SOFA score indicates severe illness, but is not in itself an indication for RRT unless there is a disease state that RRT can address."
     },
     {
@@ -25,8 +30,13 @@
         "Serum creatinine",
         "D-dimer"
       ],
-      "answers": [0, 1, 2, 3],
-      "selectCount": 4,
+      "answers": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "selectCount": 0,
       "explanation": "The SOFA score evaluates six organ systems: respiratory, coagulation, hepatic, cardiovascular, central nervous system, and renal. Respiratory function is assessed by PaO2/FiO2 ratio; coagulation by platelet count; hepatic function by serum bilirubin; cardiovascular by mean arterial pressure and vasopressor dose; central nervous system by GCS; and renal function by serum creatinine or urine output. Therefore, GCS, PaO2/FiO2, serum bilirubin, and serum creatinine are all components of the SOFA score. D-dimer is useful for evaluating DIC (disseminated intravascular coagulation), thrombosis, and hyperfibrinolysis but is not a direct component of the SOFA score."
     },
     {
@@ -39,8 +49,10 @@
         "Routine corticosteroid administration is recommended in sepsis regardless of hemodynamic status",
         "Polymyxin B hemoperfusion (PMX-DHP) for endotoxin adsorption is recommended routinely for sepsis"
       ],
-      "answers": [2],
-      "selectCount": 1,
+      "answers": [
+        2
+      ],
+      "selectCount": 0,
       "explanation": "In Sepsis-3, sepsis is defined as life-threatening organ dysfunction caused by a dysregulated host response to infection, with organ dysfunction assessed as an acute increase in the SOFA score of ≥2 points. qSOFA is a simple tool for risk stratification and screening in patients with suspected sepsis; a qSOFA score of ≥2 alone does not constitute the definition of sepsis. The qSOFA criteria are altered mentation, respiratory rate ≥22/min, and systolic BP ≤100 mmHg; heart rate ≥120/min is not included. For assessing tissue hypoperfusion, lactate and CRT are useful; lactate clearance (e.g., approximately 10–20% over 2 hours) and improvement in CRT to ≤3 seconds are used as targets for resuscitation response. Corticosteroids are not routinely administered in all sepsis patients; they are considered in septic shock that remains hemodynamically unstable despite adequate fluid resuscitation and vasopressors. PMX-DHP has clinical experience in Japan but lacks consistent evidence of mortality benefit and is not routinely recommended for sepsis."
     },
     {
@@ -53,8 +65,13 @@
         "In sepsis with thrombocytopenia but normal coagulation function, check for hemolytic findings",
         "Consider adding vasopressin when norepinephrine alone fails to maintain blood pressure"
       ],
-      "answers": [0, 2, 3, 4],
-      "selectCount": 4,
+      "answers": [
+        0,
+        2,
+        3,
+        4
+      ],
+      "selectCount": 0,
       "explanation": "In streptococcal toxic shock syndrome (invasive group A streptococcal disease), the priorities are antibiotics, surgical source control, and circulatory management; IVIG may be considered as adjunctive therapy, though it is not mandatory in all cases and is determined by severity and institutional policy. Actively targeting normothermia with antipyretic therapy in all febrile sepsis patients is not recommended; fever is partly an immune response, and antipyretics are individually decided based on symptom relief, reducing oxygen consumption, and situations where hyperthermia is harmful. In sepsis glycemic management, avoiding marked hyperglycemia while preventing hypoglycemia is essential; the target during insulin therapy is approximately 144–180 mg/dL. When thrombocytopenia is present in sepsis, DIC (disseminated intravascular coagulation) is important, but thrombocytopenia without coagulation abnormalities should prompt consideration of TMA, HUS, TTP, drug-induced, or immune-mediated causes, with assessment of fragmented red blood cells, elevated LDH, low haptoglobin, and elevated indirect bilirubin. When norepinephrine is insufficient to maintain MAP, or when the norepinephrine dose needs to be reduced, consider adding vasopressin."
     },
     {
@@ -67,8 +84,13 @@
         "The threshold for blood transfusion in initial resuscitation of septic shock is Hb ≤10 g/dL",
         "Early vasopressor administration (within 3 hours) is desirable in the initial resuscitation of hypotensive sepsis"
       ],
-      "answers": [0, 1, 2, 4],
-      "selectCount": 4,
+      "answers": [
+        0,
+        1,
+        2,
+        4
+      ],
+      "selectCount": 0,
       "explanation": "In initial resuscitation of septic shock, 65 mmHg is the initial target for mean arterial pressure (MAP). Individual adjustment is required for patients with chronic hypertension or impaired cerebral/renal perfusion, but 65 mmHg is the standard initial target. In septic hypoperfusion or septic shock, consider administering 30 mL/kg of crystalloid within 3 hours as initial fluid resuscitation. However, after fluid administration, reassess fluid responsiveness using blood pressure, urine output, lactate, CRT, echocardiography, IVC evaluation, and passive leg raise tests to avoid volume overload. When large volumes of crystalloid are required, albumin may be considered to supplement colloid osmotic pressure and limit total fluid volume. In septic shock, a restrictive transfusion strategy targeting Hb approximately 7 g/dL is the standard in the absence of active bleeding, myocardial ischemia, or severe hypoxemia; using Hb ≤10 g/dL as a uniform transfusion threshold is not appropriate. In hypotensive sepsis, when fluid responsiveness is poor or MAP cannot be maintained with fluids alone, start vasopressors such as norepinephrine early. It is preferable to initiate vasopressors early rather than delay to establish central venous access; short-term peripheral administration may be used to prioritize circulatory maintenance."
     }
   ]

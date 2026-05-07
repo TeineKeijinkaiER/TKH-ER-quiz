@@ -11,8 +11,13 @@
         "Rear-end collision into a stationary vehicle is always considered a high-risk mechanism",
         "If imaging is normal, prescribe 1 month of cervical collar immobilization for ligamentous injury and disc rest"
       ],
-      "answers": [0, 1, 2],
-      "explanation": "Cervical sprain is diagnosed only after excluding significant cervical injury. Use tools such as the Canadian C-Spine Rule to assess age, mechanism, and extremity numbness, and obtain imaging as needed. Analgesia, guidance to avoid excessive rest, and instructions to return if worsening are appropriate when no bony injury or neurological deficit is found. Imaging cannot be omitted solely based on neck pain, and prolonged cervical collar immobilization is generally not recommended."
+      "answers": [
+        0,
+        1,
+        2
+      ],
+      "explanation": "Cervical sprain is diagnosed only after excluding significant cervical injury. Use tools such as the Canadian C-Spine Rule to assess age, mechanism, and extremity numbness, and obtain imaging as needed. Analgesia, guidance to avoid excessive rest, and instructions to return if worsening are appropriate when no bony injury or neurological deficit is found. Imaging cannot be omitted solely based on neck pain, and prolonged cervical collar immobilization is generally not recommended.",
+      "selectCount": 0
     },
     {
       "id": "orthopedic_trauma_basic_002",
@@ -24,7 +29,11 @@
         "In the absence of fracture, begin aggressive massage promptly after injury",
         "Immobilize the neck with a collar until pain resolves and maintain complete rest"
       ],
-      "answers": [0, 1, 2],
+      "answers": [
+        0,
+        1,
+        2
+      ],
       "selectCount": 3,
       "explanation": "After cervical sprain, pain may persist or temporarily worsen for several days. Instruct the patient to maintain daily activities as tolerated while using analgesics. Return promptly if limb numbness, weakness, gait disturbance, or urinary symptoms develop, as these may indicate spinal cord or nerve root injury. Even without fracture on imaging, follow-up instructions are necessary; complete rest may delay recovery."
     },
@@ -38,8 +47,14 @@
         "Bony tenderness at the base of the fifth metatarsal or navicular bone of the foot",
         "Tenderness only over the anterior talofibular ligament"
       ],
-      "answers": [0, 1, 2, 3],
-      "explanation": "The Ottawa Ankle Rules guide imaging decisions. Ankle X-ray is indicated if there is ankle pain with bony tenderness over the posterior 6 cm or tip of the lateral or medial malleolus, or inability to bear weight for 4 steps immediately after injury or in the ED. Foot X-ray is indicated if midfoot pain is present with bony tenderness at the base of the fifth metatarsal or navicular, or inability to bear weight for 4 steps. Isolated anterior talofibular ligament tenderness alone is generally not an indication. However, individual clinical judgment is needed for elderly patients, children, those with neuropathy, altered mental status, intoxication, unreliable exam, significant swelling/deformity, or high clinical suspicion of fracture."
+      "answers": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "explanation": "The Ottawa Ankle Rules guide imaging decisions. Ankle X-ray is indicated if there is ankle pain with bony tenderness over the posterior 6 cm or tip of the lateral or medial malleolus, or inability to bear weight for 4 steps immediately after injury or in the ED. Foot X-ray is indicated if midfoot pain is present with bony tenderness at the base of the fifth metatarsal or navicular, or inability to bear weight for 4 steps. Isolated anterior talofibular ligament tenderness alone is generally not an indication. However, individual clinical judgment is needed for elderly patients, children, those with neuropathy, altered mental status, intoxication, unreliable exam, significant swelling/deformity, or high clinical suspicion of fracture.",
+      "selectCount": 0
     },
     {
       "id": "orthopedic_trauma_basic_004",
@@ -51,7 +66,11 @@
         "If fracture is unlikely, provide analgesia, ice, compression, elevation, and short-term external fixation or bracing as needed, promoting early functional recovery as tolerated",
         "In the acute phase with significant swelling, apply a tight circumferential cast and maintain complete rest for 1 month to prevent re-swelling"
       ],
-      "answers": [0, 2, 3],
+      "answers": [
+        0,
+        2,
+        3
+      ],
       "selectCount": 3,
       "explanation": "Initial management of ankle sprain begins by excluding fracture and other injuries not to miss. Ottawa Ankle Rules guide imaging decisions. Proximal fibula pain, interosseous membrane tenderness, or pain with external rotation stress should raise concern for Maisonneuve fracture or high ankle syndesmosis injury, prompting imaging that includes the lower leg. If fracture is unlikely, treat with analgesia, icing, compression, elevation, and short-term immobilization or bracing, favoring early functional rehabilitation over prolonged complete rest. Tight circumferential casting in the acute swollen phase risks pain, numbness, circulatory compromise, and compartment syndrome."
     },
@@ -65,8 +84,13 @@
         "The MCP joints should always be splinted in extension",
         "The knee must always be splinted in deep flexion of 90 degrees or more, never in full extension"
       ],
-      "answers": [0, 1, 2],
-      "explanation": "Splinting aims to immobilize in a position that minimizes functional impairment and contracture after assessing injury, swelling, pain, and neurovascular status. For hand injuries requiring finger immobilization, the intrinsic-plus position (wrist slight dorsiflexion, MCP flexion, IP extension) is the standard. The elbow is commonly splinted at ~90 degrees of flexion but the angle may be adjusted if vascular compromise or significant swelling is present. The ankle is splinted in neutral (approximately 90 degrees). Splinting the MCP joints in extension can cause contracture and is not the standard. The knee may be splinted in slight flexion or near extension depending on the pathology, and deep flexion is not always required. After splinting, reassess pain, numbness, skin color, temperature, capillary refill, and motor function."
+      "answers": [
+        0,
+        1,
+        2
+      ],
+      "explanation": "Splinting aims to immobilize in a position that minimizes functional impairment and contracture after assessing injury, swelling, pain, and neurovascular status. For hand injuries requiring finger immobilization, the intrinsic-plus position (wrist slight dorsiflexion, MCP flexion, IP extension) is the standard. The elbow is commonly splinted at ~90 degrees of flexion but the angle may be adjusted if vascular compromise or significant swelling is present. The ankle is splinted in neutral (approximately 90 degrees). Splinting the MCP joints in extension can cause contracture and is not the standard. The knee may be splinted in slight flexion or near extension depending on the pathology, and deep flexion is not always required. After splinting, reassess pain, numbness, skin color, temperature, capillary refill, and motor function.",
+      "selectCount": 0
     },
     {
       "id": "orthopedic_trauma_basic_006",
@@ -78,8 +102,11 @@
         "Among proximal femur fractures, intertrochanteric fractures often result in avascular necrosis of the femoral head",
         "Most shoulder pain in elderly patients is due to shoulder dislocation"
       ],
-      "answer": 0,
-      "explanation": "The Canadian CT Head Rule identifies age ≥65 as a high-risk factor for head CT in minor head injury with loss of consciousness, amnesia, or disorientation. The Canadian C-Spine Rule also identifies age ≥65 as a high-risk factor requiring cervical imaging. Vertebral compression fractures are most common at the thoracolumbar junction, particularly around T12–L1. Distal radius fracture requires wrist AP and lateral views as a baseline. Avascular necrosis is mainly a concern with femoral neck fractures, not typically intertrochanteric fractures. Elderly shoulder trauma frequently involves proximal humerus fractures, so shoulder dislocation alone is not the predominant diagnosis."
+      "explanation": "The Canadian CT Head Rule identifies age ≥65 as a high-risk factor for head CT in minor head injury with loss of consciousness, amnesia, or disorientation. The Canadian C-Spine Rule also identifies age ≥65 as a high-risk factor requiring cervical imaging. Vertebral compression fractures are most common at the thoracolumbar junction, particularly around T12–L1. Distal radius fracture requires wrist AP and lateral views as a baseline. Avascular necrosis is mainly a concern with femoral neck fractures, not typically intertrochanteric fractures. Elderly shoulder trauma frequently involves proximal humerus fractures, so shoulder dislocation alone is not the predominant diagnosis.",
+      "answers": [
+        0
+      ],
+      "selectCount": 1
     },
     {
       "id": "orthopedic_trauma_basic_007",
@@ -91,8 +118,11 @@
         "Paresthesia",
         "Pitting edema"
       ],
-      "answer": 4,
-      "explanation": "The 5 Ps are Pain, Pallor, Pulselessness, Paresthesia, and Paralysis. These are assessed during the secondary survey when examining the extremities. Pitting edema is not one of the 5 Ps."
+      "explanation": "The 5 Ps are Pain, Pallor, Pulselessness, Paresthesia, and Paralysis. These are assessed during the secondary survey when examining the extremities. Pitting edema is not one of the 5 Ps.",
+      "answers": [
+        4
+      ],
+      "selectCount": 1
     },
     {
       "id": "orthopedic_trauma_basic_008",
@@ -104,8 +134,11 @@
         "For elbow trauma, no obvious fracture was seen on X-ray but a posterior fat pad sign was positive, so the patient was managed as a fracture",
         "In adults who fall on an outstretched hand, the most common elbow injury is supracondylar fracture of the humerus"
       ],
-      "answer": 3,
-      "explanation": "Shoulder pain can originate from the shoulder joint, clavicle, or cervical spine. Clavicle fractures most commonly occur in the middle one-third. Zero-position shoulder reduction involves traction at 130–160 degrees of abduction. In adult elbow trauma, radial head fracture is common and often missed, but a positive posterior fat pad sign suggests an occult fracture, and the patient should be managed accordingly. "
+      "explanation": "Shoulder pain can originate from the shoulder joint, clavicle, or cervical spine. Clavicle fractures most commonly occur in the middle one-third. Zero-position shoulder reduction involves traction at 130–160 degrees of abduction. In adult elbow trauma, radial head fracture is common and often missed, but a positive posterior fat pad sign suggests an occult fracture, and the patient should be managed accordingly. ",
+      "answers": [
+        3
+      ],
+      "selectCount": 1
     },
     {
       "id": "orthopedic_trauma_basic_009",
@@ -117,8 +150,12 @@
         "Reduction is performed by supinating the forearm while pressing on the radial head, and pronation is contraindicated",
         "After reduction, the child may not move the arm immediately; observe for 10–30 minutes"
       ],
-      "answers": [1, 4],
-      "explanation": "Nursemaid's elbow results from subluxation of the radial head through the annular ligament and is seen in children aged ≤5. It typically occurs when the arm is pulled, not from a fall or direct trauma; if a fall or direct blow is reported, consider fracture and obtain X-rays. Reduction can be performed by either the supination-flexion or hyperpronation method; pronation is not contraindicated. After reduction, the child may not move the arm immediately, so observe for approximately 10–30 minutes."
+      "answers": [
+        1,
+        4
+      ],
+      "explanation": "Nursemaid's elbow results from subluxation of the radial head through the annular ligament and is seen in children aged ≤5. It typically occurs when the arm is pulled, not from a fall or direct trauma; if a fall or direct blow is reported, consider fracture and obtain X-rays. Reduction can be performed by either the supination-flexion or hyperpronation method; pronation is not contraindicated. After reduction, the child may not move the arm immediately, so observe for approximately 10–30 minutes.",
+      "selectCount": 0
     }
   ]
 }

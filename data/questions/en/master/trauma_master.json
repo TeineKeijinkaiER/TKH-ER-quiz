@@ -11,7 +11,11 @@
         "Coagulopathy",
         "GCS ≤8"
       ],
-      "answers": [1, 2, 3],
+      "answers": [
+        1,
+        2,
+        3
+      ],
       "selectCount": 3,
       "explanation": "DCS (damage control surgery) is selected when prolonged definitive surgery for hemorrhage or contamination would lead to progressive physiological deterioration from the lethal triad (hypothermia, acidosis, coagulopathy). Therefore, temperature ≤35°C, pH ≤7.2, and coagulopathy are representative situations favoring DCS. In DCS, the initial operation is limited to brief hemorrhage control, contamination control, and temporary closure; the patient is returned to the ICU for correction of temperature, coagulation, circulation, and acid-base balance before a planned re-operation. Temperature ≥39°C is not a typical finding favoring DCS, and GCS ≤8 alone, suggesting severe traumatic brain injury, is not a standalone criterion for DCS."
     },
@@ -25,8 +29,12 @@
         "When abdominal compartment syndrome is suspected, immediately elevate the head of the bed and continue rapid fluid resuscitation",
         "If non-operative measures fail, consider decompressive laparotomy"
       ],
-      "answers": [0, 2, 4],
-      "selectCount": 3,
+      "answers": [
+        0,
+        2,
+        4
+      ],
+      "selectCount": 0,
       "explanation": "Abdominal compartment syndrome (ACS) is a condition in which elevated intra-abdominal pressure causes circulatory failure, impaired ventilation, decreased renal blood flow, and oliguria, occurring after trauma with large-volume resuscitation, retroperitoneal hemorrhage, bowel edema, intra-abdominal hemorrhage, or abdominal closure. Intra-abdominal pressure is measured as bladder pressure using an indwelling urinary catheter with instillation of approximately 20–25 mL of normal saline, measured in the supine position at end-expiration. An IAP ≥12 mmHg indicates intra-abdominal hypertension but is not sufficient alone to diagnose ACS. ACS is generally diagnosed when IAP ≥20 mmHg is sustained with new organ dysfunction. Management includes avoiding excessive fluid administration, gastric/rectal decompression, sedation/neuromuscular blockade, and correction of fluid balance; decompressive laparotomy is considered when non-operative measures fail. Head-of-bed elevation raises intra-abdominal pressure and is not uniformly prioritized in suspected ACS."
     },
     {
@@ -39,8 +47,11 @@
         "Urinary alkalinization has sufficient evidence and should be performed actively",
         "Prophylactic dialysis targeting myoglobin removal is desirable"
       ],
-      "answers": [1, 2],
-      "selectCount": 2,
+      "answers": [
+        1,
+        2
+      ],
+      "selectCount": 0,
       "explanation": "In post-traumatic rhabdomyolysis, myoglobin, potassium, phosphate, and CK enter the circulation from skeletal muscle breakdown. The primary cause of AKI is not CK itself but myoglobin-induced tubular injury, renal vasoconstriction, tubular obstruction, and hypovolemia. CK level is a marker of severity; AKI risk rises when CK exceeds 5,000 IU/L, and AKI frequently develops at approximately 15,000–20,000 IU/L. The cornerstone of treatment is early and aggressive isotonic crystalloid administration and maintenance of adequate urine output, with close monitoring of electrolyte abnormalities, especially hyperkalemia. Urinary alkalinization and mannitol have theoretical benefits but limited evidence of outcome improvement and are not universally applied. Prophylactic dialysis for myoglobin removal is not recommended; dialysis indications follow standard RRT criteria such as hyperkalemia, severe acidosis, volume overload, and uremia."
     },
     {
@@ -53,8 +64,10 @@
         "Calcium administration is contraindicated when coagulation function is impaired in shock",
         "Lower core temperature to 34°C for cerebral protection"
       ],
-      "answers": [2],
-      "selectCount": 1,
+      "answers": [
+        2
+      ],
+      "selectCount": 0,
       "explanation": "In abdominal trauma with shock, hemorrhage source control and hemostatic resuscitation are the highest priorities. Targeting SBP 130 mmHg with large-volume prehospital fluid resuscitation may impair clot formation and worsen dilutional coagulopathy and hypothermia; permissive hypotension should be considered in hemorrhagic shock without traumatic brain injury. In massive hemorrhage, red blood cells should be combined early with FFP and platelets, but a fixed RBC:FFP ratio of 3:1 is not always appropriate. Tranexamic acid should be administered as early as possible and within 3 hours of injury in hemorrhagic trauma. In massive transfusion, citrate-induced hypocalcemia worsens circulatory failure and coagulopathy; calcium correction is not contraindicated but is important. Hypothermia worsens coagulopathy; lowering temperature to 34°C for cerebral protection is inappropriate in the setting of traumatic hemorrhagic resuscitation."
     },
     {
@@ -67,8 +80,12 @@
         "CPR in progress with signs of life present",
         "Systolic blood pressure below 60 mmHg"
       ],
-      "answers": [2, 3, 4],
-      "selectCount": 3,
+      "answers": [
+        2,
+        3,
+        4
+      ],
+      "selectCount": 0,
       "explanation": "Resuscitative thoracotomy is considered only in traumatic cardiac arrest or imminent cardiac arrest when a reversible hemorrhagic or obstructive etiology is suspected. Specifically, patients with penetrating thoracic trauma who retain signs of life, or who have lost a pulse but still have spontaneous respirations, pupillary response, or ECG activity, may be candidates. Patients with signs of life in whom CPR is being performed are also candidates. A systolic BP below 60 mmHg represents severe shock and imminent cardiac arrest, which may require rapid thoracotomy, aortic cross-clamping, cardiac tamponade relief, and hemorrhage control. In blunt trauma with prolonged prehospital CPR and no signs of life, outcomes are extremely poor and indications are highly limited."
     },
     {
@@ -81,8 +98,12 @@
         "Zone III is located from below the caudal renal artery origin to the aortic bifurcation",
         "As a standard technique for REBOA in Japan, the stylet must be definitively removed after balloon inflation"
       ],
-      "answers": [0, 1, 3],
-      "selectCount": 3,
+      "answers": [
+        0,
+        1,
+        3
+      ],
+      "selectCount": 0,
       "explanation": "REBOA is a bridge treatment for uncontrolled hemorrhagic shock below the diaphragm that temporarily occludes the aorta to maintain central perfusion. For suspected intra-abdominal hemorrhage, balloon placement in Zone I (descending aorta from the distal left subclavian artery to the celiac axis) is used. For pelvic hemorrhage, Zone III (below the renal artery origins and above the aortic bifurcation) is used. Zone II encompasses the region from the celiac axis to the lowest renal artery and includes major visceral branches; it is generally avoided as a placement site. REBOA is not definitive hemorrhage control but buys time until surgical, TAE, or pelvic packing can be performed; minimizing occlusion time, using partial or intermittent occlusion, and monitoring for limb ischemia and reperfusion injury are essential. Stylet removal after balloon inflation depends on the device and procedural protocol and is not treated as a correct answer in this question."
     },
     {
@@ -95,8 +116,13 @@
         "Maintain PaCO2 below 25 mmHg for ICP management",
         "Among traumatic CSF leaks, rhinorrhea most commonly stops spontaneously within 1–3 weeks, and otorrhea within 5–10 days"
       ],
-      "answers": [0, 1, 2, 4],
-      "selectCount": 4,
+      "answers": [
+        0,
+        1,
+        2,
+        4
+      ],
+      "selectCount": 0,
       "explanation": "In severe traumatic brain injury, coagulation-fibrinolysis abnormalities may develop from the early post-injury period, so difficulty with hemostasis or re-bleeding should be anticipated during craniotomy and hematoma evacuation. When cerebrovascular injury is suspected, CTA is useful for rapid screening, but DSA offers higher spatial resolution and allows simultaneous diagnosis and endovascular treatment. The Rotterdam CT score evaluates: basal cistern status, midline shift, presence of epidural hematoma, and presence of intraventricular hemorrhage or traumatic SAH. For ICP management, hyperventilation can temporarily lower ICP, but maintaining PaCO2 below 25 mmHg causes excessive hypocapnia, reduces cerebral blood flow, and leads to secondary brain injury; this should be avoided. Traumatic CSF leaks often resolve spontaneously; rhinorrhea commonly stops within 1–3 weeks and otorrhea within 5–10 days, but persistent cases or those with high meningitis risk require specialist evaluation."
     },
     {
@@ -109,8 +135,10 @@
         "In penetrating neck trauma, the area above the angle of the mandible is called Zone I",
         "Deformation of the thyroid or cricoid cartilage is a soft sign of neck trauma"
       ],
-      "answers": [1],
-      "selectCount": 1,
+      "answers": [
+        1
+      ],
+      "selectCount": 0,
       "explanation": "Numbness of the nasal ala or upper lip following a facial bone fracture suggests injury to the infraorbital nerve, a branch of the second division of the trigeminal nerve. The mental nerve is derived from the mandibular nerve and is responsible for sensation of the lower lip and chin — an anatomically distinct location. In severe epistaxis, injury to the maxillary artery territory including the descending palatine and sphenopalatine arteries should be considered. In orbital blowout fractures, nose blowing may worsen orbital emphysema or infection and should be avoided. In the zone classification of penetrating neck trauma, Zone I extends from the clavicle/suprasternal notch to the cricoid cartilage; Zone II from the cricoid cartilage to the angle of the mandible; Zone III from the angle of the mandible cranially. Deformation of the thyroid or cricoid cartilage is a significant finding of airway injury and should not be treated as a mere soft sign."
     },
     {
@@ -123,8 +151,12 @@
         "In chest wall injuries, scoring using RibScore or SCARF Score and management based on scores is desirable",
         "In hemothorax, up to 2–3 L of blood can accumulate on one side in adults, and shock and respiratory failure develop when more than 1 L hemorrhages rapidly"
       ],
-      "answers": [1, 3, 4],
-      "selectCount": 3,
+      "answers": [
+        1,
+        3,
+        4
+      ],
+      "selectCount": 0,
       "explanation": "In thoracic trauma, treatment is selected based on the bleeding source among surgery, TAE, and conservative management. Hemorrhage near the thoracic spine or from subclavian artery branches may be difficult to reach surgically and is not necessarily a good indication for open thoracotomy; endovascular treatment should be considered as well. When embolizing intercostal arteries, occluding the artery of Adamkiewicz, which supplies the spinal cord, can cause spinal cord ischemia. Hemorrhage from pulmonary parenchymal injury varies by etiology — airway bleeding, pulmonary hilar vascular injury — and cannot be simply categorized as a TAE indication. In chest wall injuries, respiratory failure risk is assessed considering rib fracture count, bilateral involvement, flail chest, pulmonary contusion, and age; RibScore and SCARF Score can guide decisions about analgesia, respiratory physiotherapy, mechanical ventilation, and rib fixation. Up to 2–3 L of blood can accumulate in one hemithorax in adults; rapid hemorrhage of more than 1 L can cause shock and respiratory failure."
     },
     {
@@ -137,8 +169,10 @@
         "Minimal aortic injury (MAI) in blunt thoracic aortic injury is a life-threatening condition requiring emergent surgery",
         "In blunt aortic injury, delayed treatment increases mortality and paraplegia risk even when the thoracic hematoma is stable; emergent surgery has become increasingly necessary in recent years"
       ],
-      "answers": [0],
-      "selectCount": 1,
+      "answers": [
+        0
+      ],
+      "selectCount": 0,
       "explanation": "In blunt cardiac injury, screening combines ECG and troponin; when both are normal, the likelihood of clinically significant cardiac injury is low and the risk of serious arrhythmia or cardiac dysfunction is substantially reduced. Cardiac tamponade can develop with relatively small volumes in acute accumulation; a fixed threshold of ≥300 mL is inaccurate because the timing of onset depends on the rate of accumulation and pericardial compliance. Blunt thoracic aortic injury frequently shows mediastinal widening on chest radiograph, but a normal mediastinal silhouette is possible; if suspected, evaluate with contrast-enhanced CT. Minimal aortic injury (MAI) refers to mild lesions such as intimal injury; most can be managed with blood pressure control and imaging follow-up and do not necessarily require emergent surgery. In recent practice, delayed repair or TEVAR is selected in stable patients; emergent surgery is not universally indicated."
     },
     {
@@ -151,8 +185,11 @@
         "External fixation is contraindicated after retroperitoneal packing",
         "Retroperitoneal packing has a high infection rate of 6–10%"
       ],
-      "answers": [0, 4],
-      "selectCount": 2,
+      "answers": [
+        0,
+        4
+      ],
+      "selectCount": 0,
       "explanation": "In pelvic fractures, assess not only hemorrhagic shock from retroperitoneal hemorrhage but also the presence of bladder/urethral injury, rectal injury, and perineal open wounds. A certain proportion of pelvic fractures are complicated by bladder/urethral injury; be alert to hematuria, urethral meatal bleeding, perineal hematoma, and high-riding prostate. A commercial pelvic binder is applied at the level of the greater trochanters, not the iliac wings, to effectively close the pelvic ring. In pelvic fractures with open wounds in the rectum or perineum, infection control is essential; diverting colostomy is not contraindicated and is considered for fecal diversion. After retroperitoneal packing, external or internal fixation may be combined; external fixation is not contraindicated. Retroperitoneal packing carries infection risk; a strategy including planned re-operation timing, gauze removal, antibiotics, and open wound management is required."
     },
     {
@@ -165,8 +202,10 @@
         "After 24 hours post-injury, pulmonary embolism is the most common cause of death, accounting for 20% of all deaths in spinal cord injury",
         "Early decompression for spinal cord injury with fracture-dislocation does not improve outcomes"
       ],
-      "answers": [1],
-      "selectCount": 1,
+      "answers": [
+        1
+      ],
+      "selectCount": 0,
       "explanation": "The neurological level of spinal cord injury is determined by the most caudal spinal segment where both motor and sensory function are normally preserved; it is not defined by the highest segment with MMT ≤2 and absent sensation. To prevent secondary spinal cord injury in acute spinal cord injury, management targeting mean arterial pressure of 85–90 mmHg or higher has been recommended. In facet joint dislocation, fractures involving the transverse foramen, and upper cervical injuries, vertebral artery injury should be monitored; the statement that internal carotid artery injury occurs in 33% is incorrect. After 24 hours post-injury, respiratory complications, pneumonia, sepsis, and pulmonary embolism are concerns, but the assertion that pulmonary embolism is the most common cause accounting for 20% is inaccurate. In spinal cord compression with fracture-dislocation, early decompression and fixation may contribute to improved neurological outcome in selected cases; the claim that early decompression does not improve outcomes is unsupported."
     },
     {
@@ -179,8 +218,13 @@
         "The reversible ischemia time for major limb arterial injuries is 4–6 hours, but the most rapid revascularization possible is required",
         "A severely injured extremity in which 3 of 4 structures (soft tissue, nerve, vessel, and bone) are injured is called a mangled extremity; extensive crush injuries from the tibia to the foot in particular may warrant immediate amputation"
       ],
-      "answers": [0, 1, 3, 4],
-      "selectCount": 4,
+      "answers": [
+        0,
+        1,
+        3,
+        4
+      ],
+      "selectCount": 0,
       "explanation": "Hip dislocation increases the risk of avascular necrosis of the femoral head, sciatic nerve injury, and osteoarthritis with delayed reduction; emergent reduction should be performed if not contraindicated. In knee dislocation, popliteal artery injury may occur even after spontaneous reduction; vascular assessment with dorsalis pedis/posterior tibial pulse, ABI, and contrast-enhanced CT is necessary. In compartment syndrome, tissue perfusion pressure is generally assessed as diastolic blood pressure minus compartment pressure (ΔP = DBP − compartment pressure); systolic blood pressure minus compartment pressure is incorrect. The reversible ischemia time for major limb arterial injuries is approximately 4–6 hours, but collateral circulation, soft tissue injury, shock, and hypothermia can shorten this; the most rapid revascularization possible is required. In a mangled extremity with severe injury to multiple structures (soft tissue, nerve, vessel, bone), decisions regarding limb salvage, primary amputation, and staged reconstruction are based on life prognosis, ischemia time, infection risk, and functional prognosis; immediate amputation may be an option for extensive crush injuries from the tibia to the foot."
     }
   ]

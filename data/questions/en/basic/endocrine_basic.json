@@ -11,7 +11,11 @@
         "Blood glucose ≥600 mg/dL with elevated plasma osmolality, without prominent ketosis or acidosis",
         "Hyperglycemia is present, but there is no acidosis and ketones are negative"
       ],
-      "answers": [0, 1, 2],
+      "answers": [
+        0,
+        1,
+        2
+      ],
       "selectCount": 3,
       "explanation": "DKA is suspected when hyperglycemia or diabetes, ketosis, and metabolic acidosis are present together. SGLT2 inhibitor-associated DKA can occur as euglycemic DKA with near-normal blood glucose levels. Blood glucose ≥600 mg/dL with elevated plasma osmolality but without prominent ketosis or acidosis is more suggestive of HHS (hyperosmolar hyperglycemic state)."
     },
@@ -25,8 +29,14 @@
         "Evaluate for precipitating causes such as infection, myocardial infarction, stroke, and medication non-adherence",
         "If blood glucose is elevated, insulin should be started as the top priority regardless of serum potassium"
       ],
-      "answers": [0, 1, 2, 3],
-      "explanation": "The pillars of initial DKA/HHS treatment are IV fluids, potassium management, insulin, and identification of precipitating causes. Starting insulin in the setting of hypokalemia can cause life-threatening arrhythmias due to intracellular potassium shift; therefore, checking serum potassium and planning correction before initiating insulin is essential."
+      "answers": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "explanation": "The pillars of initial DKA/HHS treatment are IV fluids, potassium management, insulin, and identification of precipitating causes. Starting insulin in the setting of hypokalemia can cause life-threatening arrhythmias due to intracellular potassium shift; therefore, checking serum potassium and planning correction before initiating insulin is essential.",
+      "selectCount": 0
     },
     {
       "id": "endocrine_basic_003",
@@ -38,7 +48,11 @@
         "Fever, tachycardia, diaphoresis, and hand tremor with low TSH and elevated FT4",
         "Hyperglycemia, elevated serum ketones, and metabolic acidosis"
       ],
-      "answers": [0, 1, 2],
+      "answers": [
+        0,
+        1,
+        2
+      ],
       "selectCount": 3,
       "explanation": "Adrenal crisis should be suspected in the presence of unexplained shock, hypotension poorly responsive to IV fluids and vasopressors, long-term corticosteroid use with physiological stress such as infection or surgery, hyponatremia, hyperkalemia, hypoglycemia, vomiting, abdominal pain, or severe malaise. Fever, tachycardia, diaphoresis, and hand tremor with low TSH and elevated FT4 suggest thyrotoxicosis or thyroid storm. Hyperglycemia, ketosis, and metabolic acidosis are findings suggestive of DKA."
     },
@@ -52,7 +66,11 @@
         "Low TSH only, without fever, tachycardia, heart failure, or altered consciousness",
         "Altered consciousness with hypothermia, bradycardia, hyponatremia, and CO2 retention"
       ],
-      "answers": [0, 1, 2],
+      "answers": [
+        0,
+        1,
+        2
+      ],
       "selectCount": 3,
       "explanation": "Thyroid storm presents against a background of thyrotoxicosis with high fever, marked tachycardia or atrial fibrillation, central nervous system manifestations, heart failure, and GI symptoms or hepatic dysfunction. Low TSH alone does not constitute thyroid storm. Altered consciousness with hypothermia, bradycardia, hyponatremia, and CO2 retention suggests myxedema coma."
     },
@@ -66,8 +84,14 @@
         "After recovery, monitor closely for recurrent hypoglycemia",
         "Once the patient regains consciousness after dextrose administration, involvement of long-acting insulin or sulfonylureas can be excluded"
       ],
-      "answers": [0, 1, 2, 3],
-      "explanation": "In severe hypoglycemia, forcing oral intake in a patient with altered consciousness carries a risk of aspiration. Intravenous dextrose or glucagon should be used for prompt correction, and contributing factors including causative medications, dietary intake, renal function, and infection should be identified. Recurrent hypoglycemia can occur with long-acting insulin, sulfonylureas, or reduced renal clearance, so continued monitoring is necessary even after the patient has regained consciousness."
+      "answers": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "explanation": "In severe hypoglycemia, forcing oral intake in a patient with altered consciousness carries a risk of aspiration. Intravenous dextrose or glucagon should be used for prompt correction, and contributing factors including causative medications, dietary intake, renal function, and infection should be identified. Recurrent hypoglycemia can occur with long-acting insulin, sulfonylureas, or reduced renal clearance, so continued monitoring is necessary even after the patient has regained consciousness.",
+      "selectCount": 0
     }
   ]
 }

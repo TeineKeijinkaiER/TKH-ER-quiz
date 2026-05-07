@@ -11,7 +11,9 @@
         "If altered consciousness is noted, prioritize evaluation of intracranial lesions and confirm A, B, and C after head CT",
         "If external hemorrhage is not obvious, prioritize pain assessment and analgesia over circulatory assessment"
       ],
-      "answers": [1],
+      "answers": [
+        1
+      ],
       "selectCount": 1,
       "explanation": "In the Primary survey, life-threatening abnormalities are rapidly assessed in ABCDE order, and intervention is initiated without waiting for a definitive diagnosis or imaging. CT, detailed history-taking, and Secondary survey are performed after initial stabilization."
     },
@@ -25,7 +27,11 @@
         "If cervical injury is possible, confirm cervical instability with imaging before any airway manipulation",
         "If the patient can speak clearly, judge A as normal and focus solely on B and C assessment"
       ],
-      "answers": [0, 1, 2],
+      "answers": [
+        0,
+        1,
+        2
+      ],
       "selectCount": 3,
       "explanation": "Under A, confirm airway patency and do not miss airway obstruction from blood, vomitus, facial trauma, or laryngeal injury. In trauma patients, assess and secure the airway while maintaining cervical spine protection. Even if the patient can speak, reassessment is needed if there is risk of airway deterioration."
     },
@@ -39,8 +45,14 @@
         "Suspected pulmonary contusion with preserved oxygenation and hemodynamics",
         "Ventilatory failure associated with flail chest"
       ],
-      "answers": [0, 1, 2, 4],
-      "explanation": "Under B, rapidly identify thoracic injuries threatening ventilation and oxygenation. Tension pneumothorax, open pneumothorax, massive hemothorax, and ventilatory failure from flail chest are life-threatening conditions that may require intervention without waiting for imaging confirmation. In contrast, suspected pulmonary contusion with preserved oxygenation and hemodynamics does not necessarily require immediate invasive intervention in the Primary survey."
+      "answers": [
+        0,
+        1,
+        2,
+        4
+      ],
+      "explanation": "Under B, rapidly identify thoracic injuries threatening ventilation and oxygenation. Tension pneumothorax, open pneumothorax, massive hemothorax, and ventilatory failure from flail chest are life-threatening conditions that may require intervention without waiting for imaging confirmation. In contrast, suspected pulmonary contusion with preserved oxygenation and hemodynamics does not necessarily require immediate invasive intervention in the Primary survey.",
+      "selectCount": 0
     },
     {
       "id": "trauma_jatec_004",
@@ -52,7 +64,9 @@
         "Confirm SpO₂, respiratory rate, and breathing pattern to assess for ventilatory and oxygenation abnormalities",
         "Palpate each rib individually to identify all points of tenderness"
       ],
-      "answers": [4],
+      "answers": [
+        4
+      ],
       "selectCount": 1,
       "explanation": "Under B in the Primary survey, rapidly assess for abnormalities threatening ventilation and oxygenation, checking chest movement, accessory muscle use, paradoxical breathing, subcutaneous emphysema, flail segment, asymmetric breath sounds, SpO₂, and respiratory rate in a short period. In contrast, palpating each rib individually to identify all tender points is detailed examination appropriate for the Secondary survey after stabilization, not for the Primary survey B assessment."
     },
@@ -66,7 +80,9 @@
         "BP 86/52 mmHg, pulse 118/min: first consider neurogenic shock from vasovagal response",
         "In elderly patients, be aware that hemorrhagic shock may not present with tachycardia"
       ],
-      "answers": [3],
+      "answers": [
+        3
+      ],
       "selectCount": 1,
       "explanation": "In a JCS 300 trauma patient, rapidly assess A, B, and C while estimating pathophysiology from blood pressure and pulse combinations. Hypotension with tachycardia should raise hemorrhagic shock as the primary consideration. Hypotension with bradycardia warrants neurogenic shock in the differential. Hypertension with bradycardia raises suspicion for Cushing phenomenon from elevated intracranial pressure. Therefore, considering neurogenic shock first in option 4 (hypotension with tachycardia) is inappropriate. Additionally, elderly patients and those on beta-blockers may not show prominent tachycardia even in hemorrhagic shock."
     },
@@ -80,7 +96,9 @@
         "If the patient responds to crystalloids, consider circulation stabilized and continue the Secondary survey",
         "Since a positive FAST is not a definitive diagnosis of the bleeding site, it should not be used to guide Primary survey management decisions"
       ],
-      "answers": [1],
+      "answers": [
+        1
+      ],
       "selectCount": 1,
       "explanation": "In a hemodynamically unstable trauma patient with a positive FAST, strongly suspect hemorrhagic shock from intra-abdominal hemorrhage. Simultaneously begin resuscitation including transfusion and rapidly proceed to definitive hemorrhage control such as surgery or IVR. CT must not be prioritized in hemodynamically unstable patients."
     },
@@ -94,8 +112,13 @@
         "GCS 14 with severe headache",
         "GCS 14 with diplopia"
       ],
-      "answers": [0, 1, 2],
-      "explanation": "Impending D is characterized by rapid GCS decline, anisocoria with abnormal light reflex, and hemiplegia. These suggest elevated intracranial pressure, brain herniation, or serious intracranial pathology, requiring urgent management in parallel with reassessment of A, B, and C. Severe headache and diplopia are important neurological symptoms that must not be missed, but in the absence of rapid GCS decline, pupillary abnormalities, or obvious hemiplegia, they are not readily classified as impending D in the Primary survey. Detailed evaluation should be performed in the Secondary survey and beyond."
+      "answers": [
+        0,
+        1,
+        2
+      ],
+      "explanation": "Impending D is characterized by rapid GCS decline, anisocoria with abnormal light reflex, and hemiplegia. These suggest elevated intracranial pressure, brain herniation, or serious intracranial pathology, requiring urgent management in parallel with reassessment of A, B, and C. Severe headache and diplopia are important neurological symptoms that must not be missed, but in the absence of rapid GCS decline, pupillary abnormalities, or obvious hemiplegia, they are not readily classified as impending D in the Primary survey. Detailed evaluation should be performed in the Secondary survey and beyond.",
+      "selectCount": 0
     },
     {
       "id": "trauma_jatec_008",
@@ -107,8 +130,14 @@
         "Prioritize head MRI over airway management and circulatory resuscitation because intracranial pathology is suspected",
         "Prioritize airway management, oxygenation, and circulatory resuscitation as needed, then proceed to imaging after stabilization"
       ],
-      "answers": [0, 1, 2, 4],
-      "explanation": "Even when a D abnormality is identified, the cause is not necessarily an intracranial lesion. Simultaneously check for reversible causes such as hypoxia, ventilatory failure, shock, and hypoglycemia. Imaging is important, but should not be prioritized at the cost of A, B, and C stabilization."
+      "answers": [
+        0,
+        1,
+        2,
+        4
+      ],
+      "explanation": "Even when a D abnormality is identified, the cause is not necessarily an intracranial lesion. Simultaneously check for reversible causes such as hypoxia, ventilatory failure, shock, and hypoglycemia. Imaging is important, but should not be prioritized at the cost of A, B, and C stabilization.",
+      "selectCount": 0
     },
     {
       "id": "trauma_jatec_009",
@@ -120,8 +149,13 @@
         "Do not apply warming measures until the Primary survey is complete, as full-body assessment takes priority",
         "Limit undressing to areas with obvious injury to prevent hypothermia"
       ],
-      "answers": [0, 1, 2],
-      "explanation": "Under E, complete exposure for full-body assessment and prevention of hypothermia are performed simultaneously. Omitting full-body assessment risks missing occult injuries, while failing to warm the patient after exposure worsens hypothermia-induced coagulopathy and bleeding tendency."
+      "answers": [
+        0,
+        1,
+        2
+      ],
+      "explanation": "Under E, complete exposure for full-body assessment and prevention of hypothermia are performed simultaneously. Omitting full-body assessment risks missing occult injuries, while failing to warm the patient after exposure worsens hypothermia-induced coagulopathy and bleeding tendency.",
+      "selectCount": 0
     },
     {
       "id": "trauma_jatec_010",
@@ -133,7 +167,9 @@
         "If a full-body CT is planned, reassessment during the Primary survey can be minimized",
         "If the patient responds to initial IV fluids or transfusion, the C assessment in the Primary survey is considered complete"
       ],
-      "answers": [1],
+      "answers": [
+        1
+      ],
       "selectCount": 1,
       "explanation": "The Secondary survey is performed after life-threatening abnormalities directly affecting patient survival are assessed and addressed in the Primary survey and the patient is stabilized. If the patient deteriorates during management, return to ABCDE reassessment. Reassessment must not be omitted based on initial response or a planned CT."
     }

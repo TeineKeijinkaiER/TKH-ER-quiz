@@ -11,9 +11,11 @@
         "Horizontal ST depression in V1–V3 may suggest posterior wall infarction",
         "ST elevation in aVR alone is a finding specific to right ventricular infarction"
       ],
-      "answer": 4,
       "selectCount": 1,
-      "explanation": "ST elevation in aVR may suggest left main coronary artery disease, proximal LAD disease, multivessel disease, or diffuse subendocardial ischemia, but it is not specific to right ventricular infarction. When RV infarction is suspected, V4R should be recorded in addition to inferior wall infarction findings."
+      "explanation": "ST elevation in aVR may suggest left main coronary artery disease, proximal LAD disease, multivessel disease, or diffuse subendocardial ischemia, but it is not specific to right ventricular infarction. When RV infarction is suspected, V4R should be recorded in addition to inferior wall infarction findings.",
+      "answers": [
+        4
+      ]
     },
     {
       "id": "cardiology_basic_002",
@@ -25,9 +27,13 @@
         "ST elevation in V1–V4: most typically suspect proximal RCA occlusion",
         "ST elevation in V4R is useful for evaluating right ventricular infarction"
       ],
-      "answer": [0, 1, 2],
       "selectCount": 3,
-      "explanation": "V1–V4 (anterior septum) → LAD; II, III, aVF (inferior wall) → RCA or LCX; I, aVL, V5, V6 (lateral wall) → LCX or diagonal branch. V4R is useful for evaluating RV infarction but this question selects 3 answers. The representative ST elevation leads and culprit coronary artery pairings are choices 0–2."
+      "explanation": "V1–V4 (anterior septum) → LAD; II, III, aVF (inferior wall) → RCA or LCX; I, aVL, V5, V6 (lateral wall) → LCX or diagonal branch. V4R is useful for evaluating RV infarction but this question selects 3 answers. The representative ST elevation leads and culprit coronary artery pairings are choices 0–2.",
+      "answers": [
+        0,
+        1,
+        2
+      ]
     },
     {
       "id": "cardiology_basic_003",
@@ -39,8 +45,14 @@
         "When RV infarction is suspected, record right-sided precordial leads, particularly V4R",
         "LAD proximal occlusion is the most typical cause of inferior ST elevation"
       ],
-      "answer": [0, 1, 2, 3],
-      "explanation": "Inferior STEMI shows ST elevation in II, III, and aVF, with RCA or LCX most commonly responsible. Greater ST elevation in lead III than II suggests RCA disease; when RV infarction is suspected, add V4R. LAD proximal occlusion typically causes extensive anterior STEMI, not inferior."
+      "explanation": "Inferior STEMI shows ST elevation in II, III, and aVF, with RCA or LCX most commonly responsible. Greater ST elevation in lead III than II suggests RCA disease; when RV infarction is suspected, add V4R. LAD proximal occlusion typically causes extensive anterior STEMI, not inferior.",
+      "answers": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "selectCount": 0
     },
     {
       "id": "cardiology_basic_004",
@@ -52,9 +64,11 @@
         "#5 is the left main coronary artery; occlusion or severe stenosis can cause aVR elevation and diffuse ST depression",
         "#7 is the distal RCA and typically causes isolated ST elevation in V4R"
       ],
-      "answer": 4,
       "selectCount": 1,
-      "explanation": "#7 is the mid LAD (left anterior descending artery), not the distal RCA. Mid LAD occlusion can cause anterior ST elevation. V4R ST elevation suggests RV infarction and is particularly important with proximal RCA occlusion."
+      "explanation": "#7 is the mid LAD (left anterior descending artery), not the distal RCA. Mid LAD occlusion can cause anterior ST elevation. V4R ST elevation suggests RV infarction and is particularly important with proximal RCA occlusion.",
+      "answers": [
+        4
+      ]
     },
     {
       "id": "cardiology_basic_005",
@@ -66,9 +80,11 @@
         "Prior stroke, TIA, or systemic thromboembolism: 2 points",
         "Low serum potassium level: 2 points"
       ],
-      "answer": 4,
       "selectCount": 1,
-      "explanation": "The CHA2DS2-VASc score evaluates heart failure, hypertension, age ≥75, diabetes, prior stroke/TIA/thromboembolism, vascular disease, age 65–74, and sex. Serum potassium level is not a component. Age ≥75 and prior stroke/TIA/thromboembolism are each worth 2 points."
+      "explanation": "The CHA2DS2-VASc score evaluates heart failure, hypertension, age ≥75, diabetes, prior stroke/TIA/thromboembolism, vascular disease, age 65–74, and sex. Serum potassium level is not a component. Age ≥75 and prior stroke/TIA/thromboembolism are each worth 2 points.",
+      "answers": [
+        4
+      ]
     },
     {
       "id": "cardiology_basic_006",
@@ -80,9 +96,13 @@
         "Hypokalemia",
         "Elevated CRP"
       ],
-      "answer": [0, 1, 2],
       "selectCount": 3,
-      "explanation": "In the CHA2DS2-VASc score, diabetes mellitus, vascular disease, and age 65–74 are each worth 1 point. Hypokalemia and elevated CRP may be clinically relevant as precipitants or background conditions in atrial fibrillation but are not components of the CHA2DS2-VASc score."
+      "explanation": "In the CHA2DS2-VASc score, diabetes mellitus, vascular disease, and age 65–74 are each worth 1 point. Hypokalemia and elevated CRP may be clinically relevant as precipitants or background conditions in atrial fibrillation but are not components of the CHA2DS2-VASc score.",
+      "answers": [
+        0,
+        1,
+        2
+      ]
     },
     {
       "id": "cardiology_basic_007",
@@ -94,8 +114,14 @@
         "Confirm time of onset, anticoagulation status, stroke risk, and bleeding risk",
         "Even in unstable rapid ventricular response AF, wait several days for oral medications to take effect before considering cardioversion"
       ],
-      "answer": [0, 1, 2, 3],
-      "explanation": "For rapid ventricular response AF, first assess hemodynamic stability. If hypotension, shock, ischemia, acute heart failure, or altered mental status is present and attributed to rapid AF, prioritize synchronized cardioversion. In stable cases, pursue rate control, identify underlying causes, and assess anticoagulation indications."
+      "explanation": "For rapid ventricular response AF, first assess hemodynamic stability. If hypotension, shock, ischemia, acute heart failure, or altered mental status is present and attributed to rapid AF, prioritize synchronized cardioversion. In stable cases, pursue rate control, identify underlying causes, and assess anticoagulation indications.",
+      "answers": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "selectCount": 0
     },
     {
       "id": "cardiology_basic_008",
@@ -107,9 +133,13 @@
         "For WPW syndrome with atrial fibrillation, verapamil should be given as the first-line rapid IV push",
         "If hypotension or acute heart failure is present, consider electrical cardioversion in addition to pharmacological rate control"
       ],
-      "answer": [0, 1, 2],
       "selectCount": 3,
-      "explanation": "For stable rapid ventricular response AF, beta-blockers, diltiazem, or verapamil are options depending on LV function and BP. Non-dihydropyridine calcium channel blockers should be avoided in heart failure with reduced LV systolic function. Verapamil and other AV node blocking agents are dangerous in WPW syndrome with AF and should not be used as first-line therapy."
+      "explanation": "For stable rapid ventricular response AF, beta-blockers, diltiazem, or verapamil are options depending on LV function and BP. Non-dihydropyridine calcium channel blockers should be avoided in heart failure with reduced LV systolic function. Verapamil and other AV node blocking agents are dangerous in WPW syndrome with AF and should not be used as first-line therapy.",
+      "answers": [
+        0,
+        1,
+        2
+      ]
     },
     {
       "id": "cardiology_basic_009",
@@ -121,9 +151,11 @@
         "If 10 mg is ineffective, consider increasing to 20 mg while monitoring hemodynamics and ECG",
         "Slow infusion of ATP maximizes the PSVT-terminating effect, so a saline flush is unnecessary"
       ],
-      "answer": 4,
       "selectCount": 1,
-      "explanation": "For PSVT termination, ATP-2Na has an extremely short half-life and must be rapidly injected through a peripheral vein and immediately flushed with normal saline to reach the heart quickly. In adults, 10 mg is injected rapidly and flushed with 20 mL saline; if ineffective, 20 mg is considered. ECG monitoring, defibrillator, and emergency response equipment should be prepared. Caution is needed for asthma, severe bradycardia, AV block, and WPW with AF. Note that the package insert's general dosing method describes slow IV injection, which differs from the context of rapid administration for PSVT termination."
+      "explanation": "For PSVT termination, ATP-2Na has an extremely short half-life and must be rapidly injected through a peripheral vein and immediately flushed with normal saline to reach the heart quickly. In adults, 10 mg is injected rapidly and flushed with 20 mL saline; if ineffective, 20 mg is considered. ECG monitoring, defibrillator, and emergency response equipment should be prepared. Caution is needed for asthma, severe bradycardia, AV block, and WPW with AF. Note that the package insert's general dosing method describes slow IV injection, which differs from the context of rapid administration for PSVT termination.",
+      "answers": [
+        4
+      ]
     },
     {
       "id": "cardiology_basic_010",
@@ -135,8 +167,14 @@
         "Avoid verapamil when wide-complex tachycardia or WPW syndrome with atrial fibrillation is suspected",
         "Verapamil can always be safely given as a rapid IV bolus in infants, children, elderly patients, those with heart failure, and WPW patients"
       ],
-      "answer": [0, 1, 2, 3],
-      "explanation": "Verapamil can be effective for PSVT, but requires attention to hypotension, bradycardia, AV block, and worsening heart failure. It is dangerous in wide-complex tachycardia, tachycardia where VT cannot be excluded, WPW with AF, reduced LV systolic function, and acute heart failure. In children, especially infants, there is a risk of severe circulatory depression and verapamil should be used cautiously."
+      "explanation": "Verapamil can be effective for PSVT, but requires attention to hypotension, bradycardia, AV block, and worsening heart failure. It is dangerous in wide-complex tachycardia, tachycardia where VT cannot be excluded, WPW with AF, reduced LV systolic function, and acute heart failure. In children, especially infants, there is a risk of severe circulatory depression and verapamil should be used cautiously.",
+      "answers": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "selectCount": 0
     }
   ]
 }

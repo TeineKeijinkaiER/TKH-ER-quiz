@@ -1,24 +1,34 @@
 # CLAUDE.md — Project Rules
 
-## Git Operations
+## 作業ディレクトリ
 
-**Claude must NOT run any git commands.**
+**常に main ブランチのプロジェクト本体で直接作業する。**
 
-All git operations (add, commit, push, pull, merge, branch, stash, worktree, etc.) are performed exclusively by the user. Do not suggest or execute git commands. If a task would normally require a git operation, describe what the user should do manually instead.
+- 作業ディレクトリ: `C:\Users\shin0\Documents\GitHub\TKH-ER-Quiz\`
+- ブランチ切り替え・ワークツリー作成は一切行わない
+- セッション開始時に現在のディレクトリが上記であることを前提とする
 
-## Worktrees
+## Git 操作
 
-**Strictly prohibited.** Do not create git worktrees under any circumstances.
+**Claude は git コマンドを一切実行しない。**
 
-- Never use `EnterWorktree`, `git worktree add`, or any tool/command that creates a worktree.
-- Never invoke skills or commands that trigger worktree creation (e.g. `superpowers:using-git-worktrees`, `create-pr-command` that spawns a worktree).
-- Worktrees nested inside `.claude/worktrees/` create a double-folder structure within the repo, which must never happen.
-- Work directly in the main project directory at all times: `C:\Users\shin0\Documents\GitHub\TKH-ER-Quiz\`
+add / commit / push / pull / merge / branch / stash / worktree など、すべての git 操作はユーザーが行う。git 操作が必要な場面では、ユーザーが実行すべきコマンドを説明するにとどめる。
+
+## Worktree 禁止
+
+**あらゆる手段でのワークツリー作成を禁止する。**
+
+- `EnterWorktree`、`git worktree add`、ワークツリーを作成するいかなるツール・コマンドも使用しない
+- `superpowers:using-git-worktrees` などワークツリーを起動するスキルを呼び出さない
+- `.claude/worktrees/` 配下にネストされた構造を作らない
+
+### 禁止の理由
+このプロジェクトは静的 HTML + JS + JSON のみでビルドステップがない。ワークツリーをリポジトリ内に作ると `data/` が二重になり、どちらが正規データか不明になる。並列ブランチ開発の必要もないため、worktree は百害あって一利なし。
 
 ## Project
 
 - Stack: static HTML + CSS + JS, no build step
 - Data lives in `data/` (categories.json + questions/<level>/*.json)
 - localStorage schema version: `schemaVersion: 2` (`qqq_state_v1` key)
-- 変更はすべてパッチとして提示して。  
+- 変更はすべてパッチとして提示して。
 - ファイル編集だけ自動で進めていい。

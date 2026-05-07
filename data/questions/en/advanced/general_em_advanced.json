@@ -1,0 +1,40 @@
+{
+  "category": "General Emergency Medicine",
+  "questions": [
+    {
+      "id": "general_em_advanced_001",
+      "question": "Which drug combination is most appropriate for rapid sequence intubation (RSI)?",
+      "choices": [
+        "Ketamine (sedation) + rocuronium 1.2 mg/kg (paralysis)",
+        "Midazolam (sedation) + succinylcholine 0.1 mg/kg (paralysis)",
+        "Propofol 5 mg/kg (sedation) + rocuronium 0.3 mg/kg (paralysis)",
+        "Atropine alone to suppress airway reflexes, then intubate",
+        "Fentanyl alone for sedation, followed by awake intubation without paralysis"
+      ],
+      "selectCount": 1,
+      "explanation": "RSI pairs a sedative with a neuromuscular blocking agent. Ketamine (1–2 mg/kg) provides rapid sedation and analgesia while maintaining hemodynamics. Rocuronium 1.2 mg/kg achieves full paralysis in ~60–90 seconds and is reversible with sugammadex. Succinylcholine's standard RSI dose is 1–1.5 mg/kg (not 0.1 mg/kg). Propofol 5 mg/kg risks severe cardiovascular depression. Rocuronium 0.3 mg/kg is an intubating dose insufficient for RSI, and atropine or fentanyl alone does not provide reliable conditions for intubation.",
+      "answers": [
+        0
+      ]
+    },
+    {
+      "id": "general_em_advanced_002",
+      "question": "Select all findings that are important in the initial assessment of shock.",
+      "choices": [
+        "Systolic blood pressure <90 mmHg suggests shock",
+        "Serum lactate ≥2 mmol/L indicates tissue hypoperfusion",
+        "Tachycardia is an important compensatory response to shock",
+        "Urine output <0.5 mL/kg/hr suggests inadequate organ perfusion",
+        "Warm skin and absence of diaphoresis exclude circulatory failure"
+      ],
+      "answers": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "selectCount": 0,
+      "explanation": "Shock assessment integrates blood pressure, heart rate, lactate, urine output, and peripheral perfusion. SBP <90 mmHg, lactate ≥2 mmol/L, tachycardia, and oliguria (<0.5 mL/kg/hr) are all key indicators of shock. However, compensated shock may maintain normal blood pressure, so no single parameter is definitive. Warm skin does NOT exclude circulatory failure — distributive shock (early sepsis) often presents with warm, flushed skin."
+    }
+  ]
+}

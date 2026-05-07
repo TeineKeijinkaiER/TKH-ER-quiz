@@ -20,7 +20,7 @@
     "level": "basic",
     "name": "めまい/脳卒中",
     "description": "中枢性めまい、脳卒中初期対応、HINTS",
-    "file": "questions/ja/basic/vertigo_stroke.json",
+    "file": "questions/ja/basic/vertigo_stroke_basic.json",
     "accent": "#0f766e"
   },
   {
@@ -28,7 +28,7 @@
     "level": "basic",
     "name": "整形外傷",
     "description": "開放骨折、コンパートメント、神経血管評価",
-    "file": "questions/ja/basic/orthopedic_trauma.json",
+    "file": "questions/ja/basic/orthopedic_trauma_basic.json",
     "accent": "#b45309"
   },
   {
@@ -36,7 +36,7 @@
     "level": "basic",
     "name": "感染症",
     "description": "抗菌薬適正使用、髄膜炎、尿路感染、壊死性筋膜炎",
-    "file": "questions/ja/basic/infection.json",
+    "file": "questions/ja/basic/infection_basic.json",
     "accent": "#15803d"
   },
   {
@@ -44,7 +44,7 @@
     "level": "basic",
     "name": "消化器症状",
     "description": "腹痛、消化管出血、胆道感染、膵炎",
-    "file": "questions/ja/basic/gi_symptoms.json",
+    "file": "questions/ja/basic/gi_symptoms_basic.json",
     "accent": "#be123c"
   },
   {
@@ -52,7 +52,7 @@
     "level": "basic",
     "name": "救急外来薬剤投与",
     "description": "アドレナリン、ベンゾジアゼピン、解毒、電解質補正",
-    "file": "questions/ja/basic/emergency_medications.json",
+    "file": "questions/ja/basic/emergency_medications_basic.json",
     "accent": "#7c2d12"
   },
   {
@@ -60,7 +60,7 @@
     "level": "basic",
     "name": "敗血症",
     "description": "初期認識、抗菌薬、循環管理、ソースコントロール",
-    "file": "questions/ja/basic/sepsis.json",
+    "file": "questions/ja/basic/sepsis_basic.json",
     "accent": "#087f8c"
   },
   {
@@ -68,7 +68,7 @@
     "level": "basic",
     "name": "重症外傷",
     "description": "Primary survey、出血制御、胸腹部外傷、蘇生戦略",
-    "file": "questions/ja/basic/trauma.json",
+    "file": "questions/ja/basic/trauma_basic.json",
     "accent": "#b45309"
   },
   {
@@ -76,7 +76,7 @@
     "level": "basic",
     "name": "内分泌救急",
     "description": "DKA/HHS、副腎クリーゼ、甲状腺クリーゼ、電解質",
-    "file": "questions/ja/basic/endocrine.json",
+    "file": "questions/ja/basic/endocrine_basic.json",
     "accent": "#6d5bd0"
   },
   {
@@ -84,7 +84,7 @@
     "level": "basic",
     "name": "心肺蘇生",
     "description": "高品質CPR、除細動、薬剤、可逆的原因",
-    "file": "questions/ja/basic/cpr.json",
+    "file": "questions/ja/basic/cpr_basic.json",
     "accent": "#c2413b"
   },
   {
@@ -156,7 +156,7 @@
     "level": "basic",
     "name": "小児救急",
     "description": "小児の緊急医療対応、薬剤投与、蘇生戦略",
-    "file": "questions/ja/basic/pediatric.json",
+    "file": "questions/ja/basic/pediatric_basic.json",
     "accent": "#c2413b"
   },
   {
@@ -164,7 +164,47 @@
     "level": "basic",
     "name": "循環器救急",
     "description": "循環器疾患の救急対応",
-    "file": "questions/ja/basic/cardiology.json",
+    "file": "questions/ja/basic/cardiology_basic.json",
     "accent": "#c2413b"
+  },
+  {
+    "id": "toxicology_basic",
+    "level": "basic",
+    "name": "中毒",
+    "description": "中毒の初期対応、解毒薬、主要中毒物質",
+    "file": "questions/ja/basic/toxicology_basic.json",
+    "accent": "#5f2d91"
+  },
+  {
+    "id": "general_em_basic",
+    "level": "basic",
+    "name": "救急医学全般",
+    "description": "BLS、一次評価、トリアージ、基本的ER対応",
+    "file": "questions/ja/basic/general_em_basic.json",
+    "accent": "#1d4ed8"
+  },
+  {
+    "id": "toxicology_advanced",
+    "level": "advanced",
+    "name": "中毒",
+    "description": "三環系抗うつ薬、カルシウム拮抗薬、有機リン中毒の高度管理",
+    "file": "questions/ja/advanced/toxicology_advanced.json",
+    "accent": "#5f2d91"
+  },
+  {
+    "id": "general_em_advanced",
+    "level": "advanced",
+    "name": "救急医学全般",
+    "description": "RSI、ショック管理、急性期対応の応用",
+    "file": "questions/ja/advanced/general_em_advanced.json",
+    "accent": "#1d4ed8"
+  },
+  {
+    "id": "general_em_master",
+    "level": "master",
+    "name": "救急医学全般",
+    "description": "肺保護換気、ECPR、超急性期集中治療",
+    "file": "questions/ja/master/general_em_master.json",
+    "accent": "#1d4ed8"
   }
 ]

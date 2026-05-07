@@ -1,0 +1,40 @@
+{
+  "category": "General Emergency Medicine",
+  "questions": [
+    {
+      "id": "general_em_master_001",
+      "question": "Which ventilator settings best represent lung-protective ventilation for ARDS?",
+      "choices": [
+        "Tidal volume 6 mL/kg predicted body weight (PBW), plateau pressure ≤30 cmH2O",
+        "Tidal volume 10 mL/kg actual body weight, plateau pressure ≤40 cmH2O",
+        "PEEP 0 cmH2O with spontaneous breathing prioritized",
+        "Always normalize PaCO2 to 35–45 mmHg",
+        "FiO2 1.0 continuously to maintain PaO2 ≥150 mmHg"
+      ],
+      "selectCount": 1,
+      "explanation": "Lung-protective ventilation in ARDS (ARDSnet trial) uses a tidal volume of 6 mL/kg predicted body weight (not actual body weight) and targets plateau pressure ≤30 cmH2O, demonstrating improved mortality. Appropriate PEEP prevents alveolar collapse. Permissive hypercapnia (mild CO2 elevation) is acceptable to achieve low tidal volumes. Prolonged high FiO2 risks oxygen toxicity; target SpO2 88–95% (PaO2 55–80 mmHg) is standard.",
+      "answers": [
+        0
+      ]
+    },
+    {
+      "id": "general_em_master_002",
+      "question": "Select all criteria that represent appropriate indications for ECPR (extracorporeal CPR) in refractory ventricular fibrillation.",
+      "choices": [
+        "Witnessed sudden cardiac arrest",
+        "Refractory VF persisting after at least 3 defibrillation attempts despite standard ACLS",
+        "Suspected reversible cause such as hypothermia or drug toxicity",
+        "Reasonable likelihood of survival with good neurological outcome given age and comorbidities",
+        "Pulseless electrical activity (PEA) and asystole are absolute contraindications to ECPR"
+      ],
+      "answers": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "selectCount": 0,
+      "explanation": "ECPR criteria vary by institution but generally include: witnessed arrest, refractory VF/VT unresponsive to standard ACLS, presence of reversible causes (hypothermia, drug toxicity, pulmonary embolism), and a reasonable expectation of neurologically intact survival. PEA and asystole are NOT absolute contraindications — certain reversible causes (pulmonary embolism, hypothermia) may still qualify for ECPR. Institutional protocols should guide individual case decisions."
+    }
+  ]
+}

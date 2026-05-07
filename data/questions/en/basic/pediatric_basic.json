@@ -11,9 +11,11 @@
         "When acute metabolic or toxic causes such as hypoglycemia, electrolyte abnormalities, or poisoning are suspected, evaluate for causes other than febrile seizure",
         "A 1-month-old neonate who has a seizure at 37.5°C is treated as a typical febrile seizure"
       ],
-      "answer": 4,
       "selectCount": 1,
-      "explanation": "Febrile seizure is generally defined as a seizure associated with fever ≥38°C occurring primarily in children aged 6 months to 5 years. Before making the diagnosis, CNS infections such as meningitis/encephalitis, acute causes such as hypoglycemia, electrolyte abnormalities, or poisoning, and a history of afebrile seizures must be excluded. A 1-month-old neonate or a seizure at approximately 37.5°C should not be treated as a typical febrile seizure; serious conditions including severe infection must be evaluated."
+      "explanation": "Febrile seizure is generally defined as a seizure associated with fever ≥38°C occurring primarily in children aged 6 months to 5 years. Before making the diagnosis, CNS infections such as meningitis/encephalitis, acute causes such as hypoglycemia, electrolyte abnormalities, or poisoning, and a history of afebrile seizures must be excluded. A 1-month-old neonate or a seizure at approximately 37.5°C should not be treated as a typical febrile seizure; serious conditions including severe infection must be evaluated.",
+      "answers": [
+        4
+      ]
     },
     {
       "id": "pediatric_basic_002",
@@ -25,9 +27,13 @@
         "Hemiplegia persisting after the seizure",
         "Focal seizure"
       ],
-      "answer": [0, 1, 2],
       "selectCount": 3,
-      "explanation": "Simple febrile seizures are generally generalized, last less than 15 minutes, do not recur within 24 hours, and leave no obvious neurological deficits after the episode. Focal seizures, duration ≥15 minutes, recurrence within 24 hours, or postictal paresis are features of complex febrile seizures or other diagnoses."
+      "explanation": "Simple febrile seizures are generally generalized, last less than 15 minutes, do not recur within 24 hours, and leave no obvious neurological deficits after the episode. Focal seizures, duration ≥15 minutes, recurrence within 24 hours, or postictal paresis are features of complex febrile seizures or other diagnoses.",
+      "answers": [
+        0,
+        1,
+        2
+      ]
     },
     {
       "id": "pediatric_basic_003",
@@ -39,8 +45,14 @@
         "Antipyretics are useful for reducing discomfort but do not completely prevent febrile seizure recurrence",
         "Start long-term antiepileptic medication in all cases of simple febrile seizure"
       ],
-      "answer": [0, 1, 2, 3],
-      "explanation": "If the child is in good condition after a simple febrile seizure, the cause of fever can be evaluated and the patient discharged after explaining recurrence management to caregivers. Placing objects in the mouth during a seizure is dangerous. Antipyretics reduce discomfort but do not guarantee recurrence prevention. Long-term antiepileptic medication is not required for all cases."
+      "explanation": "If the child is in good condition after a simple febrile seizure, the cause of fever can be evaluated and the patient discharged after explaining recurrence management to caregivers. Placing objects in the mouth during a seizure is dangerous. Antipyretics reduce discomfort but do not guarantee recurrence prevention. Long-term antiepileptic medication is not required for all cases.",
+      "answers": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "selectCount": 0
     },
     {
       "id": "pediatric_basic_004",
@@ -52,9 +64,11 @@
         "After administration, monitor for adverse effects such as somnolence, unsteadiness, and respiratory depression",
         "Using diazepam suppositories eliminates the need to evaluate for meningitis or encephalitis"
       ],
-      "answer": 4,
       "selectCount": 1,
-      "explanation": "Diazepam suppositories are effective for fever-triggered recurrence prevention but have side effects and should not be used routinely in all cases. When used, the standard dose is approximately 0.4–0.5 mg/kg per dose. Using diazepam does not eliminate the need to evaluate for serious conditions such as meningitis or encephalitis."
+      "explanation": "Diazepam suppositories are effective for fever-triggered recurrence prevention but have side effects and should not be used routinely in all cases. When used, the standard dose is approximately 0.4–0.5 mg/kg per dose. Using diazepam does not eliminate the need to evaluate for serious conditions such as meningitis or encephalitis.",
+      "answers": [
+        4
+      ]
     },
     {
       "id": "pediatric_basic_005",
@@ -66,9 +80,11 @@
         "Bacterial tracheitis, acute epiglottitis, foreign body, and anaphylaxis are differential diagnoses",
         "In a child with inspiratory stridor, first strongly stimulate the pharynx to visualize the epiglottis"
       ],
-      "answer": 4,
       "selectCount": 1,
-      "explanation": "Croup typically presents with barking cough, hoarseness, and inspiratory stridor. Strongly stimulating the pharynx in a child with possible acute epiglottitis is dangerous because it can worsen airway obstruction. Prioritize airway assessment, oxygen administration, and maintaining the child's comfort."
+      "explanation": "Croup typically presents with barking cough, hoarseness, and inspiratory stridor. Strongly stimulating the pharynx in a child with possible acute epiglottitis is dangerous because it can worsen airway obstruction. Prioritize airway assessment, oxygen administration, and maintaining the child's comfort.",
+      "answers": [
+        4
+      ]
     },
     {
       "id": "pediatric_basic_006",
@@ -80,8 +96,14 @@
         "After epinephrine nebulization, observe for rebound worsening as the effect may be transient",
         "Corticosteroids are contraindicated in croup, and antibiotics should be given to all patients"
       ],
-      "answer": [0, 1, 2, 3],
-      "explanation": "Corticosteroids are the cornerstone of croup treatment. Dexamethasone is used as a single dose in the range of 0.15–0.6 mg/kg. For moderate or severe cases with stridor at rest or retractions, nebulized epinephrine is considered. In Japan, 0.1% L-epinephrine 0.1–0.3 mL diluted in 2 mL normal saline is used for nebulization; some institutions use 0.01 mL/kg by weight, but a fixed dose of 0.3 mL is sometimes applied due to variable inhalation efficiency. Because the effect of nebulized epinephrine is transient, observe for rebound after administration. Antibiotics are not required in all cases."
+      "explanation": "Corticosteroids are the cornerstone of croup treatment. Dexamethasone is used as a single dose in the range of 0.15–0.6 mg/kg. For moderate or severe cases with stridor at rest or retractions, nebulized epinephrine is considered. In Japan, 0.1% L-epinephrine 0.1–0.3 mL diluted in 2 mL normal saline is used for nebulization; some institutions use 0.01 mL/kg by weight, but a fixed dose of 0.3 mL is sometimes applied due to variable inhalation efficiency. Because the effect of nebulized epinephrine is transient, observe for rebound after administration. Antibiotics are not required in all cases.",
+      "answers": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "selectCount": 0
     },
     {
       "id": "pediatric_basic_007",
@@ -93,9 +115,13 @@
         "If severe respiratory distress is present but wheeze is faint on auscultation, classify as mild and discharge",
         "Prioritize antitussive agents over β2 agonist inhalation during an attack"
       ],
-      "answer": [0, 1, 2],
       "selectCount": 3,
-      "explanation": "For a pediatric asthma attack, assess hypoxia, work of breathing, level of consciousness, and ability to speak or feed; provide oxygen and short-acting β2 agonist inhalation. In severe attacks, decreased air entry may cause faint wheezing — which is actually a danger sign, not a reassuring finding. Antitussive agents are not the mainstay of initial treatment."
+      "explanation": "For a pediatric asthma attack, assess hypoxia, work of breathing, level of consciousness, and ability to speak or feed; provide oxygen and short-acting β2 agonist inhalation. In severe attacks, decreased air entry may cause faint wheezing — which is actually a danger sign, not a reassuring finding. Antitussive agents are not the mainstay of initial treatment.",
+      "answers": [
+        0,
+        1,
+        2
+      ]
     },
     {
       "id": "pediatric_basic_008",
@@ -107,9 +133,11 @@
         "For moderate or severe attacks or insufficient response, consider systemic corticosteroids such as prednisolone 1–2 mg/kg/day",
         "Because β2 agonist inhalation may cause palpitations, oxygen administration and inhalation therapy are contraindicated even when SpO2 is low"
       ],
-      "answer": 4,
       "selectCount": 1,
-      "explanation": "Ventolin inhalation solution 0.5% is salbutamol 5 mg/mL. JPGL2023 recommends approximately 0.3 mL for infants/young children and 0.3–0.5 mL for school-age children and older. Note that the approved dose for children per the package insert is up to 0.3 mL. In clinical practice, Ventolin 0.5% 0.3 mL diluted in normal saline is used for nebulization in infants and young children; for older children, 0.3–0.5 mL may be used based on severity, size, and inhalation efficiency. When hypoxia is present, oxygen should be provided and short-acting β2 agonist inhalation initiated as the cornerstone of treatment. Palpitations, tremor, tachycardia, and hypokalemia should be monitored, but they do not make oxygen or inhalation therapy contraindicated when hypoxia is present."
+      "explanation": "Ventolin inhalation solution 0.5% is salbutamol 5 mg/mL. JPGL2023 recommends approximately 0.3 mL for infants/young children and 0.3–0.5 mL for school-age children and older. Note that the approved dose for children per the package insert is up to 0.3 mL. In clinical practice, Ventolin 0.5% 0.3 mL diluted in normal saline is used for nebulization in infants and young children; for older children, 0.3–0.5 mL may be used based on severity, size, and inhalation efficiency. When hypoxia is present, oxygen should be provided and short-acting β2 agonist inhalation initiated as the cornerstone of treatment. Palpitations, tremor, tachycardia, and hypokalemia should be monitored, but they do not make oxygen or inhalation therapy contraindicated when hypoxia is present.",
+      "answers": [
+        4
+      ]
     },
     {
       "id": "pediatric_basic_009",
@@ -121,8 +149,14 @@
         "Use benzodiazepines as the first-line agent",
         "During the seizure, put a finger in the mouth and pull the tongue to prevent aspiration"
       ],
-      "answer": [0, 1, 2, 3],
-      "explanation": "A seizure lasting ≥5 minutes is treated as established or impending status epilepticus and intervention is started. Perform ABCD assessment, oxygen, suction, monitoring, blood glucose measurement, IV or IO access, and administer benzodiazepines as first-line therapy. Placing fingers in the mouth during a seizure is dangerous."
+      "explanation": "A seizure lasting ≥5 minutes is treated as established or impending status epilepticus and intervention is started. Perform ABCD assessment, oxygen, suction, monitoring, blood glucose measurement, IV or IO access, and administer benzodiazepines as first-line therapy. Placing fingers in the mouth during a seizure is dangerous.",
+      "answers": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "selectCount": 0
     },
     {
       "id": "pediatric_basic_010",
@@ -134,9 +168,11 @@
         "After benzodiazepine administration, monitor for respiratory depression, hypotension, and airway obstruction, and prepare for ventilatory support",
         "If the initial benzodiazepine dose fails to stop the seizure, administer additional doses repeatedly without limit and without checking respiratory status"
       ],
-      "answer": 4,
       "selectCount": 1,
-      "explanation": "Benzodiazepines are first-line for status epilepticus, but respiratory and circulatory depression require vigilance, and ventilatory support and intubation should be prepared. If the first dose fails to stop the seizure, unlimited repeated dosing is dangerous; after an appropriate number of additional doses, consider second-line therapy such as fosphenytoin, levetiracetam, or phenobarbital, and seek specialist consultation. Midazolam IV is used at 0.1–0.2 mg/kg, targeting 0.15 mg/kg. Non-IV routes such as buccal midazolam are options when IV access is difficult."
+      "explanation": "Benzodiazepines are first-line for status epilepticus, but respiratory and circulatory depression require vigilance, and ventilatory support and intubation should be prepared. If the first dose fails to stop the seizure, unlimited repeated dosing is dangerous; after an appropriate number of additional doses, consider second-line therapy such as fosphenytoin, levetiracetam, or phenobarbital, and seek specialist consultation. Midazolam IV is used at 0.1–0.2 mg/kg, targeting 0.15 mg/kg. Non-IV routes such as buccal midazolam are options when IV access is difficult.",
+      "answers": [
+        4
+      ]
     },
     {
       "id": "pediatric_basic_011",
@@ -148,9 +184,13 @@
         "Ventilation is unnecessary in pediatric cardiac arrest; chest compressions alone should be continued for 30 minutes",
         "Minimize interruptions to chest compressions"
       ],
-      "answer": [0, 1, 2],
       "selectCount": 3,
-      "explanation": "High-quality CPR is critical in pediatric cardiac arrest. Focus on compression depth of 1/3 of the anterior-posterior chest diameter, rate of 100–120/min, full chest recoil, and minimizing interruptions. A 15:2 ratio is used for pre-pubertal children with 2 rescuers. This question selects 3 answers, so choices 0–2 are correct. Minimizing compression interruptions is also correct but the question requires selecting only 3."
+      "explanation": "High-quality CPR is critical in pediatric cardiac arrest. Focus on compression depth of 1/3 of the anterior-posterior chest diameter, rate of 100–120/min, full chest recoil, and minimizing interruptions. A 15:2 ratio is used for pre-pubertal children with 2 rescuers. This question selects 3 answers, so choices 0–2 are correct. Minimizing compression interruptions is also correct but the question requires selecting only 3.",
+      "answers": [
+        0,
+        1,
+        2
+      ]
     },
     {
       "id": "pediatric_basic_012",
@@ -162,8 +202,14 @@
         "After defibrillation, immediately resume CPR and minimize interruptions to chest compressions",
         "Searching for reversible causes is unnecessary in pediatric cardiac arrest"
       ],
-      "answer": [0, 1, 2, 3],
-      "explanation": "In pediatric cardiac arrest, epinephrine 0.01 mg/kg is given IV or IO. For a 10 kg child: 0.01 mg/kg × 10 kg = 0.1 mg. Epinephrine 0.1% (1 mg/mL) diluted 10-fold gives 0.1 mg/mL, so 0.1 mg corresponds to 1 mL for this child. For VF/pulseless VT, defibrillate at 2 J/kg initially, then 4 J/kg. After defibrillation, do not pause long to check pulse; resume CPR immediately. Reversible causes should be identified and treated: hypoxia, hypovolemia, hypoglycemia, electrolyte abnormalities, hypothermia, tension pneumothorax, cardiac tamponade, toxins, and thrombosis."
+      "explanation": "In pediatric cardiac arrest, epinephrine 0.01 mg/kg is given IV or IO. For a 10 kg child: 0.01 mg/kg × 10 kg = 0.1 mg. Epinephrine 0.1% (1 mg/mL) diluted 10-fold gives 0.1 mg/mL, so 0.1 mg corresponds to 1 mL for this child. For VF/pulseless VT, defibrillate at 2 J/kg initially, then 4 J/kg. After defibrillation, do not pause long to check pulse; resume CPR immediately. Reversible causes should be identified and treated: hypoxia, hypovolemia, hypoglycemia, electrolyte abnormalities, hypothermia, tension pneumothorax, cardiac tamponade, toxins, and thrombosis.",
+      "answers": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "selectCount": 0
     }
   ]
 }

@@ -11,7 +11,11 @@
         "In anaphylaxis with hypotension, epinephrine 1 mg should be given as a rapid IV bolus from the outset",
         "Antihistamines should be given first, with epinephrine IM reserved for cases where they are insufficient"
       ],
-      "answers": [0, 1, 2],
+      "answers": [
+        0,
+        1,
+        2
+      ],
       "selectCount": 3,
       "explanation": "Intramuscular epinephrine is the first-line treatment for anaphylaxis. In adults, 0.3–0.5 mg and in children 0.01 mg/kg are given IM into the anterolateral thigh; repeat dosing every 5–15 minutes should be considered if the response is inadequate. A 1 mg rapid IV bolus is the dose used for cardiac arrest and is not appropriate for initial anaphylaxis management. Antihistamines are adjunctive therapy and must not delay IM epinephrine."
     },
@@ -25,7 +29,11 @@
         "Administer ATP 20 mg diluted in 5% dextrose by slow IV infusion over 30 minutes from the outset",
         "For irregular wide-QRS tachycardia, ATP is also the first choice and may be repeated in the same way as for regular narrow-QRS tachycardia"
       ],
-      "answers": [0, 1, 2],
+      "answers": [
+        0,
+        1,
+        2
+      ],
       "selectCount": 3,
       "explanation": "In Japan, ATP preparations are typically used to terminate PSVT. For stable regular narrow-QRS tachycardia, vagal maneuvers should be attempted first, followed by ATP 10 mg as a rapid IV bolus with an immediate saline flush. If ineffective, a repeat dose of ATP 20 mg may be considered. Because ATP has an extremely short half-life, slow or infusion-based administration is unlikely to terminate the arrhythmia. Administration should be performed under continuous ECG monitoring, observing for transient AV block, post-termination rhythm, and adverse effects. For irregular wide-QRS tachycardia, the differential includes AF with bundle branch block or accessory pathway conduction, ventricular tachycardia, and polymorphic VT; treating it the same way as regular narrow-QRS tachycardia with repeated ATP is inappropriate."
     },
@@ -39,8 +47,12 @@
         "Considering vagal maneuvers followed by ATP for stable regular narrow-QRS tachycardia with suspected PSVT",
         "Preparing for electrical therapy in unstable tachycardia with altered consciousness or shock"
       ],
-      "answers": [0, 1],
-      "explanation": "In atrial fibrillation associated with WPW syndrome, agents that suppress the AV node — such as verapamil, diltiazem, and digoxin — are contraindicated because they can increase ventricular response via the accessory pathway and precipitate ventricular fibrillation. For hemodynamically unstable tachycardia, synchronized cardioversion should be prioritized. For stable regular narrow-QRS tachycardia, vagal maneuvers and ATP may be considered."
+      "answers": [
+        0,
+        1
+      ],
+      "explanation": "In atrial fibrillation associated with WPW syndrome, agents that suppress the AV node — such as verapamil, diltiazem, and digoxin — are contraindicated because they can increase ventricular response via the accessory pathway and precipitate ventricular fibrillation. For hemodynamically unstable tachycardia, synchronized cardioversion should be prioritized. For stable regular narrow-QRS tachycardia, vagal maneuvers and ATP may be considered.",
+      "selectCount": 0
     },
     {
       "id": "emergency_medications_basic_004",
@@ -52,7 +64,11 @@
         "Even in patients with a history of closed-angle glaucoma, a single dose of butylscopolamine can be used safely",
         "In acute abdominal presentations with peritoneal signs, antispasmodics are the first-line analgesic"
       ],
-      "answers": [0, 1, 2],
+      "answers": [
+        0,
+        1,
+        2
+      ],
       "selectCount": 3,
       "explanation": "Butylscopolamine has anticholinergic properties and is contraindicated or should be avoided in closed-angle glaucoma, paralytic ileus, mechanical GI obstruction, and myasthenia gravis. In acute abdominal presentations, analgesics such as acetaminophen are generally the first-line agents; antispasmodics play an adjunctive role."
     },
@@ -66,8 +82,14 @@
         "Flumazenil should be used with caution or avoided when co-ingestion of seizure-provoking agents such as tricyclic antidepressants is suspected",
         "In drug-induced altered consciousness, flumazenil should be given routinely even when the cause is unknown"
       ],
-      "answers": [0, 1, 2, 3],
-      "explanation": "In benzodiazepine toxicity, the initial priority is airway, breathing, and circulatory assessment followed by supportive care. Flumazenil is a benzodiazepine antagonist, but routine use in acute poisoning is not recommended. It may be cautiously considered in situations with low risk of chronic use, mixed overdose, or seizures — such as iatrogenic oversedation or accidental pediatric ingestion. In the setting of chronic use, unknown mixed overdose, co-ingestion of tricyclic antidepressants or other proconvulsant agents, or prior seizure history, flumazenil can precipitate withdrawal seizures or arrhythmias and should be used with caution."
+      "answers": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "explanation": "In benzodiazepine toxicity, the initial priority is airway, breathing, and circulatory assessment followed by supportive care. Flumazenil is a benzodiazepine antagonist, but routine use in acute poisoning is not recommended. It may be cautiously considered in situations with low risk of chronic use, mixed overdose, or seizures — such as iatrogenic oversedation or accidental pediatric ingestion. In the setting of chronic use, unknown mixed overdose, co-ingestion of tricyclic antidepressants or other proconvulsant agents, or prior seizure history, flumazenil can precipitate withdrawal seizures or arrhythmias and should be used with caution.",
+      "selectCount": 0
     }
   ]
 }

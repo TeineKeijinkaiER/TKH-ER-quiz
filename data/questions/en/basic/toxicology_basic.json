@@ -1,0 +1,39 @@
+{
+  "category": "Toxicology",
+  "questions": [
+    {
+      "id": "toxicology_basic_001",
+      "question": "Which statement about acetaminophen (paracetamol) overdose is correct?",
+      "choices": [
+        "Hepatic failure and jaundice appear immediately after ingestion",
+        "The Rumack-Matthew nomogram uses serum levels drawn ≥4 hours post-ingestion to determine the need for N-acetylcysteine (NAC)",
+        "The antidote is flumazenil",
+        "Antidote therapy is unnecessary if more than 24 hours have passed since ingestion",
+        "Hemodialysis is the first-line antidotal treatment"
+      ],
+      "selectCount": 1,
+      "explanation": "In acetaminophen overdose, patients are typically asymptomatic or have mild nausea/vomiting immediately after ingestion; hepatotoxicity usually manifests 24–72 hours later. The Rumack-Matthew nomogram uses serum acetaminophen levels drawn ≥4 hours after ingestion to determine NAC need. The antidote is NAC (not flumazenil, which reverses benzodiazepines). NAC should be continued even beyond 24 hours if hepatotoxicity is present.",
+      "answers": [
+        1
+      ]
+    },
+    {
+      "id": "toxicology_basic_002",
+      "question": "Select 3 signs that are characteristic of organophosphate poisoning.",
+      "choices": [
+        "Miosis (due to muscarinic stimulation)",
+        "Increased bronchial secretions and bronchospasm",
+        "Bradycardia",
+        "Mydriasis and dry skin",
+        "Hyperthermia and anhidrosis"
+      ],
+      "answers": [
+        0,
+        1,
+        2
+      ],
+      "selectCount": 3,
+      "explanation": "Organophosphates inhibit acetylcholinesterase, producing muscarinic effects (SLUDGE: salivation, lacrimation, urination, defecation, GI distress, emesis; plus miosis, increased bronchial secretions, bradycardia) and nicotinic effects (muscle fasciculations, weakness). Mydriasis, dry skin, and hyperthermia are signs of anticholinergic (atropine-type) toxidrome, not organophosphate poisoning. Treatment is high-dose atropine and early pralidoxime (2-PAM)."
+    }
+  ]
+}

@@ -1,0 +1,40 @@
+{
+  "category": "General Emergency Medicine",
+  "questions": [
+    {
+      "id": "general_em_basic_001",
+      "question": "What is the first step in BLS (Basic Life Support) for an adult out-of-hospital cardiac arrest?",
+      "choices": [
+        "Begin chest compressions immediately",
+        "Attach an AED and follow its prompts",
+        "Confirm scene safety, assess responsiveness and breathing, then call 119 and request an AED",
+        "Begin mouth-to-mouth rescue breathing",
+        "Check for a carotid pulse"
+      ],
+      "selectCount": 1,
+      "explanation": "The first step in BLS is to ensure scene safety, then assess responsiveness and breathing. If cardiac arrest is suspected, immediately call for emergency services and an AED, then begin high-quality chest compressions. Lay rescuers prioritize compressions; trained providers use a 30:2 compression-to-ventilation ratio. Checking the carotid pulse is a step for healthcare providers, not required of lay rescuers.",
+      "answers": [
+        2
+      ]
+    },
+    {
+      "id": "general_em_basic_002",
+      "question": "Select all components that are part of the primary survey in the emergency department.",
+      "choices": [
+        "A (Airway): Airway patency and maintenance",
+        "B (Breathing): Respiratory rate, oxygenation, and ventilation",
+        "C (Circulation): Hemorrhage control, hemodynamics, and peripheral perfusion",
+        "D (Disability): Level of consciousness, pupils, and blood glucose",
+        "L (Laboratory): Review of blood tests and imaging results"
+      ],
+      "answers": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "selectCount": 0,
+      "explanation": "The primary survey follows the ABCDE framework (Airway, Breathing, Circulation, Disability, Exposure) to rapidly identify and immediately treat life-threatening conditions. Laboratory and imaging results are deferred to the secondary survey or post-resuscitation phase. Each component requires immediate intervention when a problem is found before moving to the next step."
+    }
+  ]
+}
