@@ -1,0 +1,279 @@
+{
+  "category": "CPR",
+  "questions": [
+    {
+      "id": "cpr_basic_001",
+      "question": "Select three elements of high-quality CPR.",
+      "choices": [
+        "Chest compressions of adequate depth and rate",
+        "Full chest recoil",
+        "Minimize interruptions",
+        "Intentionally perform hyperventilation",
+        "Carefully check for a pulse for more than 30 seconds each time"
+      ],
+      "answers": [
+        0,
+        1,
+        2
+      ],
+      "selectCount": 3,
+      "explanation": "High-quality CPR requires adequate compressions, full recoil, and minimizing interruptions. Hyperventilation and prolonged interruptions should be avoided."
+    },
+    {
+      "id": "cpr_basic_002",
+      "question": "Select all appropriate priorities in managing cardiac arrest due to VF/pulseless VT.",
+      "choices": [
+        "Prioritize epinephrine administration over defibrillation",
+        "Resume CPR immediately after defibrillation",
+        "Use epinephrine and antiarrhythmic drugs if defibrillation is unsuccessful",
+        "Perform defibrillation while continuing chest compressions",
+        "Assess ECPR indications early"
+      ],
+      "answers": [
+        1,
+        2,
+        4
+      ],
+      "explanation": "In VF/pulseless VT, defibrillation is the top priority. CPR should be resumed immediately after defibrillation, and epinephrine and antiarrhythmic drugs used as needed. ECPR indications should be considered early."
+    },
+    {
+      "id": "cpr_basic_003",
+      "question": "Select three reversible causes included in the 5H5T framework for PEA/asystole.",
+      "choices": [
+        "Hypoxia",
+        "Hypovolemia",
+        "Subarachnoid hemorrhage",
+        "Hyperkalemia",
+        "Natural aging"
+      ],
+      "answers": [
+        0,
+        1,
+        3
+      ],
+      "selectCount": 3,
+      "explanation": "The reversible causes of PEA/asystole are the 5Hs (Hypoxia, Hypovolemia, Hypothermia, Hypo/Hyperkalemia, Acidosis) and 5Ts (Tamponade, Tension pneumothorax, Toxins, Thrombosis-pulmonary, Thrombosis-coronary)."
+    },
+    {
+      "id": "cpr_basic_005",
+      "question": "Select three correct actions when using an AED.",
+      "choices": [
+        "Place electrode pads in the correct positions",
+        "Confirm that no one is touching the patient during rhythm analysis and shock delivery",
+        "Resume chest compressions immediately after the shock",
+        "Stop all chest compressions while the AED is attached",
+        "Apply pads to a wet chest without drying it"
+      ],
+      "answers": [
+        0,
+        1,
+        2
+      ],
+      "selectCount": 3,
+      "explanation": "Correct pad placement, safety checks, and immediate CPR resumption after the shock are key when using an AED. Interruptions other than during analysis and shock delivery should be minimized."
+    },
+    {
+      "id": "cpr_basic_006",
+      "question": "An unresponsive adult patient is found on the ward. Select two correct initial assessments for a healthcare provider.",
+      "choices": [
+        "Check breathing and carotid pulse within 10 seconds",
+        "If agonal breathing is present, treat as breathing present and do not start CPR",
+        "If uncertain whether breathing is normal, start CPR",
+        "Check pulse at the radial artery",
+        "Always perform head-tilt chin-lift before checking breathing"
+      ],
+      "answers": [
+        0,
+        2
+      ],
+      "selectCount": 2,
+      "explanation": "Breathing and carotid pulse should be assessed within 10 seconds. Start CPR if in doubt or if agonal breathing is present."
+    },
+    {
+      "id": "cpr_basic_007",
+      "question": "Regarding chest compressions in adult cardiac arrest, select the ONE incorrect statement.",
+      "choices": [
+        "Compress the lower half of the sternum",
+        "Target a compression depth of approximately 5 cm, not exceeding 6 cm",
+        "Target a compression rate of 100–120 per minute",
+        "Full chest recoil is unnecessary",
+        "Continue chest compressions until just before ECG analysis/rhythm check"
+      ],
+      "answers": [
+        3
+      ],
+      "selectCount": 1,
+      "explanation": "Full chest recoil during chest compressions is essential and must not be omitted."
+    },
+    {
+      "id": "cpr_basic_008",
+      "question": "Regarding management of adult VF/pulseless VT, select all correct statements.",
+      "choices": [
+        "Resume CPR starting with chest compressions immediately after the shock",
+        "Check carotid pulse first after the shock",
+        "As a general rule, perform rhythm checks every 2 minutes thereafter",
+        "Use a manual defibrillator to deliver a shock for VF/pulseless VT",
+        "Withhold chest compressions until a QRS complex appears after the shock"
+      ],
+      "answers": [
+        0,
+        2,
+        3
+      ],
+      "explanation": "For VF/pulseless VT, resume CPR immediately after the shock and re-evaluate the rhythm approximately every 2 minutes."
+    },
+    {
+      "id": "cpr_basic_009",
+      "question": "Regarding vascular access for resuscitation drug administration in adult cardiac arrest, select the ONE correct statement.",
+      "choices": [
+        "Central venous access is faster than peripheral IV and is the first choice",
+        "Intraosseous access is for pediatric use only even when peripheral IV is difficult",
+        "When establishing new drug delivery access, peripheral IV is the first choice",
+        "Intraosseous access can only be used after ROSC",
+        "Endotracheal drug administration is still the standard first choice in adult ALS"
+      ],
+      "answers": [
+        2
+      ],
+      "selectCount": 1,
+      "explanation": "Peripheral IV access is the first choice for resuscitation drug delivery; intraosseous access is used when peripheral IV is difficult."
+    },
+    {
+      "id": "cpr_basic_010",
+      "question": "Regarding epinephrine in adult cardiac arrest, select the ONE incorrect statement.",
+      "choices": [
+        "The usual dose is 1 mg IV per administration",
+        "Repeat dosing every 3–5 minutes",
+        "For non-shockable rhythms, administer as early as possible when given",
+        "Improvements in ROSC rate and survival to hospital discharge have been demonstrated",
+        "It is strongly recommended because it clearly improves favorable neurological outcomes"
+      ],
+      "answers": [
+        4
+      ],
+      "selectCount": 1,
+      "explanation": "Epinephrine improves ROSC rate and survival to hospital discharge, but evidence for improvement in neurological outcomes is limited."
+    },
+    {
+      "id": "cpr_basic_011",
+      "question": "Regarding pharmacotherapy for refractory VF/pulseless VT, select three correct statements.",
+      "choices": [
+        "Consider amiodarone 300 mg IV",
+        "Antiarrhythmic drugs reliably improve favorable neurological outcomes",
+        "Nifekalant may be used if amiodarone is unavailable",
+        "Lidocaine may be used if amiodarone is unavailable",
+        "The initial dose of lidocaine is 0.1 mg/kg"
+      ],
+      "answers": [
+        0,
+        2,
+        3
+      ],
+      "selectCount": 3,
+      "explanation": "For refractory VF/pulseless VT, consider amiodarone; nifekalant or lidocaine may be used as alternatives."
+    },
+    {
+      "id": "cpr_basic_012",
+      "question": "Regarding advanced airway management during CPR, select two incorrect statements.",
+      "choices": [
+        "If BVM ventilation is adequate, continuing it is a reasonable option",
+        "Endotracheal intubation may be considered when success rates are high",
+        "Interruptions to chest compressions during intubation should be kept as brief as possible",
+        "Endotracheal intubation is always prioritized over BVM ventilation",
+        "After endotracheal intubation, deliver 2 rescue breaths every 30 chest compressions"
+      ],
+      "answers": [
+        3,
+        4
+      ],
+      "selectCount": 2,
+      "explanation": "Intubation is not always prioritized; after intubation, chest compressions and ventilation are performed asynchronously."
+    },
+    {
+      "id": "cpr_basic_013",
+      "question": "After successful endotracheal intubation in an adult cardiac arrest patient, select all correct statements regarding ventilation and chest compressions.",
+      "choices": [
+        "Continue chest compressions at 100–120 per minute",
+        "Target approximately 10 breaths per minute for ventilation",
+        "Perform chest compressions and ventilation asynchronously",
+        "Hyperventilation may reduce cardiac output by increasing intrathoracic pressure",
+        "Continue 30:2 ratio even after endotracheal intubation"
+      ],
+      "answers": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "explanation": "After advanced airway placement, continue chest compressions with asynchronous ventilation and avoid hyperventilation."
+    },
+    {
+      "id": "cpr_basic_014",
+      "question": "Immediately after endotracheal intubation during CPR, select two correct statements regarding tube position confirmation.",
+      "choices": [
+        "Ideally use waveform capnography in addition to physical examination findings",
+        "Waveform capnography cannot be used during resuscitation because exhaled CO₂ is minimal",
+        "It is preferable to combine multiple confirmation methods, such as ultrasound confirmation of endotracheal placement",
+        "Waveform capnography alone can also rule out endobronchial intubation",
+        "Auscultation alone is sufficient during CPR"
+      ],
+      "answers": [
+        0,
+        2
+      ],
+      "selectCount": 2,
+      "explanation": "It is preferable to use waveform capnography in addition to auscultation and ultrasound."
+    },
+    {
+      "id": "cpr_basic_015",
+      "question": "An adult cardiac arrest patient achieves ROSC. Select three incorrect statements regarding post-ROSC management.",
+      "choices": [
+        "Hypoxia should be avoided",
+        "Use 100% oxygen for 72 hours after resuscitation",
+        "Adjust ventilation to target PaCO₂ within the physiological normal range",
+        "Coma is a contraindication to emergent CAG/PCI",
+        "Administer antiepileptic drugs prophylactically to all patients to prevent seizures"
+      ],
+      "answers": [
+        1,
+        3,
+        4
+      ],
+      "selectCount": 3,
+      "explanation": "Excessive oxygen administration worsens outcomes; oxygen concentration should be adjusted appropriately once SpO₂ and PaO₂ can be confirmed. Coma is not a contraindication to PCI, and prophylactic antiepileptic drug administration is not recommended."
+    },
+    {
+      "id": "cpr_basic_016",
+      "question": "Regarding ECPR, select the single most appropriate statement.",
+      "choices": [
+        "It is performed routinely for all adult cardiac arrest patients",
+        "Assess ECPR indications before starting BLS",
+        "It may be considered for cases meeting certain criteria, such as witnessed ventricular fibrillation, where conventional CPR has not been successful",
+        "ECPR is always indicated for asystole",
+        "It is a treatment for post-ROSC hypoxia management"
+      ],
+      "answers": [
+        2
+      ],
+      "selectCount": 1,
+      "explanation": "ECPR is not performed for all patients; it is considered for cases that meet eligibility criteria."
+    },
+    {
+      "id": "cpr_basic_017",
+      "question": "Regarding targeted temperature management (TTM) after ROSC, select two correct statements.",
+      "choices": [
+        "TTM should be performed in comatose adults after ROSC following out-of-hospital VF cardiac arrest",
+        "The target temperature is uniformly 28°C",
+        "The target temperature is set within the range of 32–36°C",
+        "TTM is completed within 6 hours",
+        "Fever after completing TTM is unrelated to prognosis"
+      ],
+      "answers": [
+        0,
+        2
+      ],
+      "selectCount": 2,
+      "explanation": "TTM should be maintained at 32–36°C for at least 24 hours, and it is recommended to avoid fever even after completing TTM."
+    }
+  ]
+}

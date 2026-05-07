@@ -1,0 +1,211 @@
+{
+  "category": "Sepsis Advanced",
+  "questions": [
+    {
+      "id": "infection_basic_001",
+      "question": "In a patient with suspected sepsis, which ONE action has the highest priority in initial management?",
+      "choices": [
+        "Obtain blood cultures to the extent possible before antibiotic administration, then proceed with source evaluation and antibiotic therapy in parallel",
+        "Withhold antibiotic administration until the infection source is confirmed by imaging",
+        "If two sets of blood cultures cannot be drawn, skip cultures entirely and start antibiotics alone",
+        "Determine the breadth of antibiotic coverage primarily based on the degree of fever",
+        "Complete full-body CT before starting antibiotics"
+      ],
+      "answers": [0],
+      "selectCount": 1,
+      "explanation": "In suspected sepsis, obtain blood cultures and other cultures to the extent possible before antibiotic administration, then proceed with source evaluation and antibiotic therapy in parallel. Source investigation is important, but antibiotics and resuscitation must not be unnecessarily delayed in severe cases."
+    },
+    {
+      "id": "infection_basic_002",
+      "question": "Select THREE situations that suggest bacterial meningitis.",
+      "choices": [
+        "Fever, headache, and nuchal rigidity are present",
+        "Fever and altered mental status without a clear metabolic or drug-related cause",
+        "New-onset seizures with fever",
+        "New-onset back pain with fever and vertebral percussion tenderness",
+        "Fever and headache with similar symptoms in a family member"
+      ],
+      "answers": [0, 1, 2],
+      "selectCount": 3,
+      "explanation": "In bacterial meningitis, fever, headache, nuchal rigidity, altered mental status, and new-onset seizures are important findings. Absence of nuchal rigidity alone does not exclude the diagnosis. New-onset back pain with fever and vertebral percussion tenderness should prompt consideration of pyogenic spondylitis, epidural abscess, or pyelonephritis before bacterial meningitis. Fever with headache in the setting of similar symptoms in a family member is more suggestive of a viral illness and is not in itself strongly suggestive of bacterial meningitis. However, meningitis should not be excluded in the differential when altered mental status, seizures, meningeal signs, immunosuppression, or rapid deterioration are present."
+    },
+    {
+      "id": "infection_basic_003",
+      "question": "Select ALL correct statements about necrotizing soft tissue infections.",
+      "choices": [
+        "Pain disproportionate to skin findings is a trigger for suspicion",
+        "Rapid spread of erythema or swelling over a short time is a trigger for suspicion",
+        "Bullae, skin necrosis, and crepitus are important findings",
+        "Necrotizing soft tissue infection can be excluded if CT shows no gas",
+        "Surgical evaluation is generally unnecessary if the LRINEC score is low"
+      ],
+      "answers": [0, 1, 2],
+      "explanation": "Important features of necrotizing soft tissue infections include: pain disproportionate to skin findings, rapidly progressing erythema and swelling, bullae, skin necrosis, crepitus, and systemic toxicity. Even with no gas on CT or a low LRINEC score, the diagnosis cannot be excluded; early surgical evaluation is required when clinical suspicion is present."
+    },
+    {
+      "id": "infection_basic_004",
+      "question": "Select THREE correct statements about appropriate antibiotic use in sepsis management.",
+      "choices": [
+        "Select initial antibiotics based on site of infection, severity, patient background, and local/institutional epidemiology",
+        "Review prior resistant organism history and recent antibiotic use",
+        "Consider de-escalation based on culture results and clinical course",
+        "If broad-spectrum antibiotics were started initially, continue the same regimen through completion of therapy even if cultures are negative",
+        "Use fixed standard doses without adjusting for renal function or renal replacement therapy as a general rule"
+      ],
+      "answers": [0, 1, 2],
+      "selectCount": 3,
+      "explanation": "Initial antibiotic selection should be guided by site of infection, severity, patient background, local/institutional epidemiology, prior resistant organism history, and recent antibiotic use. Once culture results and clinical course are available, reassess whether narrowing or discontinuation is feasible. Dose adjustment based on renal function, body weight, fluid status, and renal replacement therapy is also important."
+    },
+    {
+      "id": "infection_basic_005",
+      "question": "Select the SINGLE MOST IMPORTANT finding suggesting severe or obstructive urinary tract infection.",
+      "choices": [
+        "Fever and flank pain combined with findings suggesting hydronephrosis or ureteral calculus",
+        "Leukocyturia on urinalysis without fever or local symptoms",
+        "Positive urine culture in a patient with an indwelling urinary catheter with stable general condition",
+        "Dysuria alone without fever or flank pain",
+        "Cloudy urine alone with stable vital signs"
+      ],
+      "answers": [0],
+      "selectCount": 1,
+      "explanation": "Fever and flank pain combined with findings suggesting urinary obstruction such as hydronephrosis or ureteral calculus indicate obstructive urinary tract infection, which carries a high risk of deterioration. In addition to antibiotics, consider obstruction relief/drainage via ureteral stent or nephrostomy. Positive urine culture or leukocyturia alone may represent asymptomatic bacteriuria or colonization."
+    },
+    {
+      "id": "infection_empiric_001",
+      "question": "According to J-SSCG 2024, which is the SINGLE MOST APPROPRIATE empiric treatment for community-acquired pneumonia with sepsis?",
+      "choices": [
+        "CTRX ± AZM",
+        "TAZ/PIPC + VCM",
+        "MEPM + MCFG",
+        "VCM + GM + RFP",
+        "TMP-SMX monotherapy"
+      ],
+      "answers": [0],
+      "selectCount": 1,
+      "explanation": "According to J-SSCG 2024, for community-acquired pneumonia covering Streptococcus pneumoniae, Haemophilus influenzae, Klebsiella, Mycoplasma, and Legionella, CTRX ± AZM is listed as the empiric treatment."
+    },
+    {
+      "id": "infection_empiric_002",
+      "question": "According to J-SSCG 2024, select THREE organisms expected as causative agents in healthcare-associated or ventilator-associated pneumonia.",
+      "choices": [
+        "Streptococcus pneumoniae",
+        "Pseudomonas aeruginosa",
+        "Staphylococcus aureus",
+        "Listeria monocytogenes",
+        "Orientia tsutsugamushi"
+      ],
+      "answers": [0, 1, 2],
+      "selectCount": 3,
+      "explanation": "According to J-SSCG 2024, healthcare-associated or ventilator-associated pneumonia is expected to involve Streptococcus pneumoniae, Escherichia coli, Pseudomonas aeruginosa, and Staphylococcus aureus. Listeria is considered in meningitis; rickettsial organisms are considered in septic shock with rash."
+    },
+    {
+      "id": "infection_empiric_003",
+      "question": "According to J-SSCG 2024, which is the SINGLE MOST APPROPRIATE empiric treatment for sepsis from community-acquired urinary tract infection with low ESBL-producing organism risk?",
+      "choices": [
+        "CTRX",
+        "VCM monotherapy",
+        "MINO monotherapy",
+        "MCFG monotherapy",
+        "RFP monotherapy"
+      ],
+      "answers": [0],
+      "selectCount": 1,
+      "explanation": "According to J-SSCG 2024, for community-acquired urinary tract infection with low ESBL risk targeting mainly Escherichia coli, CTRX is listed as the empiric treatment."
+    },
+    {
+      "id": "infection_empiric_004",
+      "question": "According to J-SSCG 2024, select ALL appropriate empiric treatments for sepsis from healthcare-associated biliary or intra-abdominal infection.",
+      "choices": [
+        "TAZ/PIPC",
+        "CFPM + MNZ",
+        "MEPM",
+        "Consider adding MCFG if Candida risk is present",
+        "CTRX monotherapy is sufficient"
+      ],
+      "answers": [0, 1, 2, 3],
+      "explanation": "According to J-SSCG 2024, for healthcare-associated biliary or intra-abdominal infection, targeting Escherichia coli, anaerobes, Enterobacter, Pseudomonas aeruginosa, Enterococcus, and Candida, TAZ/PIPC, CFPM + MNZ, and MEPM are listed. Adding MCFG is considered when Candida risk is present."
+    },
+    {
+      "id": "infection_empiric_005",
+      "question": "According to J-SSCG 2024, which is the SINGLE MOST APPROPRIATE empiric treatment for sepsis from necrotizing soft tissue infection after saltwater or freshwater exposure?",
+      "choices": [
+        "CTRX + MINO",
+        "CEZ monotherapy",
+        "VCM + RFP",
+        "ABPC + CTRX",
+        "MCFG monotherapy"
+      ],
+      "answers": [0],
+      "selectCount": 1,
+      "explanation": "According to J-SSCG 2024, for necrotizing soft tissue infection following saltwater or freshwater exposure, targeting Aeromonas and Vibrio species, CTRX + MINO is listed as the empiric treatment."
+    },
+    {
+      "id": "infection_empiric_006",
+      "question": "According to J-SSCG 2024, select THREE correct statements about spondylitis with sepsis.",
+      "choices": [
+        "In community-acquired cases, MSSA and streptococcal species are expected",
+        "In community-acquired cases, CEZ or CTRX are options",
+        "In healthcare-associated cases, CFPM + VCM is an option",
+        "MCFG monotherapy is the first-line choice for community-acquired cases",
+        "Rickettsial organisms are the primary target in healthcare-associated cases"
+      ],
+      "answers": [0, 1, 2],
+      "selectCount": 3,
+      "explanation": "According to J-SSCG 2024, community-acquired spondylitis targets MSSA, streptococcal species, and rarely Streptococcus pneumoniae or gram-negative rods, with CEZ or CTRX listed. Healthcare-associated spondylitis targets Staphylococcus aureus and gram-negative rods, with CFPM + VCM listed."
+    },
+    {
+      "id": "infection_empiric_007",
+      "question": "According to J-SSCG 2024, select ALL appropriate empiric treatments for native valve infective endocarditis without MRSA risk.",
+      "choices": [
+        "SBT/ABPC",
+        "CTRX + ABPC",
+        "CTRX + VCM",
+        "VCM + GM ± RFP",
+        "MINO monotherapy"
+      ],
+      "answers": [0, 1],
+      "explanation": "According to J-SSCG 2024, for native valve infective endocarditis without MRSA risk, targeting MSSA, streptococcal species, and Enterococcus, SBT/ABPC or CTRX + ABPC are listed. CTRX + VCM is considered when MRSA risk is present; VCM + GM ± RFP is considered for prosthetic valve or pacemaker-related endocarditis."
+    },
+    {
+      "id": "infection_empiric_008",
+      "question": "According to J-SSCG 2024, select ALL correct statements about sepsis from intravascular catheter-related bloodstream infection.",
+      "choices": [
+        "Coagulase-negative staphylococci are expected",
+        "VCM + CFPM is an option",
+        "Adding MCFG is considered when Candida risk is present",
+        "Listeria monocytogenes is the primary expected organism",
+        "CTRX + MINO is the standard option"
+      ],
+      "answers": [0, 1, 2],
+      "explanation": "According to J-SSCG 2024, for intravascular catheter-related bloodstream infection, coagulase-negative staphylococci, Staphylococcus aureus, MRSA, Escherichia coli, Pseudomonas aeruginosa, and Candida are expected, with VCM + CFPM ± MCFG listed."
+    },
+    {
+      "id": "infection_empiric_009",
+      "question": "According to J-SSCG 2024, select THREE correct statements about empiric treatment for meningitis with sepsis.",
+      "choices": [
+        "For community-acquired cases in patients under 50 years, CTRX + VCM is an option",
+        "For community-acquired cases in patients 50 years or older, or with cellular immune deficiency, ABPC + CTRX + VCM is an option",
+        "For post-neurosurgical or shunt-related meningitis, one of CAZ, CFPM, or MEPM + VCM is an option",
+        "For community-acquired cases in patients 50 years or older, MINO monotherapy is standard",
+        "AZM monotherapy is the first-line choice for shunt-related meningitis"
+      ],
+      "answers": [0, 1, 2],
+      "selectCount": 3,
+      "explanation": "According to J-SSCG 2024, community-acquired meningitis in patients under 50 years targets Streptococcus pneumoniae and Neisseria meningitidis, with CTRX + VCM listed. For patients 50 years or older or with cellular immune deficiency, Listeria monocytogenes is also considered and ABPC + CTRX + VCM is listed. For post-neurosurgical or shunt-related meningitis targeting MRSA and Pseudomonas aeruginosa, one of CAZ, CFPM, or MEPM + VCM is listed."
+    },
+    {
+      "id": "infection_empiric_010",
+      "question": "According to J-SSCG 2024, when septic shock with rash raises concern for purpura fulminans or rickettsial disease, which is the SINGLE MOST APPROPRIATE empiric treatment?",
+      "choices": [
+        "CTRX + VCM + MINO",
+        "CEZ monotherapy",
+        "MCFG monotherapy",
+        "ABPC monotherapy",
+        "AZM monotherapy"
+      ],
+      "answers": [0],
+      "selectCount": 1,
+      "explanation": "According to J-SSCG 2024, when septic shock with rash raises the possibility of purpura fulminans targeting Neisseria meningitidis and Streptococcus pneumoniae, as well as rickettsial disease in the differential, CTRX + VCM + MINO is listed as the empiric treatment."
+    }
+  ]
+}

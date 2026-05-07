@@ -1,0 +1,170 @@
+[
+  {
+    "id": "ed_first_steps_basic",
+    "level": "basic",
+    "name": "ER First Steps",
+    "description": "ER fundamentals and initial approach",
+    "file": "questions/en/basic/ed_first_steps_basic.json",
+    "accent": "#087f8c"
+  },
+  {
+    "id": "altered_mental_status_basic",
+    "level": "basic",
+    "name": "Altered Mental Status / Syncope",
+    "description": "Hypoglycemia, seizures, syncope, initial differentials",
+    "file": "questions/en/basic/altered_mental_status_basic.json",
+    "accent": "#4f46e5"
+  },
+  {
+    "id": "vertigo_stroke_basic",
+    "level": "basic",
+    "name": "Vertigo / Stroke",
+    "description": "Central vertigo, stroke initial management, HINTS",
+    "file": "questions/en/basic/vertigo_stroke.json",
+    "accent": "#0f766e"
+  },
+  {
+    "id": "orthopedic_trauma_basic",
+    "level": "basic",
+    "name": "Orthopedic Trauma",
+    "description": "Open fractures, compartment syndrome, neurovascular assessment",
+    "file": "questions/en/basic/orthopedic_trauma.json",
+    "accent": "#b45309"
+  },
+  {
+    "id": "infection_basic",
+    "level": "basic",
+    "name": "Infectious Diseases",
+    "description": "Antibiotic stewardship, meningitis, UTI, necrotizing fasciitis",
+    "file": "questions/en/basic/infection.json",
+    "accent": "#15803d"
+  },
+  {
+    "id": "gi_symptoms_basic",
+    "level": "basic",
+    "name": "GI Symptoms",
+    "description": "Abdominal pain, GI bleeding, biliary infection, pancreatitis",
+    "file": "questions/en/basic/gi_symptoms.json",
+    "accent": "#be123c"
+  },
+  {
+    "id": "emergency_medications_basic",
+    "level": "basic",
+    "name": "Emergency Medications",
+    "description": "Epinephrine, benzodiazepines, antidotes, electrolyte correction",
+    "file": "questions/en/basic/emergency_medications.json",
+    "accent": "#7c2d12"
+  },
+  {
+    "id": "sepsis_basic",
+    "level": "basic",
+    "name": "Sepsis",
+    "description": "Initial recognition, antibiotics, circulatory management, source control",
+    "file": "questions/en/basic/sepsis.json",
+    "accent": "#087f8c"
+  },
+  {
+    "id": "trauma_basic",
+    "level": "basic",
+    "name": "Major Trauma",
+    "description": "Primary survey, hemorrhage control, thoracoabdominal trauma, resuscitation",
+    "file": "questions/en/basic/trauma.json",
+    "accent": "#b45309"
+  },
+  {
+    "id": "endocrine_basic",
+    "level": "basic",
+    "name": "Endocrine Emergencies",
+    "description": "DKA/HHS, adrenal crisis, thyroid storm, electrolytes",
+    "file": "questions/en/basic/endocrine.json",
+    "accent": "#6d5bd0"
+  },
+  {
+    "id": "cpr_basic",
+    "level": "basic",
+    "name": "CPR",
+    "description": "High-quality CPR, defibrillation, medications, reversible causes",
+    "file": "questions/en/basic/cpr.json",
+    "accent": "#c2413b"
+  },
+  {
+    "id": "pediatric_basic",
+    "level": "basic",
+    "name": "Pediatric Emergencies",
+    "description": "Pediatric emergency medicine, medications, resuscitation",
+    "file": "questions/en/basic/pediatric.json",
+    "accent": "#c2413b"
+  },
+  {
+    "id": "cardiology_basic",
+    "level": "basic",
+    "name": "Cardiology Emergencies",
+    "description": "Cardiovascular emergency management",
+    "file": "questions/en/basic/cardiology.json",
+    "accent": "#c2413b"
+  },
+  {
+    "id": "altered_mental_status_advanced",
+    "level": "advanced",
+    "name": "Altered Mental Status / Syncope",
+    "description": "AIUEOTIPS, airway management indications, Wernicke encephalopathy, NCSE",
+    "file": "questions/en/advanced/altered_mental_status_advanced.json",
+    "accent": "#4f46e5"
+  },
+  {
+    "id": "sepsis_advanced",
+    "level": "advanced",
+    "name": "Sepsis",
+    "description": "Fluid responsiveness, lactate, vasopressin, SOFA",
+    "file": "questions/en/advanced/sepsis_advanced.json",
+    "accent": "#087f8c"
+  },
+  {
+    "id": "trauma_advanced",
+    "level": "advanced",
+    "name": "Major Trauma",
+    "description": "MTP, hemostatic resuscitation, lethal triad, REBOA, TEG",
+    "file": "questions/en/advanced/trauma_advanced.json",
+    "accent": "#b45309"
+  },
+  {
+    "id": "cpr_advanced",
+    "level": "advanced",
+    "name": "CPR",
+    "description": "Epinephrine, amiodarone, reversible causes, ECPR indications",
+    "file": "questions/en/advanced/cpr_advanced.json",
+    "accent": "#c2413b"
+  },
+  {
+    "id": "altered_mental_status_master",
+    "level": "master",
+    "name": "Altered Mental Status / Syncope",
+    "description": "Autoimmune encephalitis, hepatic encephalopathy, hyponatremia correction, EEG",
+    "file": "questions/en/master/altered_mental_status_master.json",
+    "accent": "#4f46e5"
+  },
+  {
+    "id": "sepsis_master",
+    "level": "master",
+    "name": "Sepsis",
+    "description": "Steroids, CRRT, lung-protective ventilation, DIC, VTE prophylaxis",
+    "file": "questions/en/master/sepsis_master.json",
+    "accent": "#087f8c"
+  },
+  {
+    "id": "trauma_master",
+    "level": "master",
+    "name": "Major Trauma",
+    "description": "DCS, pelvic TAE, abdominal ACS, ICP management, TRALI",
+    "file": "questions/en/master/trauma_master.json",
+    "accent": "#b45309"
+  },
+  {
+    "id": "cpr_master",
+    "level": "master",
+    "name": "CPR",
+    "description": "ECPR, PCAS, TTM, neurological prognostication, continuous EEG",
+    "file": "questions/en/master/cpr_master.json",
+    "accent": "#c2413b"
+  }
+]

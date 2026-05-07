@@ -122,6 +122,7 @@ const state = {
   wasCategoryClearAtStart: false,
   googleSheetsWebAppUrl: "",
   sendToLocalBackend: false,
+  lang: "ja",
 };
 
 const els = {};
@@ -140,8 +141,12 @@ async function init() {
     await loadQuestionData();
     renderLevelScreen();
     renderRankingTabs();
+    applyI18n(state.lang);
+    document.querySelectorAll(".lang-toggle .segment").forEach((seg) => {
+      seg.classList.toggle("is-active", seg.dataset.lang === state.lang);
+    });
   } catch (error) {
-    els.setupStatus.textContent = "問題データを読み込めません。ローカルHTTPサーバーで開いてください。";
+    els.setupStatus.textContent = t("errorLoadOffline", state.lang);
     console.error(error);
   }
 }
@@ -180,6 +185,31 @@ function cacheElements() {
     "rankingTabs", "rankingList", "rankingEmpty", "closeRankingButton",
     "resetRankingButton", "resetClearButton",
   ].forEach((id) => { els[id] = document.getElementById(id); });
+}
+
+function setLanguage(lang) {
+  if (lang !== "ja" && lang !== "en") return;
+  state.lang = lang;
+  const data = readStore();
+  data.lang = lang;
+  writeStore(data);
+  applyI18n(lang);
+  updateMuteButton(readStore().muted);
+  document.querySelectorAll(".lang-toggle .segment").forEach((seg) => {
+    seg.classList.toggle("is-active", seg.dataset.lang === lang);
+  });
+  document.querySelectorAll("[data-count]").forEach((btn) => {
+    btn.textContent = `${btn.dataset.count}${t("countSuffix", lang)}`;
+  });
+  loadQuestionData().then(() => {
+    renderLevelScreen();
+    renderRankingTabs();
+    if (state.lastScreen === "setup") {
+      renderCategories();
+      renderQuestionCountControls();
+      updateSetupSummary();
+    }
+  }).catch(console.error);
 }
 
 function bindEvents() {
@@ -230,13 +260,16 @@ function bindEvents() {
     });
   });
   els.muteButton.addEventListener("click", toggleMute);
+  document.querySelectorAll(".lang-toggle .segment").forEach((seg) => {
+    seg.addEventListener("click", () => setLanguage(seg.dataset.lang));
+  });
   els.resetRankingButton.addEventListener("click", () => {
-    if (!window.confirm("履歴を全て削除します。よろしいですか？")) return;
+    if (!window.confirm(t("confirmResetHistory", state.lang))) return;
     resetRankings();
     renderRanking(getActiveRankingTabId());
   });
   els.resetClearButton.addEventListener("click", () => {
-    if (!window.confirm("クリア記録と全問題の正解履歴を削除します。よろしいですか？")) return;
+    if (!window.confirm(t("confirmResetClear", state.lang))) return;
     resetClearProgress();
     renderClearScreen();
     renderLevelScreen();
@@ -276,10 +309,10 @@ function bindFirstAudioGesture() {
 async function loadQuestionData() {
   const [levelsRes, categoriesRes] = await Promise.all([
     fetch("data/levels.json", { cache: "no-store" }),
-    fetch("data/categories.json", { cache: "no-store" }),
+    fetch(`data/categories.${state.lang}.json`, { cache: "no-store" }),
   ]);
   if (!levelsRes.ok) throw new Error(`levels.json ${levelsRes.status}`);
-  if (!categoriesRes.ok) throw new Error(`categories.json ${categoriesRes.status}`);
+  if (!categoriesRes.ok) throw new Error(`categories.${state.lang}.json ${categoriesRes.status}`);
   state.levels = await levelsRes.json();
   const categories = await categoriesRes.json();
 
@@ -369,7 +402,7 @@ function renderLevelScreen() {
     nameEl.textContent = level.name;
     const clearEl = document.createElement("span");
     clearEl.className = "level-card__clear";
-    clearEl.textContent = `${clearedCount} / ${levelCats.length} クリア済み`;
+    clearEl.textContent = `${clearedCount} / ${levelCats.length} ${t("levelClearSuffix", state.lang)}`;
     card.append(nameEl, clearEl);
     card.addEventListener("click", () => {
       state.selectedLevel = level.id;
@@ -408,13 +441,13 @@ function renderCategories() {
       const meta = document.createElement("div");
       meta.className = "card-meta";
       const progressLabel = progress.total > 0
-        ? `<span class="card-progress">${progress.answered} / ${progress.total} 正解</span>`
+        ? `<span class="card-progress">${progress.answered} / ${progress.total} ${t("cardProgressLabel", state.lang)}</span>`
         : "";
-      meta.innerHTML = `<span>${category.questionTotal}問</span><span>20秒/問</span>${progressLabel}`;
+      meta.innerHTML = `<span>${category.questionTotal}${t("countSuffix", state.lang)}</span><span>20${t("cardTimeLimitLabel", state.lang)}</span>${progressLabel}`;
       if (cleared) {
         const badge = document.createElement("span");
         badge.className = "clear-badge";
-        badge.textContent = "✓ CLEAR";
+        badge.textContent = t("clearBadge", state.lang);
         meta.appendChild(badge);
       }
       button.append(title, meta);
@@ -453,8 +486,8 @@ function renderQuestionCountControls() {
 
 function updateSetupSummary() {
   const category = getSelectedCategory();
-  els.selectedCategoryLabel.textContent = category ? `${category.name} / ${state.questionCount}問` : "未選択";
-  els.setupStatus.textContent = state.learnerRoleId ? "" : "職種を選択してください。";
+  els.selectedCategoryLabel.textContent = category ? `${category.name} / ${state.questionCount}${t("countSuffix", state.lang)}` : t("noSelection", state.lang);
+  els.setupStatus.textContent = state.learnerRoleId ? "" : t("roleSelectPrompt", state.lang);
 }
 
 function getSelectedCategory() {
@@ -518,13 +551,13 @@ function startQuiz() {
   const category = getSelectedCategory();
   const sourceQuestions = getSelectedQuestions();
   if (!category || sourceQuestions.length === 0) {
-    els.setupStatus.textContent = "カテゴリーを読み込めていません。"; return;
+    els.setupStatus.textContent = t("errorCategoryLoad", state.lang); return;
   }
   if (state.questionCount > sourceQuestions.length) {
-    els.setupStatus.textContent = "選択した出題数に対して問題数が不足しています。"; return;
+    els.setupStatus.textContent = t("errorInsufficientQuestions", state.lang); return;
   }
   if (!state.learnerRoleId) {
-    els.setupStatus.textContent = "職種を選択してください。"; return;
+    els.setupStatus.textContent = t("roleSelectPrompt", state.lang); return;
   }
   state.wasCategoryClearAtStart = isClear(category.id);
   ensureAudioContext();
@@ -644,8 +677,8 @@ function updateMultipleChoiceState() {
   const requiredCount = question.selectionLimit || 0;
   submit.disabled = requiredCount > 0 ? selectedCount !== requiredCount : selectedCount === 0;
   submit.textContent = requiredCount > 0
-    ? `回答する (${selectedCount}/${requiredCount})`
-    : `回答する (${selectedCount}選択)`;
+    ? `${t("answerSubmitLabel", state.lang)} (${selectedCount}/${requiredCount})`
+    : `${t("answerSubmitLabel", state.lang)} (${selectedCount} ${t("answerSelected", state.lang)})`;
 }
 
 function startTimer() {
@@ -773,7 +806,7 @@ function renderResult(result, { showClearBanner, progress }) {
   const percent = Math.round((result.score / result.questionCount) * 100);
   els.resultScore.textContent = `${result.score} / ${result.questionCount}`;
   els.resultPercent.textContent = `${percent}%`;
-  els.resultTime.textContent = `所要時間 ${formatTime(result.totalTimeMs)}`;
+  els.resultTime.textContent = `${t("resultTimePrefix", state.lang)}${formatTime(result.totalTimeMs)}`;
   els.resultComment.textContent = getResultComment(percent);
   renderResultStatus(showClearBanner);
   if (els.resultProgress) {
@@ -781,8 +814,8 @@ function renderResult(result, { showClearBanner, progress }) {
       const remaining = progress.total - progress.answered;
       els.resultProgress.hidden = false;
       els.resultProgress.textContent = remaining === 0
-        ? `カテゴリ進捗: ${progress.answered} / ${progress.total} 問正解済み`
-        : `カテゴリ進捗: ${progress.answered} / ${progress.total} 問正解済み（あと ${remaining} 問でクリア）`;
+        ? `${t("resultProgressPrefix", state.lang)}${progress.answered} / ${progress.total} ${t("resultProgressFull", state.lang)}`
+        : `${t("resultProgressPrefix", state.lang)}${progress.answered} / ${progress.total} ${t("resultProgressFull", state.lang)}${t("resultProgressAnd", state.lang)}${remaining} ${t("resultProgressPartialSuffix", state.lang)})`;
     } else {
       els.resultProgress.hidden = true;
     }
@@ -790,7 +823,7 @@ function renderResult(result, { showClearBanner, progress }) {
   setSyncStatus("", "");
   renderReview();
   els.reviewList.hidden = false;
-  els.toggleReviewButton.textContent = "折りたたむ";
+  els.toggleReviewButton.textContent = t("btnReviewToggleCollapse", state.lang);
   els.toggleReviewButton.setAttribute("aria-expanded", "true");
 }
 
@@ -802,7 +835,7 @@ function renderResultStatus(showClearBanner) {
   els.clearBanner.classList.toggle("is-clear", isClearResult);
   els.clearBanner.classList.toggle("is-finish", !isClearResult);
   if (heli) heli.hidden = !isClearResult;
-  if (label) label.textContent = isClearResult ? "CLEAR!" : "Finish";
+  if (label) label.textContent = isClearResult ? t("clearLabel", state.lang) : t("finishLabel", state.lang);
 }
 
 function renderReview() {
@@ -815,11 +848,11 @@ function renderReview() {
     const user = document.createElement("p");
     user.className = "answer-line";
     user.textContent = item.timedOut
-      ? "あなたの回答: 時間切れ"
-      : `あなたの回答: ${labelChoices(item.selectedIndexes, item.choices) || "未選択"}`;
+      ? `${t("userAnswerLabel", state.lang)}${t("userAnswerTimedOut", state.lang)}`
+      : `${t("userAnswerLabel", state.lang)}${labelChoices(item.selectedIndexes, item.choices) || t("noSelection", state.lang)}`;
     const correct = document.createElement("p");
     correct.className = "answer-line";
-    correct.textContent = `正解: ${labelChoices(item.correctIndexes, item.choices)}`;
+    correct.textContent = `${t("correctAnswerLabel", state.lang)}${labelChoices(item.correctIndexes, item.choices)}`;
     const explanation = document.createElement("p");
     explanation.className = "explanation";
     explanation.textContent = item.explanation;
@@ -837,7 +870,7 @@ function labelChoices(indexes, choices) {
   return normalizeIndexList(indexes)
     .map((index) => labelChoice(index, choices[index]))
     .filter(Boolean)
-    .join("、");
+    .join(t("choiceSeparator", state.lang));
 }
 
 function normalizeIndexList(indexes) {
@@ -853,7 +886,7 @@ function hasSameIndexes(left, right) {
 function toggleReview() {
   const willShow = els.reviewList.hidden;
   els.reviewList.hidden = !willShow;
-  els.toggleReviewButton.textContent = willShow ? "折りたたむ" : "表示する";
+  els.toggleReviewButton.textContent = willShow ? t("btnReviewToggleCollapse", state.lang) : t("btnReviewToggleExpand", state.lang);
   els.toggleReviewButton.setAttribute("aria-expanded", String(willShow));
 }
 
@@ -861,7 +894,7 @@ function openRanking(tabId) { renderRanking(tabId); showScreen("ranking"); }
 
 function renderRankingTabs() {
   els.rankingTabs.innerHTML = "";
-  const tabs = [{ id: "all", name: "全体" }, ...state.categories.map((c) => ({ id: c.id, name: c.name }))];
+  const tabs = [{ id: "all", name: t("rankingAllTab", state.lang) }, ...state.categories.map((c) => ({ id: c.id, name: c.name }))];
   tabs.forEach((tab) => {
     const button = document.createElement("button");
     button.type = "button";
@@ -893,10 +926,11 @@ function renderRanking(activeTab) {
     const body = document.createElement("span");
     const name = document.createElement("span");
     name.className = "rank-name";
-    name.textContent = record.roleName || record.name || "未選択";
+    const roleKey = ROLE_I18N_KEY[record.roleId];
+    name.textContent = (roleKey ? t(roleKey, state.lang) : record.roleName) || t("noSelection", state.lang);
     const meta = document.createElement("span");
     meta.className = "rank-meta";
-    meta.textContent = `${record.categoryName} / ${record.questionCount}問 / ${formatTime(record.totalTimeMs)} / ${formatDate(record.timestamp)}`;
+    meta.textContent = `${record.categoryName} / ${record.questionCount}${t("countSuffix", state.lang)} / ${formatTime(record.totalTimeMs)} / ${formatDate(record.timestamp)}`;
     const score = document.createElement("span");
     score.className = "rank-score";
     score.textContent = `${record.score}/${record.questionCount}`;
@@ -926,19 +960,19 @@ function renderClearScreen() {
       if (cleared) {
         const status = document.createElement("span");
         status.className = "clear-item__status";
-        status.textContent = "✓ CLEAR";
+        status.textContent = t("clearBadge", state.lang);
         right.appendChild(status);
         if (clearDate) {
           const date = document.createElement("span");
           date.className = "clear-item__date";
-          date.textContent = new Intl.DateTimeFormat("ja-JP", {
+          date.textContent = new Intl.DateTimeFormat(t("dateLocale", state.lang), {
             month: "2-digit", day: "2-digit", hour: "2-digit", minute: "2-digit",
           }).format(new Date(clearDate));
           right.append(document.createTextNode(" "), date);
         }
       } else if (progress.total > 0) {
         right.className = "clear-item__progress";
-        right.textContent = `${progress.answered} / ${progress.total} 正解済み`;
+        right.textContent = `${progress.answered} / ${progress.total} ${t("resultProgressFull", state.lang)}`;
       } else {
         right.className = "clear-item__empty";
         right.textContent = "－";
@@ -988,6 +1022,7 @@ function loadStoredState() {
   const data = readStore();
   state.learnerRoleId = data.learnerRoleId || "";
   state.selectedLevel = data.selectedLevel || "basic";
+  state.lang = resolveInitialLang(data.lang);
   if (state.learnerRoleId) {
     const input = document.querySelector(`input[name="learnerRole"][value="${state.learnerRoleId}"]`);
     if (input) input.checked = true;
@@ -1003,9 +1038,18 @@ function persistLearnerRole() {
   writeStore(data);
 }
 
+const ROLE_I18N_KEY = {
+  resident: "roleResident",
+  senior_resident: "roleSeniorResident",
+  doctor: "roleDoctor",
+  nurse: "roleNurse",
+  other: "roleOther",
+};
+
 function getLearnerRoleName() {
   const selected = document.querySelector('input[name="learnerRole"]:checked');
-  return selected?.dataset.roleLabel || "未選択";
+  if (!selected) return t("noSelection", state.lang);
+  return t(ROLE_I18N_KEY[selected.value] || "noSelection", state.lang);
 }
 
 function toggleMute() {
@@ -1018,9 +1062,14 @@ function toggleMute() {
 }
 
 function updateMuteButton(muted) {
-  els.muteButton.textContent = muted ? "効果音ON" : "効果音OFF";
+  els.muteButton.textContent = muted ? t("btnSoundOn", state.lang) : t("btnSoundOff", state.lang);
   els.muteButton.setAttribute("aria-pressed", String(!muted));
-  els.muteButton.title = muted ? "効果音と音楽をONにする" : "効果音と音楽をOFFにする";
+  els.muteButton.title = muted ? t("titleSoundOn", state.lang) : t("titleSoundOff", state.lang);
+}
+
+function resolveInitialLang(saved) {
+  if (saved === "ja" || saved === "en") return saved;
+  return (navigator.language || "ja").toLowerCase().startsWith("en") ? "en" : "ja";
 }
 
 function readStore() {
@@ -1032,6 +1081,7 @@ function readStore() {
       learnerRoleId:   parsed.learnerRoleId  || "",
       learnerRoleName: parsed.learnerRoleName || "",
       muted:           Boolean(parsed.muted),
+      lang:            parsed.lang || "",
       selectedLevel:   parsed.selectedLevel  || "basic",
       rankings:        Array.isArray(parsed.rankings) ? parsed.rankings : [],
       // v2 migration: pre-v2 clears were granted on per-session perfect score, not
@@ -1042,7 +1092,7 @@ function readStore() {
   } catch {
     return {
       schemaVersion: STORAGE_SCHEMA_VERSION,
-      learnerRoleId: "", learnerRoleName: "", muted: false, selectedLevel: "basic",
+      learnerRoleId: "", learnerRoleName: "", muted: false, lang: "", selectedLevel: "basic",
       rankings: [], clears: {}, correctQuestions: {},
     };
   }
@@ -1280,11 +1330,13 @@ function formatTime(ms) {
   const totalSeconds = Math.round(ms / 1000);
   const minutes = Math.floor(totalSeconds / 60);
   const seconds = totalSeconds % 60;
-  return minutes > 0 ? `${minutes}分${seconds}秒` : `${seconds}秒`;
+  const m = t("timeSuffixMin", state.lang);
+  const s = t("timeSuffixSec", state.lang);
+  return minutes > 0 ? `${minutes}${m}${seconds}${s}` : `${seconds}${s}`;
 }
 
 function formatDate(timestamp) {
-  return new Intl.DateTimeFormat("ja-JP", {
+  return new Intl.DateTimeFormat(t("dateLocale", state.lang), {
     month: "2-digit", day: "2-digit", hour: "2-digit", minute: "2-digit",
   }).format(new Date(timestamp));
 }

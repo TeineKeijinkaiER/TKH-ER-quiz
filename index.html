@@ -17,16 +17,16 @@
       <div class="brand">
         <img class="brand-mark" src="assets/heriteinu.png" alt="Sapporo Doctor-Heli Heriteinu">
         <div class="brand-text">
-          <p class="eyebrow">Emergency Medicine Training</p>
-          <h1 class="brand-title"><span class="brand-title__quiz">Quiz-</span><span class="brand-title__tkher">TKHER</span><span class="brand-title__sub">救急医学クイズ</span></h1>
+          <p class="eyebrow" data-i18n="eyebrow">Emergency Medicine Training</p>
+          <h1 class="brand-title"><span class="brand-title__quiz">Quiz-</span><span class="brand-title__tkher">TKHER</span><span class="brand-title__sub" data-i18n="appSubtitle">救急医学クイズ</span></h1>
           <svg class="ecg-decor" viewBox="0 0 600 24" preserveAspectRatio="none" aria-hidden="true">
             <polyline points="0,12 90,12 100,12 110,4 120,20 128,8 136,12 220,12 232,12 240,2 248,22 256,12 340,12 352,12 360,6 368,18 376,12 600,12" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
           </svg>
         </div>
       </div>
       <div class="topbar-actions" aria-label="アプリ操作">
-        <button id="clearButton" class="icon-text-button" type="button" title="クリア記録を表示">クリア記録</button>
-        <button id="rankingButton" class="icon-text-button" type="button" title="履歴を表示">履歴</button>
+        <button id="clearButton" class="icon-text-button" type="button" title="クリア記録を表示" data-i18n="btnClearLog" data-i18n-attr="title:btnClearLog">クリア記録</button>
+        <button id="rankingButton" class="icon-text-button" type="button" title="履歴を表示" data-i18n="btnHistory" data-i18n-attr="title:btnHistory">履歴</button>
         <button id="muteButton" class="icon-text-button sound-toggle" type="button" aria-pressed="false" title="効果音と音楽を切り替え">効果音OFF</button>
       </div>
     </header>
@@ -35,11 +35,15 @@
       <!-- レベル選択画面（ホーム） -->
       <section id="levelScreen" class="screen is-active" aria-labelledby="levelTitle">
         <div class="level-intro">
-          <p class="eyebrow">難易度を選んでください</p>
-          <h2 id="levelTitle">レベル選択</h2>
+          <p class="eyebrow" data-i18n="levelEyebrow">難易度を選んでください</p>
+          <h2 id="levelTitle" data-i18n="levelTitle">レベル選択</h2>
+        </div>
+        <div class="lang-toggle" role="group" aria-label="Language / 言語" id="langToggleHome">
+          <button type="button" class="segment is-active" data-lang="ja" data-i18n="langToggleJa">JP</button>
+          <button type="button" class="segment" data-lang="en" data-i18n="langToggleEn">EN</button>
         </div>
         <div id="levelGrid" class="level-grid"></div>
-        <p class="disclaimer">
+        <p class="disclaimer" data-i18n="disclaimer">
           ⚠️ このクイズは学習目的のコンテンツです。実際の臨床現場で患者を診療する際は、必ず最新のガイドラインや医療情報をご確認ください。
         </p>
       </section>
@@ -48,40 +52,44 @@
       <section id="setupScreen" class="screen" aria-labelledby="setupTitle" hidden>
         <div class="setup-layout">
           <aside class="panel setup-panel">
-            <h2 id="setupTitle">クイズ設定</h2>
+            <h2 id="setupTitle" data-i18n="setupTitle">クイズ設定</h2>
+            <div class="lang-toggle" role="group" aria-label="Language / 言語" id="langToggleSetup">
+              <button type="button" class="segment is-active" data-lang="ja" data-i18n="langToggleJa">JP</button>
+              <button type="button" class="segment" data-lang="en" data-i18n="langToggleEn">EN</button>
+            </div>
             <fieldset id="roleFieldset" class="role-fieldset">
-              <legend>職種 <span>必須</span></legend>
+              <legend><span data-i18n="roleLegend">職種</span> <span data-i18n="roleRequired">必須</span></legend>
               <label class="role-option">
                 <input type="radio" name="learnerRole" value="resident" data-role-label="研修医">
-                <span>研修医</span>
+                <span data-i18n="roleResident">研修医</span>
               </label>
               <label class="role-option">
                 <input type="radio" name="learnerRole" value="senior_resident" data-role-label="専攻医">
-                <span>専攻医</span>
+                <span data-i18n="roleSeniorResident">専攻医</span>
               </label>
               <label class="role-option">
                 <input type="radio" name="learnerRole" value="doctor" data-role-label="医師">
-                <span>医師</span>
+                <span data-i18n="roleDoctor">医師</span>
               </label>
               <label class="role-option">
                 <input type="radio" name="learnerRole" value="nurse" data-role-label="看護師">
-                <span>看護師</span>
+                <span data-i18n="roleNurse">看護師</span>
               </label>
               <label class="role-option">
                 <input type="radio" name="learnerRole" value="other" data-role-label="その他">
-                <span>その他</span>
+                <span data-i18n="roleOther">その他</span>
               </label>
             </fieldset>
 
             <fieldset class="segmented-control">
-              <legend>レベル</legend>
-              <button class="segment" type="button" data-level="basic">Basic</button>
-              <button class="segment" type="button" data-level="advanced">Advanced</button>
-              <button class="segment" type="button" data-level="master">Master</button>
+              <legend data-i18n="levelLegend">レベル</legend>
+              <button class="segment" type="button" data-level="basic" data-i18n="levelBasic">Basic</button>
+              <button class="segment" type="button" data-level="advanced" data-i18n="levelAdvanced">Advanced</button>
+              <button class="segment" type="button" data-level="master" data-i18n="levelMaster">Master</button>
             </fieldset>
 
             <fieldset class="segmented-control">
-              <legend>出題数</legend>
+              <legend data-i18n="countLegend">出題数</legend>
               <button class="segment is-active" type="button" data-count="5">5問</button>
               <button class="segment" type="button" data-count="10">10問</button>
               <button class="segment" type="button" data-count="20">20問</button>
@@ -89,12 +97,12 @@
 
             <dl class="selection-summary">
               <div>
-                <dt>カテゴリー</dt>
-                <dd id="selectedCategoryLabel">読み込み中</dd>
+                <dt data-i18n="summaryCategory">カテゴリー</dt>
+                <dd id="selectedCategoryLabel" data-i18n="summaryCategoryLoading">読み込み中</dd>
               </div>
               <div>
-                <dt>制限時間</dt>
-                <dd>1問 20秒</dd>
+                <dt data-i18n="summaryTimeLimit">制限時間</dt>
+                <dd data-i18n="summaryTimeLimitValue">1問 20秒</dd>
               </div>
             </dl>
 
@@ -109,7 +117,7 @@
 
       <section id="quizScreen" class="screen" aria-labelledby="quizCategory" hidden>
         <div class="quiz-topline">
-          <button id="quitQuizButton" class="text-button" type="button">中断</button>
+          <button id="quitQuizButton" class="text-button" type="button" data-i18n="quizQuit">中断</button>
           <div class="quiz-meta">
             <span id="quizCategory">カテゴリー</span>
             <span id="quizProgress">1 / 5</span>
@@ -132,31 +140,31 @@
       <section id="resultScreen" class="screen" aria-labelledby="resultTitle" hidden>
         <div class="result-layout">
           <section class="panel result-panel">
-            <p class="eyebrow">Result</p>
-            <h2 id="resultTitle">演習結果</h2>
+            <p class="eyebrow" data-i18n="resultEyebrow">Result</p>
+            <h2 id="resultTitle" data-i18n="resultTitle">演習結果</h2>
             <div class="score-line">
               <strong id="resultScore">0 / 0</strong>
               <span id="resultPercent">0%</span>
             </div>
             <div id="clearBanner" class="clear-banner" hidden>
               <img class="clear-banner__heli" src="assets/Heli.png" alt="" aria-hidden="true">
-              <span>Finish</span>
+              <span id="clearBannerLabel" data-i18n="finishLabel">Finish</span>
             </div>
             <p id="resultProgress" class="result-progress" hidden></p>
             <p id="resultTime" class="result-time"></p>
             <p id="resultComment" class="result-comment"></p>
             <p id="syncStatus" class="sync-status" role="status" aria-live="polite"></p>
             <div class="button-row">
-              <button id="retryButton" class="primary-button" type="button">再挑戦</button>
-              <button id="backToSetupButton" class="primary-button is-home" type="button">メイン画面</button>
-              <button id="resultRankingButton" class="secondary-button" type="button">履歴</button>
+              <button id="retryButton" class="primary-button" type="button" data-i18n="btnRetry">再挑戦</button>
+              <button id="backToSetupButton" class="primary-button is-home" type="button" data-i18n="btnHome">メイン画面</button>
+              <button id="resultRankingButton" class="secondary-button" type="button" data-i18n="btnHistory">履歴</button>
             </div>
           </section>
 
           <section class="review-section" aria-label="解答レビュー">
             <div class="section-heading">
-              <h3>解答レビュー</h3>
-              <button id="toggleReviewButton" class="text-button" type="button" aria-expanded="true">折りたたむ</button>
+              <h3 data-i18n="reviewHeading">解答レビュー</h3>
+              <button id="toggleReviewButton" class="text-button" type="button" aria-expanded="true" data-i18n="btnReviewToggleCollapse">折りたたむ</button>
             </div>
             <div id="reviewList" class="review-list"></div>
           </section>
@@ -166,29 +174,29 @@
       <section id="rankingScreen" class="screen" aria-labelledby="rankingTitle" hidden>
         <div class="section-heading">
           <div>
-            <p class="eyebrow">Local History</p>
-            <h2 id="rankingTitle">履歴</h2>
+            <p class="eyebrow" data-i18n="rankingEyebrow">Local History</p>
+            <h2 id="rankingTitle" data-i18n="rankingTitle">履歴</h2>
           </div>
           <div class="section-heading__actions">
-            <button id="resetRankingButton" class="text-button danger-button" type="button">履歴を全削除</button>
-            <button id="closeRankingButton" class="primary-button is-home" type="button">メイン画面</button>
+            <button id="resetRankingButton" class="text-button danger-button" type="button" data-i18n="btnResetHistory">履歴を全削除</button>
+            <button id="closeRankingButton" class="primary-button is-home" type="button" data-i18n="btnHome">メイン画面</button>
           </div>
         </div>
         <div id="rankingTabs" class="tab-row" role="tablist" aria-label="履歴カテゴリー"></div>
         <ol id="rankingList" class="ranking-list"></ol>
-        <p id="rankingEmpty" class="empty-text" hidden>記録はまだありません。</p>
+        <p id="rankingEmpty" class="empty-text" hidden data-i18n="rankingEmpty">記録はまだありません。</p>
       </section>
 
       <!-- クリア記録画面 -->
       <section id="clearScreen" class="screen" aria-labelledby="clearTitle" hidden>
         <div class="section-heading">
           <div>
-            <p class="eyebrow">Clear History</p>
-            <h2 id="clearTitle">クリア記録</h2>
+            <p class="eyebrow" data-i18n="clearEyebrow">Clear History</p>
+            <h2 id="clearTitle" data-i18n="clearTitle">クリア記録</h2>
           </div>
           <div class="section-heading__actions">
-            <button id="resetClearButton" class="text-button danger-button" type="button">クリア記録を全削除</button>
-            <button id="closeClearButton" class="primary-button is-home" type="button">メイン画面</button>
+            <button id="resetClearButton" class="text-button danger-button" type="button" data-i18n="btnResetClear">クリア記録を全削除</button>
+            <button id="closeClearButton" class="primary-button is-home" type="button" data-i18n="btnHome">メイン画面</button>
           </div>
         </div>
         <div id="clearTabs" class="tab-row" role="tablist" aria-label="レベル"></div>
@@ -198,6 +206,7 @@
 
   </div>
 
-  <script src="js/app.js?v=20260506-2" defer></script>
+  <script src="js/i18n.js?v=20260507-1" defer></script>
+  <script src="js/app.js?v=20260507-1" defer></script>
 </body>
 </html>

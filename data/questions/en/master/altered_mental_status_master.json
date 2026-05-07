@@ -1,0 +1,71 @@
+{
+  "category": "Altered Mental Status / Syncope Master",
+  "questions": [
+    {
+      "id": "altered_mental_status_master_001",
+      "question": "Select ALL important considerations in altered mental status due to acute hyponatremia.",
+      "choices": [
+        "Consider hypertonic saline when severe neurological symptoms are present",
+        "Do not correct at an excessively rapid rate",
+        "Reassess sodium levels frequently",
+        "In chronic hyponatremia, be cautious of osmotic demyelination syndrome",
+        "Correct sodium rapidly all the way to the upper limit of normal at once"
+      ],
+      "answers": [0, 1, 2, 3],
+      "explanation": "Sodium correction in hyponatremia requires balancing prompt intervention for severe symptoms against avoidance of overcorrection. In chronic cases, osmotic demyelination syndrome must be prevented."
+    },
+    {
+      "id": "altered_mental_status_master_002",
+      "question": "Select THREE appropriate approaches to treatment and evaluation of hepatic encephalopathy.",
+      "choices": [
+        "Search for precipitating factors such as gastrointestinal bleeding and infection",
+        "Consider lactulose",
+        "Evaluate for constipation and dehydration",
+        "Continually increase sedative medications without reassessment",
+        "Airway assessment is unnecessary even with altered mental status"
+      ],
+      "answers": [0, 1, 2],
+      "selectCount": 3,
+      "explanation": "In hepatic encephalopathy, identify and eliminate precipitating factors, initiate treatment such as lactulose, and manage bowel habits and hydration. Airway protection and aspiration risk should also be assessed."
+    },
+    {
+      "id": "altered_mental_status_master_003",
+      "question": "Select ALL clinical clues that suggest autoimmune encephalitis.",
+      "choices": [
+        "Acute to subacute psychiatric symptoms or memory impairment",
+        "Seizures",
+        "Involuntary movements or autonomic symptoms",
+        "CSF, MRI, or EEG (electroencephalogram) abnormalities",
+        "Simple orthostatic lightheadedness that fully resolves within minutes"
+      ],
+      "answers": [0, 1, 2, 3],
+      "explanation": "Autoimmune encephalitis is suspected when psychiatric symptoms, memory impairment, seizures, involuntary movements, and autonomic symptoms are present; differentiate from infectious encephalitis and connect the patient to specialist care."
+    },
+    {
+      "id": "altered_mental_status_master_004",
+      "question": "Select ALL appropriate management strategies for ICU delirium.",
+      "choices": [
+        "Address pain, sleep, and the environment",
+        "Encourage early mobilization and maintain a day-night rhythm",
+        "Evaluate for causative medications, infection, and hypoxia",
+        "Consider orientation support using family presence, glasses, and hearing aids",
+        "Maintain deep sedation for an extended period in all patients"
+      ],
+      "answers": [0, 1, 2, 3],
+      "explanation": "Non-pharmacological interventions and identification of precipitating factors are fundamental to managing delirium. Prolonged deep sedation worsens delirium and delays mobilization and should be avoided."
+    },
+    {
+      "id": "altered_mental_status_master_005",
+      "question": "Select ALL situations in which continuous EEG monitoring should be considered.",
+      "choices": [
+        "Altered mental status that persists after cessation of seizures",
+        "Unexplained persistent altered mental status",
+        "Suspected NCSE (non-convulsive status epilepticus)",
+        "Desire to evaluate the effect of antiepileptic drug treatment",
+        "Fully alert patient with no neurological symptoms, mild illness"
+      ],
+      "answers": [0, 1, 2, 3],
+      "explanation": "Continuous EEG monitoring is useful for diagnosing NCSE and assessing treatment response. It should be considered when seizure activity cannot be excluded based on clinical symptoms alone."
+    }
+  ]
+}
