@@ -1,0 +1,215 @@
+{
+  "category": "Infectious Diseases",
+  "questions": [
+    {
+      "id": "infection_basic_001_revised",
+      "question": "A patient presenting with suspected septic shock has arrived. Which of the following best describes the appropriate initial management?",
+      "choices": [
+        "Always wait several hours before starting antibiotics until two sets of blood cultures have been obtained",
+        "Simultaneously pursue source identification, culture collection, lactate measurement, IV fluids, and antibiotics — start antibiotics promptly in shock",
+        "Septic shock can be ruled out if fever is absent",
+        "Complete a whole-body CT scan before starting antibiotics",
+        "Start vasopressors only after culture results are available"
+      ],
+      "answer": 1,
+      "selectCount": 1,
+      "explanation": "In sepsis and septic shock, source identification, necessary cultures (including blood cultures), lactate measurement, circulatory resuscitation, antibiotics, and source control when needed should all proceed in parallel. While culture collection is important, antibiotics must not be delayed for hours in cases of shock. Sepsis cannot be excluded based on the presence or absence of fever alone, and delaying resuscitation or antibiotics to wait for imaging or culture results is inappropriate."
+    },
+    {
+      "id": "infection_basic_002_revised",
+      "question": "Select all correct statements regarding initial management of a patient with suspected bacterial meningitis in an adult.",
+      "choices": [
+        "Obtain blood cultures and perform lumbar puncture before antibiotics if safely possible",
+        "If lumbar puncture is unsafe or delayed (e.g., waiting for head CT), draw blood cultures and start antibiotics first",
+        "Consider head imaging before lumbar puncture if there is altered consciousness, seizures, focal neurological signs, papilledema, or immunocompromised status",
+        "If clinical suspicion is high, do not delay empiric antibiotics appropriate for the patient's age and background",
+        "Wait for cerebrospinal fluid culture results before starting antibiotics"
+      ],
+      "answers": [0, 1, 2, 3],
+      "explanation": "In bacterial meningitis, blood cultures and lumbar puncture should be performed promptly. However, if lumbar puncture cannot be performed safely immediately or is delayed by CT imaging, antibiotics should be started after blood cultures are drawn. Delaying antibiotics to await CSF culture results is inappropriate."
+    },
+    {
+      "id": "infection_basic_003_revised",
+      "question": "Select three important clinical features that should raise suspicion for necrotizing soft tissue infection.",
+      "choices": [
+        "Pain out of proportion to skin findings, or pain poorly responsive to analgesics",
+        "Spreading erythema and swelling progressing over hours, with systemic toxicity or shock",
+        "Presence of blisters, purpura, skin necrosis, crepitus, or sensory loss",
+        "If the LRINEC score is low, necrotizing fasciitis can be excluded even when clinically suspicious",
+        "Surgical evaluation within one week of starting antibiotics is appropriate"
+      ],
+      "answers": [0, 1, 2],
+      "selectCount": 3,
+      "explanation": "In necrotizing soft tissue infections, key features include pain disproportionate to appearance, rapid progression, systemic toxicity, and findings such as blisters, purpura, necrosis, crepitus, and sensory loss. These infections must not be excluded based on laboratory scores such as LRINEC alone; if suspected, early surgical consultation is essential and emergent debridement may be required. Waiting up to one week for surgical evaluation after starting antibiotics is too late."
+    },
+    {
+      "id": "infection_basic_004_revised",
+      "question": "Select all correct statements regarding appropriate antibiotic use.",
+      "choices": [
+        "Initial therapy should consider the site of infection, severity, risk of resistant organisms, and prior culture history",
+        "In septic shock, start empiric antibiotics promptly without delay, in parallel with necessary culture collection",
+        "Daily reassessment should address de-escalation, discontinuation, and shortening of treatment duration based on culture results, imaging, and clinical course",
+        "Dosing and intervals should be adjusted for renal function, body weight, dialysis, tissue penetration, and PK/PD parameters",
+        "Once broad-spectrum antibiotics are started, they should never be changed even after defervescence"
+      ],
+      "answers": [0, 1, 2, 3],
+      "explanation": "Antibiotic selection should be guided by the site of infection, severity, patient background, resistance risk, and prior culture history. In severe cases, antibiotics should be started without delay; however, de-escalation, discontinuation, and optimization of treatment duration should be performed based on culture results and clinical course. Renal function, body weight, and PK/PD parameters should also be considered. Changing antibiotics based on culture results or diagnostic reassessment — even after defervescence — is part of appropriate antibiotic stewardship."
+    },
+    {
+      "id": "infection_basic_005_revised",
+      "question": "Select three correct statements regarding the distinction between uncomplicated and complicated urinary tract infections (UTIs).",
+      "choices": [
+        "Acute cystitis with only lower urinary tract symptoms in a healthy, non-pregnant woman is typically classified as an uncomplicated UTI",
+        "UTIs in males, pregnant women, or patients with urinary obstruction, urolithiasis, urinary catheter, urinary tract anomaly, or immunocompromised status are classified as complicated UTIs",
+        "Fever, rigors, flank pain, or costovertebral angle tenderness suggests pyelonephritis or complicated UTI rather than simple cystitis",
+        "All women with mild cystitis symptoms and good general condition should be classified as complicated UTI",
+        "Antibiotics are highly effective for obstructive pyelonephritis, making urinary drainage contraindicated"
+      ],
+      "answers": [0, 1, 2],
+      "selectCount": 3,
+      "explanation": "Uncomplicated UTI typically refers to acute cystitis in a healthy, non-pregnant woman without structural abnormalities or serious underlying disease. Males, pregnant women, and patients with urinary obstruction, stones, catheters, anatomic anomalies, or immunocompromised status are classified as complicated UTI. Fever, rigors, flank pain, and CVA tenderness suggest pyelonephritis. In obstructive pyelonephritis, urinary drainage should be considered in addition to antibiotics."
+    },
+    {
+      "id": "infection_basic_006",
+      "question": "Which of the following is NOT a common causative pathogen of community-acquired pneumonia?",
+      "choices": [
+        "Streptococcus pneumoniae",
+        "Acinetobacter",
+        "Mycoplasma pneumoniae",
+        "Chlamydophila pneumoniae",
+        "Moraxella catarrhalis"
+      ],
+      "answer": 1,
+      "selectCount": 1,
+      "explanation": "Acinetobacter is rare in community-acquired pneumonia; Haemophilus influenzae is a more appropriate common pathogen. In elderly patients, the frequency of Staphylococcus aureus and Pseudomonas aeruginosa increases."
+    },
+    {
+      "id": "infection_basic_007",
+      "question": "Which of the following descriptions of the A-DROP pneumonia severity score criteria is incorrect?",
+      "choices": [
+        "AGE: male ≥70 years, female ≥75 years",
+        "Dehydration: BUN ≥21 mg/dL or dehydration",
+        "Respiration: respiratory rate ≥30",
+        "Orientation: altered mental status",
+        "Blood Pressure: systolic BP ≤90 mmHg"
+      ],
+      "answer": 2,
+      "selectCount": 1,
+      "explanation": "In A-DROP, the respiratory criterion is SpO2 ≤90%, not respiratory rate ≥30. Respiratory rate ≥30 is a criterion in the CURB-65 score."
+    },
+    {
+      "id": "infection_basic_008",
+      "question": "Which of the following descriptions of the CURB-65 pneumonia severity score criteria is incorrect?",
+      "choices": [
+        "Confusion: altered mental status",
+        "Urea: BUN ≥21 mg/dL",
+        "Respiratory rate: ≥22",
+        "Blood Pressure: sBP <90 or dBP ≤60 mmHg",
+        "age ≥65: age 65 years or older"
+      ],
+      "answer": 2,
+      "selectCount": 1,
+      "explanation": "In CURB-65, the respiratory rate criterion is ≥30, not ≥22. Respiratory rate ≥22 is a criterion in the qSOFA score."
+    },
+    {
+      "id": "infection_basic_009",
+      "question": "A 50-year-old woman presents alert and oriented. BUN 30 mg/dL, respiratory rate 20, SpO2 94%, BP 120/62 mmHg. CT confirms pneumonia. Which of the following is correct?",
+      "choices": [
+        "A-DROP score 2; predicted 30-day mortality several percent. Hospitalization should be considered",
+        "A-DROP score 1; predicted 30-day mortality <1%. Outpatient treatment may be considered",
+        "A-DROP score 3; predicted 30-day mortality 15–20%. Hospitalization indicated",
+        "CURB-65 score 2; predicted 30-day mortality approximately 10%. Hospitalization indicated",
+        "CURB-65 score 3; predicted 30-day mortality approximately 20%. Hospitalization indicated"
+      ],
+      "answer": 1,
+      "selectCount": 1,
+      "explanation": "Only dehydration (BUN) meets the A-DROP criteria, giving a score of 1. CURB-65 also scores 1 point for BUN alone. Both scores indicate low risk. After confirming oxygenation, oral intake, comorbidities, and follow-up availability, outpatient treatment may be considered."
+    },
+    {
+      "id": "infection_basic_010",
+      "question": "A 75-year-old man presents with altered consciousness. BUN 28 mg/dL, respiratory rate 20, SpO2 94%, BP 120/65 mmHg. CT confirms pneumonia. Which of the following is correct?",
+      "choices": [
+        "A-DROP score 2; predicted 30-day mortality several percent. Hospitalization should be considered",
+        "A-DROP score 1; predicted 30-day mortality <1%. Outpatient management possible",
+        "A-DROP score 4; predicted 30-day mortality ≥30%. Hospitalization indicated",
+        "CURB-65 score 2; predicted 30-day mortality approximately 10%. Hospitalization indicated",
+        "CURB-65 score 3; predicted 30-day mortality approximately 20%. Hospitalization indicated"
+      ],
+      "answer": 4,
+      "selectCount": 1,
+      "explanation": "A-DROP scores 3 points (age, BUN, and altered consciousness); CURB-65 also scores 3 points (confusion, BUN, and age ≥65). A CURB-65 score of 3 corresponds to an approximately 20% 30-day mortality, indicating hospitalization. The A-DROP score is 3, not 4 as stated in one of the choices."
+    },
+    {
+      "id": "infection_basic_011",
+      "question": "A 70-year-old woman presents alert. BUN 25 mg/dL, respiratory rate 25, SpO2 89%, BP 88/40 mmHg. CT confirms pneumonia. Which of the following is correct?",
+      "choices": [
+        "A-DROP score 2; predicted 30-day mortality several percent. Hospitalization should be considered",
+        "A-DROP score 1; predicted 30-day mortality <1%. Outpatient management possible",
+        "A-DROP score 3; predicted 30-day mortality 15–20%. Hospitalization indicated",
+        "CURB-65 score 1; predicted 30-day mortality <3%. Outpatient management possible",
+        "CURB-65 score 2; predicted 30-day mortality approximately 10%. Hospitalization indicated"
+      ],
+      "answer": 2,
+      "selectCount": 1,
+      "explanation": "A 70-year-old woman does not meet the age criterion in A-DROP. She scores 3 points for BUN (dehydration), SpO2 ≤90%, and systolic BP ≤90 mmHg, giving a 30-day mortality of 15–20% and indicating hospitalization. CURB-65 also scores 3 points (BUN, hypotension, and age ≥65)."
+    },
+    {
+      "id": "infection_basic_012",
+      "question": "Select the correct statement regarding cystitis.",
+      "choices": [
+        "Gram-positive organisms account for 50% of cases of acute uncomplicated cystitis",
+        "Pyuria is defined as ≥1 white blood cell per high-power field on urine sediment",
+        "High fever occurs in 30% of patients with cystitis",
+        "Trimethoprim-sulfamethoxazole (TMP-SMX) is used in pregnant women",
+        "Cephalexin 250 mg (2 tablets per dose) has been recently reported to be effective when given twice daily rather than four times daily"
+      ],
+      "answer": 4,
+      "selectCount": 1,
+      "explanation": "Escherichia coli is the most common pathogen in acute uncomplicated cystitis, accounting for approximately 60–80% of cases. Pyuria is defined as ≥5–10 white blood cells per high-power field on urine sediment, with ≥10/HPF used as a practical threshold. Uncomplicated cystitis does not typically cause fever; fever, rigors, or back pain should raise concern for pyelonephritis. TMP-SMX is contraindicated in pregnancy. Cephalexin 500 mg twice daily has been reported to be as effective as four times daily dosing for acute uncomplicated cystitis."
+    },
+    {
+      "id": "ed_first_steps_tetanus_002_revised",
+      "question": "Which wounds should be considered high risk for tetanus? Select three.",
+      "choices": [
+        "A wound with local erythema, swelling, and pain, present for more than 6 hours",
+        "A penetrating wound deeper than 1 cm with soil contamination",
+        "Complex wounds with irregular margins, such as lacerations, puncture wounds, burns, gunshot wounds, or severe frostbite",
+        "A clean linear superficial laceration sustained less than 6 hours ago",
+        "A clean laceration less than 1 cm deep caused by a knife or glass"
+      ],
+      "answers": [0, 1, 2],
+      "selectCount": 3,
+      "categories": ["ed_first_steps_basic", "trauma_basic", "infection_basic"],
+      "explanation": "High-risk wounds for tetanus include those present for more than 6 hours, complex or irregular wounds, wounds deeper than 1 cm, lacerations or puncture wounds from accidents, burns, gunshot wounds, severe frostbite, wounds with local inflammation, wounds with neurovascular compromise or tissue ischemia, and wounds contaminated with soil, feces, or saliva. Conversely, a clean linear laceration less than 1 cm deep, sustained within 6 hours, caused by a knife or glass without signs of local inflammation or contamination is considered low risk for tetanus."
+    },
+    {
+      "id": "ed_first_steps_tetanus_003_revised",
+      "question": "Select all correct statements regarding vaccination history assessment in tetanus prophylaxis.",
+      "choices": [
+        "Because the DPT (diphtheria-pertussis-tetanus) combination vaccine was added to Japan's routine immunization schedule in 1968, patients born before that year are unlikely to have received tetanus-containing vaccine as part of routine childhood immunization",
+        "Japan's current routine immunization schedule includes a primary series in infancy (first series) plus one dose of DT vaccine at age 11–12 years (second series)",
+        "Even among those born after 1968, many adults have not received a booster and are likely more than 10 years from their last tetanus-containing vaccine",
+        "In elderly trauma patients, if the patient says 'I think I received something as a child,' this can be accepted as evidence of completed primary immunization",
+        "The vaccination at age 11–12 years is administered as the third dose of the DPT vaccine"
+      ],
+      "answers": [0, 1, 2],
+      "categories": ["ed_first_steps_basic", "trauma_basic", "infection_basic", "emergency_medications_basic"],
+      "explanation": "Because DPT vaccine was introduced into Japan's routine immunization schedule in 1968, individuals born before that year are unlikely to have received a full tetanus primary series in childhood. Current routine immunization includes a primary series in infancy followed by a single DT booster at age 11–12 (second series). Many adults — even those born after 1968 — have not received a booster and are likely more than 10 years from their last tetanus-containing vaccine. A vague vaccination history should not be accepted as confirmation of completed primary immunization. The age 11–12 vaccination is a second-series DT dose, not a third dose of the DPT vaccine."
+    },
+    {
+      "id": "ed_first_steps_tetanus_004_revised",
+      "question": "A 70-year-old man sustained a lower leg injury from a rusty metal object while working in a field. The wound is deep with soil contamination and possible foreign body retention. His tetanus vaccination history is unknown. Which of the following is the most appropriate management?",
+      "choices": [
+        "Even though he was born before 1968, all people in Japan received tetanus vaccine in childhood as part of routine immunization, so wound irrigation alone is sufficient",
+        "Simultaneous administration of tetanus toxoid and TIG (tetanus immunoglobulin) reduces immunogenicity, so only one should be chosen",
+        "Even with unknown vaccination history in elderly patients, primary immunization can be assumed to be complete and TIG is unnecessary",
+        "Given unknown vaccination history and a high-risk wound, administer tetanus toxoid and TIG concurrently",
+        "Antibiotic administration makes tetanus prophylaxis unnecessary"
+      ],
+      "answer": 3,
+      "selectCount": 1,
+      "categories": ["ed_first_steps_basic", "trauma_basic", "infection_basic", "emergency_medications_basic"],
+      "explanation": "This 70-year-old man was born before 1968 and is unlikely to have received DPT vaccine through routine childhood immunization. The wound is deep with soil contamination and possible foreign body retention, making it a high-risk wound for tetanus. In patients with unknown or incomplete primary immunization presenting with a high-risk wound, both active immunization with tetanus toxoid and passive immunization with TIG should be administered concurrently. Wound irrigation, foreign body removal, and debridement as needed are also important."
+    }
+  ]
+}

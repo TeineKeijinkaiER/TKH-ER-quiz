@@ -1,0 +1,198 @@
+{
+  "category": "Altered Mental Status / Syncope",
+  "questions": [
+    {
+      "id": "altered_mental_status_basic_001",
+      "question": "Select the 3 conditions that can be identified and treated within 5 minutes of arrival in a patient presenting with altered mental status.",
+      "choices": [
+        "Hypoxia",
+        "Hypoglycemia",
+        "Encephalitis",
+        "Carbon monoxide poisoning",
+        "Psychogenic coma"
+      ],
+      "answers": [0, 1, 3],
+      "selectCount": 3,
+      "explanation": "Among the AIUEO-TIPS mnemonic, focus on conditions that can be identified at presentation using vital signs and blood gas analysis."
+    },
+    {
+      "id": "altered_mental_status_basic_002",
+      "question": "Select all findings that support a diagnosis of syncope.",
+      "choices": [
+        "Consciousness recovers spontaneously within a short time",
+        "Prolonged postictal confusion lasting for an extended period",
+        "Precipitating factors such as standing, pain, or urination",
+        "Prodromal symptoms including diaphoresis, nausea, and presyncope",
+        "Persistent dysarthria after recovery of consciousness"
+      ],
+      "answers": [0, 2, 3],
+      "explanation": "Syncope is a brief loss of consciousness due to transient global cerebral hypoperfusion, with spontaneous recovery. Prolonged confusion or persistent focal neurological deficits suggest an alternative diagnosis."
+    },
+    {
+      "id": "altered_mental_status_basic_003",
+      "question": "Select the 3 findings that warrant urgent head CT on arrival in a patient with altered mental status.",
+      "choices": [
+        "Altered mental status following head trauma",
+        "Hemiplegia after severe headache with accompanying altered mental status",
+        "A 55-year-old woman with sudden onset altered mental status at work, JCS 200",
+        "A 4-year-old child who became unresponsive during a febrile illness but is recovering",
+        "A patient with transient loss of consciousness who is now speaking fluently"
+      ],
+      "answers": [0, 1, 2],
+      "selectCount": 3,
+      "explanation": "Transient episodes in young children during fever are often febrile seizures; CT is unnecessary if altered mental status does not persist. CT is also not indicated for suspected syncope in adults. For trauma-associated altered mental status, especially GCS ≤ 8 or pupillary asymmetry, head CT should be performed promptly."
+    },
+    {
+      "id": "altered_mental_status_basic_004",
+      "question": "Select all items that should be assessed in the ED before imaging in a patient with altered mental status.",
+      "choices": [
+        "Blood gas analysis",
+        "Vital signs assessment",
+        "Pupillary light reflex",
+        "Limb and facial paralysis, dysarthria",
+        "Presence of pressure ulcers"
+      ],
+      "answers": [0, 1, 2, 3],
+      "explanation": "Particularly in suspected stroke, imaging is recommended as soon as possible after arrival. Plan ahead what must be assessed clinically to avoid unnecessary delays before imaging."
+    },
+    {
+      "id": "altered_mental_status_basic_005",
+      "question": "Select 3 correct statements about altered mental status due to hypoglycemia.",
+      "choices": [
+        "Hemiplegia may be present",
+        "Vitamin B1 (e.g., fursultiamine injection) should be administered simultaneously when malnutrition or heavy alcohol use is suspected",
+        "Depending on urgency and blood glucose level, administer 50% dextrose 20–40 mL (10–20 g) or 20% dextrose 40 mL (8 g) IV",
+        "50% dextrose is contraindicated due to high risk of extravasation injury",
+        "Administering dextrose before vitamin B1 is contraindicated"
+      ],
+      "answers": [0, 1, 2],
+      "selectCount": 3,
+      "categories": ["ed_first_steps_basic", "endocrine_basic", "emergency_medications_basic"],
+      "explanation": "Hypoglycemia can present with hemiplegia, reportedly more often right-sided. When heavy alcohol use or malnutrition is suspected, concurrent vitamin B1 administration is indicated to prevent Wernicke encephalopathy from B1 deficiency. Because of extravasation risk, 50% dextrose should be given as approximately 10–20 g IV. If vitamin B1 is not immediately available, dextrose administration should not be delayed."
+    },
+    {
+      "id": "altered_mental_status_basic_006",
+      "question": "Which ONE of the following ECG patterns does NOT suggest tachyarrhythmia as a cause of loss of consciousness?",
+      "choices": [
+        "Dome-shaped ST elevation with negative T waves in V1–V3",
+        "Prolonged QT interval",
+        "Short PR interval with delta wave",
+        "Epsilon wave and T-wave inversion in V1–V3",
+        "Right bundle branch block + left anterior fascicular block + first-degree AV block"
+      ],
+      "answer": 4,
+      "selectCount": 1,
+      "explanation": "Choices 1–4 represent ECG findings associated with tachyarrhythmia-related syncope (Brugada syndrome, long QT syndrome, WPW syndrome, and ARVC, respectively). Choice 5 (trifascicular block) indicates a risk of bradyarrhythmia such as high-degree AV block, not tachyarrhythmia, making it the incorrect answer."
+    },
+    {
+      "id": "altered_mental_status_basic_007",
+      "question": "Which ONE of the following statements about performing an orthostatic test for a syncope patient in the ED is INCORRECT?",
+      "choices": [
+        "The patient rested supine for 5 minutes before standing",
+        "Blood pressure and heart rate were measured every minute after standing",
+        "The patient should remain standing for at least 3 minutes to observe hemodynamic changes",
+        "Orthostatic hypotension is diagnosed when systolic BP drops by ≥30 mmHg or diastolic BP by ≥20 mmHg",
+        "A heart rate increase of ≥30 bpm raises suspicion for POTS (postural orthostatic tachycardia syndrome)"
+      ],
+      "answer": 3,
+      "selectCount": 1,
+      "explanation": "The standard diagnostic criteria for orthostatic hypotension are a drop in systolic BP of ≥20 mmHg or diastolic BP of ≥10 mmHg. The threshold of 30/20 mmHg in choice 4 is incorrect. The other choices are consistent with standard orthostatic testing procedures and POTS diagnostic criteria."
+    },
+    {
+      "id": "altered_mental_status_basic_008",
+      "question": "Select ALL incorrect statements about the AIUEO-TIPS mnemonic for altered mental status.",
+      "choices": [
+        "Shock and Temperature can be differentiated by urinalysis on arrival",
+        "Insulin (blood glucose), Electrolytes, and Oxygen can be differentiated by blood gas analysis on arrival",
+        "Alcohol and Uremia can be easily differentiated by laboratory tests",
+        "Stroke and Trauma are evaluated by head imaging",
+        "Encephalopathy, Overdose, Infection, Psychiatric, and Seizure are the five categories that are difficult to differentiate by the above alone, requiring detailed history, additional blood tests, toxicology screening, and EEG"
+      ],
+      "answers": [0],
+      "explanation": "Shock and Temperature are assessed by vital signs, physical examination, and blood tests, not urinalysis — making that statement inappropriate. The other choices are consistent with actual clinical practice: metabolic assessment by blood gas, laboratory testing for toxins and renal failure, imaging for brain lesions, and history/additional testing for the remaining categories."
+    },
+    {
+      "id": "altered_mental_status_basic_009",
+      "question": "Which ONE of the following treatments for a patient with altered mental status is INCORRECT?",
+      "choices": [
+        "Signs of cerebral herniation appeared in a head trauma patient, so mannitol was infused rapidly",
+        "A patient with charcoal poisoning arrived with JCS 30, so oxygen was administered via reservoir mask at 15 L/min",
+        "A patient with altered mental status since the previous day was suspected of medication overdose, so gastric lavage was performed",
+        "A patient with hemorrhagic stroke and altered mental status had BP 220/120, so nicardipine was used for BP reduction",
+        "Intubation was performed for a patient with GCS ≤ 8 and vomiting"
+      ],
+      "answer": 2,
+      "selectCount": 1,
+      "explanation": "Gastric lavage is generally considered only within approximately 1 hour of ingestion; with altered mental status since the previous day, the likelihood of residual drug in the stomach is low and risks outweigh benefits. The other choices — osmotic diuretic for herniation, high-flow oxygen for CO poisoning, BP reduction in hemorrhagic stroke, and intubation for decreased GCS with vomiting — are clinically appropriate."
+    },
+    {
+      "id": "altered_mental_status_basic_010",
+      "question": "Which ONE of the following statements about the 2018 ESC Guidelines definition of 'syncope' is INCORRECT?",
+      "choices": [
+        "It is caused by reduced global cerebral blood flow.",
+        "Consciousness recovers spontaneously and completely.",
+        "Onset is rapid and duration is short.",
+        "It is a transient loss of consciousness.",
+        "Loss of consciousness due to trauma is included."
+      ],
+      "answer": 4,
+      "selectCount": 1,
+      "explanation": "Syncope is defined as a transient loss of consciousness caused by transient global cerebral hypoperfusion, with rapid onset, short duration, and spontaneous complete recovery. Loss of consciousness due to trauma is NOT included in the definition of syncope."
+    },
+    {
+      "id": "altered_mental_status_basic_011",
+      "question": "In the upright position, below what level of systolic blood pressure at the cardiac level can loss of consciousness occur?",
+      "choices": [
+        "70–80 mmHg",
+        "60–70 mmHg",
+        "50–60 mmHg",
+        "40–50 mmHg",
+        "30–40 mmHg"
+      ],
+      "answer": 2,
+      "selectCount": 1,
+      "explanation": "In the upright position, when systolic BP at the cardiac level drops to approximately 50–60 mmHg, global cerebral perfusion cannot be maintained and loss of consciousness may occur. This corresponds to choice 3."
+    },
+    {
+      "id": "altered_mental_status_basic_012",
+      "question": "In the study by Sheldon et al. (2002), which historical feature had the highest likelihood ratio for suggesting epileptic seizure rather than syncope?",
+      "choices": [
+        "Incontinence",
+        "Diaphoresis before the episode",
+        "Head turning during the episode",
+        "Lateral tongue biting",
+        "Postictal confusion"
+      ],
+      "answer": 3,
+      "selectCount": 1,
+      "explanation": "In the Sheldon et al. study, lateral tongue biting had the highest likelihood ratio for epileptic seizure. Incontinence and postictal confusion can also occur in syncope and therefore have lower specificity. Lateral tongue biting provides the greatest discriminative power."
+    },
+    {
+      "id": "altered_mental_status_basic_013",
+      "question": "Which ONE of the following is a 'high-risk' feature in a syncope patient seen in the ED that should prompt consideration of hospital admission?",
+      "choices": [
+        "A young patient with typical prodromal symptoms (diaphoresis, nausea) while standing.",
+        "Syncope that occurred in the supine position or during exertion.",
+        "Repeated syncope over more than 10 years.",
+        "Syncope during a meal or in a crowded place.",
+        "Pallor during loss of consciousness."
+      ],
+      "answer": 1,
+      "selectCount": 1,
+      "explanation": "Syncope in the supine position or during exertion suggests life-threatening arrhythmia or serious cardiac disease and is high-risk. Syncope with prodrome in a young person while standing, long-term recurrent syncope, syncope during meals or in crowded places, and pallor during the episode suggest reflex syncope and are low-risk. Only choice B meets the high-risk criteria."
+    },
+    {
+      "id": "altered_mental_status_basic_014",
+      "question": "Which ONE of the following is the recommended 'Physical Counter-pressure Maneuver (PCM)' for patients with vasovagal (neurally-mediated) syncope who have prodromal symptoms?",
+      "choices": [
+        "Repeat deep breaths.",
+        "Leg crossing and forceful hand gripping / arm pulling.",
+        "Stand on one foot with eyes closed.",
+        "Maintain a rigid upright posture.",
+        "Have bystanders support the body from front and back to prevent tilting."
+      ],
+      "answer": 1,
+      "explanation": "Physical counter-pressure maneuvers such as leg crossing and forceful hand gripping temporarily increase venous return and blood pressure to prevent syncope. Maneuvers such as leg crossing and arm pulling are recommended. Deep breathing and rigid standing are not effective for maintaining blood pressure, making choice B the correct answer."
+    }
+  ]
+}

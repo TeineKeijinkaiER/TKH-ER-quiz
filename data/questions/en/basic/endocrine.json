@@ -1,0 +1,73 @@
+{
+  "category": "Endocrine Emergencies",
+  "questions": [
+    {
+      "id": "endocrine_basic_001",
+      "question": "Select three findings or laboratory results appropriate for suspecting DKA.",
+      "choices": [
+        "A patient with diabetes or hyperglycemia has an elevated serum beta-hydroxybutyrate",
+        "Hyperglycemia is accompanied by decreased pH or decreased bicarbonate",
+        "A patient on an SGLT2 inhibitor presents with ketosis and metabolic acidosis even without markedly elevated blood glucose",
+        "Blood glucose ≥600 mg/dL with elevated plasma osmolality, without prominent ketosis or acidosis",
+        "Hyperglycemia is present, but there is no acidosis and ketones are negative"
+      ],
+      "answers": [0, 1, 2],
+      "selectCount": 3,
+      "explanation": "DKA is suspected when hyperglycemia or diabetes, ketosis, and metabolic acidosis are present together. SGLT2 inhibitor-associated DKA can occur as euglycemic DKA with near-normal blood glucose levels. Blood glucose ≥600 mg/dL with elevated plasma osmolality but without prominent ketosis or acidosis is more suggestive of HHS (hyperosmolar hyperglycemic state)."
+    },
+    {
+      "id": "endocrine_basic_002",
+      "question": "Select all correct statements regarding initial treatment of DKA/HHS.",
+      "choices": [
+        "Start IV fluids to address circulatory compromise and dehydration",
+        "Check serum potassium before starting insulin and determine a correction plan",
+        "Consider insulin administration",
+        "Evaluate for precipitating causes such as infection, myocardial infarction, stroke, and medication non-adherence",
+        "If blood glucose is elevated, insulin should be started as the top priority regardless of serum potassium"
+      ],
+      "answers": [0, 1, 2, 3],
+      "explanation": "The pillars of initial DKA/HHS treatment are IV fluids, potassium management, insulin, and identification of precipitating causes. Starting insulin in the setting of hypokalemia can cause life-threatening arrhythmias due to intracellular potassium shift; therefore, checking serum potassium and planning correction before initiating insulin is essential."
+    },
+    {
+      "id": "endocrine_basic_003",
+      "question": "Select three findings or clinical contexts appropriate for suspecting adrenal crisis.",
+      "choices": [
+        "Unexplained shock or hypotension with poor response to IV fluids and vasopressors",
+        "History of long-term corticosteroid use with a superimposed physiological stressor such as infection or surgery",
+        "Acute illness accompanied by hyponatremia, hyperkalemia, and hypoglycemia",
+        "Fever, tachycardia, diaphoresis, and hand tremor with low TSH and elevated FT4",
+        "Hyperglycemia, elevated serum ketones, and metabolic acidosis"
+      ],
+      "answers": [0, 1, 2],
+      "selectCount": 3,
+      "explanation": "Adrenal crisis should be suspected in the presence of unexplained shock, hypotension poorly responsive to IV fluids and vasopressors, long-term corticosteroid use with physiological stress such as infection or surgery, hyponatremia, hyperkalemia, hypoglycemia, vomiting, abdominal pain, or severe malaise. Fever, tachycardia, diaphoresis, and hand tremor with low TSH and elevated FT4 suggest thyrotoxicosis or thyroid storm. Hyperglycemia, ketosis, and metabolic acidosis are findings suggestive of DKA."
+    },
+    {
+      "id": "endocrine_basic_004",
+      "question": "Select three findings appropriate for suspecting thyroid storm.",
+      "choices": [
+        "Thyrotoxicosis with high fever",
+        "Thyrotoxicosis with marked tachycardia or atrial fibrillation",
+        "Thyrotoxicosis with central nervous system manifestations such as delirium, somnolence, or seizures",
+        "Low TSH only, without fever, tachycardia, heart failure, or altered consciousness",
+        "Altered consciousness with hypothermia, bradycardia, hyponatremia, and CO2 retention"
+      ],
+      "answers": [0, 1, 2],
+      "selectCount": 3,
+      "explanation": "Thyroid storm presents against a background of thyrotoxicosis with high fever, marked tachycardia or atrial fibrillation, central nervous system manifestations, heart failure, and GI symptoms or hepatic dysfunction. Low TSH alone does not constitute thyroid storm. Altered consciousness with hypothermia, bradycardia, hyponatremia, and CO2 retention suggests myxedema coma."
+    },
+    {
+      "id": "endocrine_basic_005",
+      "question": "Select all correct statements regarding management of severe hypoglycemia.",
+      "choices": [
+        "Do not force oral intake in patients with altered consciousness",
+        "Intravenous dextrose or glucagon should be used as appropriate to the clinical situation",
+        "Identify contributing causes such as insulin, sulfonylureas, poor oral intake, and reduced renal function",
+        "After recovery, monitor closely for recurrent hypoglycemia",
+        "Once the patient regains consciousness after dextrose administration, involvement of long-acting insulin or sulfonylureas can be excluded"
+      ],
+      "answers": [0, 1, 2, 3],
+      "explanation": "In severe hypoglycemia, forcing oral intake in a patient with altered consciousness carries a risk of aspiration. Intravenous dextrose or glucagon should be used for prompt correction, and contributing factors including causative medications, dietary intake, renal function, and infection should be identified. Recurrent hypoglycemia can occur with long-acting insulin, sulfonylureas, or reduced renal clearance, so continued monitoring is necessary even after the patient has regained consciousness."
+    }
+  ]
+}

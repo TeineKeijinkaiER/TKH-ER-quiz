@@ -1,0 +1,142 @@
+{
+  "category": "Major Trauma Advanced",
+  "questions": [
+    {
+      "id": "trauma_advanced_001",
+      "question": "Regarding activation of a massive transfusion protocol (MTP) in a trauma patient, which ONE statement is INCORRECT?",
+      "choices": [
+        "With BP 78/44 mmHg, HR 136/min, and diaphoresis in a patient with suspected truncal hemorrhage, consider MTP activation without waiting for laboratory results",
+        "If blood pressure temporarily improves to 110/70 mmHg with initial fluid or small blood transfusion but falls again to 82/50 mmHg, suspect ongoing hemorrhage",
+        "When multiple bleeding sources are suspected, such as pelvic fracture, intra-abdominal hemorrhage, and thoracic hemorrhage, advance MTP and hemorrhage control strategies in parallel",
+        "If the admission Hb is 13.2 g/dL, massive acute hemorrhage is unlikely and MTP activation is generally unnecessary",
+        "MTP should address not only red blood cell transfusion but also plasma, platelets, fibrinogen, calcium, and temperature management"
+      ],
+      "answers": [3],
+      "selectCount": 1,
+      "explanation": "In acute traumatic hemorrhage, a normal admission Hb does not exclude massive hemorrhage. MTP activation is based on a composite assessment of mechanism of injury, vital signs, shock findings, response to fluid/transfusion, FAST, and chest/pelvic findings — not a single laboratory value. Practical triggers include: SBP <90 mmHg, HR >120/min, positive FAST, penetrating truncal trauma, pelvic instability, and rapidly increasing transfusion requirements. The ABC score assigns 1 point each for penetrating mechanism, positive FAST, SBP <90 mmHg, and HR ≥120/min; a score of ≥2 indicates high risk of requiring massive transfusion."
+    },
+    {
+      "id": "trauma_advanced_002",
+      "question": "Select ALL factors that worsen traumatic coagulopathy or that should be actively corrected during trauma resuscitation.",
+      "choices": [
+        "Hypothermia with core temperature 34.8°C",
+        "Acidosis with pH 7.18, BE -10 mmol/L",
+        "Dilutional coagulopathy from large-volume crystalloid administration",
+        "Hypocalcemia equivalent to ionized Ca 0.85 mmol/L",
+        "Hyponatremia with Na 128 mEq/L"
+      ],
+      "answers": [0, 1, 2, 3],
+      "explanation": "Traumatic coagulopathy is worsened by tissue injury and shock, compounded by hypothermia, acidosis, dilutional coagulopathy, decreased fibrinogen, thrombocytopenia, and hypocalcemia. General correction thresholds include: temperature <35°C, pH <7.2, BE ≤-6 mmol/L, elevated lactate, fibrinogen <150–200 mg/dL, low platelets, and ionized Ca <1.0 mmol/L. Hyponatremia may complicate overall management but is not typically considered a primary driver of traumatic coagulopathy."
+    },
+    {
+      "id": "trauma_advanced_003",
+      "question": "Regarding the use of a pelvic binder in a trauma patient with suspected hemodynamically unstable pelvic ring injury, select THREE appropriate statements.",
+      "choices": [
+        "With BP 80/50 mmHg, HR 128/min, and suspected pelvic ring injury, consider early temporary stabilization with a pelvic binder",
+        "Position the pelvic binder at the level of the greater trochanters (not the iliac crests) to reduce pelvic ring volume",
+        "If BP 85/50 mmHg and HR 130/min persist after pelvic binder application, advance blood transfusion and definitive hemorrhage control in parallel",
+        "Because the pelvic binder interferes with abdominal examination and FAST, delay application until FAST is complete",
+        "If an open pelvic fracture is suspected, a pelvic binder is generally contraindicated due to infection risk"
+      ],
+      "answers": [0, 1, 2],
+      "selectCount": 3,
+      "explanation": "For hemodynamically unstable pelvic ring injuries, early temporary stabilization with a pelvic binder should be considered. General indications include: high-energy trauma, suspected pelvic pain or instability, shock, or altered mental status precluding pelvic assessment. The binder is positioned at the level of the greater trochanters, not the iliac crests. Binder application is not definitive hemorrhage control; if SBP <90 mmHg, tachycardia, ongoing transfusion requirement, or rising lactate persist after application, proceed promptly to interventional radiology, surgical hemorrhage control, or preperitoneal packing."
+    },
+    {
+      "id": "trauma_advanced_004",
+      "question": "Regarding prevention of secondary brain injury in severe traumatic brain injury, which ONE statement is INCORRECT?",
+      "choices": [
+        "With SpO2 88% and increased work of breathing, prioritize airway management and oxygenation to avoid hypoxia",
+        "In polytrauma with BP 82/48 mmHg, advance hemorrhage control and circulatory resuscitation in parallel with intracranial assessment",
+        "Temperature 39.0°C, blood glucose 42 mg/dL, and seizures all worsen secondary brain injury and should be corrected",
+        "When imminent neurological deterioration (impending herniation) is present, stabilize A-B-C simultaneously",
+        "When raised ICP is suspected, maintain SBP below 90 mmHg to reduce cerebral edema"
+      ],
+      "answers": [4],
+      "selectCount": 1,
+      "explanation": "In severe traumatic brain injury, hypoxia and hypotension must be avoided. General targets include SpO2 ≥94%, PaO2 >60 mmHg, and SBP of at least 100–110 mmHg. Even when raised ICP is suspected, cerebral perfusion pressure must be maintained; intentionally lowering SBP below 90 mmHg is inappropriate. Hypoglycemia, severe hyperglycemia, fever, seizures, hypoxia, and hypotension all worsen secondary brain injury and require correction."
+    },
+    {
+      "id": "trauma_advanced_005",
+      "question": "Regarding initial management of thoracic trauma, which ONE statement is INCORRECT?",
+      "choices": [
+        "If 1,600 mL of bloody output is noted immediately after chest tube insertion, consider emergent thoracotomy for massive hemothorax",
+        "If bloody output persists at 250 mL/hour after chest tube insertion with ongoing hypotension, evaluate the indication for surgical hemorrhage control",
+        "In flail chest, evaluate not only paradoxical chest wall movement but also the presence of pulmonary contusion, hypoxia, and ventilatory failure",
+        "Persistent large air leak with failure of lung re-expansion after chest tube insertion suggests tracheobronchial injury",
+        "In traumatic cardiac tamponade, root cause treatment is unnecessary if blood pressure temporarily improves to 90/60 mmHg with fluid administration"
+      ],
+      "answers": [4],
+      "selectCount": 1,
+      "explanation": "In traumatic cardiac tamponade, temporary hemodynamic improvement does not justify delaying definitive treatment. Common thresholds for emergent thoracotomy in massive hemothorax include: immediate output of approximately ≥1,500 mL after chest tube insertion, output of ≥200 mL/hour for 2 to 4 hours, or ongoing hemodynamic instability. Persistent large air leak with failure of lung re-expansion suggests tracheobronchial injury. In flail chest, evaluation of pulmonary contusion and ventilatory failure is essential."
+    },
+    {
+      "id": "trauma_advanced_006",
+      "question": "Regarding initial decision-making in a patient with blunt abdominal trauma and suspected liver injury, which ONE statement is INCORRECT?",
+      "choices": [
+        "With BP 76/48 mmHg, HR 132/min, and positive FAST, suspect intra-abdominal hemorrhage and consider hemorrhage control strategies including surgery or interventional radiology in parallel with resuscitation",
+        "With BP 118/72 mmHg and HR 92/min in a stable patient, contrast-enhanced CT is useful for evaluating the location, depth, active bleeding, and associated organ injuries of liver trauma",
+        "On contrast-enhanced CT, a 4-cm deep laceration of the right hepatic lobe with extravasation of contrast is found, but blood pressure is stable; consider non-operative management including transarterial embolization (TAE)",
+        "The treatment strategy for liver injury is determined solely by the AAST grade, and hemodynamic status and transfusion requirements have minimal influence on treatment selection",
+        "Even with initial hemodynamic stability in liver injury, monitor closely for re-bleeding, biliary leak, and pseudoaneurysm"
+      ],
+      "answers": [3],
+      "selectCount": 1,
+      "explanation": "The treatment strategy for liver injury is based not on AAST grade alone, but on hemodynamic status, transfusion requirements, contrast extravasation on CT, associated injuries, and institutional capabilities for interventional radiology and surgery. Hemodynamic instability, poor response to transfusion, or peritoneal signs warrant hemorrhage control including surgery. In stable patients, contrast-enhanced CT is useful; TAE should be considered if contrast extravasation or pseudoaneurysm is found. Complications to anticipate include re-bleeding, biliary leak, biloma, liver abscess, and pseudoaneurysm."
+    },
+    {
+      "id": "trauma_advanced_007",
+      "question": "Select ALL correct statements regarding management of a patient with blunt abdominal trauma and suspected splenic injury.",
+      "choices": [
+        "With BP 124/76 mmHg, HR 88/min, and stable hemodynamics, and contrast-enhanced CT showing grade III splenic injury without contrast extravasation, non-operative management under close observation may be considered",
+        "With BP 82/50 mmHg, HR 136/min, positive FAST, and failure to respond to transfusion, suspect splenic hemorrhage and consider hemorrhage control strategies including emergent surgery",
+        "When CT shows a splenic pseudoaneurysm or contrast extravasation, consider TAE even if the patient is hemodynamically stable",
+        "Because splenic injury may develop delayed hemorrhage, repeatedly reassess abdominal pain, vital signs, and Hb decline during non-operative management",
+        "Grade IV splenic injury with BP 126/78 mmHg and HR 82/min — if stable, non-operative management is contraindicated"
+      ],
+      "answers": [0, 1, 2, 3],
+      "explanation": "Hemodynamic status is central to treatment selection in splenic injury. Hemodynamic instability, poor response to transfusion, or peritoneal signs warrant surgical hemorrhage control. In stable patients, contrast-enhanced CT is valuable; TAE should be considered when contrast extravasation or pseudoaneurysm is identified. Even high-grade injuries (e.g., AAST grade IV) may be managed non-operatively if the patient is hemodynamically stable, close monitoring is available, and IVR/surgical backup is in place. During non-operative management, repeat assessment of worsening abdominal pain, tachycardia, hypotension, and Hb decline is essential."
+    },
+    {
+      "id": "trauma_advanced_008",
+      "question": "Select THREE situations that suggest pancreatic or duodenal injury.",
+      "choices": [
+        "Handlebar impact to the upper abdomen with no obvious free air on initial CT, but worsening upper abdominal pain and vomiting 6 hours later",
+        "If the initial serum amylase is within normal range, pancreatic injury can be nearly excluded in the early post-injury period",
+        "When CT shows a low-attenuation band transecting the pancreatic body, peripancreatic fluid, or suspected main pancreatic duct injury, consult the relevant specialty early",
+        "Retroperitoneal air, peripancreatic fluid, bilious vomiting, and persistent upper abdominal pain suggest duodenal injury",
+        "If FAST is negative, evaluation for pancreatic or duodenal injury is unnecessary"
+      ],
+      "answers": [0, 2, 3],
+      "selectCount": 3,
+      "explanation": "Pancreatic and duodenal injuries are retroperitoneal injuries that may be subtle on FAST and initial CT. Clues to suspicion include: direct epigastric force (e.g., handlebar injury), persistent or worsening upper abdominal pain, vomiting, peripancreatic fluid, pancreatic parenchymal laceration, suspected main duct injury, retroperitoneal air, and peripancreatic fluid collections. Serum amylase may be normal in the early post-injury period and a normal value alone should not exclude pancreatic injury. Even with negative FAST, retroperitoneal injuries cannot be excluded; consider serial examination, repeat imaging, contrast-enhanced CT reassessment, and MRCP/ERCP."
+    },
+    {
+      "id": "trauma_advanced_009",
+      "question": "Regarding evaluation of blunt bowel and mesenteric injury, which ONE statement is INCORRECT?",
+      "choices": [
+        "When a seatbelt sign, abdominal pain, and tenderness are present, keep bowel/mesenteric injury in mind even if initial CT shows no obvious free air",
+        "When CT shows bowel wall thickening, mesenteric hematoma, increased mesenteric fat density, or small-volume ascites, perform serial evaluation in conjunction with symptoms",
+        "Even with non-specific initial CT findings, reconsider clinical assessment and repeat imaging if abdominal pain worsens, fever develops, tachycardia occurs, or lactate rises",
+        "When mesenteric injury with intraperitoneal free air, bowel content spillage, or contrast extravasation is found, evaluate for surgical indication",
+        "If the white blood cell count is 9,800/μL and within the normal range, bowel injury is unlikely and observation is unnecessary"
+      ],
+      "answers": [4],
+      "selectCount": 1,
+      "explanation": "Bowel and mesenteric injuries can be difficult to diagnose on initial CT. Clues to suspicion include: seatbelt sign, high-energy deceleration injury, worsening abdominal pain and tenderness, fever, tachycardia, rising lactate, unexplained ascites, bowel wall thickening, mesenteric hematoma, and increased mesenteric fat density. Findings that strongly favor surgery include: intraperitoneal free air, bowel content spillage, mesenteric injury with contrast extravasation, peritoneal signs, and hemodynamic instability. A normal white blood cell count does not exclude bowel injury."
+    },
+    {
+      "id": "trauma_advanced_010",
+      "question": "Select ALL correct statements about evaluation of vascular injury and compartment syndrome in extremity trauma.",
+      "choices": [
+        "Pulsatile hemorrhage, expanding hematoma, peripheral ischemia, and bruit/thrill are hard signs that strongly suggest vascular injury",
+        "Even with palpable peripheral pulses, vascular injury or compartment syndrome cannot be completely excluded",
+        "If the ankle-brachial index (ABI) or arterial pressure index (API) is below 0.9, suspect vascular injury and consider additional evaluation",
+        "Pain on passive stretch, severe pain, and a tense compartment are important early signs of compartment syndrome",
+        "If peripheral pulses are palpable and a pulse oximetry waveform is present, repeat evaluation for compartment syndrome is unnecessary"
+      ],
+      "answers": [0, 1, 2, 3],
+      "explanation": "Extremity vascular injuries are stratified into hard signs and soft signs. Hard signs — pulsatile hemorrhage, expanding hematoma, peripheral ischemia, and bruit/thrill — warrant emergent vascular surgical evaluation. ABI or API below 0.9 is a threshold for suspecting vascular injury and prompts additional evaluation such as CTA. In compartment syndrome, pain on passive stretch, severe pain, and compartment tightness are early findings; paralysis, sensory loss, and absent pulses are late signs. Compartment syndrome cannot be excluded even with palpable peripheral pulses."
+    }
+  ]
+}

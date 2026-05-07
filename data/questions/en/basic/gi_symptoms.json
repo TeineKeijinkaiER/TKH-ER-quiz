@@ -1,0 +1,238 @@
+{
+  "category": "GI Symptoms",
+  "questions": [
+    {
+      "id": "gi_symptoms_basic_002",
+      "question": "Select all conditions or situations in acute abdominal presentations that may require emergent endoscopy or endoscopic intervention.",
+      "choices": [
+        "Active GI bleeding",
+        "Acute cholangitis",
+        "Esophageal foreign body",
+        "Small bowel obstruction with suspected strangulation",
+        "Sigmoid volvulus"
+      ],
+      "answers": [0, 1, 2, 4],
+      "explanation": "According to the Acute Abdomen Guidelines 2025, conditions requiring emergent endoscopy or intervention include GI bleeding, acute cholangitis, GI foreign bodies, and bowel obstruction. However, endoscopy is not indicated for all bowel obstructions. An esophageal foreign body may require emergent endoscopic removal. In sigmoid volvulus, if there is no evidence of perforation or necrosis, endoscopic decompression and reduction is a treatment option. In contrast, small bowel obstruction with suspected strangulation should be prioritized for CT evaluation, surgical consultation, and operative decision-making rather than endoscopy."
+    },
+    {
+      "id": "gi_symptoms_basic_003",
+      "question": "Select three correct statements regarding evaluation of acute pancreatitis as an acute abdominal presentation.",
+      "choices": [
+        "Lipase measurement is considered more useful than amylase for diagnosing acute pancreatitis",
+        "Contrast-enhanced CT can be useful in assessing severity of acute pancreatitis",
+        "In gallstone pancreatitis, a heart rate ≥100 beats/min has been reported to be associated with increased complications",
+        "If abdominal pain is mild in acute pancreatitis, severe progression is unlikely and imaging is unnecessary",
+        "Elevated lipase has high utility for differentiating all other causes of acute abdominal pain"
+      ],
+      "answers": [0, 1, 2],
+      "selectCount": 3,
+      "explanation": "According to the Acute Abdomen Guidelines 2025, lipase measurement is considered more useful for diagnosing acute pancreatitis, though its utility for other conditions is limited. Contrast-enhanced CT is recommended in certain situations for severity assessment. Among vital signs, a heart rate ≥100 beats/min in gallstone pancreatitis is associated with increased complications."
+    },
+    {
+      "id": "gi_symptoms_basic_004",
+      "question": "Select three correct statements regarding acute abdominal presentations with suspected intestinal ischemia.",
+      "choices": [
+        "In the early stages, patients may present with abdominal pain out of proportion to physical examination findings",
+        "Atrial fibrillation should prompt mesenteric ischemia to be included in the differential diagnosis",
+        "Blood gas analysis and lactate levels alone can confirm the diagnosis of intestinal ischemia",
+        "Contrast-enhanced CT is recommended when intestinal ischemia is suspected",
+        "Intestinal ischemia can be excluded if peritoneal signs are absent"
+      ],
+      "answers": [0, 1, 3],
+      "selectCount": 3,
+      "explanation": "According to the Acute Abdomen Guidelines 2025, mesenteric ischemia may initially present with pain out of proportion to physical findings, and atrial fibrillation should prompt consideration of mesenteric ischemia, splenic infarction, and renal infarction. While lactate levels are useful for assessing severity such as shock, diagnosing intestinal ischemia by blood gas alone is difficult, and contrast-enhanced CT is recommended when ischemia is suspected. Absence of peritoneal signs alone does not exclude intestinal ischemia."
+    },
+    {
+      "id": "gi_symptoms_basic_005",
+      "question": "Select three correct statements regarding red flag signs in history-taking for acute abdominal presentations.",
+      "choices": [
+        "Sudden onset with severe abdominal pain should prompt consideration of aortic dissection, ruptured abdominal aortic aneurysm, mesenteric ischemia, and GI perforation",
+        "A short time from symptom onset to presentation may correlate with disease severity",
+        "Constant pain is a red flag sign in acute abdominal presentations and may be a predictor of emergent surgery in elderly patients",
+        "Colicky pain rules out high-acuity diagnoses, as it indicates a hollow viscus origin",
+        "Vascular lesions can be excluded if peritoneal signs are absent at the time of examination, even with sudden onset"
+      ],
+      "answers": [0, 1, 2],
+      "selectCount": 3,
+      "explanation": "According to the Acute Abdomen Guidelines 2025, 'sudden onset,' 'severe pain,' 'short time from onset to presentation,' and 'constant pain' are considered important red flag signs. Sudden onset with severe abdominal pain should raise concern for vascular lesions, perforation, and volvulus. Colicky pain can be associated with bowel obstruction, biliary disease, ureteral stones, and gynecological conditions, and high-acuity diagnoses cannot be excluded. Vascular lesions must not be excluded based solely on the absence of peritoneal signs."
+    },
+    {
+      "id": "gi_symptoms_basic_006",
+      "question": "Select one correct statement regarding the diagnostic characteristics of history and physical findings suggestive of acute appendicitis, as reported in the Acute Abdomen Guidelines 2025.",
+      "choices": [
+        "Anorexia has high specificity for acute appendicitis and is useful as a standalone diagnostic criterion",
+        "Pain migration has been reported to have sensitivity 64%, specificity 82%, and positive likelihood ratio 3.18 for acute appendicitis",
+        "Vomiting has a high positive likelihood ratio for acute appendicitis and is useful for confirming the diagnosis",
+        "Fever is nearly essential for differentiating appendicitis, and its absence makes appendicitis unlikely",
+        "Right lower quadrant pain has low specificity for acute appendicitis and is therefore not included in the Alvarado score"
+      ],
+      "answers": [1],
+      "selectCount": 1,
+      "explanation": "According to the Acute Abdomen Guidelines 2025, pain migration in acute appendicitis has sensitivity 64%, specificity 82%, and positive likelihood ratio 3.18. Anorexia has sensitivity 68% and specificity 36%, making it of limited diagnostic value alone. Vomiting alone is also insufficient for confirming the diagnosis. Right lower quadrant pain is included in the Alvarado score."
+    },
+    {
+      "id": "gi_symptoms_basic_007",
+      "question": "Select three correct statements regarding history and physical findings in bowel obstruction, as reported in the Acute Abdomen Guidelines 2025.",
+      "choices": [
+        "When all three findings — abdominal distension, hyperactive bowel sounds, and vomiting — are present, specificity for bowel obstruction is reported at 100% with a positive predictive value of 64%",
+        "Vomiting alone has a high positive predictive value for bowel obstruction and is useful as a standalone diagnostic criterion",
+        "The diagnostic accuracy of constipation for bowel obstruction is reported as specificity 90–95% and positive likelihood ratio 3.7–8.8",
+        "When 2 or more of the following are present — abdominal distension, prior abdominal surgery, hyperactive bowel sounds, constipation, vomiting, age ≥50 — it is useful for bowel obstruction screening",
+        "Normal bowel sounds exclude bowel obstruction"
+      ],
+      "answers": [0, 2, 3],
+      "selectCount": 3,
+      "explanation": "In bowel obstruction, the combination of history and physical findings is important. According to the Acute Abdomen Guidelines 2025, the positive predictive value of vomiting alone is only 7.9%, but when all three findings of abdominal distension, hyperactive bowel sounds, and vomiting are present, specificity is 100% and positive predictive value is 64%. Constipation has specificity 90–95% and positive likelihood ratio 3.7–8.8 for bowel obstruction. Normal bowel sounds do not exclude bowel obstruction."
+    },
+    {
+      "id": "gi_symptoms_basic_008",
+      "question": "Select three correct statements regarding acute abdominal presentations with fever and rigors.",
+      "choices": [
+        "Rigors increase the likelihood of bacteremia",
+        "In acute abdominal presentations with fever, peritonitis, cholecystitis, cholangitis, and pyelonephritis should be included in the differential diagnosis",
+        "Rigors have been reported to have specificity 90.3% and positive likelihood ratio 4.65 for bacteremia",
+        "In elderly patients, perforation of cholecystitis or appendicitis is unlikely if fever is absent",
+        "Inflammatory bowel disease does not cause fever"
+      ],
+      "answers": [0, 1, 2],
+      "selectCount": 3,
+      "explanation": "According to the Acute Abdomen Guidelines 2025, rigors are a finding that increases the likelihood of bacteremia, with specificity 90.3% and positive likelihood ratio 4.65. In acute abdominal presentations with fever, peritonitis, cholecystitis, cholangitis, and pyelonephritis should be included in the differential. In elderly patients, perforation and sepsis can complicate cholecystitis or appendicitis even without fever, so these conditions must not be excluded based on the absence of fever alone. Severe inflammatory bowel disease can also cause fever."
+    },
+    {
+      "id": "gi_symptoms_basic_009",
+      "question": "Select three statements consistent with the Acute Abdomen Guidelines 2025 regarding vital signs.",
+      "choices": [
+        "Tachypnea increases the likelihood of pneumonia, cardiopulmonary failure, or bacteremia",
+        "When respiratory rate exceeds twice the normal range in a patient with abdominal pain, an intrathoracic source should be considered",
+        "In gallstone pancreatitis, a heart rate ≥100 beats/min has been reported to be associated with increased complications",
+        "Systolic BP ≤90 mmHg has limited utility as a predictor of ICU mortality or sepsis-related death",
+        "Normal vital signs can essentially exclude early intestinal ischemia or peritonitis"
+      ],
+      "answers": [0, 1, 2],
+      "selectCount": 3,
+      "explanation": "According to the Acute Abdomen Guidelines 2025, tachypnea suggests pneumonia, cardiopulmonary failure, or bacteremia. It is uncommon for abdominal pain alone to cause respiratory rate greater than twice the normal value; when this occurs, intrathoracic disease should be considered. In gallstone pancreatitis, heart rate ≥100 beats/min is associated with increased complications. Hypotension suggests poor prognosis, and serious disease cannot be excluded even with normal vital signs."
+    },
+    {
+      "id": "gi_symptoms_basic_010",
+      "question": "Select three correct statements regarding abdominal examination and bowel sounds.",
+      "choices": [
+        "Begin examination away from the area of pain and examine the painful area last",
+        "If percussion tenderness is positive, rebound tenderness does not need to be deliberately elicited",
+        "Abnormal bowel sounds in small bowel obstruction have been reported with sensitivity 76%, specificity 88%, and positive likelihood ratio 6.37",
+        "Abnormal bowel sounds are also strongly useful for diagnosing peritonitis",
+        "Normal bowel sounds exclude conditions requiring surgery"
+      ],
+      "answers": [0, 1, 2],
+      "selectCount": 3,
+      "explanation": "According to the Acute Abdomen Guidelines 2025, abdominal examination should begin away from the area of pain, with the painful area examined last. Percussion tenderness is useful for detecting peritoneal irritation; if positive, rebound tenderness need not be deliberately elicited. Abnormal bowel sounds are useful for diagnosing bowel obstruction, with sensitivity 76%, specificity 88%, and positive likelihood ratio 6.37 for small bowel obstruction. In contrast, abnormal bowel sounds have limited utility for diagnosing peritonitis, and normal sounds do not exclude serious disease."
+    },
+    {
+      "id": "gi_symptoms_basic_012",
+      "question": "Select one statement consistent with the Acute Abdomen Guidelines 2025 regarding the diagnostic characteristics of laboratory tests in acute abdominal presentations.",
+      "choices": [
+        "WBC alone has sensitivity >90% and specificity >90% for diagnosing emergent conditions",
+        "CRP alone has sensitivity >95% for emergent conditions and can exclude them if negative",
+        "WBC at a cutoff of 10×10^9/L has been reported with sensitivity 73.9% and specificity 57.5%",
+        "CRP at a cutoff of 10 mg/L has been reported with specificity >90%",
+        "Neither WBC nor CRP should be measured in the workup of acute abdominal presentations"
+      ],
+      "answers": [2],
+      "selectCount": 1,
+      "explanation": "According to the Acute Abdomen Guidelines 2025, WBC at a cutoff of 10×10^9/L has sensitivity 73.9% and specificity 57.5%; CRP at a cutoff of 10 mg/L has sensitivity 76.9% and specificity 61.4%. Neither test alone is sufficient to exclude or confirm emergent conditions, and results must be interpreted in combination with history, physical findings, and imaging."
+    },
+    {
+      "id": "gi_symptoms_basic_014",
+      "question": "Select all correct statements regarding laboratory findings in acute appendicitis.",
+      "choices": [
+        "WBC and CRP may be within normal limits in appendicitis",
+        "WBC or CRP is normal in approximately 20% of appendicitis cases and requires caution",
+        "Both WBC and CRP are normal in approximately 10% of cases",
+        "Normal WBC and CRP exclude appendicitis",
+        "PCT, CRP, and NLR are reported to be useful for diagnosing complicated appendicitis"
+      ],
+      "answers": [0, 1, 2, 4],
+      "explanation": "According to the Acute Abdomen Guidelines 2025, WBC or CRP is normal in approximately 20% of appendicitis cases, and both are normal in approximately 10%, requiring caution. Therefore, normal WBC and CRP do not exclude appendicitis. PCT, CRP, and NLR are reported to be useful for diagnosing complicated appendicitis."
+    },
+    {
+      "id": "gi_symptoms_basic_015",
+      "question": "Select all correct statements regarding lactate levels and blood gas analysis.",
+      "choices": [
+        "Lactate levels are useful for diagnosing severity such as shock",
+        "Caution is warranted when lactate exceeds 2.0–2.5 mmol/L",
+        "Normal lactate levels exclude intestinal ischemia",
+        "When intestinal ischemia is suspected, contrast-enhanced CT should be considered rather than relying on blood gas analysis alone",
+        "Lactate levels can be elevated in pneumonia, renal failure, and cirrhosis, and should be interpreted in context"
+      ],
+      "answers": [0, 1, 3, 4],
+      "explanation": "According to the Acute Abdomen Guidelines 2025, lactate is useful for assessing severity such as shock, and values exceeding 2.0–2.5 mmol/L warrant caution. However, diagnosing intestinal ischemia by blood gas analysis alone is difficult, and contrast-enhanced CT is recommended when ischemia is suspected. Lactate can also be elevated in pneumonia, renal failure, and cirrhosis, and must be interpreted in context regardless of whether it is normal or elevated."
+    },
+    {
+      "id": "gi_symptoms_basic_016",
+      "question": "Select one statement consistent with the Acute Abdomen Guidelines 2025 regarding the diagnosis of intestinal ischemia.",
+      "choices": [
+        "Lactate levels have sufficient sensitivity for early diagnosis of intestinal ischemia and can exclude it if normal",
+        "Intestinal ischemia can essentially be excluded if plain CT shows no abnormality",
+        "Contrast-enhanced CT is highly useful for diagnosing intestinal ischemia and is recommended when suspected",
+        "WBC has specificity >95% for intestinal ischemia",
+        "Intestinal necrosis can be excluded if BE is normal"
+      ],
+      "answers": [2],
+      "selectCount": 1,
+      "explanation": "According to the Acute Abdomen Guidelines 2025, laboratory tests alone are insufficient to diagnose intestinal ischemia, and contrast-enhanced CT is considered highly useful. A lactate level below 2 mmol/L or plain CT imaging can lead to diagnostic delays. Because lactate may be normal in the reversible phase of ischemia, intestinal ischemia must not be excluded based on normal lactate."
+    },
+    {
+      "id": "gi_symptoms_basic_018",
+      "question": "Select all correct statements regarding ruptured abdominal aortic aneurysm, as reported in the Acute Abdomen Guidelines 2025.",
+      "choices": [
+        "The classic triad consists of hypotension, back pain, and a pulsatile abdominal mass",
+        "All three findings of the classic triad are present in only 25–50% of cases",
+        "In cases initially misdiagnosed, abdominal pain was present in 70%, hypotension in 57%, and back pain in 50%",
+        "Ruptured AAA can be excluded if all three classic triad findings are absent",
+        "Rupture should be suspected in elderly men with abdominal or back pain and a smoking history"
+      ],
+      "answers": [0, 1, 2, 4],
+      "explanation": "According to the Acute Abdomen Guidelines 2025, the classic triad of ruptured AAA — hypotension, back pain, and pulsatile abdominal mass — is present in only 25–50% of cases. In initially misdiagnosed cases, abdominal pain was present in 70%, hypotension in 57%, and back pain in 50%. The absence of the classic triad does not exclude the diagnosis. Rupture should be suspected in elderly men with abdominal or back pain and a smoking history."
+    },
+    {
+      "id": "gi_symptoms_basic_019",
+      "question": "Select three correct statements regarding initial IV fluid therapy for acute abdominal presentations.",
+      "choices": [
+        "When intra-abdominal infection is diagnosed, begin initial IV fluids promptly even if the patient is hemodynamically stable",
+        "In shock, hemodynamic stabilization is the top priority",
+        "HES (hydroxyethyl starch, e.g., Hespander) is the first-line fluid for septic shock",
+        "Balanced crystalloid solutions (such as lactated Ringer's or acetated Ringer's) are recommended for septic shock",
+        "Dehydration is uncommon in acute abdominal presentations and IV fluids are generally unnecessary"
+      ],
+      "answers": [0, 1, 3],
+      "selectCount": 3,
+      "explanation": "According to the Acute Abdomen Guidelines 2025, when intra-abdominal infection is diagnosed, initial IV fluids should be started promptly even if the patient is hemodynamically stable. In shock, hemodynamic stabilization is the top priority and balanced crystalloid solutions are recommended. HES is not recommended due to increased adverse effects including renal injury and bleeding tendency."
+    },
+    {
+      "id": "gi_symptoms_basic_021",
+      "question": "Select three correct statements regarding analgesia for acute abdominal presentations, as reported in the Acute Abdomen Guidelines 2025.",
+      "choices": [
+        "Early analgesia is recommended regardless of the cause and prior to establishing a definitive diagnosis",
+        "Use of opioids before diagnosis is contraindicated because it reduces diagnostic accuracy",
+        "Intravenous acetaminophen 1,000 mg is recommended regardless of pain intensity",
+        "In adults weighing less than 50 kg, intravenous acetaminophen 15 mg/kg is recommended",
+        "Analgesia worsens prognosis in acute abdominal presentations and should be withheld until surgical evaluation is complete"
+      ],
+      "answers": [0, 2, 3],
+      "selectCount": 3,
+      "explanation": "According to the Acute Abdomen Guidelines 2025, early analgesia prior to diagnosis is recommended regardless of cause. Intravenous acetaminophen 1,000 mg is recommended regardless of pain intensity, and adults weighing less than 50 kg should receive 15 mg/kg. Early analgesia has not been shown to reduce diagnostic accuracy or worsen prognosis."
+    },
+    {
+      "id": "gi_symptoms_basic_022",
+      "question": "Select all correct statements regarding analgesic selection and dosing for acute abdominal presentations, as reported in the Acute Abdomen Guidelines 2025.",
+      "choices": [
+        "The approved dosage of acetaminophen in Japan is 300–1,000 mg per dose",
+        "Acetaminophen is given every 4–6 hours, with a maximum daily dose of 4,000 mg",
+        "Opioids such as morphine or fentanyl may be added based on pain intensity",
+        "For biliary colic, NSAIDs have been shown to be as effective as opioids and may be considered first-line",
+        "For ureteral colic, NSAIDs should be avoided and opioids used as first-line from the start"
+      ],
+      "answers": [0, 1, 2, 3],
+      "explanation": "According to the Acute Abdomen Guidelines 2025, the approved dose of acetaminophen in Japan is 300–1,000 mg per dose, given every 4–6 hours, with a maximum daily dose of 4,000 mg. Opioids such as morphine and fentanyl may be added based on pain intensity. For biliary colic, NSAIDs have been shown to be as effective as opioids and may be considered first-line. For ureteral colic, NSAIDs are recommended, with opioids reserved for cases where NSAIDs cannot be used."
+    }
+  ]
+}

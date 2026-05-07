@@ -1,0 +1,89 @@
+{
+  "category": "CPR Master",
+  "questions": [
+    {
+      "id": "cpr_master_mondai_011",
+      "question": "Select the ONE correct statement about resuscitation.",
+      "choices": [
+        "In an unresponsive patient, assess breathing by observing chest and abdominal movement, and confirm carotid pulse; taking at least 30 seconds to avoid errors is desirable",
+        "The landmark for chest compressions is the xiphoid process",
+        "The rate of chest compressions is 100–120 per minute",
+        "The chest compression fraction (proportion of time actually performing chest compressions) should be at least 40%",
+        "During chest compressions, the target ratio of compression time to decompression time is 2:1"
+      ],
+      "answers": [2],
+      "selectCount": 1,
+      "explanation": "In a suspected adult cardiac arrest, after confirming unresponsiveness, simultaneously check for normal breathing and a carotid (or other) pulse; this check must not take excessive time and should be completed within approximately 10 seconds. Taking 30 seconds to confirm delays the start of chest compressions and is inappropriate. The landmark for chest compressions is the lower half of the sternum, not the xiphoid process; compressing the xiphoid process risks liver laceration. The rate of chest compressions is 100–120 per minute; together with adequate depth, full chest recoil, and minimized interruptions, this forms the basis of high-quality CPR. The chest compression fraction should target at least 60%; targeting only 40% is insufficient. The compression-to-decompression time should be approximately 1:1, ensuring full recoil; a 2:1 ratio is not the target."
+    },
+    {
+      "id": "cpr_master_mondai_012",
+      "question": "Select THREE correct statements about defibrillation.",
+      "choices": [
+        "For preschool-age children, pediatric pads or pediatric mode should be used; if unavailable, AED use is contraindicated",
+        "When using a manual defibrillator, position the green electrode so it does not interfere with paddles or pads",
+        "When using a manual defibrillator, initially select lead II at sensitivity 1x for the monitor ECG",
+        "When the ECG waveform is flat, check leads, sensitivity, and lead selection",
+        "After defibrillation, immediately check the monitor and evaluate the ECG waveform"
+      ],
+      "answers": [1, 2, 3],
+      "selectCount": 3,
+      "explanation": "For preschool-age children, pediatric pads or pediatric mode are preferred, but if unavailable, AED use is not contraindicated; delayed defibrillation worsens outcomes in cardiac arrest, so an adult AED should be used if no pediatric option is available. When using a manual defibrillator, position monitor electrodes and lead cables so they do not interfere with the placement site or current pathway of paddles or pads. Initial monitoring is generally performed with lead II at sensitivity 1x for rhythm recognition. When the ECG waveform appears flat, check for lead disconnection, sensitivity settings, lead selection, and power/connection issues before concluding true asystole. After defibrillation, immediately resume chest compressions rather than pausing for rhythm confirmation; continue CPR until the next scheduled rhythm check."
+    },
+    {
+      "id": "cpr_master_mondai_013",
+      "question": "Select ALL correct statements about resuscitation.",
+      "choices": [
+        "Epinephrine for cardiac arrest is administered once every 3–5 minutes",
+        "For VF/pulseless VT, amiodarone is administered as a bolus of 150 mg dissolved in 20 mL of 5% dextrose",
+        "For VF/pulseless VT, lidocaine is administered intravenously at 1–1.5 mg/kg",
+        "Routine sodium bicarbonate administration is not recommended; it may be indicated in cardiac arrest from hyperkalemia or tricyclic antidepressant overdose",
+        "Epinephrine for pediatric cardiac arrest is administered at 0.1 mg/kg"
+      ],
+      "answers": [0, 2, 3],
+      "selectCount": 3,
+      "explanation": "In cardiac arrest, epinephrine is typically administered intravenously or intraosseously at 1 mg every 3–5 minutes in adults. In VF/pulseless VT, defibrillation and high-quality CPR are the highest priority; antiarrhythmic drugs are considered for shock-refractory cases. The initial dose of amiodarone in adults is typically 300 mg as a bolus; 150 mg is used as an additional dose, so a statement presenting 150 mg alone as the initial dose is incorrect. Lidocaine can be used as an alternative to amiodarone with an initial dose of 1–1.5 mg/kg IV or IO. Sodium bicarbonate does not have a clear benefit when administered routinely in cardiac arrest and is generally not recommended; however, it should be considered in specific situations such as hyperkalemia, tricyclic antidepressant overdose, or severe metabolic acidosis. The standard epinephrine dose for pediatric cardiac arrest is 0.01 mg/kg; 0.1 mg/kg is an overdose."
+    },
+    {
+      "id": "cpr_master_mondai_014",
+      "question": "Select ALL correct statements about resuscitation.",
+      "choices": [
+        "Pulse check is performed at the carotid artery in adults but at the brachial artery in infants",
+        "Chest compressions are performed to a depth of 5 cm in adults and one-third of the chest diameter in children",
+        "Recommended antiarrhythmic drugs for shock-refractory VF/pulseless VT in adults are amiodarone and procainamide",
+        "A single myoclonic jerk occurring within 96 hours after ROSC predicts poor neurological outcome at 6 months with a specificity of 99.8–100%",
+        "In many studies, rhythmic/periodic epileptiform activity on EEG after ROSC has high specificity for poor outcome"
+      ],
+      "answers": [0, 1, 4],
+      "selectCount": 3,
+      "explanation": "The pulse check site varies by age; in adults, the carotid artery is used; in children, the carotid or femoral artery; in infants, the brachial artery. Chest compression depth is approximately 5 cm in adults (avoiding excessive depth) and approximately one-third of the anteroposterior chest diameter in children. Antiarrhythmic drugs for shock-refractory VF/pulseless VT include amiodarone or lidocaine; procainamide is not a standard antiarrhythmic drug in cardiac arrest. Myoclonus after ROSC is associated with poor prognosis, but a single myoclonic jerk alone should not be used to categorically predict poor neurological outcome with extremely high specificity; the effects of sedation, targeted temperature management, metabolic abnormalities, and seizures must be considered, and neurological prognostication should be performed over time in a multifaceted manner. After ROSC, severely suppressed background activity on EEG with rhythmic or periodic epileptiform activity is associated with poor outcome and is an important component of prognostic evaluation. However, EEG findings alone must be interpreted in combination with neurological examination, SSEP, imaging, and biomarkers."
+    },
+    {
+      "id": "cpr_master_mondai_015",
+      "question": "Select ALL correct statements about pediatric resuscitation.",
+      "choices": [
+        "The recommended defibrillation energy for children is 0.4 J/kg",
+        "When two healthcare providers perform CPR, the ratio of chest compressions to ventilations is 15:2",
+        "When a child develops bradycardia below 60/min with cardiopulmonary dysfunction despite oxygenation and ventilation, initiate chest compressions and administer epinephrine (0.01 mg/kg)",
+        "For pediatric supraventricular tachycardia with hemodynamic instability, administer ATP (adenosine) 0.1–0.3 mg/kg rapid IV or synchronized cardioversion at 0.5–1 J/kg",
+        "Infants under 1 year have better outcomes after cardiac arrest compared with those over 1 year"
+      ],
+      "answers": [1, 2, 3],
+      "selectCount": 3,
+      "explanation": "A defibrillation energy of 0.4 J/kg for children is too low. The standard for pediatric VF/pulseless VT is an initial 2 J/kg, with subsequent shocks at ≥4 J/kg. When two healthcare providers perform pediatric CPR, a compression-to-ventilation ratio of 15:2 is used; respiratory-origin cardiac arrest is more common in children and ventilation plays a more important role than in adults. When a child's heart rate falls to ≤60/min with cardiopulmonary dysfunction despite adequate oxygenation and ventilation, initiate chest compressions as for cardiac arrest; administer epinephrine 0.01 mg/kg IV or IO when the bradycardia does not resolve or progresses to cardiac arrest. For pediatric supraventricular tachycardia with hemodynamic instability, synchronized cardioversion at 0.5–1 J/kg is performed; if IV or IO access is established and cardioversion can be avoided without delay, rapid IV adenosine (ATP) may be considered. Infants under 1 year frequently have respiratory-origin cardiac arrest or underlying disease, and outcomes cannot be generalized as better than those over 1 year."
+    },
+    {
+      "id": "cpr_master_mondai_016",
+      "question": "Select ALL correct statements about the following emergency conditions.",
+      "choices": [
+        "In AMI or suspected AMI, routine oxygen administration is desirable even without hypoxemia",
+        "In CPR for a pregnant patient, manual left uterine displacement is considered when personnel are available",
+        "In cardiac arrest in a pregnant patient at ≥20 weeks of gestation, perimortem cesarean delivery should be considered",
+        "When using ice packs for heat stroke, do not apply them to the cheeks, palms, or soles",
+        "When a permanent tooth is avulsed, normal saline is preferable to milk for preservation before reimplantation"
+      ],
+      "answers": [2],
+      "selectCount": 1,
+      "explanation": "In AMI or suspected AMI without hypoxemia, respiratory distress, heart failure, or shock, routine oxygen administration is not recommended; excess oxygen may cause coronary vasoconstriction, so oxygen should be administered based on confirmed oxygen saturation. In CPR for a pregnant patient, manual left uterine displacement is performed to relieve compression of the inferior vena cava and aorta by the gravid uterus; right displacement is incorrect. In cardiac arrest at ≥20 weeks of gestation, or when the uterine fundus is at or above the umbilicus, perimortem cesarean delivery (resuscitative hysterotomy) should be considered early to improve maternal circulation and provide the opportunity for fetal survival. In heat stroke, rapid cooling is essential; ice packs are commonly applied near large vessels such as the neck, axillae, and inguinal regions; the statement that ice packs should not be applied to the cheeks, palms, or soles is not a generally accepted correct answer. For an avulsed permanent tooth, avoid drying and store in milk, a tooth preservation solution, or the vestibular sulcus; normal saline is also usable, but milk is generally preferred over normal saline for preserving dental pulp cells; the statement that normal saline is preferable to milk is incorrect."
+    }
+  ]
+}

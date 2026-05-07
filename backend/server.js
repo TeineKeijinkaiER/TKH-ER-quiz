@@ -156,7 +156,7 @@ async function readJsonBody(req) {
 }
 
 async function buildQuestionIndex() {
-  const categoriesRaw = JSON.parse(await fs.readFile(path.join(DATA_DIR, "categories.json"), "utf8"));
+  const categoriesRaw = JSON.parse(await fs.readFile(path.join(DATA_DIR, "categories.ja.json"), "utf8"));
   const validCategoryIds = new Set(categoriesRaw.map((c) => c.id));
 
   const primaryByFile = new Map();
