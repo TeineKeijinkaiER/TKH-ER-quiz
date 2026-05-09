@@ -111,6 +111,9 @@ const state = {
   timerId: 0,
   timerDeadline: 0,
   isLocked: false,
+  isPaused: false,
+  pauseUsed: false,
+  timerPauseRemainingMs: 0,
   lastTickSecond: null,
   lastScreen: "level",
   audioContext: null,
@@ -177,7 +180,7 @@ function cacheElements() {
     "categoryGrid", "selectedCategoryLabel", "setupStatus",
     "rankingButton", "muteButton",
     "clearButton", "closeClearButton",
-    "quitQuizButton", "quizCategory", "quizProgress",
+    "quitQuizButton", "pauseQuizButton", "quizCategory", "quizProgress",
     "timerArc", "timerText", "questionText", "choiceList",
     "resultScore", "resultPercent", "resultTime", "resultComment", "syncStatus", "resultProgress",
     "retryButton", "backToSetupButton", "resultRankingButton",
@@ -244,6 +247,7 @@ function bindEvents() {
   els.resultRankingButton.addEventListener("click", () => openRanking("all"));
   els.closeRankingButton.addEventListener("click", () => showScreen("level"));
   els.quitQuizButton.addEventListener("click", () => { stopTimer(); showScreen("level"); });
+  els.pauseQuizButton.addEventListener("click", togglePause);
   els.retryButton.addEventListener("click", startQuiz);
   els.backToSetupButton.addEventListener("click", () => showScreen("level"));
   els.toggleReviewButton.addEventListener("click", toggleReview);
@@ -568,6 +572,9 @@ function startQuiz() {
   state.reviewItems = [];
   state.startedAt = Date.now();
   state.isLocked = false;
+  state.isPaused = false;
+  state.pauseUsed = false;
+  state.timerPauseRemainingMs = 0;
   state.lastTickSecond = null;
   state.musicUrgency = "normal";
   els.quizCategory.textContent = category.name;
@@ -603,6 +610,13 @@ function getQuestionAnswerIndexes(question) {
 
 function renderCurrentQuestion() {
   stopTimer();
+  state.isPaused = false;
+  state.timerPauseRemainingMs = 0;
+  if (els.pauseQuizButton) {
+    els.pauseQuizButton.textContent = t("quizPause", state.lang);
+  }
+  els.timerText.closest(".timer").classList.remove("is-paused");
+  // els.choiceList is rebuilt below so its class is reset automatically
   state.isLocked = false;
   state.lastTickSecond = null;
   const question = state.quizQuestions[state.currentIndex];
@@ -643,7 +657,7 @@ function renderCurrentQuestion() {
 }
 
 function toggleMultipleChoice(choiceIndex) {
-  if (state.isLocked) return;
+  if (state.isLocked || state.isPaused) return;
   const question = state.quizQuestions[state.currentIndex];
   if (!question?.isMultiple) return;
   const selected = new Set(question.selectedIndexes);
@@ -691,6 +705,31 @@ function stopTimer() {
   stopMusicLoop();
 }
 
+function togglePause() {
+  if (state.isLocked) return;
+
+  if (!state.isPaused) {
+    state.isPaused = true;
+    state.pauseUsed = true;
+    state.timerPauseRemainingMs = Math.max(0, state.timerDeadline - Date.now());
+    window.clearInterval(state.timerId);
+    state.timerId = 0;
+    stopMusicLoop();
+    els.pauseQuizButton.textContent = t("quizResume", state.lang);
+    els.timerText.closest(".timer").classList.add("is-paused");
+    els.choiceList.classList.add("is-paused");
+  } else {
+    state.isPaused = false;
+    state.timerDeadline = Date.now() + state.timerPauseRemainingMs;
+    state.timerPauseRemainingMs = 0;
+    state.timerId = window.setInterval(updateTimerDisplay, 100);
+    startQuizMusic();
+    els.pauseQuizButton.textContent = t("quizPause", state.lang);
+    els.timerText.closest(".timer").classList.remove("is-paused");
+    els.choiceList.classList.remove("is-paused");
+  }
+}
+
 function setupTimerArc() {
   els.timerArc.style.strokeDasharray = String(TIMER_CIRCUMFERENCE);
   els.timerArc.style.strokeDashoffset = "0";
@@ -728,7 +767,7 @@ function updateTimerDisplay() {
 }
 
 function handleAnswer(choiceIndexes, timedOut) {
-  if (state.isLocked) return;
+  if (state.isLocked || state.isPaused) return;
   state.isLocked = true;
   stopTimer();
   const question = state.quizQuestions[state.currentIndex];
@@ -736,7 +775,7 @@ function handleAnswer(choiceIndexes, timedOut) {
   const correct = hasSameIndexes(selectedIndexes, question.correctIndexes);
   if (correct) {
     state.score += 1;
-    recordCorrectQuestion(question.id);
+    if (!state.pauseUsed) recordCorrectQuestion(question.id);
   }
   state.reviewItems.push({
     question: question.question,
@@ -790,7 +829,7 @@ function finishQuiz() {
   addRanking(result);
   // correctQuestions has already been updated incrementally in handleAnswer.
   // Now check if this session pushed the category over the clear threshold.
-  const categoryClearedThisSession = !state.wasCategoryClearAtStart && isClear(category.id);
+  const categoryClearedThisSession = !state.wasCategoryClearAtStart && isClear(category.id) && !state.pauseUsed;
   const showClearBanner = categoryClearedThisSession && result.score === result.questionCount;
   if (categoryClearedThisSession) recordClearTimestamp(category.id, state.selectedLevel);
   const progress = getCategoryProgress(category.id);

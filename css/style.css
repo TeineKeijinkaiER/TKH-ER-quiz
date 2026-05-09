@@ -469,6 +469,12 @@ button:focus-visible {
   margin-bottom: 14px;
 }
 
+.quiz-topline__left {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
 .quiz-meta {
   flex-wrap: wrap;
   justify-content: center;
@@ -523,6 +529,10 @@ button:focus-visible {
   font-weight: 800;
 }
 
+.timer.is-paused .timer-arc {
+  stroke: var(--line);
+}
+
 @keyframes er-pulse {
   0%, 100% { transform: scale(1); filter: drop-shadow(0 0 0 rgba(220, 38, 38, 0)); }
   50% { transform: scale(1.06); filter: drop-shadow(0 0 10px rgba(220, 38, 38, 0.55)); }
@@ -546,6 +556,11 @@ button:focus-visible {
   border-radius: 8px;
   background: var(--surface);
   box-shadow: var(--shadow);
+}
+
+.choice-list.is-paused .choice-button {
+  opacity: 0.45;
+  pointer-events: none;
 }
 
 .question-text {
