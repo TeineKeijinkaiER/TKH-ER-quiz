@@ -364,6 +364,7 @@ button:focus-visible {
 .icon-text-button {
   padding: 0 16px;
   font-weight: 800;
+  white-space: nowrap;
 }
 
 .primary-button {
@@ -1176,11 +1177,12 @@ button:focus-visible {
   }
 
   .topbar-actions {
-    justify-content: stretch;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
   }
 
   .topbar-actions > button {
-    flex: 1;
+    min-width: 0;
   }
 
   .quiz-topline {
