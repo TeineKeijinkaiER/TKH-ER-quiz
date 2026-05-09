@@ -234,7 +234,7 @@
         "Japan's current routine immunization schedule includes a primary series in infancy (first series) plus one dose of DT vaccine at age 11–12 years (second series)",
         "Even among those born after 1968, many adults have not received a booster and are likely more than 10 years from their last tetanus-containing vaccine",
         "In elderly trauma patients, if the patient says 'I think I received something as a child,' this can be accepted as evidence of completed primary immunization",
-        "The vaccination at age 11–12 years is administered as the third dose of the DPT vaccine"
+        "For contaminated wounds, tetanus toxoid and TIG should be administered together regardless of vaccination history"
       ],
       "answers": [
         0,
@@ -247,7 +247,7 @@
         "infection_basic",
         "emergency_medications_basic"
       ],
-      "explanation": "Because DPT vaccine was introduced into Japan's routine immunization schedule in 1968, individuals born before that year are unlikely to have received a full tetanus primary series in childhood. Current routine immunization includes a primary series in infancy followed by a single DT booster at age 11–12 (second series). Many adults — even those born after 1968 — have not received a booster and are likely more than 10 years from their last tetanus-containing vaccine. A vague vaccination history should not be accepted as confirmation of completed primary immunization. The age 11–12 vaccination is a second-series DT dose, not a third dose of the DPT vaccine.",
+      "explanation": "Because DPT vaccine was introduced into Japan's routine immunization schedule in 1968, individuals born before that year are unlikely to have acquired primary tetanus immunity through routine childhood tetanus-containing vaccination. Current routine immunization includes a primary series in infancy followed by a single DT booster at age 11–12 (second series). Therefore, many adults who have not received an additional booster after childhood are more than 10 years from their last tetanus-containing vaccine. A vague vaccination history should not be accepted as confirmation of completed primary immunization. The need for tetanus vaccination and TIG after an injury should be determined based on wound characteristics and vaccination history, including whether the primary series was completed and how much time has elapsed since the last dose.",
       "selectCount": 0
     },
     {

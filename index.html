@@ -25,6 +25,7 @@
         </div>
       </div>
       <div class="topbar-actions" aria-label="アプリ操作">
+        <button id="noticeButton" class="icon-text-button" type="button" data-i18n="btnNotice">使い方</button>
         <button id="clearButton" class="icon-text-button" type="button" title="クリア記録を表示" data-i18n="btnClearLog" data-i18n-attr="title:btnClearLog">クリア記録</button>
         <button id="rankingButton" class="icon-text-button" type="button" title="履歴を表示" data-i18n="btnHistory" data-i18n-attr="title:btnHistory">履歴</button>
         <button id="muteButton" class="icon-text-button sound-toggle" type="button" aria-pressed="false" title="効果音と音楽を切り替え">効果音OFF</button>
@@ -92,7 +93,6 @@
               <legend data-i18n="countLegend">出題数</legend>
               <button class="segment is-active" type="button" data-count="5">5問</button>
               <button class="segment" type="button" data-count="10">10問</button>
-              <button class="segment" type="button" data-count="20">20問</button>
             </fieldset>
 
             <dl class="selection-summary">
@@ -117,20 +117,20 @@
 
       <section id="quizScreen" class="screen" aria-labelledby="quizCategory" hidden>
         <div class="quiz-topline">
-          <div class="quiz-topline__left">
-            <button id="quitQuizButton" class="text-button" type="button" data-i18n="quizQuit">中断</button>
-            <button id="pauseQuizButton" class="text-button" type="button">⏸</button>
-          </div>
+          <button id="quitQuizButton" class="text-button" type="button" data-i18n="quizQuit">中断</button>
           <div class="quiz-meta">
             <span id="quizCategory">カテゴリー</span>
             <span id="quizProgress">1 / 5</span>
           </div>
-          <div class="timer" aria-label="残り時間">
-            <svg viewBox="0 0 120 120" role="img" aria-hidden="true">
-              <circle class="timer-track" cx="60" cy="60" r="52"></circle>
-              <circle id="timerArc" class="timer-arc" cx="60" cy="60" r="52"></circle>
-            </svg>
-            <span id="timerText">20</span>
+          <div class="quiz-topline__right">
+            <button id="pauseQuizButton" class="text-button" type="button">⏸</button>
+            <div class="timer" aria-label="残り時間">
+              <svg viewBox="0 0 120 120" role="img" aria-hidden="true">
+                <circle class="timer-track" cx="60" cy="60" r="52"></circle>
+                <circle id="timerArc" class="timer-arc" cx="60" cy="60" r="52"></circle>
+              </svg>
+              <span id="timerText">20</span>
+            </div>
           </div>
         </div>
 
@@ -207,6 +207,18 @@
       </section>
     </main>
 
+  </div>
+
+  <div id="noticeModal" class="modal-overlay" hidden>
+    <div class="modal-panel">
+      <h2 data-i18n="noticeTitle">このクイズについて</h2>
+      <div id="noticeBody" class="notice-body"></div>
+      <section class="notice-updates">
+        <h3 data-i18n="noticeUpdatesTitle">アップデート履歴</h3>
+        <ul id="noticeUpdateList"></ul>
+      </section>
+      <button id="noticeCloseButton" class="primary-button" type="button" data-i18n="noticeClose">閉じる</button>
+    </div>
   </div>
 
   <script src="js/i18n.js?v=20260507-1" defer></script>

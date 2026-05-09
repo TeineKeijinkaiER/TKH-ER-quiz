@@ -142,12 +142,15 @@ async function init() {
   try {
     await loadAppConfig();
     await loadQuestionData();
+    checkAndInvalidateStaleClears();
     renderLevelScreen();
     renderRankingTabs();
     applyI18n(state.lang);
     document.querySelectorAll(".lang-toggle .segment").forEach((seg) => {
       seg.classList.toggle("is-active", seg.dataset.lang === state.lang);
     });
+    const initData = readStore();
+    if (!initData.noticeAcknowledged) openNotice();
   } catch (error) {
     els.setupStatus.textContent = t("errorLoadOffline", state.lang);
     console.error(error);
@@ -178,7 +181,7 @@ function cacheElements() {
     "setupScreen", "quizScreen", "resultScreen", "rankingScreen", "clearScreen",
     "clearBanner", "clearTabs", "clearList",
     "categoryGrid", "selectedCategoryLabel", "setupStatus",
-    "rankingButton", "muteButton",
+    "noticeButton", "rankingButton", "muteButton",
     "clearButton", "closeClearButton",
     "quitQuizButton", "pauseQuizButton", "quizCategory", "quizProgress",
     "timerArc", "timerText", "questionText", "choiceList",
@@ -187,6 +190,7 @@ function cacheElements() {
     "toggleReviewButton", "reviewList",
     "rankingTabs", "rankingList", "rankingEmpty", "closeRankingButton",
     "resetRankingButton", "resetClearButton",
+    "noticeModal", "noticeBody", "noticeUpdateList", "noticeCloseButton",
   ].forEach((id) => { els[id] = document.getElementById(id); });
 }
 
@@ -197,6 +201,10 @@ function setLanguage(lang) {
   data.lang = lang;
   writeStore(data);
   applyI18n(lang);
+  if (els.noticeModal && !els.noticeModal.hidden) {
+    els.noticeBody.innerHTML = t("noticeBody", lang);
+    renderNoticeUpdates();
+  }
   updateMuteButton(readStore().muted);
   document.querySelectorAll(".lang-toggle .segment").forEach((seg) => {
     seg.classList.toggle("is-active", seg.dataset.lang === lang);
@@ -245,14 +253,14 @@ function bindEvents() {
 
   els.rankingButton.addEventListener("click", () => openRanking("all"));
   els.resultRankingButton.addEventListener("click", () => openRanking("all"));
-  els.closeRankingButton.addEventListener("click", () => showScreen("level"));
+  els.closeRankingButton.addEventListener("click", goToSetupBasic);
   els.quitQuizButton.addEventListener("click", () => { stopTimer(); showScreen("level"); });
   els.pauseQuizButton.addEventListener("click", togglePause);
   els.retryButton.addEventListener("click", startQuiz);
   els.backToSetupButton.addEventListener("click", () => showScreen("level"));
   els.toggleReviewButton.addEventListener("click", toggleReview);
   els.clearButton.addEventListener("click", () => { renderClearScreen(); showScreen("clear"); });
-  els.closeClearButton.addEventListener("click", () => showScreen("level"));
+  els.closeClearButton.addEventListener("click", goToSetupBasic);
   document.querySelectorAll('input[name="learnerRole"]').forEach((input) => {
     input.addEventListener("change", () => {
       state.learnerRoleId = input.value;
@@ -264,6 +272,9 @@ function bindEvents() {
     });
   });
   els.muteButton.addEventListener("click", toggleMute);
+  els.noticeButton.addEventListener("click", openNotice);
+  els.noticeCloseButton.addEventListener("click", closeNotice);
+  els.noticeModal.addEventListener("click", (e) => { if (e.target === els.noticeModal) closeNotice(); });
   document.querySelectorAll(".lang-toggle .segment").forEach((seg) => {
     seg.addEventListener("click", () => setLanguage(seg.dataset.lang));
   });
@@ -1068,6 +1079,50 @@ function loadStoredState() {
   updateLevelButtons();
 }
 
+function goToSetupBasic() {
+  state.selectedLevel = "basic";
+  const data = readStore();
+  data.selectedLevel = "basic";
+  writeStore(data);
+  updateLevelButtons();
+  state.selectedCategoryId = state.categories.filter((c) => c.level === "basic")[0]?.id || "";
+  showScreen("setup");
+  renderCategories();
+  renderQuestionCountControls();
+  updateSetupSummary();
+}
+
+function checkAndInvalidateStaleClears() {
+  const data = readStore();
+  let changed = false;
+
+  state.categories.forEach((cat) => {
+    const questions = state.questionBank.get(cat.id) || [];
+    const currentIds = new Set(questions.map((q) => q.id));
+    const storedFingerprint = data.questionFingerprints[cat.id] || "";
+    const storedIds = new Set(storedFingerprint ? storedFingerprint.split(",") : []);
+
+    const hasNewIds = [...currentIds].some((id) => !storedIds.has(id));
+    if (hasNewIds && storedFingerprint !== "") {
+      state.levels.forEach((level) => {
+        const key = `${level.id}:${cat.id}`;
+        delete data.clears[key];
+      });
+      questions.forEach((q) => {
+        delete data.correctQuestions[q.id];
+      });
+      changed = true;
+    }
+
+    const sortedIds = [...currentIds].sort().join(",");
+    data.questionFingerprints[cat.id] = sortedIds;
+  });
+
+  if (changed || Object.keys(data.questionFingerprints).length !== state.categories.length) {
+    writeStore(data);
+  }
+}
+
 function persistLearnerRole() {
   const data = readStore();
   data.learnerRoleId = state.learnerRoleId;
@@ -1098,6 +1153,33 @@ function toggleMute() {
   else startOpeningMusic();
 }
 
+async function openNotice() {
+  els.noticeBody.innerHTML = t("noticeBody", state.lang);
+  await renderNoticeUpdates();
+  els.noticeModal.hidden = false;
+}
+
+function closeNotice() {
+  els.noticeModal.hidden = true;
+  const data = readStore();
+  data.noticeAcknowledged = true;
+  writeStore(data);
+}
+
+async function renderNoticeUpdates() {
+  try {
+    const res = await fetch("data/updates.json", { cache: "no-store" });
+    if (!res.ok) return;
+    const { updates = [] } = await res.json();
+    els.noticeUpdateList.innerHTML = "";
+    updates.forEach(({ date, ja, en }) => {
+      const li = document.createElement("li");
+      li.textContent = `${date}　${state.lang === "en" ? en : ja}`;
+      els.noticeUpdateList.appendChild(li);
+    });
+  } catch { /* silently skip if file missing */ }
+}
+
 function updateMuteButton(muted) {
   els.muteButton.textContent = muted ? t("btnSoundOn", state.lang) : t("btnSoundOff", state.lang);
   els.muteButton.setAttribute("aria-pressed", String(!muted));
@@ -1125,12 +1207,14 @@ function readStore() {
       // cumulative correctness. Drop them so they only show under the new criterion.
       clears:          isCurrentSchema && parsed.clears && typeof parsed.clears === "object" ? parsed.clears : {},
       correctQuestions: isCurrentSchema && parsed.correctQuestions && typeof parsed.correctQuestions === "object" ? parsed.correctQuestions : {},
+      questionFingerprints: isCurrentSchema && parsed.questionFingerprints && typeof parsed.questionFingerprints === "object" ? parsed.questionFingerprints : {},
+      noticeAcknowledged: Boolean(parsed.noticeAcknowledged),
     };
   } catch {
     return {
       schemaVersion: STORAGE_SCHEMA_VERSION,
       learnerRoleId: "", learnerRoleName: "", muted: false, lang: "", selectedLevel: "basic",
-      rankings: [], clears: {}, correctQuestions: {},
+      rankings: [], clears: {}, correctQuestions: {}, questionFingerprints: {}, noticeAcknowledged: false,
     };
   }
 }

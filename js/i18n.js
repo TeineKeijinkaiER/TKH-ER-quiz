@@ -31,7 +31,29 @@ const I18N = {
     summaryCategoryLoading: "読み込み中",
     summaryTimeLimit: "制限時間",
     summaryTimeLimitValue: "1問 20秒",
-    quizQuit: "中断",
+    quizQuit: "ホームへ戻る",
+    btnNotice: "使い方",
+    noticeTitle: "このクイズについて",
+    noticeUpdatesTitle: "アップデート履歴",
+    noticeClose: "閉じる",
+    noticeBody: `<p>このクイズアプリは、手稲渓仁会病院 救命救急センターにおける若手医師の学習支援を目的として、非営利で作成したものです。</p>
+<h3>学習目的について</h3>
+<p>本クイズは、日常的な医学学習を目的としたものです。実際の診療における診断・治療方針を直接示すものではありません。</p>
+<p>内容は、作成時点で参照可能な医学ガイドラインや医学論文などに基づくよう努めています。ただし、一部の診療方針、薬剤の使用方法、院内対応などは、当施設の運用に準じています。</p>
+<p>実際の診療では、本クイズの内容だけで判断せず、最新の公式ガイドライン、患者さん個別の状況、上級医・指導医の助言などを踏まえて判断してください。</p>
+<h3>免責事項</h3>
+<p>本アプリの利用、または内容を参考にしたことにより生じた結果について、当施設および作成者は責任を負いかねます。診療に関する最終判断は、現場の医療者の責任において行ってください。</p>
+<h3>回答形式とクリア条件</h3>
+<p>各問題は、20秒以内に回答する形式です。時間が短い場合は、一時停止ボタン（⏸）をご利用ください。一時停止中は、問題文をゆっくり確認できます。</p>
+<p>カテゴリー内のすべての問題に正解すると、クリアとなります。ただし、一時停止機能を使用した場合は、クリア判定の対象外となります。</p>
+<h3>データ収集について</h3>
+<p>教育内容の改善のため、回答結果を匿名で収集しています。収集する情報は、職種、カテゴリー、点数、所要時間などです。氏名、職員番号、メールアドレスなど、個人を特定できる情報は収集していません。</p>
+<h3>動作環境</h3>
+<p>推奨ブラウザは、Chrome、Edge、Safari の最新バージョンです。古いブラウザや一部の端末では、正常に動作しない場合があります。</p>
+<h3>著作権</h3>
+<p>本アプリ内の問題文、画像、解説などの無断転載、複製、配布、改変、二次利用はご遠慮ください。</p>
+<h3>更新について</h3>
+<p>問題内容は、必要に応じて修正・追加されます。更新が行われたカテゴリーはクリア状態がリセットされますので、ぜひ再挑戦してください。</p>`,
     quizPause: "⏸",
     quizResume: "▶ 再開",
     resultEyebrow: "Result",
@@ -111,7 +133,16 @@ const I18N = {
     summaryCategoryLoading: "Loading...",
     summaryTimeLimit: "Time limit",
     summaryTimeLimitValue: "20 sec / question",
-    quizQuit: "Quit",
+    quizQuit: "Home",
+    btnNotice: "About",
+    noticeTitle: "About This Quiz",
+    noticeUpdatesTitle: "Update History",
+    noticeClose: "Close",
+    noticeBody: `<p>This quiz was created for educational purposes by the Emergency and Critical Care Center at Teine Keijinkai Hospital.</p>
+<p>Quiz content is primarily based on clinical guidelines, but some procedures (such as medication dosing) reflect our institution's practices. These may differ from other facilities — please consult your supervising physician for guidance.</p>
+<p>Each question must be answered within 20 seconds. If you feel rushed, use the pause button (⏸) to take your time reading the question.</p>
+<p>Completing all questions in a category correctly earns a CLEAR. However, using the pause button disqualifies that session from clearing — you must answer within the time limit.</p>
+<p>Questions are updated regularly with corrections and additions. When a category's questions are updated, its CLEAR status will be reset — please try again!</p>`,
     quizPause: "⏸",
     quizResume: "▶ Resume",
     resultEyebrow: "Result",

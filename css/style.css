@@ -469,7 +469,7 @@ button:focus-visible {
   margin-bottom: 14px;
 }
 
-.quiz-topline__left {
+.quiz-topline__right {
   display: flex;
   align-items: center;
   gap: 8px;
@@ -561,6 +561,55 @@ button:focus-visible {
 .choice-list.is-paused .choice-button {
   opacity: 0.45;
   pointer-events: none;
+}
+
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.55);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 100;
+}
+
+.modal-overlay[hidden] { display: none; }
+
+.modal-panel {
+  background: var(--surface);
+  border-radius: 12px;
+  padding: 28px 24px;
+  max-width: 560px;
+  width: 90%;
+  max-height: 80vh;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.notice-body p {
+  margin: 0 0 12px;
+  line-height: 1.7;
+  font-size: 0.9rem;
+}
+
+.notice-updates ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.notice-updates h3 {
+  font-size: 0.85rem;
+  color: var(--muted);
+  margin-bottom: 8px;
+}
+
+.notice-updates li {
+  font-size: 0.85rem;
+  line-height: 1.6;
+  color: var(--muted);
 }
 
 .question-text {
