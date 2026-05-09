@@ -120,14 +120,6 @@
     "accent": "#c2413b"
   },
   {
-    "id": "altered_mental_status_master",
-    "level": "master",
-    "name": "意識障害/意識消失",
-    "description": "自己免疫性脳炎、肝性脳症、低Na補正、脳波",
-    "file": "questions/ja/master/altered_mental_status_master.json",
-    "accent": "#4f46e5"
-  },
-  {
     "id": "sepsis_master",
     "level": "master",
     "name": "敗血症",

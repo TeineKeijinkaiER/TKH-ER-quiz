@@ -136,14 +136,6 @@
     "accent": "#c2413b"
   },
   {
-    "id": "altered_mental_status_master",
-    "level": "master",
-    "name": "Altered Mental Status / Syncope",
-    "description": "Autoimmune encephalitis, hepatic encephalopathy, hyponatremia correction, EEG",
-    "file": "questions/en/master/altered_mental_status_master.json",
-    "accent": "#4f46e5"
-  },
-  {
     "id": "sepsis_master",
     "level": "master",
     "name": "Sepsis",
