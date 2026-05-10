@@ -192,11 +192,83 @@
     "accent": "#1d4ed8"
   },
   {
+    "id": "cardiology_advanced",
+    "level": "advanced",
+    "name": "Cardiology Emergencies",
+    "description": "Advanced tachycardia, bradycardia, QT prolongation, and pacing management",
+    "file": "questions/en/advanced/cardiology_advanced.json",
+    "accent": "#c2413b"
+  },
+  {
+    "id": "infection_advanced",
+    "level": "advanced",
+    "name": "Infectious Diseases",
+    "description": "Advanced meningitis, herpes zoster, and public health response",
+    "file": "questions/en/advanced/infection_advanced.json",
+    "accent": "#15803d"
+  },
+  {
+    "id": "pediatric_advanced",
+    "level": "advanced",
+    "name": "Pediatric Emergencies",
+    "description": "Advanced pediatric emergency response including anaphylaxis",
+    "file": "questions/en/advanced/pediatric_advanced.json",
+    "accent": "#c2413b"
+  },
+  {
+    "id": "obstetrics_advanced",
+    "level": "advanced",
+    "name": "Obstetric Emergencies",
+    "description": "Postpartum hemorrhage, obstetric emergency medications, and maternal deterioration",
+    "file": "questions/en/advanced/obstetrics_advanced.json",
+    "accent": "#be123c"
+  },
+  {
+    "id": "vertigo_stroke_advanced",
+    "level": "advanced",
+    "name": "Vertigo / Stroke",
+    "description": "Advanced central vertigo, brainstem lesions, and HINTS interpretation",
+    "file": "questions/en/advanced/vertigo_stroke_advanced.json",
+    "accent": "#0f766e"
+  },
+  {
     "id": "general_em_master",
     "level": "master",
     "name": "General Emergency Medicine",
     "description": "Lung-protective ventilation, ECPR, critical resuscitation",
     "file": "questions/en/master/general_em_master.json",
     "accent": "#1d4ed8"
+  },
+  {
+    "id": "critical_care_master",
+    "level": "master",
+    "name": "Critical Care",
+    "description": "Specialist management of ARDS, mechanical ventilation, SBT, and intra-abdominal pressure",
+    "file": "questions/en/master/critical_care_master.json",
+    "accent": "#1d4ed8"
+  },
+  {
+    "id": "toxicology_master",
+    "level": "master",
+    "name": "Toxicology",
+    "description": "Specialist management of caustics, bites and stings, chemical exposure, and antidotes",
+    "file": "questions/en/master/toxicology_master.json",
+    "accent": "#5f2d91"
+  },
+  {
+    "id": "disaster_master",
+    "level": "master",
+    "name": "Disaster Medicine",
+    "description": "Chemical incidents, zoning, decontamination, and blast injury response",
+    "file": "questions/en/master/disaster_master.json",
+    "accent": "#7c2d12"
+  },
+  {
+    "id": "environmental_master",
+    "level": "master",
+    "name": "Environmental Emergencies",
+    "description": "Diving injuries, hypothermia, and other special-environment emergencies",
+    "file": "questions/en/master/environmental_master.json",
+    "accent": "#087f8c"
   }
 ]

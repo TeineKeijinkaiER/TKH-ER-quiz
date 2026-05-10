@@ -1,5 +1,9 @@
 {
   "updates": [
-    { "date": "2026-05-09", "ja": "初回リリース", "en": "Initial release" }
+    {
+      "date": "2026-05-09",
+      "ja": "初回リリース",
+      "en": "Initial release"
+    }
   ]
 }

@@ -137,7 +137,7 @@
         "Insulin・Electrolytes・Oxygenは血液ガス等で評価できる",
         "Alcohol、Uremiaの２項目は検体検査で鑑別できる",
         "Stroke、Traumaの２項目が頭部画像検査で鑑別する",
-        "Encephalopathy/Infection/Injury/Psychiatric/Strokeは追加評価を要する"
+        "Encephalopathy/Infection/Overdose/Psychiatric/Seizureは追加評価を要する"
       ],
       "answers": [
         0

@@ -3,6 +3,10 @@
   "questions": [
     {
       "id": "general_em_master_001",
+      "categories": [
+        "general_em_master",
+        "critical_care_master"
+      ],
       "question": "Which ventilator settings best represent lung-protective ventilation for ARDS?",
       "choices": [
         "Tidal volume 6 mL/kg predicted body weight (PBW), plateau pressure ≤30 cmH2O",
@@ -19,6 +23,10 @@
     },
     {
       "id": "general_em_master_002",
+      "categories": [
+        "general_em_master",
+        "cpr_master"
+      ],
       "question": "Select all criteria that represent appropriate indications for ECPR (extracorporeal CPR) in refractory ventricular fibrillation.",
       "choices": [
         "Witnessed sudden cardiac arrest",

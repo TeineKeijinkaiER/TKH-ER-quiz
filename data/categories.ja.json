@@ -192,11 +192,83 @@
     "accent": "#1d4ed8"
   },
   {
+    "id": "cardiology_advanced",
+    "level": "advanced",
+    "name": "循環器救急",
+    "description": "頻脈、徐脈、QT延長、ペーシングなどの応用対応",
+    "file": "questions/ja/advanced/cardiology_advanced.json",
+    "accent": "#c2413b"
+  },
+  {
+    "id": "infection_advanced",
+    "level": "advanced",
+    "name": "感染症",
+    "description": "髄膜炎、帯状疱疹、公衆衛生対応などの応用",
+    "file": "questions/ja/advanced/infection_advanced.json",
+    "accent": "#15803d"
+  },
+  {
+    "id": "pediatric_advanced",
+    "level": "advanced",
+    "name": "小児救急",
+    "description": "小児アナフィラキシーなどの応用対応",
+    "file": "questions/ja/advanced/pediatric_advanced.json",
+    "accent": "#c2413b"
+  },
+  {
+    "id": "obstetrics_advanced",
+    "level": "advanced",
+    "name": "産婦人科救急",
+    "description": "分娩後出血、産科救急薬剤、母体急変対応",
+    "file": "questions/ja/advanced/obstetrics_advanced.json",
+    "accent": "#be123c"
+  },
+  {
+    "id": "vertigo_stroke_advanced",
+    "level": "advanced",
+    "name": "めまい/脳卒中",
+    "description": "中枢性めまい、脳幹病変、HINTSの応用",
+    "file": "questions/ja/advanced/vertigo_stroke_advanced.json",
+    "accent": "#0f766e"
+  },
+  {
     "id": "general_em_master",
     "level": "master",
     "name": "救急医学全般",
     "description": "肺保護換気、ECPR、超急性期集中治療",
     "file": "questions/ja/master/general_em_master.json",
     "accent": "#1d4ed8"
+  },
+  {
+    "id": "critical_care_master",
+    "level": "master",
+    "name": "集中治療",
+    "description": "ARDS、人工呼吸、SBT、腹腔内圧などの専門管理",
+    "file": "questions/ja/master/critical_care_master.json",
+    "accent": "#1d4ed8"
+  },
+  {
+    "id": "toxicology_master",
+    "level": "master",
+    "name": "中毒",
+    "description": "腐食性物質、咬刺傷、化学曝露、解毒薬の専門対応",
+    "file": "questions/ja/master/toxicology_master.json",
+    "accent": "#5f2d91"
+  },
+  {
+    "id": "disaster_master",
+    "level": "master",
+    "name": "災害医療",
+    "description": "化学災害、ゾーニング、除染、爆傷対応",
+    "file": "questions/ja/master/disaster_master.json",
+    "accent": "#7c2d12"
+  },
+  {
+    "id": "environmental_master",
+    "level": "master",
+    "name": "環境救急",
+    "description": "潜水障害、低体温症などの特殊環境救急",
+    "file": "questions/ja/master/environmental_master.json",
+    "accent": "#087f8c"
   }
 ]
