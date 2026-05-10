@@ -852,6 +852,7 @@ function finishQuiz() {
   showScreen("result");
   sendResultToBackend(result);
   playTone("finish");
+  if (showClearBanner) window.setTimeout(() => { playClearSound(); showFireworks(); }, 450);
 }
 
 function renderResult(result, { showClearBanner, progress }) {
@@ -1411,6 +1412,118 @@ function playCorrectSound() {
   [[659, 0], [784, 75], [988, 150], [1319, 240]].forEach(([freq, delay]) => {
     window.setTimeout(() => playSynthNote(freq, 0.12, "triangle", 0.075), delay);
   });
+}
+
+function playClearSound() {
+  if (readStore().muted) return;
+  // 上昇アルペジオ → 高音で和音 → 頂点でスパークル
+  [
+    [523,  0,   0.12, "triangle", 0.08],  // C5
+    [659,  100, 0.12, "triangle", 0.08],  // E5
+    [784,  200, 0.12, "triangle", 0.09],  // G5
+    [1047, 310, 0.14, "triangle", 0.10],  // C6
+    [1319, 430, 0.45, "triangle", 0.09],  // E6 — 長め保持
+    [1047, 445, 0.35, "triangle", 0.055], // C6 ハーモニー
+    [784,  460, 0.28, "triangle", 0.04],  // G5 ハーモニー
+    [2093, 510, 0.22, "triangle", 0.030], // C7 スパークル
+    [2637, 580, 0.15, "triangle", 0.018], // E7 高音シマー
+  ].forEach(([freq, delay, dur, wave, gain]) => {
+    window.setTimeout(() => playSynthNote(freq, dur, wave, gain), delay);
+  });
+}
+
+function showFireworks() {
+  const canvas = document.getElementById("fireworksCanvas");
+  if (!canvas) return;
+  canvas.width  = window.innerWidth;
+  canvas.height = window.innerHeight;
+  const ctx = canvas.getContext("2d");
+
+  const COLORS = [
+    "#ff4d6d", "#ff9f1c", "#ffde21", "#44cf6c",
+    "#00c2e0", "#7b5ea7", "#ff79a8", "#ffffff",
+  ];
+
+  const particles = [];
+
+  function spawnBurst(x, y) {
+    const count = 64 + Math.floor(Math.random() * 32);
+    for (let i = 0; i < count; i++) {
+      const angle  = (Math.PI * 2 * i) / count + (Math.random() - 0.5) * 0.3;
+      const speed  = 2.5 + Math.random() * 4.5;
+      const color  = COLORS[Math.floor(Math.random() * COLORS.length)];
+      const size   = 2.5 + Math.random() * 2.5;
+      particles.push({
+        x, y,
+        vx: Math.cos(angle) * speed,
+        vy: Math.sin(angle) * speed,
+        alpha: 1,
+        color,
+        size,
+        trail: [],
+      });
+    }
+  }
+
+  // Schedule 6 bursts at staggered times and random positions
+  const burstTimes = [0, 180, 350, 520, 700, 900];
+  burstTimes.forEach((delay) => {
+    window.setTimeout(() => {
+      const x = canvas.width  * (0.15 + Math.random() * 0.70);
+      const y = canvas.height * (0.10 + Math.random() * 0.55);
+      spawnBurst(x, y);
+    }, delay);
+  });
+
+  let rafId;
+  function loop() {
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+    for (let i = particles.length - 1; i >= 0; i--) {
+      const p = particles[i];
+
+      // Save short trail point
+      p.trail.push({ x: p.x, y: p.y, alpha: p.alpha });
+      if (p.trail.length > 5) p.trail.shift();
+
+      // Draw trail
+      p.trail.forEach((pt, ti) => {
+        const trailAlpha = (pt.alpha * (ti + 1)) / (p.trail.length * 3);
+        ctx.globalAlpha = trailAlpha;
+        ctx.fillStyle   = p.color;
+        ctx.beginPath();
+        ctx.arc(pt.x, pt.y, p.size * 0.6, 0, Math.PI * 2);
+        ctx.fill();
+      });
+
+      // Draw particle
+      ctx.globalAlpha = p.alpha;
+      ctx.fillStyle   = p.color;
+      ctx.beginPath();
+      ctx.arc(p.x, p.y, p.size, 0, Math.PI * 2);
+      ctx.fill();
+
+      // Update physics
+      p.x     += p.vx;
+      p.y     += p.vy;
+      p.vy    += 0.09;       // gravity
+      p.vx    *= 0.98;       // air resistance
+      p.alpha -= 0.016;
+
+      if (p.alpha <= 0) particles.splice(i, 1);
+    }
+
+    ctx.globalAlpha = 1;
+
+    if (particles.length > 0) {
+      rafId = requestAnimationFrame(loop);
+    } else {
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+    }
+  }
+
+  // Start after a very short delay so first burst is already spawned
+  window.setTimeout(() => { rafId = requestAnimationFrame(loop); }, 20);
 }
 
 function playSynthNote(frequency, duration, typeName, gainValue) {
