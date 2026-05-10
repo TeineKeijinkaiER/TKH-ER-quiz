@@ -103,6 +103,7 @@ const state = {
   selectedCategoryId: "",
   learnerRoleId: "",
   questionCount: 5,
+  preferredQuestionCount: 5,
   quizQuestions: [],
   currentIndex: 0,
   score: 0,
@@ -246,6 +247,7 @@ function bindEvents() {
     button.addEventListener("click", () => {
       if (button.disabled) return;
       state.questionCount = Number(button.dataset.count);
+      state.preferredQuestionCount = state.questionCount;
       renderQuestionCountControls();
       updateSetupSummary();
     });
@@ -489,7 +491,9 @@ function renderQuestionCountControls() {
   const total = getSelectedQuestions().length;
   const buttons = [...document.querySelectorAll("[data-count]")];
   const counts = buttons.map((button) => Number(button.dataset.count)).sort((a, b) => a - b);
-  if (total > 0 && state.questionCount > total) {
+  if (total === 0 || state.preferredQuestionCount <= total) {
+    state.questionCount = state.preferredQuestionCount;
+  } else if (state.questionCount > total) {
     state.questionCount = counts.filter((count) => count <= total).pop() || total;
   }
   buttons.forEach((button) => {
@@ -627,7 +631,7 @@ function renderCurrentQuestion() {
     els.pauseQuizButton.textContent = t("quizPause", state.lang);
   }
   els.timerText.closest(".timer").classList.remove("is-paused");
-  // els.choiceList is rebuilt below so its class is reset automatically
+  els.choiceList.classList.remove("is-paused");
   state.isLocked = false;
   state.lastTickSecond = null;
   const question = state.quizQuestions[state.currentIndex];
