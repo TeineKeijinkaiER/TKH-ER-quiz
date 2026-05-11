@@ -137,7 +137,7 @@ async function init() {
   cacheElements();
   loadStoredState();
   bindEvents();
-  bindFirstAudioGesture();
+  bindAudioResume();
   setupTimerArc();
 
   try {
@@ -300,27 +300,28 @@ function getActiveRankingTabId() {
 }
 
 // ──────────────────────────────────────────────────────────────────────────────
-// iOS audio unlock: create + resume AudioContext within the user gesture
-// (iOS Safari blocks AudioContext until a gesture; touchstart fires before
-//  pointerdown on iOS, so we register both for maximum compatibility)
+// iOS audio unlock: create + resume AudioContext within the user gesture.
+// Listeners are PERSISTENT (no { once: true }) so the context can be
+// re-unlocked after the browser auto-suspends it (backgrounding, tab switch,
+// screen lock, etc.).  touchstart fires before pointerdown on iOS, so we
+// register both for maximum compatibility.
 // ──────────────────────────────────────────────────────────────────────────────
-function bindFirstAudioGesture() {
-  const unlock = () => {
-    // Create the AudioContext synchronously inside the gesture handler
+function bindAudioResume() {
+  const tryResume = () => {
+    // Create AudioContext synchronously inside the gesture handler (iOS req.)
     if (!state.audioContext) {
       const Ctx = window.AudioContext || window.webkitAudioContext;
       if (Ctx) state.audioContext = new Ctx();
     }
-    if (state.audioContext) {
-      // resume() must be called within the gesture on iOS
+    if (state.audioContext?.state === "suspended") {
       state.audioContext.resume()
-        .then(() => { if (!state.musicLoopId) startOpeningMusic(); })
+        .then(() => { if (!state.musicLoopId && !readStore().muted) startOpeningMusic(); })
         .catch(() => {});
     }
   };
-  document.addEventListener("touchstart", unlock, { once: true, passive: true });
-  document.addEventListener("pointerdown", unlock, { once: true, passive: true });
-  document.addEventListener("keydown",     unlock, { once: true });
+  document.addEventListener("touchstart", tryResume, { passive: true });
+  document.addEventListener("pointerdown", tryResume, { passive: true });
+  document.addEventListener("keydown",     tryResume);
 }
 
 async function loadQuestionData() {
@@ -1389,10 +1390,7 @@ function ensureAudioContext() {
     const Ctx = window.AudioContext || window.webkitAudioContext;
     if (Ctx) state.audioContext = new Ctx();
   }
-  if (state.audioContext?.state === "suspended") {
-    state.audioContext.resume().catch(() => {});
-  }
-  return state.audioContext;
+  return state.audioContext ?? null;
 }
 
 function playTone(type) {
@@ -1527,6 +1525,7 @@ function showFireworks() {
 }
 
 function playSynthNote(frequency, duration, typeName, gainValue) {
+  if (readStore().muted) return;
   const audio = ensureAudioContext();
   if (!audio) return;
   const play = () => {
