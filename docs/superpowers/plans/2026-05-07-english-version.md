@@ -200,7 +200,7 @@ const I18N = {
     summaryCategory: "カテゴリー",
     summaryCategoryLoading: "読み込み中",
     summaryTimeLimit: "制限時間",
-    summaryTimeLimitValue: "1問 20秒",
+    summaryTimeLimitValue: "1問 30秒",
     quizQuit: "中断",
     resultEyebrow: "Result",
     resultTitle: "演習結果",
@@ -247,7 +247,7 @@ const I18N = {
     summaryCategory: "Category",
     summaryCategoryLoading: "Loading...",
     summaryTimeLimit: "Time limit",
-    summaryTimeLimitValue: "20 sec / question",
+    summaryTimeLimitValue: "30 sec / question",
     quizQuit: "Quit",
     resultEyebrow: "Result",
     resultTitle: "Result",
@@ -343,7 +343,7 @@ function applyI18n(lang) {
 <dt data-i18n="summaryCategory">カテゴリー</dt>
 <dd id="selectedCategoryLabel" data-i18n="summaryCategoryLoading">読み込み中</dd>
 <dt data-i18n="summaryTimeLimit">制限時間</dt>
-<dd data-i18n="summaryTimeLimitValue">1問 20秒</dd>
+<dd data-i18n="summaryTimeLimitValue">1問 30秒</dd>
 
 <button id="quitQuizButton" data-i18n="quizQuit">中断</button>
 

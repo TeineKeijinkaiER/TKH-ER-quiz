@@ -96,7 +96,7 @@ The full replacement for the timer area at the end of quiz-topline should be:
                 <circle class="timer-track" cx="60" cy="60" r="52"></circle>
                 <circle id="timerArc" class="timer-arc" cx="60" cy="60" r="52"></circle>
               </svg>
-              <span id="timerText">20</span>
+              <span id="timerText">30</span>
             </div>
           </div>
         </div>
@@ -240,7 +240,7 @@ With:
     noticeClose: "閉じる",
     noticeBody: `<p>このクイズは、手稲渓仁会病院 救命救急センターが教育目的で作成しています。</p>
 <p>クイズの内容はガイドラインに基づいていますが、投薬方法など一部は当施設のやり方を採用しています。施設によって異なる場合がありますので、実際の診療では必ず自施設の指導医にご確認ください。</p>
-<p>各問題は20秒以内に答える形式です。時間が短いと感じる場合は、一時停止ボタン（⏸）をご利用ください。一時停止中はゆっくり問題を読むことができます。</p>
+<p>各問題は30秒以内に答える形式です。時間が短いと感じる場合は、一時停止ボタン（⏸）をご利用ください。一時停止中はゆっくり問題を読むことができます。</p>
 <p>カテゴリー内の全問題に正解するとクリアになります。ただし、一時停止を使用した場合はクリア条件を満たしません。制限時間内に答えることがクリアの条件です。</p>
 <p>問題内容は随時修正・追加されます。問題が更新されたカテゴリーはクリアが解除されますので、ぜひ再挑戦してください。</p>`,
 ```
@@ -263,7 +263,7 @@ With:
     noticeClose: "Close",
     noticeBody: `<p>This quiz was created for educational purposes by the Emergency and Critical Care Center at Teine Keijinkai Hospital.</p>
 <p>Quiz content is primarily based on clinical guidelines, but some procedures (such as medication dosing) reflect our institution's practices. These may differ from other facilities — please consult your supervising physician for guidance.</p>
-<p>Each question must be answered within 20 seconds. If you feel rushed, use the pause button (⏸) to take your time reading the question.</p>
+<p>Each question must be answered within 30 seconds. If you feel rushed, use the pause button (⏸) to take your time reading the question.</p>
 <p>Completing all questions in a category correctly earns a CLEAR. However, using the pause button disqualifies that session from clearing — you must answer within the time limit.</p>
 <p>Questions are updated regularly with corrections and additions. When a category's questions are updated, its CLEAR status will be reset — please try again!</p>`,
 ```

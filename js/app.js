@@ -1,7 +1,7 @@
 const STORAGE_KEY = "qqq_state_v1";
 const STORAGE_SCHEMA_VERSION = 2;
 const LOCAL_BACKEND_EVENT_URL = "http://127.0.0.1:8787/api/events";
-const QUESTION_SECONDS = 20;
+const QUESTION_SECONDS = 30;
 const TIMER_CIRCUMFERENCE = 2 * Math.PI * 52;
 const NEXT_QUESTION_DELAY_MS = 950;
 
