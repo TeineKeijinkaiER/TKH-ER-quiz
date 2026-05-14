@@ -635,7 +635,7 @@ button:focus-visible {
 
 .choice-button {
   display: grid;
-  grid-template-columns: 34px 1fr;
+  grid-template-columns: 34px minmax(0, 1fr);
   gap: 12px;
   width: 100%;
   min-height: 56px;
@@ -645,6 +645,7 @@ button:focus-visible {
   background: #ffffff;
   color: var(--text);
   text-align: left;
+  overflow-wrap: break-word;
 }
 
 .choice-button:hover:not(:disabled) {
@@ -1208,7 +1209,7 @@ button:focus-visible {
   }
 
   .choice-button {
-    grid-template-columns: 30px 1fr;
+    grid-template-columns: 30px minmax(0, 1fr);
     padding: 11px;
   }
 
