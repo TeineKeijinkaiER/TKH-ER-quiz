@@ -630,6 +630,7 @@ button:focus-visible {
 
 .choice-list {
   display: grid;
+  grid-template-columns: minmax(0, 1fr);
   gap: 10px;
 }
 
@@ -646,6 +647,7 @@ button:focus-visible {
   color: var(--text);
   text-align: left;
   overflow-wrap: break-word;
+  word-break: break-word;
 }
 
 .choice-button:hover:not(:disabled) {
