@@ -470,17 +470,23 @@ function renderLevelScreen() {
     });
     els.levelGrid.appendChild(card);
 
-    // Always show cert button; locked (greyed) until all categories are cleared
+    // Cert button — three states: locked / unlocked (blue) / passed (orange)
     const allCleared = levelCats.length > 0 && levelCats.every((c) => isClear(c.id));
+    const hasPassed = readStore().certPasses.some((p) => p.levelId === level.id);
     const certBtn = document.createElement("button");
     certBtn.type = "button";
-    certBtn.disabled = !allCleared;
-    certBtn.className = "cert-challenge-button" + (allCleared ? "" : " is-locked");
-    if (allCleared) {
-      certBtn.textContent = `🏆 ${level.name} ${t("certChallengeButton", state.lang)}`;
+    if (!allCleared) {
+      certBtn.disabled = true;
+      certBtn.className = "cert-challenge-button is-locked";
+      certBtn.textContent = `🔒 ${level.name} ${t("certChallengeButton", state.lang)}  ${clearedCount} / ${levelCats.length}`;
+    } else if (hasPassed) {
+      certBtn.className = "cert-challenge-button is-passed";
+      certBtn.textContent = `🏆 ${level.name} ${t("certPassedLabel", state.lang)}`;
       certBtn.addEventListener("click", () => openCertModal(level.id));
     } else {
-      certBtn.textContent = `🔒 ${level.name} ${t("certChallengeButton", state.lang)}  ${clearedCount} / ${levelCats.length}`;
+      certBtn.className = "cert-challenge-button";
+      certBtn.textContent = `🔓 ${level.name} ${t("certChallengeButton", state.lang)}`;
+      certBtn.addEventListener("click", () => openCertModal(level.id));
     }
     els.levelGrid.appendChild(certBtn);
   });
@@ -1782,7 +1788,6 @@ function showCertCelebration(levelId, score) {
   const levelName = level ? level.name : levelId;
   document.getElementById("certCelebTitle").textContent = t("certCelebTitle", state.lang);
   document.getElementById("certCelebLevel").textContent = `${levelName} ${t("certCelebLevelSuffix", state.lang)}`;
-  document.getElementById("certCelebName").textContent = getLearnerRoleName();
   document.getElementById("certCelebScore").textContent = `${score} / ${CERT_QUESTION_COUNT}`;
   document.getElementById("certCelebDate").textContent = new Intl.DateTimeFormat(
     t("dateLocale", state.lang), { year: "numeric", month: "2-digit", day: "2-digit" },
