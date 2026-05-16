@@ -1,0 +1,70 @@
+{
+  "category": "Orthopedic Trauma",
+  "questions": [
+    {
+      "id": "orthopedic_trauma_entry_001",
+      "question": "Which is the most characteristic early symptom of compartment syndrome?",
+      "choices": [
+        "Subcutaneous bruising and swelling at the affected site",
+        "Pain markedly worsened by passive stretch",
+        "Coolness and pallor of the affected area",
+        "Tenderness at the fracture site"
+      ],
+      "answers": [1],
+      "selectCount": 1,
+      "explanation": "Pain worsened by passive stretch is an important early finding suggesting compartment syndrome. Be especially alert when there is severe pain that is difficult to relieve with analgesics or pain out of proportion to the apparent injury. Coolness, pallor, absent pulse, and paralysis are late findings, and care should not wait for these signs to appear."
+    },
+    {
+      "id": "orthopedic_trauma_entry_002",
+      "question": "Which fracture is incorrect as a fracture commonly seen in older adults?",
+      "choices": [
+        "Proximal femur fracture",
+        "Distal radius fracture",
+        "Vertebral compression fracture",
+        "Scaphoid fracture"
+      ],
+      "answers": [3],
+      "selectCount": 1,
+      "explanation": "In older adults, proximal femur fractures, distal radius fractures, vertebral compression fractures, and proximal humerus fractures are common in relation to osteoporosis and falls. Scaphoid fractures are relatively common in adolescents to middle-aged adults after a fall onto an outstretched hand, but they are not representative common fractures in older adults."
+    },
+    {
+      "id": "orthopedic_trauma_entry_003",
+      "question": "Based on the Ottawa ankle rules, which criterion is incorrect as an indication for ankle or foot X-ray?",
+      "choices": [
+        "Tenderness along the posterior edge or tip of the lateral malleolus within 6 cm",
+        "Tenderness along the posterior edge or tip of the medial malleolus within 6 cm",
+        "Tenderness over the navicular bone",
+        "Tenderness in the middle of the fifth metatarsal shaft"
+      ],
+      "answers": [3],
+      "selectCount": 1,
+      "explanation": "The Ottawa ankle rules indicate ankle X-ray when there is tenderness along the posterior edge or tip of the lateral malleolus within 6 cm, tenderness along the posterior edge or tip of the medial malleolus within 6 cm, or inability to bear weight for four steps both immediately after injury and at evaluation. Foot X-ray is indicated when there is midfoot pain plus navicular tenderness, tenderness at the base of the fifth metatarsal, or inability to bear weight for four steps. In the rule, tenderness at the base of the fifth metatarsal is important; tenderness in the middle of the shaft is not an Ottawa foot rule item. In practice, however, focal mid-shaft tenderness or swelling should still prompt consideration of X-ray outside the rule."
+    },
+    {
+      "id": "orthopedic_trauma_entry_004",
+      "question": "A toddler who fell is complaining of arm pain. Which injury is incorrect as a common upper-extremity injury in toddlers?",
+      "choices": [
+        "Clavicle fracture",
+        "Supracondylar humerus fracture",
+        "Lateral condyle fracture of the humerus",
+        "Shoulder dislocation"
+      ],
+      "answers": [3],
+      "selectCount": 1,
+      "explanation": "When a toddler has arm pain after a fall, consider clavicle fracture, supracondylar humerus fracture, lateral condyle fracture of the humerus, distal radius fracture, and similar injuries. Supracondylar humerus fractures require attention to neurovascular injury and compartment syndrome, and lateral condyle fractures are pediatric elbow fractures that can be missed. Shoulder dislocation is important in adults and adolescents but is relatively rare in toddlers, so it is not an appropriate answer as a frequent toddler upper-extremity injury."
+    },
+    {
+      "id": "orthopedic_trauma_entry_005",
+      "question": "After cast immobilization for a forearm fracture, passive extension of the fingers causes marked pain. What should be done next?",
+      "choices": [
+        "Add analgesics and observe",
+        "Remove the cast and perform urgent assessment",
+        "Elevate and ice the limb",
+        "Instruct the patient to visit orthopedics the next morning"
+      ],
+      "answers": [1],
+      "selectCount": 1,
+      "explanation": "Marked pain worsened by passive finger extension after cast immobilization suggests compartment syndrome. Immediately release compression from the cast or bandage and urgently reassess, including neurovascular findings. Compartment pressure measurement or fasciotomy should be considered as needed. Do not manage this only with analgesics or delay reassessment until the next day."
+    }
+  ]
+}

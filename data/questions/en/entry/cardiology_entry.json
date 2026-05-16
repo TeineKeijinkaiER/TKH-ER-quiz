@@ -1,0 +1,70 @@
+{
+  "category": "Cardiology Emergencies",
+  "questions": [
+    {
+      "id": "cardiology_entry_001",
+      "question": "A patient with chest pain has ST elevation in leads II, III, and aVF on a 12-lead ECG. Which coronary artery is the most likely culprit?",
+      "choices": [
+        "Right coronary artery or left circumflex artery",
+        "Left anterior descending artery",
+        "Left main coronary artery",
+        "Diagonal branch"
+      ],
+      "answers": [0],
+      "selectCount": 1,
+      "explanation": "Leads II, III, and aVF are inferior leads, and ST elevation in these leads suggests an inferior STEMI. The culprit vessel is most often the right coronary artery, although the left circumflex artery can also be responsible. ST elevation in lead III greater than lead II often suggests right coronary artery occlusion and is frequently accompanied by reciprocal ST depression in leads I and aVL. With proximal right coronary artery occlusion, right ventricular infarction may coexist, so additional right-sided chest leads such as V4R should be considered."
+    },
+    {
+      "id": "cardiology_entry_002",
+      "question": "In a patient with chest pain suspicious for acute coronary syndrome, which findings should raise strong concern for aortic dissection and be evaluated before antithrombotic therapy?",
+      "choices": [
+        "Blood pressure difference between arms, migrating back pain, and neurologic symptoms",
+        "Chest pain with exertion that improves at rest",
+        "Chest pain accompanied by cold sweats",
+        "ST depression on ECG"
+      ],
+      "answers": [0],
+      "selectCount": 1,
+      "explanation": "Important clues to acute aortic dissection include sudden severe chest or back pain, migrating pain, blood pressure or pulse differences between arms, neurologic symptoms, syncope, and aortic regurgitation murmur. If it is mistaken for acute coronary syndrome, antiplatelet therapy, anticoagulation, or thrombolysis can be fatal. When dissection is suspected, evaluate with contrast CT or another appropriate test. Cold sweats and ST changes can occur in acute coronary syndrome but are not specific for aortic dissection."
+    },
+    {
+      "id": "cardiology_entry_003",
+      "question": "Which item is included in the Wells score for suspected lower-extremity deep vein thrombosis (DVT)?",
+      "choices": [
+        "Paralysis, paresis, or recent plaster immobilization of the lower extremity",
+        "Systolic blood pressure below 90 mmHg",
+        "S1Q3T3 pattern on ECG",
+        "SpO2 below 90%"
+      ],
+      "answers": [0],
+      "selectCount": 1,
+      "explanation": "The Wells score is used to estimate the clinical probability of DVT. Items include active cancer, paralysis or paresis or recent plaster immobilization of the lower extremity, recent bedridden status or major surgery, localized tenderness along the deep venous system, entire leg swelling, calf circumference difference, pitting edema, collateral superficial veins, and previous DVT. Hypotension, S1Q3T3, and hypoxemia may be relevant in pulmonary embolism assessment but are not items in the DVT Wells score."
+    },
+    {
+      "id": "cardiology_entry_004",
+      "question": "What is an appropriate initial approach for a hemodynamically stable patient with paroxysmal supraventricular tachycardia (PSVT)?",
+      "choices": [
+        "Attempt vagal maneuvers, including the modified Valsalva maneuver",
+        "Perform immediate unsynchronized defibrillation",
+        "Observe without giving a beta blocker",
+        "Start anticoagulation before rate control"
+      ],
+      "answers": [0],
+      "selectCount": 1,
+      "explanation": "In a hemodynamically stable regular narrow-QRS tachycardia suspicious for PSVT, first attempt vagal maneuvers such as the modified Valsalva maneuver. If ineffective, rapid IV adenosine may be considered after checking contraindications. If the patient is hemodynamically unstable with hypotension, shock, ischemic chest pain, acute heart failure, or impaired consciousness, synchronized cardioversion is indicated. Unsynchronized defibrillation is used for cardiac arrest rhythms such as VF or pulseless VT."
+    },
+    {
+      "id": "cardiology_entry_005",
+      "question": "Which ECG finding in hyperkalemia suggests severe disease?",
+      "choices": [
+        "QT prolongation and prominent U waves",
+        "Short PR interval and delta wave",
+        "Loss of P waves, QRS widening, and a sine-wave pattern",
+        "Diffuse ST elevation and PR depression"
+      ],
+      "answers": [2],
+      "selectCount": 1,
+      "explanation": "Hyperkalemia can progress from peaked T waves to PR prolongation, flattening or loss of P waves, QRS widening, and in severe cases a sine-wave pattern, ventricular fibrillation, or asystole. QRS widening or a sine-wave pattern suggests impending lethal arrhythmia and requires emergency treatment, including myocardial membrane stabilization with calcium. QT prolongation and prominent U waves suggest hypokalemia, a delta wave suggests WPW syndrome, and diffuse ST elevation with PR depression suggests acute pericarditis."
+    }
+  ]
+}

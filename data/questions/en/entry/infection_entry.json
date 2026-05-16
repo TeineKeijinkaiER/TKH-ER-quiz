@@ -1,0 +1,70 @@
+{
+  "category": "Infectious Diseases",
+  "questions": [
+    {
+      "id": "infection_entry_001",
+      "question": "Which statement about influenza is incorrect?",
+      "choices": [
+        "Rapid antigen tests are more likely to detect influenza after about 12 hours from onset than immediately after onset",
+        "Anti-influenza drugs are most effective when started within 48 hours of symptom onset",
+        "Influenza A is subtyped by H and N antigens",
+        "The incubation period is usually 2-3 weeks"
+      ],
+      "answers": [3],
+      "selectCount": 1,
+      "explanation": "The incubation period of influenza is usually 1-4 days, typically about 2 days, not 2-3 weeks. Rapid antigen tests can be falsely negative immediately after onset when viral load is low, and in practice detection is more likely after about 12 hours. Anti-influenza drugs are most effective when started within 48 hours of onset. Influenza A is subtyped by the surface antigens hemagglutinin (H) and neuraminidase (N), such as H1N1 and H3N2."
+    },
+    {
+      "id": "infection_entry_002",
+      "question": "Which statement about COVID-19 is incorrect?",
+      "choices": [
+        "SARS-CoV-2 is an enveloped RNA virus",
+        "Antiviral therapy may be considered even in mild disease if the patient has risk factors for severe disease",
+        "Nirmatrelvir/ritonavir requires attention to drug interactions",
+        "Steroids are contraindicated in COVID-19 pneumonia"
+      ],
+      "answers": [3],
+      "selectCount": 1,
+      "explanation": "SARS-CoV-2 is an enveloped RNA virus. In COVID-19, antiviral therapy is considered for patients with mild to moderate disease who have risk factors for severe disease, such as older age, underlying illness, or immunosuppression. Nirmatrelvir/ritonavir has many CYP3A-related drug interactions, so concomitant medications must be checked. In COVID-19 pneumonia requiring oxygen, steroids such as dexamethasone may be considered, so they are not universally contraindicated. In contrast, routine steroid use is not recommended in mild cases that do not require oxygen."
+    },
+    {
+      "id": "infection_entry_003",
+      "question": "Which statement about infection control for norovirus is incorrect?",
+      "choices": [
+        "The main route of transmission is fecal-oral",
+        "Transmission can occur through droplets from vomitus and environmental contamination",
+        "Norovirus is a non-enveloped virus",
+        "Alcohol-based hand sanitizer is the first choice for hand hygiene"
+      ],
+      "answers": [3],
+      "selectCount": 1,
+      "explanation": "Norovirus is a non-enveloped virus and is relatively resistant to alcohol. The main route is fecal-oral transmission, but infection can also occur through droplets from vomitus, contaminated environmental surfaces, and contaminated food or water. Hand hygiene should emphasize washing with soap and running water. Alcohol-based hand sanitizer may be used as an adjunct, but it is insufficient as the first-choice measure against norovirus."
+    },
+    {
+      "id": "infection_entry_004",
+      "question": "Which item is not part of the Centor/McIsaac criteria used when streptococcal pharyngitis is suspected?",
+      "choices": [
+        "Fever",
+        "Absence of cough",
+        "Anterior cervical lymphadenopathy",
+        "Purulent nasal discharge"
+      ],
+      "answers": [3],
+      "selectCount": 1,
+      "explanation": "Centor and McIsaac criteria are used to estimate the likelihood of group A streptococcal pharyngitis. Main items include fever, absence of cough, anterior cervical lymph node swelling or tenderness, and tonsillar swelling or exudate. McIsaac criteria also incorporate age. Purulent nasal discharge, cough, hoarseness, conjunctivitis, and stomatitis tend to suggest viral upper respiratory infection and are not criteria for streptococcal pharyngitis."
+    },
+    {
+      "id": "infection_entry_005",
+      "question": "Which is least appropriate as a common bacterial infection in older adults?",
+      "choices": [
+        "Pneumonia",
+        "Urinary tract infection",
+        "Skin and soft tissue infection",
+        "Meningitis"
+      ],
+      "answers": [3],
+      "selectCount": 1,
+      "explanation": "In older adults, pneumonia, urinary tract infection, and skin and soft tissue infection are important common bacterial infections. Meningitis can occur in older adults and is serious, but it is not as frequent as pneumonia, urinary tract infection, or skin and soft tissue infection. In older adults, fever and localizing symptoms may be subtle, and infection may present with nonspecific symptoms such as poor appetite, decline in ADL, delirium, falls, or malaise. Avoiding overdiagnosis of asymptomatic bacteriuria as urinary tract infection is also important."
+    }
+  ]
+}

@@ -1,11 +1,123 @@
 [
   {
-    "id": "ed_first_steps_basic",
-    "level": "basic",
+    "id": "ed_first_steps_entry",
+    "level": "entry",
     "name": "救急外来まずはここから",
-    "description": "ERの基本事項",
-    "file": "questions/ja/basic/ed_first_steps_basic.json",
+    "description": "ERの基本姿勢とコミュニケーション",
+    "file": "questions/ja/entry/ed_first_steps_entry.json",
     "accent": "#087f8c"
+  },
+  {
+    "id": "altered_mental_status_entry",
+    "level": "entry",
+    "name": "意識障害/意識消失",
+    "description": "意識障害の基本的な原因と初期アプローチ",
+    "file": "questions/ja/entry/altered_mental_status_entry.json",
+    "accent": "#4f46e5"
+  },
+  {
+    "id": "vertigo_stroke_entry",
+    "level": "entry",
+    "name": "めまい/脳卒中",
+    "description": "めまい・脳卒中の基本概念と初期対応",
+    "file": "questions/ja/entry/vertigo_stroke_entry.json",
+    "accent": "#0f766e"
+  },
+  {
+    "id": "orthopedic_trauma_entry",
+    "level": "entry",
+    "name": "整形外傷",
+    "description": "骨折・外傷の基本評価",
+    "file": "questions/ja/entry/orthopedic_trauma_entry.json",
+    "accent": "#b45309"
+  },
+  {
+    "id": "infection_entry",
+    "level": "entry",
+    "name": "感染症",
+    "description": "感染症の基本概念と抗菌薬の考え方",
+    "file": "questions/ja/entry/infection_entry.json",
+    "accent": "#15803d"
+  },
+  {
+    "id": "gi_symptoms_entry",
+    "level": "entry",
+    "name": "消化器症状",
+    "description": "腹痛・消化器症状の基本的な鑑別",
+    "file": "questions/ja/entry/gi_symptoms_entry.json",
+    "accent": "#be123c"
+  },
+  {
+    "id": "emergency_medications_entry",
+    "level": "entry",
+    "name": "救急外来薬剤投与",
+    "description": "救急でよく使う薬剤の基本知識",
+    "file": "questions/ja/entry/emergency_medications_entry.json",
+    "accent": "#7c2d12"
+  },
+  {
+    "id": "sepsis_entry",
+    "level": "entry",
+    "name": "敗血症",
+    "description": "敗血症の基本的な認識と初期対応",
+    "file": "questions/ja/entry/sepsis_entry.json",
+    "accent": "#087f8c"
+  },
+  {
+    "id": "trauma_entry",
+    "level": "entry",
+    "name": "重症外傷",
+    "description": "外傷初期評価の基本（ABCDE）",
+    "file": "questions/ja/entry/trauma_entry.json",
+    "accent": "#b45309"
+  },
+  {
+    "id": "endocrine_entry",
+    "level": "entry",
+    "name": "内分泌救急",
+    "description": "DKA・低血糖など内分泌救急の基本",
+    "file": "questions/ja/entry/endocrine_entry.json",
+    "accent": "#6d5bd0"
+  },
+  {
+    "id": "cpr_entry",
+    "level": "entry",
+    "name": "心肺蘇生",
+    "description": "心肺蘇生の基本手順と優先順位",
+    "file": "questions/ja/entry/cpr_entry.json",
+    "accent": "#c2413b"
+  },
+  {
+    "id": "pediatric_entry",
+    "level": "entry",
+    "name": "小児救急",
+    "description": "小児救急の基本的な特徴と対応",
+    "file": "questions/ja/entry/pediatric_entry.json",
+    "accent": "#c2413b"
+  },
+  {
+    "id": "cardiology_entry",
+    "level": "entry",
+    "name": "循環器救急",
+    "description": "不整脈・ACSの基本概念",
+    "file": "questions/ja/entry/cardiology_entry.json",
+    "accent": "#c2413b"
+  },
+  {
+    "id": "toxicology_entry",
+    "level": "entry",
+    "name": "中毒",
+    "description": "主要な中毒と基本的な対応",
+    "file": "questions/ja/entry/toxicology_entry.json",
+    "accent": "#5f2d91"
+  },
+  {
+    "id": "general_em_entry",
+    "level": "entry",
+    "name": "救急医学全般",
+    "description": "救急外来の基本的な評価と対応",
+    "file": "questions/ja/entry/general_em_entry.json",
+    "accent": "#1d4ed8"
   },
   {
     "id": "altered_mental_status_basic",
@@ -88,62 +200,6 @@
     "accent": "#c2413b"
   },
   {
-    "id": "altered_mental_status_advanced",
-    "level": "advanced",
-    "name": "意識障害/意識消失",
-    "description": "AIUEOTIPS、気道管理適応、Wernicke脳症、NCSE",
-    "file": "questions/ja/advanced/altered_mental_status_advanced.json",
-    "accent": "#4f46e5"
-  },
-  {
-    "id": "sepsis_advanced",
-    "level": "advanced",
-    "name": "敗血症",
-    "description": "輸液反応性、乳酸値、バソプレシン、SOFA",
-    "file": "questions/ja/advanced/sepsis_advanced.json",
-    "accent": "#087f8c"
-  },
-  {
-    "id": "trauma_advanced",
-    "level": "advanced",
-    "name": "重症外傷",
-    "description": "MTP、止血蘇生、死の三徴、REBOA、TEG",
-    "file": "questions/ja/advanced/trauma_advanced.json",
-    "accent": "#b45309"
-  },
-  {
-    "id": "cpr_advanced",
-    "level": "advanced",
-    "name": "心肺蘇生",
-    "description": "アドレナリン、アミオダロン、可逆的原因、ECPR適応",
-    "file": "questions/ja/advanced/cpr_advanced.json",
-    "accent": "#c2413b"
-  },
-  {
-    "id": "sepsis_master",
-    "level": "master",
-    "name": "敗血症",
-    "description": "ステロイド、CRRT、肺保護換気、DIC、VTE予防",
-    "file": "questions/ja/master/sepsis_master.json",
-    "accent": "#087f8c"
-  },
-  {
-    "id": "trauma_master",
-    "level": "master",
-    "name": "重症外傷",
-    "description": "DCS、骨盤TAE、腹部ACS、ICP管理、TRALI",
-    "file": "questions/ja/master/trauma_master.json",
-    "accent": "#b45309"
-  },
-  {
-    "id": "cpr_master",
-    "level": "master",
-    "name": "心肺蘇生",
-    "description": "ECPR、PCAS、TTM、神経予後予測、持続脳波",
-    "file": "questions/ja/master/cpr_master.json",
-    "accent": "#c2413b"
-  },
-  {
     "id": "pediatric_basic",
     "level": "basic",
     "name": "小児救急",
@@ -174,6 +230,38 @@
     "description": "BLS、一次評価、トリアージ、基本的ER対応",
     "file": "questions/ja/basic/general_em_basic.json",
     "accent": "#1d4ed8"
+  },
+  {
+    "id": "altered_mental_status_advanced",
+    "level": "advanced",
+    "name": "意識障害/意識消失",
+    "description": "AIUEOTIPS、気道管理適応、Wernicke脳症、NCSE",
+    "file": "questions/ja/advanced/altered_mental_status_advanced.json",
+    "accent": "#4f46e5"
+  },
+  {
+    "id": "sepsis_advanced",
+    "level": "advanced",
+    "name": "敗血症",
+    "description": "輸液反応性、乳酸値、バソプレシン、SOFA",
+    "file": "questions/ja/advanced/sepsis_advanced.json",
+    "accent": "#087f8c"
+  },
+  {
+    "id": "trauma_advanced",
+    "level": "advanced",
+    "name": "重症外傷",
+    "description": "MTP、止血蘇生、死の三徴、REBOA、TEG",
+    "file": "questions/ja/advanced/trauma_advanced.json",
+    "accent": "#b45309"
+  },
+  {
+    "id": "cpr_advanced",
+    "level": "advanced",
+    "name": "心肺蘇生",
+    "description": "アドレナリン、アミオダロン、可逆的原因、ECPR適応",
+    "file": "questions/ja/advanced/cpr_advanced.json",
+    "accent": "#c2413b"
   },
   {
     "id": "toxicology_advanced",
@@ -230,6 +318,30 @@
     "description": "中枢性めまい、脳幹病変、HINTSの応用",
     "file": "questions/ja/advanced/vertigo_stroke_advanced.json",
     "accent": "#0f766e"
+  },
+  {
+    "id": "sepsis_master",
+    "level": "master",
+    "name": "敗血症",
+    "description": "ステロイド、CRRT、肺保護換気、DIC、VTE予防",
+    "file": "questions/ja/master/sepsis_master.json",
+    "accent": "#087f8c"
+  },
+  {
+    "id": "trauma_master",
+    "level": "master",
+    "name": "重症外傷",
+    "description": "DCS、骨盤TAE、腹部ACS、ICP管理、TRALI",
+    "file": "questions/ja/master/trauma_master.json",
+    "accent": "#b45309"
+  },
+  {
+    "id": "cpr_master",
+    "level": "master",
+    "name": "心肺蘇生",
+    "description": "ECPR、PCAS、TTM、神経予後予測、持続脳波",
+    "file": "questions/ja/master/cpr_master.json",
+    "accent": "#c2413b"
   },
   {
     "id": "general_em_master",

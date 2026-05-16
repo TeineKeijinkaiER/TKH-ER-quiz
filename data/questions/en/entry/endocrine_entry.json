@@ -1,0 +1,70 @@
+{
+  "category": "Endocrine Emergencies",
+  "questions": [
+    {
+      "id": "endocrine_entry_001",
+      "question": "Which finding is incorrect as a symptom suggestive of hypoglycemia?",
+      "choices": [
+        "Sweating, palpitations, and tremor",
+        "Hunger, anxiety, and pallor",
+        "Altered mental status, abnormal behavior, and seizures",
+        "Bradycardia, miosis, and dry skin"
+      ],
+      "answers": [3],
+      "selectCount": 1,
+      "explanation": "Hypoglycemia can cause sweating, palpitations, tremor, hunger, anxiety, and pallor through sympathetic and adrenergic activation. As hypoglycemia progresses, neuroglycopenic symptoms such as altered mental status, abnormal behavior, seizures, and coma may occur. Bradycardia, miosis, and dry skin are not typical symptoms suggesting hypoglycemia. The glucose level at which symptoms appear varies among patients, and warning symptoms may be blunted in recurrent hypoglycemia, so blood glucose should be measured promptly when suspected."
+    },
+    {
+      "id": "endocrine_entry_002",
+      "question": "For severe hypoglycemia with altered mental status, what is the most appropriate initial IV glucose dose?",
+      "choices": [
+        "Glucose 1-2 g",
+        "Glucose 5 g",
+        "Glucose 10-20 g",
+        "Glucose 100 g"
+      ],
+      "answers": [2],
+      "selectCount": 1,
+      "explanation": "In severe hypoglycemia with altered mental status, oral intake is dangerous and glucose should be given intravenously promptly. A practical initial dose is glucose 10-20 g, equivalent for example to 20-40 mL of 50% dextrose. After administration, reassess mental status and blood glucose. If insulin or a sulfonylurea is the cause, monitor for recurrent hypoglycemia and consider continuous glucose infusion or observation."
+    },
+    {
+      "id": "endocrine_entry_003",
+      "question": "Which statement about the diagnosis of diabetic ketoacidosis (DKA) is incorrect?",
+      "choices": [
+        "Diagnosis is based on the combination of hyperglycemia, increased ketones, and metabolic acidosis",
+        "Metabolic acidosis with low pH or low bicarbonate is important",
+        "Elevated blood or urine ketones are an important diagnostic component",
+        "DKA can be completely ruled out if glucose is below 250 mg/dL"
+      ],
+      "answers": [3],
+      "selectCount": 1,
+      "explanation": "DKA is a condition caused by insulin deficiency that leads to hyperglycemia, increased ketones, and metabolic acidosis. Diagnosis involves confirming elevated glucose, elevated blood or urine ketones, and low pH or low bicarbonate. However, euglycemic DKA can occur with SGLT2 inhibitor use, pregnancy, fasting, vomiting, and other situations, so DKA cannot be completely ruled out solely because glucose is below 250 mg/dL."
+    },
+    {
+      "id": "endocrine_entry_004",
+      "question": "Which statement about diagnostic criteria for thyroid storm is incorrect?",
+      "choices": [
+        "In addition to thyrotoxicosis, central nervous system symptoms, fever, tachycardia, heart failure symptoms, and gastrointestinal or hepatic symptoms are assessed",
+        "Central nervous system symptoms such as agitation, delirium, somnolence, seizures, and coma are diagnostically important",
+        "Tachycardia, heart failure, fever, and gastrointestinal symptoms or liver dysfunction are treated as organ manifestations of thyroid storm",
+        "Even if FT4 and FT3 are within the reference range, thyroid storm can be diagnosed if fever and tachycardia are present"
+      ],
+      "answers": [3],
+      "selectCount": 1,
+      "explanation": "Thyroid storm is a life-threatening condition with multiorgan manifestations on a background of thyrotoxicosis. Diagnosis assesses the presence of thyrotoxicosis plus central nervous system symptoms, fever, tachycardia, heart failure symptoms, gastrointestinal symptoms, or hepatic dysfunction. Therefore, if FT4 and FT3 are within the reference range and thyrotoxicosis cannot be confirmed, diagnosing thyroid storm based only on fever and tachycardia is inappropriate."
+    },
+    {
+      "id": "endocrine_entry_005",
+      "question": "What is the most appropriate screening and initial evaluation for hypothyroidism?",
+      "choices": [
+        "When primary hypothyroidism is suspected, first measure TSH and add FT4 as needed",
+        "Hypothyroidism can be screened using T3 alone",
+        "High TSH with low FT4 most strongly suggests central hypothyroidism",
+        "If TSH is normal, central hypothyroidism can also be completely ruled out"
+      ],
+      "answers": [0],
+      "selectCount": 1,
+      "explanation": "When primary hypothyroidism is suspected, TSH is the most useful screening and initial evaluation test, and FT4 should be evaluated as needed when abnormal. High TSH with low FT4 suggests primary hypothyroidism. High TSH with normal FT4 suggests subclinical hypothyroidism. In central hypothyroidism, FT4 can be low despite TSH being low, normal, or inappropriately mildly elevated, so TSH alone may miss the diagnosis. Screening with T3 alone is inappropriate."
+    }
+  ]
+}

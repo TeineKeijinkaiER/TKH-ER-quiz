@@ -1,0 +1,70 @@
+{
+  "category": "Sepsis",
+  "questions": [
+    {
+      "id": "sepsis_entry_001",
+      "question": "In the Sepsis-3 definition, which indicator is used to represent organ dysfunction?",
+      "choices": [
+        "Temperature 38 C or higher",
+        "Increase in SOFA score by 2 points or more",
+        "White blood cell count 10,000/uL or higher",
+        "Systolic blood pressure below 100 mmHg"
+      ],
+      "answers": [1],
+      "selectCount": 1,
+      "explanation": "Sepsis-3 defines sepsis as life-threatening organ dysfunction caused by a dysregulated host response to infection, and uses an acute increase in SOFA score of 2 points or more as the indicator of organ dysfunction. Fever, leukocytosis, tachycardia, and tachypnea are findings related to the older SIRS concept, but they are not the definition of organ dysfunction in Sepsis-3."
+    },
+    {
+      "id": "sepsis_entry_002",
+      "question": "Which item is not included in the SOFA score?",
+      "choices": [
+        "PaO2/FiO2 ratio",
+        "Platelet count",
+        "Total bilirubin",
+        "CRP level"
+      ],
+      "answers": [3],
+      "selectCount": 1,
+      "explanation": "The SOFA score evaluates six organ systems: respiratory, coagulation, liver, cardiovascular, central nervous system, and renal. Specifically, it uses PaO2/FiO2 ratio, platelet count, total bilirubin, mean arterial pressure or vasopressor dose, GCS, and creatinine or urine output. CRP is useful as an inflammatory marker, but it is not a component of the SOFA score."
+    },
+    {
+      "id": "sepsis_entry_003",
+      "question": "What is recommended as initial fluid resuscitation for septic shock?",
+      "choices": [
+        "5% dextrose solution",
+        "Crystalloid 30 mL/kg within 3 hours",
+        "Albumin 1000 mL",
+        "Colloid solution such as dextran"
+      ],
+      "answers": [1],
+      "selectCount": 1,
+      "explanation": "For septic shock or sepsis-associated hypoperfusion, initial fluid resuscitation uses crystalloid at about 30 mL/kg within 3 hours. Crystalloids such as normal saline or lactated Ringer's solution are used. After administration, reassess blood pressure, urine output, lactate, peripheral perfusion, respiratory status, and fluid responsiveness while considering additional fluids or vasopressors. 5% dextrose is inappropriate for intravascular volume replacement, and colloids are not first-line initial fluids."
+    },
+    {
+      "id": "sepsis_entry_004",
+      "question": "Which item is included in the quick SOFA (qSOFA) score?",
+      "choices": [
+        "Respiratory rate 22/min or higher",
+        "Temperature 38 C or higher",
+        "White blood cell count 12,000/uL or higher",
+        "Lactate 2 mmol/L or higher"
+      ],
+      "answers": [0],
+      "selectCount": 1,
+      "explanation": "qSOFA is a simple tool to assess risk of poor outcome in patients with suspected infection. It consists of three items: respiratory rate 22/min or higher, altered mentation, and systolic blood pressure 100 mmHg or lower. Temperature and white blood cell count are related to SIRS, and lactate is important in evaluating septic shock and tissue hypoperfusion, but they are not qSOFA items."
+    },
+    {
+      "id": "sepsis_entry_005",
+      "question": "Which lactate level is the most appropriate threshold to suspect tissue hypoperfusion or septic shock in sepsis?",
+      "choices": [
+        "1 mmol/L (about 9 mg/dL)",
+        "2 mmol/L (about 18 mg/dL) or higher",
+        "4 mmol/L (about 36 mg/dL) or higher",
+        "10 mmol/L (about 90 mg/dL) or higher"
+      ],
+      "answers": [1],
+      "selectCount": 1,
+      "explanation": "In sepsis, lactate 2 mmol/L (about 18 mg/dL) or higher raises concern for tissue hypoperfusion and risk of poor outcome. In the Sepsis-3 definition of septic shock, despite adequate fluid resuscitation the patient requires vasopressors to maintain mean arterial pressure of 65 mmHg or higher and has lactate greater than 2 mmol/L. Lactate 4 mmol/L (about 36 mg/dL) or higher suggests more severe hypoperfusion and requires urgent resuscitation and reassessment. The conversion is approximately 1 mmol/L = 9 mg/dL."
+    }
+  ]
+}

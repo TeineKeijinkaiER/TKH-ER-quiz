@@ -1,0 +1,70 @@
+{
+  "category": "Vertigo / Stroke",
+  "questions": [
+    {
+      "id": "vertigo_stroke_entry_001",
+      "question": "Which item is incorrectly listed as part of the Cincinnati Prehospital Stroke Scale (CPSS)?",
+      "choices": [
+        "Facial droop",
+        "Arm drift",
+        "Speech disturbance",
+        "Abnormal eye movements"
+      ],
+      "answers": [3],
+      "selectCount": 1,
+      "explanation": "CPSS is a simple prehospital screening tool to suspect stroke. It evaluates three items: facial droop, arm drift, and speech disturbance or language abnormality. It checks for facial asymmetry, inability to maintain one arm, and slurred or abnormal speech. Abnormal eye movements or conjugate gaze deviation can be important findings suggesting stroke, especially brainstem lesions or large vessel occlusion, but they are not CPSS items."
+    },
+    {
+      "id": "vertigo_stroke_entry_002",
+      "question": "Which item is incorrectly listed as an LVO screening item in the ELVO screen?",
+      "choices": [
+        "Conjugate gaze deviation",
+        "Aphasia",
+        "Hemispatial neglect",
+        "Anisocoria"
+      ],
+      "answers": [3],
+      "selectCount": 1,
+      "explanation": "The ELVO screen is used in acute stroke to suspect large vessel occlusion (LVO), with emphasis on cortical signs. Conjugate gaze deviation, aphasia, and hemispatial neglect are representative findings suggesting LVO. Anisocoria is important in conditions such as brain herniation, oculomotor nerve palsy, or ocular trauma, but it is not an appropriate ELVO screen item."
+    },
+    {
+      "id": "vertigo_stroke_entry_003",
+      "question": "Which history or finding is incorrect as a feature suggesting benign paroxysmal positional vertigo (BPPV)?",
+      "choices": [
+        "Triggered by changes in head position",
+        "Vertigo improves within a short time",
+        "There is a latency of several seconds after provocation",
+        "Nystagmus becomes stronger with repeated positioning in the same head position"
+      ],
+      "answers": [3],
+      "selectCount": 1,
+      "explanation": "In BPPV, brief rotational vertigo is triggered by head position changes such as rolling over, sitting up, looking upward, or looking downward. Typically there is a latency of several seconds after provocation, and nystagmus and vertigo fade within a short time. With repeated positioning in the same position, the response may weaken due to fatigability or habituation, so nystagmus becoming stronger with repetition is not typical for BPPV. Persistent nystagmus, neurologic deficits, severe headache, or inability to walk should raise concern for central vertigo."
+    },
+    {
+      "id": "vertigo_stroke_entry_004",
+      "question": "During the Dix-Hallpike test in the right head-hanging position, upbeat nystagmus with a right torsional component appears after a few seconds of latency. Which lesion is most likely?",
+      "choices": [
+        "Right posterior canal BPPV",
+        "Left posterior canal BPPV",
+        "Right lateral canal BPPV",
+        "Left lateral canal BPPV"
+      ],
+      "answers": [0],
+      "selectCount": 1,
+      "explanation": "The Dix-Hallpike test mainly evaluates posterior canal BPPV. If, in the right head-hanging position, upbeat nystagmus with a right torsional component appears after several seconds of latency, right posterior canal BPPV is most likely. Posterior canal BPPV typically shows torsional-upbeat nystagmus induced with the affected ear down, short duration with fading, and fatigability with repetition. Lateral canal BPPV is evaluated more with the supine head roll test than with Dix-Hallpike."
+    },
+    {
+      "id": "vertigo_stroke_entry_005",
+      "question": "On the supine head roll test, horizontal geotropic nystagmus is seen when turning both right and left, and nystagmus and vertigo are stronger when turning right. Which lesion is most likely?",
+      "choices": [
+        "Right lateral canal BPPV, canalolithiasis",
+        "Left lateral canal BPPV, canalolithiasis",
+        "Right lateral canal BPPV, cupulolithiasis",
+        "Left lateral canal BPPV, cupulolithiasis"
+      ],
+      "answers": [0],
+      "selectCount": 1,
+      "explanation": "The supine head roll test is used to evaluate lateral canal BPPV. When horizontal geotropic nystagmus occurs when turning to either side, lateral canal BPPV due to canalolithiasis is considered. In canalolithiasis, the affected side is generally the side with stronger nystagmus and vertigo. Here, symptoms and nystagmus are stronger when turning right, so right lateral canal BPPV with canalolithiasis is most likely. When horizontal apogeotropic nystagmus occurs on both sides, cupulolithiasis is considered, and the affected side is generally the side with weaker nystagmus."
+    }
+  ]
+}

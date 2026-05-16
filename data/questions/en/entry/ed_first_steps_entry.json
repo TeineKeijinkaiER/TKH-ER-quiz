@@ -1,0 +1,71 @@
+{
+  "category": "ER First Steps",
+  "questions": [
+    {
+      "id": "ed_first_steps_001",
+      "question": "Which statement is correct regarding a resident's work in the ER?",
+      "choices": [
+        "Avoid helping with patients being managed by other physicians",
+        "Family contact beyond history-taking is unnecessary until the diagnosis is confirmed",
+        "Family explanations should be given at the bedside to save time",
+        "Any senior physician who was consulted even briefly should be documented as a co-managing physician in the chart",
+        "In team-based care, even when tasks are divided, information should be integrated and shared by the whole team"
+      ],
+      "answers": [4],
+      "selectCount": 1,
+      "explanation": "Because multiple patients are managed by teams in the ER, it is important to integrate information even when work is divided and to share it across the team. Even for patients primarily managed by another physician, help with procedures, transport, test preparation, and family communication as needed. Families should receive updates about the current situation and likely next steps when possible, even before the diagnosis is confirmed. Explanations should ideally be given in a calm setting such as an examination room, with attention to making questions easy to ask. Only physicians who are responsible for decision-making in the case should be documented as co-managing or consulting physicians."
+    },
+    {
+      "id": "ed_first_steps_002",
+      "question": "Select all precautions that should be taken when performing an ultrasound examination.",
+      "choices": [
+        "Use paper towels or similar materials to prevent gel from getting on the patient's clothing",
+        "When a male physician examines a female patient, ask a female staff member to be present",
+        "After the examination, remember to wipe off the gel and help restore the patient's clothing",
+        "For bleeding patients or vascular puncture, prevent blood contamination of the probe with a cover or similar method",
+        "Keep the gel cold to prevent attenuation of ultrasound"
+      ],
+      "answers": [0, 1, 2, 3],
+      "explanation": "Even in high-acuity settings, patient consideration, privacy, and infection control should be kept in mind during the examination. Take care not to soil clothing or bedding with gel, wipe off the gel afterward, and help the patient adjust clothing. When a male physician examines a female patient, consider the examined body area and circumstances and ask a female staff member to be present when appropriate. If the probe may be contaminated by blood or body fluids, or when performing vascular puncture, use a probe cover or similar infection-control measure. There is no need to cool ultrasound gel; doing so may make the patient uncomfortable."
+    },
+    {
+      "id": "ed_first_steps_005",
+      "question": "An 85-year-old man is admitted with pneumonia. Test results, diagnosis, and treatment have been explained to the family. Which additional topics should also be explained? Select all that apply.",
+      "choices": [
+        "Expected length of hospitalization",
+        "Possibility of worsening condition or risk to life",
+        "Possible in-hospital complications such as delirium, DVT, and decline in ADL",
+        "Discussion of goals of care regarding intubation, mechanical ventilation, and CPR",
+        "Explain that patients aged 75 or older require prophylactic physical restraint before delirium develops"
+      ],
+      "answers": [0, 1, 2, 3],
+      "explanation": "For pneumonia in older adults, it is desirable to discuss not only the diagnosis and treatment but also the expected hospital stay, possibility of deterioration or death, in-hospital complications, and goals of care regarding mechanical ventilation and CPR. Delirium, DVT, decline in ADL, decline in swallowing function, and falls are common issues in older hospitalized patients. Physical restraint is not used uniformly to prevent delirium; it is considered only when requirements such as urgency, lack of alternatives, and temporary necessity are met."
+    },
+    {
+      "id": "ed_first_steps_entry_001",
+      "question": "Before contrast-enhanced CT, which item is least likely to be considered a risk factor?",
+      "choices": [
+        "Currently treated bronchial asthma or a history of severe allergy",
+        "Current metformin use",
+        "eGFR 65 mL/min/1.73 m2",
+        "History of a moderate or severe adverse reaction to contrast media"
+      ],
+      "answers": [2],
+      "selectCount": 1,
+      "explanation": "Before contrast-enhanced CT, check for a history of contrast reaction, bronchial asthma or severe allergy, impaired renal function, acute kidney injury, and metformin use. An eGFR of 65 mL/min/1.73 m2 is generally not considered high risk for contrast-associated acute kidney injury. Metformin use is not an absolute contraindication when renal function is preserved, but if renal function is reduced, acute kidney injury is present, or renal function is unstable, withholding and restarting metformin should be confirmed."
+    },
+    {
+      "id": "ed_first_steps_entry_002",
+      "question": "In the ER, you review an X-ray of a trauma patient and see no obvious fracture line. Which explanation to the patient is inappropriate from a patient-safety perspective?",
+      "choices": [
+        "Within what we can see now, there is no clearly displaced fracture",
+        "Immediately after injury, small cracks or nondisplaced fractures may not appear on X-ray",
+        "If pain persists or worsens, or if you cannot walk or use the injured part, you should be reassessed by orthopedics",
+        "Because the X-ray is normal, a fracture can be completely ruled out"
+      ],
+      "answers": [3],
+      "selectCount": 1,
+      "explanation": "On plain X-rays immediately after trauma, nondisplaced fractures, incomplete fractures, scaphoid fractures, proximal femur fractures in older adults, rib fractures, and other injuries may not be clearly visible on the first images. Therefore, saying that a fracture is completely ruled out or that nothing is broken is inappropriate. Tell the patient in limited terms that no clearly displaced fracture is seen within the current images, and give concrete instructions for orthopedic reassessment if pain persists or worsens, weight bearing is impossible, the hand cannot be used, numbness develops, or swelling is severe."
+    }
+  ]
+}

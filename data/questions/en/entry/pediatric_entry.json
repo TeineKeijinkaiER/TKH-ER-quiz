@@ -1,0 +1,70 @@
+{
+  "category": "Pediatric Emergencies",
+  "questions": [
+    {
+      "id": "pediatric_entry_001",
+      "question": "What is an appropriate normal respiratory rate for a child aged 1-3 years?",
+      "choices": [
+        "12-15/min",
+        "20-30/min",
+        "35-45/min",
+        "50-60/min"
+      ],
+      "answers": [1],
+      "selectCount": 1,
+      "explanation": "Normal respiratory rate is higher in younger children. For children aged 1-3 years, approximately 20-30/min is a useful normal range. A rate of 12-15/min is low for a toddler and closer to adult values. A rate of 35-45/min is more likely in infants or with fever or respiratory distress, and is high for a resting 1- to 3-year-old. A rate of 50-60/min can occur in neonates or infants, but in a 1- to 3-year-old it should be assessed as tachypnea."
+    },
+    {
+      "id": "pediatric_entry_002",
+      "question": "Which statement about the pediatric airway is incorrect?",
+      "choices": [
+        "The tongue is relatively large",
+        "The large occiput makes airway obstruction more likely in the supine position",
+        "The airway diameter is narrow",
+        "The trachea is longer than in adults"
+      ],
+      "answers": [3],
+      "selectCount": 1,
+      "explanation": "In children, especially infants and toddlers, the tongue is relatively large and airway obstruction is more likely. Because the occiput is large, the neck tends to flex in the supine position, which can obstruct the airway. During airway management, keeping the head and neck neutral is important, and placing a towel under the shoulders may be needed. The airway diameter is smaller than in adults, so even slight edema or secretions can greatly increase airway resistance. The trachea is shorter than in adults, so an endotracheal tube inserted too deeply can easily cause mainstem intubation. Therefore, the statement that the trachea is longer than in adults is incorrect."
+    },
+    {
+      "id": "pediatric_entry_003",
+      "question": "Which statement is incorrect as a feature of a simple febrile seizure?",
+      "choices": [
+        "It is a generalized seizure",
+        "Duration is less than 15 minutes",
+        "It does not recur within 24 hours",
+        "It is a focal seizure"
+      ],
+      "answers": [3],
+      "selectCount": 1,
+      "explanation": "A simple febrile seizure is usually a seizure associated with fever in children around 6 months to 5 years old, and is generalized, lasts less than 15 minutes, and does not recur within 24 hours. If the seizure is focal, lasts 15 minutes or longer, or recurs within 24 hours, it is treated as a complex febrile seizure. In neonates or young infants with seizures during fever, do not casually assume febrile seizure; evaluate for meningitis, sepsis, metabolic disorders, and other causes."
+    },
+    {
+      "id": "pediatric_entry_004",
+      "question": "Which item is not included in the Westley croup score?",
+      "choices": [
+        "Inspiratory stridor",
+        "Retractions",
+        "Level of consciousness",
+        "SpO2"
+      ],
+      "answers": [3],
+      "selectCount": 1,
+      "explanation": "The Westley croup score is used to assess croup severity and includes level of consciousness, cyanosis, inspiratory stridor, retractions, and air entry. SpO2 is clinically important for monitoring, but it is not a component of the Westley croup score. In croup, assess barking cough, hoarseness, inspiratory stridor, and the degree of retractions. Stridor at rest, marked retractions, altered mental status, or cyanosis should be managed as severe disease."
+    },
+    {
+      "id": "pediatric_entry_005",
+      "question": "What is the recommended initial defibrillation energy dose for children?",
+      "choices": [
+        "0.5 J/kg",
+        "2 J/kg",
+        "5 J/kg",
+        "10 J/kg"
+      ],
+      "answers": [1],
+      "selectCount": 1,
+      "explanation": "The recommended initial defibrillation energy for children is 2 J/kg. If ineffective, increase to 4 J/kg. This differs from adults, where biphasic 120-200 J or the manufacturer's recommended energy is used; in children, energy is considered by body weight."
+    }
+  ]
+}

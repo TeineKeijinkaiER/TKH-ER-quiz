@@ -1,11 +1,123 @@
 [
   {
-    "id": "ed_first_steps_basic",
-    "level": "basic",
+    "id": "ed_first_steps_entry",
+    "level": "entry",
     "name": "ER First Steps",
-    "description": "ER fundamentals and initial approach",
-    "file": "questions/en/basic/ed_first_steps_basic.json",
+    "description": "Basic ER approach and communication",
+    "file": "questions/en/entry/ed_first_steps_entry.json",
     "accent": "#087f8c"
+  },
+  {
+    "id": "altered_mental_status_entry",
+    "level": "entry",
+    "name": "Altered Mental Status / Syncope",
+    "description": "Basic causes and initial approach to altered mental status",
+    "file": "questions/en/entry/altered_mental_status_entry.json",
+    "accent": "#4f46e5"
+  },
+  {
+    "id": "vertigo_stroke_entry",
+    "level": "entry",
+    "name": "Vertigo / Stroke",
+    "description": "Fundamentals of vertigo and stroke management",
+    "file": "questions/en/entry/vertigo_stroke_entry.json",
+    "accent": "#0f766e"
+  },
+  {
+    "id": "orthopedic_trauma_entry",
+    "level": "entry",
+    "name": "Orthopedic Trauma",
+    "description": "Basic assessment of fractures and trauma",
+    "file": "questions/en/entry/orthopedic_trauma_entry.json",
+    "accent": "#b45309"
+  },
+  {
+    "id": "infection_entry",
+    "level": "entry",
+    "name": "Infectious Diseases",
+    "description": "Infection fundamentals and antibiotic principles",
+    "file": "questions/en/entry/infection_entry.json",
+    "accent": "#15803d"
+  },
+  {
+    "id": "gi_symptoms_entry",
+    "level": "entry",
+    "name": "GI Symptoms",
+    "description": "Basic differential for abdominal pain and GI symptoms",
+    "file": "questions/en/entry/gi_symptoms_entry.json",
+    "accent": "#be123c"
+  },
+  {
+    "id": "emergency_medications_entry",
+    "level": "entry",
+    "name": "Emergency Medications",
+    "description": "Essential knowledge of common emergency medications",
+    "file": "questions/en/entry/emergency_medications_entry.json",
+    "accent": "#7c2d12"
+  },
+  {
+    "id": "sepsis_entry",
+    "level": "entry",
+    "name": "Sepsis",
+    "description": "Basic recognition and initial management of sepsis",
+    "file": "questions/en/entry/sepsis_entry.json",
+    "accent": "#087f8c"
+  },
+  {
+    "id": "trauma_entry",
+    "level": "entry",
+    "name": "Major Trauma",
+    "description": "Fundamentals of trauma primary survey (ABCDE)",
+    "file": "questions/en/entry/trauma_entry.json",
+    "accent": "#b45309"
+  },
+  {
+    "id": "endocrine_entry",
+    "level": "entry",
+    "name": "Endocrine Emergencies",
+    "description": "DKA, hypoglycemia, and basic endocrine emergencies",
+    "file": "questions/en/entry/endocrine_entry.json",
+    "accent": "#6d5bd0"
+  },
+  {
+    "id": "cpr_entry",
+    "level": "entry",
+    "name": "CPR / Cardiac Arrest",
+    "description": "CPR fundamentals and priorities",
+    "file": "questions/en/entry/cpr_entry.json",
+    "accent": "#c2413b"
+  },
+  {
+    "id": "pediatric_entry",
+    "level": "entry",
+    "name": "Pediatric Emergencies",
+    "description": "Basic features and management of pediatric emergencies",
+    "file": "questions/en/entry/pediatric_entry.json",
+    "accent": "#c2413b"
+  },
+  {
+    "id": "cardiology_entry",
+    "level": "entry",
+    "name": "Cardiology Emergencies",
+    "description": "Fundamentals of arrhythmias and ACS",
+    "file": "questions/en/entry/cardiology_entry.json",
+    "accent": "#c2413b"
+  },
+  {
+    "id": "toxicology_entry",
+    "level": "entry",
+    "name": "Toxicology",
+    "description": "Common toxidromes and basic management",
+    "file": "questions/en/entry/toxicology_entry.json",
+    "accent": "#5f2d91"
+  },
+  {
+    "id": "general_em_entry",
+    "level": "entry",
+    "name": "General Emergency Medicine",
+    "description": "Basic evaluation and management in the ED",
+    "file": "questions/en/entry/general_em_entry.json",
+    "accent": "#1d4ed8"
   },
   {
     "id": "altered_mental_status_basic",
@@ -104,6 +216,22 @@
     "accent": "#c2413b"
   },
   {
+    "id": "toxicology_basic",
+    "level": "basic",
+    "name": "Toxicology",
+    "description": "Overdose initial management, antidotes, common toxic agents",
+    "file": "questions/en/basic/toxicology_basic.json",
+    "accent": "#5f2d91"
+  },
+  {
+    "id": "general_em_basic",
+    "level": "basic",
+    "name": "General Emergency Medicine",
+    "description": "BLS, primary survey, triage, core ER approach",
+    "file": "questions/en/basic/general_em_basic.json",
+    "accent": "#1d4ed8"
+  },
+  {
     "id": "altered_mental_status_advanced",
     "level": "advanced",
     "name": "Altered Mental Status / Syncope",
@@ -134,46 +262,6 @@
     "description": "Epinephrine, amiodarone, reversible causes, ECPR indications",
     "file": "questions/en/advanced/cpr_advanced.json",
     "accent": "#c2413b"
-  },
-  {
-    "id": "sepsis_master",
-    "level": "master",
-    "name": "Sepsis",
-    "description": "Steroids, CRRT, lung-protective ventilation, DIC, VTE prophylaxis",
-    "file": "questions/en/master/sepsis_master.json",
-    "accent": "#087f8c"
-  },
-  {
-    "id": "trauma_master",
-    "level": "master",
-    "name": "Major Trauma",
-    "description": "DCS, pelvic TAE, abdominal ACS, ICP management, TRALI",
-    "file": "questions/en/master/trauma_master.json",
-    "accent": "#b45309"
-  },
-  {
-    "id": "cpr_master",
-    "level": "master",
-    "name": "CPR",
-    "description": "ECPR, PCAS, TTM, neurological prognostication, continuous EEG",
-    "file": "questions/en/master/cpr_master.json",
-    "accent": "#c2413b"
-  },
-  {
-    "id": "toxicology_basic",
-    "level": "basic",
-    "name": "Toxicology",
-    "description": "Overdose initial management, antidotes, common toxic agents",
-    "file": "questions/en/basic/toxicology_basic.json",
-    "accent": "#5f2d91"
-  },
-  {
-    "id": "general_em_basic",
-    "level": "basic",
-    "name": "General Emergency Medicine",
-    "description": "BLS, primary survey, triage, core ER approach",
-    "file": "questions/en/basic/general_em_basic.json",
-    "accent": "#1d4ed8"
   },
   {
     "id": "toxicology_advanced",
@@ -230,6 +318,30 @@
     "description": "Advanced central vertigo, brainstem lesions, and HINTS interpretation",
     "file": "questions/en/advanced/vertigo_stroke_advanced.json",
     "accent": "#0f766e"
+  },
+  {
+    "id": "sepsis_master",
+    "level": "master",
+    "name": "Sepsis",
+    "description": "Steroids, CRRT, lung-protective ventilation, DIC, VTE prophylaxis",
+    "file": "questions/en/master/sepsis_master.json",
+    "accent": "#087f8c"
+  },
+  {
+    "id": "trauma_master",
+    "level": "master",
+    "name": "Major Trauma",
+    "description": "DCS, pelvic TAE, abdominal ACS, ICP management, TRALI",
+    "file": "questions/en/master/trauma_master.json",
+    "accent": "#b45309"
+  },
+  {
+    "id": "cpr_master",
+    "level": "master",
+    "name": "CPR",
+    "description": "ECPR, PCAS, TTM, neurological prognostication, continuous EEG",
+    "file": "questions/en/master/cpr_master.json",
+    "accent": "#c2413b"
   },
   {
     "id": "general_em_master",

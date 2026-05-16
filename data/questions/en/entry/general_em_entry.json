@@ -1,0 +1,71 @@
+{
+  "category": "General Emergency Medicine",
+  "questions": [
+    {
+      "id": "general_em_entry_001",
+      "question": "Which is the most appropriate definition of shock?",
+      "choices": [
+        "Systolic blood pressure below 90 mmHg",
+        "Insufficient oxygen delivery to tissues",
+        "Heart rate of 100/min or higher",
+        "Decreased level of consciousness"
+      ],
+      "answers": [1],
+      "selectCount": 1,
+      "explanation": "Shock is a state in which circulatory failure causes oxygen delivery to tissues to fall short of demand, potentially leading to cellular injury and organ dysfunction. Hypotension, tachycardia, and altered mental status are findings seen in shock, but they are not the definition itself. Even when blood pressure is maintained, compensated shock should be suspected if there are findings such as cool extremities, pallor, decreased urine output, elevated lactate, or altered mental status."
+    },
+    {
+      "id": "general_em_entry_002",
+      "question": "Which statement about SpO2 monitoring and oxygen administration is incorrect?",
+      "choices": [
+        "The displayed value has a delay",
+        "Around SpO2 90%, PaO2 may be markedly reduced",
+        "Target SpO2 100% in all patients",
+        "In COPD, a target of 88-92% may be used"
+      ],
+      "answers": [2],
+      "selectCount": 1,
+      "explanation": "SpO2 is a useful continuous monitoring parameter, but the displayed value can lag because of device averaging time and peripheral perfusion, and it does not perfectly reflect real-time oxygenation. Because of the oxygen dissociation curve, around SpO2 90%, PaO2 may already be about 60 mmHg, and even a small further drop in SpO2 can correspond to a large fall in PaO2. Oxygen should be treated as a medication, and SpO2 100% should not be targeted indiscriminately. In acutely ill adults without risk of hypercapnia, a target around SpO2 94-98% is often used; in patients at risk of hypercapnia such as COPD, 88-92% may be appropriate."
+    },
+    {
+      "id": "general_em_entry_003",
+      "question": "Which CPR technique or value is correct for adult BLS/ICLS?",
+      "choices": [
+        "Chest compressions and rescue breaths are performed at a 30:2 ratio",
+        "Compression depth is about 2 cm",
+        "Compression rate is 60-80/min",
+        "After defibrillation, check the pulse for 30 seconds"
+      ],
+      "answers": [0],
+      "selectCount": 1,
+      "explanation": "In adult BLS without an advanced airway, the basic compression-to-ventilation ratio is 30 chest compressions to 2 breaths. Chest compressions are performed on the lower half of the sternum to a depth of about 5 cm, not exceeding 6 cm, at a rate of 100-120/min. After defibrillation, avoid prolonged pulse checks and immediately resume chest compressions to minimize interruptions."
+    },
+    {
+      "id": "general_em_entry_004",
+      "question": "You perform primary triage by START at a disaster scene. A 30-year-old man cannot walk. Respiratory rate is 22/min. Radial pulse is palpable. He can follow commands. The left lower leg is deformed and painful. What is the most appropriate category?",
+      "choices": [
+        "Black",
+        "Red",
+        "Yellow",
+        "Green"
+      ],
+      "answers": [2],
+      "selectCount": 1,
+      "explanation": "In START triage, patients who can walk are categorized first as green. If a patient cannot walk, respiration, circulation, and mental status are assessed. Abnormal respiratory rate, poor circulation, or inability to follow commands indicates red. This patient cannot walk, but respiratory rate is 22/min, radial pulse is palpable, and he can follow commands, so he does not meet red criteria. Because fracture is suspected, he is not green; he is classified as yellow, the delayed treatment group."
+    },
+    {
+      "id": "general_em_entry_005",
+      "question": "An 18-year-old patient with a history of asthma has had wheezing since the morning. SpO2 is 96%, respiratory rate is 20/min, work of breathing is mildly increased, and wheezing is heard bilaterally. What treatment should be given first?",
+      "choices": [
+        "Solu-Medrol 125 mg IV infusion",
+        "Bosmin 0.1 mL plus normal saline 1 mL by inhalation",
+        "Solu-Medrol 40 mg IV infusion",
+        "Ventolin 0.5 mL plus normal saline 1 mL by inhalation",
+        "Bosmin 0.5 mL plus normal saline 1 mL by inhalation"
+      ],
+      "answers": [3],
+      "selectCount": 1,
+      "explanation": "In an asthma exacerbation with wheezing, SpO2 96%, respiratory rate 20/min, and only mildly increased work of breathing, first administer an inhaled short-acting beta-2 agonist such as salbutamol (Ventolin). Ventolin is usually diluted with normal saline and given by nebulizer. Early systemic corticosteroids are considered for moderate or severe attacks, poor response to inhalation therapy, or high risk of worsening. Inhaled epinephrine is not usual initial therapy for asthma; it is considered in other conditions such as upper airway obstruction or anaphylaxis."
+    }
+  ]
+}

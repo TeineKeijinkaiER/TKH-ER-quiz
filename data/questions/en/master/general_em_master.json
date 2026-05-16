@@ -7,16 +7,16 @@
         "general_em_master",
         "critical_care_master"
       ],
-      "question": "Which ventilator settings best represent lung-protective ventilation for ARDS?",
+      "question": "Which target is most appropriate for lung-protective ventilation in acute respiratory distress syndrome (ARDS)?",
       "choices": [
-        "Tidal volume 6 mL/kg predicted body weight (PBW), plateau pressure ≤30 cmH2O",
+        "Tidal volume 6 mL/kg predicted body weight, plateau pressure ≤30 cmH2O",
         "Tidal volume 10 mL/kg actual body weight, plateau pressure ≤40 cmH2O",
-        "PEEP 0 cmH2O with spontaneous breathing prioritized",
-        "Always normalize PaCO2 to 35–45 mmHg",
-        "FiO2 1.0 continuously to maintain PaO2 ≥150 mmHg"
+        "Set PEEP to 0 cmH2O and prioritize spontaneous breathing",
+        "Always target normalization of PaCO2 to 35-45 mmHg",
+        "Continue FiO2 1.0 to maintain PaO2 ≥150 mmHg"
       ],
       "selectCount": 1,
-      "explanation": "Lung-protective ventilation in ARDS (ARDSnet trial) uses a tidal volume of 6 mL/kg predicted body weight (not actual body weight) and targets plateau pressure ≤30 cmH2O, demonstrating improved mortality. Appropriate PEEP prevents alveolar collapse. Permissive hypercapnia (mild CO2 elevation) is acceptable to achieve low tidal volumes. Prolonged high FiO2 risks oxygen toxicity; target SpO2 88–95% (PaO2 55–80 mmHg) is standard.",
+      "explanation": "For lung-protective ventilation in ARDS, tidal volume is set to about 6 mL/kg predicted body weight (ideal body weight), not actual body weight, and plateau pressure is kept at or below 30 cmH2O. This strategy has evidence for improved outcomes from the ARDSNet trial. Appropriate PEEP helps prevent alveolar collapse. Permissive mild hypercapnia is acceptable when clinically tolerated. Prolonged high-concentration oxygen increases the risk of oxygen toxicity, so oxygenation is usually targeted to SpO2 88-95% (PaO2 55-80 mmHg).",
       "answers": [
         0
       ]
@@ -27,12 +27,12 @@
         "general_em_master",
         "cpr_master"
       ],
-      "question": "Select all criteria that represent appropriate indications for ECPR (extracorporeal CPR) in refractory ventricular fibrillation.",
+      "question": "Select all appropriate indications for ECPR (extracorporeal cardiopulmonary resuscitation) in refractory ventricular fibrillation.",
       "choices": [
         "Witnessed sudden cardiac arrest",
-        "Refractory VF persisting after at least 3 defibrillation attempts despite standard ACLS",
-        "Suspected reversible cause such as hypothermia or drug toxicity",
-        "Reasonable likelihood of survival with good neurological outcome given age and comorbidities",
+        "Ventricular fibrillation that persists despite standard ACLS and at least 3 defibrillation attempts",
+        "Cardiac arrest with a suspected reversible cause such as hypothermia or drug intoxication",
+        "A reasonable chance of social reintegration after considering age and comorbidities",
         "Pulseless electrical activity (PEA) and asystole are absolute contraindications to ECPR"
       ],
       "answers": [
@@ -42,7 +42,1019 @@
         3
       ],
       "selectCount": 0,
-      "explanation": "ECPR criteria vary by institution but generally include: witnessed arrest, refractory VF/VT unresponsive to standard ACLS, presence of reversible causes (hypothermia, drug toxicity, pulmonary embolism), and a reasonable expectation of neurologically intact survival. PEA and asystole are NOT absolute contraindications — certain reversible causes (pulmonary embolism, hypothermia) may still qualify for ECPR. Institutional protocols should guide individual case decisions."
+      "explanation": "ECPR indications vary by institution, but common criteria include witnessed arrest, refractory VF/VT unresponsive to usual BLS/ACLS, a potentially reversible cause such as hypothermia, drug intoxication, or pulmonary embolism, and an acceptable chance of neurologically meaningful survival based on age and comorbidities. PEA or asystole can still be considered in selected reversible conditions, so they are not absolute contraindications. Follow the local ECPR protocol and assess each case individually."
+    },
+    {
+      "id": "general_em_master_003",
+      "categories": [
+        "general_em_master",
+        "critical_care_master"
+      ],
+      "question": "A 60-year-old man with ARDS requires mechanical ventilation. According to the ARDS Clinical Practice Guideline 2021, which treatments are strongly recommended? Select all that apply.",
+      "choices": [
+        "APRV",
+        "Inhaled nitric oxide",
+        "Low tidal volume ventilation",
+        "CRRT",
+        "Low-dose corticosteroids"
+      ],
+      "answers": [
+        2,
+        4
+      ],
+      "selectCount": 0,
+      "explanation": "Lung-protective ventilation is fundamental in ARDS, and low tidal volume ventilation is recommended. The ARDS Clinical Practice Guideline 2021 also strongly recommends low-dose corticosteroids for adult patients with ARDS. APRV, inhaled nitric oxide, CRRT, sivelestat, and thrombomodulin products are not the standard strongly recommended treatments in this context."
+    },
+    {
+      "id": "general_em_master_004",
+      "categories": [
+        "general_em_master",
+        "environmental_master"
+      ],
+      "question": "A diver develops gait disturbance, lower-extremity numbness, and mild confusion after diving. Which initial response is not recommended? Choose one.",
+      "choices": [
+        "Keep the patient warm",
+        "Recompression by returning to diving",
+        "Administer extracellular fluid",
+        "Keep the head level",
+        "Administer high-concentration oxygen"
+      ],
+      "answers": [
+        1
+      ],
+      "selectCount": 1,
+      "explanation": "In decompression illness, initial care before definitive recompression therapy includes high-concentration oxygen, rest, warming, horizontal positioning, and fluid therapy to support circulation. In-water recompression or returning to diving is not recommended because it risks hypothermia, drowning, symptom worsening, and loss of medical control."
+    },
+    {
+      "id": "general_em_master_005_rev6",
+      "categories": [
+        "general_em_master",
+        "obstetrics_advanced"
+      ],
+      "question": "A 32-year-old multiparous woman has massive bleeding 30 minutes after delivery, and the uterus is soft. Uterine atony is diagnosed. Which treatments are appropriate? Select all that apply.",
+      "choices": [
+        "Oxytocin",
+        "Tranexamic acid",
+        "Ergometrine",
+        "Low-molecular-weight heparin",
+        "Prostaglandin F2alpha"
+      ],
+      "answers": [
+        0,
+        1,
+        2,
+        4
+      ],
+      "selectCount": 0,
+      "explanation": "Uterine atony is caused by insufficient uterine contraction, and treatment centers on uterotonic agents such as oxytocin, ergometrine, and prostaglandin F2alpha. Tranexamic acid is also recommended as an adjunctive hemostatic therapy for postpartum hemorrhage. Low-molecular-weight heparin is an anticoagulant and is contraindicated in obstetric bleeding because it can worsen hemorrhage."
+    },
+    {
+      "id": "general_em_master_006_rev",
+      "categories": [
+        "general_em_master",
+        "critical_care_master"
+      ],
+      "question": "Which findings are reasons to defer a spontaneous breathing trial (SBT)? Select all that apply.",
+      "choices": [
+        "Heart rate 100/min",
+        "Tidal volume 8 mL/kg",
+        "Arterial pH 7.20",
+        "Norepinephrine 0.3 mcg/kg/min",
+        "RSBI 120 breaths/min/L"
+      ],
+      "answers": [
+        2,
+        3,
+        4
+      ],
+      "selectCount": 0,
+      "explanation": "An SBT assumes that respiratory and circulatory status are stable. A pH of 7.20 indicates at least moderate acidosis and is a reason to defer an SBT. Norepinephrine 0.3 mcg/kg/min suggests hemodynamic instability. RSBI is calculated as respiratory rate divided by tidal volume in liters; values above 105 are associated with SBT failure, so an RSBI of 120 is an unfavorable finding."
+    },
+    {
+      "id": "general_em_master_007_rev",
+      "categories": [
+        "general_em_master",
+        "general_em_advanced"
+      ],
+      "question": "A soccer ball strikes the right eye directly, and the patient then reports diplopia. Which ocular motility deficit is most likely? Choose one.",
+      "choices": [
+        "Impaired abduction",
+        "Impaired depression",
+        "Impaired adduction",
+        "Impaired elevation",
+        "Impaired inferolateral gaze"
+      ],
+      "answers": [
+        3
+      ],
+      "selectCount": 1,
+      "explanation": "In an orbital floor fracture, the inferior rectus muscle is prone to entrapment, limiting elevation (upward gaze). Entrapment of the inferior rectus pulls the globe downward, so impaired elevation is typical."
+    },
+    {
+      "id": "general_em_master_008_erstyle3",
+      "categories": [
+        "general_em_master",
+        "general_em_advanced"
+      ],
+      "question": "After a traffic injury, the patient has loss of the temporal visual fields in both eyes. Which lesion site is most likely? Choose one.",
+      "choices": [
+        "Optic nerve",
+        "Optic chiasm",
+        "Optic tract",
+        "Lateral geniculate body",
+        "Optic radiation"
+      ],
+      "answers": [
+        1
+      ],
+      "selectCount": 1,
+      "explanation": "Bitemporal hemianopia is the classic visual field defect caused by an optic chiasm lesion. Fibers from the nasal retina of both eyes cross at the chiasm, and damage there causes loss of both temporal visual fields. Trauma can injure the chiasm through damage near the midline skull base."
+    },
+    {
+      "id": "general_em_master_009",
+      "categories": [
+        "general_em_master",
+        "environmental_master"
+      ],
+      "question": "An older adult is found collapsed outdoors in winter. Core temperature is 28°C. Which finding is least likely? Choose one.",
+      "choices": [
+        "Bradycardia",
+        "Coma",
+        "Bradypnea",
+        "Hypotension",
+        "Shivering"
+      ],
+      "answers": [
+        4
+      ],
+      "selectCount": 1,
+      "explanation": "A core temperature of 28°C corresponds to severe hypothermia. Severe hypothermia commonly causes central nervous system depression with impaired consciousness or coma, bradypnea, bradycardia, and hypotension. Shivering is a thermoregulatory response seen in mild to moderate hypothermia, but it often disappears in severe hypothermia."
+    },
+    {
+      "id": "general_em_master_010",
+      "categories": [
+        "general_em_master",
+        "trauma_master"
+      ],
+      "question": "Which item is not included among the findings to check in the first stage of FACT for whole-body CT in trauma? Choose one.",
+      "choices": [
+        "Intracranial hematoma requiring emergency craniotomy",
+        "Aortic injury and mediastinal hematoma",
+        "Intra-abdominal hemorrhage",
+        "Cervical spine injury",
+        "Retroperitoneal hematoma"
+      ],
+      "answers": [
+        3
+      ],
+      "selectCount": 1,
+      "explanation": "FACT is a rapid, efficient method for reviewing whole-body CT in trauma and identifying injuries that directly affect emergency treatment decisions. In the first stage, priority findings include intracranial hematoma requiring emergency craniotomy, aortic injury, hemopneumothorax, pericardial hematoma, intra-abdominal bleeding, pelvic fracture, and retroperitoneal or paravertebral hematoma. Cervical spine injury is important, but detailed assessment of it is not the main purpose of the first FACT stage."
+    },
+    {
+      "id": "general_em_master_011",
+      "categories": [
+        "general_em_master",
+        "critical_care_master"
+      ],
+      "question": "Which statement about measuring intra-abdominal pressure is correct? Choose one.",
+      "choices": [
+        "Measure it at end-expiration.",
+        "Measure it with an empty bladder.",
+        "Measure it with the head elevated.",
+        "Use the height of the urine collection bag as the zero reference.",
+        "Fill the bladder with at least 300 mL before measurement."
+      ],
+      "answers": [
+        0
+      ],
+      "selectCount": 1,
+      "explanation": "Intra-abdominal pressure is measured indirectly using bladder pressure. Standard measurement is performed supine, avoiding abdominal muscle contraction, and at end-expiration. The zero reference is set at the level of the midaxillary line. The bladder is not left empty; a small amount of normal saline is instilled, not 300 mL or more."
+    },
+    {
+      "id": "general_em_master_012",
+      "categories": [
+        "general_em_master",
+        "toxicology_master"
+      ],
+      "question": "Which responses to caustic ingestion are correct? Select all that apply.",
+      "choices": [
+        "If the patient is alert and can swallow, consider dilution with a small amount of water or milk",
+        "Induce vomiting",
+        "Administer activated charcoal",
+        "Neutralize with sodium bicarbonate",
+        "After stabilization, generally consider upper GI endoscopy within 12-24 hours of ingestion"
+      ],
+      "answers": [
+        0,
+        4
+      ],
+      "selectCount": 0,
+      "explanation": "In caustic ingestion, first assess airway, breathing, and circulation and stabilize the patient. If the patient is alert and can swallow, dilution with a small amount of water or milk can be considered. If symptoms are present or ingestion is more than trivial, upper GI endoscopy is generally considered within 12-24 hours to evaluate the extent and severity of esophageal and gastric injury. Induced vomiting and gastric lavage are avoided because they re-expose tissues to the caustic agent. Activated charcoal is not effective for caustics and may interfere with endoscopic evaluation. Acid-base neutralization is avoided because heat generation can worsen injury."
+    },
+    {
+      "id": "general_em_master_013",
+      "categories": [
+        "general_em_master",
+        "general_em_advanced"
+      ],
+      "question": "A patient with hyperferritinemia is suspected of having hemophagocytic lymphohistiocytosis. Which condition is least typical as a cause of secondary HLH? Choose one.",
+      "choices": [
+        "Tuberculosis",
+        "Epstein-Barr virus infection",
+        "Myelodysplastic syndrome",
+        "Systemic lupus erythematosus",
+        "Severe fever with thrombocytopenia syndrome"
+      ],
+      "answers": [
+        2
+      ],
+      "selectCount": 1,
+      "explanation": "Secondary HLH can be triggered by infection, malignancy, autoimmune disease, and inflammatory disease. Tuberculosis, EBV infection, systemic lupus erythematosus, and severe fever with thrombocytopenia syndrome can all be triggers. HLH associated with myelodysplastic syndrome has been reported, but the typical categories for secondary HLH are infections, malignancies, and autoimmune diseases; among the listed options, it is the least typical trigger."
+    },
+    {
+      "id": "general_em_master_014",
+      "categories": [
+        "general_em_master",
+        "general_em_advanced"
+      ],
+      "question": "Which statements about complement-mediated atypical hemolytic uremic syndrome (aHUS) are correct? Select all that apply.",
+      "choices": [
+        "Dysregulation of the alternative complement pathway is involved",
+        "Schistocytes may be seen in peripheral blood",
+        "A C5 inhibitor is a treatment option",
+        "ADAMTS13 activity is usually reduced to less than 10%",
+        "Howell-Jolly bodies are decisive for diagnosis"
+      ],
+      "answers": [
+        0,
+        1,
+        2
+      ],
+      "selectCount": 0,
+      "explanation": "aHUS is a complement-mediated thrombotic microangiopathy involving dysregulation of the alternative complement pathway. Schistocytes may be seen in peripheral blood as a reflection of microangiopathic hemolytic anemia, and thrombocytopenia and kidney injury are common. C5 inhibitors such as eculizumab are important treatment options. ADAMTS13 activity below 10% strongly suggests TTP. Howell-Jolly bodies are associated with hyposplenism or asplenia and are not diagnostic for aHUS."
+    },
+    {
+      "id": "general_em_master_015",
+      "categories": [
+        "general_em_master",
+        "pediatric_advanced"
+      ],
+      "question": "A child develops wheezing, repeated vomiting, and hypotension after eating. Which treatment should be performed first? Choose one.",
+      "choices": [
+        "Intravenous norepinephrine",
+        "Intramuscular epinephrine",
+        "Inhaled short-acting beta2 agonist",
+        "Intravenous corticosteroid",
+        "Intravenous antihistamine"
+      ],
+      "answers": [
+        1
+      ],
+      "selectCount": 1,
+      "explanation": "Respiratory symptoms, gastrointestinal symptoms, and hypotension after food ingestion should be treated as anaphylaxis. First-line treatment is intramuscular epinephrine into the anterolateral thigh, with repeat dosing if symptoms persist. Norepinephrine may be considered for persistent shock but is not the first-line initial treatment. Beta2 agonists, corticosteroids, and antihistamines are adjunctive therapies."
+    },
+    {
+      "id": "general_em_master_016",
+      "categories": [
+        "general_em_master",
+        "infection_advanced"
+      ],
+      "question": "Which statements about herpes zoster are correct? Select all that apply.",
+      "choices": [
+        "Recombinant inactivated zoster vaccine is used to prevent herpes zoster",
+        "Lesions are infectious until vesicles have crusted",
+        "Airborne precautions are used for disseminated herpes zoster",
+        "Second-division trigeminal zoster causes more ocular complications than first-division disease",
+        "Antiviral treatment is standardly started at least 1 month after onset"
+      ],
+      "answers": [
+        0,
+        1,
+        2
+      ],
+      "selectCount": 0,
+      "explanation": "Recombinant inactivated zoster vaccine is used for prevention of herpes zoster. Vesicular zoster lesions are infectious until they crust, so contact precautions are important. Disseminated herpes zoster requires airborne and contact precautions. Ocular complications are especially associated with the ophthalmic branch, the first division of the trigeminal nerve. Antiviral therapy is generally started early, typically within about 72 hours of onset."
+    },
+    {
+      "id": "general_em_master_017",
+      "categories": [
+        "general_em_master",
+        "trauma_master"
+      ],
+      "question": "Which statements about pelvic vascular anatomy are correct? Select all that apply.",
+      "choices": [
+        "The superior gluteal artery branches from the internal iliac artery",
+        "The inferior gluteal artery branches from the external iliac artery",
+        "The internal pudendal artery branches from the internal iliac artery",
+        "The corona mortis is a vascular anastomosis around the ischium",
+        "The internal iliac artery passes under the inguinal ligament and becomes the femoral artery"
+      ],
+      "answers": [
+        0,
+        2
+      ],
+      "selectCount": 0,
+      "explanation": "The internal iliac artery supplies branches to the pelvic organs, gluteal region, and perineum. The superior gluteal and internal pudendal arteries are branches of the internal iliac system. The inferior gluteal artery also normally arises from the internal iliac artery, not the external iliac artery. The corona mortis is a vascular variant involving an anastomosis between the external and internal iliac systems near the superior pubic ramus, not around the ischium. The external iliac artery passes under the inguinal ligament and becomes the femoral artery."
+    },
+    {
+      "id": "general_em_master_018",
+      "categories": [
+        "general_em_master",
+        "toxicology_master"
+      ],
+      "question": "Which statement about redback spider bite is incorrect? Choose one.",
+      "choices": [
+        "Pain may begin at the bite site",
+        "Sweating and myalgia may occur",
+        "Abdominal pain and muscle cramps may occur",
+        "The main toxic component is alpha-latrotoxin",
+        "Persistent bleeding from the bite site is typical"
+      ],
+      "answers": [
+        4
+      ],
+      "selectCount": 1,
+      "explanation": "Venom from Latrodectus species, including the redback spider, mainly causes neurotoxicity through alpha-latrotoxin. Bite-site pain, sweating, myalgia, abdominal pain, and muscle cramps may occur. It is not a hemorrhagic venom, so persistent bleeding from the bite site is not typical."
+    },
+    {
+      "id": "general_em_master_019",
+      "categories": [
+        "general_em_master",
+        "trauma_master",
+        "critical_care_master"
+      ],
+      "question": "In severe traumatic brain injury with elevated intracranial pressure and reduced cerebral perfusion pressure, which interventions are appropriate? Select all that apply.",
+      "choices": [
+        "Deepen sedation",
+        "Maintain mean arterial pressure with vasopressors",
+        "Lower blood pressure with antihypertensives",
+        "Transfuse red blood cells routinely even when Hb is at least 10 g/dL",
+        "If PaCO2 is 32 Torr, hyperventilate further"
+      ],
+      "answers": [
+        0,
+        1
+      ],
+      "selectCount": 0,
+      "explanation": "When intracranial pressure is elevated, sedation should be optimized to suppress ICP increases caused by pain, agitation, coughing, and similar stimuli. Cerebral perfusion pressure equals mean arterial pressure minus intracranial pressure, so maintaining mean arterial pressure with vasopressors is important when ICP is high. Antihypertensives can reduce cerebral perfusion pressure. Routine red cell transfusion is not necessarily indicated when Hb is around 10 g/dL. A PaCO2 of 32 Torr is already low; further hyperventilation may reduce cerebral blood flow."
+    },
+    {
+      "id": "general_em_master_020",
+      "categories": [
+        "general_em_master",
+        "trauma_master"
+      ],
+      "question": "Which analytes are used in diagnostic peritoneal lavage to evaluate small bowel injury? Select all that apply.",
+      "choices": [
+        "ALP",
+        "ALT",
+        "AST",
+        "Amylase",
+        "Troponin"
+      ],
+      "answers": [
+        0,
+        3
+      ],
+      "selectCount": 0,
+      "explanation": "Diagnostic peritoneal lavage can assess not only intra-abdominal bleeding but also gastrointestinal injury by measuring enzymes in the lavage fluid. In small bowel injury, lavage fluid amylase and alkaline phosphatase (ALP) are classic adjunctive markers. ALT and AST mainly indicate hepatocellular injury and are not appropriate markers for diagnosing small bowel injury. Troponin is a marker of myocardial injury."
+    },
+    {
+      "id": "general_em_master_021",
+      "categories": [
+        "general_em_master",
+        "trauma_master"
+      ],
+      "question": "Which tests are useful for evaluating main pancreatic duct injury in pancreatic trauma? Select all that apply.",
+      "choices": [
+        "Angiography",
+        "Endoscopic ultrasonography",
+        "Contrast study of the gastrointestinal tract",
+        "Endoscopic retrograde pancreatography",
+        "MRCP"
+      ],
+      "answers": [
+        3,
+        4
+      ],
+      "selectCount": 0,
+      "explanation": "In pancreatic trauma, the presence or absence of main pancreatic duct injury strongly influences management. MRCP is useful as a noninvasive test, and endoscopic retrograde pancreatography can both diagnose duct injury and lead to treatment such as stent placement. Angiography is mainly used to evaluate bleeding or perform embolization and is not central for pancreatic duct assessment. Gastrointestinal contrast studies primarily evaluate GI tract injury."
+    },
+    {
+      "id": "general_em_master_022",
+      "categories": [
+        "general_em_master",
+        "toxicology_master"
+      ],
+      "question": "Which response to hydrofluoric acid skin exposure is correct? Choose one.",
+      "choices": [
+        "Irrigate with running water, then apply calcium gluconate gel",
+        "Avoid water irrigation and wipe with a dry cloth",
+        "Apply activated charcoal to the wound",
+        "Neutralize with sodium bicarbonate",
+        "Use a topical corticosteroid as first-line treatment"
+      ],
+      "answers": [
+        0
+      ],
+      "selectCount": 1,
+      "explanation": "Hydrofluoric acid penetrates tissue, and fluoride ions bind calcium and magnesium, causing severe pain, tissue injury, and hypocalcemia. Skin exposure is treated with thorough running-water irrigation followed by consideration of calcium gluconate gel to inactivate local fluoride ions. Dry wiping alone, activated charcoal application, sodium bicarbonate neutralization, and topical corticosteroid monotherapy are not standard initial responses."
+    },
+    {
+      "id": "general_em_master_023",
+      "categories": [
+        "general_em_master",
+        "cardiology_advanced"
+      ],
+      "question": "A patient with QT prolongation has recurrent polymorphic ventricular tachycardia and syncope during bradycardia. Which acute treatments are correct? Select all that apply.",
+      "choices": [
+        "Intravenous insulin",
+        "Intravenous lidocaine",
+        "Intravenous amiodarone",
+        "Intravenous magnesium sulfate",
+        "Continuous isoproterenol infusion"
+      ],
+      "selectCount": 0,
+      "explanation": "For torsades de pointes due to QT prolongation, intravenous magnesium sulfate is used as acute treatment. In acquired QT prolongation with recurrent bradycardia-dependent TdP, increasing the heart rate with isoproterenol or temporary pacing can be considered. Amiodarone may worsen QT prolongation and is usually inappropriate. Insulin and lidocaine are not first-line treatments for this condition.",
+      "answers": [
+        3,
+        4
+      ]
+    },
+    {
+      "id": "general_em_master_024",
+      "categories": [
+        "general_em_master",
+        "vertigo_stroke_advanced"
+      ],
+      "question": "A patient has vertigo, hoarseness, dysphagia, and rotatory nystagmus. Which disease is most suspected? Choose one.",
+      "choices": [
+        "Facial herpes zoster",
+        "Myasthenia gravis",
+        "Vestibular neuritis",
+        "Lateral medullary syndrome",
+        "Tolosa-Hunt syndrome"
+      ],
+      "selectCount": 1,
+      "explanation": "Lateral medullary syndrome causes vertigo, nystagmus, nausea, hoarseness, dysphagia, and dysarthria because of involvement of structures such as the vestibular nuclei and nucleus ambiguus. Persistent vertigo with dysphagia or hoarseness should raise strong concern for brainstem infarction, not only peripheral vestibular disease. This combination is not typical of facial herpes zoster, myasthenia gravis, or Tolosa-Hunt syndrome.",
+      "answers": [
+        3
+      ]
+    },
+    {
+      "id": "general_em_master_025",
+      "categories": [
+        "general_em_master",
+        "infection_advanced"
+      ],
+      "question": "A high school student living in a dormitory presents with fever, altered mental status, and nuchal rigidity. Gram-negative diplococci are found in the cerebrospinal fluid. Which responses are correct? Select all that apply.",
+      "choices": [
+        "Provide antibiotic prophylaxis to close contacts",
+        "Refrigerate the CSF culture specimen before submission",
+        "Use droplet precautions",
+        "Notify the public health center within 7 days after diagnosis",
+        "Administer a third-generation cephalosporin such as ceftriaxone"
+      ],
+      "selectCount": 0,
+      "explanation": "Fever, meningeal signs, and gram-negative diplococci in CSF suggest meningococcal meningitis. Close contacts such as household members or dormitory roommates should receive antibiotic prophylaxis with agents such as rifampin, ciprofloxacin, or ceftriaxone. Droplet precautions are the basic infection control measure. Treatment should be started promptly with a third-generation cephalosporin such as ceftriaxone or cefotaxime. Meningococcus is sensitive to cold, so culture specimens should not be refrigerated. Invasive meningococcal disease requires prompt notification, not delayed reporting within 7 days.",
+      "answers": [
+        0,
+        2,
+        4
+      ]
+    },
+    {
+      "id": "general_em_master_026",
+      "categories": [
+        "general_em_master",
+        "cardiology_advanced"
+      ],
+      "question": "In hemodynamically stable rapid atrial fibrillation associated with WPW syndrome, which medication can be selected? Choose one.",
+      "choices": [
+        "ATP",
+        "Class Ic antiarrhythmic drug",
+        "Beta-blocker",
+        "Verapamil",
+        "Digoxin"
+      ],
+      "selectCount": 1,
+      "explanation": "In atrial fibrillation associated with WPW syndrome, rapid conduction through the accessory pathway can deteriorate into ventricular fibrillation. If hemodynamics are stable, drugs that suppress accessory pathway conduction, such as sodium-channel blockers, can be considered. Drugs that mainly suppress AV nodal conduction, such as ATP, beta-blockers, verapamil, and digoxin, can make accessory pathway conduction relatively dominant and should be avoided. If the patient is hemodynamically unstable, synchronized cardioversion is prioritized.",
+      "answers": [
+        1
+      ]
+    },
+    {
+      "id": "general_em_master_027",
+      "categories": [
+        "general_em_master",
+        "vertigo_stroke_advanced"
+      ],
+      "question": "Which finding in acute persistent vertigo suggests a central lesion? Choose one.",
+      "choices": [
+        "Brief nystagmus induced by positional change",
+        "Nystagmus direction remains fixed regardless of gaze direction",
+        "A catch-up saccade is seen on the head impulse test",
+        "Only horizontal-torsional nystagmus without vertical skew",
+        "A vertical ocular deviation is seen when one eye is covered and then rapidly uncovered"
+      ],
+      "selectCount": 1,
+      "explanation": "In acute vestibular syndrome, HINTS findings are useful for distinguishing central from peripheral causes. Vertical ocular deviation seen when one eye is covered and then rapidly uncovered indicates skew deviation and suggests a central lesion. Brief nystagmus triggered by positional change suggests benign paroxysmal positional vertigo. Direction-fixed nystagmus and a catch-up saccade on head impulse testing are more typical of peripheral vestibular disorders.",
+      "answers": [
+        4
+      ]
+    },
+    {
+      "id": "general_em_master_028",
+      "categories": [
+        "general_em_master",
+        "toxicology_master"
+      ],
+      "question": "A patient brought from a fire scene has altered mental status and dyspnea, but pulse oximetry is preserved. The skin is flushed. If cyanide poisoning is suspected, which medication should be prepared? Choose one.",
+      "choices": [
+        "Atropine",
+        "Naloxone",
+        "Fomepizole",
+        "Hydroxocobalamin",
+        "Dimercaprol"
+      ],
+      "selectCount": 1,
+      "explanation": "Combustion of nitrogen-containing materials such as acrylic resins can generate hydrogen cyanide. Cyanide poisoning impairs cellular respiration, so tissue hypoxia may occur even when pulse oximetry is preserved. Hydroxocobalamin should be prepared as an antidote. Atropine is used for organophosphate poisoning, naloxone for opioid poisoning, fomepizole for methanol or ethylene glycol poisoning, and dimercaprol for some heavy metal poisonings.",
+      "answers": [
+        3
+      ]
+    },
+    {
+      "id": "general_em_master_029",
+      "categories": [
+        "general_em_master",
+        "disaster_master"
+      ],
+      "question": "Which statement about zoning and decontamination in a chemical disaster is incorrect? Choose one.",
+      "choices": [
+        "The area near the contamination source is the hot zone",
+        "Decontamination is mainly performed in the warm zone",
+        "Patient care after decontamination is performed in the cold zone",
+        "Patients suspected of contamination should be taken directly into the cold zone without decontamination",
+        "Flow paths should be controlled so contaminated and decontaminated patients do not mix"
+      ],
+      "selectCount": 1,
+      "explanation": "In a chemical disaster, the contaminated area is managed as the hot zone, the decontamination area as the warm zone, and the clean area as the cold zone. Bringing a patient suspected of contamination directly into the cold zone without decontamination risks secondary contamination of healthcare workers and the facility. It is important to separate the flow paths for decontaminated and non-decontaminated patients and perform gate control.",
+      "answers": [
+        3
+      ]
+    },
+    {
+      "id": "general_em_master_030",
+      "categories": [
+        "general_em_master",
+        "disaster_master",
+        "trauma_master"
+      ],
+      "question": "Which organs or sites are especially vulnerable to primary blast injury? Select all that apply.",
+      "choices": [
+        "Eyes",
+        "Lungs",
+        "Tympanic membranes",
+        "Kidneys",
+        "Diaphyses of the limbs"
+      ],
+      "selectCount": 0,
+      "explanation": "Primary blast injury is caused by the pressure change from the blast wave itself, and air-containing organs or air-fluid interfaces are especially vulnerable. Representative injury sites are the lungs and tympanic membranes. Eye and limb injuries can occur from fragments or flying debris in secondary blast injury, or from the body being thrown in tertiary blast injury, but the lungs and tympanic membranes are key representative sites for primary blast injury.",
+      "answers": [
+        1,
+        2
+      ]
+    },
+    {
+      "id": "general_em_master_031",
+      "categories": [
+        "general_em_master",
+        "general_em_advanced"
+      ],
+      "question": "Which medication is selected as initial treatment for sudden sensorineural hearing loss? Choose one.",
+      "choices": [
+        "Acyclovir",
+        "Corticosteroid",
+        "Anticoagulant",
+        "Sodium bicarbonate",
+        "First-generation antihistamine"
+      ],
+      "selectCount": 1,
+      "explanation": "Sudden sensorineural hearing loss is an acute-onset sensorineural hearing loss, and early diagnosis and treatment are important. Initial treatment uses systemic or intratympanic corticosteroids. Antivirals, anticoagulants, sodium bicarbonate, and antihistamines are not standard initial medications for sudden sensorineural hearing loss.",
+      "answers": [
+        1
+      ]
+    },
+    {
+      "id": "general_em_master_033",
+      "categories": [
+        "general_em_master",
+        "cardiology_advanced"
+      ],
+      "question": "A patient with acute heart failure has pulmonary congestion but no peripheral coldness, and echocardiography shows preserved left ventricular ejection fraction. Which classification is correct? Choose one.",
+      "choices": [
+        "Congestion present, hypoperfusion present, HFrEF",
+        "Congestion present, no hypoperfusion, HFrEF",
+        "Congestion present, hypoperfusion present, HFpEF",
+        "Congestion present, no hypoperfusion, HFpEF",
+        "No congestion, hypoperfusion present, HFrEF"
+      ],
+      "answers": [
+        3
+      ],
+      "selectCount": 1,
+      "explanation": "Pulmonary congestion or orthopnea indicates congestion. Absence of peripheral coldness or impaired consciousness indicates no hypoperfusion, corresponding to a warm and wet profile. Preserved left ventricular ejection fraction indicates HFpEF."
+    },
+    {
+      "id": "general_em_master_034",
+      "categories": [
+        "general_em_master",
+        "trauma_master"
+      ],
+      "question": "A patient has numbness of the lateral upper arm, impaired elbow flexion, and reduced biceps reflex. Which level of cervical spinal cord injury is suggested? Choose one.",
+      "choices": [
+        "C3",
+        "C5",
+        "C7",
+        "C8",
+        "T2"
+      ],
+      "answers": [
+        1
+      ],
+      "selectCount": 1,
+      "explanation": "C5 injury causes weakness of the deltoid and biceps, impaired elbow flexion, sensory disturbance over the lateral upper arm, and reduced biceps reflex. C7 involves the triceps and wrist extension, and C8 contributes to finger flexion and fine finger movement."
+    },
+    {
+      "id": "general_em_master_035",
+      "categories": [
+        "general_em_master",
+        "general_em_advanced"
+      ],
+      "question": "Which drugs should be avoided, or avoided as monotherapy, when pheochromocytoma crisis is suspected? Select all that apply.",
+      "choices": [
+        "Nicardipine",
+        "Propranolol",
+        "Metoclopramide",
+        "Phentolamine",
+        "Nitroglycerin"
+      ],
+      "answers": [
+        1,
+        2
+      ],
+      "selectCount": 0,
+      "explanation": "In pheochromocytoma, giving a beta-blocker before adequate alpha blockade may worsen hypertensive crisis by leaving alpha effects unopposed. Metoclopramide is known to potentially trigger pheochromocytoma crisis and should be avoided. Phentolamine is an alpha-blocker, and nicardipine or nitroglycerin may be used for blood pressure control."
+    },
+    {
+      "id": "general_em_master_036",
+      "categories": [
+        "general_em_master",
+        "infection_advanced"
+      ],
+      "question": "In which wound patient is an additional tetanus toxoid dose unnecessary? Choose one.",
+      "choices": [
+        "Clean wound with unknown vaccination history",
+        "Contaminated wound more than 5 years after the last dose in a patient who completed primary immunization",
+        "Clean wound within 10 years of the last dose in a patient who completed primary immunization",
+        "Clean wound more than 10 years after the last dose in a patient who completed primary immunization",
+        "Contaminated wound in a patient with incomplete primary immunization"
+      ],
+      "answers": [
+        2
+      ],
+      "selectCount": 1,
+      "explanation": "Tetanus prophylaxis depends on wound contamination and vaccination history. If primary immunization has been completed and the wound is clean with the last dose within 10 years, an additional dose is usually unnecessary. Unknown history, incomplete primary immunization, or long duration since the last dose requires consideration of additional vaccination."
+    },
+    {
+      "id": "general_em_master_037",
+      "categories": [
+        "general_em_master",
+        "infection_advanced"
+      ],
+      "question": "A patient with fever, cough, conjunctival injection, and Koplik spots is suspected of having measles. Which response is incorrect? Choose one.",
+      "choices": [
+        "Contact the public health center",
+        "Use droplet precautions only",
+        "Check vaccination history",
+        "Consider measles PCR and antibody testing",
+        "Use airborne precautions"
+      ],
+      "answers": [
+        1
+      ],
+      "selectCount": 1,
+      "explanation": "Measles is transmitted by the airborne route, so airborne precautions should be used as soon as it is suspected. It is a notifiable infectious disease; contacting the public health center, checking vaccination history, and considering PCR or antibody testing are appropriate. Droplet precautions alone are insufficient."
+    },
+    {
+      "id": "general_em_master_038",
+      "categories": [
+        "general_em_master",
+        "infection_advanced"
+      ],
+      "question": "Which medical device requires high-level disinfection? Choose one.",
+      "choices": [
+        "Stethoscope",
+        "Thermometer",
+        "Bronchoscope",
+        "Surgical forceps",
+        "Blood pressure cuff"
+      ],
+      "answers": [
+        2
+      ],
+      "selectCount": 1,
+      "explanation": "A bronchoscope is a semicritical device that contacts mucous membranes, so high-level disinfection is required. Devices such as surgical forceps that enter sterile tissue require sterilization. Devices that contact intact skin, such as stethoscopes and blood pressure cuffs, are generally managed with low-level disinfection."
+    },
+    {
+      "id": "general_em_master_039",
+      "categories": [
+        "general_em_master",
+        "infection_advanced"
+      ],
+      "question": "A patient with urinary tract infection presents with fever and flank pain, but no renal abscess or urinary tract obstruction is found. Which initial treatment is most appropriate? Choose one.",
+      "choices": [
+        "Nephrectomy",
+        "Nephrostomy",
+        "Antibiotic therapy",
+        "Anticoagulation",
+        "Ureteral stent placement"
+      ],
+      "answers": [
+        2
+      ],
+      "selectCount": 1,
+      "explanation": "In pyelonephritis or acute focal bacterial nephritis, antibiotic therapy is central if there is no obstruction or abscess formation. If urinary obstruction or pyonephrosis is present, drainage with nephrostomy or ureteral stent placement is considered, but those indications are not described in this question."
+    },
+    {
+      "id": "general_em_master_040",
+      "categories": [
+        "general_em_master",
+        "general_em_advanced"
+      ],
+      "question": "A patient taking a factor Xa inhibitor has head trauma and suspected severe bleeding. Which reversal agent is appropriate? Choose one.",
+      "choices": [
+        "Atropine",
+        "Protamine",
+        "Vitamin K",
+        "Idarucizumab",
+        "Andexanet alfa"
+      ],
+      "answers": [
+        4
+      ],
+      "selectCount": 1,
+      "explanation": "For severe bleeding related to factor Xa inhibitors such as apixaban, rivaroxaban, and edoxaban, andexanet alfa is used as a reversal agent. Idarucizumab reverses dabigatran. Protamine is used for heparin, and vitamin K antagonizes warfarin."
+    },
+    {
+      "id": "general_em_master_041",
+      "categories": [
+        "general_em_master",
+        "environmental_master",
+        "general_em_advanced"
+      ],
+      "question": "Which type of radiation can be shielded by paper? Choose one.",
+      "choices": [
+        "Alpha radiation",
+        "Beta radiation",
+        "Gamma radiation",
+        "X-rays",
+        "Neutron radiation"
+      ],
+      "answers": [
+        0
+      ],
+      "selectCount": 1,
+      "explanation": "Alpha radiation has low penetrating power and is blocked by paper or the surface of the skin. Beta radiation is shielded with plastic or thin metal, gamma rays and X-rays with dense materials such as lead, and neutron radiation with materials rich in hydrogen."
+    },
+    {
+      "id": "general_em_master_042",
+      "categories": [
+        "general_em_master",
+        "vertigo_stroke_advanced"
+      ],
+      "question": "Which laboratory value excludes a patient from intravenous rt-PA therapy for acute ischemic stroke? Choose one.",
+      "choices": [
+        "PT-INR 2.1",
+        "Na 128 mEq/L",
+        "Platelets 180,000/mcL",
+        "White blood cells 14,500/mcL",
+        "Creatinine 1.2 mg/dL"
+      ],
+      "answers": [
+        0
+      ],
+      "selectCount": 1,
+      "explanation": "For intravenous rt-PA therapy, an elevated PT-INR, such as in patients on anticoagulation, increases bleeding risk and is an exclusion criterion. In general, PT-INR above 1.7 is considered an exclusion. Na 128 mEq/L, leukocytosis, and creatinine 1.2 mg/dL are not absolute exclusions by themselves. A platelet count of 180,000/mcL is adequate."
+    },
+    {
+      "id": "general_em_master_043",
+      "categories": [
+        "general_em_master",
+        "general_em_advanced"
+      ],
+      "question": "Which treatments are correct as initial therapy for acute COPD exacerbation? Select all that apply.",
+      "choices": [
+        "Diuretics",
+        "Antibiotics",
+        "Vasodilators",
+        "Unrestricted high-concentration oxygen administration",
+        "Inhaled short-acting beta2 agonist"
+      ],
+      "answers": [
+        1,
+        4
+      ],
+      "selectCount": 0,
+      "explanation": "In acute COPD exacerbation, inhaled short-acting beta2 agonists are a fundamental treatment. Antibiotics are considered when infection is suspected or when there is purulent sputum, fever, or similar findings. Oxygen should be titrated to a target SpO2 while monitoring for CO2 retention. Unrestricted high-concentration oxygen is inappropriate. Diuretics and vasodilators may be considered if another condition such as heart failure is present, but they are not standard initial therapy for COPD exacerbation itself."
+    },
+    {
+      "id": "general_em_master_044",
+      "categories": [
+        "general_em_master",
+        "critical_care_master",
+        "general_em_advanced"
+      ],
+      "question": "Which statement about intracranial pressure and cerebral perfusion pressure is correct? Choose one.",
+      "choices": [
+        "Raising the head always increases cerebral perfusion pressure",
+        "Excessively high blood pressure always lowers intracranial pressure",
+        "Lower PaCO2 can lower intracranial pressure",
+        "Intracranial pressure above 20 mmHg always causes brain herniation",
+        "Cerebral perfusion pressure is systolic blood pressure minus intracranial pressure"
+      ],
+      "answers": [
+        2
+      ],
+      "selectCount": 1,
+      "explanation": "Lower PaCO2 causes cerebral vasoconstriction and reduces cerebral blood flow, so intracranial pressure may decrease. However, excessive hyperventilation can cause cerebral ischemia and requires caution. Cerebral perfusion pressure is mean arterial pressure minus intracranial pressure, not systolic blood pressure. Head elevation may improve venous return, but it does not always increase cerebral perfusion pressure."
+    },
+    {
+      "id": "general_em_master_045",
+      "categories": [
+        "general_em_master",
+        "toxicology_master"
+      ],
+      "question": "Which findings are part of the anticholinergic toxidrome? Select all that apply.",
+      "choices": [
+        "Mydriasis",
+        "Urinary retention",
+        "Tinnitus",
+        "Hypothermia",
+        "Coagulopathy"
+      ],
+      "answers": [
+        0,
+        1
+      ],
+      "selectCount": 0,
+      "explanation": "Anticholinergic poisoning causes muscarinic receptor blockade, resulting in mydriasis, dry mouth, dry skin, urinary retention, decreased bowel sounds, tachycardia, delirium, and hyperthermia. Tinnitus is a finding in salicylate poisoning, and coagulopathy is associated with anticoagulants or some toxic exposures; neither is a typical anticholinergic finding."
+    },
+    {
+      "id": "general_em_master_046",
+      "categories": [
+        "general_em_master",
+        "toxicology_master"
+      ],
+      "question": "For which toxic substance is activated charcoal effective? Choose one.",
+      "choices": [
+        "Iron preparation",
+        "Lithium",
+        "Potassium",
+        "Cyanide compound",
+        "Theophylline"
+      ],
+      "answers": [
+        4
+      ],
+      "selectCount": 1,
+      "explanation": "Activated charcoal adsorbs many organic compounds but has poor efficacy for metals and electrolytes such as iron, lithium, and potassium, and for cyanide compounds. Theophylline is adsorbed by activated charcoal, and multiple-dose activated charcoal may be considered."
+    },
+    {
+      "id": "general_em_master_047",
+      "categories": [
+        "general_em_master",
+        "toxicology_master"
+      ],
+      "question": "After mamushi pit viper bite, the entire bitten limb is swollen and the patient has diplopia. Which Sakio grade is appropriate? Choose one.",
+      "choices": [
+        "Grade I",
+        "Grade II",
+        "Grade III",
+        "Grade IV",
+        "Grade V"
+      ],
+      "answers": [
+        4
+      ],
+      "selectCount": 1,
+      "explanation": "In the Sakio grading system for mamushi bite, severity is assessed not only by the extent of swelling but also by systemic symptoms. Neurologic symptoms such as diplopia indicate severe envenomation and correspond to Grade V."
+    },
+    {
+      "id": "general_em_master_048",
+      "categories": [
+        "general_em_master",
+        "general_em_advanced"
+      ],
+      "question": "Which treatments are correct as initial management of gallstone acute pancreatitis with cholangitis? Select all that apply.",
+      "choices": [
+        "Enteral nutrition",
+        "Plasma exchange",
+        "Routine gastric acid suppression",
+        "Routine protease inhibitor administration",
+        "Endoscopic sphincterotomy"
+      ],
+      "answers": [
+        0,
+        4
+      ],
+      "selectCount": 0,
+      "explanation": "In acute pancreatitis, enteral nutrition is preferred when possible. In gallstone pancreatitis with cholangitis, early ERCP is performed for biliary drainage, and endoscopic sphincterotomy is performed when needed. Plasma exchange is considered in special situations such as severe hypertriglyceridemia. Routine gastric acid suppression or protease inhibitor therapy is not established as standard initial treatment."
+    },
+    {
+      "id": "general_em_master_049",
+      "categories": [
+        "general_em_master",
+        "toxicology_master"
+      ],
+      "question": "Which findings are more characteristic of serotonin syndrome than neuroleptic malignant syndrome? Select all that apply.",
+      "choices": [
+        "Tachycardia",
+        "Sweating",
+        "Muscle rigidity",
+        "Hyperreflexia",
+        "Myoclonus"
+      ],
+      "answers": [
+        3,
+        4
+      ],
+      "selectCount": 0,
+      "explanation": "Serotonin syndrome is characterized by neuromuscular excitation such as hyperreflexia, myoclonus, and clonus. Neuroleptic malignant syndrome is more associated with lead-pipe rigidity, fever, altered mental status, and autonomic symptoms. Tachycardia and sweating may occur in both and are weaker differentiating findings."
+    },
+    {
+      "id": "general_em_master_050",
+      "categories": [
+        "general_em_master",
+        "environmental_master",
+        "general_em_advanced"
+      ],
+      "question": "According to the 2024 Heatstroke Management Guideline, which items are involved in diagnosing severity Grade IV? Select all that apply.",
+      "choices": [
+        "GCS 8 or lower",
+        "Respiratory rate 30/min or higher",
+        "Core temperature 40°C or higher",
+        "Heart rate 150/min or higher",
+        "Systolic blood pressure 80 mmHg or lower"
+      ],
+      "answers": [
+        0,
+        2
+      ],
+      "selectCount": 0,
+      "explanation": "The 2024 Heatstroke Management Guideline positions Grade IV as the most severe group. Core temperature of 40°C or higher and severe impaired consciousness with GCS 8 or lower are key diagnostic items. Respiratory rate, heart rate, and systolic blood pressure are important for severity assessment, but they are not the central diagnostic items for Grade IV."
+    },
+    {
+      "id": "general_em_master_051",
+      "categories": [
+        "general_em_master",
+        "toxicology_master"
+      ],
+      "question": "Which treatments are correct for methanol poisoning? Select all that apply.",
+      "choices": [
+        "Gastric lavage",
+        "Hemodialysis",
+        "Multiple-dose activated charcoal",
+        "Fomepizole administration",
+        "Pralidoxime administration"
+      ],
+      "answers": [
+        1,
+        3
+      ],
+      "selectCount": 0,
+      "explanation": "In methanol poisoning, formic acid, a metabolite, causes metabolic acidosis and optic nerve injury. Fomepizole inhibits alcohol dehydrogenase, and in severe cases or cases with acidosis, hemodialysis removes methanol and formate. Activated charcoal is not effective for methanol. Pralidoxime is a treatment for organophosphate poisoning."
+    },
+    {
+      "id": "general_em_master_052",
+      "categories": [
+        "general_em_master",
+        "sepsis_master",
+        "sepsis_advanced"
+      ],
+      "question": "Which statement about the pathophysiology of sepsis-associated DIC is incorrect? Choose one.",
+      "choices": [
+        "LPS and inflammatory cytokines activate coagulation",
+        "Thrombomodulin expression on vascular endothelium decreases",
+        "Microthrombi lead to progressive organ dysfunction",
+        "Fibrinolysis is often suppressed",
+        "Protein C is overproduced and inhibits fibrinolysis"
+      ],
+      "answers": [
+        4
+      ],
+      "selectCount": 1,
+      "explanation": "In sepsis-associated DIC, LPS and inflammatory cytokines activate the coagulation system, while anticoagulant mechanisms in the vascular endothelium, including thrombomodulin and the protein C system, are impaired. Microthrombus formation leads to microcirculatory disturbance and organ dysfunction. Suppression of fibrinolysis is often prominent. Protein C is not overproduced; it tends to decrease because of consumption and reduced production."
     }
   ]
 }

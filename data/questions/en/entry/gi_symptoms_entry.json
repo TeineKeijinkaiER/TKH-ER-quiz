@@ -1,0 +1,70 @@
+{
+  "category": "GI Symptoms",
+  "questions": [
+    {
+      "id": "gi_symptoms_entry_001",
+      "question": "In examining a patient with suspected appendicitis, which is not a peritoneal irritation sign?",
+      "choices": [
+        "Rebound tenderness",
+        "Pain with coughing",
+        "Percussion tenderness",
+        "Psoas sign"
+      ],
+      "answers": [3],
+      "selectCount": 1,
+      "explanation": "Peritoneal irritation signs include rebound tenderness, guarding, board-like rigidity, percussion tenderness, pain with coughing, and pain with movement. Rebound tenderness is pain that worsens when pressure on the abdomen is suddenly released and is an important sign suggesting peritoneal irritation. Psoas sign reflects irritation of the iliopsoas muscle and may be positive in retrocecal appendicitis or iliopsoas abscess, but it is not generally classified as a standard peritoneal irritation sign."
+    },
+    {
+      "id": "gi_symptoms_entry_002",
+      "question": "Which statement about stool appearance and bleeding source in gastrointestinal bleeding is incorrect?",
+      "choices": [
+        "Melena suggests upper gastrointestinal bleeding",
+        "Hematochezia is commonly seen in lower gastrointestinal bleeding",
+        "Dark red stool can occur with bleeding from the small bowel or right colon",
+        "If stool is bright red, upper gastrointestinal bleeding can be ruled out"
+      ],
+      "answers": [3],
+      "selectCount": 1,
+      "explanation": "Black stool, especially tarry stool, suggests upper gastrointestinal bleeding from the esophagus, stomach, or duodenum. Bright red blood per rectum is common with bleeding from the anus, rectum, or left colon, but massive upper gastrointestinal bleeding such as variceal rupture or gastroduodenal ulcer bleeding can pass rapidly through the intestine and appear as bright red or dark red stool. Therefore, upper gastrointestinal bleeding should not be ruled out solely because the stool is bright red. Dark red stool can occur with more proximal lower GI bleeding, such as from the small bowel or right colon."
+    },
+    {
+      "id": "gi_symptoms_entry_003",
+      "question": "Which item is not included in the Alvarado score for acute appendicitis?",
+      "choices": [
+        "Right lower quadrant tenderness",
+        "Rebound tenderness",
+        "Leukocytosis",
+        "Hematuria"
+      ],
+      "answers": [3],
+      "selectCount": 1,
+      "explanation": "The Alvarado score estimates the probability of acute appendicitis. Its items are migration of pain to the right lower quadrant, anorexia, nausea or vomiting, right lower quadrant tenderness, rebound tenderness, fever, leukocytosis, and left shift of the white blood cell differential. Hematuria is important in the differential diagnosis, such as ureteral stone, but it is not an Alvarado score item."
+    },
+    {
+      "id": "gi_symptoms_entry_004",
+      "question": "Which contrast-enhanced CT finding is not directly used in severity assessment of acute pancreatitis?",
+      "choices": [
+        "Poorly enhanced pancreatic area",
+        "Extent of extrapancreatic inflammation",
+        "Inflammatory spread beyond the lower pole of the kidney",
+        "Multiple gallstones in the gallbladder"
+      ],
+      "answers": [3],
+      "selectCount": 1,
+      "explanation": "In acute pancreatitis, the extent of poorly enhanced pancreatic parenchyma and the spread of extrapancreatic inflammation are important for CT severity assessment. Poor pancreatic enhancement suggests pancreatic necrosis and is related to the risk of severe disease and infected necrosis. The spread of inflammation to the anterior pararenal space, root of the mesocolon, or beyond the lower pole of the kidney is also assessed. Multiple gallstones in the gallbladder are important for evaluating biliary pancreatitis as the cause, but they are not themselves a contrast-enhanced CT severity finding."
+    },
+    {
+      "id": "gi_symptoms_entry_005",
+      "question": "Which ultrasound statement about findings in cholecystitis or cholangitis is incorrect?",
+      "choices": [
+        "Gallbladder wall thickening is generally considered 3-4 mm or more",
+        "A common bile duct diameter of 7 mm or more is a guide for dilation",
+        "Pericholecystic fluid suggests cholecystitis",
+        "A gallbladder short-axis diameter of 1 cm or more indicates enlargement"
+      ],
+      "answers": [3],
+      "selectCount": 1,
+      "explanation": "In acute cholecystitis, assess for gallbladder enlargement, wall thickening, pericholecystic fluid, gallstones, and sonographic Murphy sign. Gallbladder wall thickening is generally around 3-4 mm or more. Gallbladder enlargement is often judged using thresholds such as short-axis diameter over 4 cm or long-axis diameter over 8-10 cm. In acute cholangitis, assess for bile duct dilation, common bile duct stones, and intraductal debris. Common bile duct diameter varies with age and after cholecystectomy, but 7 mm or more is often used as a guide for dilation. A short-axis gallbladder diameter of 1 cm can be normal and is not an appropriate criterion for gallbladder enlargement."
+    }
+  ]
+}

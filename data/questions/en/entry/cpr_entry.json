@@ -1,0 +1,73 @@
+{
+  "category": "CPR / Cardiac Arrest",
+  "questions": [
+    {
+      "id": "ed_first_steps_006",
+      "question": "Select the one incorrect option regarding preparation for intubation.",
+      "choices": [
+        "Prepare a size 3 laryngoscope blade first",
+        "Select a 9 mm tube for men and an 8 mm tube for women",
+        "For ER intubation, prepare a 16 Fr suction catheter in case secretions need to be removed",
+        "When using an anesthesia machine, perform a leak test and make ETCO2 available",
+        "Use two folded bath towels as a pillow to achieve the sniffing position"
+      ],
+      "answers": [1],
+      "selectCount": 1,
+      "explanation": "For Japanese adults, standard endotracheal tube sizes are about 7.5-8.0 mm for men and 7.0-7.5 mm for women. A 9 mm tube is too large and can make insertion difficult or cause vocal cord injury, so it is inappropriate."
+    },
+    {
+      "id": "ed_first_steps_007",
+      "question": "When receiving a pre-arrival hotline call from EMS for a cardiac arrest patient, what information should be confirmed? Select three.",
+      "choices": [
+        "History of diabetes",
+        "Whether the arrest was witnessed",
+        "Estimated time to arrival",
+        "Religion or the patient's views about death",
+        "Initial ECG rhythm"
+      ],
+      "answers": [1, 2, 4],
+      "selectCount": 3,
+      "explanation": "Whether the arrest was witnessed, estimated time to arrival, and the initial rhythm (VF/VT/PEA/asystole) are all important pieces of information directly related to prognosis and treatment strategy, and should be confirmed on the hotline. Past history and views about death can be addressed after arrival."
+    },
+    {
+      "id": "ed_first_steps_008",
+      "question": "After a cardiac arrest patient achieves ROSC, which action is incorrect?",
+      "choices": [
+        "Measure vital signs, including blood pressure",
+        "Obtain a 12-lead ECG to search for the cause of cardiac arrest",
+        "Perform CT to search for the cause of cardiac arrest (non-contrast head CT and contrast-enhanced trunk CT)",
+        "Continue 100% oxygen for 24 hours for brain protection",
+        "Prepare vasopressors in case hypotension develops"
+      ],
+      "answers": [3],
+      "selectCount": 1,
+      "explanation": "After ROSC, both hypoxemia and hyperoxemia should be avoided. Use 100% oxygen until SpO2 or PaO2 can be reliably measured, then promptly adjust FiO2 to target approximately SpO2 90-98%. Continuing 100% oxygen without reassessment is inappropriate."
+    },
+    {
+      "id": "cpr_entry_001",
+      "question": "What is the appropriate chest compression rate for an adult?",
+      "choices": [
+        "60-80/min",
+        "80-100/min",
+        "100-120/min",
+        "120-140/min"
+      ],
+      "answers": [2],
+      "selectCount": 1,
+      "explanation": "AHA and JRC guidelines recommend adult chest compressions at 100-120/min. If the rate is too fast, recoil may be incomplete; if it is too slow, cardiac output falls."
+    },
+    {
+      "id": "cpr_entry_002",
+      "question": "What is the highest-priority initial treatment for ventricular fibrillation (VF)?",
+      "choices": [
+        "IV epinephrine",
+        "Endotracheal intubation",
+        "Defibrillation (electric shock)",
+        "IV amiodarone"
+      ],
+      "answers": [2],
+      "selectCount": 1,
+      "explanation": "Defibrillation is the top priority for VF. Earlier defibrillation improves survival. Medications such as epinephrine and amiodarone are considered after unsuccessful defibrillation attempts."
+    }
+  ]
+}

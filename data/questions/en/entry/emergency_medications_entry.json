@@ -1,0 +1,72 @@
+{
+  "category": "Emergency Medications",
+  "questions": [
+    {
+      "id": "ed_first_steps_004",
+      "question": "A 65-year-old woman weighing 50 kg with a urinary tract infection has a blood pressure drop to 70/35 mmHg and a heart rate of 85/min. You want to start norepinephrine (1 mg/1 mL) at 0.1 mcg/kg/min. Which statement is correct?",
+      "choices": [
+        "Start norepinephrine 1 ampule + normal saline 49 mL at 1 mL/h",
+        "Start norepinephrine 1 ampule + normal saline 49 mL at 3 mL/h",
+        "Start norepinephrine 3 ampules + normal saline 47 mL at 1 mL/h",
+        "Start norepinephrine 3 ampules + normal saline 47 mL at 3 mL/h",
+        "Start norepinephrine 5 ampules + normal saline 45 mL at 3 mL/h"
+      ],
+      "answers": [4],
+      "selectCount": 1,
+      "explanation": "For a 50 kg patient, 0.1 mcg/kg/min is 5 mcg/min, which is 300 mcg/h (0.3 mg/h). Diluting 5 mg of norepinephrine to a total volume of 50 mL gives 0.1 mg/mL, and 3 mL/h delivers 0.3 mg/h."
+    },
+    {
+      "id": "ed_first_steps_010",
+      "question": "Which of the following treatments is incorrect?",
+      "choices": [
+        "Prescribed Baktar/Septra (trimethoprim-sulfamethoxazole) 4 tablets in 2 divided doses for cystitis in a pregnant patient",
+        "Prescribed loxoprofen for a man in his 30s with ureteral stone disease",
+        "For redness 12 hours after a cat bite, prescribed Augmentin 3 tablets in 3 divided doses plus amoxicillin 3 capsules in 3 divided doses",
+        "Prescribed amoxicillin 4 capsules in 2 divided doses for 10 days for streptococcal infection in an 18-year-old woman",
+        "Observed a patient with mild acute sinusitis without prescribing antibiotics"
+      ],
+      "answers": [0],
+      "selectCount": 1,
+      "explanation": "Trimethoprim-sulfamethoxazole is contraindicated in pregnancy. In early pregnancy it carries teratogenic risk through folate antagonism, and later in pregnancy it can increase the risk of kernicterus. A cephalosporin such as cephalexin is a first-line option for cystitis in pregnancy."
+    },
+    {
+      "id": "emergency_medications_entry_001",
+      "question": "What is the first-line medication for anaphylactic shock?",
+      "choices": [
+        "IV diphenhydramine (antihistamine)",
+        "Intramuscular epinephrine into the lateral thigh",
+        "IV hydrocortisone",
+        "Inhaled salbutamol"
+      ],
+      "answers": [1],
+      "selectCount": 1,
+      "explanation": "The first-line treatment for anaphylaxis is intramuscular epinephrine 0.3-0.5 mg into the lateral thigh. Antihistamines and corticosteroids are adjunctive medications and cannot save a life when used alone. Prompt administration determines prognosis."
+    },
+    {
+      "id": "emergency_medications_entry_002",
+      "question": "Which medication is used first as initial drug treatment for an acute seizure?",
+      "choices": [
+        "IV phenobarbital",
+        "IV phenytoin",
+        "A benzodiazepine such as diazepam or midazolam",
+        "IV valproate"
+      ],
+      "answers": [2],
+      "selectCount": 1,
+      "explanation": "Benzodiazepines such as diazepam, midazolam, and lorazepam are first-line treatment for seizures. They act rapidly and can be given by various routes, including IV, IM, intranasal, and rectal routes. Phenytoin and phenobarbital are second- or third-line agents."
+    },
+    {
+      "id": "emergency_medications_entry_003",
+      "question": "Which statement correctly compares acetaminophen and NSAIDs such as loxoprofen?",
+      "choices": [
+        "NSAIDs can be used safely in patients with impaired renal function",
+        "Acetaminophen has a lower risk of gastrointestinal injury",
+        "NSAIDs are more hepatotoxic than acetaminophen",
+        "Acetaminophen has strong anti-inflammatory effects"
+      ],
+      "answers": [1],
+      "selectCount": 1,
+      "explanation": "Acetaminophen has little effect on prostaglandin synthesis in the gastrointestinal mucosa, so the risk of gastrointestinal mucosal injury is lower. NSAIDs require caution in patients with renal dysfunction, gastrointestinal bleeding risk, and older age. Hepatotoxicity is a concern with acetaminophen overdose."
+    }
+  ]
+}

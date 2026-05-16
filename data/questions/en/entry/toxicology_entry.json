@@ -1,0 +1,70 @@
+{
+  "category": "Toxicology",
+  "questions": [
+    {
+      "id": "toxicology_entry_001",
+      "question": "Which is a characteristic muscarinic symptom of organophosphate pesticide poisoning?",
+      "choices": [
+        "Mydriasis, tachycardia, and dry mouth (anticholinergic symptoms)",
+        "Miosis, salivation, bronchospasm, and bradycardia",
+        "Fever, hypertension, and muscle rigidity",
+        "Jaundice, hepatomegaly, and coagulopathy"
+      ],
+      "answers": [1],
+      "selectCount": 1,
+      "explanation": "Organophosphate poisoning inhibits cholinesterase, causing acetylcholine accumulation. Muscarinic symptoms are characteristic and can be remembered with DUMBELS: diarrhea, urination, miosis, bradycardia or bronchospasm, emesis, lacrimation, and salivation. Antidotes are atropine for muscarinic antagonism and pralidoxime (PAM) for cholinesterase reactivation."
+    },
+    {
+      "id": "toxicology_entry_002",
+      "question": "Which organ injury is the main concern in acetaminophen overdose?",
+      "choices": [
+        "Renal injury",
+        "Liver injury",
+        "Cardiotoxicity such as QT prolongation and arrhythmia",
+        "Neurotoxicity such as seizures and altered mental status"
+      ],
+      "answers": [1],
+      "selectCount": 1,
+      "explanation": "Hepatotoxicity is the major concern in acetaminophen overdose. The metabolite NAPQI depletes glutathione and injures hepatocytes, potentially leading to acute liver failure. The antidote is N-acetylcysteine (NAC), which is most effective when given within 8 hours after ingestion."
+    },
+    {
+      "id": "toxicology_entry_003",
+      "question": "What is the antidote for acetaminophen overdose?",
+      "choices": [
+        "Flumazenil",
+        "N-acetylcysteine (NAC)",
+        "Atropine",
+        "Naloxone"
+      ],
+      "answers": [1],
+      "selectCount": 1,
+      "explanation": "NAC acts as a precursor of glutathione in the liver and helps detoxify NAPQI. Both oral and IV administration are effective. The indication for treatment is assessed using the ingested dose and the Rumack-Matthew nomogram."
+    },
+    {
+      "id": "toxicology_entry_004",
+      "question": "What is the classic triad of opioid toxicity?",
+      "choices": [
+        "Mydriasis, tachycardia, and hypertension",
+        "Miosis, altered mental status, and respiratory depression",
+        "Fever, sweating, and diarrhea",
+        "Dry mouth, urinary retention, and hallucinations"
+      ],
+      "answers": [1],
+      "selectCount": 1,
+      "explanation": "The classic triad of opioid toxicity is miosis (pinpoint pupils), altered mental status or coma, and respiratory depression. The antidote is naloxone, an opioid antagonist. Because its duration is short, repeat dosing or continuous infusion may be needed."
+    },
+    {
+      "id": "toxicology_entry_005",
+      "question": "What is the antidote for benzodiazepine overdose?",
+      "choices": [
+        "Naloxone",
+        "Flumazenil",
+        "N-acetylcysteine",
+        "Atropine"
+      ],
+      "answers": [1],
+      "selectCount": 1,
+      "explanation": "Flumazenil competitively antagonizes the benzodiazepine binding site on the GABA-A receptor and can reverse sedation and respiratory depression. Note that its effect is short-lived, about 30-60 minutes, and it can precipitate seizures in patients with epilepsy or benzodiazepine dependence."
+    }
+  ]
+}

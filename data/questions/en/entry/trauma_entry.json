@@ -1,0 +1,71 @@
+{
+  "category": "Major Trauma",
+  "questions": [
+    {
+      "id": "ed_first_steps_009",
+      "question": "Select the one incorrect item in trauma patient management.",
+      "choices": [
+        "Temperature measurement and warming are performed in E assessment because hypothermia causes coagulopathy",
+        "In A assessment, the patient's voice was checked and the oral cavity and anterior neck were briefly inspected",
+        "In B assessment, SpO2 was normal but marked tenderness over the right anterior chest was considered abnormal",
+        "As part of C assessment, FAST was performed to rapidly determine whether retroperitoneal bleeding was present",
+        "In D assessment, GCS was 6, so this was judged as impending D"
+      ],
+      "answers": [3],
+      "selectCount": 1,
+      "explanation": "FAST rapidly evaluates fluid accumulation in the peritoneal cavity, pericardium, and thoracic cavity, but it has limitations for evaluating retroperitoneal bleeding. If circulation permits, contrast-enhanced CT is useful for assessing retroperitoneal hemorrhage. In A assessment, check voice, oral cavity, and facial or anterior neck trauma. In B assessment, even with normal SpO2, chest tenderness, asymmetric breath sounds, subcutaneous emphysema, or flail chest should be treated as abnormal. In D assessment, GCS 8 or less is impending D and requires urgent response. In E assessment, prevent hypothermia while undressing the patient for full exposure."
+    },
+    {
+      "id": "trauma_entry_001",
+      "question": "Which is incorrect as an example of impending D in initial trauma care?",
+      "choices": [
+        "GCS 8 or less",
+        "Rapidly progressive altered mental status",
+        "New hemiparesis or anisocoria",
+        "JCS 1 and able to converse"
+      ],
+      "answers": [3],
+      "selectCount": 1,
+      "explanation": "D stands for Disability, the neurologic assessment. Impending D includes GCS 8 or less, rapidly progressive altered mental status, anisocoria, hemiparesis, seizures, decerebrate or decorticate posturing, and similar findings. These raise concern for intracranial hemorrhage or brain herniation and require rapid management. JCS 1 with the ability to converse is only mild impairment and is not usually considered impending D."
+    },
+    {
+      "id": "trauma_entry_002",
+      "question": "When performing chest tube drainage for traumatic pneumothorax, which is the usual appropriate insertion site?",
+      "choices": [
+        "Second intercostal space at the midclavicular line",
+        "Fourth to fifth intercostal space at the anterior to midaxillary line",
+        "Second intercostal space at the right sternal border",
+        "Eighth to ninth intercostal space at the posterior axillary line"
+      ],
+      "answers": [1],
+      "selectCount": 1,
+      "explanation": "For traumatic pneumothorax, chest tube drainage is generally performed in the safe triangle, around the fourth to fifth intercostal space near the anterior to midaxillary line. Insert along the upper edge of the rib to avoid the intercostal neurovascular bundle. The second intercostal space at the midclavicular line may be used for emergency decompression of tension pneumothorax but is not the standard site for chest tube insertion. The eighth to ninth intercostal space at the posterior axillary line carries risk of intra-abdominal organ injury or diaphragm injury and is inappropriate as a usual chest tube site for traumatic pneumothorax."
+    },
+    {
+      "id": "trauma_entry_003",
+      "question": "A trauma patient with suspected pelvic fracture is in shock. Which management is appropriate?",
+      "choices": [
+        "To check for fracture, place body weight on the pelvis and rock it to assess stability",
+        "If shock due to pelvic fracture is suspected, apply a pelvic binder",
+        "Pelvic binder placement is contraindicated until fracture is confirmed by X-ray",
+        "A pelvic binder should be worn for 1-2 weeks"
+      ],
+      "answers": [1],
+      "selectCount": 1,
+      "explanation": "If a trauma patient with suspected pelvic fracture is in shock, massive bleeding from pelvic ring injury should be considered and a pelvic binder should be applied early. The binder is placed at the level of the greater trochanters to reduce pelvic volume and help control bleeding. Strongly rocking the pelvis or assessing stability by applying body weight can disrupt clots and worsen hemorrhage, and should be avoided. Even before X-ray confirmation, a binder should be considered when shock from pelvic fracture is suspected. A pelvic binder is a temporary measure for initial hemorrhage control, transport, and evaluation; it is not worn continuously for 1-2 weeks as definitive treatment."
+    },
+    {
+      "id": "trauma_entry_004",
+      "question": "Which finding is incorrect as a reason to consider damage control surgery (DCS) in a trauma patient?",
+      "choices": [
+        "Body temperature below 35 C",
+        "pH below 7.2",
+        "Prolonged PT-INR",
+        "Platelet count 500,000/uL or higher"
+      ],
+      "answers": [3],
+      "selectCount": 1,
+      "explanation": "In major trauma, hypothermia, acidosis, and coagulopathy worsen one another and create a lethal cycle known as the lethal triad. Findings that support considering DCS include hypothermia such as body temperature below 35 C, severe acidosis such as pH below 7.2, and coagulopathy such as prolonged PT-INR, prolonged APTT, thrombocytopenia, or low fibrinogen. A platelet count of 500,000/uL or higher is thrombocytosis and is not a typical coagulopathy finding in the lethal triad that would prompt DCS."
+    }
+  ]
+}
