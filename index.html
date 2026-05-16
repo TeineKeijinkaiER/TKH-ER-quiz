@@ -33,7 +33,7 @@
     </header>
 
     <main>
-      <!-- レベル選択画面（ホーム） -->
+      <!-- メイン画面（レベル選択） -->
       <section id="levelScreen" class="screen is-active" aria-labelledby="levelTitle">
         <div class="level-intro">
           <p class="eyebrow" data-i18n="levelEyebrow">難易度を選んでください</p>
@@ -43,60 +43,64 @@
           <button type="button" class="segment is-active" data-lang="ja" data-i18n="langToggleJa">JP</button>
           <button type="button" class="segment" data-lang="en" data-i18n="langToggleEn">EN</button>
         </div>
+
+        <div class="level-role-block">
+          <fieldset id="roleFieldset" class="role-fieldset">
+            <legend><span data-i18n="roleLegend">職種</span> <span class="role-required-badge" data-i18n="roleRequired">必須</span></legend>
+            <label class="role-option">
+              <input type="radio" name="learnerRole" value="resident_1y">
+              <span data-i18n="roleResident1Y">PGY1</span>
+            </label>
+            <label class="role-option">
+              <input type="radio" name="learnerRole" value="resident_2y">
+              <span data-i18n="roleResident2Y">PGY2</span>
+            </label>
+            <label class="role-option">
+              <input type="radio" name="learnerRole" value="senior_resident">
+              <span data-i18n="roleSeniorResident">専攻医</span>
+            </label>
+            <label class="role-option">
+              <input type="radio" name="learnerRole" value="er_doctor">
+              <span data-i18n="roleErDoctor">救急専門医</span>
+            </label>
+            <label class="role-option">
+              <input type="radio" name="learnerRole" value="other_doctor">
+              <span data-i18n="roleOtherDoctor">他科医師</span>
+            </label>
+            <label class="role-option">
+              <input type="radio" name="learnerRole" value="nurse">
+              <span data-i18n="roleNurse">看護師</span>
+            </label>
+            <label class="role-option">
+              <input type="radio" name="learnerRole" value="student">
+              <span data-i18n="roleStudent">医学生</span>
+            </label>
+            <label class="role-option">
+              <input type="radio" name="learnerRole" value="other">
+              <span data-i18n="roleOther">その他</span>
+            </label>
+          </fieldset>
+          <p id="levelRoleStatus" class="status-text level-role-status" role="status" aria-live="polite"></p>
+        </div>
+
         <div id="levelGrid" class="level-grid"></div>
         <p class="disclaimer" data-i18n="disclaimer">
           ⚠️ このクイズは学習目的のコンテンツです。実際の臨床現場で患者を診療する際は、必ず最新のガイドラインや医療情報をご確認ください。
         </p>
       </section>
 
-      <!-- カテゴリー・設定画面 -->
+      <!-- カテゴリ選択画面 -->
       <section id="setupScreen" class="screen" aria-labelledby="setupTitle" hidden>
         <div class="setup-layout">
           <aside class="panel setup-panel">
-            <h2 id="setupTitle" data-i18n="setupTitle">クイズ設定</h2>
+            <div class="setup-panel__header">
+              <button id="backToLevelButton" class="text-button" type="button" data-i18n="btnHome">メイン画面</button>
+              <h2 id="setupTitle" data-i18n="setupTitle">クイズ設定</h2>
+            </div>
             <div class="lang-toggle" role="group" aria-label="Language / 言語" id="langToggleSetup">
               <button type="button" class="segment is-active" data-lang="ja" data-i18n="langToggleJa">JP</button>
               <button type="button" class="segment" data-lang="en" data-i18n="langToggleEn">EN</button>
             </div>
-            <fieldset id="roleFieldset" class="role-fieldset">
-              <legend><span data-i18n="roleLegend">職種</span> <span data-i18n="roleRequired">必須</span></legend>
-              <label class="role-option">
-                <input type="radio" name="learnerRole" value="resident_1y">
-                <span data-i18n="roleResident1Y">研修医（1年目）</span>
-              </label>
-              <label class="role-option">
-                <input type="radio" name="learnerRole" value="resident_2y">
-                <span data-i18n="roleResident2Y">研修医（2年目）</span>
-              </label>
-              <label class="role-option">
-                <input type="radio" name="learnerRole" value="senior_resident">
-                <span data-i18n="roleSeniorResident">専攻医</span>
-              </label>
-              <label class="role-option">
-                <input type="radio" name="learnerRole" value="er_doctor">
-                <span data-i18n="roleErDoctor">救急専門医</span>
-              </label>
-              <label class="role-option">
-                <input type="radio" name="learnerRole" value="other_doctor">
-                <span data-i18n="roleOtherDoctor">他科医師</span>
-              </label>
-              <label class="role-option">
-                <input type="radio" name="learnerRole" value="nurse">
-                <span data-i18n="roleNurse">看護師</span>
-              </label>
-              <label class="role-option">
-                <input type="radio" name="learnerRole" value="other">
-                <span data-i18n="roleOther">その他</span>
-              </label>
-            </fieldset>
-
-            <fieldset class="segmented-control">
-              <legend data-i18n="levelLegend">レベル</legend>
-              <button class="segment" type="button" data-level="entry" data-i18n="levelEntry">Entry</button>
-              <button class="segment" type="button" data-level="basic" data-i18n="levelBasic">Basic</button>
-              <button class="segment" type="button" data-level="advanced" data-i18n="levelAdvanced">Advanced</button>
-              <button class="segment" type="button" data-level="master" data-i18n="levelMaster">Master</button>
-            </fieldset>
 
             <fieldset class="segmented-control">
               <legend data-i18n="countLegend">出題数</legend>
@@ -228,11 +232,11 @@
         <legend><span data-i18n="roleLegend">職種</span> <span data-i18n="roleRequired">必須</span></legend>
         <label class="role-option">
           <input type="radio" name="certRole" value="resident_1y">
-          <span data-i18n="roleResident1Y">研修医（1年目）</span>
+          <span data-i18n="roleResident1Y">PGY1</span>
         </label>
         <label class="role-option">
           <input type="radio" name="certRole" value="resident_2y">
-          <span data-i18n="roleResident2Y">研修医（2年目）</span>
+          <span data-i18n="roleResident2Y">PGY2</span>
         </label>
         <label class="role-option">
           <input type="radio" name="certRole" value="senior_resident">
@@ -249,6 +253,10 @@
         <label class="role-option">
           <input type="radio" name="certRole" value="nurse">
           <span data-i18n="roleNurse">看護師</span>
+        </label>
+        <label class="role-option">
+          <input type="radio" name="certRole" value="student">
+          <span data-i18n="roleStudent">医学生</span>
         </label>
         <label class="role-option">
           <input type="radio" name="certRole" value="other">

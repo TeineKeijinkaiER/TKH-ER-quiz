@@ -928,12 +928,45 @@ button:focus-visible {
   margin-bottom: 20px;
 }
 
+/* Role selector block on the main (level) screen */
+.level-role-block {
+  max-width: 480px;
+  margin: 0 auto 24px;
+}
+
+.level-role-block .role-fieldset legend {
+  margin-top: 0;
+}
+
+.level-role-block .role-required-badge {
+  color: var(--danger);
+  font-size: 0.78rem;
+}
+
+.level-role-status {
+  margin-top: 6px;
+  min-height: 1.2em;
+}
+
 .level-grid {
   display: flex;
   flex-direction: column;
   gap: 14px;
   max-width: 480px;
   margin: 0 auto;
+}
+
+/* Setup panel back-button header */
+.setup-panel__header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 6px;
+}
+
+.setup-panel__header h2 {
+  margin: 0;
+  font-size: 1.1rem;
 }
 
 .disclaimer {

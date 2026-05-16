@@ -209,10 +209,11 @@ async function loadAppConfig() {
 
 function cacheElements() {
   [
-    "levelScreen", "levelGrid",
+    "levelScreen", "levelGrid", "levelRoleStatus",
     "setupScreen", "quizScreen", "resultScreen", "rankingScreen", "clearScreen",
     "clearBanner", "clearTabs", "clearList",
     "categoryGrid", "selectedCategoryLabel", "setupStatus",
+    "backToLevelButton",
     "noticeButton", "rankingButton", "muteButton",
     "clearButton", "closeClearButton",
     "quitQuizButton", "pauseQuizButton", "quizCategory", "quizProgress",
@@ -256,24 +257,6 @@ function setLanguage(lang) {
 }
 
 function bindEvents() {
-  // Level buttons in setup panel
-  document.querySelectorAll("[data-level]").forEach((button) => {
-    button.addEventListener("click", () => {
-      state.selectedLevel = button.dataset.level;
-      const data = readStore();
-      data.selectedLevel = state.selectedLevel;
-      writeStore(data);
-      updateLevelButtons();
-      const levelCats = state.categories.filter((c) => c.level === state.selectedLevel);
-      state.selectedCategoryId = levelCats[0]?.id || "";
-      renderCategories();
-      renderQuestionCountControls();
-      updateSetupSummary();
-      // Restart opening music with the new level's theme
-      startOpeningMusic();
-    });
-  });
-
   document.querySelectorAll("[data-count]").forEach((button) => {
     button.addEventListener("click", () => {
       if (button.disabled) return;
@@ -286,7 +269,7 @@ function bindEvents() {
 
   els.rankingButton.addEventListener("click", () => openRanking("all"));
   els.resultRankingButton.addEventListener("click", () => openRanking("all"));
-  els.closeRankingButton.addEventListener("click", goToSetupBasic);
+  els.closeRankingButton.addEventListener("click", () => showScreen("level"));
   els.quitQuizButton.addEventListener("click", () => { stopTimer(); state.certMode = false; showScreen("level"); });
   els.pauseQuizButton.addEventListener("click", togglePause);
   els.retryButton.addEventListener("click", () => {
@@ -307,7 +290,8 @@ function bindEvents() {
   document.getElementById("certCelebCloseButton").addEventListener("click", closeCertCelebration);
   els.toggleReviewButton.addEventListener("click", toggleReview);
   els.clearButton.addEventListener("click", () => { renderClearScreen(); showScreen("clear"); });
-  els.closeClearButton.addEventListener("click", goToSetupBasic);
+  els.closeClearButton.addEventListener("click", () => showScreen("level"));
+  els.backToLevelButton.addEventListener("click", () => showScreen("level"));
   document.querySelectorAll('input[name="learnerRole"]').forEach((input) => {
     input.addEventListener("change", () => {
       state.learnerRoleId = input.value;
@@ -570,7 +554,10 @@ function renderQuestionCountControls() {
 function updateSetupSummary() {
   const category = getSelectedCategory();
   els.selectedCategoryLabel.textContent = category ? `${category.name} / ${state.questionCount}${t("countSuffix", state.lang)}` : t("noSelection", state.lang);
-  els.setupStatus.textContent = state.learnerRoleId ? "" : t("roleSelectPrompt", state.lang);
+  // Role status lives on the main (level) screen
+  if (els.levelRoleStatus) {
+    els.levelRoleStatus.textContent = state.learnerRoleId ? "" : t("roleSelectPrompt", state.lang);
+  }
 }
 
 function getSelectedCategory() {
@@ -639,9 +626,15 @@ function startQuiz() {
   if (state.questionCount > sourceQuestions.length) {
     els.setupStatus.textContent = t("errorInsufficientQuestions", state.lang); return;
   }
-  if (!state.learnerRoleId) {
-    els.setupStatus.textContent = t("roleSelectPrompt", state.lang); return;
+  const checkedRole = document.querySelector('input[name="learnerRole"]:checked');
+  if (!checkedRole) {
+    state.learnerRoleId = "";
+    // Role selector is on the main screen — go back there and highlight the prompt
+    if (els.levelRoleStatus) els.levelRoleStatus.textContent = t("roleSelectPrompt", state.lang);
+    showScreen("level");
+    return;
   }
+  state.learnerRoleId = checkedRole.value;
   state.wasCategoryClearAtStart = isClear(category.id);
   ensureAudioContext();
   persistLearnerRole();
@@ -1188,28 +1181,31 @@ function showScreen(name) {
 
 function loadStoredState() {
   const data = readStore();
-  state.learnerRoleId = data.learnerRoleId || "";
   state.selectedLevel = data.selectedLevel || "basic";
   state.lang = resolveInitialLang(data.lang);
-  if (state.learnerRoleId) {
-    const input = document.querySelector(`input[name="learnerRole"][value="${state.learnerRoleId}"]`);
-    if (input) input.checked = true;
+  const storedRole = data.learnerRoleId || "";
+  if (storedRole) {
+    const input = document.querySelector(`input[name="learnerRole"][value="${storedRole}"]`);
+    if (input) {
+      input.checked = true;
+      state.learnerRoleId = storedRole;
+    } else {
+      // Stale value from old schema — no matching radio button exists, clear it
+      state.learnerRoleId = "";
+    }
+  } else {
+    state.learnerRoleId = "";
   }
   updateMuteButton(data.muted);
   updateLevelButtons();
+  // Show role prompt on main screen if no role stored
+  if (els.levelRoleStatus) {
+    els.levelRoleStatus.textContent = state.learnerRoleId ? "" : t("roleSelectPrompt", state.lang);
+  }
 }
 
 function goToSetupBasic() {
-  state.selectedLevel = "basic";
-  const data = readStore();
-  data.selectedLevel = "basic";
-  writeStore(data);
-  updateLevelButtons();
-  state.selectedCategoryId = state.categories.filter((c) => c.level === "basic")[0]?.id || "";
-  showScreen("setup");
-  renderCategories();
-  renderQuestionCountControls();
-  updateSetupSummary();
+  showScreen("level");
 }
 
 function checkAndInvalidateStaleClears() {
@@ -1257,6 +1253,7 @@ const ROLE_I18N_KEY = {
   er_doctor: "roleErDoctor",
   other_doctor: "roleOtherDoctor",
   nurse: "roleNurse",
+  student: "roleStudent",
   other: "roleOther",
   // Legacy values kept for backward display of old records
   resident: "roleResident",
