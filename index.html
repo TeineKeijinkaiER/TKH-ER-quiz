@@ -61,23 +61,31 @@
             <fieldset id="roleFieldset" class="role-fieldset">
               <legend><span data-i18n="roleLegend">職種</span> <span data-i18n="roleRequired">必須</span></legend>
               <label class="role-option">
-                <input type="radio" name="learnerRole" value="resident" data-role-label="研修医">
-                <span data-i18n="roleResident">研修医</span>
+                <input type="radio" name="learnerRole" value="resident_1y">
+                <span data-i18n="roleResident1Y">研修医（1年目）</span>
               </label>
               <label class="role-option">
-                <input type="radio" name="learnerRole" value="senior_resident" data-role-label="専攻医">
+                <input type="radio" name="learnerRole" value="resident_2y">
+                <span data-i18n="roleResident2Y">研修医（2年目）</span>
+              </label>
+              <label class="role-option">
+                <input type="radio" name="learnerRole" value="senior_resident">
                 <span data-i18n="roleSeniorResident">専攻医</span>
               </label>
               <label class="role-option">
-                <input type="radio" name="learnerRole" value="doctor" data-role-label="医師">
-                <span data-i18n="roleDoctor">医師</span>
+                <input type="radio" name="learnerRole" value="er_doctor">
+                <span data-i18n="roleErDoctor">救急専門医</span>
               </label>
               <label class="role-option">
-                <input type="radio" name="learnerRole" value="nurse" data-role-label="看護師">
+                <input type="radio" name="learnerRole" value="other_doctor">
+                <span data-i18n="roleOtherDoctor">他科医師</span>
+              </label>
+              <label class="role-option">
+                <input type="radio" name="learnerRole" value="nurse">
                 <span data-i18n="roleNurse">看護師</span>
               </label>
               <label class="role-option">
-                <input type="radio" name="learnerRole" value="other" data-role-label="その他">
+                <input type="radio" name="learnerRole" value="other">
                 <span data-i18n="roleOther">その他</span>
               </label>
             </fieldset>
@@ -199,6 +207,7 @@
             <h2 id="clearTitle" data-i18n="clearTitle">クリア記録</h2>
           </div>
           <div class="section-heading__actions">
+            <button id="resetCertButton" class="text-button danger-button" type="button" data-i18n="btnResetCert">検定記録を削除</button>
             <button id="resetClearButton" class="text-button danger-button" type="button" data-i18n="btnResetClear">クリア記録を全削除</button>
             <button id="closeClearButton" class="primary-button is-home" type="button" data-i18n="btnHome">メイン画面</button>
           </div>
@@ -215,23 +224,27 @@
     <div class="modal-panel">
       <h2 data-i18n="certModalTitle">検定 受験登録</h2>
       <p id="certModalLevelLabel" class="cert-modal__level"></p>
-      <div class="cert-modal__field">
-        <label for="certNameInput" data-i18n="certNameLabel">氏名</label>
-        <input type="text" id="certNameInput" class="cert-modal__input" maxlength="50" autocomplete="name">
-      </div>
       <fieldset class="role-fieldset">
         <legend><span data-i18n="roleLegend">職種</span> <span data-i18n="roleRequired">必須</span></legend>
         <label class="role-option">
-          <input type="radio" name="certRole" value="resident">
-          <span data-i18n="roleResident">研修医</span>
+          <input type="radio" name="certRole" value="resident_1y">
+          <span data-i18n="roleResident1Y">研修医（1年目）</span>
+        </label>
+        <label class="role-option">
+          <input type="radio" name="certRole" value="resident_2y">
+          <span data-i18n="roleResident2Y">研修医（2年目）</span>
         </label>
         <label class="role-option">
           <input type="radio" name="certRole" value="senior_resident">
           <span data-i18n="roleSeniorResident">専攻医</span>
         </label>
         <label class="role-option">
-          <input type="radio" name="certRole" value="doctor">
-          <span data-i18n="roleDoctor">医師</span>
+          <input type="radio" name="certRole" value="er_doctor">
+          <span data-i18n="roleErDoctor">救急専門医</span>
+        </label>
+        <label class="role-option">
+          <input type="radio" name="certRole" value="other_doctor">
+          <span data-i18n="roleOtherDoctor">他科医師</span>
         </label>
         <label class="role-option">
           <input type="radio" name="certRole" value="nurse">

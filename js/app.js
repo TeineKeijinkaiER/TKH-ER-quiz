@@ -221,7 +221,7 @@ function cacheElements() {
     "retryButton", "backToSetupButton", "resultRankingButton",
     "toggleReviewButton", "reviewList",
     "rankingTabs", "rankingList", "rankingEmpty", "closeRankingButton",
-    "resetRankingButton", "resetClearButton",
+    "resetRankingButton", "resetClearButton", "resetCertButton",
     "noticeModal", "noticeBody", "noticeUpdateList", "noticeCloseButton",
   ].forEach((id) => { els[id] = document.getElementById(id); });
 }
@@ -336,6 +336,10 @@ function bindEvents() {
     renderClearScreen();
     renderLevelScreen();
     if (state.selectedLevel) renderCategories();
+  });
+  els.resetCertButton.addEventListener("click", () => {
+    if (!window.confirm(t("confirmResetCert", state.lang))) return;
+    resetCertPasses();
   });
 }
 
@@ -900,10 +904,11 @@ function finishQuiz() {
   if (state.certMode) {
     const passed = state.score >= CERT_PASS_THRESHOLD;
     state.certPassed = passed;
+    const certLevel = state.levels.find((l) => l.id === state.certLevelId);
+    const certLevelName = certLevel ? certLevel.name : state.certLevelId;
     if (passed) {
       saveCertPass({
         levelId: state.certLevelId,
-        name: state.certName,
         roleId: state.learnerRoleId,
         roleName: getLearnerRoleName(),
         score: state.score,
@@ -911,13 +916,27 @@ function finishQuiz() {
         timestamp: Date.now(),
       });
     }
+    // Send to Google Spreadsheet / local backend (same sheet, extra columns)
+    const certResult = {
+      roleId: state.learnerRoleId,
+      roleName: getLearnerRoleName(),
+      categoryId: `cert_${state.certLevelId}`,
+      categoryName: `${certLevelName} ${t("certQuizLabel", state.lang)}`,
+      questionCount: CERT_QUESTION_COUNT,
+      score: state.score,
+      totalTimeMs,
+      timestamp: Date.now(),
+      isCert: true,
+      certPassed: passed,
+    };
+    sendResultToBackend(certResult);
     renderCertResult(passed, totalTimeMs);
     showScreen("result");
     playTone("finish");
     if (passed) {
       window.setTimeout(() => {
         playCertFanfare();
-        showCertCelebration(state.certName, state.certLevelId, state.score);
+        showCertCelebration(state.certLevelId, state.score);
       }, 600);
     }
     return;
@@ -934,6 +953,8 @@ function finishQuiz() {
     score: state.score,
     totalTimeMs,
     timestamp: Date.now(),
+    isCert: false,
+    certPassed: null,
   };
   addRanking(result);
   // correctQuestions has already been updated incrementally in handleAnswer.
@@ -1230,11 +1251,16 @@ function persistLearnerRole() {
 }
 
 const ROLE_I18N_KEY = {
-  resident: "roleResident",
+  resident_1y: "roleResident1Y",
+  resident_2y: "roleResident2Y",
   senior_resident: "roleSeniorResident",
-  doctor: "roleDoctor",
+  er_doctor: "roleErDoctor",
+  other_doctor: "roleOtherDoctor",
   nurse: "roleNurse",
   other: "roleOther",
+  // Legacy values kept for backward display of old records
+  resident: "roleResident",
+  doctor: "roleDoctor",
 };
 
 function getLearnerRoleName() {
@@ -1656,31 +1682,22 @@ function openCertModal(levelId) {
     const input = document.querySelector(`input[name="certRole"][value="${state.learnerRoleId}"]`);
     if (input) input.checked = true;
   }
-  const nameInput = document.getElementById("certNameInput");
-  nameInput.placeholder = t("certNamePlaceholder", state.lang);
-  nameInput.value = state.certName || "";
   document.getElementById("certModalStatus").textContent = "";
   document.getElementById("certModal").hidden = false;
-  nameInput.focus();
 }
 
 function submitCertModal() {
-  const name = document.getElementById("certNameInput").value.trim();
   const roleInput = document.querySelector("input[name=\"certRole\"]:checked");
   const statusEl = document.getElementById("certModalStatus");
-  if (!name) {
-    statusEl.textContent = t("certNameRequired", state.lang);
-    return;
-  }
   if (!roleInput) {
     statusEl.textContent = t("roleSelectPrompt", state.lang);
     return;
   }
   document.getElementById("certModal").hidden = true;
-  startCertExam(name, roleInput.value);
+  startCertExam(roleInput.value);
 }
 
-function startCertExam(name, roleId) {
+function startCertExam(roleId) {
   // Gather all unique questions from every category in this level
   const levelCats = state.categories.filter((c) => c.level === state.certLevelId);
   const seen = new Set();
@@ -1698,7 +1715,7 @@ function startCertExam(name, roleId) {
 
   state.certMode = true;
   state.certPassed = false;
-  state.certName = name;
+  state.certName = "";
   state.learnerRoleId = roleId;
 
   ensureAudioContext();
@@ -1753,16 +1770,22 @@ function saveCertPass(record) {
   writeStore(data);
 }
 
+function resetCertPasses() {
+  const data = readStore();
+  data.certPasses = [];
+  writeStore(data);
+}
+
 // ── Cert celebration overlay ──────────────────────────────────────────────────
 
-function showCertCelebration(name, levelId, score) {
+function showCertCelebration(levelId, score) {
   const overlay = document.getElementById("certCelebration");
   if (!overlay) return;
   const level = state.levels.find((l) => l.id === levelId);
   const levelName = level ? level.name : levelId;
   document.getElementById("certCelebTitle").textContent = t("certCelebTitle", state.lang);
   document.getElementById("certCelebLevel").textContent = `${levelName} ${t("certCelebLevelSuffix", state.lang)}`;
-  document.getElementById("certCelebName").textContent = name;
+  document.getElementById("certCelebName").textContent = getLearnerRoleName();
   document.getElementById("certCelebScore").textContent = `${score} / ${CERT_QUESTION_COUNT}`;
   document.getElementById("certCelebDate").textContent = new Intl.DateTimeFormat(
     t("dateLocale", state.lang), { year: "numeric", month: "2-digit", day: "2-digit" },
