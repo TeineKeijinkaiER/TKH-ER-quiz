@@ -2,6 +2,9 @@ const STORAGE_KEY = "qqq_state_v1";
 const STORAGE_SCHEMA_VERSION = 2;
 const LOCAL_BACKEND_EVENT_URL = "http://127.0.0.1:8787/api/events";
 const QUESTION_SECONDS = 30;
+const CERT_QUESTION_COUNT = 20;
+const CERT_SECONDS = 20;
+const CERT_PASS_THRESHOLD = 18;
 const TIMER_CIRCUMFERENCE = 2 * Math.PI * 52;
 const NEXT_QUESTION_DELAY_MS = 950;
 
@@ -10,6 +13,12 @@ const NEXT_QUESTION_DELAY_MS = 950;
 // interval = ms per step (lower = faster/more tense)
 // ──────────────────────────────────────────────────────────────────────────────
 const QUIZ_MUSIC = {
+  // ENTRY — very gentle (triangle, slowest intervals, lowest gain)
+  entry: {
+    normal: { pattern: [523, 0, 659, 0, 784, 0, 659, 0], interval: 250, wave: "triangle", gain: 0.017 },
+    medium: { pattern: [523, 659, 784, 659, 523, 440, 523, 659], interval: 165, wave: "triangle", gain: 0.021 },
+    high:   { pattern: [523, 659, 784, 880, 784, 659, 784, 880], interval: 95,  wave: "triangle", gain: 0.026 },
+  },
   basic: {
     normal: { pattern: [523, 659, 784, 659, 523, 440, 523, 659], interval: 200, wave: "square",   gain: 0.022 },
     medium: { pattern: [523, 659, 784, 880, 784, 659, 523, 659], interval: 140, wave: "square",   gain: 0.026 },
@@ -34,6 +43,24 @@ const QUIZ_MUSIC = {
 // 0 = rest. Step index loops through `barSteps`.
 // ──────────────────────────────────────────────────────────────────────────────
 const OPENING_MUSIC = {
+  // ENTRY — gentle lullaby (C major, ~62bpm), flowing stepwise melody, no drums
+  entry: {
+    intervalMs: 240,
+    barSteps: 32,
+    melody:  [523, 0, 659, 0, 784, 0, 659, 0,  523, 0, 440, 0, 392, 0, 0, 0,
+              523, 0, 587, 0, 659, 0, 698, 0,  659, 0, 587, 0, 523, 0, 0, 0],
+    melodyWave: "triangle",
+    melodyGain: 0.019,
+    counter: [262, 0, 0, 0, 330, 0, 0, 0,  262, 0, 0, 0, 196, 0, 0, 0,
+              262, 0, 0, 0, 294, 0, 0, 0,  330, 0, 0, 0, 262, 0, 0, 0],
+    counterWave: "triangle",
+    counterGain: 0.009,
+    bass:    [ 65, 0, 0, 0,  98, 0, 0, 0,   65, 0, 0, 0,  98, 0, 0, 0,
+               65, 0, 0, 0,  87, 0, 0, 0,   82, 0, 0, 0,  65, 0, 0, 0],
+    bassWave: "triangle",
+    bassGain: 0.020,
+    drums: null,
+  },
   // BASIC — peaceful village (C major, ~86bpm), I-vi-IV-V progression
   basic: {
     intervalMs: 175,
@@ -127,6 +154,10 @@ const state = {
   googleSheetsWebAppUrl: "",
   sendToLocalBackend: false,
   lang: "ja",
+  certMode: false,
+  certPassed: false,
+  certName: "",
+  certLevelId: "",
 };
 
 const els = {};
@@ -256,10 +287,24 @@ function bindEvents() {
   els.rankingButton.addEventListener("click", () => openRanking("all"));
   els.resultRankingButton.addEventListener("click", () => openRanking("all"));
   els.closeRankingButton.addEventListener("click", goToSetupBasic);
-  els.quitQuizButton.addEventListener("click", () => { stopTimer(); showScreen("level"); });
+  els.quitQuizButton.addEventListener("click", () => { stopTimer(); state.certMode = false; showScreen("level"); });
   els.pauseQuizButton.addEventListener("click", togglePause);
-  els.retryButton.addEventListener("click", startQuiz);
-  els.backToSetupButton.addEventListener("click", () => showScreen("level"));
+  els.retryButton.addEventListener("click", () => {
+    if (state.certMode) {
+      openCertModal(state.certLevelId);
+    } else {
+      startQuiz();
+    }
+  });
+  els.backToSetupButton.addEventListener("click", () => { state.certMode = false; showScreen("level"); });
+  document.getElementById("certStartButton").addEventListener("click", submitCertModal);
+  document.getElementById("certCancelButton").addEventListener("click", () => {
+    document.getElementById("certModal").hidden = true;
+  });
+  document.getElementById("certModal").addEventListener("click", (e) => {
+    if (e.target === document.getElementById("certModal")) document.getElementById("certModal").hidden = true;
+  });
+  document.getElementById("certCelebCloseButton").addEventListener("click", closeCertCelebration);
   els.toggleReviewButton.addEventListener("click", toggleReview);
   els.clearButton.addEventListener("click", () => { renderClearScreen(); showScreen("clear"); });
   els.closeClearButton.addEventListener("click", goToSetupBasic);
@@ -436,6 +481,20 @@ function renderLevelScreen() {
       showScreen("setup");
     });
     els.levelGrid.appendChild(card);
+
+    // Always show cert button; locked (greyed) until all categories are cleared
+    const allCleared = levelCats.length > 0 && levelCats.every((c) => isClear(c.id));
+    const certBtn = document.createElement("button");
+    certBtn.type = "button";
+    certBtn.disabled = !allCleared;
+    certBtn.className = "cert-challenge-button" + (allCleared ? "" : " is-locked");
+    if (allCleared) {
+      certBtn.textContent = `🏆 ${level.name} ${t("certChallengeButton", state.lang)}`;
+      certBtn.addEventListener("click", () => openCertModal(level.id));
+    } else {
+      certBtn.textContent = `🔒 ${level.name} ${t("certChallengeButton", state.lang)}  ${clearedCount} / ${levelCats.length}`;
+    }
+    els.levelGrid.appendChild(certBtn);
   });
 }
 
@@ -709,8 +768,12 @@ function updateMultipleChoiceState() {
     : `${t("answerSubmitLabel", state.lang)} (${selectedCount} ${t("answerSelected", state.lang)})`;
 }
 
+function currentQuestionSeconds() {
+  return state.certMode ? CERT_SECONDS : QUESTION_SECONDS;
+}
+
 function startTimer() {
-  state.timerDeadline = Date.now() + QUESTION_SECONDS * 1000;
+  state.timerDeadline = Date.now() + currentQuestionSeconds() * 1000;
   updateTimerDisplay();
   state.timerId = window.setInterval(updateTimerDisplay, 100);
   startQuizMusic();
@@ -754,7 +817,8 @@ function setupTimerArc() {
 function updateTimerDisplay() {
   const remainingMs = Math.max(0, state.timerDeadline - Date.now());
   const remainingSeconds = Math.ceil(remainingMs / 1000);
-  const offset = TIMER_CIRCUMFERENCE * (1 - remainingMs / (QUESTION_SECONDS * 1000));
+  const totalSecs = currentQuestionSeconds();
+  const offset = TIMER_CIRCUMFERENCE * (1 - remainingMs / (totalSecs * 1000));
   const timer = els.timerText.closest(".timer");
 
   els.timerText.textContent = String(remainingSeconds);
@@ -831,6 +895,35 @@ function renderChoiceFeedback(selectedIndexes, correctIndexes) {
 function finishQuiz() {
   stopTimer();
   const totalTimeMs = Date.now() - state.startedAt;
+
+  // ── Certification exam path ───────────────────────────────────────────────
+  if (state.certMode) {
+    const passed = state.score >= CERT_PASS_THRESHOLD;
+    state.certPassed = passed;
+    if (passed) {
+      saveCertPass({
+        levelId: state.certLevelId,
+        name: state.certName,
+        roleId: state.learnerRoleId,
+        roleName: getLearnerRoleName(),
+        score: state.score,
+        totalTimeMs,
+        timestamp: Date.now(),
+      });
+    }
+    renderCertResult(passed, totalTimeMs);
+    showScreen("result");
+    playTone("finish");
+    if (passed) {
+      window.setTimeout(() => {
+        playCertFanfare();
+        showCertCelebration(state.certName, state.certLevelId, state.score);
+      }, 600);
+    }
+    return;
+  }
+
+  // ── Regular quiz path ─────────────────────────────────────────────────────
   const category = getSelectedCategory();
   const result = {
     roleId: state.learnerRoleId,
@@ -1215,12 +1308,14 @@ function readStore() {
       correctQuestions: isCurrentSchema && parsed.correctQuestions && typeof parsed.correctQuestions === "object" ? parsed.correctQuestions : {},
       questionFingerprints: isCurrentSchema && parsed.questionFingerprints && typeof parsed.questionFingerprints === "object" ? parsed.questionFingerprints : {},
       noticeAcknowledged: Boolean(parsed.noticeAcknowledged),
+      certPasses: Array.isArray(parsed.certPasses) ? parsed.certPasses : [],
     };
   } catch {
     return {
       schemaVersion: STORAGE_SCHEMA_VERSION,
       learnerRoleId: "", learnerRoleName: "", muted: false, lang: "", selectedLevel: "basic",
       rankings: [], clears: {}, correctQuestions: {}, questionFingerprints: {}, noticeAcknowledged: false,
+      certPasses: [],
     };
   }
 }
@@ -1349,6 +1444,8 @@ function playOpeningMusicStep(config, generation) {
 function startQuizMusic() {
   if (readStore().muted) return;
   stopMusicLoop();
+  // Certification exam uses heartbeat instead of melodic quiz music
+  if (state.certMode) { startCertHeartbeat(); return; }
   const level = state.selectedLevel || "basic";
   const urgency = state.musicUrgency || "normal";
   const config = (QUIZ_MUSIC[level] || QUIZ_MUSIC.basic)[urgency] || QUIZ_MUSIC.basic.normal;
@@ -1543,6 +1640,355 @@ function playSynthNote(frequency, duration, typeName, gainValue) {
   };
   if (audio.state === "suspended") { audio.resume().then(play).catch(() => {}); return; }
   play();
+}
+
+// ══════════════════════════════════════════════════════════════════════════════
+// CERTIFICATION EXAM
+// ══════════════════════════════════════════════════════════════════════════════
+
+function openCertModal(levelId) {
+  state.certLevelId = levelId;
+  const level = state.levels.find((l) => l.id === levelId);
+  const label = document.getElementById("certModalLevelLabel");
+  if (label) label.textContent = `${level ? level.name : levelId} ${t("certLevelSuffix", state.lang)}`;
+  // Pre-select role if already set
+  if (state.learnerRoleId) {
+    const input = document.querySelector(`input[name="certRole"][value="${state.learnerRoleId}"]`);
+    if (input) input.checked = true;
+  }
+  const nameInput = document.getElementById("certNameInput");
+  nameInput.placeholder = t("certNamePlaceholder", state.lang);
+  nameInput.value = state.certName || "";
+  document.getElementById("certModalStatus").textContent = "";
+  document.getElementById("certModal").hidden = false;
+  nameInput.focus();
+}
+
+function submitCertModal() {
+  const name = document.getElementById("certNameInput").value.trim();
+  const roleInput = document.querySelector("input[name=\"certRole\"]:checked");
+  const statusEl = document.getElementById("certModalStatus");
+  if (!name) {
+    statusEl.textContent = t("certNameRequired", state.lang);
+    return;
+  }
+  if (!roleInput) {
+    statusEl.textContent = t("roleSelectPrompt", state.lang);
+    return;
+  }
+  document.getElementById("certModal").hidden = true;
+  startCertExam(name, roleInput.value);
+}
+
+function startCertExam(name, roleId) {
+  // Gather all unique questions from every category in this level
+  const levelCats = state.categories.filter((c) => c.level === state.certLevelId);
+  const seen = new Set();
+  const allQuestions = [];
+  levelCats.forEach((cat) => {
+    (state.questionBank.get(cat.id) || []).forEach((q) => {
+      if (!seen.has(q.id)) { seen.add(q.id); allQuestions.push(q); }
+    });
+  });
+  if (allQuestions.length < CERT_QUESTION_COUNT) {
+    document.getElementById("certModalStatus").textContent = t("errorInsufficientQuestions", state.lang);
+    document.getElementById("certModal").hidden = false;
+    return;
+  }
+
+  state.certMode = true;
+  state.certPassed = false;
+  state.certName = name;
+  state.learnerRoleId = roleId;
+
+  ensureAudioContext();
+  state.quizQuestions = shuffle(allQuestions).slice(0, CERT_QUESTION_COUNT).map(prepareQuestion);
+  state.currentIndex = 0;
+  state.score = 0;
+  state.reviewItems = [];
+  state.startedAt = Date.now();
+  state.isLocked = false;
+  state.isPaused = false;
+  state.pauseUsed = false;
+  state.timerPauseRemainingMs = 0;
+  state.lastTickSecond = null;
+  state.musicUrgency = "normal";
+  state.wasCategoryClearAtStart = false;
+
+  const level = state.levels.find((l) => l.id === state.certLevelId);
+  els.quizCategory.textContent = `${level ? level.name : state.certLevelId} ${t("certQuizLabel", state.lang)}`;
+  showScreen("quiz");
+  renderCurrentQuestion();
+}
+
+function renderCertResult(passed, totalTimeMs) {
+  const percent = Math.round((state.score / CERT_QUESTION_COUNT) * 100);
+  els.resultScore.textContent = `${state.score} / ${CERT_QUESTION_COUNT}`;
+  els.resultPercent.textContent = `${percent}%`;
+  els.resultTime.textContent = `${t("resultTimePrefix", state.lang)}${formatTime(totalTimeMs)}`;
+  els.resultComment.textContent = passed ? `🏆 ${t("certCelebTitle", state.lang)}` : t("certFailLabel", state.lang);
+
+  const heli = els.clearBanner.querySelector(".clear-banner__heli");
+  const label = els.clearBanner.querySelector("span");
+  els.clearBanner.hidden = false;
+  els.clearBanner.classList.toggle("is-clear", passed);
+  els.clearBanner.classList.toggle("is-finish", !passed);
+  if (heli) heli.hidden = !passed;
+  if (label) label.textContent = passed ? `🏆 ${t("certCelebTitle", state.lang)}` : t("certFailLabel", state.lang);
+
+  if (els.resultProgress) els.resultProgress.hidden = true;
+  setSyncStatus("", "");
+
+  els.retryButton.textContent = t("certRetryButton", state.lang);
+
+  renderReview();
+  els.reviewList.hidden = false;
+  els.toggleReviewButton.textContent = t("btnReviewToggleCollapse", state.lang);
+  els.toggleReviewButton.setAttribute("aria-expanded", "true");
+}
+
+function saveCertPass(record) {
+  const data = readStore();
+  data.certPasses.push(record);
+  writeStore(data);
+}
+
+// ── Cert celebration overlay ──────────────────────────────────────────────────
+
+function showCertCelebration(name, levelId, score) {
+  const overlay = document.getElementById("certCelebration");
+  if (!overlay) return;
+  const level = state.levels.find((l) => l.id === levelId);
+  const levelName = level ? level.name : levelId;
+  document.getElementById("certCelebTitle").textContent = t("certCelebTitle", state.lang);
+  document.getElementById("certCelebLevel").textContent = `${levelName} ${t("certCelebLevelSuffix", state.lang)}`;
+  document.getElementById("certCelebName").textContent = name;
+  document.getElementById("certCelebScore").textContent = `${score} / ${CERT_QUESTION_COUNT}`;
+  document.getElementById("certCelebDate").textContent = new Intl.DateTimeFormat(
+    t("dateLocale", state.lang), { year: "numeric", month: "2-digit", day: "2-digit" },
+  ).format(new Date());
+  overlay.hidden = false;
+  const canvas = document.getElementById("certCanvas");
+  if (canvas) {
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+    runCertParticles(canvas);
+  }
+}
+
+function closeCertCelebration() {
+  const overlay = document.getElementById("certCelebration");
+  if (!overlay) return;
+  overlay.hidden = true;
+  const canvas = document.getElementById("certCanvas");
+  if (canvas) canvas.getContext("2d").clearRect(0, 0, canvas.width, canvas.height);
+}
+
+function runCertParticles(canvas) {
+  const ctx = canvas.getContext("2d");
+  const W = canvas.width;
+  const H = canvas.height;
+
+  const COLORS = [
+    "#ffd700", "#ffa500", "#ff6b6b", "#ff4d4d",
+    "#4ecdc4", "#45b7d1", "#96ceb4", "#ffffff",
+    "#ff9ff3", "#a29bfe", "#fd79a8", "#00cec9",
+  ];
+
+  const particles = [];
+  let frameCount = 0;
+
+  function spawnFirework(x, y) {
+    const count = 100 + Math.floor(Math.random() * 60);
+    for (let i = 0; i < count; i++) {
+      const angle = (Math.PI * 2 * i) / count + (Math.random() - 0.5) * 0.4;
+      const speed = 3 + Math.random() * 6;
+      const color = COLORS[Math.floor(Math.random() * COLORS.length)];
+      const size = Math.random() > 0.7 ? 4 : 2.5;
+      const type = Math.random() > 0.82 ? "star" : "circle";
+      particles.push({ x, y, vx: Math.cos(angle) * speed, vy: Math.sin(angle) * speed, alpha: 1, color, size, trail: [], type });
+    }
+  }
+
+  function spawnConfetti() {
+    const x = Math.random() * W;
+    const color = COLORS[Math.floor(Math.random() * COLORS.length)];
+    particles.push({
+      x, y: -10, vx: (Math.random() - 0.5) * 2, vy: 1.5 + Math.random() * 2,
+      alpha: 1, color,
+      rotation: Math.random() * Math.PI * 2,
+      rotationSpeed: (Math.random() - 0.5) * 0.15,
+      type: "confetti", w: 9 + Math.random() * 6, h: 4 + Math.random() * 3,
+      trail: [],
+    });
+  }
+
+  // 16 firework bursts at staggered intervals
+  [0, 150, 320, 500, 700, 920, 1150, 1420, 1750, 2100, 2500, 3000, 3600, 4400, 5400, 6600].forEach((delay) => {
+    window.setTimeout(() => {
+      const x = W * (0.1 + Math.random() * 0.8);
+      const y = H * (0.05 + Math.random() * 0.55);
+      spawnFirework(x, y);
+    }, delay);
+  });
+
+  function drawStar(x, y, size, color, alpha) {
+    ctx.globalAlpha = alpha;
+    ctx.fillStyle = color;
+    ctx.beginPath();
+    for (let i = 0; i < 5; i++) {
+      const outerA = (i * 2 * Math.PI / 5) - Math.PI / 2;
+      const innerA = outerA + Math.PI / 5;
+      if (i === 0) ctx.moveTo(x + size * Math.cos(outerA), y + size * Math.sin(outerA));
+      else ctx.lineTo(x + size * Math.cos(outerA), y + size * Math.sin(outerA));
+      ctx.lineTo(x + size * 0.4 * Math.cos(innerA), y + size * 0.4 * Math.sin(innerA));
+    }
+    ctx.closePath();
+    ctx.fill();
+  }
+
+  function loop() {
+    ctx.clearRect(0, 0, W, H);
+    frameCount += 1;
+
+    // Confetti rain for the first ~8 s
+    if (frameCount < 480 && frameCount % 4 === 0) spawnConfetti();
+
+    for (let i = particles.length - 1; i >= 0; i--) {
+      const p = particles[i];
+
+      if (p.type === "confetti") {
+        p.x += p.vx;
+        p.y += p.vy;
+        p.rotation += p.rotationSpeed;
+        p.alpha -= 0.007;
+        if (p.alpha <= 0 || p.y > H + 20) { particles.splice(i, 1); continue; }
+        ctx.globalAlpha = p.alpha;
+        ctx.fillStyle = p.color;
+        ctx.save();
+        ctx.translate(p.x, p.y);
+        ctx.rotate(p.rotation);
+        ctx.fillRect(-p.w / 2, -p.h / 2, p.w, p.h);
+        ctx.restore();
+      } else {
+        // Firework / star
+        p.trail.push({ x: p.x, y: p.y, alpha: p.alpha });
+        if (p.trail.length > 5) p.trail.shift();
+        p.trail.forEach((pt, ti) => {
+          const tAlpha = (pt.alpha * (ti + 1)) / (p.trail.length * 3);
+          ctx.globalAlpha = tAlpha;
+          ctx.fillStyle = p.color;
+          ctx.beginPath();
+          ctx.arc(pt.x, pt.y, p.size * 0.5, 0, Math.PI * 2);
+          ctx.fill();
+        });
+        if (p.type === "star") {
+          drawStar(p.x, p.y, p.size * 1.5, p.color, p.alpha);
+        } else {
+          ctx.globalAlpha = p.alpha;
+          ctx.fillStyle = p.color;
+          ctx.beginPath();
+          ctx.arc(p.x, p.y, p.size, 0, Math.PI * 2);
+          ctx.fill();
+        }
+        p.x += p.vx;
+        p.y += p.vy;
+        p.vy += 0.08;
+        p.vx *= 0.98;
+        p.alpha -= 0.013;
+        if (p.alpha <= 0) { particles.splice(i, 1); continue; }
+      }
+    }
+
+    ctx.globalAlpha = 1;
+    if (frameCount < 700 || particles.length > 0) requestAnimationFrame(loop);
+    else ctx.clearRect(0, 0, W, H);
+  }
+
+  window.setTimeout(() => requestAnimationFrame(loop), 20);
+}
+
+// ── Cert heartbeat quiz music ─────────────────────────────────────────────────
+// Recursive setTimeout loop so the interval can accelerate as time runs out.
+
+function startCertHeartbeat() {
+  // stopMusicLoop() was already called by startQuizMusic()
+  state.musicMode = "certHeartbeat";
+  const generation = ++state.musicGeneration;
+  scheduleCertBeat(generation, true); // true = isLub (first beat of the pair)
+}
+
+function scheduleCertBeat(generation, isLub) {
+  if (generation !== state.musicGeneration || state.musicMode !== "certHeartbeat") return;
+  if (readStore().muted) return;
+
+  const remainingMs = Math.max(0, state.timerDeadline - Date.now());
+  if (remainingMs <= 0) return;
+
+  // BPM linearly from 52 (full time) to 175 (1 s left), with quadratic feel
+  const ratio = Math.max(0, Math.min(1, 1 - (remainingMs / 1000 - 1) / (CERT_SECONDS - 1)));
+  const bpm = 52 + (175 - 52) * (ratio * ratio);
+  const rrMs = 60000 / bpm; // full RR interval in ms
+
+  // Play the beat
+  if (isLub) {
+    // S1 — low, punchy thump
+    playSynthNote(110, 0.11, "sine",     0.10);
+    playSynthNote( 65, 0.16, "triangle", 0.07);
+  } else {
+    // S2 — softer, slightly higher
+    playSynthNote(140, 0.07, "sine",     0.063);
+    playSynthNote( 85, 0.10, "triangle", 0.044);
+  }
+
+  // S1→S2 gap ≈ 38% of RR, S2→S1 gap ≈ 62% of RR
+  const gapMs = isLub ? rrMs * 0.38 : rrMs * 0.62;
+  window.setTimeout(() => scheduleCertBeat(generation, !isLub), gapMs);
+}
+
+// ── Cert fanfare music ────────────────────────────────────────────────────────
+
+function playCertFanfare() {
+  if (readStore().muted) return;
+  // Triumphant 3-bar fanfare: rising arpeggio → sustained chord → resolution
+  [
+    // Bar 1 — rising arpeggio
+    [523,   0,   0.14, "triangle", 0.09],  // C5
+    [659,  110,  0.14, "triangle", 0.09],  // E5
+    [784,  220,  0.14, "triangle", 0.10],  // G5
+    [1047, 345,  0.16, "triangle", 0.11],  // C6
+    [1319, 480,  0.18, "triangle", 0.10],  // E6
+    // Bar 2 — triumphant chord
+    [523,  700,  0.55, "triangle", 0.11],  // C5
+    [659,  710,  0.55, "triangle", 0.10],  // E5
+    [784,  720,  0.55, "triangle", 0.09],  // G5
+    [1047, 730,  0.65, "triangle", 0.10],  // C6
+    [131,  700,  0.55, "triangle", 0.09],  // C3 bass
+    // Passing chord
+    [587,  1280, 0.35, "triangle", 0.09],  // D5
+    [740,  1290, 0.35, "triangle", 0.09],  // F#5
+    [880,  1300, 0.35, "triangle", 0.09],  // A5
+    [1175, 1310, 0.40, "triangle", 0.10],  // D6
+    [147,  1280, 0.35, "triangle", 0.08],  // D3 bass
+    // Third chord
+    [440,  1650, 0.35, "triangle", 0.09],  // A4
+    [659,  1660, 0.35, "triangle", 0.09],  // E5
+    [880,  1670, 0.35, "triangle", 0.09],  // A5
+    [1319, 1680, 0.40, "triangle", 0.10],  // E6
+    [110,  1650, 0.35, "triangle", 0.08],  // A2 bass
+    // Bar 3 — final resolution
+    [523,  2050, 0.90, "triangle", 0.11],  // C5
+    [659,  2060, 0.90, "triangle", 0.10],  // E5
+    [784,  2070, 0.90, "triangle", 0.10],  // G5
+    [1047, 2080, 1.10, "triangle", 0.11],  // C6
+    [131,  2050, 0.90, "triangle", 0.10],  // C3 bass
+    // High sparkle
+    [2093, 2400, 0.30, "triangle", 0.040], // C7
+    [2637, 2520, 0.20, "triangle", 0.022], // E7
+    [3136, 2620, 0.15, "triangle", 0.012], // G7
+  ].forEach(([freq, delay, dur, wave, gain]) => {
+    window.setTimeout(() => playSynthNote(freq, dur, wave, gain), delay);
+  });
 }
 
 // ─── Misc ─────────────────────────────────────────────────────────────────────
