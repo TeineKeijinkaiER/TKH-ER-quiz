@@ -90,6 +90,116 @@
       ],
       "explanation": "In benzodiazepine toxicity, the initial priority is airway, breathing, and circulatory assessment followed by supportive care. Flumazenil is a benzodiazepine antagonist, but routine use in acute poisoning is not recommended. It may be cautiously considered in situations with low risk of chronic use, mixed overdose, or seizures — such as iatrogenic oversedation or accidental pediatric ingestion. In the setting of chronic use, unknown mixed overdose, co-ingestion of tricyclic antidepressants or other proconvulsant agents, or prior seizure history, flumazenil can precipitate withdrawal seizures or arrhythmias and should be used with caution.",
       "selectCount": 0
+    },
+    {
+      "id": "emergency_medications_basic_011",
+      "categories": [
+        "emergency_medications_basic",
+        "general_em_basic"
+      ],
+      "question": "When performing local anesthesia for skin wound suturing, which statement is clearly incorrect? Select one.",
+      "choices": [
+        "The Japanese package insert reference maximum dose for 1% Xylocaine is 200 mg, equivalent to 20 mL",
+        "1% Xylocaine with epinephrine contains added epinephrine, and the Japanese package insert reference maximum dose is 500 mg, equivalent to 50 mL",
+        "Because of epinephrine-induced vasoconstriction, 1% Xylocaine with epinephrine usually has a longer duration of anesthesia than plain 1% Xylocaine",
+        "Use of 1% Xylocaine with epinephrine on the ear, digits, and penis is contraindicated in all of these sites under the package insert",
+        "If a patient has a Xylocaine allergy, procaine may be considered as an alternative local anesthetic"
+      ],
+      "answers": [
+        3
+      ],
+      "selectCount": 1,
+      "explanation": "1% Xylocaine contains lidocaine 10 mg/mL, so the Japanese package insert reference maximum adult dose of 200 mg corresponds to 20 mL. 1% Xylocaine with epinephrine also contains lidocaine 10 mg/mL; with epinephrine, the reference maximum dose is 500 mg, or 50 mL. Epinephrine causes local vasoconstriction, slows systemic absorption, and tends to prolong anesthetic duration. Historically, end-arterial areas such as the ear, digits, and penis were often treated together as contraindicated sites. Current labeling no longer lists the ear or digits as contraindicated, although use should be considered carefully in patients with impaired circulation or when injecting multiple digits. Penile use remains contraindicated. Therefore, the statement that all three sites are contraindicated is clearly incorrect. Lidocaine is an amide local anesthetic, whereas procaine is an ester local anesthetic, so procaine may be considered in true lidocaine allergy."
+    },
+    {
+      "id": "emergency_medications_basic_012",
+      "categories": [
+        "emergency_medications_basic",
+        "general_em_basic"
+      ],
+      "question": "Select all correct statements regarding local anesthesia in the emergency department.",
+      "choices": [
+        "A 23G needle is recommended for local anesthesia",
+        "1% Xylocaine with epinephrine can also be used when suturing penile wounds",
+        "For wound suturing, 1% Xylocaine with epinephrine has major advantages such as hemostasis, longer anesthetic duration, and a higher maximum dose",
+        "Use of 1% Xylocaine with epinephrine on the ear and digits was previously treated as contraindicated, but it can now be considered carefully with attention to circulatory risk",
+        "Xylocaine is a representative ester-type local anesthetic"
+      ],
+      "answers": [
+        2,
+        3
+      ],
+      "selectCount": 0,
+      "explanation": "For local anesthesia during skin wound suturing in the emergency department, clinicians often use a fine needle to reduce pain, but it is inappropriate to state that a 23G needle is specifically recommended. 1% Xylocaine with epinephrine contains epinephrine, so local vasoconstriction can provide hemostasis, prolong anesthetic duration, and increase the reference maximum dose by reducing systemic absorption. However, penile use is contraindicated in the package insert and should not be used for penile wound suturing. Epinephrine-containing lidocaine for the ear and digits was previously treated as contraindicated, but current labeling no longer lists those sites as contraindicated; use should still be considered carefully in patients with impaired circulation or when injecting multiple digits. Xylocaine, meaning lidocaine, is an amide-type local anesthetic, not an ester-type agent."
+    },
+    {
+      "id": "emergency_medications_basic_013",
+      "categories": [
+        "emergency_medications_basic",
+        "general_em_basic",
+        "pediatric_basic"
+      ],
+      "question": "Select all correct statements regarding methods to reduce pain from local anesthetic injection.",
+      "choices": [
+        "Inject from inside the wound",
+        "Inject as rapidly as possible",
+        "Mix in a small amount of sodium bicarbonate",
+        "Use as fine a needle as possible",
+        "Apply Xylocaine jelly several minutes or more before the procedure"
+      ],
+      "answers": [
+        0,
+        2,
+        3,
+        4
+      ],
+      "selectCount": 0,
+      "explanation": "Methods to reduce pain from local anesthesia include injecting from inside the wound rather than puncturing intact normal skin, using as fine a needle as possible, injecting slowly rather than rapidly, buffering lidocaine acidity with a small amount of sodium bicarbonate, and using topical anesthesia in advance. Injecting from inside the wound avoids a new puncture through intact skin and can reduce pain. Rapid injection abruptly increases tissue pressure and is inappropriate. Adding a small amount of sodium bicarbonate can buffer lidocaine acidity and reduce injection pain. A fine needle also reduces puncture pain. Xylocaine jelly 2% is an available topical anesthetic in Japan, and use on wounds is not itself prohibited. Applying it to the wound and keeping it in contact for several minutes or longer may help reduce injection or procedural pain. However, absorption is faster through traumatic, eroded, ulcerated, or inflamed tissue, so avoid excessive dosing; topical anesthesia alone may be insufficient, and infiltration anesthesia should be added when needed."
+    },
+    {
+      "id": "emergency_medications_basic_014",
+      "categories": [
+        "emergency_medications_basic",
+        "general_em_basic"
+      ],
+      "question": "For adult wound care using 1% Xylocaine for infiltration anesthesia, select three correct statements.",
+      "choices": [
+        "1% Xylocaine contains lidocaine 10 mg per mL",
+        "20 mL of 1% Xylocaine corresponds to lidocaine 200 mg",
+        "Under the Japanese package insert, the adult reference maximum dose is lidocaine 200 mg per administration",
+        "1% Xylocaine contains lidocaine 1 mg per mL",
+        "Because 1% Xylocaine does not contain epinephrine, local anesthetic systemic toxicity cannot occur"
+      ],
+      "answers": [
+        0,
+        1,
+        2
+      ],
+      "selectCount": 3,
+      "explanation": "1% Xylocaine contains lidocaine 10 mg per mL. Therefore, 20 mL contains 200 mg. Under the Japanese package insert, the adult reference maximum dose is lidocaine hydrochloride 200 mg per administration, equivalent to 20 mL of the 1% solution. In practice, dosing should be minimized based on age, body size, anesthetic site, tissue blood flow, liver function, and overall condition. Intravascular injection or overdose can cause local anesthetic systemic toxicity, including perioral numbness, tinnitus, dizziness, seizures, hypotension, and arrhythmias."
+    },
+    {
+      "id": "emergency_medications_basic_015",
+      "categories": [
+        "emergency_medications_basic",
+        "general_em_basic"
+      ],
+      "question": "For adult wound care using 1% Xylocaine with epinephrine for infiltration anesthesia, select all correct statements.",
+      "choices": [
+        "1% Xylocaine with epinephrine contains lidocaine 10 mg per mL",
+        "1% Xylocaine with epinephrine is a local anesthetic with added epinephrine",
+        "Under the Japanese package insert, the reference maximum dose of 1% Xylocaine with epinephrine is 50 mL per administration",
+        "50 mL of 1% Xylocaine with epinephrine corresponds to lidocaine 500 mg",
+        "Because the preparation contains epinephrine, accidental intravascular injection does not cause tachycardia or blood pressure elevation"
+      ],
+      "answers": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "selectCount": 0,
+      "explanation": "1% Xylocaine with epinephrine contains lidocaine 10 mg per mL and added epinephrine. Under the Japanese package insert, the reference maximum dose of 1% Xylocaine with epinephrine is 50 mL per administration, which corresponds to lidocaine 500 mg. In emergency wound care, the goal is not to use the maximum amount, but to use the minimum necessary dose. With epinephrine-containing preparations, clinicians must watch for accidental intravascular injection, tachycardia, arrhythmias, blood pressure elevation, heart disease, and impaired peripheral circulation."
     }
   ]
 }

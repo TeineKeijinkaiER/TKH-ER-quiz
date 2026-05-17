@@ -53,6 +53,15 @@ const I18N = {
 <h3>回答形式とクリア条件</h3>
 <p>各問題は、30秒以内に回答する形式です。時間が短い場合は、一時停止ボタン（⏸）をご利用ください。一時停止中は、問題文をゆっくり確認できます。</p>
 <p>カテゴリー内のすべての問題に正解すると、クリアとなります。ただし、一時停止機能を使用した場合は、クリア判定の対象外となります。</p>
+<h3>反復学習について</h3>
+<p>本クイズは、同じ問題を繰り返し解くことで知識を定着させることを目的としています。一度正解した問題はこの端末に記録され、カテゴリー内の全問題に正解するとクリアになります。問題が追加・更新された場合はクリア状態がリセットされますので、繰り返し挑戦してください。</p>
+<h3>検定について</h3>
+<p>各レベル（Entry・Basic・Advanced・Master）のすべてのカテゴリーをクリアすると、そのレベルの検定に挑戦できるようになります。</p>
+<p><strong>受験条件：</strong>対象レベルの全カテゴリーをクリアしていること（職種の選択も必要です）。</p>
+<p><strong>出題形式：</strong>そのレベルの全問題からランダムに20問が出題されます。1問あたりの制限時間は20秒です。</p>
+<p><strong>合格基準：</strong>20問中18問以上（90%以上）の正解で合格となります。</p>
+<p><strong>不合格の場合：</strong>何度でも再受験できます。条件を満たしている限り、繰り返し挑戦してください。</p>
+<p><strong>合格後について：</strong>一度合格すると「合格済み」の記録がこの端末に保存されます。その後も再受験は可能ですが、合格済みの記録が消えることはありません。</p>
 <h3>データ収集について</h3>
 <p>教育内容の改善のため、回答結果を匿名で収集しています。収集する情報は、職種、カテゴリー、点数、所要時間などです。氏名、職員番号、メールアドレスなど、個人を特定できる情報は収集していません。</p>
 <h3>動作環境</h3>
@@ -172,8 +181,19 @@ const I18N = {
     noticeClose: "Close",
     noticeBody: `<p>This quiz was created for educational purposes by the Emergency and Critical Care Center at Teine Keijinkai Hospital.</p>
 <p>Quiz content is primarily based on clinical guidelines, but some procedures (such as medication dosing) reflect our institution's practices. These may differ from other facilities — please consult your supervising physician for guidance.</p>
+<h3>Answer Format &amp; Clear Conditions</h3>
 <p>Each question must be answered within 30 seconds. If you feel rushed, use the pause button (⏸) to take your time reading the question.</p>
 <p>Completing all questions in a category correctly earns a CLEAR. However, using the pause button disqualifies that session from clearing — you must answer within the time limit.</p>
+<h3>Repetition &amp; Learning</h3>
+<p>This quiz is designed around repeated practice of the same questions to build lasting knowledge. Once you answer a question correctly, that progress is saved on this device; clearing every question in a category earns a CLEAR. When questions are added or updated, the CLEAR status resets — keep coming back to retake it!</p>
+<h3>Certification Exams</h3>
+<p>Clearing all categories in a level (Entry, Basic, Advanced, or Master) unlocks a certification exam for that level.</p>
+<p><strong>Eligibility:</strong> All categories in the target level must be cleared, and you must have selected your role.</p>
+<p><strong>Format:</strong> 20 questions chosen randomly from all questions in that level. Time limit: 20 seconds per question.</p>
+<p><strong>Pass threshold:</strong> 18 out of 20 correct (90%) or higher.</p>
+<p><strong>If you fail:</strong> You can retake the exam as many times as you like — just make sure your categories are still cleared.</p>
+<p><strong>After passing:</strong> Your pass record is saved on this device and will not be removed, even if you retake the exam. You are always welcome to retake for practice.</p>
+<h3>Updates</h3>
 <p>Questions are updated regularly with corrections and additions. When a category's questions are updated, its CLEAR status will be reset — please try again!</p>`,
     quizPause: "⏸",
     quizResume: "▶ Resume",
