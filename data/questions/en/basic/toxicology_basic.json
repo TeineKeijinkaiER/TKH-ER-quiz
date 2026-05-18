@@ -3,29 +3,208 @@
   "questions": [
     {
       "id": "toxicology_basic_001",
-      "question": "Which statement about acetaminophen (paracetamol) overdose is correct?",
+      "question": "Which statement about acetaminophen overdose is correct? Select one.",
       "choices": [
-        "Hepatic failure and jaundice appear immediately after ingestion",
-        "The Rumack-Matthew nomogram uses serum levels drawn ≥4 hours post-ingestion to determine the need for N-acetylcysteine (NAC)",
+        "Hepatic injury and jaundice appear immediately after overdose",
+        "The Rumack-Matthew nomogram uses concentrations measured 4 hours or more after ingestion to determine the indication for NAC",
         "The antidote is flumazenil",
         "Antidote therapy is unnecessary if more than 24 hours have passed since ingestion",
         "Hemodialysis is the first-line antidotal treatment"
       ],
-      "selectCount": 1,
-      "explanation": "In acetaminophen overdose, patients are typically asymptomatic or have mild nausea/vomiting immediately after ingestion; hepatotoxicity usually manifests 24–72 hours later. The Rumack-Matthew nomogram uses serum acetaminophen levels drawn ≥4 hours after ingestion to determine NAC need. The antidote is NAC (not flumazenil, which reverses benzodiazepines). NAC should be continued even beyond 24 hours if hepatotoxicity is present.",
       "answers": [
         1
-      ]
+      ],
+      "selectCount": 1,
+      "explanation": "In acetaminophen overdose, patients are often asymptomatic or have only mild nausea and vomiting immediately after ingestion, and hepatic injury usually becomes apparent after 24-72 hours. The Rumack-Matthew nomogram uses serum concentrations measured 4 hours or more after ingestion to determine the need for N-acetylcysteine (NAC). NAC should be considered or continued even more than 24 hours after ingestion if hepatic injury is evident. Flumazenil is an antagonist for benzodiazepines."
     },
     {
       "id": "toxicology_basic_002",
-      "question": "Select 3 signs that are characteristic of organophosphate poisoning.",
+      "question": "Which finding is incorrect as a manifestation of cholinergic poisoning, such as organophosphate pesticide poisoning? Select one.",
       "choices": [
-        "Miosis (due to muscarinic stimulation)",
-        "Increased bronchial secretions and bronchospasm",
-        "Bradycardia",
-        "Mydriasis and dry skin",
-        "Hyperthermia and anhidrosis"
+        "Miosis",
+        "Salivation",
+        "Diarrhea",
+        "Diaphoresis",
+        "Dry skin"
+      ],
+      "answers": [
+        4
+      ],
+      "selectCount": 1,
+      "explanation": "Cholinergic poisoning causes findings such as miosis, salivation, lacrimation, increased bronchial secretions, diarrhea, urinary incontinence, bradycardia, and diaphoresis. Organophosphate pesticide poisoning is a typical example. Dry skin is more consistent with anticholinergic poisoning and is incorrect as a cholinergic finding."
+    },
+    {
+      "id": "toxicology_basic_003",
+      "question": "Which finding is incorrect as a manifestation of anticholinergic poisoning, such as first-generation antihistamines or tricyclic antidepressants? Select one.",
+      "choices": [
+        "Mydriasis",
+        "Tachycardia",
+        "Urinary retention",
+        "Dry skin",
+        "Diarrhea"
+      ],
+      "answers": [
+        4
+      ],
+      "selectCount": 1,
+      "explanation": "Anticholinergic poisoning causes findings such as mydriasis, tachycardia, dry mouth, dry skin, urinary retention, decreased bowel motility, delirium, and hyperthermia. Representative drugs include first-generation antihistamines, tricyclic antidepressants, some antipsychotics, and antispasmodics. Diarrhea is more common in cholinergic poisoning and is incorrect as an anticholinergic finding."
+    },
+    {
+      "id": "toxicology_basic_004",
+      "question": "Which finding is incorrect as a manifestation of sympathomimetic poisoning, such as caffeine or theophylline poisoning? Select one.",
+      "choices": [
+        "Tachycardia",
+        "Hypertension",
+        "Mydriasis",
+        "Diaphoresis",
+        "Bradypnea"
+      ],
+      "answers": [
+        4
+      ],
+      "selectCount": 1,
+      "explanation": "Sympathomimetic poisoning causes findings such as tachycardia, hypertension, mydriasis, diaphoresis, tremor, agitation, anxiety, seizures, and hyperthermia. In Japanese emergency departments, caffeine and theophylline poisoning may be encountered in practice. Bradypnea is more often a problem in central nervous system depressant poisoning such as sedatives or opioids, and is incorrect as a sympathomimetic finding."
+    },
+    {
+      "id": "toxicology_basic_005",
+      "question": "Which finding is incorrect as a manifestation of sedative-hypnotic poisoning, such as benzodiazepines, barbiturates, or alcohol? Select one.",
+      "choices": [
+        "Somnolence",
+        "Dysarthria",
+        "Ataxia",
+        "Hypoventilation",
+        "Marked diaphoresis"
+      ],
+      "answers": [
+        4
+      ],
+      "selectCount": 1,
+      "explanation": "Sedative-hypnotic poisoning causes findings such as somnolence, dysarthria, ataxia, impaired consciousness, hypoventilation, and hypotension. Representative substances include benzodiazepines, barbiturates, and alcohol. Marked diaphoresis is more common in sympathomimetic or cholinergic poisoning and is not a typical finding of sedative-hypnotic poisoning."
+    },
+    {
+      "id": "toxicology_basic_006",
+      "question": "After some drug exposure, a patient has salivation, miosis, diarrhea, bradycardia, and increased bronchial secretions. Which poisoning is most strongly suspected? Select one.",
+      "choices": [
+        "Organophosphate pesticide poisoning",
+        "First-generation antihistamine poisoning",
+        "Caffeine poisoning",
+        "Benzodiazepine poisoning",
+        "Opioid poisoning"
+      ],
+      "answers": [
+        0
+      ],
+      "selectCount": 1,
+      "explanation": "Salivation, miosis, diarrhea, bradycardia, and increased bronchial secretions suggest cholinergic poisoning. A representative example is organophosphate pesticide poisoning, which may also cause nicotinic manifestations such as muscle fasciculations and weakness."
+    },
+    {
+      "id": "toxicology_basic_007",
+      "question": "After taking some drug, a patient has agitation, delirium, mydriasis, tachycardia, urinary retention, and dry skin. Which poisoning is most strongly suspected? Select one.",
+      "choices": [
+        "Organophosphate pesticide poisoning",
+        "First-generation antihistamine poisoning",
+        "Theophylline poisoning",
+        "Benzodiazepine poisoning",
+        "Carbon monoxide poisoning"
+      ],
+      "answers": [
+        1
+      ],
+      "selectCount": 1,
+      "explanation": "Delirium, mydriasis, tachycardia, urinary retention, and dry skin suggest anticholinergic poisoning. This can be seen with first-generation antihistamines, tricyclic antidepressants, and some antipsychotics. Sympathomimetic poisoning can also cause mydriasis, tachycardia, and agitation, but dry skin and urinary retention are more prominent in anticholinergic poisoning."
+    },
+    {
+      "id": "toxicology_basic_008",
+      "question": "After taking some drug, a patient has agitation, hypertension, tachycardia, mydriasis, diaphoresis, and tremor. Which poisoning is most strongly suspected? Select one.",
+      "choices": [
+        "Organophosphate pesticide poisoning",
+        "Tricyclic antidepressant poisoning",
+        "Caffeine poisoning",
+        "Benzodiazepine poisoning",
+        "Methemoglobinemia"
+      ],
+      "answers": [
+        2
+      ],
+      "selectCount": 1,
+      "explanation": "Agitation, hypertension, tachycardia, mydriasis, diaphoresis, and tremor suggest sympathomimetic poisoning. In Japanese emergency departments, overdose of caffeine products is a clinically relevant problem. Caffeine poisoning may be accompanied by nausea and vomiting, hypokalemia, lactic acidosis, seizures, and arrhythmias. Anticholinergic poisoning can also cause mydriasis, tachycardia, and delirium, but prominent dry skin and urinary retention help distinguish it."
+    },
+    {
+      "id": "toxicology_basic_009",
+      "question": "After taking some drug, a patient has somnolence, dysarthria, ataxia, and hypoventilation. Which poisoning is most strongly suspected? Select one.",
+      "choices": [
+        "Organophosphate pesticide poisoning",
+        "First-generation antihistamine poisoning",
+        "Theophylline poisoning",
+        "Benzodiazepine poisoning",
+        "Salicylate poisoning"
+      ],
+      "answers": [
+        3
+      ],
+      "selectCount": 1,
+      "explanation": "Somnolence, dysarthria, ataxia, and hypoventilation suggest sedative-hypnotic poisoning. Representative substances include benzodiazepines, barbiturates, and alcohol. Isolated benzodiazepine poisoning often causes relatively mild circulatory depression, but hypoventilation and coma can become severe when alcohol or other central nervous system depressants are coingested."
+    },
+    {
+      "id": "toxicology_basic_010",
+      "question": "Select all correct statements about gastric lavage and single-dose activated charcoal.",
+      "choices": [
+        "Gastric lavage: consider it as a guide within 1 hour after ingestion",
+        "Gastric lavage: perform it routinely in all poisoned patients",
+        "Single-dose activated charcoal: administer it after confirming airway protection",
+        "Single-dose activated charcoal: it is effective for lithium poisoning",
+        "Single-dose activated charcoal: use it routinely after ingestion of corrosive substances"
+      ],
+      "answers": [
+        0,
+        2
+      ],
+      "selectCount": 0,
+      "explanation": "Gastric lavage is not a procedure for all poisoned patients. It is considered only in limited situations, such as potentially life-threatening ingestion within about 1 hour. Single-dose activated charcoal is considered early after ingestion when the drug is adsorbed by activated charcoal and the airway can be protected. Lithium, iron, and alcohols are poorly adsorbed by activated charcoal. For corrosive substances, routine gastric lavage or activated charcoal is inappropriate because of risks such as re-exposure and perforation."
+    },
+    {
+      "id": "toxicology_basic_011",
+      "question": "Select all drugs for which multiple-dose activated charcoal may be indicated.",
+      "choices": [
+        "Carbamazepine",
+        "Phenobarbital",
+        "Theophylline",
+        "Lithium",
+        "Iron"
+      ],
+      "answers": [
+        0,
+        1,
+        2
+      ],
+      "selectCount": 0,
+      "explanation": "Multiple-dose activated charcoal is not used for all poisoned patients. It can enhance drug elimination by interrupting enterohepatic or enteric circulation and by so-called gastrointestinal dialysis, in which activated charcoal in the gut draws drug from the bloodstream down a concentration gradient and adsorbs it. Representative drugs include carbamazepine, phenobarbital, and theophylline. Lithium and iron are poorly adsorbed by activated charcoal and are inappropriate as target drugs for single-dose or multiple-dose activated charcoal."
+    },
+    {
+      "id": "toxicology_basic_012",
+      "question": "Which drug is least likely to be an indication for extracorporeal removal therapy in poisoning? Select one.",
+      "choices": [
+        "Lithium",
+        "Salicylate",
+        "Methanol",
+        "Ethylene glycol",
+        "Benzodiazepine"
+      ],
+      "answers": [
+        4
+      ],
+      "selectCount": 1,
+      "explanation": "Representative drugs or toxins for which extracorporeal removal therapy may be considered include lithium, salicylate, methanol, and ethylene glycol. These may be suitable targets based on factors such as low molecular weight, volume of distribution, protein binding, toxic metabolites, and severe acidosis. Benzodiazepine poisoning is usually managed mainly with supportive care and is unlikely to be an indication for extracorporeal removal therapy."
+    },
+    {
+      "id": "toxicology_basic_013",
+      "question": "Select three correct combinations of poisoning and antagonist or antidote.",
+      "choices": [
+        "Acetaminophen poisoning: N-acetylcysteine",
+        "Opioid poisoning: naloxone",
+        "Organophosphate pesticide poisoning: atropine and pralidoxime",
+        "Benzodiazepine poisoning: vitamin K",
+        "Warfarin poisoning: flumazenil"
       ],
       "answers": [
         0,
@@ -33,7 +212,41 @@
         2
       ],
       "selectCount": 3,
-      "explanation": "Organophosphates inhibit acetylcholinesterase, producing muscarinic effects (SLUDGE: salivation, lacrimation, urination, defecation, GI distress, emesis; plus miosis, increased bronchial secretions, bradycardia) and nicotinic effects (muscle fasciculations, weakness). Mydriasis, dry skin, and hyperthermia are signs of anticholinergic (atropine-type) toxidrome, not organophosphate poisoning. Treatment is high-dose atropine and early pralidoxime (2-PAM)."
+      "explanation": "N-acetylcysteine is used for acetaminophen poisoning, naloxone for opioid poisoning, and atropine plus pralidoxime for organophosphate pesticide poisoning. The antagonist for benzodiazepine poisoning is flumazenil, not vitamin K. In warfarin poisoning or serious bleeding, vitamin K and prothrombin complex concentrate may be considered."
+    },
+    {
+      "id": "toxicology_basic_014",
+      "question": "Select three correct combinations of poisoning and treatment or adjunctive therapy.",
+      "choices": [
+        "Tricyclic antidepressant poisoning: sodium bicarbonate (Meylon)",
+        "Salicylate poisoning: sodium bicarbonate (Meylon)",
+        "Local anesthetic systemic toxicity: lipid emulsion",
+        "Cyanide poisoning: flumazenil",
+        "Opioid poisoning: vitamin K"
+      ],
+      "answers": [
+        0,
+        1,
+        2
+      ],
+      "selectCount": 3,
+      "explanation": "In tricyclic antidepressant poisoning with QRS widening or severe cardiovascular toxicity, sodium bicarbonate, often referred to in Japan as Meylon, is considered. In salicylate poisoning, sodium bicarbonate is used for serum and urine alkalinization. Lipid emulsion is used for local anesthetic systemic toxicity, especially with severe cardiovascular collapse. A representative antidote for cyanide poisoning is hydroxocobalamin, not flumazenil. Naloxone is used for opioid poisoning."
+    },
+    {
+      "id": "toxicology_basic_015",
+      "question": "Which statement is correct about ingestion of corrosive substances and dilution with milk or water? Select one.",
+      "choices": [
+        "If the patient is alert and able to swallow, consider a small amount of milk or water",
+        "Give milk even if the patient has impaired consciousness",
+        "Neutralize acidic substances with alkali",
+        "Administer activated charcoal routinely for corrosive substances",
+        "Prioritize gastric lavage for corrosive substances"
+      ],
+      "answers": [
+        0
+      ],
+      "selectCount": 1,
+      "explanation": "After ingestion of a corrosive substance, first assess airway, breathing, and circulation. If the patient is alert, able to swallow, and presents immediately after ingestion, dilution with a small amount of milk or water may be considered. Avoid oral administration when there is impaired consciousness or vomiting because of aspiration risk. Neutralization of acids or alkalis can worsen injury through an exothermic reaction. Activated charcoal is not effective for corrosive substances and can interfere with endoscopic evaluation. Gastric lavage is generally avoided because of risks such as re-exposure and perforation."
     }
   ]
 }
