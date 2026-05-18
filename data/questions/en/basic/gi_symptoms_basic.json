@@ -164,38 +164,43 @@
     },
     {
       "id": "gi_symptoms_basic_012",
-      "question": "Select one statement consistent with the Acute Abdomen Guidelines 2025 regarding the diagnostic characteristics of laboratory tests in acute abdominal presentations.",
+      "categories": [
+        "gi_symptoms_basic"
+      ],
+      "question": "According to the Acute Abdomen Guidelines 2025, select all correct statements regarding examination methods for suspected acute appendicitis and peritoneal irritation signs.",
       "choices": [
-        "WBC alone has sensitivity >90% and specificity >90% for diagnosing emergent conditions",
-        "CRP alone has sensitivity >95% for emergent conditions and can exclude them if negative",
-        "WBC at a cutoff of 10×10^9/L has been reported with sensitivity 73.9% and specificity 57.5%",
-        "CRP at a cutoff of 10 mg/L has been reported with specificity >90%",
-        "Neither WBC nor CRP should be measured in the workup of acute abdominal presentations"
+        "Guarding is an involuntary contraction of the abdominal muscles and cannot be consciously controlled by the patient",
+        "Rigidity is a voluntary contraction of the abdominal muscles and can occur due to fear, anxiety, or cold stimulation in addition to abdominal pain",
+        "Rebound tenderness and percussion tenderness show similar likelihood ratios",
+        "The cough test has a low positive likelihood ratio of 1.6, but its negative likelihood ratio is 0.4, comparable to rebound tenderness",
+        "Direct tenderness in the right lower quadrant has a negative likelihood ratio of 0.25"
       ],
       "answers": [
-        2
+        2,
+        3,
+        4
       ],
-      "selectCount": 1,
-      "explanation": "According to the Acute Abdomen Guidelines 2025, WBC at a cutoff of 10×10^9/L has sensitivity 73.9% and specificity 57.5%; CRP at a cutoff of 10 mg/L has sensitivity 76.9% and specificity 61.4%. Neither test alone is sufficient to exclude or confirm emergent conditions, and results must be interpreted in combination with history, physical findings, and imaging."
+      "selectCount": 0,
+      "explanation": "The Acute Abdomen Guidelines 2025 list guarding, rigidity, rebound tenderness, percussion tenderness, the cough test, and the heel drop test as peritoneal irritation findings. Guarding is voluntary contraction of the abdominal muscles and may occur with fear, anxiety, cold stimulation, or pain, and it may lessen when the patient relaxes. Rigidity is involuntary contraction of the abdominal muscles in response to peritoneal inflammation and cannot be consciously controlled. For detecting peritonitis, rebound tenderness and percussion tenderness show similar diagnostic characteristics. The cough test has a positive likelihood ratio of 1.6 and a negative likelihood ratio of 0.4, comparable to rebound tenderness. In appendicitis, direct right lower quadrant tenderness has been reported with a negative likelihood ratio of 0.25."
     },
     {
       "id": "gi_symptoms_basic_014",
-      "question": "Select all correct statements regarding laboratory findings in acute appendicitis.",
+      "categories": [
+        "gi_symptoms_basic"
+      ],
+      "question": "Select one incorrect drug-cause combination for drug-induced abdominal pain.",
       "choices": [
-        "WBC and CRP may be within normal limits in appendicitis",
-        "WBC or CRP is normal in approximately 20% of appendicitis cases and requires caution",
-        "Both WBC and CRP are normal in approximately 10% of cases",
-        "Normal WBC and CRP exclude appendicitis",
-        "PCT, CRP, and NLR are reported to be useful for diagnosing complicated appendicitis"
+        "NSAIDs: peptic ulcer disease",
+        "GLP-1 receptor agonists: acute pancreatitis",
+        "Ceftriaxone: acute cholecystitis",
+        "Steroids: autoimmune pancreatitis",
+        "Opioids: constipation"
       ],
       "answers": [
-        0,
-        1,
-        2,
-        4
+        3
       ],
-      "explanation": "According to the Acute Abdomen Guidelines 2025, WBC or CRP is normal in approximately 20% of appendicitis cases, and both are normal in approximately 10%, requiring caution. Therefore, normal WBC and CRP do not exclude appendicitis. PCT, CRP, and NLR are reported to be useful for diagnosing complicated appendicitis.",
-      "selectCount": 0
+      "explanation": "The Acute Abdomen Guidelines 2025 list representative drug-related causes of acute abdominal pain, including NSAID-related peptic ulcer disease, perforation, or GI bleeding; steroid-related peptic ulcer disease or bleeding; ceftriaxone-related gallstones or cholecystitis; GLP-1 receptor agonist-related acalculous cholecystitis or drug-induced pancreatitis; and opioid-related constipation. Therefore, steroids causing autoimmune pancreatitis is not an appropriate drug-cause combination. Steroids are used to treat autoimmune pancreatitis.",
+      "selectCount": 1
     },
     {
       "id": "gi_symptoms_basic_015",
@@ -234,12 +239,15 @@
     },
     {
       "id": "gi_symptoms_basic_018",
+      "categories": [
+        "gi_symptoms_basic"
+      ],
       "question": "Select all correct statements regarding ruptured abdominal aortic aneurysm, as reported in the Acute Abdomen Guidelines 2025.",
       "choices": [
         "The classic triad consists of hypotension, back pain, and a pulsatile abdominal mass",
-        "All three findings of the classic triad are present in only 25–50% of cases",
-        "In cases initially misdiagnosed, abdominal pain was present in 70%, hypotension in 57%, and back pain in 50%",
-        "Ruptured AAA can be excluded if all three classic triad findings are absent",
+        "All three findings of the classic triad are present in only 25-50% of cases",
+        "One report found abdominal pain in 61.2%, hypotension in 37.6%, and back pain in 54.1%",
+        "Ruptured AAA is often difficult to diagnose with ultrasound",
         "Rupture should be suspected in elderly men with abdominal or back pain and a smoking history"
       ],
       "answers": [
@@ -248,7 +256,7 @@
         2,
         4
       ],
-      "explanation": "According to the Acute Abdomen Guidelines 2025, the classic triad of ruptured AAA — hypotension, back pain, and pulsatile abdominal mass — is present in only 25–50% of cases. In initially misdiagnosed cases, abdominal pain was present in 70%, hypotension in 57%, and back pain in 50%. The absence of the classic triad does not exclude the diagnosis. Rupture should be suspected in elderly men with abdominal or back pain and a smoking history.",
+      "explanation": "According to the Acute Abdomen Guidelines 2025, the classic triad of ruptured AAA is hypotension, back pain, and a pulsatile abdominal mass, but all three are present in only 25-50% of cases. A UK emergency department observational study of patients ultimately diagnosed with ruptured AAA reported abdominal pain in 61.2%, back pain in 54.1%, groin pain in 11.8%, hypotension on arrival in 37.6%, and pulsatile mass in 70.0%. A systematic review reported abdominal pain, shock, and pulsatile mass in 61%, 46%, and 45%, respectively. Rupture should be suspected in elderly men with abdominal or back pain and a smoking history. Ultrasound can rapidly evaluate the presence or enlargement of AAA, with reported sensitivity 98% and specificity 97%. However, contrast-enhanced CT is important for assessing the rupture extent, retroperitoneal hematoma, and operative or endovascular treatment planning.",
       "selectCount": 0
     },
     {
