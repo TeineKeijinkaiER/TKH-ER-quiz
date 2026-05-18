@@ -150,6 +150,7 @@ const state = {
   musicGeneration: 0,
   musicMode: "",
   musicUrgency: "normal",
+  certBeatStep: 0,
   wasCategoryClearAtStart: false,
   googleSheetsWebAppUrl: "",
   sendToLocalBackend: false,
@@ -1955,9 +1956,21 @@ function runCertParticles(canvas) {
 function startCertHeartbeat() {
   // stopMusicLoop() was already called by startQuizMusic()
   state.musicMode = "certHeartbeat";
+  state.certBeatStep = 0;
   const generation = ++state.musicGeneration;
   scheduleCertBeat(generation, true); // true = isLub (first beat of the pair)
 }
+
+// Techno-pop layered over a LUB-DUB heartbeat foundation.
+// - S1/S2 thumps preserve the cardiac feel
+// - Sawtooth bass + square arpeggio give the techno-pop character
+// - A short bright "tick" on every off-beat acts as a hi-hat
+// - BPM accelerates quadratically as the timer runs out, dragging everything
+//   else with it (the entire pattern just plays faster)
+//
+// A minor pentatonic / dorian-ish arpeggio so the urgency feels dark.
+const CERT_ARP_HI    = [659, 784, 880, 988, 880, 784, 659, 587]; // A minor-ish lead, 8 steps
+const CERT_BASS_LINE = [110, 110, 110, 165, 110, 110, 147, 165]; // bass groove, 8 steps
 
 function scheduleCertBeat(generation, isLub) {
   if (generation !== state.musicGeneration || state.musicMode !== "certHeartbeat") return;
@@ -1966,23 +1979,42 @@ function scheduleCertBeat(generation, isLub) {
   const remainingMs = Math.max(0, state.timerDeadline - Date.now());
   if (remainingMs <= 0) return;
 
-  // BPM linearly from 52 (full time) to 175 (1 s left), with quadratic feel
+  // BPM accelerates from 92 (full time) to 200 (≤1 s left), quadratic
   const ratio = Math.max(0, Math.min(1, 1 - (remainingMs / 1000 - 1) / (CERT_SECONDS - 1)));
-  const bpm = 52 + (175 - 52) * (ratio * ratio);
-  const rrMs = 60000 / bpm; // full RR interval in ms
+  const bpm   = 92 + (200 - 92) * (ratio * ratio);
+  const rrMs  = 60000 / bpm; // full RR (LUB→LUB) interval
+  // Intensity rises with the timer — louder leads/hats near the end.
+  const intensity = 0.55 + 0.45 * ratio;
 
-  // Play the beat
+  const step = state.certBeatStep % CERT_ARP_HI.length;
+  const lead = CERT_ARP_HI[step];
+  const bass = CERT_BASS_LINE[step];
+
   if (isLub) {
-    // S1 — low, punchy thump
-    playSynthNote(110, 0.11, "sine",     0.10);
-    playSynthNote( 65, 0.16, "triangle", 0.07);
+    // ── S1 (downbeat): kick + sub + bass note + bright lead ──
+    playSynthNote(110, 0.11, "sine",     0.10);          // body of the kick
+    playSynthNote( 65, 0.16, "triangle", 0.07);          // sub
+    playSynthNote(bass, 0.10, "sawtooth", 0.055 * intensity); // techno bass
+    playSynthNote(lead, 0.13, "square",   0.045 * intensity); // lead synth
+    // 16th-note "tick" mid-way to next beat for a hi-hat feel
+    window.setTimeout(() => {
+      playSynthNote(7200, 0.018, "sawtooth", 0.025 * intensity);
+    }, rrMs * 0.19);
   } else {
-    // S2 — softer, slightly higher
+    // ── S2 (upbeat): softer kick + bass note + lead + offbeat tick ──
     playSynthNote(140, 0.07, "sine",     0.063);
     playSynthNote( 85, 0.10, "triangle", 0.044);
+    playSynthNote(bass, 0.08, "sawtooth", 0.045 * intensity);
+    playSynthNote(lead, 0.10, "square",   0.040 * intensity);
+    // Brighter tick on the off-beat (classic techno hat placement)
+    window.setTimeout(() => {
+      playSynthNote(9000, 0.020, "sawtooth", 0.030 * intensity);
+    }, rrMs * 0.31);
   }
 
-  // S1→S2 gap ≈ 38% of RR, S2→S1 gap ≈ 62% of RR
+  state.certBeatStep = (state.certBeatStep + 1) % CERT_ARP_HI.length;
+
+  // S1→S2 ≈ 38% of RR, S2→S1 ≈ 62% (preserves the LUB-DUB asymmetry)
   const gapMs = isLub ? rrMs * 0.38 : rrMs * 0.62;
   window.setTimeout(() => scheduleCertBeat(generation, !isLub), gapMs);
 }
