@@ -348,7 +348,16 @@ function bindAudioResume() {
     }
     if (state.audioContext?.state === "suspended") {
       state.audioContext.resume()
-        .then(() => { if (!state.musicLoopId && !readStore().muted) startOpeningMusic(); })
+        .then(() => {
+          // After the context is resumed, restart opening music if we're on a
+          // screen that should have it — regardless of whether the old loop
+          // interval is still registered, because suspended contexts silently
+          // drop all scheduled audio and the loop needs a fresh start.
+          if (!readStore().muted && isSetupScreenVisible()) {
+            stopMusicLoop();
+            startOpeningMusic();
+          }
+        })
         .catch(() => {});
     }
   };
@@ -1182,6 +1191,9 @@ function showScreen(name) {
     element.classList.toggle("is-active", screenName === name);
   });
   if (name !== "ranking" && name !== "clear") state.lastScreen = name;
+  // Re-render level screen every time it becomes visible so clear counts
+  // and cert button states reflect the latest localStorage data.
+  if (name === "level") renderLevelScreen();
   if (name === "level" || name === "setup") startOpeningMusic();
 }
 
@@ -1425,6 +1437,9 @@ function setSyncStatus(text, status) {
 
 function startOpeningMusic() {
   if (readStore().muted || !isSetupScreenVisible()) return;
+  // If AudioContext is suspended (backgrounded, locked screen, etc.) wait for
+  // the user gesture in bindAudioResume to resume it — don't try to play now.
+  if (state.audioContext && state.audioContext.state === "suspended") return;
   stopMusicLoop();
   const level = state.selectedLevel || "basic";
   const config = OPENING_MUSIC[level] || OPENING_MUSIC.basic;
@@ -1472,6 +1487,7 @@ function playOpeningMusicStep(config, generation) {
 
 function startQuizMusic() {
   if (readStore().muted) return;
+  if (state.audioContext && state.audioContext.state === "suspended") return;
   stopMusicLoop();
   // Certification exam uses heartbeat instead of melodic quiz music
   if (state.certMode) { startCertHeartbeat(); return; }
