@@ -159,9 +159,7 @@
     {
       "id": "emergency_medications_basic_015",
       "categories": [
-        "emergency_medications_basic",
-        "general_em_basic",
-        "cpr_basic"
+        "emergency_medications_basic"
       ],
       "question": "薬剤による副作用・合併症の緊急対処法として正しいものを3つ選べ。",
       "choices": [
