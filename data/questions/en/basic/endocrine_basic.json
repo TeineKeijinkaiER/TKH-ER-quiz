@@ -194,7 +194,7 @@
     },
     {
       "id": "endocrine_basic_014",
-      "categories": ["endocrine_basic", "general_em_basic"],
+      "categories": ["endocrine_basic"],
       "question": "Select all criteria appropriate for the diagnosis of HHS based on the 2024 international consensus report.",
       "choices": [
         "Blood glucose 600 mg/dL or higher",
