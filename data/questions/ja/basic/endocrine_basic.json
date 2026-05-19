@@ -104,7 +104,7 @@
     },
     {
       "id": "endocrine_basic_008",
-      "categories": ["endocrine_basic", "emergency_medications_basic"],
+      "categories": ["endocrine_basic"],
       "question": "2024年国際コンセンサスに基づく成人DKAの診断基準として正しいものをすべて選べ。",
       "choices": [
         "血糖200 mg/dL以上、または糖尿病の既往がある",
