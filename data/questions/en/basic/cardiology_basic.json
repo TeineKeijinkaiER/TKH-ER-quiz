@@ -19,7 +19,7 @@
     },
     {
       "id": "cardiology_basic_002",
-      "question": "Select the 3 correct pairings of ST elevation leads and culprit coronary arteries.",
+      "question": "Select all correct pairings of ST elevation leads and culprit coronary arteries.",
       "choices": [
         "ST elevation in V1–V4: suspect left anterior descending artery (LAD) disease",
         "ST elevation in II, III, aVF: suspect right coronary artery (RCA) or left circumflex artery (LCX) disease",
@@ -27,12 +27,13 @@
         "ST elevation in V1–V4: most typically suspect proximal RCA occlusion",
         "ST elevation in V4R is useful for evaluating right ventricular infarction"
       ],
-      "selectCount": 3,
-      "explanation": "V1–V4 (anterior septum) → LAD; II, III, aVF (inferior wall) → RCA or LCX; I, aVL, V5, V6 (lateral wall) → LCX or diagonal branch. V4R is useful for evaluating RV infarction but this question selects 3 answers. The representative ST elevation leads and culprit coronary artery pairings are choices 0–2.",
+      "selectCount": 0,
+      "explanation": "V1–V4 (anterior septum) → LAD; II, III, aVF (inferior wall) → RCA or LCX; I, aVL, V5, V6 (lateral wall) → LCX or diagonal branch. V4R is useful for evaluating RV infarction.",
       "answers": [
         0,
         1,
-        2
+        2,
+        4
       ]
     },
     {
