@@ -126,7 +126,7 @@
     },
     {
       "id": "cardiology_basic_008",
-      "question": "Select the 3 correct statements about rate control drug selection for atrial fibrillation.",
+      "question": "Select all correct statements about acute management of atrial fibrillation, including rate control drug selection.",
       "choices": [
         "Beta-blockers can be considered for stable rapid ventricular response AF with preserved left ventricular systolic function",
         "Diltiazem or verapamil can be considered for stable rapid ventricular response AF with preserved LV systolic function",
@@ -134,12 +134,12 @@
         "For WPW syndrome with atrial fibrillation, verapamil should be given as the first-line rapid IV push",
         "If hypotension or acute heart failure is present, consider electrical cardioversion in addition to pharmacological rate control"
       ],
-      "selectCount": 3,
-      "explanation": "For stable rapid ventricular response AF, beta-blockers, diltiazem, or verapamil are options depending on LV function and BP. Non-dihydropyridine calcium channel blockers should be avoided in heart failure with reduced LV systolic function. Verapamil and other AV node blocking agents are dangerous in WPW syndrome with AF and should not be used as first-line therapy.",
+      "explanation": "For stable rapid ventricular response AF, beta-blockers, diltiazem, or verapamil are options depending on LV function and BP. Non-dihydropyridine calcium channel blockers should be avoided in heart failure with reduced LV systolic function. If hypotension, acute heart failure, or other unstable findings are present, electrical therapy such as synchronized cardioversion should be considered in addition to pharmacological management. Verapamil and other AV node blocking agents are dangerous in WPW syndrome with AF and should not be used as first-line therapy.",
       "answers": [
         0,
         1,
-        2
+        2,
+        4
       ]
     },
     {
