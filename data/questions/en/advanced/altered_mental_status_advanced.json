@@ -3,19 +3,26 @@
   "questions": [
     {
       "id": "altered_mental_status_advanced_001",
-      "question": "A patient with altered mental status (JCS 200, SpO2 93%, BP 168/92 mmHg, HR 58/min) is brought to the emergency department. Which of the following initial responses is INCORRECT?",
+      "categories": [
+        "altered_mental_status_advanced",
+        "infection_advanced"
+      ],
+      "question": "Select ALL statements regarding the diagnosis and initial management of Herpes Simplex Virus (HSV) encephalitis that are correct.",
       "choices": [
-        "First assess A, B, and C to evaluate airway protection, oxygenation, ventilation, and circulation",
-        "Immediately measure bedside blood glucose and promptly correct hypoglycemia if present",
-        "Quickly check for anisocoria, conjugate eye deviation, hemiplegia, nuchal rigidity, and signs of trauma",
-        "Since stroke is suspected, transport to head CT before evaluating airway, breathing, and circulation",
-        "Even with limited history, simultaneously consider drug/toxin exposure, infection, metabolic abnormalities, and intracranial pathology"
+        "If clinically suspected, start acyclovir 10 mg/kg (every 8 hours) without waiting for CSF PCR results",
+        "Head MRI (FLAIR) has >90% sensitivity, showing temporal and inferior frontal lobe signal changes",
+        "CSF PCR can be negative early (24–48h); consider a repeat test if suspicion is high",
+        "EEG shows periodic lateralized epileptiform discharges (PLEDs) in the temporal lobe",
+        "CSF findings typically show marked glucose reduction and neutrophilic pleocytosis"
       ],
       "answers": [
+        0,
+        1,
+        2,
         3
       ],
-      "selectCount": 1,
-      "explanation": "In altered mental status, stabilizing the airway (A), breathing (B), and circulation (C) and ruling out hypoglycemia take priority. A patient with JCS 200 may have impaired airway protection or ventilatory failure; CT should not be prioritized over A-B-C assessment. The initial evaluation should simultaneously address blood glucose, oxygenation/ventilation, circulation, pupils, focal neurological findings, meningeal signs, trauma, toxic ingestion, infection, and metabolic abnormalities."
+      "selectCount": 0,
+      "explanation": "HSV encephalitis is a life-threatening neurological emergency. Intravenous acyclovir (10 mg/kg every 8 hours) should be initiated immediately upon clinical suspicion, without waiting for CSF PCR results. Brain MRI (FLAIR) has >90% sensitivity, showing asymmetric hyperintensities in the temporal and inferior frontal lobes. CSF HSV-PCR can be falsely negative early on (within 24–48 hours); if clinical suspicion remains high, a repeat lumbar puncture is indicated. EEG may show temporal-predominant PLEDs. CSF analysis in HSV encephalitis typically demonstrates lymphocytic (mononuclear) pleocytosis, elevated protein, and normal to mildly decreased glucose; marked glucose reduction and neutrophilic pleocytosis are characteristic of bacterial meningitis, not viral encephalitis."
     },
     {
       "id": "altered_mental_status_advanced_002",
@@ -38,19 +45,19 @@
     },
     {
       "id": "altered_mental_status_advanced_003",
-      "question": "Regarding initial management of altered mental status including hypoglycemia and toxicological causes, which ONE statement is INCORRECT?",
+      "question": "Regarding head MRI findings of various conditions causing altered mental status, select the ONE INCORRECT statement.",
       "choices": [
-        "If diaphoresis, tachycardia, and altered mental status are present with a blood glucose of 38 mg/dL, administer dextrose promptly",
-        "In suspected chronic alcohol use or malnutrition, consider thiamine administration around the time of dextrose administration",
-        "Altered mental status with miosis, respiratory rate of 6/min, and declining SpO2 should prompt suspicion of opioid toxicity and consideration of naloxone",
-        "If altered mental status persists with a blood glucose of 62 mg/dL, correction is unnecessary because the hypoglycemia is mild",
-        "In carbon monoxide poisoning, a normal pulse oximetry SpO2 reading does not exclude toxicity"
+        "In hypoglycemic encephalopathy, the thalamus is symmetrically and frequently involved alongside the cortex",
+        "In hypoxic-ischemic encephalopathy, the thalamus is commonly involved symmetrically alongside the cortex",
+        "Wernicke's encephalopathy characteristically shows symmetric T2/FLAIR hyperintensities in the mamillary bodies",
+        "Herpes simplex encephalitis reveals asymmetric lesions in the temporal lobe, typically sparing the basal ganglia",
+        "Marchiafava-Bignami syndrome demonstrates corpus callosum lesions"
       ],
       "answers": [
-        3
+        0
       ],
       "selectCount": 1,
-      "explanation": "Hypoglycemia or borderline hypoglycemia accompanied by altered mental status should be corrected promptly based on the clinical situation. Blood glucose below 70 mg/dL is generally treated as hypoglycemia, and dextrose should be considered when mental status is impaired. Thiamine should be considered for Wernicke encephalopathy prevention in patients with alcohol use disorder or malnutrition, but should not unnecessarily delay glucose correction. In opioid toxicity, respiratory depression is the critical concern; naloxone should be used alongside ventilatory support. In carbon monoxide poisoning, SpO2 is falsely normal; COHb measurement and exposure history are essential."
+      "explanation": "In hypoglycemic encephalopathy, the cerebral cortex, hippocampus, and basal ganglia are selectively involved, but the thalamus, brainstem, and cerebellum are characteristically spared. In contrast, hypoxic-ischemic encephalopathy (HIE) frequently involves the thalamus symmetrically, making the presence or absence of thalamic sparing a key differentiator. Wernicke's encephalopathy is characterized by symmetric lesions in the mamillary bodies, medial thalami, and periaqueductal gray matter. Herpes simplex encephalitis characteristically involves the medial temporal lobe and insula asymmetrically, while sparing the basal ganglia. Marchiafava-Bignami syndrome is characterized by demyelination and necrosis of the corpus callosum."
     },
     {
       "id": "altered_mental_status_advanced_004",
