@@ -45,12 +45,12 @@
         "Explain that appropriate use of antipyretics can prevent febrile seizures",
         "Start long-term antiepileptic medication in all cases of simple febrile seizure"
       ],
-      "selectCount": 0,
       "answers": [
         0,
         1,
         2
       ],
+      "selectCount": 0,
       "explanation": "If the child is in good general condition after a simple febrile seizure, the cause of fever can be evaluated and discharge may be possible after explaining recurrence management to caregivers. Caregivers should be instructed to observe seizure duration, laterality, recovery of consciousness, breathing, when to call emergency services, and appropriate positioning. Placing objects in the mouth during a seizure is dangerous. Antipyretics may reduce discomfort but do not reliably prevent febrile seizure recurrence. Long-term antiepileptic medication is not routinely started in all cases of simple febrile seizure."
     },
     {
@@ -63,13 +63,13 @@
         "After administration, monitor for adverse effects such as somnolence, unsteadiness, and respiratory depression",
         "After diazepam administration, drug-induced somnolence may make it difficult to determine the cause of impaired consciousness"
       ],
-      "selectCount": 0,
       "answers": [
         1,
         2,
         3,
         4
       ],
+      "selectCount": 0,
       "explanation": "Diazepam suppositories during fever can reduce febrile seizure recurrence, but most febrile seizures are benign, and side effects and the risk of masking meningitis must be considered. They should not be prescribed routinely for all children with febrile seizures. Use may be considered in higher-risk cases, such as those with a history of prolonged seizures. The usual dose is approximately 0.4–0.5 mg/kg per dose. Somnolence, unsteadiness, and respiratory depression should be monitored, and drug-induced somnolence can make it harder to determine the cause of impaired consciousness."
     },
     {
@@ -98,13 +98,13 @@
         "A method using 0.1% L-epinephrine 0.1–0.3 mL diluted in 2 mL normal saline for nebulization is used",
         "If symptoms improve after nebulized epinephrine, the effect is sustained and observation for rebound worsening is unnecessary"
       ],
-      "selectCount": 0,
       "answers": [
         0,
         1,
         2,
         3
       ],
+      "selectCount": 0,
       "explanation": "Corticosteroids are a core treatment for croup, and dexamethasone may be used as a single dose in the range of 0.15–0.6 mg/kg. Even in mild cases, corticosteroids can reduce symptoms and lower the risk of return visits and hospitalization. In many international guidelines, nebulized epinephrine is mainly recommended for moderate-to-severe cases, but in Japan it may be used even for relatively mild croup. A commonly used domestic method is 0.1% L-epinephrine 0.1–0.3 mL diluted in approximately 2 mL normal saline for nebulization. Some institutions use 0.01 mL/kg by weight, while others use a fixed 0.3 mL dose because inhalation efficiency varies. The effect of nebulized epinephrine is transient, so observation for rebound worsening is required after administration."
     },
     {
@@ -151,13 +151,13 @@
         "If IV access is difficult to establish, non-IV routes such as buccal or intramuscular midazolam may be considered",
         "Intramuscular midazolam is contraindicated in status epilepticus"
       ],
-      "selectCount": 0,
       "answers": [
         0,
         1,
         2,
         3
       ],
+      "selectCount": 0,
       "explanation": "In children, if a seizure lasts ≥5 minutes, pharmacological treatment should be considered rather than waiting for prolonged spontaneous cessation. Benzodiazepines such as diazepam and midazolam are used as first-line agents. Reference doses include diazepam 0.3–0.5 mg/kg given slowly IV and midazolam 0.15 mg/kg given slowly IV. If IV access is difficult to establish, non-IV routes such as buccal, intranasal, or intramuscular midazolam may be options. Therefore, the statement that intramuscular midazolam is contraindicated in status epilepticus is incorrect. Use should follow domestic drug approval status, available formulations, and institutional protocols."
     },
     {
@@ -204,13 +204,13 @@
         "After defibrillation, immediately resume CPR and minimize interruptions to chest compressions",
         "For a 10 kg child receiving epinephrine 0.01 mg/kg, administer 1 mL of undiluted 0.1% epinephrine"
       ],
-      "selectCount": 0,
       "answers": [
         0,
         1,
         2,
         3
       ],
+      "selectCount": 0,
       "explanation": "In pediatric cardiac arrest, epinephrine 0.01 mg/kg is given IV or IO. For a 10 kg child, 0.01 mg/kg × 10 kg = 0.1 mg. In Japan, 0.1% epinephrine is 1 mg/mL; after 10-fold dilution, it becomes 0.1 mg/mL, so 0.1 mg corresponds to 1 mL of the diluted solution. Undiluted 0.1% epinephrine 1 mL contains 1 mg, which is 10 times the cardiac arrest dose for a 10 kg child. For VF or pulseless VT, defibrillation is performed with an initial dose of 2 J/kg, followed by 4 J/kg. After defibrillation, do not pause for a prolonged pulse check; resume CPR immediately."
     }
   ]

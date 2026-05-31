@@ -51,8 +51,8 @@
         2,
         4
       ],
-      "explanation": "Under B, rapidly identify thoracic injuries threatening ventilation and oxygenation. Tension pneumothorax, open pneumothorax, massive hemothorax, and ventilatory failure from flail chest are life-threatening conditions that may require intervention without waiting for imaging confirmation. In contrast, suspected pulmonary contusion with preserved oxygenation and hemodynamics does not necessarily require immediate invasive intervention in the Primary survey.",
-      "selectCount": 0
+      "selectCount": 0,
+      "explanation": "Under B, rapidly identify thoracic injuries threatening ventilation and oxygenation. Tension pneumothorax, open pneumothorax, massive hemothorax, and ventilatory failure from flail chest are life-threatening conditions that may require intervention without waiting for imaging confirmation. In contrast, suspected pulmonary contusion with preserved oxygenation and hemodynamics does not necessarily require immediate invasive intervention in the Primary survey."
     },
     {
       "id": "trauma_jatec_004",
@@ -77,14 +77,14 @@
         "BP 78/46 mmHg, pulse 132/min: first consider hemorrhagic shock",
         "BP 82/50 mmHg, pulse 48/min: include neurogenic shock from spinal cord injury in the differential",
         "BP 190/100 mmHg, pulse 42/min: include Cushing phenomenon from increased intracranial pressure in the differential",
-        "BP 86/52 mmHg, pulse 118/min: first consider neurogenic shock from vasovagal response",
+        "BP 86/52 mmHg, pulse 118/min: first consider a vasovagal reflex",
         "In elderly patients, be aware that hemorrhagic shock may not present with tachycardia"
       ],
       "answers": [
         3
       ],
       "selectCount": 1,
-      "explanation": "In a JCS 300 trauma patient, rapidly assess A, B, and C while estimating pathophysiology from blood pressure and pulse combinations. Hypotension with tachycardia should raise hemorrhagic shock as the primary consideration. Hypotension with bradycardia warrants neurogenic shock in the differential. Hypertension with bradycardia raises suspicion for Cushing phenomenon from elevated intracranial pressure. Therefore, considering neurogenic shock first in option 4 (hypotension with tachycardia) is inappropriate. Additionally, elderly patients and those on beta-blockers may not show prominent tachycardia even in hemorrhagic shock."
+      "explanation": "In a JCS 300 trauma patient, rapidly assess A, B, and C while estimating pathophysiology from blood pressure and pulse combinations. Hypotension with tachycardia should raise hemorrhagic shock as the primary consideration. Hypotension with bradycardia warrants neurogenic shock in the differential. Hypertension with bradycardia raises suspicion for Cushing phenomenon from elevated intracranial pressure. Therefore, considering a vasovagal reflex first in option 4 (hypotension with tachycardia) is inappropriate. Additionally, elderly patients and those on beta-blockers may not show prominent tachycardia even in hemorrhagic shock."
     },
     {
       "id": "trauma_jatec_006",
@@ -117,8 +117,8 @@
         1,
         2
       ],
-      "explanation": "Impending D is characterized by rapid GCS decline, anisocoria with abnormal light reflex, and hemiplegia. These suggest elevated intracranial pressure, brain herniation, or serious intracranial pathology, requiring urgent management in parallel with reassessment of A, B, and C. Severe headache and diplopia are important neurological symptoms that must not be missed, but in the absence of rapid GCS decline, pupillary abnormalities, or obvious hemiplegia, they are not readily classified as impending D in the Primary survey. Detailed evaluation should be performed in the Secondary survey and beyond.",
-      "selectCount": 0
+      "selectCount": 0,
+      "explanation": "Impending D is characterized by rapid GCS decline, anisocoria with abnormal light reflex, and hemiplegia. These suggest elevated intracranial pressure, brain herniation, or serious intracranial pathology, requiring urgent management in parallel with reassessment of A, B, and C. Severe headache and diplopia are important neurological symptoms that must not be missed, but in the absence of rapid GCS decline, pupillary abnormalities, or obvious hemiplegia, they are not readily classified as impending D in the Primary survey. Detailed evaluation should be performed in the Secondary survey and beyond."
     },
     {
       "id": "trauma_jatec_008",
@@ -136,8 +136,8 @@
         2,
         4
       ],
-      "explanation": "Even when a D abnormality is identified, the cause is not necessarily an intracranial lesion. Simultaneously check for reversible causes such as hypoxia, ventilatory failure, shock, and hypoglycemia. Imaging is important, but should not be prioritized at the cost of A, B, and C stabilization.",
-      "selectCount": 0
+      "selectCount": 0,
+      "explanation": "Even when a D abnormality is identified, the cause is not necessarily an intracranial lesion. Simultaneously check for reversible causes such as hypoxia, ventilatory failure, shock, and hypoglycemia. Imaging is important, but should not be prioritized at the cost of A, B, and C stabilization."
     },
     {
       "id": "trauma_jatec_009",
@@ -154,8 +154,8 @@
         1,
         2
       ],
-      "explanation": "Under E, complete exposure for full-body assessment and prevention of hypothermia are performed simultaneously. Omitting full-body assessment risks missing occult injuries, while failing to warm the patient after exposure worsens hypothermia-induced coagulopathy and bleeding tendency.",
-      "selectCount": 0
+      "selectCount": 0,
+      "explanation": "Under E, complete exposure for full-body assessment and prevention of hypothermia are performed simultaneously. Omitting full-body assessment risks missing occult injuries, while failing to warm the patient after exposure worsens hypothermia-induced coagulopathy and bleeding tendency."
     },
     {
       "id": "trauma_jatec_010",

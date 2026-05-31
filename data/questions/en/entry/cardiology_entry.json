@@ -10,22 +10,26 @@
         "Left main coronary artery",
         "Diagonal branch"
       ],
-      "answers": [0],
-      "selectCount": 1,
-      "explanation": "Leads II, III, and aVF are inferior leads, and ST elevation in these leads suggests an inferior STEMI. The culprit vessel is most often the right coronary artery, although the left circumflex artery can also be responsible. ST elevation in lead III greater than lead II often suggests right coronary artery occlusion and is frequently accompanied by reciprocal ST depression in leads I and aVL. With proximal right coronary artery occlusion, right ventricular infarction may coexist, so additional right-sided chest leads such as V4R should be considered."
+      "explanation": "Leads II, III, and aVF are inferior leads, and ST elevation in these leads suggests an inferior STEMI. The culprit vessel is most often the right coronary artery, although the left circumflex artery can also be responsible. ST elevation in lead III greater than lead II often suggests right coronary artery occlusion and is frequently accompanied by reciprocal ST depression in leads I and aVL. With proximal right coronary artery occlusion, right ventricular infarction may coexist, so additional right-sided chest leads such as V4R should be considered.",
+      "answers": [
+        0
+      ],
+      "selectCount": 1
     },
     {
       "id": "cardiology_entry_002",
-      "question": "In a patient with chest pain suspicious for acute coronary syndrome, which findings should raise strong concern for aortic dissection and be evaluated before antithrombotic therapy?",
+      "question": "In a patient with chest pain suspicious for acute coronary syndrome, which finding is not one that should strongly suggest aortic dissection?",
       "choices": [
-        "Blood pressure difference between arms, migrating back pain, and neurologic symptoms",
-        "Chest pain with exertion that improves at rest",
-        "Chest pain accompanied by cold sweats",
-        "ST depression on ECG"
+        "Blood pressure difference or pulse difference between the right and left upper limbs",
+        "Migrating back pain",
+        "Sudden onset of severe pain",
+        "Chest pain with exertion that improves at rest"
       ],
-      "answers": [0],
-      "selectCount": 1,
-      "explanation": "Important clues to acute aortic dissection include sudden severe chest or back pain, migrating pain, blood pressure or pulse differences between arms, neurologic symptoms, syncope, and aortic regurgitation murmur. If it is mistaken for acute coronary syndrome, antiplatelet therapy, anticoagulation, or thrombolysis can be fatal. When dissection is suspected, evaluate with contrast CT or another appropriate test. Cold sweats and ST changes can occur in acute coronary syndrome but are not specific for aortic dissection."
+      "explanation": "Important clues to acute aortic dissection include sudden onset of severe chest or back pain, migrating pain, blood pressure or pulse differences between the arms, neurologic symptoms, syncope, and aortic regurgitation murmur. In contrast, chest pain that occurs with exertion and improves at rest typically suggests exertional myocardial ischemia such as stable angina, and is not a typical finding that should strongly suggest aortic dissection. Acute coronary syndrome and aortic dissection must be distinguished in patients with chest pain; when findings suggest dissection, evaluate with contrast CT or another appropriate test before giving antiplatelet agents, anticoagulants, or thrombolytic therapy.",
+      "answers": [
+        3
+      ],
+      "selectCount": 1
     },
     {
       "id": "cardiology_entry_003",
@@ -36,9 +40,11 @@
         "S1Q3T3 pattern on ECG",
         "SpO2 below 90%"
       ],
-      "answers": [0],
-      "selectCount": 1,
-      "explanation": "The Wells score is used to estimate the clinical probability of DVT. Items include active cancer, paralysis or paresis or recent plaster immobilization of the lower extremity, recent bedridden status or major surgery, localized tenderness along the deep venous system, entire leg swelling, calf circumference difference, pitting edema, collateral superficial veins, and previous DVT. Hypotension, S1Q3T3, and hypoxemia may be relevant in pulmonary embolism assessment but are not items in the DVT Wells score."
+      "explanation": "The Wells score is used to estimate the clinical probability of DVT. Items include active cancer, paralysis or paresis or recent plaster immobilization of the lower extremity, recent bedridden status or major surgery, localized tenderness along the deep venous system, entire leg swelling, calf circumference difference, pitting edema, collateral superficial veins, and previous DVT. Hypotension, S1Q3T3, and hypoxemia may be relevant in pulmonary embolism assessment but are not items in the DVT Wells score.",
+      "answers": [
+        0
+      ],
+      "selectCount": 1
     },
     {
       "id": "cardiology_entry_004",
@@ -49,9 +55,11 @@
         "Observe without giving a beta blocker",
         "Start anticoagulation before rate control"
       ],
-      "answers": [0],
-      "selectCount": 1,
-      "explanation": "In a hemodynamically stable regular narrow-QRS tachycardia suspicious for PSVT, first attempt vagal maneuvers such as the modified Valsalva maneuver. If ineffective, rapid IV adenosine may be considered after checking contraindications. If the patient is hemodynamically unstable with hypotension, shock, ischemic chest pain, acute heart failure, or impaired consciousness, synchronized cardioversion is indicated. Unsynchronized defibrillation is used for cardiac arrest rhythms such as VF or pulseless VT."
+      "explanation": "In a hemodynamically stable regular narrow-QRS tachycardia suspicious for PSVT, first attempt vagal maneuvers such as the modified Valsalva maneuver. If ineffective, rapid IV adenosine may be considered after checking contraindications. If the patient is hemodynamically unstable with hypotension, shock, ischemic chest pain, acute heart failure, or impaired consciousness, synchronized cardioversion is indicated. Unsynchronized defibrillation is used for cardiac arrest rhythms such as VF or pulseless VT.",
+      "answers": [
+        0
+      ],
+      "selectCount": 1
     },
     {
       "id": "cardiology_entry_005",
@@ -62,9 +70,101 @@
         "Loss of P waves, QRS widening, and a sine-wave pattern",
         "Diffuse ST elevation and PR depression"
       ],
-      "answers": [2],
-      "selectCount": 1,
-      "explanation": "Hyperkalemia can progress from peaked T waves to PR prolongation, flattening or loss of P waves, QRS widening, and in severe cases a sine-wave pattern, ventricular fibrillation, or asystole. QRS widening or a sine-wave pattern suggests impending lethal arrhythmia and requires emergency treatment, including myocardial membrane stabilization with calcium. QT prolongation and prominent U waves suggest hypokalemia, a delta wave suggests WPW syndrome, and diffuse ST elevation with PR depression suggests acute pericarditis."
+      "explanation": "Hyperkalemia can progress from peaked T waves to PR prolongation, flattening or loss of P waves, QRS widening, and in severe cases a sine-wave pattern, ventricular fibrillation, or asystole. QRS widening or a sine-wave pattern suggests impending lethal arrhythmia and requires emergency treatment, including myocardial membrane stabilization with calcium. QT prolongation and prominent U waves suggest hypokalemia, a delta wave suggests WPW syndrome, and diffuse ST elevation with PR depression suggests acute pericarditis.",
+      "answers": [
+        2
+      ],
+      "selectCount": 1
+    },
+    {
+      "id": "cardiology_entry_006",
+      "question": "In a patient with chest pain suspicious for acute coronary syndrome, ST elevation is observed in leads V1 to V4. Which coronary artery is the most likely culprit?",
+      "choices": [
+        "Left anterior descending artery",
+        "Left main coronary artery",
+        "Diagonal branch",
+        "Right coronary artery"
+      ],
+      "explanation": "ST elevation in leads V1 to V4 suggests an anterior-septal ST-elevation myocardial infarction (STEMI), and the left anterior descending (LAD) artery is the most likely culprit vessel. Although left main trunk occlusion or proximal LAD lesions can cause extensive ischemia, an ST elevation pattern predominantly in V1-V4 points first to a LAD lesion.",
+      "answers": [
+        0
+      ],
+      "selectCount": 1
+    },
+    {
+      "id": "cardiology_entry_007",
+      "question": "In a patient with chest pain suspicious for acute coronary syndrome, ST elevation is observed in leads I, aVL, V5, and V6. Which coronary artery is the most likely culprit?",
+      "choices": [
+        "Left anterior descending artery",
+        "Left main coronary artery",
+        "Diagonal or obtuse marginal branch",
+        "Right coronary artery"
+      ],
+      "explanation": "ST elevation in leads I, aVL, V5, and V6 suggests a lateral ST-elevation myocardial infarction (STEMI). A diagonal branch can be the culprit in high lateral infarctions, while an obtuse marginal branch of the left circumflex (LCx) artery can be the culprit in lateral to posterolateral infarctions.",
+      "answers": [
+        2
+      ],
+      "selectCount": 1
+    },
+    {
+      "id": "cardiology_entry_008",
+      "question": "Which ECG finding can occur in left main coronary artery occlusion or severe stenosis?",
+      "choices": [
+        "ST elevation in leads II, III, and aVF",
+        "ST elevation in leads V5 and V6",
+        "ST elevation in lead aVR",
+        "ST elevation in all leads"
+      ],
+      "explanation": "Widespread subendocardial ischemia due to left main coronary artery disease, proximal LAD disease, or 3-vessel disease can present with ST elevation in lead aVR. Typically, this is accompanied by widespread ST depression in other leads. While ST elevation in lead aVR is not highly specific for left main disease, it is an important finding suggesting severe, life-threatening ischemia.",
+      "answers": [
+        2
+      ],
+      "selectCount": 1
+    },
+    {
+      "id": "cardiology_entry_009",
+      "question": "Which coronary artery segment number corresponds to the left main trunk (LMT)?",
+      "choices": [
+        "#4",
+        "#5",
+        "#6",
+        "#7"
+      ],
+      "explanation": "The left main trunk (#5) refers to the segment of the left coronary artery from its origin to its bifurcation into the left anterior descending (LAD) and left circumflex (LCx) arteries.",
+      "answers": [
+        1
+      ],
+      "selectCount": 1
+    },
+    {
+      "id": "cardiology_entry_010",
+      "question": "Which coronary artery segment number corresponds to the proximal right coronary artery (RCA)?",
+      "choices": [
+        "#1",
+        "#2",
+        "#3",
+        "#4"
+      ],
+      "explanation": "Segment #1 corresponds to the proximal right coronary artery (RCA). Occlusion of the proximal RCA can cause an inferior myocardial infarction, potentially complicated by right ventricular infarction or bradyarrhythmias due to AV node ischemia.",
+      "answers": [
+        0
+      ],
+      "selectCount": 1
+    },
+    {
+      "id": "cardiology_entry_011",
+      "question": "Which coronary artery segment number corresponds to the proximal left anterior descending (LAD) artery?",
+      "choices": [
+        "#6",
+        "#7",
+        "#8",
+        "#9"
+      ],
+      "explanation": "Segment #6 corresponds to the proximal left anterior descending (LAD) artery. Segment #7 refers to the mid LAD, #8 refers to the distal LAD or apex, and #9 refers to the first diagonal branch. A proximal LAD lesion is a critical lesion that can cause extensive anterior-septal wall ischemia.",
+      "answers": [
+        0
+      ],
+      "selectCount": 1
     }
   ]
 }

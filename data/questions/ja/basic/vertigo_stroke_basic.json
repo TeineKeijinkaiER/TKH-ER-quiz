@@ -35,8 +35,8 @@
         2,
         4
       ],
-      "explanation": "垂直性・注視方向性眼振、脳幹小脳症状、強い体幹失調、片麻痺は中枢性めまいを疑う。典型的BPPVのみなら末梢性を考えやすい。",
-      "selectCount": 0
+      "selectCount": 0,
+      "explanation": "垂直性・注視方向性眼振、脳幹小脳症状、強い体幹失調、片麻痺は中枢性めまいを疑う。典型的BPPVのみなら末梢性を考えやすい。"
     },
     {
       "id": "vertigo_stroke_basic_003",
@@ -72,8 +72,8 @@
         2,
         3
       ],
-      "explanation": "強い失調、頭頸部痛、神経局在症状、脳卒中リスクが高い症例では中枢性病変を除外するまで慎重に扱う。",
-      "selectCount": 0
+      "selectCount": 0,
+      "explanation": "強い失調、頭頸部痛、神経局在症状、脳卒中リスクが高い症例では中枢性病変を除外するまで慎重に扱う。"
     },
     {
       "id": "vertigo_stroke_basic_005",
@@ -91,8 +91,8 @@
         2,
         3
       ],
-      "explanation": "脳卒中疑いではABC安定化、低血糖除外、発症時刻確認、画像検査、専門チーム連絡を並行して進める。",
-      "selectCount": 0
+      "selectCount": 0,
+      "explanation": "脳卒中疑いではABC安定化、低血糖除外、発症時刻確認、画像検査、専門チーム連絡を並行して進める。"
     },
     {
       "id": "vertigo_stroke_basic_006",

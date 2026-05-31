@@ -17,8 +17,8 @@
         2,
         4
       ],
-      "explanation": "According to the Acute Abdomen Guidelines 2025, conditions requiring emergent endoscopy or intervention include GI bleeding, acute cholangitis, GI foreign bodies, and bowel obstruction. However, endoscopy is not indicated for all bowel obstructions. An esophageal foreign body may require emergent endoscopic removal. In sigmoid volvulus, if there is no evidence of perforation or necrosis, endoscopic decompression and reduction is a treatment option. In contrast, small bowel obstruction with suspected strangulation should be prioritized for CT evaluation, surgical consultation, and operative decision-making rather than endoscopy.",
-      "selectCount": 0
+      "selectCount": 0,
+      "explanation": "According to the Acute Abdomen Guidelines 2025, conditions requiring emergent endoscopy or intervention include GI bleeding, acute cholangitis, GI foreign bodies, and bowel obstruction. However, endoscopy is not indicated for all bowel obstructions. An esophageal foreign body may require emergent endoscopic removal. In sigmoid volvulus, if there is no evidence of perforation or necrosis, endoscopic decompression and reduction is a treatment option. In contrast, small bowel obstruction with suspected strangulation should be prioritized for CT evaluation, surgical consultation, and operative decision-making rather than endoscopy."
     },
     {
       "id": "gi_symptoms_basic_003",
@@ -60,7 +60,7 @@
       "id": "gi_symptoms_basic_005",
       "question": "Select three correct statements regarding red flag signs in history-taking for acute abdominal presentations.",
       "choices": [
-        "Sudden onset with severe abdominal pain should prompt consideration of aortic dissection, ruptured abdominal aortic aneurysm, mesenteric ischemia, and GI perforation",
+        "Sudden-onset severe abdominal pain should prompt consideration of vascular lesions or perforation",
         "A short time from symptom onset to presentation may correlate with disease severity",
         "Constant pain is a red flag sign in acute abdominal presentations and may be a predictor of emergent surgery in elderly patients",
         "Colicky pain rules out high-acuity diagnoses, as it indicates a hollow viscus origin",
@@ -97,7 +97,7 @@
         "When all three findings — abdominal distension, hyperactive bowel sounds, and vomiting — are present, specificity for bowel obstruction is reported at 100% with a positive predictive value of 64%",
         "Vomiting alone has a high positive predictive value for bowel obstruction and is useful as a standalone diagnostic criterion",
         "The diagnostic accuracy of constipation for bowel obstruction is reported as specificity 90–95% and positive likelihood ratio 3.7–8.8",
-        "When 2 or more of the following are present — abdominal distension, prior abdominal surgery, hyperactive bowel sounds, constipation, vomiting, age ≥50 — it is useful for bowel obstruction screening",
+        "Combinations of abdominal distension, prior surgical history, constipation, vomiting, and similar findings are useful for evaluating bowel obstruction",
         "Normal bowel sounds exclude bowel obstruction"
       ],
       "answers": [
@@ -218,8 +218,8 @@
         3,
         4
       ],
-      "explanation": "According to the Acute Abdomen Guidelines 2025, lactate is useful for assessing severity such as shock, and values exceeding 2.0–2.5 mmol/L warrant caution. However, diagnosing intestinal ischemia by blood gas analysis alone is difficult, and contrast-enhanced CT is recommended when ischemia is suspected. Lactate can also be elevated in pneumonia, renal failure, and cirrhosis, and must be interpreted in context regardless of whether it is normal or elevated.",
-      "selectCount": 0
+      "selectCount": 0,
+      "explanation": "According to the Acute Abdomen Guidelines 2025, lactate is useful for assessing severity such as shock, and values exceeding 2.0–2.5 mmol/L warrant caution. However, diagnosing intestinal ischemia by blood gas analysis alone is difficult, and contrast-enhanced CT is recommended when ischemia is suspected. Lactate can also be elevated in pneumonia, renal failure, and cirrhosis, and must be interpreted in context regardless of whether it is normal or elevated."
     },
     {
       "id": "gi_symptoms_basic_016",
@@ -256,8 +256,8 @@
         2,
         4
       ],
-      "explanation": "According to the Acute Abdomen Guidelines 2025, the classic triad of ruptured AAA is hypotension, back pain, and a pulsatile abdominal mass, but all three are present in only 25-50% of cases. A UK emergency department observational study of patients ultimately diagnosed with ruptured AAA reported abdominal pain in 61.2%, back pain in 54.1%, groin pain in 11.8%, hypotension on arrival in 37.6%, and pulsatile mass in 70.0%. A systematic review reported abdominal pain, shock, and pulsatile mass in 61%, 46%, and 45%, respectively. Rupture should be suspected in elderly men with abdominal or back pain and a smoking history. Ultrasound can rapidly evaluate the presence or enlargement of AAA, with reported sensitivity 98% and specificity 97%. However, contrast-enhanced CT is important for assessing the rupture extent, retroperitoneal hematoma, and operative or endovascular treatment planning.",
-      "selectCount": 0
+      "selectCount": 0,
+      "explanation": "According to the Acute Abdomen Guidelines 2025, the classic triad of ruptured AAA is hypotension, back pain, and a pulsatile abdominal mass, but all three are present in only 25-50% of cases. A UK emergency department observational study of patients ultimately diagnosed with ruptured AAA reported abdominal pain in 61.2%, back pain in 54.1%, groin pain in 11.8%, hypotension on arrival in 37.6%, and pulsatile mass in 70.0%. A systematic review reported abdominal pain, shock, and pulsatile mass in 61%, 46%, and 45%, respectively. Rupture should be suspected in elderly men with abdominal or back pain and a smoking history. Ultrasound can rapidly evaluate the presence or enlargement of AAA, with reported sensitivity 98% and specificity 97%. However, contrast-enhanced CT is important for assessing the rupture extent, retroperitoneal hematoma, and operative or endovascular treatment planning."
     },
     {
       "id": "gi_symptoms_basic_019",
@@ -311,8 +311,8 @@
         2,
         3
       ],
-      "explanation": "According to the Acute Abdomen Guidelines 2025, the approved dose of acetaminophen in Japan is 300–1,000 mg per dose, given every 4–6 hours, with a maximum daily dose of 4,000 mg. Opioids such as morphine and fentanyl may be added based on pain intensity. For biliary colic, NSAIDs have been shown to be as effective as opioids and may be considered first-line. For ureteral colic, NSAIDs are recommended, with opioids reserved for cases where NSAIDs cannot be used.",
-      "selectCount": 0
+      "selectCount": 0,
+      "explanation": "According to the Acute Abdomen Guidelines 2025, the approved dose of acetaminophen in Japan is 300–1,000 mg per dose, given every 4–6 hours, with a maximum daily dose of 4,000 mg. Opioids such as morphine and fentanyl may be added based on pain intensity. For biliary colic, NSAIDs have been shown to be as effective as opioids and may be considered first-line. For ureteral colic, NSAIDs are recommended, with opioids reserved for cases where NSAIDs cannot be used."
     }
   ]
 }

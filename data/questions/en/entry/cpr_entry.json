@@ -11,9 +11,11 @@
         "When using an anesthesia machine, perform a leak test and make ETCO2 available",
         "Use two folded bath towels as a pillow to achieve the sniffing position"
       ],
-      "answers": [1],
-      "selectCount": 1,
-      "explanation": "For Japanese adults, standard endotracheal tube sizes are about 7.5-8.0 mm for men and 7.0-7.5 mm for women. A 9 mm tube is too large and can make insertion difficult or cause vocal cord injury, so it is inappropriate."
+      "explanation": "For Japanese adults, standard endotracheal tube sizes are about 7.5-8.0 mm for men and 7.0-7.5 mm for women. A 9 mm tube is too large and can make insertion difficult or cause vocal cord injury, so it is inappropriate.",
+      "answers": [
+        1
+      ],
+      "selectCount": 1
     },
     {
       "id": "ed_first_steps_007",
@@ -25,9 +27,13 @@
         "Religion or the patient's views about death",
         "Initial ECG rhythm"
       ],
-      "answers": [1, 2, 4],
-      "selectCount": 3,
-      "explanation": "Whether the arrest was witnessed, estimated time to arrival, and the initial rhythm (VF/VT/PEA/asystole) are all important pieces of information directly related to prognosis and treatment strategy, and should be confirmed on the hotline. Past history and views about death can be addressed after arrival."
+      "explanation": "Whether the arrest was witnessed, estimated time to arrival, and the initial rhythm (VF/VT/PEA/asystole) are all important pieces of information directly related to prognosis and treatment strategy, and should be confirmed on the hotline. Past history and views about death can be addressed after arrival.",
+      "answers": [
+        1,
+        2,
+        4
+      ],
+      "selectCount": 3
     },
     {
       "id": "ed_first_steps_008",
@@ -39,9 +45,11 @@
         "Continue 100% oxygen for 24 hours for brain protection",
         "Prepare vasopressors in case hypotension develops"
       ],
-      "answers": [3],
-      "selectCount": 1,
-      "explanation": "After ROSC, both hypoxemia and hyperoxemia should be avoided. Use 100% oxygen until SpO2 or PaO2 can be reliably measured, then promptly adjust FiO2 to target approximately SpO2 90-98%. Continuing 100% oxygen without reassessment is inappropriate."
+      "explanation": "After ROSC, both hypoxemia and hyperoxemia should be avoided. Use 100% oxygen until SpO2 or PaO2 can be reliably measured, then promptly adjust FiO2 to target approximately SpO2 90-98%. Continuing 100% oxygen without reassessment is inappropriate.",
+      "answers": [
+        3
+      ],
+      "selectCount": 1
     },
     {
       "id": "cpr_entry_001",
@@ -52,9 +60,11 @@
         "100-120/min",
         "120-140/min"
       ],
-      "answers": [2],
-      "selectCount": 1,
-      "explanation": "AHA and JRC guidelines recommend adult chest compressions at 100-120/min. If the rate is too fast, recoil may be incomplete; if it is too slow, cardiac output falls."
+      "explanation": "AHA and JRC guidelines recommend adult chest compressions at 100-120/min. If the rate is too fast, recoil may be incomplete; if it is too slow, cardiac output falls.",
+      "answers": [
+        2
+      ],
+      "selectCount": 1
     },
     {
       "id": "cpr_entry_002",
@@ -65,9 +75,86 @@
         "Defibrillation (electric shock)",
         "IV amiodarone"
       ],
-      "answers": [2],
-      "selectCount": 1,
-      "explanation": "Defibrillation is the top priority for VF. Earlier defibrillation improves survival. Medications such as epinephrine and amiodarone are considered after unsuccessful defibrillation attempts."
+      "explanation": "Defibrillation is the top priority for VF. Earlier defibrillation improves survival. Medications such as epinephrine and amiodarone are considered after unsuccessful defibrillation attempts.",
+      "answers": [
+        2
+      ],
+      "selectCount": 1
+    },
+    {
+      "id": "cpr_entry_003",
+      "question": "Which of the following is appropriate as high-quality chest compressions for an adult patient in cardiac arrest?",
+      "choices": [
+        "The depth of chest compressions should be approximately 5 cm and should not exceed 6 cm",
+        "Target a compression rate of 60 to 80 per minute",
+        "Incomplete chest wall recoil after compressions is acceptable",
+        "Frequently interrupt compressions to prioritize rescue breaths"
+      ],
+      "explanation": "High-quality CPR for adults requires a compression rate of 100-120/min, a depth of approximately 5 cm (not exceeding 6 cm), full chest recoil after each compression, and minimizing interruptions in compressions. Compressions that are too shallow, too fast, have incomplete recoil, or are frequently interrupted will reduce coronary perfusion pressure and lower the quality of resuscitation.",
+      "answers": [
+        0
+      ],
+      "selectCount": 1
+    },
+    {
+      "id": "cpr_entry_004",
+      "question": "In PEA (pulseless electrical activity), it is important to consider the 5 H's and 5 T's as reversible causes. Which of the following is not included in the 5 H's and 5 T's?",
+      "choices": [
+        "Hypoxia",
+        "Hypovolemia",
+        "Cardiac tamponade",
+        "Subarachnoid hemorrhage (SAH)"
+      ],
+      "explanation": "In PEA, although electrical activity is present on the ECG, there is no effective cardiac output. In addition to high-quality CPR and epinephrine administration, searching for and correcting reversible causes is crucial, typically represented by the 5 H's and 5 T's. The 5 H's are hypoxia, hypovolemia, hydrogen ion excess (acidosis), hypo-/hyperkalemia, and hypothermia. The 5 T's are tension pneumothorax, tamponade (cardiac), toxins, thrombosis (pulmonary embolism), and thrombosis (coronary). While subarachnoid hemorrhage (SAH) can cause cardiac arrest, it is not typically included in the 5 H's and 5 T's listed as reversible causes of PEA in standard resuscitation courses.",
+      "answers": [
+        3
+      ],
+      "selectCount": 1
+    },
+    {
+      "id": "cpr_entry_005",
+      "question": "Which of the following strategies for defibrillation of adult VF/pulseless VT is inappropriate?",
+      "choices": [
+        "Deliver a shock as quickly as possible once a shockable rhythm is confirmed",
+        "Resume chest compressions immediately after delivering the shock",
+        "Continue CPR for about 2 minutes after defibrillation before performing a rhythm check",
+        "Check the pulse immediately after delivering the shock, and resume compressions only if there is no pulse"
+      ],
+      "explanation": "Early defibrillation is the top priority for VF/pulseless VT. Immediately after delivering a shock, chest compressions must be resumed, and CPR should generally be continued for about 2 minutes before performing a rhythm check. Checking the pulse or rhythm immediately after a shock is inappropriate because it increases the chest compression interruption time and drops coronary perfusion pressure.",
+      "answers": [
+        3
+      ],
+      "selectCount": 1
+    },
+    {
+      "id": "cpr_entry_006",
+      "question": "Which statement is appropriate regarding drug administration for persistent adult VF/pulseless VT?",
+      "choices": [
+        "Epinephrine must be administered before the first defibrillation attempt",
+        "Epinephrine is administered for shock-refractory VF/VT, and then repeated every 3 to 5 minutes",
+        "Amiodarone is the drug of choice for PEA",
+        "Lidocaine is administered before the first defibrillation attempt"
+      ],
+      "explanation": "Early defibrillation is the top priority for VF/pulseless VT. For shock-refractory cases, epinephrine 1 mg is administered intravenously or intraosseously while CPR is continued, and is repeated every 3 to 5 minutes. Amiodarone is considered as an antiarrhythmic drug for shock-refractory VF/pulseless VT. Lidocaine may be used as an alternative when amiodarone is unavailable, but it is not administered before the first shock. CPR, epinephrine, and searching for reversible causes are central for PEA or asystole, rather than shocks or antiarrhythmic drugs.",
+      "answers": [
+        1
+      ],
+      "selectCount": 1
+    },
+    {
+      "id": "cpr_entry_007",
+      "question": "Which statement about waveform capnography (ETCO2) during cardiopulmonary resuscitation is incorrect?",
+      "choices": [
+        "It is useful for confirming endotracheal tube placement after intubation",
+        "It helps estimate the quality of chest compressions and pulmonary blood flow",
+        "A sudden spike in ETCO2 may indicate ROSC",
+        "If ETCO2 is low, resuscitation can be terminated based on this finding alone"
+      ],
+      "explanation": "Waveform capnography is useful for confirming tube placement, monitoring ventilation, estimating pulmonary blood flow during chest compressions, and early detection of ROSC. A sudden spike in ETCO2 can suggest ROSC. In contrast, a low ETCO2 may indicate poor compression quality, low pulmonary blood flow, or hyperventilation, but resuscitation must not be terminated based on ETCO2 alone. Resuscitation decisions should integrate the cause of arrest, duration, initial rhythm, response to treatment, and clinical context.",
+      "answers": [
+        3
+      ],
+      "selectCount": 1
     }
   ]
 }

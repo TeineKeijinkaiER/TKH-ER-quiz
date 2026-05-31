@@ -51,8 +51,8 @@
         0,
         1
       ],
-      "explanation": "In atrial fibrillation associated with WPW syndrome, agents that suppress the AV node — such as verapamil, diltiazem, and digoxin — are contraindicated because they can increase ventricular response via the accessory pathway and precipitate ventricular fibrillation. For hemodynamically unstable tachycardia, synchronized cardioversion should be prioritized. For stable regular narrow-QRS tachycardia, vagal maneuvers and ATP may be considered.",
-      "selectCount": 0
+      "selectCount": 0,
+      "explanation": "In atrial fibrillation associated with WPW syndrome, agents that suppress the AV node — such as verapamil, diltiazem, and digoxin — are contraindicated because they can increase ventricular response via the accessory pathway and precipitate ventricular fibrillation. For hemodynamically unstable tachycardia, synchronized cardioversion should be prioritized. For stable regular narrow-QRS tachycardia, vagal maneuvers and ATP may be considered."
     },
     {
       "id": "emergency_medications_basic_004",
@@ -88,8 +88,8 @@
         2,
         3
       ],
-      "explanation": "In benzodiazepine toxicity, the initial priority is airway, breathing, and circulatory assessment followed by supportive care. Flumazenil is a benzodiazepine antagonist, but routine use in acute poisoning is not recommended. It may be cautiously considered in situations with low risk of chronic use, mixed overdose, or seizures — such as iatrogenic oversedation or accidental pediatric ingestion. In the setting of chronic use, unknown mixed overdose, co-ingestion of tricyclic antidepressants or other proconvulsant agents, or prior seizure history, flumazenil can precipitate withdrawal seizures or arrhythmias and should be used with caution.",
-      "selectCount": 0
+      "selectCount": 0,
+      "explanation": "In benzodiazepine toxicity, the initial priority is airway, breathing, and circulatory assessment followed by supportive care. Flumazenil is a benzodiazepine antagonist, but routine use in acute poisoning is not recommended. It may be cautiously considered in situations with low risk of chronic use, mixed overdose, or seizures — such as iatrogenic oversedation or accidental pediatric ingestion. In the setting of chronic use, unknown mixed overdose, co-ingestion of tricyclic antidepressants or other proconvulsant agents, or prior seizure history, flumazenil can precipitate withdrawal seizures or arrhythmias and should be used with caution."
     },
     {
       "id": "emergency_medications_basic_011",
@@ -157,49 +157,47 @@
       "explanation": "Methods to reduce pain from local anesthesia include injecting from inside the wound rather than puncturing intact normal skin, using as fine a needle as possible, injecting slowly rather than rapidly, buffering lidocaine acidity with a small amount of sodium bicarbonate, and using topical anesthesia in advance. Injecting from inside the wound avoids a new puncture through intact skin and can reduce pain. Rapid injection abruptly increases tissue pressure and is inappropriate. Adding a small amount of sodium bicarbonate can buffer lidocaine acidity and reduce injection pain. A fine needle also reduces puncture pain. Xylocaine jelly 2% is an available topical anesthetic in Japan, and use on wounds is not itself prohibited. Applying it to the wound and keeping it in contact for several minutes or longer may help reduce injection or procedural pain. However, absorption is faster through traumatic, eroded, ulcerated, or inflamed tissue, so avoid excessive dosing; topical anesthesia alone may be insufficient, and infiltration anesthesia should be added when needed."
     },
     {
+      "id": "emergency_medications_basic_015",
+      "categories": [
+        "emergency_medications_basic"
+      ],
+      "question": "Select three correct emergency responses to medication adverse effects or complications.",
+      "choices": [
+        "A patient receiving heparin developed massive hematemesis, so heparin was stopped and protamine 10 mg was given by IV infusion",
+        "Involuntary movements appeared after Primperan administration, so Akineton 5 mg was given by IV infusion",
+        "A patient taking warfarin developed intracerebral hemorrhage, so Ondexxya was given by IV infusion",
+        "Eslax was used and difficult intubation/difficult ventilation occurred, so five 200 mg vials of sugammadex were given IV",
+        "A patient taking Xarelto developed subarachnoid hemorrhage, so Kcentra was given IV"
+      ],
+      "answers": [
+        0,
+        1,
+        3
+      ],
+      "selectCount": 3,
+      "explanation": "For serious bleeding during heparin therapy, stop heparin and consider neutralization with protamine. Protamine is typically dosed at 10–15 mg per 1,000 units of heparin and adjusted according to the heparin dose and time elapsed, so 10 mg corresponds to neutralizing roughly 1,000 units of heparin. For acute dystonia, akathisia, or drug-induced extrapyramidal symptoms after metoclopramide (Primperan), biperiden (Akineton) 5 mg is an option. Akineton injection is usually given to adults as 5–10 mg IM; when given IV, it should be administered gradually over about 3 minutes per 5 mg, so slow IV infusion is also a reasonable clinical approach. If rocuronium (Eslax) is followed by difficult intubation and difficult ventilation requiring urgent reversal of neuromuscular blockade, sugammadex 16 mg/kg is given. Five 200 mg vials of sugammadex equal 1,000 mg, which is close to 16 mg/kg for a patient around 60 kg. Ondexxya (andexanet alfa) is a reversal agent for factor Xa inhibitors, not for warfarin. For warfarin-associated serious bleeding, consider a four-factor PCC such as Kcentra plus vitamin K. In subarachnoid hemorrhage during Xarelto (rivaroxaban) therapy, Ondexxya, a factor Xa inhibitor reversal agent, is considered first. In Japan, Kcentra is used mainly for acute serious bleeding or emergency surgery during vitamin K antagonist therapy to correct PT-INR; it is not a specific reversal agent for Xarelto."
+    },
+    {
       "id": "emergency_medications_basic_014",
       "categories": [
         "emergency_medications_basic",
         "general_em_basic"
       ],
-      "question": "For adult wound care using 1% Xylocaine for infiltration anesthesia, select three correct statements.",
+      "question": "Select three correct statements about the following medication use in the ED.",
       "choices": [
-        "1% Xylocaine contains lidocaine 10 mg per mL",
-        "20 mL of 1% Xylocaine corresponds to lidocaine 200 mg",
-        "Under the Japanese package insert, the adult reference maximum dose is lidocaine 200 mg per administration",
-        "1% Xylocaine contains lidocaine 1 mg per mL",
-        "Because 1% Xylocaine does not contain epinephrine, local anesthetic systemic toxicity cannot occur"
+        "Primperan 10 mg was given by IV infusion for nausea in a patient with pheochromocytoma",
+        "Acelio 1 g and Primperan 10 mg were given by IV infusion to a patient with migraine",
+        "Atarax-P 25 mg was given by IV infusion for severe rotational vertigo in a pregnant patient",
+        "Akineton 5 mg was given by IV infusion to a patient who developed akathisia from Primperan",
+        "Voltaren suppository 50 mg was used for ureteral stone colic"
       ],
       "answers": [
-        0,
         1,
-        2
+        3,
+        4
       ],
       "selectCount": 3,
-      "explanation": "1% Xylocaine contains lidocaine 10 mg per mL. Therefore, 20 mL contains 200 mg. Under the Japanese package insert, the adult reference maximum dose is lidocaine hydrochloride 200 mg per administration, equivalent to 20 mL of the 1% solution. In practice, dosing should be minimized based on age, body size, anesthetic site, tissue blood flow, liver function, and overall condition. Intravascular injection or overdose can cause local anesthetic systemic toxicity, including perioral numbness, tinnitus, dizziness, seizures, hypotension, and arrhythmias."
-    },
-    {
-      "id": "emergency_medications_basic_015",
-      "categories": [
-        "emergency_medications_basic",
-        "general_em_basic"
-      ],
-      "question": "For adult wound care using 1% Xylocaine with epinephrine for infiltration anesthesia, select all correct statements.",
-      "choices": [
-        "1% Xylocaine with epinephrine contains lidocaine 10 mg per mL",
-        "1% Xylocaine with epinephrine is a local anesthetic with added epinephrine",
-        "Under the Japanese package insert, the reference maximum dose of 1% Xylocaine with epinephrine is 50 mL per administration",
-        "50 mL of 1% Xylocaine with epinephrine corresponds to lidocaine 500 mg",
-        "Because the preparation contains epinephrine, accidental intravascular injection does not cause tachycardia or blood pressure elevation"
-      ],
-      "answers": [
-        0,
-        1,
-        2,
-        3
-      ],
-      "selectCount": 0,
-      "explanation": "1% Xylocaine with epinephrine contains lidocaine 10 mg per mL and added epinephrine. Under the Japanese package insert, the reference maximum dose of 1% Xylocaine with epinephrine is 50 mL per administration, which corresponds to lidocaine 500 mg. In emergency wound care, the goal is not to use the maximum amount, but to use the minimum necessary dose. With epinephrine-containing preparations, clinicians must watch for accidental intravascular injection, tachycardia, arrhythmias, blood pressure elevation, heart disease, and impaired peripheral circulation."
+      "explanation": "Metoclopramide (Primperan) is contraindicated when pheochromocytoma or paraganglioma is suspected because it may cause an abrupt hypertensive crisis, so giving it for nausea in a patient with pheochromocytoma is inappropriate. In acute migraine, metoclopramide may be used as an antiemetic, and acetaminophen IV (Acelio) 1 g is within the adult dose range for pain. Atarax-P is contraindicated in pregnant women or women who may be pregnant, so it is inappropriate for vertigo in pregnancy. For akathisia or extrapyramidal symptoms caused by metoclopramide, an anticholinergic such as biperiden (Akineton) is used. Akineton injection should be given slowly and rapid administration avoided; slow IV infusion is a reasonable clinical approach. NSAIDs are useful for ureteral stone colic, and Voltaren suppository 50 mg is an adult option. However, NSAID risks should be considered in renal dysfunction, peptic ulcer disease, anticoagulant use, pregnancy, and older patients."
     }
   ]
 }

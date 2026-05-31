@@ -35,8 +35,8 @@
         2,
         3
       ],
-      "explanation": "In septic shock, initiate IV fluid resuscitation with crystalloids for hypoperfusion, and consider norepinephrine as the first-line vasopressor when hypotension persists. The initial mean arterial pressure target is approximately 65 mmHg. Fluid volume is not fixed; reassess using blood pressure, lactate, urine output, skin findings, and cardiac ultrasound. Central venous access is preferred, but peripheral administration for a short period may be appropriate in urgent situations when done safely.",
-      "selectCount": 0
+      "selectCount": 0,
+      "explanation": "In septic shock, initiate IV fluid resuscitation with crystalloids for hypoperfusion, and consider norepinephrine as the first-line vasopressor when hypotension persists. The initial mean arterial pressure target is approximately 65 mmHg. Fluid volume is not fixed; reassess using blood pressure, lactate, urine output, skin findings, and cardiac ultrasound. Central venous access is preferred, but peripheral administration for a short period may be appropriate in urgent situations when done safely."
     },
     {
       "id": "sepsis_basic_003",
@@ -72,8 +72,8 @@
         2,
         3
       ],
-      "explanation": "Source control should be considered early: drainage for intra-abdominal abscess, relief of urinary obstruction for obstructive pyelonephritis, surgical debridement for necrotizing soft tissue infection, and removal of the suspected infected intravascular catheter. In contrast, pyelonephritis without ureteral obstruction that responds rapidly to antibiotics does not typically require urgent drainage or surgical intervention.",
-      "selectCount": 0
+      "selectCount": 0,
+      "explanation": "Source control should be considered early: drainage for intra-abdominal abscess, relief of urinary obstruction for obstructive pyelonephritis, surgical debridement for necrotizing soft tissue infection, and removal of the suspected infected intravascular catheter. In contrast, pyelonephritis without ureteral obstruction that responds rapidly to antibiotics does not typically require urgent drainage or surgical intervention."
     },
     {
       "id": "sepsis_basic_005",
@@ -82,8 +82,8 @@
         "If the initial lactate is ≥4 mmol/L (36 mg/dL), reassess for tissue hypoperfusion and risk of deterioration even if blood pressure is maintained",
         "If a vasopressor is required to maintain a mean arterial pressure ≥65 mmHg despite IV fluids, and lactate exceeds 2 mmol/L (18 mg/dL), consider the diagnosis of septic shock",
         "Alcohol use and hepatic failure can elevate lactate",
-        "A 10–20% decrease in lactate every 2 hours, combined with assessment of hemodynamics and urine output, can confirm treatment response",
-        "Non-sepsis causes of rising lactate during the clinical course include beta-blocker use and mild hypercapnia"
+        "Treatment response should be assessed using hemodynamics and urine output in addition to a decrease in lactate",
+        "Beta-blockers and mild hypercapnia are typical causes of elevated lactate"
       ],
       "answers": [
         0,
@@ -91,8 +91,8 @@
         2,
         3
       ],
-      "explanation": "Lactate is an important indicator of tissue hypoperfusion and severity in sepsis. Septic shock is diagnosed when, in addition to sepsis, a vasopressor is required to maintain a mean arterial pressure ≥65 mmHg despite IV fluids, and lactate exceeds 2 mmol/L (18 mg/dL). Elevated lactate can also result from alcohol, severe seizures, hepatic failure, hyperventilation, and beta-agonists.",
-      "selectCount": 0
+      "selectCount": 0,
+      "explanation": "Lactate is an important indicator of tissue hypoperfusion and severity in sepsis. Septic shock is diagnosed when, in addition to sepsis, a vasopressor is required to maintain a mean arterial pressure ≥65 mmHg despite IV fluids, and lactate exceeds 2 mmol/L (18 mg/dL). Elevated lactate can also result from alcohol, severe seizures, hepatic failure, hyperventilation, and beta-agonists."
     }
   ]
 }

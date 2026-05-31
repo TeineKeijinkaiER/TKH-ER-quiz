@@ -11,7 +11,11 @@
         "血糖600 mg/dL以上で高浸透圧だが、ケトーシスやアシドーシスは目立たない",
         "高血糖を認めるが、アシドーシスがなく、ケトン体も陰性である"
       ],
-      "answers": [0, 1, 2],
+      "answers": [
+        0,
+        1,
+        2
+      ],
       "selectCount": 3,
       "explanation": "DKAは糖尿病または高血糖、ケトーシス、代謝性アシドーシスで疑う。SGLT2阻害薬関連では血糖が著明高値でない正常血糖DKAもあり得る。血糖600 mg/dL以上、血漿浸透圧高値、ケトーシスやアシドーシスが目立たない病態はHHSをより疑う。"
     },
@@ -25,7 +29,12 @@
         "HHSでは0.05単位/kg/hでインスリン投与を検討する",
         "K<3.5 mmol/Lの場合、K補正よりインスリン投与を優先する"
       ],
-      "answers": [0, 1, 2, 3],
+      "answers": [
+        0,
+        1,
+        2,
+        3
+      ],
       "selectCount": 0,
       "explanation": "DKA/HHSの初期治療は、輸液、カリウム管理、インスリン、誘因検索が柱である。DKAではレギュラーインスリン0.1単位/kg/h、HHSではより低用量の0.05単位/kg/hを検討する。インスリンのボーラス投与は必須ではない。低K血症がある状態でインスリンを開始すると、細胞内K移行により致死的不整脈を来す危険があるため、K<3.5 mmol/LではK補正を優先する。"
     },
@@ -39,13 +48,20 @@
         "発熱、頻脈、発汗、手指振戦を伴い、TSH低値とFT4高値を認める",
         "高血糖、血中ケトン体上昇、代謝性アシドーシスを認める"
       ],
-      "answers": [0, 1, 2],
+      "answers": [
+        0,
+        1,
+        2
+      ],
       "selectCount": 3,
       "explanation": "副腎クリーゼは、原因不明のショック、輸液・昇圧薬への反応が乏しい低血圧、長期ステロイド使用歴、感染や手術などのストレス、低Na血症、高K血症、低血糖、嘔吐・腹痛・強い倦怠感などで疑う。発熱、頻脈、発汗、手指振戦にTSH低値とFT4高値を伴う場合は甲状腺中毒症や甲状腺クリーゼを考える。高血糖、ケトーシス、代謝性アシドーシスはDKAを疑う所見である。"
     },
     {
       "id": "endocrine_basic_004",
-      "categories": ["endocrine_basic", "general_em_basic"],
+      "categories": [
+        "endocrine_basic",
+        "general_em_basic"
+      ],
       "question": "42歳女性。未治療のBasedow病を指摘されていた。肺炎を契機に救急搬送。体温39.1℃、心拍数148/分、血圧156/72 mmHg、SpO2 93%。不穏で会話がまとまらない。FT4 4.8 ng/dL、TSH 0.01 μIU/mL未満。胸部X線で肺炎像を認めるが、肺水腫はない。日本甲状腺学会の診断基準に照らした評価として最も適切なのはどれか。1つ選べ。",
       "choices": [
         "甲状腺クリーゼ確実例（TS1）である",
@@ -54,7 +70,9 @@
         "肺炎による発熱があるため、甲状腺クリーゼの診断からは除外する",
         "FT4が高値でも、心不全がなければ甲状腺クリーゼとは判断しない"
       ],
-      "answers": [0],
+      "answers": [
+        0
+      ],
       "selectCount": 1,
       "explanation": "甲状腺クリーゼ診断では、FT3またはFT4高値による甲状腺中毒症の存在が前提となる。そのうえで、中枢神経症状、発熱38℃以上、頻脈130/分以上、心不全症状、消化器・肝症状を評価する。本例はFT4高値があり、不穏という中枢神経症状、発熱39.1℃、心拍数148/分を認めるため、TS1に該当する。感染症は甲状腺クリーゼの誘因になり得るため、肺炎があることだけで除外しない。"
     },
@@ -68,13 +86,21 @@
         "改善後も再低血糖に注意して観察する",
         "ブドウ糖投与で一度覚醒すれば、長時間作用型インスリンやSU薬の関与は否定できる"
       ],
-      "answers": [0, 1, 2, 3],
+      "answers": [
+        0,
+        1,
+        2,
+        3
+      ],
       "selectCount": 0,
       "explanation": "重症低血糖では、意識障害がある患者に経口摂取を無理に行うと誤嚥の危険がある。静注ブドウ糖やグルカゴンを用いて速やかに補正し、原因薬剤、食事摂取、腎機能、感染などを確認する。長時間作用型インスリン、SU薬、腎機能低下では再低血糖が起こり得るため、覚醒後も観察が必要である。"
     },
     {
       "id": "endocrine_basic_006",
-      "categories": ["endocrine_basic", "emergency_medications_basic"],
+      "categories": [
+        "endocrine_basic",
+        "emergency_medications_basic"
+      ],
       "question": "25歳女性。1型糖尿病。発熱と嘔吐で来院。血糖482 mg/dL、pH 7.18、HCO3- 9 mmol/L、K 5.2 mmol/L、βヒドロキシ酪酸高値。DKAとして初期対応で適切なものを3つ選べ。",
       "choices": [
         "生食もしくは等張晶質液を500〜1000 mL/hで開始する",
@@ -83,13 +109,20 @@
         "血糖が400 mg/dLを超えるため、輸液前にレギュラーインスリン10単位を静注する",
         "初期K 5.2 mmol/Lなので、フロセミドを投与してKを低下させる"
       ],
-      "answers": [0, 1, 2],
+      "answers": [
+        0,
+        1,
+        2
+      ],
       "selectCount": 3,
       "explanation": "DKAでは輸液、K評価、インスリン、誘因検索を並行する。初期Kが高めでも総体内Kは欠乏していることが多く、インスリン投与、輸液、アシドーシス改善によりKは低下し得る。K 5.2 mmol/Lのみを理由にフロセミドでKを下げる対応は通常行わない。"
     },
     {
       "id": "endocrine_basic_007",
-      "categories": ["endocrine_basic", "general_em_basic"],
+      "categories": [
+        "endocrine_basic",
+        "general_em_basic"
+      ],
       "question": "DKA患者。Na 132 mmol/L、Cl 96 mmol/L、HCO3- 9 mmol/L。アニオンギャップとΔギャップの評価として正しいものをすべて選べ。",
       "choices": [
         "AG 17、Δギャップ 0であり、正常AG性代謝性アシドーシスである",
@@ -98,13 +131,18 @@
         "AG 36、ΔAG 24、ΔHCO3- 15であり、HHSの診断に近い",
         "Δギャップがマイナスであれば、正常AG性代謝性アシドーシスの合併を考える"
       ],
-      "answers": [1, 4],
+      "answers": [
+        1,
+        4
+      ],
       "selectCount": 0,
       "explanation": "AG = 132 - 96 - 9 = 27。正常AGを12、正常HCO3-を24とすると、ΔAGは15、ΔHCO3-も15であり、DKAに合う高AG代謝性アシドーシスと考える。Δギャップがマイナス、すなわちΔAGよりHCO3-低下が大きい場合は、下痢、尿細管性アシドーシス、治療後の高Cl性アシドーシスなど、正常AG性代謝性アシドーシスの合併を考える。"
     },
     {
       "id": "endocrine_basic_008",
-      "categories": ["endocrine_basic"],
+      "categories": [
+        "endocrine_basic"
+      ],
       "question": "2024年国際コンセンサスに基づく成人DKAの診断基準として正しいものをすべて選べ。",
       "choices": [
         "血糖200 mg/dL以上、または糖尿病の既往がある",
@@ -113,13 +151,20 @@
         "血糖250 mg/dL未満であれば、糖尿病の既往やケトン血症があってもDKAから外れる",
         "血清浸透圧320 mOsm/kg以上を満たすことがDKA診断に必要である"
       ],
-      "answers": [0, 1, 2],
+      "answers": [
+        0,
+        1,
+        2
+      ],
       "selectCount": 0,
       "explanation": "成人DKAの診断は、糖尿病または高血糖、ケトン血症またはケトン尿、代謝性アシドーシスの3要素で行う。血糖基準は200 mg/dL以上、または糖尿病の既往とされる。ケトンは血中βヒドロキシ酪酸3.0 mmol/L以上、または尿ケトン2+以上を目安とする。代謝性アシドーシスはpH 7.30未満、またはHCO3- 18 mmol/L未満で評価する。血糖250 mg/dL未満でもSGLT2阻害薬関連などのeuglycemic DKAがあり得る。血清浸透圧320 mOsm/kg以上はHHS診断で重要な基準である。"
     },
     {
       "id": "endocrine_basic_009",
-      "categories": ["endocrine_basic", "emergency_medications_basic"],
+      "categories": [
+        "endocrine_basic",
+        "emergency_medications_basic"
+      ],
       "question": "体重50 kgのDKA患者にレギュラーインスリン持続静注を行う。レギュラーインスリン50単位を生理食塩水で総量50 mLに調整し、0.1単位/kg/時で開始する場合、投与速度はどれか。1つ選べ。",
       "choices": [
         "1 mL/時",
@@ -128,13 +173,18 @@
         "5 mL/時",
         "10 mL/時"
       ],
-      "answers": [3],
+      "answers": [
+        3
+      ],
       "selectCount": 1,
       "explanation": "50単位/50 mLは1単位/mL。体重50 kgで0.1単位/kg/時は5単位/時なので、5 mL/時となる。DKAではK値を確認し、低KであればK補正を優先してからインスリンを開始する。"
     },
     {
       "id": "endocrine_basic_010",
-      "categories": ["endocrine_basic", "emergency_medications_basic"],
+      "categories": [
+        "endocrine_basic",
+        "emergency_medications_basic"
+      ],
       "question": "DKA治療中。血糖240 mg/dL、pH 7.24、HCO3- 13 mmol/L、βヒドロキシ酪酸高値が残存している。対応として最も適切なのはどれか。1つ選べ。",
       "choices": [
         "インスリンを継続し、ブドウ糖を追加する",
@@ -143,13 +193,18 @@
         "輸液を中止し、経口摂取の再開を優先する",
         "アシドーシスが残るため、重炭酸ナトリウムを追加する"
       ],
-      "answers": [0],
+      "answers": [
+        0
+      ],
       "selectCount": 1,
       "explanation": "DKA治療の目標は血糖低下ではなくケトアシドーシスの改善である。血糖が250 mg/dL未満になった時点では、5〜10%ブドウ糖を輸液に追加し、低血糖を避けながらインスリンを継続する。"
     },
     {
       "id": "endocrine_basic_011",
-      "categories": ["endocrine_basic", "emergency_medications_basic"],
+      "categories": [
+        "endocrine_basic",
+        "emergency_medications_basic"
+      ],
       "question": "SGLT2阻害薬内服中の2型糖尿病患者。嘔吐、倦怠感、頻呼吸で来院。血糖186 mg/dL、pH 7.21、HCO3- 11 mmol/L、βヒドロキシ酪酸 5.4 mmol/L。適切な対応をすべて選べ。",
       "choices": [
         "euglycemic DKAを疑う",
@@ -158,13 +213,21 @@
         "血糖が低めなので早期からブドウ糖併用を考慮する",
         "HHSとしてインスリンを使わず輸液のみで管理する"
       ],
-      "answers": [0, 1, 2, 3],
+      "answers": [
+        0,
+        1,
+        2,
+        3
+      ],
       "selectCount": 0,
       "explanation": "SGLT2阻害薬関連では血糖が高度上昇しないDKAがある。治療はDKAとして行い、低血糖予防のためブドウ糖併用を早めに考える。"
     },
     {
       "id": "endocrine_basic_012",
-      "categories": ["endocrine_basic", "emergency_medications_basic"],
+      "categories": [
+        "endocrine_basic",
+        "emergency_medications_basic"
+      ],
       "question": "DKA治療中にBS 250 mg/dL以下となった。その後の方針として正しいものをすべて選べ。",
       "choices": [
         "βヒドロキシ酪酸 <0.6 mmol/L、かつ（pH≧7.3 または HCO3-≧18 mmol/L）を満たすまでは、ブドウ糖を併用してインスリン持続静注を継続する",
@@ -173,13 +236,21 @@
         "皮下インスリンの総投与量は、0.3-0.6単位/kg/dayを目安に調整する",
         "血糖が250 mg/dL以下になった時点で経口血糖降下薬へ移行する"
       ],
-      "answers": [0, 1, 2, 3],
+      "answers": [
+        0,
+        1,
+        2,
+        3
+      ],
       "selectCount": 0,
       "explanation": "BS 250 mg/dL以下はDKA治療終了を意味しない。2024年国際コンセンサスでは、DKAの寛解は血漿ケトン <0.6 mmol/L、かつ静脈pH≧7.3またはHCO3-≧18 mmol/Lで評価する。ケトーシスやアシドーシスが残る場合は、ブドウ糖を併用しながらインスリンを継続する。皮下インスリンへ移行するのは、アシドーシス・ケトーシスが改善し、腸管からの栄養が可能になった段階である。皮下インスリン開始後は、持続静注インスリンと1〜2時間程度重ねる。皮下インスリン量は体重、入院前投与量、持続静注インスリン必要量を参考に調整する。"
     },
     {
       "id": "endocrine_basic_013",
-      "categories": ["endocrine_basic", "general_em_basic"],
+      "categories": [
+        "endocrine_basic",
+        "general_em_basic"
+      ],
       "question": "DKA患者。血糖620 mg/dL、実測Na 128 mmol/L。血糖100 mg/dLを超えるごとにNaを2.4 mmol/L補正する場合、補正Naとして最も近い値はどれか。1つ選べ。",
       "choices": [
         "132 mmol/L",
@@ -188,13 +259,18 @@
         "146 mmol/L",
         "151 mmol/L"
       ],
-      "answers": [2],
+      "answers": [
+        2
+      ],
       "selectCount": 1,
       "explanation": "高血糖では細胞外への水移動によりNaが希釈性に低く測定される。血糖620 mg/dLでは、100 mg/dLを超える分が520 mg/dLであり、2.4 mmol/L補正を用いると 128 + 2.4 × 5.2 = 140.5 mmol/L、約141 mmol/Lとなる。なお補正係数には1.6を用いる流儀もあり、その場合は約136 mmol/Lとなるため、施設プロトコルに合わせて解釈する。"
     },
     {
       "id": "endocrine_basic_014",
-      "categories": ["endocrine_basic", "general_em_basic"],
+      "categories": [
+        "endocrine_basic",
+        "general_em_basic"
+      ],
       "question": "2024年国際コンセンサスに基づくHHSの診断基準として適切なものをすべて選べ。",
       "choices": [
         "血糖600 mg/dL以上",
@@ -203,13 +279,21 @@
         "pH 7.30以上、かつHCO3- 15 mmol/L以上",
         "βヒドロキシ酪酸3.0 mmol/L以上、またはHCO3- 18 mmol/L未満を満たす"
       ],
-      "answers": [0, 1, 2, 3],
+      "answers": [
+        0,
+        1,
+        2,
+        3
+      ],
       "selectCount": 0,
       "explanation": "HHSでは高度高血糖、血清浸透圧上昇、高度のケトン血症を伴わないこと、アシドーシスを伴わないことを確認する。2024年国際コンセンサスでは、血糖600 mg/dL以上、有効血清浸透圧300 mOsm/kg超または総血清浸透圧320 mOsm/kg超、βヒドロキシ酪酸3.0 mmol/L未満または尿ケトン2+未満、pH 7.30以上かつHCO3- 15 mmol/L以上がHHS診断基準として整理されている。βヒドロキシ酪酸3.0 mmol/L以上やHCO3- 18 mmol/L未満はDKAまたはDKA/HHS混合を考える所見である。"
     },
     {
       "id": "endocrine_basic_015",
-      "categories": ["endocrine_basic", "emergency_medications_basic"],
+      "categories": [
+        "endocrine_basic",
+        "emergency_medications_basic"
+      ],
       "question": "甲状腺クリーゼの初期治療薬について正しいものを3つ選べ。",
       "choices": [
         "チアマゾールを60 mg/day経口投与し、経口困難例ではチアマゾール30 mg/day静注",
@@ -218,7 +302,11 @@
         "頻脈には心不全やショックの有無にかかわらず、プロプラノロール40 mgを静注する",
         "発熱にはアスピリンを第一選択として投与する"
       ],
-      "answers": [0, 1, 2],
+      "answers": [
+        0,
+        1,
+        2
+      ],
       "selectCount": 3,
       "explanation": "甲状腺クリーゼでは、抗甲状腺薬、無機ヨウ素薬、副腎皮質ステロイド、β遮断薬、解熱薬、輸液・冷却などの支持療法を組み合わせる。Basedow病による甲状腺クリーゼでは、チアマゾール60 mg/日経口、または経口困難時にチアマゾール30 mg/日静注などを用いる。無機ヨウ素薬は抗甲状腺薬投与後に追加し、甲状腺ホルモン放出を抑制する。ルゴール液は製剤濃度に注意し、2％ルゴール液では4〜8滴を6〜8時間ごとに経口または胃管から投与する方法が用いられる。ヒドロコルチゾンは初回100〜300 mg静注後、100 mgを8時間ごとに投与する。β遮断薬は頻脈管理に有用だが、心不全やショックでは慎重に選択する。アスピリンは甲状腺ホルモンの蛋白結合に影響し遊離ホルモンを増やし得るため、解熱薬としてはアセトアミノフェンを用いる。"
     },

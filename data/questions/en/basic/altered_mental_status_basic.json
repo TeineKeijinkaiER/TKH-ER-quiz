@@ -9,7 +9,7 @@
         "Hypoglycemia",
         "Encephalitis",
         "Carbon monoxide poisoning",
-        "Psychogenic coma"
+        "Psychogenic stupor"
       ],
       "answers": [
         0,
@@ -17,7 +17,7 @@
         3
       ],
       "selectCount": 3,
-      "explanation": "Among the AIUEO-TIPS mnemonic, focus on conditions that can be identified at presentation using vital signs and blood gas analysis."
+      "explanation": "Among the AIUEO-TIPS mnemonic, select items that can be evaluated and treated within 5 minutes, such as vital signs on arrival (hypoxia: Oxygen), bedside glucose measurement (hypoglycemia: Insulin), and CO-Hb measurement on blood gas analysis (carbon monoxide poisoning: Trauma/Toxin). Encephalitis (Encephalopathy/Infection) and psychogenic causes (Psychiatric) require more detailed testing or diagnosis by exclusion."
     },
     {
       "id": "altered_mental_status_basic_002",
@@ -34,8 +34,8 @@
         2,
         3
       ],
-      "explanation": "Syncope is a brief loss of consciousness due to transient global cerebral hypoperfusion, with spontaneous recovery. Prolonged confusion or persistent focal neurological deficits suggest an alternative diagnosis.",
-      "selectCount": 0
+      "selectCount": 0,
+      "explanation": "Syncope is a brief loss of consciousness due to transient global cerebral hypoperfusion, with spontaneous recovery. Prolonged confusion or persistent focal neurological deficits suggest an alternative diagnosis."
     },
     {
       "id": "altered_mental_status_basic_003",
@@ -71,8 +71,8 @@
         2,
         3
       ],
-      "explanation": "Particularly in suspected stroke, imaging is recommended as soon as possible after arrival. Plan ahead what must be assessed clinically to avoid unnecessary delays before imaging.",
-      "selectCount": 0
+      "selectCount": 0,
+      "explanation": "Particularly in suspected stroke, imaging is recommended as soon as possible after arrival. Plan ahead what must be assessed clinically to avoid unnecessary delays before imaging."
     },
     {
       "id": "altered_mental_status_basic_005",
@@ -95,7 +95,7 @@
         "endocrine_basic",
         "emergency_medications_basic"
       ],
-      "explanation": "Hypoglycemia can present with hemiplegia, reportedly more often right-sided. When heavy alcohol use or malnutrition is suspected, concurrent vitamin B1 administration is indicated to prevent Wernicke encephalopathy from B1 deficiency. Because of extravasation risk, 50% dextrose should be given as approximately 10–20 g IV. If vitamin B1 is not immediately available, dextrose administration should not be delayed."
+      "explanation": "Hypoglycemia can present with hemiplegia. When heavy alcohol use or malnutrition is suspected, vitamin B1 deficiency and Wernicke encephalopathy are concerns, so vitamin B1 (such as fursultiamine injection) should be given at the same time as dextrose. Take care to avoid dextrose extravasation, and in severe hypoglycemia give approximately 10–20 g IV. If vitamin B1 is not immediately available, correction of hypoglycemia must not be delayed."
     },
     {
       "id": "altered_mental_status_basic_006",
@@ -137,13 +137,13 @@
         "Insulin (blood glucose), Electrolytes, and Oxygen can be differentiated by blood gas analysis on arrival",
         "Alcohol and Uremia can be easily differentiated by laboratory tests",
         "Stroke and Trauma are evaluated by head imaging",
-        "Encephalopathy, Overdose, Infection, Psychiatric, and Seizure are the five categories that are difficult to differentiate by the above alone, requiring detailed history, additional blood tests, toxicology screening, and EEG"
+        "Encephalopathy/Infection, Overdose, Psychiatric, and Seizure require additional evaluation"
       ],
       "answers": [
         0
       ],
-      "explanation": "Shock and Temperature are assessed by vital signs, physical examination, and blood tests, not urinalysis — making that statement inappropriate. The other choices are consistent with actual clinical practice: metabolic assessment by blood gas, laboratory testing for toxins and renal failure, imaging for brain lesions, and history/additional testing for the remaining categories.",
-      "selectCount": 0
+      "selectCount": 0,
+      "explanation": "Shock and Temperature are assessed by vital signs, physical examination, and blood tests, not urinalysis — making that statement inappropriate. The other choices are consistent with actual clinical practice: metabolic assessment by blood gas, laboratory testing for toxins and renal failure, imaging for brain lesions, and history/additional testing for the remaining categories."
     },
     {
       "id": "altered_mental_status_basic_009",
@@ -220,7 +220,7 @@
         "Pallor during loss of consciousness."
       ],
       "selectCount": 1,
-      "explanation": "Syncope in the supine position or during exertion suggests life-threatening arrhythmia or serious cardiac disease and is high-risk. Syncope with prodrome in a young person while standing, long-term recurrent syncope, syncope during meals or in crowded places, and pallor during the episode suggest reflex syncope and are low-risk. Only choice B meets the high-risk criteria.",
+      "explanation": "Syncope in the supine position or during exertion suggests life-threatening arrhythmia or serious cardiac disease and is a high-risk feature. In contrast, syncope while standing with prodrome in a young person and a long history of recurrent episodes suggest reflex syncope and lower risk. Therefore, choice 2 is the high-risk feature.",
       "answers": [
         1
       ]

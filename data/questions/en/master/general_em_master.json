@@ -474,12 +474,12 @@
         "Intravenous magnesium sulfate",
         "Continuous isoproterenol infusion"
       ],
-      "selectCount": 0,
       "explanation": "For torsades de pointes due to QT prolongation, intravenous magnesium sulfate is used as acute treatment. In acquired QT prolongation with recurrent bradycardia-dependent TdP, increasing the heart rate with isoproterenol or temporary pacing can be considered. Amiodarone may worsen QT prolongation and is usually inappropriate. Insulin and lidocaine are not first-line treatments for this condition.",
       "answers": [
         3,
         4
-      ]
+      ],
+      "selectCount": 0
     },
     {
       "id": "general_em_master_024",
@@ -515,13 +515,13 @@
         "Notify the public health center within 7 days after diagnosis",
         "Administer a third-generation cephalosporin such as ceftriaxone"
       ],
-      "selectCount": 0,
       "explanation": "Fever, meningeal signs, and gram-negative diplococci in CSF suggest meningococcal meningitis. Close contacts such as household members or dormitory roommates should receive antibiotic prophylaxis with agents such as rifampin, ciprofloxacin, or ceftriaxone. Droplet precautions are the basic infection control measure. Treatment should be started promptly with a third-generation cephalosporin such as ceftriaxone or cefotaxime. Meningococcus is sensitive to cold, so culture specimens should not be refrigerated. Invasive meningococcal disease requires prompt notification, not delayed reporting within 7 days.",
       "answers": [
         0,
         2,
         4
-      ]
+      ],
+      "selectCount": 0
     },
     {
       "id": "general_em_master_026",
@@ -618,12 +618,12 @@
         "Kidneys",
         "Diaphyses of the limbs"
       ],
-      "selectCount": 0,
       "explanation": "Primary blast injury is caused by the pressure change from the blast wave itself, and air-containing organs or air-fluid interfaces are especially vulnerable. Representative injury sites are the lungs and tympanic membranes. Eye and limb injuries can occur from fragments or flying debris in secondary blast injury, or from the body being thrown in tertiary blast injury, but the lungs and tympanic membranes are key representative sites for primary blast injury.",
       "answers": [
         1,
         2
-      ]
+      ],
+      "selectCount": 0
     },
     {
       "id": "general_em_master_031",

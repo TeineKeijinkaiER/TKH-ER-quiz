@@ -27,14 +27,14 @@
         "ST elevation in V1–V4: most typically suspect proximal RCA occlusion",
         "ST elevation in V4R is useful for evaluating right ventricular infarction"
       ],
-      "selectCount": 0,
       "explanation": "V1–V4 (anterior septum) → LAD; II, III, aVF (inferior wall) → RCA or LCX; I, aVL, V5, V6 (lateral wall) → LCX or diagonal branch. V4R is useful for evaluating RV infarction.",
       "answers": [
         0,
         1,
         2,
         4
-      ]
+      ],
+      "selectCount": 0
     },
     {
       "id": "cardiology_basic_003",
@@ -140,7 +140,8 @@
         1,
         2,
         4
-      ]
+      ],
+      "selectCount": 0
     },
     {
       "id": "cardiology_basic_009",
@@ -179,16 +180,18 @@
     },
     {
       "id": "cardiology_basic_011",
-      "question": "胸痛患者の12誘導心電図でV1〜V3に水平型ST低下を認め、同誘導でR波が相対的に高く、T波が陽性であった。標準12誘導で明らかなST上昇はない。この所見から最も疑うべき病態はどれか。",
+      "question": "In a patient with chest pain, the 12-lead ECG shows horizontal ST depression in leads V1 to V3, accompanied by relatively tall R waves and upright T waves. There is no obvious ST elevation on the standard 12-lead ECG. Which of the following conditions is most strongly suspected from these findings?",
       "choices": [
-        "前壁ST上昇型心筋梗塞",
-        "後壁心筋梗塞",
-        "急性心膜炎",
-        "Brugada症候群"
+        "Anterior ST-elevation myocardial infarction",
+        "Posterior myocardial infarction",
+        "Acute pericarditis",
+        "Brugada syndrome"
       ],
-      "answers": [1],
+      "answers": [
+        1
+      ],
       "selectCount": 1,
-      "explanation": "V1〜V3の水平型ST低下、高いR波、陽性T波は後壁梗塞の鏡像変化を示唆する。標準12誘導でST上昇が目立たなくても、後壁誘導V7〜V9を追加し、ST上昇を確認する。後壁梗塞は左回旋枝閉塞などでみられ、見逃すと再灌流療法の遅れにつながる。"
+      "explanation": "Horizontal ST depression, tall R waves, and upright T waves in leads V1 to V3 suggest reciprocal changes of a posterior myocardial infarction (posterior STEMI). Even if ST elevation is not prominent on a standard 12-lead ECG, posterior leads V7 to V9 should be recorded to confirm ST elevation. Posterior myocardial infarction is often caused by occlusion of the left circumflex (LCx) artery, and missing this finding leads to a delay in reperfusion therapy."
     }
   ]
 }

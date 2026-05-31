@@ -1,0 +1,1329 @@
+[
+  {
+    "file": "data/questions/ja/advanced/altered_mental_status_advanced.json",
+    "id": "altered_mental_status_advanced_002",
+    "question": "意識障害患者で気管挿管を早期に検討すべき状況として適切なものをすべて選べ。",
+    "selectCount": 0,
+    "answers": [
+      0,
+      1,
+      2,
+      4
+    ]
+  },
+  {
+    "file": "data/questions/ja/advanced/altered_mental_status_advanced.json",
+    "id": "altered_mental_status_advanced_006",
+    "question": "頭蓋内圧亢進・切迫ヘルニアを疑う所見と対応として正しいものをすべて選べ。",
+    "selectCount": 0,
+    "answers": [
+      0,
+      1,
+      2,
+      3
+    ]
+  },
+  {
+    "file": "data/questions/ja/advanced/altered_mental_status_advanced.json",
+    "id": "altered_mental_status_advanced_009",
+    "question": "意識消失患者で心原性失神を疑い、入院または緊急精査を検討すべき所見として正しいものをすべて選べ。",
+    "selectCount": 0,
+    "answers": [
+      0,
+      1,
+      2,
+      3
+    ]
+  },
+  {
+    "file": "data/questions/ja/advanced/altered_mental_status_advanced.json",
+    "id": "altered_mental_status_advanced_011",
+    "question": "急性低Na血症による意識障害で注意すべき点をすべて選べ。",
+    "selectCount": 0,
+    "answers": [
+      0,
+      1,
+      2,
+      3
+    ]
+  },
+  {
+    "file": "data/questions/ja/advanced/altered_mental_status_advanced.json",
+    "id": "altered_mental_status_advanced_013",
+    "question": "自己免疫性脳炎を疑う手がかりをすべて選べ。",
+    "selectCount": 0,
+    "answers": [
+      0,
+      1,
+      2,
+      3
+    ]
+  },
+  {
+    "file": "data/questions/ja/advanced/altered_mental_status_advanced.json",
+    "id": "altered_mental_status_advanced_014",
+    "question": "ICUせん妄の管理として適切なものをすべて選べ。",
+    "selectCount": 0,
+    "answers": [
+      0,
+      1,
+      2,
+      3
+    ]
+  },
+  {
+    "file": "data/questions/ja/advanced/cpr_advanced.json",
+    "id": "cpr_advanced_002",
+    "question": "除細動抵抗性VF/pVTへの対応として、正しいものをすべて選べ。",
+    "selectCount": 0,
+    "answers": [
+      0,
+      1,
+      2,
+      3
+    ]
+  },
+  {
+    "file": "data/questions/ja/advanced/cpr_advanced.json",
+    "id": "cpr_advanced_004",
+    "question": "気管挿管後の成人心停止管理について、正しいものをすべて選べ。",
+    "selectCount": 0,
+    "answers": [
+      0,
+      1,
+      2,
+      3
+    ]
+  },
+  {
+    "file": "data/questions/ja/advanced/cpr_advanced.json",
+    "id": "cpr_advanced_006",
+    "question": "心停止中の薬剤投与について、正しいものをすべて選べ。",
+    "selectCount": 0,
+    "answers": [
+      0,
+      1,
+      2,
+      4
+    ]
+  },
+  {
+    "file": "data/questions/ja/advanced/cpr_advanced.json",
+    "id": "cpr_advanced_008",
+    "question": "妊婦心停止への対応として、正しいものをすべて選べ。",
+    "selectCount": 0,
+    "answers": [
+      0,
+      1,
+      2,
+      4
+    ]
+  },
+  {
+    "file": "data/questions/ja/advanced/general_em_advanced.json",
+    "id": "general_em_advanced_002",
+    "question": "ショックの初期評価で重要な所見として正しいものをすべて選べ。",
+    "selectCount": 0,
+    "answers": [
+      0,
+      1,
+      2,
+      3
+    ]
+  },
+  {
+    "file": "data/questions/ja/advanced/sepsis_advanced.json",
+    "id": "infection_basic_003",
+    "question": "壊死性軟部組織感染症について正しいものをすべて選べ。",
+    "selectCount": 0,
+    "answers": [
+      0,
+      1,
+      2
+    ]
+  },
+  {
+    "file": "data/questions/ja/advanced/sepsis_advanced.json",
+    "id": "infection_empiric_004",
+    "question": "J-SSCG 2024において、医療関連の胆道・腹腔内感染症による敗血症で経験的治療薬として該当するものをすべて選べ。",
+    "selectCount": 0,
+    "answers": [
+      0,
+      1,
+      2,
+      3
+    ]
+  },
+  {
+    "file": "data/questions/ja/advanced/sepsis_advanced.json",
+    "id": "infection_empiric_007",
+    "question": "J-SSCG 2024において、自己弁感染性心内膜炎でMRSAリスクがない場合の経験的治療薬として該当するものをすべて選べ。",
+    "selectCount": 0,
+    "answers": [
+      0,
+      1
+    ]
+  },
+  {
+    "file": "data/questions/ja/advanced/sepsis_advanced.json",
+    "id": "infection_empiric_008",
+    "question": "J-SSCG 2024において、血管内カテーテル関連血流感染症による敗血症について正しいものをすべて選べ。",
+    "selectCount": 0,
+    "answers": [
+      0,
+      1,
+      2
+    ]
+  },
+  {
+    "file": "data/questions/ja/advanced/toxicology_advanced.json",
+    "id": "toxicology_advanced_002",
+    "question": "カルシウム拮抗薬（CCB）大量服薬の治療として正しいものをすべて選べ。",
+    "selectCount": 0,
+    "answers": [
+      0,
+      1,
+      2,
+      3
+    ]
+  },
+  {
+    "file": "data/questions/ja/advanced/trauma_advanced.json",
+    "id": "trauma_advanced_002",
+    "question": "外傷性凝固障害を悪化させる、または外傷蘇生中に補正を意識すべき因子をすべて選べ。",
+    "selectCount": 0,
+    "answers": [
+      0,
+      1,
+      2,
+      3
+    ]
+  },
+  {
+    "file": "data/questions/ja/advanced/trauma_advanced.json",
+    "id": "trauma_advanced_007",
+    "question": "脾損傷が疑われる鈍的腹部外傷患者の対応として、正しいものをすべて選べ。",
+    "selectCount": 0,
+    "answers": [
+      0,
+      1,
+      2,
+      3
+    ]
+  },
+  {
+    "file": "data/questions/ja/advanced/trauma_advanced.json",
+    "id": "trauma_advanced_010",
+    "question": "四肢外傷における血管損傷・コンパートメント症候群の評価として、正しいものをすべて選べ。",
+    "selectCount": 0,
+    "answers": [
+      0,
+      1,
+      2,
+      3
+    ]
+  },
+  {
+    "file": "data/questions/ja/basic/altered_mental_status_basic.json",
+    "id": "altered_mental_status_basic_002",
+    "question": "失神らしさを支持する所見をすべて選べ。",
+    "selectCount": 0,
+    "answers": [
+      0,
+      2,
+      3
+    ]
+  },
+  {
+    "file": "data/questions/ja/basic/altered_mental_status_basic.json",
+    "id": "altered_mental_status_basic_004",
+    "question": "意識障害患者に対し画像検査の前にERで評価すべき項目をすべて選べ。",
+    "selectCount": 0,
+    "answers": [
+      0,
+      1,
+      2,
+      3
+    ]
+  },
+  {
+    "file": "data/questions/ja/basic/cardiology_basic.json",
+    "id": "cardiology_basic_003",
+    "question": "下壁ST上昇型心筋梗塞について正しいものをすべて選べ。",
+    "selectCount": 0,
+    "answers": [
+      0,
+      1,
+      2,
+      3
+    ]
+  },
+  {
+    "file": "data/questions/ja/basic/cardiology_basic.json",
+    "id": "cardiology_basic_007",
+    "question": "心房細動の救急外来対応として正しいものをすべて選べ。",
+    "selectCount": 0,
+    "answers": [
+      0,
+      1,
+      2,
+      3
+    ]
+  },
+  {
+    "file": "data/questions/ja/basic/cardiology_basic.json",
+    "id": "cardiology_basic_010",
+    "question": "PSVTに対するベラパミルの使用について正しいものをすべて選べ。",
+    "selectCount": 0,
+    "answers": [
+      0,
+      1,
+      2,
+      3
+    ]
+  },
+  {
+    "file": "data/questions/ja/basic/cpr_basic.json",
+    "id": "cpr_basic_002",
+    "question": "VF/pulseless VTによる心停止で優先すべき対応をすべて選べ。",
+    "selectCount": 0,
+    "answers": [
+      1,
+      2,
+      4
+    ]
+  },
+  {
+    "file": "data/questions/ja/basic/cpr_basic.json",
+    "id": "cpr_basic_008",
+    "question": "成人のVF/無脈性VTに対する対応として、正しいものをすべて選べ。",
+    "selectCount": 0,
+    "answers": [
+      0,
+      2,
+      3
+    ]
+  },
+  {
+    "file": "data/questions/ja/basic/cpr_basic.json",
+    "id": "cpr_basic_013",
+    "question": "成人心停止患者で気管挿管が成功した後の換気・胸骨圧迫について、正しいものをすべて選べ。",
+    "selectCount": 0,
+    "answers": [
+      0,
+      1,
+      2,
+      3
+    ]
+  },
+  {
+    "file": "data/questions/ja/basic/ed_first_steps_basic.json",
+    "id": "ed_first_steps_002",
+    "question": "超音波検査を行う場合に注意すべきことをすべて選べ。",
+    "selectCount": 0,
+    "answers": [
+      0,
+      1,
+      2,
+      3
+    ]
+  },
+  {
+    "file": "data/questions/ja/basic/ed_first_steps_basic.json",
+    "id": "ed_first_steps_005",
+    "question": "85歳男性が肺炎の診断で入院となった。家族へ検査結果、診断、治療法について説明した。加えて説明しておくべき内容をすべて選択せよ。",
+    "selectCount": 0,
+    "answers": [
+      0,
+      1,
+      2,
+      3
+    ]
+  },
+  {
+    "file": "data/questions/ja/basic/emergency_medications_basic.json",
+    "id": "emergency_medications_basic_003",
+    "question": "頻拍性不整脈に対する薬剤選択として危険な対応をすべて選べ。",
+    "selectCount": 0,
+    "answers": [
+      0,
+      1
+    ]
+  },
+  {
+    "file": "data/questions/ja/basic/emergency_medications_basic.json",
+    "id": "emergency_medications_basic_005",
+    "question": "ベンゾジアゼピン中毒とフルマゼニルについて正しいものをすべて選べ。",
+    "selectCount": 0,
+    "answers": [
+      0,
+      1,
+      2,
+      3
+    ]
+  },
+  {
+    "file": "data/questions/ja/basic/emergency_medications_basic.json",
+    "id": "emergency_medications_basic_012",
+    "question": "救急外来での局所麻酔において正しいものをすべて選べ。",
+    "selectCount": 0,
+    "answers": [
+      2,
+      3
+    ]
+  },
+  {
+    "file": "data/questions/ja/basic/emergency_medications_basic.json",
+    "id": "emergency_medications_basic_013",
+    "question": "局所麻酔の疼痛を緩和する目的で正しい記載をすべて選べ。",
+    "selectCount": 0,
+    "answers": [
+      0,
+      2,
+      3,
+      4
+    ]
+  },
+  {
+    "file": "data/questions/ja/basic/endocrine_basic.json",
+    "id": "endocrine_basic_002",
+    "question": "DKA/HHSの初期治療として正しいものをすべて選べ。",
+    "selectCount": 0,
+    "answers": [
+      0,
+      1,
+      2,
+      3
+    ]
+  },
+  {
+    "file": "data/questions/ja/basic/endocrine_basic.json",
+    "id": "endocrine_basic_005",
+    "question": "重症低血糖の対応として正しいものをすべて選べ。",
+    "selectCount": 0,
+    "answers": [
+      0,
+      1,
+      2,
+      3
+    ]
+  },
+  {
+    "file": "data/questions/ja/basic/endocrine_basic.json",
+    "id": "endocrine_basic_007",
+    "question": "DKA患者。Na 132 mmol/L、Cl 96 mmol/L、HCO3- 9 mmol/L。アニオンギャップとΔギャップの評価として正しいものをすべて選べ。",
+    "selectCount": 0,
+    "answers": [
+      1,
+      4
+    ]
+  },
+  {
+    "file": "data/questions/ja/basic/endocrine_basic.json",
+    "id": "endocrine_basic_008",
+    "question": "2024年国際コンセンサスに基づく成人DKAの診断基準として正しいものをすべて選べ。",
+    "selectCount": 0,
+    "answers": [
+      0,
+      1,
+      2
+    ]
+  },
+  {
+    "file": "data/questions/ja/basic/endocrine_basic.json",
+    "id": "endocrine_basic_011",
+    "question": "SGLT2阻害薬内服中の2型糖尿病患者。嘔吐、倦怠感、頻呼吸で来院。血糖186 mg/dL、pH 7.21、HCO3- 11 mmol/L、βヒドロキシ酪酸 5.4 mmol/L。適切な対応をすべて選べ。",
+    "selectCount": 0,
+    "answers": [
+      0,
+      1,
+      2,
+      3
+    ]
+  },
+  {
+    "file": "data/questions/ja/basic/endocrine_basic.json",
+    "id": "endocrine_basic_012",
+    "question": "DKA治療中にBS 250 mg/dL以下となった。その後の方針として正しいものをすべて選べ。",
+    "selectCount": 0,
+    "answers": [
+      0,
+      1,
+      2,
+      3
+    ]
+  },
+  {
+    "file": "data/questions/ja/basic/endocrine_basic.json",
+    "id": "endocrine_basic_014",
+    "question": "2024年国際コンセンサスに基づくHHSの診断基準として適切なものをすべて選べ。",
+    "selectCount": 0,
+    "answers": [
+      0,
+      1,
+      2,
+      3
+    ]
+  },
+  {
+    "file": "data/questions/ja/basic/endocrine_basic.json",
+    "id": "emergency_medications_basic_electrolyte_004",
+    "question": "硫酸Mgの適応と投与法として正しいものをすべて選べ。",
+    "selectCount": 0,
+    "answers": [
+      0,
+      1,
+      2,
+      3
+    ]
+  },
+  {
+    "file": "data/questions/ja/basic/general_em_basic.json",
+    "id": "general_em_basic_002",
+    "question": "ERにおける一次評価（primary survey）に含まれる項目として正しいものをすべて選べ。",
+    "selectCount": 0,
+    "answers": [
+      0,
+      1,
+      2,
+      3
+    ]
+  },
+  {
+    "file": "data/questions/ja/basic/gi_symptoms_basic.json",
+    "id": "gi_symptoms_basic_002",
+    "question": "急性腹症のうち、緊急内視鏡検査または内視鏡的処置を要しうる疾患・病態をすべて選べ。",
+    "selectCount": 0,
+    "answers": [
+      0,
+      1,
+      2,
+      4
+    ]
+  },
+  {
+    "file": "data/questions/ja/basic/gi_symptoms_basic.json",
+    "id": "gi_symptoms_basic_015",
+    "question": "乳酸値と血液ガス分析に関する記述として正しいものをすべて選べ。",
+    "selectCount": 0,
+    "answers": [
+      0,
+      1,
+      3,
+      4
+    ]
+  },
+  {
+    "file": "data/questions/ja/basic/gi_symptoms_basic.json",
+    "id": "gi_symptoms_basic_018",
+    "question": "腹部大動脈瘤破裂について、急性腹症診療ガイドライン2025の記載として正しいものをすべて選べ。",
+    "selectCount": 0,
+    "answers": [
+      0,
+      1,
+      2,
+      4
+    ]
+  },
+  {
+    "file": "data/questions/ja/basic/gi_symptoms_basic.json",
+    "id": "gi_symptoms_basic_022",
+    "question": "急性腹症における鎮痛薬選択と投与量について、急性腹症ガイドライン2025の記載として正しいものをすべて選べ。",
+    "selectCount": 0,
+    "answers": [
+      0,
+      1,
+      2,
+      3
+    ]
+  },
+  {
+    "file": "data/questions/ja/basic/infection_basic.json",
+    "id": "infection_basic_002_revised",
+    "question": "成人の細菌性髄膜炎を疑う患者への初期対応として正しいものをすべて選べ。",
+    "selectCount": 0,
+    "answers": [
+      0,
+      1,
+      2,
+      3
+    ]
+  },
+  {
+    "file": "data/questions/ja/basic/infection_basic.json",
+    "id": "infection_basic_004_revised",
+    "question": "抗菌薬適正使用として正しいものをすべて選べ。",
+    "selectCount": 0,
+    "answers": [
+      0,
+      1,
+      2,
+      3
+    ]
+  },
+  {
+    "file": "data/questions/ja/basic/infection_basic.json",
+    "id": "ed_first_steps_tetanus_003_revised",
+    "question": "破傷風予防において、ワクチン歴の評価として正しいものをすべて選べ。",
+    "selectCount": 0,
+    "answers": [
+      0,
+      1,
+      2
+    ]
+  },
+  {
+    "file": "data/questions/ja/basic/orthopedic_trauma_basic.json",
+    "id": "orthopedic_trauma_basic_001",
+    "question": "交通事故後に後頚部痛を訴える患者の初期対応として適切なものをすべて選べ。",
+    "selectCount": 0,
+    "answers": [
+      0,
+      1,
+      2
+    ]
+  },
+  {
+    "file": "data/questions/ja/basic/orthopedic_trauma_basic.json",
+    "id": "orthopedic_trauma_basic_003",
+    "question": "足関節捻挫で単純X線撮影を考慮する所見をすべて選べ。",
+    "selectCount": 0,
+    "answers": [
+      0,
+      1,
+      2,
+      3
+    ]
+  },
+  {
+    "file": "data/questions/ja/basic/orthopedic_trauma_basic.json",
+    "id": "orthopedic_trauma_basic_005",
+    "question": "シーネ固定と良肢位について正しいものをすべて選べ。",
+    "selectCount": 0,
+    "answers": [
+      0,
+      1,
+      2
+    ]
+  },
+  {
+    "file": "data/questions/ja/basic/orthopedic_trauma_basic.json",
+    "id": "orthopedic_trauma_basic_009",
+    "question": "肘内障について正しいものをすべて選択せよ。",
+    "selectCount": 0,
+    "answers": [
+      1,
+      4
+    ]
+  },
+  {
+    "file": "data/questions/ja/basic/pediatric_basic.json",
+    "id": "pediatric_basic_003",
+    "question": "熱性けいれん後の説明・対応として正しいものをすべて選べ。",
+    "selectCount": 0,
+    "answers": [
+      0,
+      1,
+      2
+    ]
+  },
+  {
+    "file": "data/questions/ja/basic/pediatric_basic.json",
+    "id": "pediatric_basic_004",
+    "question": "熱性けいれんの再発予防目的で用いるジアゼパム坐剤について、正しいものをすべて選べ。",
+    "selectCount": 0,
+    "answers": [
+      1,
+      2,
+      3,
+      4
+    ]
+  },
+  {
+    "file": "data/questions/ja/basic/pediatric_basic.json",
+    "id": "pediatric_basic_006",
+    "question": "クループ症候群の治療について正しいものをすべて選べ。",
+    "selectCount": 0,
+    "answers": [
+      0,
+      1,
+      2,
+      3
+    ]
+  },
+  {
+    "file": "data/questions/ja/basic/pediatric_basic.json",
+    "id": "pediatric_basic_009",
+    "question": "小児のけいれん重積への初期薬物療法として正しいものをすべて選べ。",
+    "selectCount": 0,
+    "answers": [
+      0,
+      1,
+      2,
+      3
+    ]
+  },
+  {
+    "file": "data/questions/ja/basic/pediatric_basic.json",
+    "id": "pediatric_basic_012",
+    "question": "小児心停止の薬物・除細動について正しいものをすべて選べ。",
+    "selectCount": 0,
+    "answers": [
+      0,
+      1,
+      2,
+      3
+    ]
+  },
+  {
+    "file": "data/questions/ja/basic/sepsis_basic.json",
+    "id": "sepsis_basic_002",
+    "question": "敗血症性ショックの初期循環管理として正しいものをすべて選べ。",
+    "selectCount": 0,
+    "answers": [
+      0,
+      1,
+      2,
+      3
+    ]
+  },
+  {
+    "file": "data/questions/ja/basic/sepsis_basic.json",
+    "id": "sepsis_basic_004",
+    "question": "敗血症で早期のソースコントロールを検討すべき病態をすべて選べ。",
+    "selectCount": 0,
+    "answers": [
+      0,
+      1,
+      2,
+      3
+    ]
+  },
+  {
+    "file": "data/questions/ja/basic/sepsis_basic.json",
+    "id": "sepsis_basic_005",
+    "question": "敗血症疑い患者の乳酸値の解釈として適切なものをすべて選べ。",
+    "selectCount": 0,
+    "answers": [
+      0,
+      1,
+      2,
+      3
+    ]
+  },
+  {
+    "file": "data/questions/ja/basic/toxicology_basic.json",
+    "id": "toxicology_basic_010",
+    "question": "胃洗浄・単回活性炭について正しいものをすべて選べ。",
+    "selectCount": 0,
+    "answers": [
+      0,
+      2
+    ]
+  },
+  {
+    "file": "data/questions/ja/basic/toxicology_basic.json",
+    "id": "toxicology_basic_011",
+    "question": "反復活性炭投与の適応となる薬物として正しいものをすべて選べ。",
+    "selectCount": 0,
+    "answers": [
+      0,
+      1,
+      2
+    ]
+  },
+  {
+    "file": "data/questions/ja/basic/trauma_basic.json",
+    "id": "trauma_jatec_003",
+    "question": "Primary surveyのB：Breathingで、画像検査を待たず緊急処置を検討すべき病態をすべて選べ。",
+    "selectCount": 0,
+    "answers": [
+      0,
+      1,
+      2,
+      4
+    ]
+  },
+  {
+    "file": "data/questions/ja/basic/trauma_basic.json",
+    "id": "trauma_jatec_007",
+    "question": "Primary surveyのD：Dysfunction of CNSで、切迫するDとして扱うべき所見をすべて選べ。",
+    "selectCount": 0,
+    "answers": [
+      0,
+      1,
+      2
+    ]
+  },
+  {
+    "file": "data/questions/ja/basic/trauma_basic.json",
+    "id": "trauma_jatec_008",
+    "question": "外傷患者でPrimary survey中に意識レベルが悪化した。対応として正しいものをすべて選べ。",
+    "selectCount": 0,
+    "answers": [
+      0,
+      1,
+      2,
+      4
+    ]
+  },
+  {
+    "file": "data/questions/ja/basic/trauma_basic.json",
+    "id": "trauma_jatec_009",
+    "question": "Primary surveyのE：Exposure and Environmentで正しい対応をすべて選べ。",
+    "selectCount": 0,
+    "answers": [
+      0,
+      1,
+      2
+    ]
+  },
+  {
+    "file": "data/questions/ja/basic/vertigo_stroke_basic.json",
+    "id": "vertigo_stroke_basic_002",
+    "question": "中枢性めまいを疑う所見をすべて選べ。",
+    "selectCount": 0,
+    "answers": [
+      0,
+      1,
+      2,
+      4
+    ]
+  },
+  {
+    "file": "data/questions/ja/basic/vertigo_stroke_basic.json",
+    "id": "vertigo_stroke_basic_003",
+    "question": "ELVO（Emergent Large Vessel Occlusion）screenにおいて、脳主幹動脈閉塞を疑うために初期に確認すべき項目をすべて選べ。",
+    "selectCount": 0,
+    "answers": [
+      0,
+      1,
+      2
+    ]
+  },
+  {
+    "file": "data/questions/ja/basic/vertigo_stroke_basic.json",
+    "id": "vertigo_stroke_basic_004",
+    "question": "めまい患者で安易な帰宅を避けるべき状況をすべて選べ。",
+    "selectCount": 0,
+    "answers": [
+      0,
+      1,
+      2,
+      3
+    ]
+  },
+  {
+    "file": "data/questions/ja/basic/vertigo_stroke_basic.json",
+    "id": "vertigo_stroke_basic_005",
+    "question": "急性脳卒中疑いで初期に並行して行うべき対応をすべて選べ。",
+    "selectCount": 0,
+    "answers": [
+      0,
+      1,
+      2,
+      3
+    ]
+  },
+  {
+    "file": "data/questions/ja/basic/vertigo_stroke_basic.json",
+    "id": "abcd2_lancet_003",
+    "question": "ABCD²スコアの点数配分として正しいものをすべて選べ。",
+    "selectCount": 0,
+    "answers": [
+      0,
+      1,
+      2,
+      3
+    ]
+  },
+  {
+    "file": "data/questions/ja/master/altered_mental_status_master.json",
+    "id": "altered_mental_status_master_001",
+    "question": "急性低Na血症による意識障害で注意すべき点をすべて選べ。",
+    "selectCount": 0,
+    "answers": [
+      0,
+      1,
+      2,
+      3
+    ]
+  },
+  {
+    "file": "data/questions/ja/master/altered_mental_status_master.json",
+    "id": "altered_mental_status_master_003",
+    "question": "自己免疫性脳炎を疑う手がかりをすべて選べ。",
+    "selectCount": 0,
+    "answers": [
+      0,
+      1,
+      2,
+      3
+    ]
+  },
+  {
+    "file": "data/questions/ja/master/altered_mental_status_master.json",
+    "id": "altered_mental_status_master_004",
+    "question": "ICUせん妄の管理として適切なものをすべて選べ。",
+    "selectCount": 0,
+    "answers": [
+      0,
+      1,
+      2,
+      3
+    ]
+  },
+  {
+    "file": "data/questions/ja/master/altered_mental_status_master.json",
+    "id": "altered_mental_status_master_005",
+    "question": "持続脳波モニタリングの実施を考慮すべき状況として、適切なものをすべて選べ。",
+    "selectCount": 0,
+    "answers": [
+      0,
+      1,
+      2,
+      3
+    ]
+  },
+  {
+    "file": "data/questions/ja/master/cpr_master.json",
+    "id": "cpr_master_mondai_013",
+    "question": "蘇生において次のうち、正しいものをすべて選べ。",
+    "selectCount": 0,
+    "answers": [
+      0,
+      2,
+      3
+    ]
+  },
+  {
+    "file": "data/questions/ja/master/cpr_master.json",
+    "id": "cpr_master_mondai_014",
+    "question": "蘇生について次のうち、正しいものをすべて選べ。",
+    "selectCount": 0,
+    "answers": [
+      0,
+      1,
+      4
+    ]
+  },
+  {
+    "file": "data/questions/ja/master/cpr_master.json",
+    "id": "cpr_master_mondai_015",
+    "question": "小児の蘇生について次のうち、正しいものをすべて選べ。",
+    "selectCount": 0,
+    "answers": [
+      1,
+      2,
+      3
+    ]
+  },
+  {
+    "file": "data/questions/ja/master/cpr_master.json",
+    "id": "cpr_master_mondai_016",
+    "question": "次の救急疾患の説明において、正しいものをすべて選べ。",
+    "selectCount": 0,
+    "answers": [
+      2
+    ]
+  },
+  {
+    "file": "data/questions/ja/master/general_em_master.json",
+    "id": "general_em_master_002",
+    "question": "難治性心室細動に対するECPR（体外式心肺蘇生）の適切な適応として正しいものをすべて選べ。",
+    "selectCount": 0,
+    "answers": [
+      0,
+      1,
+      2,
+      3
+    ]
+  },
+  {
+    "file": "data/questions/ja/master/general_em_master.json",
+    "id": "general_em_master_003",
+    "question": "60歳男性ARDSで人工呼吸管理となった。ガイドライン上強く推奨される治療をすべて選べ。",
+    "selectCount": 0,
+    "answers": [
+      2,
+      4
+    ]
+  },
+  {
+    "file": "data/questions/ja/master/general_em_master.json",
+    "id": "general_em_master_005_rev6",
+    "question": "32歳の経産婦。分娩後30分で大量出血し子宮は軟。弛緩出血と判断された。治療として適切なのはどれか。すべて選べ。",
+    "selectCount": 0,
+    "answers": [
+      0,
+      1,
+      2,
+      4
+    ]
+  },
+  {
+    "file": "data/questions/ja/master/general_em_master.json",
+    "id": "general_em_master_006_rev",
+    "question": "SBTを控える理由となる所見はどれか。すべて選べ。",
+    "selectCount": 0,
+    "answers": [
+      2,
+      3,
+      4
+    ]
+  },
+  {
+    "file": "data/questions/ja/master/general_em_master.json",
+    "id": "general_em_master_012",
+    "question": "腐食性物質の誤飲患者への対応として正しいものをすべて選べ。",
+    "selectCount": 0,
+    "answers": [
+      0,
+      4
+    ]
+  },
+  {
+    "file": "data/questions/ja/master/general_em_master.json",
+    "id": "general_em_master_014",
+    "question": "補体関連aHUSについて正しいものをすべて選べ。",
+    "selectCount": 0,
+    "answers": [
+      0,
+      1,
+      2
+    ]
+  },
+  {
+    "file": "data/questions/ja/master/general_em_master.json",
+    "id": "general_em_master_016",
+    "question": "帯状疱疹について正しいものをすべて選べ。",
+    "selectCount": 0,
+    "answers": [
+      0,
+      1,
+      2
+    ]
+  },
+  {
+    "file": "data/questions/ja/master/general_em_master.json",
+    "id": "general_em_master_017",
+    "question": "骨盤血管の解剖について正しいものをすべて選べ。",
+    "selectCount": 0,
+    "answers": [
+      0,
+      2
+    ]
+  },
+  {
+    "file": "data/questions/ja/master/general_em_master.json",
+    "id": "general_em_master_019",
+    "question": "重症頭部外傷で頭蓋内圧が上昇し、脳灌流圧が低下している。行うべき対応として正しいものをすべて選べ。",
+    "selectCount": 0,
+    "answers": [
+      0,
+      1
+    ]
+  },
+  {
+    "file": "data/questions/ja/master/general_em_master.json",
+    "id": "general_em_master_020",
+    "question": "診断的腹腔洗浄で小腸損傷の評価に用いられる項目はどれか。正しいものをすべて選べ。",
+    "selectCount": 0,
+    "answers": [
+      0,
+      3
+    ]
+  },
+  {
+    "file": "data/questions/ja/master/general_em_master.json",
+    "id": "general_em_master_021",
+    "question": "膵外傷で主膵管損傷の評価に有用な検査はどれか。正しいものをすべて選べ。",
+    "selectCount": 0,
+    "answers": [
+      3,
+      4
+    ]
+  },
+  {
+    "file": "data/questions/ja/master/general_em_master.json",
+    "id": "general_em_master_023",
+    "question": "QT延長を背景に多形性心室頻拍を繰り返し、徐脈時に失神を来す患者がいる。急性期治療として正しいものをすべて選べ。",
+    "selectCount": 0,
+    "answers": [
+      3,
+      4
+    ]
+  },
+  {
+    "file": "data/questions/ja/master/general_em_master.json",
+    "id": "general_em_master_025",
+    "question": "寮生活中の高校生が発熱、意識障害、項部硬直で受診し、髄液からグラム陰性双球菌を認めた。対応として正しいものをすべて選べ。",
+    "selectCount": 0,
+    "answers": [
+      0,
+      2,
+      4
+    ]
+  },
+  {
+    "file": "data/questions/ja/master/general_em_master.json",
+    "id": "general_em_master_030",
+    "question": "一次爆傷で損傷を受けやすい臓器・部位はどれか。正しいものをすべて選べ。",
+    "selectCount": 0,
+    "answers": [
+      1,
+      2
+    ]
+  },
+  {
+    "file": "data/questions/ja/master/general_em_master.json",
+    "id": "general_em_master_035",
+    "question": "褐色細胞腫クリーゼを疑う患者に単独投与を避けるべき薬剤はどれか。正しいものをすべて選べ。",
+    "selectCount": 0,
+    "answers": [
+      1,
+      2
+    ]
+  },
+  {
+    "file": "data/questions/ja/master/general_em_master.json",
+    "id": "general_em_master_043",
+    "question": "COPD急性増悪の初期治療として正しいものをすべて選べ。",
+    "selectCount": 0,
+    "answers": [
+      1,
+      4
+    ]
+  },
+  {
+    "file": "data/questions/ja/master/general_em_master.json",
+    "id": "general_em_master_045",
+    "question": "抗コリン薬中毒のトキシドロームとして正しいものをすべて選べ。",
+    "selectCount": 0,
+    "answers": [
+      0,
+      1
+    ]
+  },
+  {
+    "file": "data/questions/ja/master/general_em_master.json",
+    "id": "general_em_master_048",
+    "question": "胆管炎を伴う胆石性急性膵炎の初期治療として正しいものをすべて選べ。",
+    "selectCount": 0,
+    "answers": [
+      0,
+      4
+    ]
+  },
+  {
+    "file": "data/questions/ja/master/general_em_master.json",
+    "id": "general_em_master_049",
+    "question": "悪性症候群よりセロトニン症候群で特徴的な所見はどれか。正しいものをすべて選べ。",
+    "selectCount": 0,
+    "answers": [
+      3,
+      4
+    ]
+  },
+  {
+    "file": "data/questions/ja/master/general_em_master.json",
+    "id": "general_em_master_050",
+    "question": "熱中症診療ガイドライン2024の重症度分類IV度の診断に関わる項目はどれか。正しいものをすべて選べ。",
+    "selectCount": 0,
+    "answers": [
+      0,
+      2
+    ]
+  },
+  {
+    "file": "data/questions/ja/master/general_em_master.json",
+    "id": "general_em_master_051",
+    "question": "メタノール中毒の治療として正しいものをすべて選べ。",
+    "selectCount": 0,
+    "answers": [
+      1,
+      3
+    ]
+  },
+  {
+    "file": "data/questions/ja/master/sepsis_master.json",
+    "id": "sepsis_master_002",
+    "question": "敗血症患者で腎代替療法を急いで検討すべき状況をすべて選べ。",
+    "selectCount": 0,
+    "answers": [
+      0,
+      1,
+      2,
+      3
+    ]
+  },
+  {
+    "file": "data/questions/ja/master/sepsis_master.json",
+    "id": "sepsis_master_mondai_017",
+    "question": "次のうち、SOFAスコアとして正しいものをすべて選べ。",
+    "selectCount": 0,
+    "answers": [
+      0,
+      1,
+      2,
+      3
+    ]
+  },
+  {
+    "file": "data/questions/ja/master/sepsis_master.json",
+    "id": "sepsis_master_mondai_018",
+    "question": "敗血症について次のうち、正しいものをすべて選べ。",
+    "selectCount": 0,
+    "answers": [
+      2
+    ]
+  },
+  {
+    "file": "data/questions/ja/master/sepsis_master.json",
+    "id": "sepsis_master_mondai_019",
+    "question": "敗血症について次のうち、正しいものをすべて選べ。",
+    "selectCount": 0,
+    "answers": [
+      0,
+      2,
+      3,
+      4
+    ]
+  },
+  {
+    "file": "data/questions/ja/master/sepsis_master.json",
+    "id": "sepsis_master_mondai_020",
+    "question": "敗血症について次のうち、正しいものをすべて選べ。",
+    "selectCount": 0,
+    "answers": [
+      0,
+      1,
+      2,
+      4
+    ]
+  },
+  {
+    "file": "data/questions/ja/master/trauma_master.json",
+    "id": "trauma_master_002",
+    "question": "集中治療中の腹部外傷患者において腹部が膨満し、血圧が不安定となった。以下のうち正しい記述をすべて選べ。",
+    "selectCount": 0,
+    "answers": [
+      0,
+      2,
+      4
+    ]
+  },
+  {
+    "file": "data/questions/ja/master/trauma_master.json",
+    "id": "trauma_master_003",
+    "question": "重症外傷後の横紋筋融解症で正しい記述項目をすべて選べ。",
+    "selectCount": 0,
+    "answers": [
+      1,
+      2
+    ]
+  },
+  {
+    "file": "data/questions/ja/master/trauma_master.json",
+    "id": "trauma_master_mondai_001",
+    "question": "ショックを伴う腹部外傷に対して正しい方針をすべて選べ。",
+    "selectCount": 0,
+    "answers": [
+      2
+    ]
+  },
+  {
+    "file": "data/questions/ja/master/trauma_master.json",
+    "id": "trauma_master_mondai_002",
+    "question": "重症外傷に対する蘇生的開胸術の適応として正しいものをすべて選べ。",
+    "selectCount": 0,
+    "answers": [
+      2,
+      3,
+      4
+    ]
+  },
+  {
+    "file": "data/questions/ja/master/trauma_master.json",
+    "id": "trauma_master_mondai_003",
+    "question": "REBOAについて正しいものをすべて選べ。",
+    "selectCount": 0,
+    "answers": [
+      0,
+      1,
+      3
+    ]
+  },
+  {
+    "file": "data/questions/ja/master/trauma_master.json",
+    "id": "trauma_master_mondai_004",
+    "question": "重症頭部外傷の管理において正しいものをすべて選べ。",
+    "selectCount": 0,
+    "answers": [
+      0,
+      1,
+      2,
+      4
+    ]
+  },
+  {
+    "file": "data/questions/ja/master/trauma_master.json",
+    "id": "trauma_master_mondai_005",
+    "question": "頭頚部外傷において正しいものをすべて選べ。",
+    "selectCount": 0,
+    "answers": [
+      1
+    ]
+  },
+  {
+    "file": "data/questions/ja/master/trauma_master.json",
+    "id": "trauma_master_mondai_006",
+    "question": "胸部外傷において正しいものをすべて選べ。",
+    "selectCount": 0,
+    "answers": [
+      1,
+      3,
+      4
+    ]
+  },
+  {
+    "file": "data/questions/ja/master/trauma_master.json",
+    "id": "trauma_master_mondai_007",
+    "question": "心大血管損傷において正しいものをすべて選べ。",
+    "selectCount": 0,
+    "answers": [
+      0
+    ]
+  },
+  {
+    "file": "data/questions/ja/master/trauma_master.json",
+    "id": "trauma_master_mondai_008",
+    "question": "骨盤損傷において正しいものをすべて選べ。",
+    "selectCount": 0,
+    "answers": [
+      0,
+      4
+    ]
+  },
+  {
+    "file": "data/questions/ja/master/trauma_master.json",
+    "id": "trauma_master_mondai_009",
+    "question": "脊髄・脊椎損傷について正しいものをすべて選べ。",
+    "selectCount": 0,
+    "answers": [
+      1
+    ]
+  },
+  {
+    "file": "data/questions/ja/master/trauma_master.json",
+    "id": "trauma_master_mondai_010",
+    "question": "四肢外傷について正しいものをすべて選べ。",
+    "selectCount": 0,
+    "answers": [
+      0,
+      1,
+      3,
+      4
+    ]
+  }
+]

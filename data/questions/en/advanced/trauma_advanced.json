@@ -33,8 +33,8 @@
         2,
         3
       ],
-      "explanation": "Traumatic coagulopathy is worsened by tissue injury and shock, compounded by hypothermia, acidosis, dilutional coagulopathy, decreased fibrinogen, thrombocytopenia, and hypocalcemia. General correction thresholds include: temperature <35°C, pH <7.2, BE ≤-6 mmol/L, elevated lactate, fibrinogen <150–200 mg/dL, low platelets, and ionized Ca <1.0 mmol/L. Hyponatremia may complicate overall management but is not typically considered a primary driver of traumatic coagulopathy.",
-      "selectCount": 0
+      "selectCount": 0,
+      "explanation": "Traumatic coagulopathy is worsened by tissue injury and shock, compounded by hypothermia, acidosis, dilutional coagulopathy, decreased fibrinogen, thrombocytopenia, and hypocalcemia. General correction thresholds include: temperature <35°C, pH <7.2, BE ≤-6 mmol/L, elevated lactate, fibrinogen <150–200 mg/dL, low platelets, and ionized Ca <1.0 mmol/L. Hyponatremia may complicate overall management but is not typically considered a primary driver of traumatic coagulopathy."
     },
     {
       "id": "trauma_advanced_003",
@@ -118,8 +118,8 @@
         2,
         3
       ],
-      "explanation": "Hemodynamic status is central to treatment selection in splenic injury. Hemodynamic instability, poor response to transfusion, or peritoneal signs warrant surgical hemorrhage control. In stable patients, contrast-enhanced CT is valuable; TAE should be considered when contrast extravasation or pseudoaneurysm is identified. Even high-grade injuries (e.g., AAST grade IV) may be managed non-operatively if the patient is hemodynamically stable, close monitoring is available, and IVR/surgical backup is in place. During non-operative management, repeat assessment of worsening abdominal pain, tachycardia, hypotension, and Hb decline is essential.",
-      "selectCount": 0
+      "selectCount": 0,
+      "explanation": "Hemodynamic status is central to treatment selection in splenic injury. Hemodynamic instability, poor response to transfusion, or peritoneal signs warrant surgical hemorrhage control. In stable patients, contrast-enhanced CT is valuable; TAE should be considered when contrast extravasation or pseudoaneurysm is identified. Even high-grade injuries (e.g., AAST grade IV) may be managed non-operatively if the patient is hemodynamically stable, close monitoring is available, and IVR/surgical backup is in place. During non-operative management, repeat assessment of worsening abdominal pain, tachycardia, hypotension, and Hb decline is essential."
     },
     {
       "id": "trauma_advanced_008",
@@ -171,8 +171,8 @@
         2,
         3
       ],
-      "explanation": "Extremity vascular injuries are stratified into hard signs and soft signs. Hard signs — pulsatile hemorrhage, expanding hematoma, peripheral ischemia, and bruit/thrill — warrant emergent vascular surgical evaluation. ABI or API below 0.9 is a threshold for suspecting vascular injury and prompts additional evaluation such as CTA. In compartment syndrome, pain on passive stretch, severe pain, and compartment tightness are early findings; paralysis, sensory loss, and absent pulses are late signs. Compartment syndrome cannot be excluded even with palpable peripheral pulses.",
-      "selectCount": 0
+      "selectCount": 0,
+      "explanation": "Extremity vascular injuries are stratified into hard signs and soft signs. Hard signs — pulsatile hemorrhage, expanding hematoma, peripheral ischemia, and bruit/thrill — warrant emergent vascular surgical evaluation. ABI or API below 0.9 is a threshold for suspecting vascular injury and prompts additional evaluation such as CTA. In compartment syndrome, pain on passive stretch, severe pain, and compartment tightness are early findings; paralysis, sensory loss, and absent pulses are late signs. Compartment syndrome cannot be excluded even with palpable peripheral pulses."
     }
   ]
 }

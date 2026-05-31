@@ -10,9 +10,11 @@
         "Take a detailed history from the family",
         "Perform a detailed neurologic examination including tendon reflexes"
       ],
-      "answers": [0],
-      "selectCount": 1,
-      "explanation": "In altered mental status, first assess and stabilize airway, breathing, and circulation. At the same time, hypoglycemia can be rapidly checked and treated, and if missed it can cause serious neurologic injury. Therefore glucose should be measured early and corrected immediately if low. Head CT, history-taking, and neurologic examination are also important, but a detailed examination such as tendon reflex testing should not take priority over checking and correcting hypoglycemia."
+      "explanation": "In altered mental status, first assess and stabilize airway, breathing, and circulation. At the same time, hypoglycemia can be rapidly checked and treated, and if missed it can cause serious neurologic injury. Therefore glucose should be measured early and corrected immediately if low. Head CT, history-taking, and neurologic examination are also important, but a detailed examination such as tendon reflex testing should not take priority over checking and correcting hypoglycemia.",
+      "answers": [
+        0
+      ],
+      "selectCount": 1
     },
     {
       "id": "altered_mental_status_entry_002",
@@ -23,22 +25,26 @@
         "JCS 2 means eye opening to pain, while JCS 3 means no eye opening even to pain",
         "JCS 2 means conversation is impossible, while JCS 3 means flexion of the limbs"
       ],
-      "answers": [1],
-      "selectCount": 1,
-      "explanation": "Single-digit JCS scores indicate that the patient is awake without stimulation. JCS 2 indicates disorientation, while JCS 3 indicates inability to state one's own name or date of birth. Both involve spontaneous eye opening, but JCS 3 represents a more severe disturbance of consciousness. Patients who awaken with stimulation are scored in the two-digit JCS range, and those who do not awaken despite stimulation are scored in the three-digit range."
+      "explanation": "Single-digit JCS scores indicate that the patient is awake without stimulation. JCS 2 indicates disorientation, while JCS 3 indicates inability to state one's own name or date of birth. Both involve spontaneous eye opening, but JCS 3 represents a more severe disturbance of consciousness. Patients who awaken with stimulation are scored in the two-digit JCS range, and those who do not awaken despite stimulation are scored in the three-digit range.",
+      "answers": [
+        1
+      ],
+      "selectCount": 1
     },
     {
       "id": "altered_mental_status_entry_003",
-      "question": "What is the total Glasgow Coma Scale (GCS) score for no eye opening (E1), no verbal response (V1), and abnormal extension (M2)?",
+      "question": "A patient with altered mental status is examined. There is no eye opening and no verbal response. In response to painful stimulation, the patient extends the limbs. What is the total Glasgow Coma Scale (GCS) score?",
       "choices": [
         "3 points",
         "4 points",
         "5 points",
         "6 points"
       ],
-      "answers": [1],
-      "selectCount": 1,
-      "explanation": "GCS is scored as E (eye opening, 1-4) plus V (verbal response, 1-5) plus M (motor response, 1-6). E1 + V1 + M2 = 4 points. The minimum score is 3 and the maximum is 15."
+      "explanation": "GCS is scored as E (eye opening, 1-4) plus V (verbal response, 1-5) plus M (motor response, 1-6). E1 + V1 + M2 = 4 points. The minimum score is 3 and the maximum is 15.",
+      "answers": [
+        1
+      ],
+      "selectCount": 1
     },
     {
       "id": "altered_mental_status_entry_004",
@@ -49,9 +55,11 @@
         "Loss of consciousness while standing with rapid recovery after lying down",
         "Prolonged standing or painful stimulation immediately before the episode"
       ],
-      "answers": [1],
-      "selectCount": 1,
-      "explanation": "Lateral tongue biting, postictal confusion or prolonged impaired consciousness, and clear tonic-clonic movements suggest an epileptic seizure. Urinary incontinence can occur in both seizure and syncope and is not specific by itself. Lightheadedness, sweating, malaise, prolonged standing, painful stimulation, and rapid recovery after lying down tend to suggest reflex syncope or orthostatic hypotension."
+      "explanation": "Lateral tongue biting, postictal confusion or prolonged impaired consciousness, and clear tonic-clonic movements suggest an epileptic seizure. Urinary incontinence can occur in both seizure and syncope and is not specific by itself. Lightheadedness, sweating, malaise, prolonged standing, painful stimulation, and rapid recovery after lying down tend to suggest reflex syncope or orthostatic hypotension.",
+      "answers": [
+        1
+      ],
+      "selectCount": 1
     },
     {
       "id": "altered_mental_status_entry_005",
@@ -62,9 +70,86 @@
         "Hyperchloremia",
         "Hypophosphatemia"
       ],
-      "answers": [0],
-      "selectCount": 1,
-      "explanation": "In acute hyponatremia, reduced plasma osmolality shifts water into brain cells and can cause cerebral edema. This may lead to headache, nausea, confusion, altered mental status, seizures, and coma. Hypokalemia can cause weakness and arrhythmias, hyperchloremia can be associated with acid-base disorders, and hypophosphatemia can cause weakness or respiratory muscle dysfunction, but hyponatremia is the more typical cause of acute altered mental status and seizures."
+      "explanation": "In acute hyponatremia, reduced plasma osmolality shifts water into brain cells and can cause cerebral edema. This may lead to headache, nausea, confusion, altered mental status, seizures, and coma. Hypokalemia can cause weakness and arrhythmias, hyperchloremia can be associated with acid-base disorders, and hypophosphatemia can cause weakness or respiratory muscle dysfunction, but hyponatremia is the more typical cause of acute altered mental status and seizures.",
+      "answers": [
+        0
+      ],
+      "selectCount": 1
+    },
+    {
+      "id": "altered_mental_status_entry_006",
+      "question": "A 70-year-old man was found lying at home and transported by EMS. Upon examination, he opens his eyes spontaneously but cannot state the current year/month or location. He can state his name and date of birth. What is the most appropriate JCS score for this patient?",
+      "choices": [
+        "JCS 1",
+        "JCS 2",
+        "JCS 3",
+        "JCS 10"
+      ],
+      "explanation": "Because the patient opens his eyes spontaneously and is awake without stimulation, the JCS score should be in the single-digit range. Disorientation regarding the year, month, or location corresponds to JCS 2. JCS 1 indicates a state where the patient is not fully alert but is awake. JCS 3 indicates an inability to state one's own name or date of birth. JCS 10 indicates a state where eye opening is easily obtained in response to a normal voice.",
+      "answers": [
+        1
+      ],
+      "selectCount": 1
+    },
+    {
+      "id": "altered_mental_status_entry_007",
+      "question": "A 56-year-old woman presented with altered mental status after a sudden headache. She does not open her eyes to verbal call alone, but opens them when called loudly while shaking her shoulder, and immediately closes her eyes and falls asleep when stimulation stops. What is the most appropriate JCS score for this patient?",
+      "choices": [
+        "JCS 3",
+        "JCS 10",
+        "JCS 20",
+        "JCS 30"
+      ],
+      "explanation": "Since the patient does not awaken without stimulation but opens her eyes with stimulation, the JCS score is in the two-digit range. JCS 10 is a state of easy eye opening in response to a normal voice. JCS 20 is a state of eye opening in response to a loud voice or physical stimulation (e.g., shaking). JCS 30 is a state of eye opening barely obtained in response to a loud voice combined with painful stimulation. Since this patient opened her eyes in response to a loud voice and shoulder-shaking, JCS 20 is most appropriate.",
+      "answers": [
+        2
+      ],
+      "selectCount": 1
+    },
+    {
+      "id": "altered_mental_status_entry_008",
+      "question": "A 45-year-old man was transported after a motor vehicle collision. He opens his eyes in response to speech. His conversation is confused, giving incorrect answers for time and place. He localizes pain by moving his hand toward a painful stimulus. What is the most appropriate GCS score for this patient?",
+      "choices": [
+        "GCS 11 (E3V3M5)",
+        "GCS 12 (E3V4M5)",
+        "GCS 13 (E4V4M5)",
+        "GCS 14 (E4V4M6)"
+      ],
+      "explanation": "Eye opening to speech is E3. Conversation is present but confused/disoriented, which is V4. He localizes pain by moving his hand to the site of painful stimulation, which is M5. The total is E3 + V4 + M5 = 12 points.",
+      "answers": [
+        1
+      ],
+      "selectCount": 1
+    },
+    {
+      "id": "altered_mental_status_entry_009",
+      "question": "An 80-year-old woman was transported with altered mental status. She opens her eyes to painful stimulation. Her verbal response consists of inappropriate words only, and conversation is not established. In response to painful stimulation, she withdraws her limbs to escape the stimulus. What is the most appropriate GCS score for this patient?",
+      "choices": [
+        "GCS 7 (E2V2M3)",
+        "GCS 8 (E2V2M4)",
+        "GCS 9 (E2V3M4)",
+        "GCS 10 (E3V3M4)"
+      ],
+      "explanation": "Eye opening to pain is E2. Verbal response consists of inappropriate words only (no coherent conversation), which is V3. She withdraws her limbs from pain (normal flexion / withdrawal response), which is M4. The total is E2 + V3 + M4 = 9 points. Note that if it were abnormal flexion (decorticate rigidity), the motor score would be M3, making it important to distinguish normal withdrawal from abnormal flexion.",
+      "answers": [
+        2
+      ],
+      "selectCount": 1
+    },
+    {
+      "id": "altered_mental_status_entry_010",
+      "question": "In a patient with altered mental status after a head injury, the right pupil is dilated and its light reflex is sluggish. Which statement is the most appropriate anatomical explanation of why pupillary asymmetry (anisocoria) is a critical emergency finding?",
+      "choices": [
+        "Because compression of the right optic nerve causes only the right pupil to dilate",
+        "Because the right oculomotor nerve is compressed (e.g., at the temporal uncus), causing dilation of the right pupil due to parasympathetic fiber dysfunction",
+        "Because injury to the left sympathetic nerve causes the right pupil to dilate",
+        "Because herniation of the cerebellar tonsils into the foramen magnum always causes miosis of only one pupil"
+      ],
+      "explanation": "Anisocoria, particularly unilateral pupillary dilation and sluggish light reflex, is an important finding suggesting uncal herniation due to intracranial space-occupying lesions, acute epidural hematoma, or acute subdural hematoma. When the uncus on the medial side of the temporal lobe shifts toward the tentorial notch, it compresses the ipsilateral oculomotor nerve. The parasympathetic fibers running on the surface of the oculomotor nerve are injured, which impairs pupillary constrictor function, leading to ipsilateral mydriasis and loss of the light reflex. Therefore, right pupillary dilation suggests compression of the right oculomotor nerve, indicating right uncal herniation or a right intracranial space-occupying lesion.",
+      "answers": [
+        1
+      ],
+      "selectCount": 1
     }
   ]
 }

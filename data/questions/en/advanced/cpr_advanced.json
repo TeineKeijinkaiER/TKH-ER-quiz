@@ -33,8 +33,8 @@
         2,
         3
       ],
-      "explanation": "After defibrillation in VF/pVT, immediately resume chest compressions and assess rhythm approximately every 2 minutes. For defibrillation-refractory VF/pVT, evaluate CPR quality, pad position, pad contact, defibrillation energy, antiarrhythmic drugs, and reversible causes. Prolonged pulse checks after defibrillation increase chest compression interruptions and are inappropriate.",
-      "selectCount": 0
+      "selectCount": 0,
+      "explanation": "After defibrillation in VF/pVT, immediately resume chest compressions and assess rhythm approximately every 2 minutes. For defibrillation-refractory VF/pVT, evaluate CPR quality, pad position, pad contact, defibrillation energy, antiarrhythmic drugs, and reversible causes. Prolonged pulse checks after defibrillation increase chest compression interruptions and are inappropriate."
     },
     {
       "id": "cpr_advanced_003",
@@ -68,8 +68,8 @@
         2,
         3
       ],
-      "explanation": "After advanced airway placement, ventilate without interrupting chest compressions, targeting approximately 10 breaths per minute. Waveform capnography is useful for confirming tube position, assessing CPR quality, and detecting ROSC. Hyperventilation raises intrathoracic pressure and can impair venous return and coronary perfusion. Pausing chest compressions with each ventilation is inappropriate.",
-      "selectCount": 0
+      "selectCount": 0,
+      "explanation": "After advanced airway placement, ventilate without interrupting chest compressions, targeting approximately 10 breaths per minute. Waveform capnography is useful for confirming tube position, assessing CPR quality, and detecting ROSC. Hyperventilation raises intrathoracic pressure and can impair venous return and coronary perfusion. Pausing chest compressions with each ventilation is inappropriate."
     },
     {
       "id": "cpr_advanced_005",
@@ -103,8 +103,8 @@
         2,
         4
       ],
-      "explanation": "For defibrillation-refractory VF/pVT, consider amiodarone or lidocaine. The representative dose of amiodarone is 300 mg as an initial bolus with 150 mg as an additional dose. Consider magnesium sulfate for torsades de pointes. Calcium salts are not routinely administered to all cardiac arrest patients; they should be considered when there is a specific indication such as hyperkalemia, calcium channel blocker toxicity, or hypocalcemia.",
-      "selectCount": 0
+      "selectCount": 0,
+      "explanation": "For defibrillation-refractory VF/pVT, consider amiodarone or lidocaine. The representative dose of amiodarone is 300 mg as an initial bolus with 150 mg as an additional dose. Consider magnesium sulfate for torsades de pointes. Calcium salts are not routinely administered to all cardiac arrest patients; they should be considered when there is a specific indication such as hyperkalemia, calcium channel blocker toxicity, or hypocalcemia."
     },
     {
       "id": "cpr_advanced_007",
@@ -138,8 +138,8 @@
         2,
         4
       ],
-      "explanation": "High-quality CPR and defibrillation should not be delayed in pregnant patients. Defibrillation energy is managed the same as in standard adults. At ≥20 weeks of gestation, or when the uterine fundus is at or above the umbilicus, aortocaval compression impairs resuscitation; manual left uterine displacement should be performed. If ROSC is not achieved approximately 4 minutes after cardiac arrest, aim for delivery by approximately 5 minutes through perimortem cesarean delivery (resuscitative hysterotomy). This procedure improves maternal circulation as well as providing the opportunity for fetal survival.",
-      "selectCount": 0
+      "selectCount": 0,
+      "explanation": "High-quality CPR and defibrillation should not be delayed in pregnant patients. Defibrillation energy is managed the same as in standard adults. At ≥20 weeks of gestation, or when the uterine fundus is at or above the umbilicus, aortocaval compression impairs resuscitation; manual left uterine displacement should be performed. If ROSC is not achieved approximately 4 minutes after cardiac arrest, aim for delivery by approximately 5 minutes through perimortem cesarean delivery (resuscitative hysterotomy). This procedure improves maternal circulation as well as providing the opportunity for fetal survival."
     },
     {
       "id": "cpr_advanced_009",

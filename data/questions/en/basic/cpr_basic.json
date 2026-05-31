@@ -34,8 +34,8 @@
         2,
         4
       ],
-      "explanation": "In VF/pulseless VT, defibrillation is the top priority. CPR should be resumed immediately after defibrillation, and epinephrine and antiarrhythmic drugs used as needed. ECPR indications should be considered early.",
-      "selectCount": 0
+      "selectCount": 0,
+      "explanation": "In VF/pulseless VT, defibrillation is the top priority. CPR should be resumed immediately after defibrillation, and epinephrine and antiarrhythmic drugs used as needed. ECPR indications should be considered early."
     },
     {
       "id": "cpr_basic_003",
@@ -121,8 +121,8 @@
         2,
         3
       ],
-      "explanation": "For VF/pulseless VT, resume CPR immediately after the shock and re-evaluate the rhythm approximately every 2 minutes.",
-      "selectCount": 0
+      "selectCount": 0,
+      "explanation": "For VF/pulseless VT, resume CPR immediately after the shock and re-evaluate the rhythm approximately every 2 minutes."
     },
     {
       "id": "cpr_basic_009",
@@ -207,8 +207,8 @@
         2,
         3
       ],
-      "explanation": "After advanced airway placement, continue chest compressions with asynchronous ventilation and avoid hyperventilation.",
-      "selectCount": 0
+      "selectCount": 0,
+      "explanation": "After advanced airway placement, continue chest compressions with asynchronous ventilation and avoid hyperventilation."
     },
     {
       "id": "cpr_basic_014",
@@ -243,7 +243,7 @@
         4
       ],
       "selectCount": 3,
-      "explanation": "Excessive oxygen administration worsens outcomes; oxygen concentration should be adjusted appropriately once SpO₂ and PaO₂ can be confirmed. Coma is not a contraindication to PCI, and prophylactic antiepileptic drug administration is not recommended."
+      "explanation": "Immediately after ROSC, 100% oxygen is used until SpO₂ or PaO₂ can be measured reliably. Once confirmed, adjust FiO₂ promptly to avoid both hypoxia and hyperoxia, targeting roughly SpO₂ 90–98%. Coma is not a contraindication to PCI, and prophylactic antiepileptic drug administration is not recommended."
     },
     {
       "id": "cpr_basic_016",
@@ -267,7 +267,7 @@
       "choices": [
         "TTM should be performed in comatose adults after ROSC following out-of-hospital VF cardiac arrest",
         "The target temperature is uniformly 28°C",
-        "The target temperature is set within the range of 32–36°C",
+        "Fever prevention targeting 37.5°C or lower is the basic approach",
         "TTM is completed within 6 hours",
         "Fever after completing TTM is unrelated to prognosis"
       ],
@@ -276,7 +276,7 @@
         2
       ],
       "selectCount": 2,
-      "explanation": "TTM should be maintained at 32–36°C for at least 24 hours, and it is recommended to avoid fever even after completing TTM."
+      "explanation": "In comatose adults after ROSC, temperature management is performed and fever is avoided by managing temperature within the 32–37.5°C range. It is recommended to maintain temperature management for at least 36 hours. Depending on institutional policy and the case, hypothermic management at 32–36°C may be selected, but a uniform target of 28°C or stopping after 6 hours is inappropriate."
     }
   ]
 }

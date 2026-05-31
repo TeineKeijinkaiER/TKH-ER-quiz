@@ -17,8 +17,8 @@
         2,
         3
       ],
-      "explanation": "Sodium correction in hyponatremia requires balancing prompt intervention for severe symptoms against avoidance of overcorrection. In chronic cases, osmotic demyelination syndrome must be prevented.",
-      "selectCount": 0
+      "selectCount": 0,
+      "explanation": "Sodium correction in hyponatremia requires balancing prompt intervention for severe symptoms against avoidance of overcorrection. In chronic cases, osmotic demyelination syndrome must be prevented."
     },
     {
       "id": "altered_mental_status_master_002",
@@ -54,8 +54,8 @@
         2,
         3
       ],
-      "explanation": "Autoimmune encephalitis is suspected when psychiatric symptoms, memory impairment, seizures, involuntary movements, and autonomic symptoms are present; differentiate from infectious encephalitis and connect the patient to specialist care.",
-      "selectCount": 0
+      "selectCount": 0,
+      "explanation": "Autoimmune encephalitis is suspected when psychiatric symptoms, memory impairment, seizures, involuntary movements, and autonomic symptoms are present; differentiate from infectious encephalitis and connect the patient to specialist care."
     },
     {
       "id": "altered_mental_status_master_004",
@@ -73,8 +73,8 @@
         2,
         3
       ],
-      "explanation": "Non-pharmacological interventions and identification of precipitating factors are fundamental to managing delirium. Prolonged deep sedation worsens delirium and delays mobilization and should be avoided.",
-      "selectCount": 0
+      "selectCount": 0,
+      "explanation": "Non-pharmacological interventions and identification of precipitating factors are fundamental to managing delirium. Prolonged deep sedation worsens delirium and delays mobilization and should be avoided."
     },
     {
       "id": "altered_mental_status_master_005",
@@ -92,8 +92,8 @@
         2,
         3
       ],
-      "explanation": "Continuous EEG monitoring is useful for diagnosing NCSE and assessing treatment response. It should be considered when seizure activity cannot be excluded based on clinical symptoms alone.",
-      "selectCount": 0
+      "selectCount": 0,
+      "explanation": "Continuous EEG monitoring is useful for diagnosing NCSE and assessing treatment response. It should be considered when seizure activity cannot be excluded based on clinical symptoms alone."
     }
   ]
 }

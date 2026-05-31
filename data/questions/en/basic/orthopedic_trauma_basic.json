@@ -16,8 +16,8 @@
         1,
         2
       ],
-      "explanation": "Cervical sprain is diagnosed only after excluding significant cervical injury. Use tools such as the Canadian C-Spine Rule to assess age, mechanism, and extremity numbness, and obtain imaging as needed. Analgesia, guidance to avoid excessive rest, and instructions to return if worsening are appropriate when no bony injury or neurological deficit is found. Imaging cannot be omitted solely based on neck pain, and prolonged cervical collar immobilization is generally not recommended.",
-      "selectCount": 0
+      "selectCount": 0,
+      "explanation": "Cervical sprain is diagnosed only after excluding significant cervical injury. Use tools such as the Canadian C-Spine Rule to assess age, mechanism, and extremity numbness, and obtain imaging as needed. Analgesia, guidance to avoid excessive rest, and instructions to return if worsening are appropriate when no bony injury or neurological deficit is found. Imaging cannot be omitted solely based on neck pain, and prolonged cervical collar immobilization is generally not recommended."
     },
     {
       "id": "orthopedic_trauma_basic_002",
@@ -53,8 +53,8 @@
         2,
         3
       ],
-      "explanation": "The Ottawa Ankle Rules guide imaging decisions. Ankle X-ray is indicated if there is ankle pain with bony tenderness over the posterior 6 cm or tip of the lateral or medial malleolus, or inability to bear weight for 4 steps immediately after injury or in the ED. Foot X-ray is indicated if midfoot pain is present with bony tenderness at the base of the fifth metatarsal or navicular, or inability to bear weight for 4 steps. Isolated anterior talofibular ligament tenderness alone is generally not an indication. However, individual clinical judgment is needed for elderly patients, children, those with neuropathy, altered mental status, intoxication, unreliable exam, significant swelling/deformity, or high clinical suspicion of fracture.",
-      "selectCount": 0
+      "selectCount": 0,
+      "explanation": "The Ottawa Ankle Rules guide imaging decisions. Ankle X-ray is indicated if there is ankle pain with bony tenderness over the posterior 6 cm or tip of the lateral or medial malleolus, or inability to bear weight for 4 steps immediately after injury or in the ED. Foot X-ray is indicated if midfoot pain is present with bony tenderness at the base of the fifth metatarsal or navicular, or inability to bear weight for 4 steps. Isolated anterior talofibular ligament tenderness alone is generally not an indication. However, individual clinical judgment is needed for elderly patients, children, those with neuropathy, altered mental status, intoxication, unreliable exam, significant swelling/deformity, or high clinical suspicion of fracture."
     },
     {
       "id": "orthopedic_trauma_basic_004",
@@ -89,8 +89,8 @@
         1,
         2
       ],
-      "explanation": "Splinting aims to immobilize in a position that minimizes functional impairment and contracture after assessing injury, swelling, pain, and neurovascular status. For hand injuries requiring finger immobilization, the intrinsic-plus position (wrist slight dorsiflexion, MCP flexion, IP extension) is the standard. The elbow is commonly splinted at ~90 degrees of flexion but the angle may be adjusted if vascular compromise or significant swelling is present. The ankle is splinted in neutral (approximately 90 degrees). Splinting the MCP joints in extension can cause contracture and is not the standard. The knee may be splinted in slight flexion or near extension depending on the pathology, and deep flexion is not always required. After splinting, reassess pain, numbness, skin color, temperature, capillary refill, and motor function.",
-      "selectCount": 0
+      "selectCount": 0,
+      "explanation": "Splinting aims to immobilize in a position that minimizes functional impairment and contracture after assessing injury, swelling, pain, and neurovascular status. For hand injuries requiring finger immobilization, the intrinsic-plus position (wrist slight dorsiflexion, MCP flexion, IP extension) is the standard. The elbow is commonly splinted at ~90 degrees of flexion but the angle may be adjusted if vascular compromise or significant swelling is present. The ankle is splinted in neutral (approximately 90 degrees). Splinting the MCP joints in extension can cause contracture and is not the standard. The knee may be splinted in slight flexion or near extension depending on the pathology, and deep flexion is not always required. After splinting, reassess pain, numbness, skin color, temperature, capillary refill, and motor function."
     },
     {
       "id": "orthopedic_trauma_basic_006",
@@ -144,7 +144,7 @@
       "id": "orthopedic_trauma_basic_009",
       "question": "Select ALL correct statements about nursemaid's elbow (pulled elbow).",
       "choices": [
-        "It results from the radial head slipping partially out of the annular ligament",
+        "It results from the olecranon slipping partially out of the annular ligament",
         "It occurs in children aged 5 years or younger",
         "It most often occurs as a result of a fall",
         "Reduction is performed by supinating the forearm while pressing on the radial head, and pronation is contraindicated",
@@ -154,8 +154,8 @@
         1,
         4
       ],
-      "explanation": "Nursemaid's elbow results from subluxation of the radial head through the annular ligament and is seen in children aged ≤5. It typically occurs when the arm is pulled, not from a fall or direct trauma; if a fall or direct blow is reported, consider fracture and obtain X-rays. Reduction can be performed by either the supination-flexion or hyperpronation method; pronation is not contraindicated. After reduction, the child may not move the arm immediately, so observe for approximately 10–30 minutes.",
-      "selectCount": 0
+      "selectCount": 0,
+      "explanation": "Nursemaid's elbow results from subluxation of the radial head through the annular ligament and is seen in children aged ≤5. It typically occurs when the arm is pulled, not from a fall or direct trauma; if a fall or direct blow is reported, consider fracture and obtain X-rays. Reduction can be performed by either the supination-flexion or hyperpronation method; pronation is not contraindicated. After reduction, the child may not move the arm immediately, so observe for approximately 10–30 minutes."
     }
   ]
 }

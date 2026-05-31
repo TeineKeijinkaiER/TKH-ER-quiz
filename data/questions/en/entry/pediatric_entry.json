@@ -7,12 +7,14 @@
       "choices": [
         "12-15/min",
         "20-40/min",
-        "35-45/min",
-        "50-60/min"
+        "45-55/min",
+        "60-70/min"
       ],
-      "answers": [1],
-      "selectCount": 1,
-      "explanation": "Normal respiratory rate is higher in younger children. For children aged 1-3 years, approximately 20-30/min is a useful normal range. A rate of 12-15/min is low for a toddler and closer to adult values. A rate of 35-45/min is more likely in infants or with fever or respiratory distress, and is high for a resting 1- to 3-year-old. A rate of 50-60/min can occur in neonates or infants, but in a 1- to 3-year-old it should be assessed as tachypnea."
+      "explanation": "Normal respiratory rate is higher in younger children. For children aged 1-3 years, approximately 20-30/min is a useful normal range, though some references and situations treat around 40/min as the upper limit of normal. A rate of 12-15/min is low for a toddler and closer to adult values. Rates of 45-55/min or 60-70/min should be assessed as clear tachypnea at rest in a 1- to 3-year-old.",
+      "answers": [
+        1
+      ],
+      "selectCount": 1
     },
     {
       "id": "pediatric_entry_002",
@@ -23,9 +25,11 @@
         "The airway diameter is narrow",
         "The trachea is longer than in adults"
       ],
-      "answers": [3],
-      "selectCount": 1,
-      "explanation": "In children, especially infants and toddlers, the tongue is relatively large and airway obstruction is more likely. Because the occiput is large, the neck tends to flex in the supine position, which can obstruct the airway. During airway management, keeping the head and neck neutral is important, and placing a towel under the shoulders may be needed. The airway diameter is smaller than in adults, so even slight edema or secretions can greatly increase airway resistance. The trachea is shorter than in adults, so an endotracheal tube inserted too deeply can easily cause mainstem intubation. Therefore, the statement that the trachea is longer than in adults is incorrect."
+      "explanation": "In children, especially infants and toddlers, the tongue is relatively large and airway obstruction is more likely. Because the occiput is large, the neck tends to flex in the supine position, which can obstruct the airway. During airway management, keeping the head and neck neutral is important, and placing a towel under the shoulders may be needed. The airway diameter is smaller than in adults, so even slight edema or secretions can greatly increase airway resistance. The trachea is shorter than in adults, so an endotracheal tube inserted too deeply can easily cause mainstem intubation. Therefore, the statement that the trachea is longer than in adults is incorrect.",
+      "answers": [
+        3
+      ],
+      "selectCount": 1
     },
     {
       "id": "pediatric_entry_003",
@@ -36,9 +40,11 @@
         "It does not recur within 24 hours",
         "It is a focal seizure"
       ],
-      "answers": [3],
-      "selectCount": 1,
-      "explanation": "A simple febrile seizure is usually a seizure associated with fever in children around 6 months to 5 years old, and is generalized, lasts less than 15 minutes, and does not recur within 24 hours. If the seizure is focal, lasts 15 minutes or longer, or recurs within 24 hours, it is treated as a complex febrile seizure. In neonates or young infants with seizures during fever, do not casually assume febrile seizure; evaluate for meningitis, sepsis, metabolic disorders, and other causes."
+      "explanation": "A simple febrile seizure is usually a seizure associated with fever in children around 6 months to 5 years old, and is generalized, lasts less than 15 minutes, and does not recur within 24 hours. If the seizure is focal, lasts 15 minutes or longer, or recurs within 24 hours, it is treated as a complex febrile seizure. In neonates or young infants with seizures during fever, do not casually assume febrile seizure; evaluate for meningitis, sepsis, metabolic disorders, and other causes.",
+      "answers": [
+        3
+      ],
+      "selectCount": 1
     },
     {
       "id": "pediatric_entry_004",
@@ -49,9 +55,11 @@
         "Level of consciousness",
         "SpO2"
       ],
-      "answers": [3],
-      "selectCount": 1,
-      "explanation": "The Westley croup score is used to assess croup severity and includes level of consciousness, cyanosis, inspiratory stridor, retractions, and air entry. SpO2 is clinically important for monitoring, but it is not a component of the Westley croup score. In croup, assess barking cough, hoarseness, inspiratory stridor, and the degree of retractions. Stridor at rest, marked retractions, altered mental status, or cyanosis should be managed as severe disease."
+      "explanation": "The Westley croup score is used to assess croup severity and includes level of consciousness, cyanosis, inspiratory stridor, retractions, and air entry. SpO2 is clinically important for monitoring, but it is not a component of the Westley croup score. In croup, assess barking cough, hoarseness, inspiratory stridor, and the degree of retractions. Stridor at rest, marked retractions, altered mental status, or cyanosis should be managed as severe disease.",
+      "answers": [
+        3
+      ],
+      "selectCount": 1
     },
     {
       "id": "pediatric_entry_005",
@@ -62,9 +70,176 @@
         "5 J/kg",
         "10 J/kg"
       ],
-      "answers": [1],
-      "selectCount": 1,
-      "explanation": "The recommended initial defibrillation energy for children is 2 J/kg. If ineffective, increase to 4 J/kg. This differs from adults, where biphasic 120-200 J or the manufacturer's recommended energy is used; in children, energy is considered by body weight."
+      "explanation": "The recommended initial defibrillation energy for children is 2 J/kg. If ineffective, increase to 4 J/kg. This differs from adults, where biphasic 120-200 J or the manufacturer's recommended energy is used; in children, energy is considered by body weight.",
+      "answers": [
+        1
+      ],
+      "selectCount": 1
+    },
+    {
+      "id": "pediatric_entry_006",
+      "question": "In a child aged 2 years or older with minor head trauma, which of the following is not a high-risk finding where head CT is strongly considered under the PECARN criteria?",
+      "choices": [
+        "GCS of 14 or lower",
+        "Altered mental status",
+        "Signs of basilar skull fracture",
+        "Single episode of vomiting only"
+      ],
+      "explanation": "Under PECARN criteria for children aged 2 years or older with minor head trauma, a GCS of 14 or lower, altered mental status, and signs of a basilar skull fracture are high-risk findings for clinically important brain injury, where head CT is strongly considered. Vomiting, loss of consciousness, severe mechanism of injury, and severe headache are intermediate-risk findings, where observation versus CT is decided case-by-case. A single episode of vomiting alone is not a high-risk finding.",
+      "answers": [
+        3
+      ],
+      "selectCount": 1
+    },
+    {
+      "id": "pediatric_entry_007",
+      "question": "Which statement is incorrect regarding cigarette ingestion in children?",
+      "choices": [
+        "Nausea and vomiting are common",
+        "Symptoms appear within minutes to hours",
+        "Bradycardia or seizures can occur",
+        "Gastric lavage is performed in all cases"
+      ],
+      "explanation": "Cigarette ingestion can cause nicotine poisoning, presenting with nausea, vomiting, salivation, pallor, tachycardia or bradycardia, agitation, seizures, and altered mental status. Nicotine is rapidly absorbed, with symptoms typically appearing within minutes to hours. Gastric lavage is not performed routinely. It is considered in consultation with a poison control center only for massive ingestions, symptomatic patients, presentation shortly after ingestion, or ingestion of heated tobacco sticks where gastric retention is suspected. For asymptomatic minor ingestions, observation is the mainstay.",
+      "answers": [
+        3
+      ],
+      "selectCount": 1
+    },
+    {
+      "id": "pediatric_entry_008",
+      "question": "Which statement is correct regarding pediatric PALS interventions?",
+      "choices": [
+        "Two-rescuer CPR ratio is 15:2",
+        "Ventilation rate after intubation is 60 breaths per minute",
+        "Epinephrine dose is 1 mg/kg",
+        "Intubation depth is age × 5 cm"
+      ],
+      "explanation": "In pediatric BLS/PALS, the compression-to-ventilation ratio is 30:2 for a single rescuer and 15:2 for two rescuers. Once an advanced airway is in place, compressions are continuous and ventilations are given at approximately 20-30 breaths/min, avoiding hyperventilation. Epinephrine for cardiac arrest is 0.01 mg/kg given IV or IO, repeated every 3 to 5 minutes. The depth of oral endotracheal tube insertion is approximately 3 times the internal diameter (in cm), or age/2 + 12 cm.",
+      "answers": [
+        0
+      ],
+      "selectCount": 1
+    },
+    {
+      "id": "pediatric_entry_009",
+      "question": "Which of the following is the most appropriate estimation of pediatric body weight?",
+      "choices": [
+        "A 5-year-old weighs approximately 18 kg",
+        "A 5-year-old weighs approximately 8 kg",
+        "A 5-year-old weighs approximately 30 kg",
+        "A 5-year-old weighs approximately 45 kg"
+      ],
+      "explanation": "For children aged approximately 1 to 10 years, weight can be estimated using 'Weight (kg) = age × 2 + 8' or 'Weight (kg) = (age + 4) × 2'. For a 5-year-old, this gives 5 × 2 + 8 = 18 kg. Estimating weight is crucial in pediatric emergencies to determine drug doses, defibrillation energy, fluid volumes, and endotracheal tube sizes.",
+      "answers": [
+        0
+      ],
+      "selectCount": 1
+    },
+    {
+      "id": "pediatric_entry_010",
+      "question": "Which statement is incorrect regarding pediatric vital signs assessment and initial fluid therapy?",
+      "choices": [
+        "Hypotension is a late sign of shock",
+        "Hypotension in children over 1 year is defined as systolic BP < 70 + 2 × age",
+        "In shock, administer 10 to 20 mL/kg of isotonic crystalloids",
+        "In the absence of tachycardia, shock is ruled out"
+      ],
+      "explanation": "In children, compensatory mechanisms maintain blood pressure well, so hypotension is a late sign of shock. In children aged 1 year or older, hypotension is defined as a systolic blood pressure below 70 + 2 × age mmHg. In shock, 10-20 mL/kg of isotonic crystalloids are administered, followed by reassessment of respiratory status, hepatomegaly, crackles, blood pressure, heart rate, peripheral perfusion, and urine output. While tachycardia is an important sign of pediatric shock, its absence alone does not rule out shock.",
+      "answers": [
+        3
+      ],
+      "selectCount": 1
+    },
+    {
+      "id": "pediatric_entry_011",
+      "question": "A 3-year-old boy. His weight is unknown, but he has a standard body build. What is his estimated weight?",
+      "choices": [
+        "10 kg",
+        "14 kg",
+        "20 kg",
+        "28 kg"
+      ],
+      "explanation": "For children aged approximately 1 to 10 years, weight can be estimated using 'Weight (kg) = age × 2 + 8'. For a 3-year-old, this is 3 × 2 + 8 = 14 kg. In emergencies, drug doses, fluid volumes, and defibrillation energy are calculated based on weight, so estimated weight is used when the actual weight is unknown.",
+      "answers": [
+        1
+      ],
+      "selectCount": 1
+    },
+    {
+      "id": "pediatric_entry_012",
+      "question": "An 8-year-old girl. Her weight is unknown, but she has a standard body build. What is her estimated weight?",
+      "choices": [
+        "16 kg",
+        "20 kg",
+        "24 kg",
+        "32 kg"
+      ],
+      "explanation": "For children aged approximately 1 to 10 years, weight can be estimated using 'Weight (kg) = age × 2 + 8'. For an 8-year-old, this is 8 × 2 + 8 = 24 kg. In pediatric emergencies, drug doses, defibrillation energy, and fluid volumes are calculated per body weight, so estimated weight is used when the actual weight is unknown.",
+      "answers": [
+        2
+      ],
+      "selectCount": 1
+    },
+    {
+      "id": "pediatric_entry_013",
+      "question": "A 2-year-old boy presented with fever and cough. Temp 39.0°C, HR 130/min, RR 60/min, SpO2 96%, systolic BP 92 mmHg. Which finding should be watched most closely as an abnormal sign?",
+      "choices": [
+        "Heart rate 130/min",
+        "Respiratory rate 60/min",
+        "SpO2 96%",
+        "Systolic BP 92 mmHg"
+      ],
+      "explanation": "While some guidelines consider respiratory rates up to around 40/min as the upper limit of normal for a 2-year-old, 60/min is clear tachypnea. Fever can elevate the heart rate, but marked tachypnea is a critical finding suggesting pneumonia, bronchial asthma, croup, metabolic acidosis, or sepsis. SpO2 96% is not hypoxemia, and a systolic BP of 92 mmHg is not hypotension for a 2-year-old.",
+      "answers": [
+        1
+      ],
+      "selectCount": 1
+    },
+    {
+      "id": "pediatric_entry_014",
+      "question": "A 6-month-old infant presented with poor feeding and fever. Temp 38.8°C, HR 185/min, RR 28/min, SpO2 98%, systolic BP 84 mmHg. Which finding should be watched most closely as an abnormal sign?",
+      "choices": [
+        "Heart rate 185/min",
+        "Respiratory rate 28/min",
+        "SpO2 98%",
+        "Systolic BP 84 mmHg"
+      ],
+      "explanation": "In a 6-month-old infant, although fever can elevate the heart rate, 185/min is prominent tachycardia that requires close attention. A respiratory rate of 28/min, SpO2 98%, and systolic BP of 84 mmHg are not clearly abnormal on their own. In children, hypotension is a late sign of shock, so circulation should be evaluated by combining heart rate, peripheral coldness, capillary refill time, urine output, and mental status.",
+      "answers": [
+        0
+      ],
+      "selectCount": 1
+    },
+    {
+      "id": "pediatric_entry_015",
+      "question": "A 4-year-old boy presented with vomiting and diarrhea. Temp 37.8°C, HR 125/min, RR 28/min, SpO2 98%, systolic BP 72 mmHg. Which abnormal finding should be prioritized most?",
+      "choices": [
+        "Heart rate 125/min",
+        "Respiratory rate 28/min",
+        "SpO2 98%",
+        "Systolic BP 72 mmHg"
+      ],
+      "explanation": "In children aged 1 year or older, hypotension is defined as systolic BP below 70 + 2 × age mmHg. For a 4-year-old, this threshold is 78 mmHg, making 72 mmHg clear hypotension. In children, hypotension is a late sign of shock, requiring rapid circulatory evaluation, 10-20 mL/kg of isotonic crystalloids, and reassessment of response and fluid overload. HR 125/min can be elevated by fever, dehydration, or anxiety, but hypotension is the most critical finding.",
+      "answers": [
+        3
+      ],
+      "selectCount": 1
+    },
+    {
+      "id": "pediatric_entry_016",
+      "question": "A 2-year-old boy. His weight is unknown, but he has a standard body build. What is his estimated weight?",
+      "choices": [
+        "8 kg",
+        "12 kg",
+        "18 kg",
+        "24 kg"
+      ],
+      "explanation": "For children aged approximately 1 to 10 years, weight can be estimated using 'Weight (kg) = age × 2 + 8'. For a 2-year-old, this is 2 × 2 + 8 = 12 kg. In pediatric emergencies, drug doses, fluid volumes, and defibrillation energy are calculated per body weight, so estimated weight is used when the actual weight is unknown.",
+      "answers": [
+        1
+      ],
+      "selectCount": 1
     }
   ]
 }

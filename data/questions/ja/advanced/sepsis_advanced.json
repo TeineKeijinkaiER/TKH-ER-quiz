@@ -50,8 +50,8 @@
         1,
         2
       ],
-      "explanation": "壊死性軟部組織感染症では、皮膚所見に比べて強い疼痛、急速に進行する発赤・腫脹、水疱、皮膚壊死、握雪感、全身毒性などが重要である。CTでガス像がない場合やLRINECスコアが低い場合でも否定はできず、臨床的に疑えば早期の外科的評価が必要である。",
-      "selectCount": 0
+      "selectCount": 0,
+      "explanation": "壊死性軟部組織感染症では、皮膚所見に比べて強い疼痛、急速に進行する発赤・腫脹、水疱、皮膚壊死、握雪感、全身毒性などが重要である。CTでガス像がない場合やLRINECスコアが低い場合でも否定はできず、臨床的に疑えば早期の外科的評価が必要である。"
     },
     {
       "id": "infection_basic_004",
@@ -153,8 +153,8 @@
         2,
         3
       ],
-      "explanation": "J-SSCG 2024では、医療関連の胆道・腹腔内感染症において、大腸菌、嫌気性菌、エンテロバクター、緑膿菌、腸球菌、カンジダなどを想定し、TAZ/PIPC、CFPM + MNZ、MEPMが記載されている。カンジダリスクがある場合はMCFGの追加を考慮する。",
-      "selectCount": 0
+      "selectCount": 0,
+      "explanation": "J-SSCG 2024では、医療関連の胆道・腹腔内感染症において、大腸菌、嫌気性菌、エンテロバクター、緑膿菌、腸球菌、カンジダなどを想定し、TAZ/PIPC、CFPM + MNZ、MEPMが記載されている。カンジダリスクがある場合はMCFGの追加を考慮する。"
     },
     {
       "id": "infection_empiric_005",
@@ -204,8 +204,8 @@
         0,
         1
       ],
-      "explanation": "J-SSCG 2024では、自己弁感染性心内膜炎でMRSAリスクがない場合、MSSA、レンサ球菌、腸球菌を想定し、SBT/ABPCまたはCTRX + ABPCが記載されている。CTRX + VCMはMRSAリスクがある場合、VCM + GM ± RFPは人工弁やペースメーカー関連で考慮される。",
-      "selectCount": 0
+      "selectCount": 0,
+      "explanation": "J-SSCG 2024では、自己弁感染性心内膜炎でMRSAリスクがない場合、MSSA、レンサ球菌、腸球菌を想定し、SBT/ABPCまたはCTRX + ABPCが記載されている。CTRX + VCMはMRSAリスクがある場合、VCM + GM ± RFPは人工弁やペースメーカー関連で考慮される。"
     },
     {
       "id": "infection_empiric_008",
@@ -222,8 +222,8 @@
         1,
         2
       ],
-      "explanation": "J-SSCG 2024では、血管内カテーテル関連血流感染症において、表皮ブドウ球菌、黄色ブドウ球菌、MRSA、大腸菌、緑膿菌、カンジダなどを想定し、VCM + CFPM ± MCFGが記載されている。",
-      "selectCount": 0
+      "selectCount": 0,
+      "explanation": "J-SSCG 2024では、血管内カテーテル関連血流感染症において、表皮ブドウ球菌、黄色ブドウ球菌、MRSA、大腸菌、緑膿菌、カンジダなどを想定し、VCM + CFPM ± MCFGが記載されている。"
     },
     {
       "id": "infection_empiric_009",

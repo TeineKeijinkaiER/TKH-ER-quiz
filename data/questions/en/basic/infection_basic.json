@@ -33,8 +33,8 @@
         2,
         3
       ],
-      "explanation": "In bacterial meningitis, blood cultures and lumbar puncture should be performed promptly. However, if lumbar puncture cannot be performed safely immediately or is delayed by CT imaging, antibiotics should be started after blood cultures are drawn. Delaying antibiotics to await CSF culture results is inappropriate.",
-      "selectCount": 0
+      "selectCount": 0,
+      "explanation": "In bacterial meningitis, blood cultures and lumbar puncture should be performed promptly. However, if lumbar puncture cannot be performed safely immediately or is delayed by CT imaging, antibiotics should be started after blood cultures are drawn. Delaying antibiotics to await CSF culture results is inappropriate."
     },
     {
       "id": "infection_basic_003_revised",
@@ -70,8 +70,8 @@
         2,
         3
       ],
-      "explanation": "Antibiotic selection should be guided by the site of infection, severity, patient background, resistance risk, and prior culture history. In severe cases, antibiotics should be started without delay; however, de-escalation, discontinuation, and optimization of treatment duration should be performed based on culture results and clinical course. Renal function, body weight, and PK/PD parameters should also be considered. Changing antibiotics based on culture results or diagnostic reassessment — even after defervescence — is part of appropriate antibiotic stewardship.",
-      "selectCount": 0
+      "selectCount": 0,
+      "explanation": "Antibiotic selection should be guided by the site of infection, severity, patient background, resistance risk, and prior culture history. In severe cases, antibiotics should be started without delay; however, de-escalation, discontinuation, and optimization of treatment duration should be performed based on culture results and clinical course. Renal function, body weight, and PK/PD parameters should also be considered. Changing antibiotics based on culture results or diagnostic reassessment — even after defervescence — is part of appropriate antibiotic stewardship."
     },
     {
       "id": "infection_basic_005_revised",
@@ -195,7 +195,7 @@
         "Pyuria is defined as ≥1 white blood cell per high-power field on urine sediment",
         "High fever occurs in 30% of patients with cystitis",
         "Trimethoprim-sulfamethoxazole (TMP-SMX) is used in pregnant women",
-        "Cephalexin 250 mg (2 tablets per dose) has been recently reported to be effective when given twice daily rather than four times daily"
+        "Cephalexin 500 mg twice daily is an option for acute uncomplicated cystitis"
       ],
       "selectCount": 1,
       "explanation": "Escherichia coli is the most common pathogen in acute uncomplicated cystitis, accounting for approximately 60–80% of cases. Pyuria is defined as ≥5–10 white blood cells per high-power field on urine sediment, with ≥10/HPF used as a practical threshold. Uncomplicated cystitis does not typically cause fever; fever, rigors, or back pain should raise concern for pyelonephritis. TMP-SMX is contraindicated in pregnancy. Cephalexin 500 mg twice daily has been reported to be as effective as four times daily dosing for acute uncomplicated cystitis.",
@@ -241,14 +241,14 @@
         1,
         2
       ],
+      "selectCount": 0,
       "categories": [
         "ed_first_steps_basic",
         "trauma_basic",
         "infection_basic",
         "emergency_medications_basic"
       ],
-      "explanation": "Because DPT vaccine was introduced into Japan's routine immunization schedule in 1968, individuals born before that year are unlikely to have acquired primary tetanus immunity through routine childhood tetanus-containing vaccination. Current routine immunization includes a primary series in infancy followed by a single DT booster at age 11–12 (second series). Therefore, many adults who have not received an additional booster after childhood are more than 10 years from their last tetanus-containing vaccine. A vague vaccination history should not be accepted as confirmation of completed primary immunization. The need for tetanus vaccination and TIG after an injury should be determined based on wound characteristics and vaccination history, including whether the primary series was completed and how much time has elapsed since the last dose.",
-      "selectCount": 0
+      "explanation": "Because DPT vaccine was introduced into Japan's routine immunization schedule in 1968, individuals born before that year are unlikely to have acquired primary tetanus immunity through routine childhood tetanus-containing vaccination. Current routine immunization includes a primary series in infancy followed by a single DT booster at age 11–12 (second series). Therefore, many adults who have not received an additional booster after childhood are more than 10 years from their last tetanus-containing vaccine. A vague vaccination history should not be accepted as confirmation of completed primary immunization. The need for tetanus vaccination and TIG after an injury should be determined based on wound characteristics and vaccination history, including whether the primary series was completed and how much time has elapsed since the last dose."
     },
     {
       "id": "ed_first_steps_tetanus_004_revised",

@@ -11,23 +11,27 @@
         "Start norepinephrine 3 ampules + normal saline 47 mL at 3 mL/h",
         "Start norepinephrine 5 ampules + normal saline 45 mL at 3 mL/h"
       ],
-      "answers": [4],
-      "selectCount": 1,
-      "explanation": "For a 50 kg patient, 0.1 mcg/kg/min is 5 mcg/min, which is 300 mcg/h (0.3 mg/h). Diluting 5 mg of norepinephrine to a total volume of 50 mL gives 0.1 mg/mL, and 3 mL/h delivers 0.3 mg/h."
+      "explanation": "For a 50 kg patient, 0.1 mcg/kg/min is 5 mcg/min, which is 300 mcg/h (0.3 mg/h). Diluting 5 mg of norepinephrine to a total volume of 50 mL gives 0.1 mg/mL, and 3 mL/h delivers 0.3 mg/h.",
+      "answers": [
+        4
+      ],
+      "selectCount": 1
     },
     {
       "id": "ed_first_steps_010",
       "question": "Which of the following treatments is incorrect?",
       "choices": [
-        "Prescribed Baktar/Septra (trimethoprim-sulfamethoxazole) 4 tablets in 2 divided doses for cystitis in a pregnant patient",
-        "Prescribed loxoprofen for a man in his 30s with ureteral stone disease",
-        "For redness 12 hours after a cat bite, prescribed Augmentin 3 tablets in 3 divided doses plus amoxicillin 3 capsules in 3 divided doses",
-        "Prescribed amoxicillin 4 capsules in 2 divided doses for 10 days for streptococcal infection in an 18-year-old woman",
-        "Observed a patient with mild acute sinusitis without prescribing antibiotics"
+        "Trimethoprim-sulfamethoxazole for cystitis in a pregnant patient",
+        "Loxoprofen for ureteral stone",
+        "Augmentin plus amoxicillin for a cat bite",
+        "Amoxicillin for 10 days for streptococcal infection",
+        "Observation without antibiotics for mild acute sinusitis"
       ],
-      "answers": [0],
-      "selectCount": 1,
-      "explanation": "Trimethoprim-sulfamethoxazole is contraindicated in pregnancy. In early pregnancy it carries teratogenic risk through folate antagonism, and later in pregnancy it can increase the risk of kernicterus. A cephalosporin such as cephalexin is a first-line option for cystitis in pregnancy."
+      "explanation": "Trimethoprim-sulfamethoxazole should be avoided during pregnancy, especially in early and late pregnancy. In early pregnancy, folate antagonism can raise concern for teratogenicity, and in late pregnancy neonatal kernicterus can be a concern. For cystitis in pregnancy, consider agents that are relatively easier to use during pregnancy, such as cephalosporins, while taking local resistance patterns and gestational age into account.",
+      "answers": [
+        0
+      ],
+      "selectCount": 1
     },
     {
       "id": "emergency_medications_entry_001",
@@ -38,9 +42,11 @@
         "IV hydrocortisone",
         "Inhaled salbutamol"
       ],
-      "answers": [1],
-      "selectCount": 1,
-      "explanation": "The first-line treatment for anaphylaxis is intramuscular epinephrine 0.3-0.5 mg into the lateral thigh. Antihistamines and corticosteroids are adjunctive medications and cannot save a life when used alone. Prompt administration determines prognosis."
+      "explanation": "The first-line treatment for anaphylaxis is intramuscular epinephrine 0.3-0.5 mg into the lateral thigh. Antihistamines and corticosteroids are adjunctive medications and cannot save a life when used alone. Prompt administration determines prognosis.",
+      "answers": [
+        1
+      ],
+      "selectCount": 1
     },
     {
       "id": "emergency_medications_entry_002",
@@ -51,9 +57,11 @@
         "A benzodiazepine such as diazepam or midazolam",
         "IV valproate"
       ],
-      "answers": [2],
-      "selectCount": 1,
-      "explanation": "Benzodiazepines such as diazepam, midazolam, and lorazepam are first-line treatment for seizures. They act rapidly and can be given by various routes, including IV, IM, intranasal, and rectal routes. Phenytoin and phenobarbital are second- or third-line agents."
+      "explanation": "Benzodiazepines such as diazepam, midazolam, and lorazepam are first-line treatment for seizures. They act rapidly and can be given by various routes, including IV, IM, intranasal, and rectal routes. Phenytoin and phenobarbital are second- or third-line agents.",
+      "answers": [
+        2
+      ],
+      "selectCount": 1
     },
     {
       "id": "emergency_medications_entry_003",
@@ -64,9 +72,101 @@
         "NSAIDs are more hepatotoxic than acetaminophen",
         "Acetaminophen has strong anti-inflammatory effects"
       ],
-      "answers": [1],
-      "selectCount": 1,
-      "explanation": "Acetaminophen has little effect on prostaglandin synthesis in the gastrointestinal mucosa, so the risk of gastrointestinal mucosal injury is lower. NSAIDs require caution in patients with renal dysfunction, gastrointestinal bleeding risk, and older age. Hepatotoxicity is a concern with acetaminophen overdose."
+      "explanation": "Acetaminophen has little effect on prostaglandin synthesis in the gastrointestinal mucosa, so the risk of gastrointestinal mucosal injury is lower. NSAIDs require caution in patients with renal dysfunction, gastrointestinal bleeding risk, and older age. Hepatotoxicity is a concern with acetaminophen overdose.",
+      "answers": [
+        1
+      ],
+      "selectCount": 1
+    },
+    {
+      "id": "emergency_medications_entry_004",
+      "question": "Which of the following electrolyte compositions for representative intravenous fluids is incorrect?",
+      "choices": [
+        "Normal Saline: Na 154, Cl 154, K 0",
+        "Acetated Ringer's: Na ~130, K ~4",
+        "Solita T3: Na 35, K 20",
+        "Solita T1: Na 35, K 20"
+      ],
+      "explanation": "Normal saline contains Na 154 mEq/L and Cl 154 mEq/L, with no K. Acetated Ringer's solution is an extracellular fluid replacement containing approximately Na 130 mEq/L and K 4 mEq/L (varying slightly by brand). Solita T3 is a maintenance fluid containing Na 35 mEq/L and K 20 mEq/L. In contrast, Solita T1 is an initiating fluid containing approximately Na 90 mEq/L and typically no K. Therefore, listing Solita T1 as Na 35 and K 20 is incorrect.",
+      "answers": [
+        3
+      ],
+      "selectCount": 1
+    },
+    {
+      "id": "emergency_medications_entry_005",
+      "question": "Which statement about Solita T3 infusion (No. 3 maintenance fluid) is correct?",
+      "choices": [
+        "It is used as maintenance fluid for hospitalized patients",
+        "It is used for rapid fluid resuscitation in shock",
+        "It is classified as an extracellular fluid replacement",
+        "It is an intravenous fluid that contains no potassium"
+      ],
+      "explanation": "Solita T3 is a No. 3 maintenance fluid used for patients such as hospitalized individuals, containing Na 35 mEq/L, K 20 mEq/L, Cl 35 mEq/L, buffering agents, and dextrose. It is used to maintain fluid balance in stable patients with inadequate oral intake. It is not suitable for rapid volume expansion in shock or severe dehydration. Since it contains potassium, it must be used with caution in patients with oliguria, hyperkalemia, or renal failure.",
+      "answers": [
+        0
+      ],
+      "selectCount": 1
+    },
+    {
+      "id": "emergency_medications_entry_006",
+      "question": "Which of the following is the most appropriate guideline per body weight for the daily requirement of water, Na, and K in adult maintenance fluid therapy?",
+      "choices": [
+        "Water 25-30 mL/kg, Na 1 mEq/kg, K 0.5-1 mEq/kg",
+        "Water 25-30 mL/kg, Na 3 mEq/kg, K 0.5-1 mEq/kg",
+        "Water 25-30 mL/kg, Na 1 mEq/kg, K 3 mEq/kg",
+        "Water 10-15 mL/kg, Na 1 mEq/kg, K 0.5-1 mEq/kg"
+      ],
+      "explanation": "For adult maintenance fluid therapy, while adjusted based on body habitus and pathology, the general daily requirements are approximately 25-30 mL/kg of water, 1 mEq/kg of Na, and 0.5-1 mEq/kg of K. These requirements can change significantly with fever, sweating, diarrhea, vomiting, drain output, renal impairment, heart failure, liver cirrhosis, or SIADH, requiring adjustment based on urine output, weight, electrolytes, glucose, and acid-base balance.",
+      "answers": [
+        0
+      ],
+      "selectCount": 1
+    },
+    {
+      "id": "emergency_medications_entry_007",
+      "question": "Which of the following intravenous fluid preparations should not be administered as a rapid bolus?",
+      "choices": [
+        "Acetated Ringer's solution",
+        "Lactated Ringer's solution",
+        "Normal saline",
+        "Solita T3 maintenance fluid"
+      ],
+      "explanation": "In the initial resuscitation of shock or hypovolemia, isotonic crystalloids that remain relatively well in the intravascular space, such as Acetated Ringer's, Lactated Ringer's, or normal saline, are used. Solita T3 is a maintenance fluid with a low Na concentration that contains K and dextrose, making it unsuitable for rapid volume expansion. Rapid infusion carries risks of hyponatremia, hyperglycemia, and potassium overload, and is inappropriate as an initial resuscitation fluid for shock.",
+      "answers": [
+        3
+      ],
+      "selectCount": 1
+    },
+    {
+      "id": "emergency_medications_entry_008",
+      "question": "Which of the following infusion rates for starting intravenous fluids in the ED is incorrect?",
+      "choices": [
+        "Dehydration in a young adult: extracellular fluid at 200-500 mL/h",
+        "Elderly patient with unknown cardiac function: extracellular fluid at 40 mL/h",
+        "Patient in shock: wide-open extracellular fluid",
+        "Burn patient: wide-open Solita T3 maintenance fluid"
+      ],
+      "explanation": "The infusion rate in the ED should be adjusted based on the presence of shock, degree of dehydration, and risk of heart failure, renal failure, advanced age, or pulmonary edema. For a young adult with suspected mild dehydration and normal cardiopulmonary function, starting an extracellular fluid replacement at around 500 mL/h is reasonable, followed by reassessment of symptoms and vitals. For an elderly patient with unknown cardiac function, starting cautiously at 40-100 mL/h is appropriate, checking respiratory status, lung crackles, SpO2, blood pressure, and urine output. For a patient in shock, extracellular fluid replacements such as Acetated Ringer's, Lactated Ringer's, or normal saline are given rapidly or wide-open. Solita T3 is a maintenance fluid containing potassium and dextrose with low Na, and wide-open administration is highly inappropriate.",
+      "answers": [
+        3
+      ],
+      "selectCount": 1
+    },
+    {
+      "id": "emergency_medications_entry_010",
+      "question": "Which of the following representative antibiotic selections in the ED is incorrect?",
+      "choices": [
+        "Pneumonia: Ceftriaxone 2 g + normal saline 100 mL",
+        "Open fracture: Cefazolin 1 g + normal saline 100 mL",
+        "Septic shock: Meropenem 1 g + normal saline 100 mL",
+        "Urinary tract infection in a female: Vancomycin 1 g + normal saline 100 mL"
+      ],
+      "explanation": "Ceftriaxone for community-acquired pneumonia, cefazolin (a first-generation cephalosporin) for open fractures, and broad-spectrum antibiotics like meropenem for septic shock (depending on the source and resistance risk) are common. In contrast, vancomycin monotherapy is inappropriate as empirical therapy for a urinary tract infection. Vancomycin targets Gram-positive cocci (mainly MRSA) and does not provide adequate coverage for Gram-negative bacilli, such as Enterobacteriaceae, which are the primary pathogens in urinary tract infections.",
+      "answers": [
+        3
+      ],
+      "selectCount": 1
     }
   ]
 }

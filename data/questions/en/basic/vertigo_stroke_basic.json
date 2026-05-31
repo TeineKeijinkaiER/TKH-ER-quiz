@@ -35,8 +35,8 @@
         2,
         4
       ],
-      "explanation": "Vertical or direction-changing nystagmus, brainstem/cerebellar signs, severe truncal ataxia, and hemiplegia suggest central vertigo. Typical BPPV findings alone are more consistent with a peripheral etiology.",
-      "selectCount": 0
+      "selectCount": 0,
+      "explanation": "Vertical or direction-changing nystagmus, brainstem/cerebellar signs, severe truncal ataxia, and hemiplegia suggest central vertigo. Typical BPPV findings alone are more consistent with a peripheral etiology."
     },
     {
       "id": "vertigo_stroke_basic_003",
@@ -72,8 +72,8 @@
         2,
         3
       ],
-      "explanation": "Severe ataxia, head/neck pain, focal neurological deficits, and high stroke risk require careful management until central pathology is excluded.",
-      "selectCount": 0
+      "selectCount": 0,
+      "explanation": "Severe ataxia, head/neck pain, focal neurological deficits, and high stroke risk require careful management until central pathology is excluded."
     },
     {
       "id": "vertigo_stroke_basic_005",
@@ -91,8 +91,8 @@
         2,
         3
       ],
-      "explanation": "In suspected stroke, ABC stabilization, ruling out hypoglycemia, confirming onset time, head imaging, and notifying the stroke team should be pursued concurrently.",
-      "selectCount": 0
+      "selectCount": 0,
+      "explanation": "In suspected stroke, ABC stabilization, ruling out hypoglycemia, confirming onset time, head imaging, and notifying the stroke team should be pursued concurrently."
     },
     {
       "id": "vertigo_stroke_basic_006",

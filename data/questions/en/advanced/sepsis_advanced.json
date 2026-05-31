@@ -50,8 +50,8 @@
         1,
         2
       ],
-      "explanation": "Important features of necrotizing soft tissue infections include: pain disproportionate to skin findings, rapidly progressing erythema and swelling, bullae, skin necrosis, crepitus, and systemic toxicity. Even with no gas on CT or a low LRINEC score, the diagnosis cannot be excluded; early surgical evaluation is required when clinical suspicion is present.",
-      "selectCount": 0
+      "selectCount": 0,
+      "explanation": "Important features of necrotizing soft tissue infections include: pain disproportionate to skin findings, rapidly progressing erythema and swelling, bullae, skin necrosis, crepitus, and systemic toxicity. Even with no gas on CT or a low LRINEC score, the diagnosis cannot be excluded; early surgical evaluation is required when clinical suspicion is present."
     },
     {
       "id": "infection_basic_004",
@@ -153,8 +153,8 @@
         2,
         3
       ],
-      "explanation": "According to J-SSCG 2024, for healthcare-associated biliary or intra-abdominal infection, targeting Escherichia coli, anaerobes, Enterobacter, Pseudomonas aeruginosa, Enterococcus, and Candida, TAZ/PIPC, CFPM + MNZ, and MEPM are listed. Adding MCFG is considered when Candida risk is present.",
-      "selectCount": 0
+      "selectCount": 0,
+      "explanation": "According to J-SSCG 2024, for healthcare-associated biliary or intra-abdominal infection, targeting Escherichia coli, anaerobes, Enterobacter, Pseudomonas aeruginosa, Enterococcus, and Candida, TAZ/PIPC, CFPM + MNZ, and MEPM are listed. Adding MCFG is considered when Candida risk is present."
     },
     {
       "id": "infection_empiric_005",
@@ -204,8 +204,8 @@
         0,
         1
       ],
-      "explanation": "According to J-SSCG 2024, for native valve infective endocarditis without MRSA risk, targeting MSSA, streptococcal species, and Enterococcus, SBT/ABPC or CTRX + ABPC are listed. CTRX + VCM is considered when MRSA risk is present; VCM + GM ± RFP is considered for prosthetic valve or pacemaker-related endocarditis.",
-      "selectCount": 0
+      "selectCount": 0,
+      "explanation": "According to J-SSCG 2024, for native valve infective endocarditis without MRSA risk, targeting MSSA, streptococcal species, and Enterococcus, SBT/ABPC or CTRX + ABPC are listed. CTRX + VCM is considered when MRSA risk is present; VCM + GM ± RFP is considered for prosthetic valve or pacemaker-related endocarditis."
     },
     {
       "id": "infection_empiric_008",
@@ -222,8 +222,8 @@
         1,
         2
       ],
-      "explanation": "According to J-SSCG 2024, for intravascular catheter-related bloodstream infection, coagulase-negative staphylococci, Staphylococcus aureus, MRSA, Escherichia coli, Pseudomonas aeruginosa, and Candida are expected, with VCM + CFPM ± MCFG listed.",
-      "selectCount": 0
+      "selectCount": 0,
+      "explanation": "According to J-SSCG 2024, for intravascular catheter-related bloodstream infection, coagulase-negative staphylococci, Staphylococcus aureus, MRSA, Escherichia coli, Pseudomonas aeruginosa, and Candida are expected, with VCM + CFPM ± MCFG listed."
     },
     {
       "id": "infection_empiric_009",

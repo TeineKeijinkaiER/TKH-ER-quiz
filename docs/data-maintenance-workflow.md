@@ -145,7 +145,7 @@ data/
 | `question` | ✓ | 問題文 |
 | `choices` | ✓ | 4〜5要素配列 |
 | `answers` | ✓ | 正答インデックス配列（0始まり） |
-| `selectCount` | ✓ | 何個選ばせるか。`answers.length` と一致 |
+| `selectCount` | ✓ | 何個選ばせるか。単一選択は `1`、N個選択は `answers.length` と一致、「すべて選べ」は必ず `0` |
 | `explanation` | ✓ | 解説文 |
 | `categories` | 任意 | クロスカテゴリ表示用。所属ファイルのIDは自動付与 |
 
@@ -205,7 +205,7 @@ done
 以下の救急医学クイズ JSON を英語に翻訳してください。
 
 ルール:
-1. JSON 構造を完全保持（id, answers の数値, selectCount, categories は触らない）
+1. JSON 構造を完全保持（id, answers の数値, selectCount, categories は触らない）。「すべて選べ / Select all」は `selectCount: 0` を必ず保持し、削除しない
 2. choices の順序は変更不可（answers のインデックスが意味を失う）
 3. 医学用語は標準英語表記（敗血症→sepsis, 除細動→defibrillation など）
 4. category フィールド（カテゴリ名表示文字列）は `categories.en.json` の対応 ID の `name` と一致させる

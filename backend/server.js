@@ -287,10 +287,10 @@ function validateQuestion(question, index, primaryCategoryId, validCategoryIds) 
     throw new Error(`${prefix}: answer must be 0-4 or answers must contain 0-4 indexes`);
   }
   if (question.selectCount !== undefined) {
-    if (!Number.isInteger(question.selectCount) || question.selectCount < 1 || question.selectCount > 5) {
-      throw new Error(`${prefix}: selectCount must be 1-5`);
+    if (!Number.isInteger(question.selectCount) || question.selectCount < 0 || question.selectCount > 5) {
+      throw new Error(`${prefix}: selectCount must be 0-5`);
     }
-    if (question.selectCount !== answerIndexes.length) {
+    if (question.selectCount > 0 && question.selectCount !== answerIndexes.length) {
       throw new Error(`${prefix}: selectCount must match the number of correct answers`);
     }
   }

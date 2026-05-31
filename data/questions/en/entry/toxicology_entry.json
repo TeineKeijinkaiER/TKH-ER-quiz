@@ -10,9 +10,11 @@
         "Fever, hypertension, and muscle rigidity",
         "Jaundice, hepatomegaly, and coagulopathy"
       ],
-      "answers": [1],
-      "selectCount": 1,
-      "explanation": "Organophosphate poisoning inhibits cholinesterase, causing acetylcholine accumulation. Muscarinic symptoms are characteristic and can be remembered with DUMBELS: diarrhea, urination, miosis, bradycardia or bronchospasm, emesis, lacrimation, and salivation. Antidotes are atropine for muscarinic antagonism and pralidoxime (PAM) for cholinesterase reactivation."
+      "explanation": "Organophosphate poisoning inhibits cholinesterase, causing acetylcholine accumulation. Muscarinic symptoms include miosis, salivation, increased bronchial secretions, bronchospasm, bradycardia, diarrhea, urinary incontinence, and vomiting. Treatment includes airway, breathing, and circulatory support, atropine to antagonize muscarinic effects, and consideration of PAM (pralidoxime) to reactivate cholinesterase.",
+      "answers": [
+        1
+      ],
+      "selectCount": 1
     },
     {
       "id": "toxicology_entry_002",
@@ -23,9 +25,11 @@
         "Cardiotoxicity such as QT prolongation and arrhythmia",
         "Neurotoxicity such as seizures and altered mental status"
       ],
-      "answers": [1],
-      "selectCount": 1,
-      "explanation": "Hepatotoxicity is the major concern in acetaminophen overdose. The metabolite NAPQI depletes glutathione and injures hepatocytes, potentially leading to acute liver failure. The antidote is N-acetylcysteine (NAC), which is most effective when given within 8 hours after ingestion."
+      "explanation": "Hepatotoxicity is the major concern in acetaminophen overdose. The metabolite NAPQI depletes glutathione and injures hepatocytes, potentially leading to acute liver failure. The antidote is N-acetylcysteine (NAC), which is most effective when given within 8 hours after ingestion.",
+      "answers": [
+        1
+      ],
+      "selectCount": 1
     },
     {
       "id": "toxicology_entry_003",
@@ -36,9 +40,11 @@
         "Atropine",
         "Naloxone"
       ],
-      "answers": [1],
-      "selectCount": 1,
-      "explanation": "NAC acts as a precursor of glutathione in the liver and helps detoxify NAPQI. Both oral and IV administration are effective. The indication for treatment is assessed using the ingested dose and the Rumack-Matthew nomogram."
+      "explanation": "N-acetylcysteine (NAC) acts as a precursor of glutathione and helps detoxify NAPQI, the toxic metabolite of acetaminophen. Indications for administration are judged based on the time of ingestion, ingested dose, blood concentration, liver function, and clinical course.",
+      "answers": [
+        1
+      ],
+      "selectCount": 1
     },
     {
       "id": "toxicology_entry_004",
@@ -49,9 +55,11 @@
         "Fever, sweating, and diarrhea",
         "Dry mouth, urinary retention, and hallucinations"
       ],
-      "answers": [1],
-      "selectCount": 1,
-      "explanation": "The classic triad of opioid toxicity is miosis (pinpoint pupils), altered mental status or coma, and respiratory depression. The antidote is naloxone, an opioid antagonist. Because its duration is short, repeat dosing or continuous infusion may be needed."
+      "explanation": "The classic triad of opioid toxicity is miosis, altered mental status, and respiratory depression. Because respiratory depression directly affects prognosis, prioritize airway management, assisted ventilation, and oxygen, and administer the opioid antagonist naloxone as needed. Because naloxone has a relatively short duration of effect, repeat dosing or continuous infusion may be needed for long-acting opioids.",
+      "answers": [
+        1
+      ],
+      "selectCount": 1
     },
     {
       "id": "toxicology_entry_005",
@@ -62,9 +70,101 @@
         "N-acetylcysteine",
         "Atropine"
       ],
-      "answers": [1],
-      "selectCount": 1,
-      "explanation": "Flumazenil competitively antagonizes the benzodiazepine binding site on the GABA-A receptor and can reverse sedation and respiratory depression. Note that its effect is short-lived, about 30-60 minutes, and it can precipitate seizures in patients with epilepsy or benzodiazepine dependence."
+      "explanation": "Flumazenil competitively antagonizes the benzodiazepine binding site on the GABA-A receptor and can improve sedation. However, it should be used cautiously in chronic benzodiazepine users, patients with epilepsy, and mixed overdoses involving tricyclic antidepressants or other drugs that increase seizure risk, because it can trigger seizures or withdrawal. Benzodiazepine-only overdose often improves with supportive care.",
+      "answers": [
+        1
+      ],
+      "selectCount": 1
+    },
+    {
+      "id": "toxicology_entry_006",
+      "question": "Which of the following is least appropriate as a finding to consider hyperbaric oxygen therapy (HBOT) in carbon monoxide poisoning?",
+      "choices": [
+        "Transient loss of consciousness",
+        "Presence of neurologic symptoms",
+        "Findings suggesting myocardial ischemia",
+        "Mild headache only with COHb of 5%"
+      ],
+      "explanation": "In carbon monoxide poisoning, 100% oxygen therapy is initiated first. HBOT is considered for high COHb levels, loss of consciousness, neurological symptoms, myocardial ischemia, severe acidosis, or pregnancy. Studies (e.g., by Weaver et al.) suggest that HBOT reduces delayed neuropsychiatric sequelae. In contrast, a mild headache only with a COHb of around 5% is not an indication for HBOT.",
+      "answers": [
+        3
+      ],
+      "selectCount": 1
+    },
+    {
+      "id": "toxicology_entry_007",
+      "question": "Which of the following combinations of initial treatment, antagonist, or antidote for poisoning is incorrect?",
+      "choices": [
+        "Carbon monoxide poisoning: 100% oxygen",
+        "Tricyclic antidepressant poisoning: Sodium bicarbonate",
+        "Organophosphate poisoning: Atropine + PAM",
+        "Acetaminophen poisoning: Flumazenil"
+      ],
+      "explanation": "In carbon monoxide poisoning, 100% oxygen is administered. In tricyclic antidepressant (TCA) poisoning, sodium bicarbonate is considered if QRS widening, arrhythmias, or hypotension are present. Atropine and PAM are used for organophosphate poisoning, and N-acetylcysteine is used for acetaminophen poisoning. Flumazenil is a benzodiazepine receptor antagonist and is not the antidote for acetaminophen poisoning.",
+      "answers": [
+        3
+      ],
+      "selectCount": 1
+    },
+    {
+      "id": "toxicology_entry_008",
+      "question": "Which combination of poisoning treatments is incorrect?",
+      "choices": [
+        "Opioid poisoning: Flumazenil",
+        "Methanol poisoning: Fomepizole",
+        "Acetaminophen poisoning: N-acetylcysteine",
+        "Bromvalerylurea poisoning: Normal saline"
+      ],
+      "explanation": "Naloxone is used for opioid poisoning, fomepizole (an alcohol dehydrogenase inhibitor) is used for methanol or ethylene glycol poisoning, and N-acetylcysteine is used for acetaminophen. In bromvalerylurea poisoning, normal saline may be used for supportive IV hydration, but it is not a specific antidote. Treatment involves airway, breathing, and circulatory management, supportive care for altered consciousness, activated charcoal if indicated, and hemodialysis/hemoperfusion for severe cases. Flumazenil is the antidote for benzodiazepines, not opioids (which require naloxone).",
+      "answers": [
+        0
+      ],
+      "selectCount": 1
+    },
+    {
+      "id": "toxicology_entry_009",
+      "question": "Which of the following drug properties is most appropriate for hemodialysis or other extracorporeal blood purification methods to be highly effective?",
+      "choices": [
+        "Small molecular weight, low protein binding, and small volume of distribution",
+        "Small molecular weight, high protein binding, and large volume of distribution",
+        "Large molecular weight, low protein binding, and small volume of distribution",
+        "Large molecular weight, high protein binding, and large volume of distribution"
+      ],
+      "explanation": "Drugs that are highly dialyzable typically have a small molecular weight, low protein binding, and a small volume of distribution. Drugs that exist largely in their free (unbound) form in blood, can easily pass through the dialysis membrane, and are distributed primarily in the intravascular space are more readily removed by blood purification. Conversely, drugs with high protein binding or a large volume of distribution are difficult to remove because they reside largely in tissue rather than blood.",
+      "answers": [
+        0
+      ],
+      "selectCount": 1
+    },
+    {
+      "id": "toxicology_entry_010",
+      "question": "Which drug is most appropriate as one that is easily removed by hemodialysis?",
+      "choices": [
+        "Lithium: molecular weight 6.94 Da, protein binding 0%, volume of distribution 0.8 L/kg",
+        "Digoxin: molecular weight ~781 Da, protein binding ~25%, volume of distribution ~7 L/kg",
+        "Amitriptyline: molecular weight ~277 Da, protein binding ~95%, volume of distribution ~15 L/kg",
+        "Diazepam: molecular weight ~285 Da, protein binding ~98%, volume of distribution ~1-2 L/kg"
+      ],
+      "explanation": "Drugs easily removed by hemodialysis have small molecular weights, low protein binding, and small volumes of distribution. Lithium has an extremely small molecular weight, near-zero protein binding, and a relatively small volume of distribution, making it a classic dialyzable drug. Digoxin has a very large volume of distribution, while tricyclic antidepressants (like amitriptyline) and diazepam have high protein binding and tissue distribution, making hemodialysis ineffective for their removal.",
+      "answers": [
+        0
+      ],
+      "selectCount": 1
+    },
+    {
+      "id": "toxicology_entry_011",
+      "question": "Which of the following is incorrect as a commonly mistaken combination of edible plants/vegetables and toxic plants?",
+      "choices": [
+        "Daffodil (suisen): Garlic chives (nira)",
+        "Autumn crocus (inusafuran): Alpine leek (gyouja-ninniku)",
+        "Monkshood (torikabuto): Anemone flaccida (nirinsou)",
+        "Destroying angel mushroom (dokutsurutake): Potato (jagaimo)"
+      ],
+      "explanation": "Daffodil is sometimes mistaken for garlic chives, autumn crocus for alpine leek or hosta, and monkshood for Anemone flaccida or momijigasa. These are important combinations reported in food poisoning cases. In contrast, destroying angel mushroom (dokutsurutake) is highly lethal but is not a typical wild plant or vegetable mistaken for potato. Potato poisoning is caused by solanine compounds in sprouts and greened parts.",
+      "answers": [
+        3
+      ],
+      "selectCount": 1
     }
   ]
 }

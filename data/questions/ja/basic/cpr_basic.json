@@ -34,8 +34,8 @@
         2,
         4
       ],
-      "explanation": "VF/pulseless VTでは除細動が最優先である。除細動後はすぐにCPRを再開し、必要に応じてアドレナリンや抗不整脈薬を使用する。実施可能施設では一定基準を満たす症例でECPRを早期に検討する。",
-      "selectCount": 0
+      "selectCount": 0,
+      "explanation": "VF/pulseless VTでは除細動が最優先である。除細動後はすぐにCPRを再開し、必要に応じてアドレナリンや抗不整脈薬を使用する。実施可能施設では一定基準を満たす症例でECPRを早期に検討する。"
     },
     {
       "id": "cpr_basic_003",
@@ -121,8 +121,8 @@
         2,
         3
       ],
-      "explanation": "VF/無脈性VTではショック後すぐにCPRを再開し、原則2分ごとにリズムを再評価する。",
-      "selectCount": 0
+      "selectCount": 0,
+      "explanation": "VF/無脈性VTではショック後すぐにCPRを再開し、原則2分ごとにリズムを再評価する。"
     },
     {
       "id": "cpr_basic_009",
@@ -207,8 +207,8 @@
         2,
         3
       ],
-      "explanation": "高度気道確保後は胸骨圧迫を継続しつつ非同期換気とし、過換気を避ける。",
-      "selectCount": 0
+      "selectCount": 0,
+      "explanation": "高度気道確保後は胸骨圧迫を継続しつつ非同期換気とし、過換気を避ける。"
     },
     {
       "id": "cpr_basic_014",

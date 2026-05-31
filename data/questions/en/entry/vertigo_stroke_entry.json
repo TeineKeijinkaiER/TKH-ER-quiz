@@ -10,9 +10,11 @@
         "Speech disturbance",
         "Abnormal eye movements"
       ],
-      "answers": [3],
-      "selectCount": 1,
-      "explanation": "CPSS is a simple prehospital screening tool to suspect stroke. It evaluates three items: facial droop, arm drift, and speech disturbance or language abnormality. It checks for facial asymmetry, inability to maintain one arm, and slurred or abnormal speech. Abnormal eye movements or conjugate gaze deviation can be important findings suggesting stroke, especially brainstem lesions or large vessel occlusion, but they are not CPSS items."
+      "explanation": "CPSS is a simple prehospital screening tool to suspect stroke. It evaluates three items: facial droop, arm drift, and speech disturbance or language abnormality. It checks for facial asymmetry, inability to maintain one arm, and slurred or abnormal speech. Abnormal eye movements or conjugate gaze deviation can be important findings suggesting stroke, especially brainstem lesions or large vessel occlusion, but they are not CPSS items.",
+      "answers": [
+        3
+      ],
+      "selectCount": 1
     },
     {
       "id": "vertigo_stroke_entry_002",
@@ -23,9 +25,11 @@
         "Hemispatial neglect",
         "Anisocoria"
       ],
-      "answers": [3],
-      "selectCount": 1,
-      "explanation": "The ELVO screen is used in acute stroke to suspect large vessel occlusion (LVO), with emphasis on cortical signs. Conjugate gaze deviation, aphasia, and hemispatial neglect are representative findings suggesting LVO. Anisocoria is important in conditions such as brain herniation, oculomotor nerve palsy, or ocular trauma, but it is not an appropriate ELVO screen item."
+      "explanation": "The ELVO screen is used in acute stroke to suspect large vessel occlusion (LVO), with emphasis on cortical signs. Conjugate gaze deviation, aphasia, and hemispatial neglect are representative findings suggesting LVO. Anisocoria is important in conditions such as brain herniation, oculomotor nerve palsy, or ocular trauma, but it is not an appropriate ELVO screen item.",
+      "answers": [
+        3
+      ],
+      "selectCount": 1
     },
     {
       "id": "vertigo_stroke_entry_003",
@@ -36,9 +40,11 @@
         "There is a latency of several seconds after provocation",
         "Nystagmus becomes stronger with repeated positioning in the same head position"
       ],
-      "answers": [3],
-      "selectCount": 1,
-      "explanation": "In BPPV, brief rotational vertigo is triggered by head position changes such as rolling over, sitting up, looking upward, or looking downward. Typically there is a latency of several seconds after provocation, and nystagmus and vertigo fade within a short time. With repeated positioning in the same position, the response may weaken due to fatigability or habituation, so nystagmus becoming stronger with repetition is not typical for BPPV. Persistent nystagmus, neurologic deficits, severe headache, or inability to walk should raise concern for central vertigo."
+      "explanation": "In BPPV, brief rotational vertigo is triggered by head position changes such as rolling over, sitting up, looking upward, or looking downward. Typically there is a latency of several seconds after provocation, and nystagmus and vertigo fade within a short time. With repeated positioning in the same position, the response may weaken due to fatigability or habituation, so nystagmus becoming stronger with repetition is not typical for BPPV. Persistent nystagmus, neurologic deficits, severe headache, or inability to walk should raise concern for central vertigo.",
+      "answers": [
+        3
+      ],
+      "selectCount": 1
     },
     {
       "id": "vertigo_stroke_entry_004",
@@ -49,9 +55,11 @@
         "Right lateral canal BPPV",
         "Left lateral canal BPPV"
       ],
-      "answers": [0],
-      "selectCount": 1,
-      "explanation": "The Dix-Hallpike test mainly evaluates posterior canal BPPV. If, in the right head-hanging position, upbeat nystagmus with a right torsional component appears after several seconds of latency, right posterior canal BPPV is most likely. Posterior canal BPPV typically shows torsional-upbeat nystagmus induced with the affected ear down, short duration with fading, and fatigability with repetition. Lateral canal BPPV is evaluated more with the supine head roll test than with Dix-Hallpike."
+      "explanation": "The Dix-Hallpike test mainly evaluates posterior canal BPPV. If, in the right head-hanging position, upbeat nystagmus with a right torsional component appears after several seconds of latency, right posterior canal BPPV is most likely. Posterior canal BPPV typically shows torsional-upbeat nystagmus induced with the affected ear down, short duration with fading, and fatigability with repetition. Lateral canal BPPV is evaluated more with the supine head roll test than with Dix-Hallpike.",
+      "answers": [
+        0
+      ],
+      "selectCount": 1
     },
     {
       "id": "vertigo_stroke_entry_005",
@@ -62,9 +70,116 @@
         "Right lateral canal BPPV, cupulolithiasis",
         "Left lateral canal BPPV, cupulolithiasis"
       ],
-      "answers": [0],
-      "selectCount": 1,
-      "explanation": "The supine head roll test is used to evaluate lateral canal BPPV. When horizontal geotropic nystagmus occurs when turning to either side, lateral canal BPPV due to canalolithiasis is considered. In canalolithiasis, the affected side is generally the side with stronger nystagmus and vertigo. Here, symptoms and nystagmus are stronger when turning right, so right lateral canal BPPV with canalolithiasis is most likely. When horizontal apogeotropic nystagmus occurs on both sides, cupulolithiasis is considered, and the affected side is generally the side with weaker nystagmus."
+      "explanation": "The supine head roll test is used to evaluate lateral canal BPPV. When horizontal geotropic nystagmus occurs when turning to either side, lateral canal BPPV due to canalolithiasis is considered. In canalolithiasis, the affected side is generally the side with stronger nystagmus and vertigo. Here, symptoms and nystagmus are stronger when turning right, so right lateral canal BPPV with canalolithiasis is most likely. When horizontal apogeotropic nystagmus occurs on both sides, cupulolithiasis is considered, and the affected side is generally the side with weaker nystagmus.",
+      "answers": [
+        0
+      ],
+      "selectCount": 1
+    },
+    {
+      "id": "vertigo_stroke_entry_006",
+      "question": "According to the GRACE-3 guidelines for vertigo classification, which of the following best fits the description of AVS (acute vestibular syndrome)?",
+      "choices": [
+        "Acute-onset vertigo persisting for 24 hours or longer",
+        "Positional vertigo lasting for less than a few seconds",
+        "Short episodes of vertigo recurring spontaneously without triggers",
+        "Pre-syncope occurring only when standing up"
+      ],
+      "explanation": "GRACE-3 classifies vertigo based on time course and triggers rather than the quality of symptoms. AVS is characterized by acute-onset, continuous vertigo or unsteadiness typically lasting 24 hours or longer. Differential diagnoses include vestibular neuritis and cerebellar or brainstem stroke. Positional vertigo lasting less than a few seconds is classified as tEVS, and spontaneous episodic vertigo is classified as sEVS.",
+      "answers": [
+        0
+      ],
+      "selectCount": 1
+    },
+    {
+      "id": "vertigo_stroke_entry_007",
+      "question": "According to the GRACE-3 guidelines for vertigo classification, which of the following best fits the description of tEVS (triggered episodic vestibular syndrome)?",
+      "choices": [
+        "Vertigo lasting for dozens of seconds triggered by rolling over or sitting up",
+        "Continuous vertigo lasting for 24 hours or longer even at rest",
+        "Recurrent episodes of vertigo lasting 20 minutes to several hours without triggers",
+        "Continuous vertigo accompanied by hemiplegia"
+      ],
+      "explanation": "tEVS refers to brief, recurrent episodes of vertigo triggered by specific movements, such as head position changes. The representative disease is BPPV, where nystagmus is confirmed using the Dix-Hallpike test or the supine head roll test. Vertigo lasting 24 hours or longer is classified as AVS, and spontaneous recurrent vertigo is classified as sEVS. Vertigo with focal neurological signs like hemiplegia strongly suggests central lesions.",
+      "answers": [
+        0
+      ],
+      "selectCount": 1
+    },
+    {
+      "id": "vertigo_stroke_entry_008",
+      "question": "According to the GRACE-3 guidelines for vertigo classification, which of the following best fits the description of sEVS (spontaneous episodic vestibular syndrome)?",
+      "choices": [
+        "Vertigo episodes recurring spontaneously without triggers",
+        "Continuous acute vertigo lasting for 24 hours or longer",
+        "Vertigo triggered by rolling over lasting for only a few seconds",
+        "Impaired consciousness persisting immediately after trauma"
+      ],
+      "explanation": "sEVS refers to episodic vertigo that occurs spontaneously without clear triggers (such as head position changes) and recurs. Differential diagnoses include vestibular migraine, Meniere's disease, and transient ischemic attack (TIA) in the vertebrobasilar system. AVS is continuous, and tEVS is triggered by specific actions. In sEVS, assess the duration of episodes, accompanying headache, auditory symptoms, neurological signs, and vascular risk factors.",
+      "answers": [
+        0
+      ],
+      "selectCount": 1
+    },
+    {
+      "id": "vertigo_stroke_entry_009",
+      "question": "Which statement about vestibular neuritis presenting as AVS is incorrect?",
+      "choices": [
+        "It presents with acute-onset, continuous rotational vertigo",
+        "It is said to often develop after a preceding upper respiratory tract infection",
+        "It typically presents with prominent hearing loss",
+        "In peripheral lesions, unidirectional horizontal-torsional nystagmus is commonly seen"
+      ],
+      "explanation": "Vestibular neuritis is a classic peripheral cause of AVS, presenting with acute-onset continuous rotational vertigo, nausea, vomiting, and gait instability. It can develop following an upper respiratory infection (reported in about 30-50% of cases, though frequency varies). Peripheral findings include unidirectional horizontal-torsional nystagmus and an abnormal head impulse test. In contrast, prominent hearing loss is atypical for vestibular neuritis, suggesting labyrinthitis, sudden sensorineural hearing loss, or AICA infarction. Differentiating AVS from cerebellar/brainstem stroke is critical.",
+      "answers": [
+        2
+      ],
+      "selectCount": 1
+    },
+    {
+      "id": "vertigo_stroke_entry_010",
+      "question": "Which statement is incorrect regarding diseases that cause recurrent vertigo episodes presenting as sEVS?",
+      "choices": [
+        "In vestibular migraine, recurrent rotational or motion vertigo may be accompanied by photophobia or phonophobia",
+        "In Meniere's disease, recurrent vertigo may be accompanied by hearing loss, tinnitus, or a sensation of ear fullness",
+        "Vertebrobasilar TIA is included in the differential diagnosis of sEVS",
+        "Meniere's disease is typically not accompanied by auditory symptoms"
+      ],
+      "explanation": "sEVS refers to episodic vertigo recurring spontaneously, with vestibular migraine, Meniere's disease, and vertebrobasilar TIA in the differential. In vestibular migraine, recurrent vertigo is diagnosed based on photophobia, phonophobia, visual aura, and a history of migraine. Meniere's disease is characterized by recurrent vertigo accompanied by fluctuating hearing loss, tinnitus, and ear fullness. Therefore, stating that 'Meniere's disease is typically not accompanied by auditory symptoms' is incorrect.",
+      "answers": [
+        3
+      ],
+      "selectCount": 1
+    },
+    {
+      "id": "vertigo_stroke_entry_011",
+      "question": "Which statement about BPPV presenting as tEVS is incorrect?",
+      "choices": [
+        "Posterior canal BPPV is evaluated using the Dix-Hallpike test",
+        "Lateral canal BPPV is evaluated using the supine head roll test",
+        "Posterior canal BPPV typically shows torsional-upbeat nystagmus with latency",
+        "Lateral canal BPPV is diagnosed using the Dix-Hallpike test alone"
+      ],
+      "explanation": "tEVS is brief episodic vertigo triggered by head position changes, typically caused by BPPV. Posterior canal BPPV is evaluated with the Dix-Hallpike test, showing torsional-upbeat nystagmus with latency. Lateral canal BPPV is evaluated with the supine head roll test, turning the head side-to-side in a supine position to assess horizontal nystagmus (geotropic suggests canalolithiasis, apogeotropic suggests cupulolithiasis). Stating that lateral canal BPPV is diagnosed by Dix-Hallpike alone is incorrect.",
+      "answers": [
+        3
+      ],
+      "selectCount": 1
+    },
+    {
+      "id": "vertigo_stroke_entry_012",
+      "question": "A patient with cerebral infarction involving the right frontal eye field in the right hemisphere presents with left hemiplegia and conjugate gaze deviation. Which of the following is the most appropriate mechanism for this conjugate gaze deviation?",
+      "choices": [
+        "The pathway driving leftward conjugate gaze from the right frontal eye field is impaired, causing the eyes to deviate toward the right",
+        "The pathway driving rightward conjugate gaze from the right frontal eye field is impaired, causing the eyes to deviate toward the left",
+        "The right oculomotor nucleus is impaired, causing only the right eye to deviate downward and outward",
+        "The right optic nerve is impaired, causing both eyes to deviate toward the opposite side of the lesion"
+      ],
+      "explanation": "The frontal eye field in the cerebral cortex drives conjugate gaze to the contralateral side. The right frontal eye field is involved in leftward conjugate gaze, so a destructive lesion involving the right frontal eye field impairs leftward gaze, causing the eyes to deviate relatively toward the ipsilateral side (the right). This explains the clinical observation that 'patients with hemispheric lesions look toward the lesion.' Oculomotor nucleus injury causes extraocular muscle palsy, ptosis, and pupillary abnormalities rather than conjugate gaze deviation.",
+      "answers": [
+        0
+      ],
+      "selectCount": 1
     }
   ]
 }

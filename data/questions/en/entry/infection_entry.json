@@ -10,35 +10,41 @@
         "Influenza A is subtyped by H and N antigens",
         "The incubation period is usually 2-3 weeks"
       ],
-      "answers": [3],
-      "selectCount": 1,
-      "explanation": "The incubation period of influenza is usually 1-4 days, typically about 2 days, not 2-3 weeks. Rapid antigen tests can be falsely negative immediately after onset when viral load is low, and in practice detection is more likely after about 12 hours. Anti-influenza drugs are most effective when started within 48 hours of onset. Influenza A is subtyped by the surface antigens hemagglutinin (H) and neuraminidase (N), such as H1N1 and H3N2."
+      "explanation": "The incubation period of influenza is usually 1-4 days, typically about 2 days, not 2-3 weeks. Rapid antigen tests can be falsely negative immediately after onset when viral load is low, and in practice detection is more likely after about 12 hours. Anti-influenza drugs are most effective when started within 48 hours of onset. Influenza A is subtyped by the surface antigens hemagglutinin (H) and neuraminidase (N), such as H1N1 and H3N2.",
+      "answers": [
+        3
+      ],
+      "selectCount": 1
     },
     {
       "id": "infection_entry_002",
       "question": "Which statement about COVID-19 is incorrect?",
       "choices": [
+        "Steroids are contraindicated in COVID-19 pneumonia",
         "SARS-CoV-2 is an enveloped RNA virus",
         "Antiviral therapy may be considered even in mild disease if the patient has risk factors for severe disease",
-        "Nirmatrelvir/ritonavir requires attention to drug interactions",
-        "Steroids are contraindicated in COVID-19 pneumonia"
+        "Nirmatrelvir/ritonavir requires attention to drug interactions"
       ],
-      "answers": [3],
-      "selectCount": 1,
-      "explanation": "SARS-CoV-2 is an enveloped RNA virus. In COVID-19, antiviral therapy is considered for patients with mild to moderate disease who have risk factors for severe disease, such as older age, underlying illness, or immunosuppression. Nirmatrelvir/ritonavir has many CYP3A-related drug interactions, so concomitant medications must be checked. In COVID-19 pneumonia requiring oxygen, steroids such as dexamethasone may be considered, so they are not universally contraindicated. In contrast, routine steroid use is not recommended in mild cases that do not require oxygen."
+      "explanation": "In COVID-19 pneumonia requiring oxygen, steroids such as dexamethasone may be considered, so they are not universally contraindicated. Routine steroid use is not recommended in mild cases that do not require oxygen. SARS-CoV-2 is an enveloped RNA virus. Antiviral therapy is considered for mild to moderate patients with risk factors for severe disease, such as older age or underlying illness. Nirmatrelvir/ritonavir has many CYP3A-related drug interactions, so checking concomitant medications is important.",
+      "answers": [
+        0
+      ],
+      "selectCount": 1
     },
     {
       "id": "infection_entry_003",
       "question": "Which statement about infection control for norovirus is incorrect?",
       "choices": [
         "The main route of transmission is fecal-oral",
+        "Alcohol-based hand sanitizer is the first choice for hand hygiene",
         "Transmission can occur through droplets from vomitus and environmental contamination",
-        "Norovirus is a non-enveloped virus",
-        "Alcohol-based hand sanitizer is the first choice for hand hygiene"
+        "Norovirus is a non-enveloped virus"
       ],
-      "answers": [3],
-      "selectCount": 1,
-      "explanation": "Norovirus is a non-enveloped virus and is relatively resistant to alcohol. The main route is fecal-oral transmission, but infection can also occur through droplets from vomitus, contaminated environmental surfaces, and contaminated food or water. Hand hygiene should emphasize washing with soap and running water. Alcohol-based hand sanitizer may be used as an adjunct, but it is insufficient as the first-choice measure against norovirus."
+      "explanation": "Norovirus is a non-enveloped virus and is relatively resistant to alcohol-based disinfectants. Therefore, hand hygiene should emphasize washing with soap and running water; alcohol-based sanitizer is only adjunctive. The main route is fecal-oral transmission, but infection can also spread through droplets from vomitus, contaminated environmental surfaces, and contaminated food or water.",
+      "answers": [
+        1
+      ],
+      "selectCount": 1
     },
     {
       "id": "infection_entry_004",
@@ -46,12 +52,14 @@
       "choices": [
         "Fever",
         "Absence of cough",
-        "Anterior cervical lymphadenopathy",
-        "Purulent nasal discharge"
+        "Purulent nasal discharge",
+        "Anterior cervical lymphadenopathy"
       ],
-      "answers": [3],
-      "selectCount": 1,
-      "explanation": "Centor and McIsaac criteria are used to estimate the likelihood of group A streptococcal pharyngitis. Main items include fever, absence of cough, anterior cervical lymph node swelling or tenderness, and tonsillar swelling or exudate. McIsaac criteria also incorporate age. Purulent nasal discharge, cough, hoarseness, conjunctivitis, and stomatitis tend to suggest viral upper respiratory infection and are not criteria for streptococcal pharyngitis."
+      "explanation": "Centor and McIsaac criteria are used to evaluate group A streptococcal pharyngitis. Main items include fever, absence of cough, anterior cervical lymph node swelling or tenderness, tonsillar swelling or exudate, and age. Purulent nasal discharge, cough, hoarseness, and conjunctivitis tend to suggest viral upper respiratory infection and are not criteria for streptococcal pharyngitis.",
+      "answers": [
+        2
+      ],
+      "selectCount": 1
     },
     {
       "id": "infection_entry_005",
@@ -62,9 +70,94 @@
         "Skin and soft tissue infection",
         "Meningitis"
       ],
-      "answers": [3],
+      "explanation": "In older adults, pneumonia, urinary tract infection, and skin and soft tissue infection are overwhelmingly common and important bacterial infections. Meningitis can occur in older adults and is serious, but it is not as frequent as these three. In older adults, fever and localizing symptoms may be subtle, and infection often presents with nonspecific symptoms such as poor appetite or delirium.",
+      "answers": [
+        3
+      ],
+      "selectCount": 1
+    },
+    {
+      "id": "infection_entry_006",
+      "question": "Which statement is incorrect regarding the features of large versus small intestinal types of infectious enteritis?",
+      "choices": [
+        "Large intestinal type presents only with large-volume watery stools, and bloody stools or abdominal pain are not typically seen",
+        "Small intestinal type tends to present mainly with watery diarrhea",
+        "Small intestinal type can feature prominent vomiting or dehydration",
+        "Large intestinal type is likely to be accompanied by bloody stools, mucoid stools, and tenesmus"
+      ],
+      "explanation": "Large intestinal enteritis presents as inflammatory enteritis, typically characterized by fever, lower abdominal pain, bloody stools, mucoid stools, tenesmus (frequent painful urges), and small-volume frequent stools. Therefore, the statement that 'bloody stools or abdominal pain are not typically seen' is incorrect. Small intestinal enteritis typically presents with diffuse periumbilical pain, large-volume watery diarrhea, vomiting, and prominent dehydration.",
+      "answers": [
+        0
+      ],
       "selectCount": 1,
-      "explanation": "In older adults, pneumonia, urinary tract infection, and skin and soft tissue infection are important common bacterial infections. Meningitis can occur in older adults and is serious, but it is not as frequent as pneumonia, urinary tract infection, or skin and soft tissue infection. In older adults, fever and localizing symptoms may be subtle, and infection may present with nonspecific symptoms such as poor appetite, decline in ADL, delirium, falls, or malaise. Avoiding overdiagnosis of asymptomatic bacteriuria as urinary tract infection is also important."
+      "categories": [
+        "infection_entry",
+        "gi_symptoms_entry"
+      ]
+    },
+    {
+      "id": "infection_entry_007",
+      "question": "Which incubation period for food poisoning is incorrect?",
+      "choices": [
+        "Staphylococcus aureus: approximately 1 to 6 hours",
+        "Campylobacter: approximately 30 minutes to 6 hours",
+        "Bacillus cereus (emetic type): approximately 1 to 6 hours",
+        "Salmonella: approximately 6 to 72 hours"
+      ],
+      "explanation": "The incubation period for Campylobacter is typically 2 to 5 days (approximately 24 to 120 hours), which is relatively long, making the statement '30 minutes to 6 hours' incorrect. Staphylococcus aureus and the emetic type of Bacillus cereus are 'toxin-mediated' food poisonings caused by ingesting toxins pre-formed in food, presenting with severe vomiting after a very short incubation period of 1 to 6 hours.",
+      "answers": [
+        1
+      ],
+      "categories": [
+        "infection_entry",
+        "gi_symptoms_entry"
+      ],
+      "testCount": 1
+    },
+    {
+      "id": "infection_entry_008",
+      "question": "Which statement is incorrect regarding skin and soft tissue infections after dog or cat bites?",
+      "choices": [
+        "Consider Pasteurella multocida as a pathogen",
+        "Cat bites are prone to causing deep puncture wounds",
+        "Treatment with amoxicillin monotherapy is sufficient",
+        "Redness and swelling can appear within several hours after the bite"
+      ],
+      "explanation": "Bite wound infections are typically polymicrobial, often involving anaerobes and beta-lactamase-producing bacteria. Therefore, amoxicillin monotherapy is insufficient, and amoxicillin/clavulanic acid (e.g., Augmentin) is the appropriate choice. Cat bites, caused by thin, sharp teeth, tend to result in deep puncture wounds with a high risk of infection. Pasteurella species progress rapidly, and symptoms can appear within several hours of the bite.",
+      "answers": [
+        2
+      ],
+      "selectCount": 1
+    },
+    {
+      "id": "infection_entry_009",
+      "question": "Which statement is incorrect regarding findings that raise suspicion of necrotizing fasciitis?",
+      "choices": [
+        "Pain out of proportion to physical findings",
+        "Rapidly progressive erythema and swelling",
+        "Bullae, skin necrosis, and crepitus",
+        "It can be ruled out if the LRINEC score is 5 points"
+      ],
+      "explanation": "While the LRINEC score is an adjunct diagnostic tool for necrotizing fasciitis (generally raising suspicion at 6 points or higher), its sensitivity is not perfect. A low score, such as 5 points, cannot completely rule out the disease, making the statement 'ruled out if it is 5 points' incorrect. Crucial clinical findings include severe pain out of proportion to appearance, rapid progression, bullae, skin necrosis, and crepitus. If suspected, immediate surgical debridement should be considered.",
+      "answers": [
+        3
+      ],
+      "selectCount": 1
+    },
+    {
+      "id": "infection_entry_010",
+      "question": "Which statement is incorrect regarding the indications for antibiotics in acute sinusitis?",
+      "choices": [
+        "If purulent nasal discharge and low-grade fever are present, start antibiotics as soon as possible after onset",
+        "Consider bacterial etiology if symptoms persist for 10 days or longer without improvement",
+        "Consider antibiotics if high fever, purulent nasal discharge, and facial pain persist for 3 to 4 days or longer",
+        "Consider bacterial etiology in a double-sickening pattern where symptoms worsen after initial improvement"
+      ],
+      "explanation": "Most cases of acute sinusitis are viral and self-limiting, so routinely starting antibiotics based only on early purulent discharge or low-grade fever is inappropriate. Criteria for considering bacterial sinusitis and antibiotic therapy are: (1) symptoms persisting for 10 days or longer without improvement, (2) severe symptoms such as high fever and intense facial pain lasting for 3-4 days or longer, or (3) worsening of symptoms after initial improvement (a double-sickening pattern).",
+      "answers": [
+        0
+      ],
+      "selectCount": 1
     }
   ]
 }

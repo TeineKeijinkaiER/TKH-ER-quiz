@@ -23,6 +23,7 @@ data/
 - カテゴリー ID は JA/EN で完全一致
 - ファイル名・ディレクトリ構造は JA/EN で同一
 - `id`, `level`, `accent`, `selectCount`, `answers`（インデックス値）は変更しない
+- 「すべて選べ / Select all / all that apply」型は `selectCount: 0` を必ず保持する。個数指定なしを理由に `selectCount` を削除しない
 
 ## 整合性チェック
 
@@ -59,6 +60,7 @@ data/
 ルール:
 - 医学用語は標準的な英語表記（敗血症 → sepsis, 除細動 → defibrillation, 心肺蘇生 → CPR 等）
 - JSON 構造を完全保持（id, answers 配列の数値, selectCount, categories, accent 等の非テキスト値はそのまま）
+- `selectCount: 0` は「すべて選べ」型を表す有効な値なので、翻訳時に削除しない
 - choices 配列の順序は変更不可（answers のインデックスが意味を失うため）
 - category フィールド（カテゴリー名文字列）は categories.en.json の対応 id の name に揃える
 - explanation も翻訳対象

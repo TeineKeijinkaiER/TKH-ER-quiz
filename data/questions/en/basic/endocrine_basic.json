@@ -11,7 +11,11 @@
         "Blood glucose is 600 mg/dL or higher with hyperosmolality, but ketosis and acidosis are not prominent",
         "Hyperglycemia is present, but there is no acidosis and ketones are negative"
       ],
-      "answers": [0, 1, 2],
+      "answers": [
+        0,
+        1,
+        2
+      ],
       "selectCount": 3,
       "explanation": "DKA is suspected when diabetes or hyperglycemia, ketosis, and metabolic acidosis are present together. SGLT2 inhibitor-associated DKA may present as euglycemic DKA without marked hyperglycemia. Blood glucose of 600 mg/dL or higher with elevated plasma osmolality and without prominent ketosis or acidosis is more suggestive of HHS."
     },
@@ -25,7 +29,12 @@
         "In HHS, consider insulin administration at 0.05 units/kg/h",
         "If K <3.5 mmol/L, prioritize insulin administration over potassium replacement"
       ],
-      "answers": [0, 1, 2, 3],
+      "answers": [
+        0,
+        1,
+        2,
+        3
+      ],
       "selectCount": 0,
       "explanation": "The pillars of initial DKA/HHS treatment are IV fluids, potassium management, insulin, and search for precipitating causes. In DKA, regular insulin at 0.1 units/kg/h is considered; in HHS, a lower dose such as 0.05 units/kg/h is considered. An insulin bolus is not mandatory. Starting insulin in the setting of hypokalemia can cause life-threatening arrhythmias due to intracellular potassium shift, so potassium replacement takes priority when K <3.5 mmol/L."
     },
@@ -39,13 +48,20 @@
         "Fever, tachycardia, diaphoresis, and hand tremor with low TSH and elevated FT4",
         "Hyperglycemia, elevated serum ketones, and metabolic acidosis"
       ],
-      "answers": [0, 1, 2],
+      "answers": [
+        0,
+        1,
+        2
+      ],
       "selectCount": 3,
       "explanation": "Adrenal crisis should be suspected with unexplained shock, hypotension poorly responsive to IV fluids and vasopressors, long-term corticosteroid use, stress such as infection or surgery, hyponatremia, hyperkalemia, hypoglycemia, vomiting, abdominal pain, and severe malaise. Fever, tachycardia, diaphoresis, and hand tremor with low TSH and elevated FT4 suggest thyrotoxicosis or thyroid storm. Hyperglycemia, ketosis, and metabolic acidosis suggest DKA."
     },
     {
       "id": "endocrine_basic_004",
-      "categories": ["endocrine_basic", "general_em_basic"],
+      "categories": [
+        "endocrine_basic",
+        "general_em_basic"
+      ],
       "question": "A 42-year-old woman had been noted to have untreated Graves' disease. She is brought to the ED with pneumonia as a trigger. Temperature is 39.1°C, heart rate 148/min, blood pressure 156/72 mmHg, and SpO2 93%. She is restless and cannot converse coherently. FT4 is 4.8 ng/dL and TSH is <0.01 μIU/mL. Chest radiograph shows pneumonia but no pulmonary edema. Based on the Japan Thyroid Association diagnostic criteria, which assessment is most appropriate? Select one.",
       "choices": [
         "Definite thyroid storm (TS1)",
@@ -54,7 +70,9 @@
         "Because fever is caused by pneumonia, thyroid storm is excluded",
         "Even with elevated FT4, thyroid storm cannot be diagnosed unless heart failure is present"
       ],
-      "answers": [0],
+      "answers": [
+        0
+      ],
       "selectCount": 1,
       "explanation": "The diagnosis of thyroid storm requires thyrotoxicosis due to elevated FT3 or FT4 as a prerequisite. The Japan Thyroid Association criteria then assess central nervous system manifestations, fever of 38°C or higher, tachycardia of 130/min or higher, heart failure, and gastrointestinal/hepatic manifestations. This patient has elevated FT4, CNS symptoms manifested by restlessness, fever of 39.1°C, and heart rate 148/min, so she meets TS1. Infection can precipitate thyroid storm and does not by itself exclude the diagnosis."
     },
@@ -68,13 +86,21 @@
         "Continue observation after improvement because recurrent hypoglycemia can occur",
         "Once the patient wakes after dextrose, involvement of long-acting insulin or sulfonylureas can be ruled out"
       ],
-      "answers": [0, 1, 2, 3],
+      "answers": [
+        0,
+        1,
+        2,
+        3
+      ],
       "selectCount": 0,
       "explanation": "In severe hypoglycemia, forcing oral intake in a patient with altered consciousness carries a risk of aspiration. Intravenous dextrose or glucagon should be used for prompt correction, and causative medications, oral intake, renal function, infection, and other contributors should be checked. Recurrent hypoglycemia can occur with long-acting insulin, sulfonylureas, or reduced renal function, so observation is needed even after the patient wakes."
     },
     {
       "id": "endocrine_basic_006",
-      "categories": ["endocrine_basic", "emergency_medications_basic"],
+      "categories": [
+        "endocrine_basic",
+        "emergency_medications_basic"
+      ],
       "question": "A 25-year-old woman with type 1 diabetes presents with fever and vomiting. Blood glucose is 482 mg/dL, pH 7.18, HCO3- 9 mmol/L, K 5.2 mmol/L, and beta-hydroxybutyrate is elevated. Select three appropriate initial actions for DKA.",
       "choices": [
         "Start normal saline or an isotonic crystalloid at 500-1000 mL/h",
@@ -83,13 +109,20 @@
         "Because blood glucose exceeds 400 mg/dL, give 10 units of IV regular insulin before fluids",
         "Because initial K is 5.2 mmol/L, give furosemide to lower potassium"
       ],
-      "answers": [0, 1, 2],
+      "answers": [
+        0,
+        1,
+        2
+      ],
       "selectCount": 3,
       "explanation": "DKA management proceeds with IV fluids, potassium assessment, insulin, and search for precipitating causes. Even when initial potassium is high-normal or high, total body potassium is often depleted, and insulin, fluids, and improvement of acidosis can lower serum potassium. Furosemide is not usually given solely because K is 5.2 mmol/L."
     },
     {
       "id": "endocrine_basic_007",
-      "categories": ["endocrine_basic", "general_em_basic"],
+      "categories": [
+        "endocrine_basic",
+        "general_em_basic"
+      ],
       "question": "A patient with DKA has Na 132 mmol/L, Cl 96 mmol/L, and HCO3- 9 mmol/L. Select all correct statements regarding the anion gap and delta gap.",
       "choices": [
         "AG is 17 and delta gap is 0, indicating normal anion gap metabolic acidosis",
@@ -98,13 +131,18 @@
         "AG is 36, delta AG is 24, and delta HCO3- is 15, which is close to a diagnosis of HHS",
         "If the delta gap is negative, consider concomitant normal anion gap metabolic acidosis"
       ],
-      "answers": [1, 4],
+      "answers": [
+        1,
+        4
+      ],
       "selectCount": 0,
       "explanation": "AG = 132 - 96 - 9 = 27. If the normal AG is 12 and normal HCO3- is 24, delta AG is 15 and delta HCO3- is also 15, which is compatible with high anion gap metabolic acidosis due to DKA. A negative delta gap means the fall in HCO3- is greater than the rise in AG, suggesting concomitant normal anion gap metabolic acidosis such as diarrhea, renal tubular acidosis, or treatment-related hyperchloremic acidosis."
     },
     {
       "id": "endocrine_basic_008",
-      "categories": ["endocrine_basic", "emergency_medications_basic"],
+      "categories": [
+        "endocrine_basic"
+      ],
       "question": "Select all correct adult DKA diagnostic criteria based on the 2024 international consensus report.",
       "choices": [
         "Blood glucose is 200 mg/dL or higher, or there is a prior history of diabetes",
@@ -113,13 +151,20 @@
         "If blood glucose is less than 250 mg/dL, DKA is excluded even if there is prior diabetes or ketonemia",
         "Serum osmolality of 320 mOsm/kg or higher is required for the diagnosis of DKA"
       ],
-      "answers": [0, 1, 2],
+      "answers": [
+        0,
+        1,
+        2
+      ],
       "selectCount": 0,
       "explanation": "Adult DKA is diagnosed using three elements: diabetes or hyperglycemia, ketonemia or ketonuria, and metabolic acidosis. The glucose criterion is blood glucose 200 mg/dL or higher or a prior history of diabetes. Ketosis is assessed using serum beta-hydroxybutyrate 3.0 mmol/L or higher or urine ketones 2+ or higher. Metabolic acidosis is assessed using pH <7.30 or HCO3- <18 mmol/L. Euglycemic DKA can occur with SGLT2 inhibitors and other settings. Serum osmolality of 320 mOsm/kg or higher is important for HHS, not required for DKA."
     },
     {
       "id": "endocrine_basic_009",
-      "categories": ["endocrine_basic", "emergency_medications_basic"],
+      "categories": [
+        "endocrine_basic",
+        "emergency_medications_basic"
+      ],
       "question": "A 50 kg patient with DKA is started on a continuous IV regular insulin infusion. Regular insulin 50 units is diluted with normal saline to a total volume of 50 mL. If the infusion is started at 0.1 units/kg/h, what is the infusion rate? Select one.",
       "choices": [
         "1 mL/h",
@@ -128,13 +173,18 @@
         "5 mL/h",
         "10 mL/h"
       ],
-      "answers": [3],
+      "answers": [
+        3
+      ],
       "selectCount": 1,
       "explanation": "50 units/50 mL equals 1 unit/mL. At 50 kg, 0.1 units/kg/h equals 5 units/h, so the infusion rate is 5 mL/h. In DKA, potassium should be checked first; if potassium is low, potassium replacement should precede insulin."
     },
     {
       "id": "endocrine_basic_010",
-      "categories": ["endocrine_basic", "emergency_medications_basic"],
+      "categories": [
+        "endocrine_basic",
+        "emergency_medications_basic"
+      ],
       "question": "During DKA treatment, blood glucose is 240 mg/dL, pH is 7.24, HCO3- is 13 mmol/L, and beta-hydroxybutyrate remains elevated. Which response is most appropriate? Select one.",
       "choices": [
         "Continue insulin and add dextrose",
@@ -143,13 +193,18 @@
         "Stop IV fluids and prioritize restarting oral intake",
         "Add sodium bicarbonate because acidosis remains"
       ],
-      "answers": [0],
+      "answers": [
+        0
+      ],
       "selectCount": 1,
       "explanation": "The goal of DKA treatment is resolution of ketoacidosis, not simply lowering blood glucose. When blood glucose falls below 250 mg/dL, add 5-10% dextrose to the IV fluids and continue insulin while avoiding hypoglycemia."
     },
     {
       "id": "endocrine_basic_011",
-      "categories": ["endocrine_basic", "emergency_medications_basic"],
+      "categories": [
+        "endocrine_basic",
+        "emergency_medications_basic"
+      ],
       "question": "A patient with type 2 diabetes taking an SGLT2 inhibitor presents with vomiting, malaise, and tachypnea. Blood glucose is 186 mg/dL, pH 7.21, HCO3- 11 mmol/L, and beta-hydroxybutyrate 5.4 mmol/L. Select all appropriate actions.",
       "choices": [
         "Suspect euglycemic DKA",
@@ -158,13 +213,21 @@
         "Consider early dextrose coadministration because blood glucose is relatively low",
         "Treat as HHS with fluids alone and no insulin"
       ],
-      "answers": [0, 1, 2, 3],
+      "answers": [
+        0,
+        1,
+        2,
+        3
+      ],
       "selectCount": 0,
       "explanation": "SGLT2 inhibitor-associated DKA may occur without marked hyperglycemia. Treatment should proceed as DKA, and early dextrose coadministration should be considered to prevent hypoglycemia while continuing insulin."
     },
     {
       "id": "endocrine_basic_012",
-      "categories": ["endocrine_basic", "emergency_medications_basic"],
+      "categories": [
+        "endocrine_basic",
+        "emergency_medications_basic"
+      ],
       "question": "During DKA treatment, blood glucose has fallen to 250 mg/dL or lower. Select all correct subsequent management principles.",
       "choices": [
         "Until beta-hydroxybutyrate is <0.6 mmol/L and either pH is >=7.3 or HCO3- is >=18 mmol/L, continue continuous IV insulin with dextrose",
@@ -173,13 +236,21 @@
         "Adjust total daily subcutaneous insulin dose using roughly 0.3-0.6 units/kg/day as a guide",
         "Switch to oral glucose-lowering medication once blood glucose reaches 250 mg/dL or lower"
       ],
-      "answers": [0, 1, 2, 3],
+      "answers": [
+        0,
+        1,
+        2,
+        3
+      ],
       "selectCount": 0,
       "explanation": "Blood glucose of 250 mg/dL or lower does not mean DKA treatment is complete. The 2024 international consensus defines DKA resolution as plasma ketone <0.6 mmol/L and venous pH >=7.3 or bicarbonate >=18 mmol/L. If ketosis or acidosis remains, continue insulin with dextrose. Transition to subcutaneous insulin when acidosis and ketosis have improved and enteral nutrition is possible. Overlap subcutaneous insulin with IV insulin for about 1-2 hours. The subcutaneous insulin dose should be adjusted using body weight, preadmission insulin dose, and IV insulin requirements."
     },
     {
       "id": "endocrine_basic_013",
-      "categories": ["endocrine_basic", "general_em_basic"],
+      "categories": [
+        "endocrine_basic",
+        "general_em_basic"
+      ],
       "question": "A patient with DKA has blood glucose 620 mg/dL and measured Na 128 mmol/L. If Na is corrected by 2.4 mmol/L for each 100 mg/dL of glucose above 100 mg/dL, which corrected Na is closest? Select one.",
       "choices": [
         "132 mmol/L",
@@ -188,13 +259,18 @@
         "146 mmol/L",
         "151 mmol/L"
       ],
-      "answers": [2],
+      "answers": [
+        2
+      ],
       "selectCount": 1,
       "explanation": "In hyperglycemia, movement of water into the extracellular space causes dilutional lowering of measured sodium. With glucose 620 mg/dL, the amount above 100 mg/dL is 520 mg/dL. Using a correction factor of 2.4 mmol/L gives 128 + 2.4 x 5.2 = 140.5 mmol/L, approximately 141 mmol/L. Some protocols use a correction factor of 1.6, which would give about 136 mmol/L, so interpretation should follow the local protocol."
     },
     {
       "id": "endocrine_basic_014",
-      "categories": ["endocrine_basic"],
+      "categories": [
+        "endocrine_basic",
+        "general_em_basic"
+      ],
       "question": "Select all criteria appropriate for the diagnosis of HHS based on the 2024 international consensus report.",
       "choices": [
         "Blood glucose 600 mg/dL or higher",
@@ -203,13 +279,21 @@
         "pH 7.30 or higher and HCO3- 15 mmol/L or higher",
         "Beta-hydroxybutyrate 3.0 mmol/L or higher, or HCO3- less than 18 mmol/L"
       ],
-      "answers": [0, 1, 2, 3],
+      "answers": [
+        0,
+        1,
+        2,
+        3
+      ],
       "selectCount": 0,
       "explanation": "HHS is characterized by marked hyperglycemia, increased serum osmolality, absence of significant ketonemia, and absence of acidosis. The 2024 international consensus lists glucose >=600 mg/dL, effective serum osmolality >300 mOsm/kg or total serum osmolality >320 mOsm/kg, beta-hydroxybutyrate <3.0 mmol/L or urine ketones less than 2+, and pH >=7.30 with HCO3- >=15 mmol/L. Beta-hydroxybutyrate >=3.0 mmol/L or HCO3- <18 mmol/L suggests DKA or mixed DKA/HHS."
     },
     {
       "id": "endocrine_basic_015",
-      "categories": ["endocrine_basic", "emergency_medications_basic"],
+      "categories": [
+        "endocrine_basic",
+        "emergency_medications_basic"
+      ],
       "question": "Select three correct statements regarding initial medications for thyroid storm.",
       "choices": [
         "Give methimazole 60 mg/day orally; if oral administration is difficult, give methimazole 30 mg/day intravenously",
@@ -218,7 +302,11 @@
         "For tachycardia, give propranolol 40 mg IV regardless of heart failure or shock",
         "For fever, give aspirin as the first-choice antipyretic"
       ],
-      "answers": [0, 1, 2],
+      "answers": [
+        0,
+        1,
+        2
+      ],
       "selectCount": 3,
       "explanation": "Thyroid storm treatment combines antithyroid drugs, inorganic iodine, corticosteroids, beta-blockers, antipyretics, IV fluids, cooling, and other supportive care. For thyroid storm due to Graves' disease, methimazole 60 mg/day orally or methimazole 30 mg/day IV when oral administration is difficult may be used. Inorganic iodine is added after antithyroid drug administration to suppress thyroid hormone release. With 2% Lugol's solution, 4-8 drops every 6-8 hours orally or through a gastric tube is used. Hydrocortisone is given as 100-300 mg IV initially, followed by 100 mg every 8 hours. Beta-blockers are useful for tachycardia but should be selected cautiously in heart failure or shock. Aspirin can increase free thyroid hormone by affecting protein binding, so acetaminophen is used as the antipyretic."
     },
@@ -236,7 +324,9 @@
         "5% dextrose 400 mL + 10% NaCl 120 mL",
         "Normal saline 1000 mL + 10% NaCl 120 mL"
       ],
-      "answers": [0],
+      "answers": [
+        0
+      ],
       "selectCount": 1,
       "explanation": "Discarding 100 mL from a 500 mL bag of normal saline to leave 400 mL, then adding 120 mL of 10% NaCl, creates approximately 3% saline. In a patient around 50 kg, an infusion rate of about 25 mL/h is expected to raise serum sodium by roughly 0.3-0.5 mEq/L/h. Check electrolytes every 2-4 hours during correction and avoid overcorrection."
     },
@@ -254,7 +344,9 @@
         "Maximum concentration 20 mEq/L, maximum rate 20 mEq/h",
         "No concentration limit, maximum rate 20 mEq/h"
       ],
-      "answers": [0],
+      "answers": [
+        0
+      ],
       "selectCount": 1,
       "explanation": "For KCl replacement through a peripheral vein, remember maximum concentration 40 mEq/L and maximum rate 20 mEq/h as the basic limit. Administration above 10 mEq/h should be performed with strict monitoring such as ECG monitoring. KCl must be given with an infusion pump, and rapid administration should be avoided."
     },
@@ -273,7 +365,9 @@
         "In hyperkalemia, the purpose is myocardial membrane stabilization",
         "Rapidly administered 10 mL of calcium gluconate for hypocalcemia"
       ],
-      "answers": [4],
+      "answers": [
+        4
+      ],
       "selectCount": 1,
       "explanation": "Calcium supplementation for hypocalcemia should not be given rapidly; it should be administered slowly through reliable venous access. Calcium gluconate 8.5% 10 mL contains about 3.9 mEq of calcium. Massive transfusion can cause hypocalcemia due to citrate. In hyperkalemia with ECG changes, calcium is given to stabilize the myocardial membrane, not to lower the serum potassium level."
     },
@@ -294,7 +388,12 @@
         "Hypomagnesemia: dilute 20 mL of magnesium sulfate correction solution in 100 mL normal saline and infuse over 2 hours",
         "Atrioventricular block: magnesium sulfate 2 g IV over 20 minutes"
       ],
-      "answers": [0, 1, 2, 3],
+      "answers": [
+        0,
+        1,
+        2,
+        3
+      ],
       "selectCount": 0,
       "explanation": "For torsades de pointes, magnesium sulfate 2 g IV is used as acute treatment. For eclamptic seizure, a regimen of magnesium sulfate 4 g IV over at least 20 minutes may be used; with a 1 mEq/mL magnesium sulfate correction solution, this corresponds to 32 mL. For severe asthma exacerbation or severe asthma not responding to initial therapy, magnesium sulfate 2 g IV over about 20 minutes may be used; with a 1 mEq/mL correction solution, 16 mL is about 2 g. For hypomagnesemia, one method is to dilute 20 mL of magnesium sulfate correction solution in 100 mL normal saline and infuse over 2 hours. Magnesium sulfate 2 g IV is not standard treatment for atrioventricular block."
     },
@@ -312,7 +411,9 @@
         "One packet of Hosribbon contains 10 mg of phosphorus",
         "In malnourished patients, no inpatient replacement is needed if serum phosphorus is normal on arrival"
       ],
-      "answers": [0],
+      "answers": [
+        0
+      ],
       "selectCount": 1,
       "explanation": "One method is sodium phosphate correction solution 0.5 mmol/mL, 20 mL, diluted in 250 mL normal saline and administered over 6 hours. Rapid administration carries risks such as hypocalcemia, calcium phosphate precipitation, and renal dysfunction, so phosphate is generally given slowly. Hosribbon combination granules contain 100 mg of phosphorus in one 0.48 g packet. Oral replacement is an option if the patient can take medications enterally. In malnourished patients, refeeding syndrome can reveal hypophosphatemia after admission, so repeat testing is needed."
     }
